@@ -7,7 +7,7 @@ RepWithMnu.wss
 //14 условия замены
 // V-факультет W-специальность X-направление Y-ФО Z-ВО
 IF
-if v991^B='' then '1' fi
+if v991^B='' then '1' fi,,,,&uf('+7W5#',v991^A)
 PUTLOG
 'Не задано имя справочника значений : старое/новое'
 FI
@@ -22,7 +22,7 @@ IF
 if &uf('+D')='VUZ' then '1' fi
 //==========================-для БД VUZ
 IF
-if v991^B: '.' then '0' else '1' fi,,,,&uf('+7W5#',v991^A)
+if v991^B: '.' then '0' else '1' fi
 REP
 991^B
 1
@@ -31,7 +31,7 @@ v991^B,'.mnu'
 FI
 IF
 if v920: 'DISC' then '1' fi,,,,,,,,&uf('+7W11#')
-//---------------------- запись дисциплины, замена в поле 83
+//----------------------------------------------------------------------- запись дисциплины DISC, замена в поле 83
 //----------G11 для протокола
 REPEAT
 DEL
@@ -68,7 +68,7 @@ CHA
 1083
 1
 '^',g5,v111
-if v991^V='' or &uf('+97',v991^V)=&uf('+97',v1083^A)  then  if v991^W='' or &uf('+97',v991^W)=&uf('+97',v1083^C)  then  if v991^X='' or &uf('+97',v991^X)=&uf('+97',v1083^N)  then  if v991^Y='' or &uf('+97',v991^Y)=&uf('+97',v1083^O)  then  if v991^Z='' or &uf('+97',v991^Z)=&uf('+97',v1083^V)  then'^',g5,&unifor('K',v991^B,'!',v111),,,&uf('+7W11#1') else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi 
+if v991^V='' or &uf('+97',v991^V)=&uf('+97',v1083^A)  then  if v991^W='' or &uf('+97',v991^W)=&uf('+97',v1083^C)  then  if v991^X='' or &uf('+97',v991^X)=&uf('+97',v1083^N)  then  if v991^Y='' or &uf('+97',v991^Y)=&uf('+97',v1083^O)  then  if v991^Z='' or &uf('+97',v991^Z)=&uf('+97',v1083^V)  then '^',g5,&unifor('K',v991^B,'!',v111),,,&uf('+7W11#1') else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi 
 
 FI
 ADD
@@ -83,12 +83,6 @@ DEL
 
 UNTIL
 if p(v83) then '1' fi
-//отладка
-//ADD
-//774
-
-//'Новые 83'/,,(v2083/)
-
 ADD
 83
 
@@ -114,38 +108,36 @@ if G11<>'' then '1' fi
 PUTLOG
 'Откорректирована дисциплина ',,v3^A
 FI
-//-----------конец записи DISC
-FI
+//-------------------- к записи дисциплины - контингенты
+CORREC
+'*'
+mpu,v112,,v991
+"IDV="v3^0
+
+// в записи VUZ
+// 1001^1 что менять 1001^2 на что менять 1001^3 разделитель поля
 IF
-if v920: 'VUZ' then '1' fi
-//------------------ запись контингента, замена в поле 68
-DEL
-111
-*
-
-
-ADD
-111
-
-&uf('Av68','^',g5,'#1')
-
-IF
-if  &unifor('K',v991^B,'!',v111)<>'' then '1' fi
+if v1001^1<>'' and v1001^2<>'' and v1001^3<>'' then '1' fi,,,&uf('+7W11#')
 CHA
 68
 1
-'^',g5,v111
-if v991^V='' or &uf('+97',v991^V)=&uf('+97',v68^A)  then  if v991^W='' or &uf('+97',v991^W)=&uf('+97',v68^C)  then  if v991^X='' or &uf('+97',v991^X)=&uf('+97',v68^N)  then  if v991^Y='' or &uf('+97',v991^Y)=&uf('+97',v68^O)  then  if v991^Z='' or &uf('+97',v991^Z)=&uf('+97',v68^V)  then '^',g5,&unifor('K',v991^B,'!',v111) else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi else '^',g5,v111 fi 
+'^',v1001^3,v1001^1
+if v1001^V='' or &uf('+97',v1001^V)=&uf('+97',v68^A)  then  if v1001^W='' or &uf('+97',v1001^W)=&uf('+97',v68^C)  then  if v1001^X='' or &uf('+97',v1001^X)=&uf('+97',v68^N)  then  if v1001^Y='' or &uf('+97',v1001^Y)=&uf('+97',v68^O)  then  if v1001^Z='' or &uf('+97',v1001^Z)=&uf('+97',v68^V)  then '^',g5,v1001^2,,&uf('+7W11#1') else '^',g5,v1001^1 fi else '^',g5,v1001^1 fi else '^',g5,v1001^1 fi else '^',g5,v1001^1 fi else '^',g5,v1001^1 fi 
 
 FI
+IF
+if val(g11)>0 then '1' fi
+PUTLOG
+'VUZ MFN=: ',,f(val(mfn),0,0),,' откорректирована'
+FI
 DEL
-111
+1001
 *
 
 
+END
+//---------------------------------------------------------------------------конец записи DISC
 FI
-FI
-//---------------------конец БД VUZ
 IF
 if p(v112) then '1' fi
 //==========================на корректировку в БД каталога
@@ -162,10 +154,9 @@ ADD
 ADD
 1083
 
-(G10/)
+(G10/),,,,,,&uf('+7W11#')
 
-//---------цикл по значениям, которые найдены в справочнике
-
+//---------цикл по значениям, которые найдены в справочнике, в g11 MFN каталога корректировки
 REPEAT
 DEL
 111
@@ -185,7 +176,7 @@ ADD
 &uf('+7W10#',,,if v991^A: 'c' then "SPEC="v111^1 else if v991^A: 'a' then "FAK="v111^1 else if v991^A: 'n' then "NAPR="v111^1 else if v991^A: 'o' then "FO="v111^1 else if v991^A: 'v' then "VO="v111^1 fi fi fi fi fi)
 
 CORREC
-if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi
+if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,
 mpu,'^1',,v111^1,'^2',v111^2,,,"^V"v991^V,,"^W"v991^W,,"^X"v991^X,,"^Y"v991^Y,,"^Z"v991^Z,,
 g10
 
@@ -194,7 +185,7 @@ if g10: 'SPEC=' then '1' fi
 REP
 691^C
 F
-(if p(v691) then if v691^C<>'' then if &uf('+97',v691^C)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1') else v691^C fi else v691^C fi else v691^C fi else v691^C fi else v691^C fi else # fi fi/)
+(if p(v691) then if v691^C<>'' then if &uf('+97',v691^C)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1'),,&uf('+7W11#',,f(val(mfn),0,0) ) else v691^C fi else v691^C fi else v691^C fi else v691^C fi else v691^C fi else # fi fi/)
 
 FI
 IF
@@ -202,7 +193,7 @@ if g10: 'FAK=' then '1' fi
 REP
 691^A
 F
-(if p(v691) then if v691^A<>'' then if &uf('+97',v691^A)=&uf('Av1001^1#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1') else v691^A fi else v691^A fi else v691^A fi else v691^A fi else v691^A fi else # fi fi/)
+(if p(v691) then if v691^A<>'' then if &uf('+97',v691^A)=&uf('Av1001^1#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1'),,&uf('+7W11#',,f(val(mfn),0,0) ) else v691^A fi else v691^A fi else v691^A fi else v691^A fi else v691^A fi else # fi fi/)
 
 FI
 IF
@@ -210,7 +201,7 @@ if g10: 'NAPR=' then '1' fi
 REP
 691^N
 F
-(if p(v691) then if v691^N<>'' then if &uf('+97',v691^N)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1') else v691^N fi else v691^N fi else v691^N fi else v691^N fi else v691^N fi else # fi fi/)
+(if p(v691) then if v691^N<>'' then if &uf('+97',v691^N)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1'),,&uf('+7W11#',,f(val(mfn),0,0) ) else v691^N fi else v691^N fi else v691^N fi else v691^N fi else v691^N fi else # fi fi/)
 
 FI
 IF
@@ -218,7 +209,7 @@ if g10: 'FO=' then '1' fi
 REP
 691^O
 F
-(if p(v691) then if v691^O<>'' then if &uf('+97',v691^O)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1') else v691^O fi else v691^O fi else v691^O fi else v691^O fi else v691^O fi else # fi fi/)
+(if p(v691) then if v691^O<>'' then if &uf('+97',v691^O)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then if &uf('Av1001^Z#1')='' or &uf('+97',v691^V)=&uf('Av1001^Z#1') then &uf('Av1001^2#1'),,&uf('+7W11#',,f(val(mfn),0,0) ) else v691^O fi else v691^O fi else v691^O fi else v691^O fi else v691^O fi else # fi fi/)
 
 FI
 IF
@@ -226,7 +217,7 @@ if g10: 'VO=' then '1' fi
 REP
 691^V
 F
-(if p(v691) then if v691^V<>'' then if &uf('+97',v691^V)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then &uf('Av1001^2#1') else v691^V fi else v691^V fi else v691^V fi else v691^V fi else v691^V fi else # fi fi/)
+(if p(v691) then if v691^V<>'' then if &uf('+97',v691^V)=&uf('Av1001^1#1') then if &uf('Av1001^V#1')='' or &uf('+97',v691^A)=&uf('Av1001^V#1') then if &uf('Av1001^X#1')='' or &uf('+97',v691^N)=&uf('Av1001^X#1') then if &uf('Av1001^Y#1')='' or &uf('+97',v691^O)=&uf('Av1001^Y#1') then if &uf('Av1001^W#1')='' or &uf('+97',v691^C)=&uf('Av1001^W#1') then &uf('Av1001^2#1'),,&uf('+7W11#',,f(val(mfn),0,0) ) else v691^V fi else v691^V fi else v691^V fi else v691^V fi else v691^V fi else # fi fi/)
 
 FI
 DEL
@@ -242,6 +233,13 @@ DEL
 
 UNTIL
 if p(v1083) then '1' fi
+
+
+IF
+if g11<>'' then '1' fi,,,,&uf('+7G11')
+PUTLOG
+if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,,': откорректированы записи: ',(g11+|, |)
+FI
 //========================конец на корректировку каталога
 FI
 //========================конец v991^B<>''
@@ -253,6 +251,11 @@ DEL
 
 DEL
 112
+*
+
+
+DEL
+111
 *
 
 

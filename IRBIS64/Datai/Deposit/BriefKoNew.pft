@@ -67,6 +67,6 @@ else
   if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi), 
 fi,,,,,,,,,,,,,,,
 if p(v699) and v699^U='0' then '(\b аналог ) \b0 ' fi,,,,,  
-if (&uf('Av951^I#1')<>'')  and (val(&uf('+9L11,,',&uf('Av951^I#1') ) )>0) then '\par Режим доступа: '  
+if (&uf('Av951^I#1')<>'')  then '\par Режим доступа: '  
 '{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \lang1033\langfe1033\langnp1033\insrsid15543780  HYPERLINK "}{',,,
 &uf('Av951^I#1'),,'}}}',,,fi,,,,,,,,

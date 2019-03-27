@@ -22,7 +22,7 @@ if p(v463)then
                       fi fi fi,if ' et al. и др. ':v963^y then else|, |v963^y fi, 
           fi fi fi fi,|. - |v963^p, 
           if &unifor(|Av900^b#1|d963):'08'or &unifor(|Av900^b#1|d963):'12' then 
-          else |. - |v463^d,| : |v463^g fi, 
+          else |. - |v463^d,| : |v463^g,v463^4, fi, 
           if p(v463^c)then 
              if &unifor(|Av900^b#1|d963):'08'or &unifor(|Av900^b#1|d963):'12' then |. - |v463^j else 
                 if s(v463^d,v463^g)<>''then|, |v463^j else|. - |v463^j fi, 

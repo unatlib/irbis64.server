@@ -1,6 +1,6 @@
 if s(v675,v621,v964,v686)<>'' then 
    if s(v905^j)<>''or &unifor('IPRIVATE,FPN,')<>''then 
-      "<br> <b> √–Õ“» </b> "| + |+v964,"<br> <b> ”ƒ  </b0> "| + |+v675^*, 
+      "<br> <b> √–Õ“» </b> "| + |+v964,"<br> <b> ”ƒ  </b> "| + |+v675^*, 
       "<br> <b> ¡¡  </b> "| + |+v621^*,"<br> "| + |+v686,'<br>'
    else '<br>'
       if p(v964)then 

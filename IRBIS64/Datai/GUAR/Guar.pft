@@ -100,7 +100,7 @@ IF 'guar delo list':v920 then
          fi '&nbsp &nbsp &nbsp',
       fi,
    fi
- '<font size="3">','<br>'
+ '<font size="3">',
    if s(v461,v463,v210)<>'' then 
       if p(v461) then &uf('6otit461_H'), &uf('6otitkn_H') 
       else &uf('6ozboz_H')," / "v200^f, 
@@ -109,6 +109,7 @@ IF 'guar delo list':v920 then
       fi ,
       mhl,Oizd,,ospec, ,ovixd, ,ofizxar_H, 
       if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,oistasp_H_gua, 
+   else   
       if v910^9<>'' then '<br><b>',"КП-"v910^9,"; "v910^b '</b>'fi,
       if s(v910^+,v910^-)<>'' then'<br>Крайние даты события, описываемого в документе: '
          (if p(v910) then |, |+d910,v910^+*6|.|,v910^+*4.2|.|,v910^+.4,| - |d910^-,v910^-*6|.|,v910^-.2|.|,v910^-.4, 
@@ -127,7 +128,7 @@ IF 'guar delo list':v920 then
       fi
       if p(v397) then '<br><b>Способы воспроизведения: </b> '(|; |+v397) fi, 
       if p(v122) then '<br>' 
-         if v122^a<>'' then 'Крайние даты дела: '
+         if v122^a<>'' then '<b>Крайние даты дела: </b>'
             (if p(v122) then 
                 if v122:'['then v122^a,|-|v122^b 
                 else|, |+d122,v122^a*6|.|,v122^a*4.2|.|,v122^a.4,| - |d122^b,v122^b*6|.|,v122^b*4.2|.|,v122^b.4, 

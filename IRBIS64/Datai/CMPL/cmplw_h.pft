@@ -34,7 +34,7 @@ if s(v982^s,v982^k)<>''then' '&unifor("Kstr.mnu|"v982^s),", "d982^k,&unifor('Av9
     "<br>"v503^a"<br> ", 
    if p(v461) then'<br><b> 'v461^x,v461^b, 
       if s(v461^x,v461^b)<>''then'</b> <dd> 'mhl,v461^c 
-      else '<dd>'&unifor('E3'v461^c) '</b>',&unifor('F3'v461^c) 
+      else '<dd>'&unifor('E3'v461^c),'</b> ' ,&unifor('F3'v461^c) 
       fi,mpl,| [|v461^2|]|, 
       if a(v461^2) then &unifor('+1W1'''), 
          if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 

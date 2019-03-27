@@ -1,12 +1,12 @@
 if v920.1:'A' then else if s(v905^m)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"<br>  "|. |+v300,mpl fi fi, 
 "<br> <b>   Перевод заглавия: </b>  "v541, 
 ,oant_H, 
-if p(v391)then" <br> <b> Есть автограф: </b> "d391, 
+if p(v391)then" <br> <b> Есть автограф: </b> "d391,
    (if p(v391)then |Экз. |v391^!| : |,v391^a,|, |v391^g, 
        if a(v391^g) then |, |d391^b 
           if v391^b:'. 'then v391^b else 
              if v391^b:'.'then &unifor('G0.'v391^b)'. '&unifor('G2.'v391^b) else v391^b 
-       fi fi fi,| (|v391^c|)|,mhl,v391.1+|; |,mpl fi) fi, 
+       fi fi fi,| (|v391^c|)|,|  |v391^t,mhl,v391.1+|; |,mpl fi) fi, 
 ("<br> <b> Экслибрис: </b> "| ; |+d398,if p(v398^!)then |<br> <b> Экз.|v398^!|: </b> |,v398^a else if s(v398^a,v398^b)=''then v398 else v398^b," ("v398^a")" fi fi,) 
 "<br> <b> Пометки автора: </b> "| ; |+v395, 
 "<br> <b> Пометки владельца коллекции: </b> "| ; |+v396, 
@@ -18,57 +18,12 @@ if p(v391)then" <br> <b> Есть автограф: </b> "d391,
 if val(&unifor('J,I470='v903))>0 
 then '<br>','<A HREF="IRBIS:2,,,,I470='v903,'">','Есть рецензия / реферат','</A>' fi, 
 if p(v330)then 
-   if a(v905^k) then'<br> <dd> <b> Содержание: </b> ', 
-      (if p(v330)then'<br>   <b> ' 
-         if a(v330^f) then v330^8|. | fi,
-         if p(v330^q) then else 
-            if p(v330^x) then 
-            &uf('+S1'
-               if v330^x='1' then v330^f 
-               else &unifor('E'v330^x,v330^f), 
-                  if p(v330^?)then |, |v330^? else 
-                     if &unifor('F'v330^x,v330^f)<>'' then ', '&unifor('F'v330^x,v330^f) fi fi,'.' 
-               fi) 
-            else 
-            &uf('+S1'
-               if v330^f:',' then v330^f|.| else 
-                  if v330^f:' ' then &unifor('G0 'v330^f),|, |v330^?|.| 
-                     if a(v330^?) then 
-                        if v330^f:'.' then ', ' 
-                           if v330^f:'. ' 
-                           then &unifor('G2 'v330^f) else &unifor('G0.'&unifor('G2 'v330^f)),'. ' &unifor('G2.'v330^f) 
-                           fi 
-                        else ', '&unifor('G2 'v330^f)'.' 
-                     fi fi 
-                  else v330^f,|, |v330^?,|.|d330^f, 
-                  fi 
-               fi) 
-            fi,| |d330^f, 
-         fi
-         if s(v330^(,v330^))<>''then v330^(,| |v330^),'. 'fi,
-         if p(v330^u) then if f(val(v330^u),0,0)=v330^u then else if v330^u:'/' then &uf('G2/'v330^u)'. ' fi fi fi, 
-         if v330^]<>''then if v330^[='1'then '<A HREF="',&uf('+\1',v330^]),'">', else if v330^[='0'then '<A HREF="IRBIS:3,10,,',v330^],'">',fi fi fi &uf('+S1'v330^c),'</A>','</b>',| = |v330^d,| : |v330^e, 
-         if s(v330^f,v330^g)<>'' and &unifor('Av905^1#1')='' then 
-            if a(v330^c) then else
-               if (p(v330^g) and (not(v330^g:'<')) and (not(v330^g|!|:'>!'))) or 
-                   a(v330^g) and p(v330^f) then' / 'fi ,o330g, fi fi,
-         if p(v330^4)then'. -', 
-            if v330^4:'s'or v330^4:'p'or v330^4:'с'then 
-            else mpu,
-               if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
-               else &unifor('Korg.mnu|4') fi,mpl,'. ' 
-            fi,v330^4, 
-         fi,
-         if v330^0*1.1='-'then| : |v330^0*2 else| : |v330^0 fi, |. - |v330^p, 
-         if p(v330^w) then'<br> Другие авторы: 'v330^2,', 'v330^3,', 'v330^w fi, 
-         if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='1'then 
-         else|<br> Кл.слова: |d330^5,mhl,
-            if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='2' 
-            then v330^5,|, |v330^6,|, |v330^7 
-            else 
-               if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='3' 
-               then &unifor('Q'v330^5,|, |v330^6,|, |v330^7) 
-               else v330^5,|, |v330^6,|, |v330^7 
-            fi mpl, fi fi 
-      fi)
+   if a(v905^k) then  
+      if &uf('IMAIN,LimPftFull_330,30')='' and val(&uf('+N330')) > 30 OR 
+         &uf('IMAIN,LimPftFull_330,30')<>''and val(&uf('+N330')) > val(&unifor('IMAIN,LimPftFull_330,30'))
+      then  
+         '<A HREF="IRBIS:1,,,o330_H_FULL?&KEY=@',mfn,'">',
+         '<i><font size="3"> <br>Содержание (в новом окне) </font></i>','</A>','<br>',
+      else '<br> <dd> <b> Содержание: </b> ',o330_H_full,
+      fi,
 fi fi, 

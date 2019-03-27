@@ -4,7 +4,7 @@
 if p(v1) then &uf('6TSprostHead') fi
 *****
 [KeyOptions]
-500
+60
 0
 &uf('6TSprostSort')
 *****

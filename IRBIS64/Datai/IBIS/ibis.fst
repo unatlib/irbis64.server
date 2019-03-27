@@ -294,14 +294,14 @@
 19 0 (|B=|d19,v19^a*2| |,v19^b,|%|d19/) 
 903 0 MHU,"I="v903/(|II=|v463^w,|%|d463/)/(|I470=|v470^i,|%|d470/)/if v920:'NJ' then(if p(v423^h)then|I=|v423^H,|/|d423,&unifor(|Av934#1|d423),|/|v423^n fi/),/if v936:'/' then 'I='v933,"/"v934,"/"v935,'/'&unifor('G0/'v936)fi fi/ 
 903 0 mhu,(if v600^w:'VS' then else |I600=|v600^W fi,|%|d600/)/
-933 0 MHU,if p(v933) then if v920:'NJ' then"I933="v933"/"/(|I933=|v423^H,|%|d423/) else "I933="v903 fi fi 
+933 0 MHU,if p(v933) then if v920:'NJ' or v920:'SPEC'then"I933="v933"/"/(|I933=|v423^H,|%|d423/) else "I933="v903 fi fi 
 931 0 mhl,if v920:'NJ'then(|I=|v931^2/),(|I=|v931^3/),(|I=|v931^4/),(|I=|v904^a/),(|I=|v931^a/) fi 
 930 0 mhl,if v920:'NJ'then (|I=|v930^a/),(if p(v930)then if p(v930^a)then if v930^2<>''then 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^2,fi else 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^1,/if v930^2<>''then 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^2,fi fi fi/)fi  
 1 0 "ID="v1/v2
 /*IBIS_KOD
 903 0 "vrl="v920/(|c=|v102|%|/)/(/|j=|v101|%|)/
 900 0 if 'ASP AUNTD':v920 then'V=AS'fi/if v920:'AUNTD' then'V=UD'fi/if v920:'spec' and p(v933) then 'V=NJ_SPEC'v900^b.2 else "V="v900^b.2 fi/if a(v900)then if 'ab 04':v110^b then'V=02'fi/if v110^b:'c'then'V=01'fi/if v920:'nj' then"V="v920/"V=11"d922 fi fi/if v920:'musp' then 'V='v920 fi/
-900 0 if '0305':v900^b.2 or '0407':v900^b.2 and a(v933) then if 'a1 b': v900^t or a(v900^t) then'V=KN'fi fi 
+900 0 if '0305':v900^b.2 or '0407':v900^b.2 and a(v933) then if 'a1 2 3 4 5 b': v900^t or a(v900^t) then'V=KN'fi fi 
 900 0 &unifor("K900i.mnu|"v900^t)
 110 0 &unifor("K900i.mnu|"v110^t) 
 900 0 "hd="v900^c/"hd="v900^2/"hd="v900^3/"hd="v900^4/"hd="v900^5/"hd="v900^6
@@ -388,6 +388,10 @@
 995 0 (if p(v995) then 'S=',if v995^B<>'' then v995^B else &uf('DMESH,!R=',v995^K,'!,v1') fi,/ fi)
 996 0 (if p(v996) then 'S=',if v996^A<>'' then v996^A else &uf('DMESH,!R=',v996^K,'!,v2') fi,/ fi)
 996 0 (if p(v996) then 'S=',if v996^B<>'' then v996^B else &uf('DMESH,!R=',v996^K,'!,v1') fi,/ fi)
+995 0 (if p(v995) then 'MS=',if v995^A<>'' then v995^A else &uf('DMESH,!R=',v995^K,'!,v2') fi, fi, |%|d995/)
+995 0 (if p(v995) then 'MS=',if v995^B<>'' then v995^B else &uf('DMESH,!R=',v995^K,'!,v1') fi, fi,|%|d995/)
+996 0 (if p(v996) then 'MS=',if v996^A<>'' then v996^A else &uf('DMESH,!R=',v996^K,'!,v2') fi, fi,|%|d996/)
+996 0 (if p(v996) then 'MS=',if v996^B<>'' then v996^B else &uf('DMESH,!R=',v996^K,'!,v1') fi, fi,|%|d996/)
 996 6 '/MM=/',(v996^m,|%|d996/)
 995 6 '/MM=/',(v995^m,|%|d995/)
 996 0 (|MK=|v996^k|%|/)

@@ -1,40 +1,56 @@
+/*----в g10 признак Ќ≈ проверен
 if p(v910) 
 then 
    &unifor('S0'),
    (if p(v910)
     then 
-       if '2 4 6 7':v910^a 
+       &uf('+7W10#'),,,
+       if '2 4 6 7': v910^a 
        then 
        else 
           if val(&uf('Av991^E#1'))=0 or &uf('Av215^Y#1')=''  
           then 
-          if  p(v910^h) or p(v910^B)  
-          then 
-             if p(v910^s) and &uf('Av991^C#1')='' and &uf('Av991^D#1')=''  
-             then 
-/* проверен без условий - не беру
-             else 
-                if a(v910^s) 
-                   OR
+            if &uf('+97',&unifor('Av991^b#1'))=&uf('+97',v910^D) or 
+               &unifor('Av991^b#1')='' 
+            then           
+               if  p(v910^h) or p(v910^B)  
+               then 
+                  if v910^s='' 
+                  then 
+                     &uf('+7W10#1') 
+                  else
+/*--------есть дата проверки                      
+                     if &uf('Av991^C#1')='' and &uf('Av991^D#1')='' 
+                     then 
+/*-------не надо провер€ть даты
+                        if v910^A: 'U' and val(v910^1)<>val(v910^0) then &uf('+7W10#1') fi,, 
+                     else   
+/*----проверка по датам
+                           if 
 /* есть дата проверки, но она ¬Ќ≈ заданного интервала             
-                   ( p(v910^s) and 
-                     ( &uf('Av991^C#1')='' or v910^S < &uf('Av991^C#1') ) 
-                   ) 
-                   OR
-                   ( p(v910^s) and  
-                     ( &uf('Av991^D#1')='' or v910^s > &uf('Av991^D#1') ) 
-                   ) 
-                   OR
-/* дата проверки в заданном интервале, но не совпадают кол-ва дл€ U
-                   ( p(v910^s) and 
-                     ( &uf('Av991^C#1')='' or v910^s >= &uf('Av991^C#1') ) and  
-                     ( &uf('Av991^D#1')='' or v910^s <= &uf('Av991^D#1') ) and 
-                     ( v910^A: 'U' and val(v910^1)<>val(v910^0) ) 
-                   ) 
-                then 
-                   if &uf('+97',&unifor('Av991^b#1'))=&uf('+97',v910^D) or 
-                      &unifor('Av991^b#1')='' 
-                   then 
+                           ( p(v910^s) and 
+                              ( &uf('Av991^C#1')='' or v910^S < &uf('Av991^C#1') ) 
+                           ) 
+                           OR
+                           ( p(v910^s) and  
+                              ( &uf('Av991^D#1')='' or v910^s > &uf('Av991^D#1') ) 
+                           ) 
+                           OR                                 
+                           ( (&uf('Av991^C#1')='' or v910^s >= &uf('Av991^C#1') ) and  
+                             ( &uf('Av991^D#1')='' or v910^s <= &uf('Av991^D#1') ) and 
+                             ( v910^A: 'U' and val(v910^1)<>val(v910^0) )                              
+                           ) 
+                           then  
+                              &uf('+7W10#1') 
+                           fi,,
+                     fi,,
+                  fi,,      
+               fi,, 
+            fi,,       
+          fi,,
+       fi,,
+       if val(&uf('Ag10#1'))=1 
+       then  
 /*---------------не проверен
                       '^1',,,
                       if val(&uf('Av991^F#1'))=1 
@@ -77,10 +93,6 @@ then
                       |^Z|d910^1,if a(v910^0)then v910^1 else f(val(v910^1)-val(v910^0),0,0)fi,
                       '^Y'mfn,
 /*---------------конец не проверен
-                   fi 
-                fi  
-             fi 
-          fi fi 
-       fi 
+       fi,,
     fi/) 
 fi

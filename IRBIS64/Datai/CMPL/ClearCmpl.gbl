@@ -42,9 +42,9 @@ FI
 IF
 if val(v991^B)=1 then '1' fi,,&uf('+7W10#')
 IF
-if s('PAZKK SPECK PVKK'): v920 and v62^g<>'' then '1' fi
+if 'PAZKK SPECK PVKK':v920 and s(v30^g,v31^g,v32^g,v62^g)<>'' then '1' fi
 IF
-if rsum((v62^g|,|)) >= rsum((v62^d|,|))  then '1' &uf('+7W10#1') fi
+if rsum((f(val(v30^g),0,0)';'f(val(v31^g),0,0)';'f(val(v32^g),0,0)';'f(val(v62^g),0,0)';')) >= rsum((f(val(v30^d),0,0)';'f(val(v31^d),0,0)';'f(val(v32^d),0,0)';'f(val(v62^d),0,0)';'))  then '1'..&uf('+7W10#1') fi
 DELR
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
@@ -83,3 +83,4 @@ DEL
 *
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
+

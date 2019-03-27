@@ -5,6 +5,12 @@
 // выполняется на записях по запросу инвентарных номеров
 // 991: B - дата проверки C - проверяемый фонд A - заново?
 // 991^D=1 - полный вариант
+// если фонд задан как *, то это - не задан
+DEL
+991^C
+1
+if v991^C='*' then '1' else '0' fi
+
 // в поле 1003 инвентари проверяемой порции
 IF
 if a(v1003) then '1' fi
@@ -67,6 +73,17 @@ DEL
 F
 (if p(v99) then if p(v99^s) then if &unifor('Av991^B#1')<>'' and &uf('G0/'v99^s)=&unifor('Av991^B#1') or &unifor('Av991^B#1')='' and &uf('G0/'v99^s)=&unifor('3') then if f(val(v99^e),0,2)=f(val(&unifor('Av10^d#1')),0,2) then '1' else '0' fi fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
+//2018  восстанавливаю дату поступления, если цена не изменилась
+DEL
+99^C
+F
+(if p(v99) then if v99^(<>'' and v99^)<>'' and v99^(=v99^E then '1' else '0' fi fi/)
+
+REP
+99
+F
+(if p(v99) then v99,,if v99^C='' and v99^(<>'' and v99^)<>'' and v99^(=v99^E then '^C',v99^) fi fi/)
+
 FI
 IF
 if v991^D<>'1' then '1' fi

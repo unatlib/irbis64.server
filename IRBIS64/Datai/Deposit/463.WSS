@@ -1,4 +1,4 @@
-22
+23
 C
 Заглавие
 0
@@ -34,7 +34,7 @@ G
 0
 0
 2
-,O=,(if '***'='210' then v210^c,|^D|v210^a,|; |v210^x,|; |v210^y else v***^g,|^D|v***^d fi/)
+,O=,if '***'='4889' then if v488^G:':' then &uf('+7W3#'),&uf('+7W4#'),&uf('+7W10#'),&uf('+7W11#'),&uf('+7W20#'),&uf('+7W21#'),&uf('+7W3#'(if p(v488) then | ; |v488^d,|;---|n488^d,| : |v488^G fi)),&uf('+7W3#'&uf('+9I!: !?:?'g3)),&uf('+7W3#'&uf('+9I! :!?:?'g3)),&uf('+7W3#'&uf('+9I!; !?;?'g3)),&uf('+7W3#'&uf('+9I! ;!?;?'g3)),if g3:':' then &uf('+7W4#'(if &uf('1*R:?g3#1')<>''then &unifor('1*R:?g3#1') fi/)) fi,&uf('+7W10#'(if p(g4) then if g4:';'then &uf(|G2;|g4) else '---' fi fi/)),&uf('+7W11#'(if g4:';'then &uf(|G0;|g4) else g4 fi/)),&uf('+7W20#'(if p(g11) then g11,if g10='---' or g10:'S. l.' or g10:'Б. м.' then '' else|(|g10|)| fi fi/)),(if p(g20) then if &uf('+97'g20)=&uf('Ag1#1') then &uf('+7W21#'if g20:'(' then &uf('G0('g20),'^D'&uf('G0)'&uf('G2('g20)) else g20'^D' fi/) fi fi),&uf('Ag21#1') fi else if '***'='210' then (v210^c,|^D|v210^a,| ; |v210^x,| ; |v210^y/) else if '***'='454' then (v454^c,|^D|v454^g/), else if '***'='4632' then (v463^2,|^3|v463^3/) else (v***^g,|^D|v***^d/) fi fi fi fi/
 
 
 
@@ -49,6 +49,16 @@ gor.mnu\\1
 
 
 R; 
+4
+Другие города с издательствами  (в формате вывода на печать)
+0
+0
+2
+,O=,if '***'='4889' then if v488^G:':' then &uf('+7W3#'),&uf('+7W4#'),&uf('+7W10#'),&uf('+7W11#'),&uf('+7W20#'),&uf('+7W21#'),&uf('+7W3#'(if p(v488) then | ; |v488^d,|;---|n488^d,| : |v488^G fi)),&uf('+7W3#'&uf('+9I!: !?:?'g3)),&uf('+7W3#'&uf('+9I! :!?:?'g3)),&uf('+7W3#'&uf('+9I!; !?;?'g3)),&uf('+7W3#'&uf('+9I! ;!?;?'g3)),if g3:':'then &uf('+7W4#'(if &uf('1*R:?g3#1')<>''then &unifor('1*R:?g3#1') fi/)) fi,&uf('+7W10#'(if p(g4) then if g4:';'then &uf(|G2;|g4) else '---' fi fi/)),&uf('+7W11#'(if g4:';'then &uf(|G0;|g4) else g4 fi/)),&uf('+7W20#'(if p(g11) then g11,if g10='---' or g10:'S. l.' or g10:'Б. м.' then '' else|(|g10|)| fi fi/)),(if p(g20) then if &uf('+97'g20)=&uf('Ag1#1') then &uf('+7W21#'if g20:'(' then &uf('G0('g20),'^D'&uf('G0)'&uf('G2('g20)) else g20'^D' fi/) fi fi),g21^d,if &uf('G0^'g21)<>'' then ' : '&uf('G0^'g21) fi fi else if '***'='210' then (v210^a,| ; |v210^x,| ; |v210^y,| : |v210^c/) else if '***'='454' then (v454^g,| : |v454^c/) else (v***^d,| : |v***^g/) fi fi fi/
+
+В формате вывода (С предшествующим знаком <,> или <:> например, " ; New York ; London : Plenum Press ; М.; СПб. : Наука"
+
+R ; 
 1
 Местоположение - Единица измерения
 0

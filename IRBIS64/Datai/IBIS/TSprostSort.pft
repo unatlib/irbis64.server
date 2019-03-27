@@ -8,7 +8,7 @@ f(rsum((if p(g10) then
            ( &uf('Av991^V#1')='' or &uf('+97',&uf('Av991^V#1'))=&uf('+97',g10^V) ) 
         then '1,' fi fi fi )),0,0) 
     ),,
-if g11<>'' then '^A',&uf('6brief'),,,'^B',v903,,,'^C',g11 fi
+if g11<>'' then '^A',,,&uf('+960.20#',,&uf('6Brief')),,,,,,'^B',v903,,,'^C',g11,,,'^Y',f(val(mfn),0,0), fi
 
 
 

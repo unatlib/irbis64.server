@@ -768,7 +768,7 @@ ListInvKsu - Инвентарный список партии
 ListInvKsu.ws
 '"NKSU=$"',,if s(v80,v88,v89)<>'' or s(v80,v188,v189)<>'' then ' * ' fi,,if v80<>'' then '"MHR=',v80 '"'  if s(v88,v89)<>'' or s(v188,v189)<>'' then ' * ' fi fi,,,,,,,if p(v88) then '"NKSU=',v88,'$"' else if p(v89) then '"NAS=',v89,'"' fi fi,,,if p(v188) then '"NKSUK=',v88,'$"' else if p(v189) then '"NAS=',v189,'"' fi fi,,,
 
-if s(v88,v89)<>'' then "^A"v88,,,"^B"v89 else "^A"v188,,,"^B"v189 fi,,,"^D"v80,,,"^1"v1,,,"^2"v2,,,"^Y"v10,,,,"^Z"v11
+if s(v88,v89)<>'' then "^A"v88,,,"^B"v89 else "^A"v188,,,"^B"v189 fi,,,"^D"v80,,,"^1"v1,,,"^2"v2,,,"^Y"v10,,,,"^Z"v11,,,"^W"v20
 *****
 GrantBK
 1

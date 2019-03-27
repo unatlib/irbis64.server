@@ -33,15 +33,16 @@
             if s(v905^a)=''and a(v981) and &unifor('IPRIVATE,KKC,')=''then 
                if s(v10^a,v215^3)<>''or p(v19) and &uf('Av19^x#1')<='0'then' : 'fi, 
                if s(v10^d,v910^e)<>''then 
-                  if s((if p(v910) then if '2 6 7':v910^a then else if a(v910^e) then '0' break fi fi fi)):'0' or a(v910) 
+               &uf('+7W10#'(if '2 6 7':v910^a then else if val(&uf(|Av10^d#1|d910^e))=val(v910^e)then else v910^e fi fi/)),,&uf('+7G10'),
+                  if s((if p(v910) then if '2 6 7':v910^a then else if a(v910^e) then '0' break fi fi fi)):'0' or a(v910) or g10=''
                   then v10^d,if p(v10^d) then " "v10^c fi, 
                      if val(v10^d)=0 then else 
                         if a(v10^c) then &unifor('Korg.mnu|3') 
                      fi fi,
                      if p(v10^d) then 
-                        if v910^e<>''then', ' 
+                        if g10<>''then', ' 
                   fi fi fi,
-                  &uf('+7W10#'(if '2 6 7':v910^a then else if val(&uf(|Av10^d#1|d910^e))=val(v910^e)then else v910^e fi fi/)),,&uf('+7G10'),
+/*                &uf('+7W10#'(if '2 6 7':v910^a then else if val(&uf(|Av10^d#1|d910^e))=val(v910^e)then else v910^e fi fi/)),,&uf('+7G10'),
                   (if p(g10) then |, |+g10,if val(g10)>0 then' '&uf('Av10^c#1') fi, 
                       if &uf('Av10^c#1')='' then if val(g10)>0 then &unifor('Korg.mnu|3') fi fi fi)
                else'Á. ö.' 

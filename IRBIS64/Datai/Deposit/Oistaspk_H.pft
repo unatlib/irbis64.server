@@ -16,7 +16,7 @@ if p(v463)then
                 if a(v963^f) and &unifor('Av905^1#1')='' and s(v961,v962)<>'' then' / ' &unifor('6O963f')  
           fi fi fi, |. - |v963^p, 
           if &unifor(|Av900^b#1|d463):'08'or &unifor(|Av900^b#1|d463):'12' then 
-          else |. - |v463^d,| : |v463^g fi, 
+          else |. - |v463^d,| : |v463^g,v463^4 fi, 
           if p(v463^c)then 
              if &unifor(|Av900^b#1|d463):'08'or &unifor(|Av900^b#1|d463):'12' then |. - |v463^j else 
                 if s(v463^d,v463^g)<>''then|, |v463^j else|. - |v463^j fi, 
@@ -37,7 +37,7 @@ if p(v463)then
                 if v463^s:'ñ'or v463^s:'ë'or v463^s:'c'or v463^s:'p'or v463^s:'S'or val(v463^s,'a0')=0 
                 then else 
                    if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
-                   else &unifor('Korg.mnu|4') '. 'fi,
+                   else &unifor('Korg.mnu|4') fi '. ',
                 fi,mhl, 
           fi fi,v463^s,| : |d463^0, 
           if v463^0*1.1='-'then v463^0*2 else v463^0 fi, 
@@ -73,7 +73,7 @@ if p(v463)then
                 if v961<>'' or v962<>'' and (not(v962^u):'3') then ' / ' &unifor(|6o961f|d463) 
           fi fi fi,|. - |v963^p, 
           if &unifor(|Av900^b#1|d463):'08'or &unifor(|Av900^b#1|d463):'12'then 
-          else |. - |v463^d,| : |v463^g fi 
+          else |. - |v463^d,| : |v463^g,v463^4 fi 
           if p(v463^c)then 
              if &unifor(|Av900^b#1|d463):'08'or &unifor(|Av900^b#1|d463):'12'then |. - |v463^j else 
                 if s(v463^d,v463^g)<>''then|, |v463^j else|. - |v463^j fi, 
@@ -97,7 +97,7 @@ if p(v463)then
                 if v463^s:'ñ'or v463^s:'ë'or v463^s:'c'or v463^s:'p'or v463^s:'S'or val(v463^s,'a0')=0 
                 then else 
                    if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
-                   else &unifor('Korg.mnu|4') '. 'fi,
+                   else &unifor('Korg.mnu|4') fi'. ',
                 fi,mhl, 
           fi fi,v463^s,| : |d463^0, 
           if v463^0*1.1='-'then v463^0*2 else v463^0 fi 

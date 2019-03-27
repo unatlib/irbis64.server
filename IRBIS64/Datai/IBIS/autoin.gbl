@@ -736,7 +736,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 908
 XXXXXXXXXXXXXXXXXXX
-if a(v908) then if &unifor('Korg.mnu|9'):'1' or v920.1:'A' and s(v906,v675,v621,v686)=''then else if a(v903) and s(v906,v686,v675,v621,v910^r)<>'' and a(v982^0) and a(v982^9) or p(v903) and (p(v906) or s(v910^r)<>'')then &unifor('+Khav.mnu|'&unifor('+S0',v981^a" ",v503^a" ",v461^x" ",v461^b" ",v461^c" ",v700^a" ",v710^a" ",v200^a)),if v461^u:'1'then v200^v fi fi fi fi
+if a(v908) then if &unifor('Korg.mnu|9'):'1' or v920.1:'A' and s(v906,v675,v621,v686)=''then else if a(v903) and s(v906,v686,v675,v621,v910^r)<>'' and a(v982^0) and a(v982^9) or p(v903) and (p(v906) or s(v910^r)<>'')then &unifor('+Khav.mnu|'&unifor('+S0',v740^a" ",v981^a" ",v503^a" ",v461^x" ",v461^b" ",v461^c" ",v700^a" ",v710^a" ",v200^a)),if v461^u:'1'then v200^v fi fi fi fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 903
@@ -1865,7 +1865,7 @@ XXXXXXXXXXXXXXXXXXX
 REP
 52
 F
-if v1054<>''then (if p(v52)then &uf('G0='v52),if v52:'='then'=',f(val(&uf('G2='v52))*val(&uf('Av1054#1'),),0,2)else f(val(v52)*val(&uf('Av1054#1'),),0,2) fi fi/)else (v52/)fi
+if v1054<>''then (if p(v52)then if v52:'='then &uf('G0='v52),'=',f(val(&uf('G2='v52))*val(&uf('Av1054#1'),),0,2)else |^E|d52^e,f(val(v52)*val(&uf('Av1054#1'),),0,2) fi,|^L|v52^l fi/)else (v52/)fi
 
 DEL
 1054
@@ -2299,7 +2299,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 910
 XXXXXXXXXXXXXXXXXXX
-if v936:'Подшивка'then (if p(v910) then |^A|v910^A,|^B|v910^B,|^H|v910^H,|^F|v910^F,|^Q|v910^q,|^1|v910^1,|^C|v910^C,|^U|v910^u,|^Y|v910^y,if '2 C U':v910^A or p(v910^C) then else |^C|n910^c,&unifor(|3|n910^C)fi,|^D|d910,if &unifor(|Av53^D#1|d910)<>'' then &unifor(|Av53^D#1|d910)else v910^D fi,if 'C U':v910^a and p(v910^c) or '0 8':v910^a then if v910:'^E' then |^E|v910^E,|^L|v910^L fi fi fi/) else (if p(v910) then |^A|v910^A,|^B|v910^B,|^H|v910^H,|^F|v910^F,|^Q|v910^q,|^1|v910^1,|^C|v910^C,|^U|v910^u,|^Y|v910^y,if '2 C U':v910^A or p(v910^C) then else |^C|n910^c,&unifor(|3|n910^C)fi,|^D|d910,if &unifor(|Av53^D#1|d910)<>'' then &unifor(|Av53^D#1|d910)else v910^D fi,if 'C U':v910^a and p(v910^c) or '0 8':v910^a then if v910:'^E' then |^E|v910^E,|^L|v910^L else if &uf('Av936#1'):'Прил. к №'then else'^E',if &uf(|Av52^e#1|d910):'='then &unifor('G2='v52^e)else &uf(|Av52^e#1|d910) fi fi fi,if a(v910^u) and &unifor('IPRIVATE,KSU,')<>''then'^U'&unifor('IPRIVATE,KSU,') fi,if a(v910^y) and &unifor('IPRIVATE,NA,')<>''then'^Y'&unifor('IPRIVATE,NA,') fi fi fi/)fi
+if v936:'Подшивка'then (if p(v910) then |^A|v910^A,|^B|v910^B,|^H|v910^H,|^F|v910^F,|^Q|v910^q,|^1|v910^1,|^C|v910^C,|^U|v910^u,|^Y|v910^y,if '2 C U':v910^A or p(v910^C) then else |^C|n910^c,&unifor(|3|n910^C)fi,|^D|d910,if &unifor(|Av53^D#1|d910)<>'' then &unifor(|Av53^D#1|d910)else v910^D fi,if 'C U':v910^a and p(v910^c) or '0 8':v910^a then if v910:'^E' then |^E|v910^E,|^L|v910^L fi fi fi/) else (if p(v910) then |^A|v910^A,|^B|v910^B,|^H|v910^H,|^F|v910^F,|^G|v910^g,|^1|v910^1,|^C|v910^C,|^U|v910^u,|^Y|v910^y,if '2 C U':v910^A or p(v910^C) then else |^C|n910^c,&unifor(|3|n910^C)fi,|^D|d910,if &unifor(|Av53^D#1|d910)<>'' then &unifor(|Av53^D#1|d910)else v910^D fi,if 'C U':v910^a and p(v910^c) or '0 8':v910^a then if v910:'^E' then |^E|v910^E,|^L|v910^L else if &uf('Av936#1'):'Прил. к №'then else'^E',if &uf(|Av52^e#1|d910):'='then &unifor('G2='v52^e)else &uf(|Av52^e#1|d910) fi fi fi,if a(v910^u) and &unifor('IPRIVATE,KSU,')<>''then'^U'&unifor('IPRIVATE,KSU,') fi,if a(v910^y) and &unifor('IPRIVATE,NA,')<>''then'^Y'&unifor('IPRIVATE,NA,') fi fi fi/)fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 904
@@ -2461,7 +2461,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 910
 XXXXXXXXXXXXXXXXXXX
-if v920='J' and p(v934) then if p(v910) then else (if p(v901) and v901^q:&unifor(|Av934#1|d901) or a(v901^q) then |^A|v901^A,|^B|v901^B,|^F|v901^F,|^D|v901^D,|^1|v901^N,|^E|v901^e,|^I|v901^i,|^G|v901^q,if v901^A='2' then |^H|d901 fi fi/) fi fi
+if v920='J' and p(v934) then if p(v910) then else (if p(v901) and v901^q:&unifor(|Av934#1|d901) or a(v901^q) then |^A|v901^A,|^B|v901^B,|^F|v901^F,|^D|v901^D,|^1|v901^N,|^E|v901^e,|^+|v901^+,|^G|v901^q,if v901^A='2' then |^H|d901 fi fi/) fi fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 931

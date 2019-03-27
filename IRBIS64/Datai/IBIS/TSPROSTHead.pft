@@ -10,7 +10,7 @@
 v1^B,,,,,
 '\cell }
 \pard \ql\widctlpar\intbl {\b ',,,,,,
-v1^A,,,,,,,,
+ref(val(v1^Y),&uf('6brief') ),,,,,,,,
 '\cell }
 \pard \ql\widctlpar\intbl {\b ',,,,,
 v1^C,,&uf('+7W21#',,f(val(g21)+val(v1^C),0,0) ),

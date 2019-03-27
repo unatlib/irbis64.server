@@ -14,13 +14,6 @@ if v920:'ojk' then if val(&unifor('JPOST,IP='v86))>0 then'1'else'0'fi fi
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
-PUTFLD
-'Запись MFN=',f(val(mfn),0,0),' откорректирована'
-ADD
-5910
-
-if &unifor('DPOST,"IP=',v86,'",v591')=v591 or &unifor('DPOST,"IP=',v86,'",v591')=&unifor('Av5910#'&unifor('+N5910')) then else v591 fi
-XXXXXXXXXXXXXXXXXXX
 REP
 591
 *
@@ -30,11 +23,6 @@ ADD
 591
 
 if a(v591)then if &unifor('DPOST,"IP=',v86,'",v591')<>'' then &unifor('DPOST,"IP=',v86,'",v591') fi fi
-XXXXXXXXXXXXXXXXXXX
-ADD
-2000
-
-if &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi')=v200^a or &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi')= &unifor('Av2000#'&unifor('+N2000')) then else v200^a fi
 XXXXXXXXXXXXXXXXXXX
 REP
 200^A
@@ -46,11 +34,6 @@ ADD
 
 if a(v200)then if &unifor('DPOST,"IP=',v86,'",v200')<>'' then &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200 else "^A"v200 fi') fi fi
 XXXXXXXXXXXXXXXXXXX
-ADD
-5900
-
-if &unifor('DPOST,"IP=',v86,'",v36')=v59^a or &unifor('DPOST,"IP=',v86,'",v36')=&unifor('Av5900#'&unifor('+N5900')) then else v59^a fi
-XXXXXXXXXXXXXXXXXXX
 REP
 59^A
 *
@@ -60,11 +43,6 @@ ADD
 59
 
 if a(v59)then if &unifor('DPOST,"IP=',v86,'",v36')<>'' then &unifor('DPOST,"IP=',v86,'",v36')fi fi
-XXXXXXXXXXXXXXXXXXX
-ADD
-1100
-
-if &unifor('Av1100#'&unifor('+N1100'))=v110 then else v110 fi
 XXXXXXXXXXXXXXXXXXX
 REP
 110^B
