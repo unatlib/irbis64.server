@@ -20,7 +20,7 @@ v461^x,if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,,if a(v46
 
 &uf('Av210^D#',,&uf('+N210') )
 3
-Кол-во экз-ов
+Кол-во экз-ов (поле 693)
 0
 0
 0
@@ -30,7 +30,7 @@ v461^x,if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,,if a(v46
 
 (if p(v693) then if v693^L='' and v693^A='' and v693^X=''  or v693^L='' and v693^A='' and v693^X='!NOFOND' then v693^D,,if v693^K<>'' then /|(с КМИ |v693^K|)| fi,,if v693^Q<>'' then /|(с аналогами |d693^Q,,,,f(val(v693^D)+val(v693^Q),0,0),,,')' fi,,break,,fi fi)
 4
-Кол-во студентов
+Кол-во студентов (поле 693)
 0
 0
 0
@@ -70,7 +70,7 @@ VUZ,DISCN=,v3^0,'^D'v3^a,if p(v3^a) then"="v3^b else v3^b fi
 
 (if p(v691) then if p(v691^I) then v691^I else ' ' fi fi/)
 2
-Студенты
+Студенты (предпол.)
 0
 0
 0

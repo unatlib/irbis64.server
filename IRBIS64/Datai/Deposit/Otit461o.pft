@@ -1,11 +1,11 @@
 if p(v461) then ,'\b ' 
-   v461^x,v461^b,if s(v461^x,v461^b'!'):'.!'or s(v461^x,v461^b'!'):'. !'then else if s(v461^x,v461^b)<>''then'.'fi fi
+   if v461^x:'-)'then &uf('G0)'v461^x)| )|d461^x else v461^x fi,v461^b,if s(v461^x,v461^b'!'):'.!'or s(v461^x,v461^b'!'):'. !'then else if s(v461^x,v461^b)<>''then'.'fi fi
    if s(v461^x,v461^b)=''and s(v961^z,v962^z)<>''then 
       &uf('+7W961#'(if p(v961^z) then v961^a,| |v961^d,|, |v961^g, 
           if a(v961^g)then|, |d961^b,if v961^b:' 'then v961^b else if v961^b:'.'then &unifor('G0.'v961^b),if &unifor('G2.'v961^b)<>''then'. '&unifor('G2.'v961^b)else'.'fi fi fi fi,'\b0 ', 
           if s(v961^1,v961^c,v961^f)<>''then' (',v961^1, 
              if s(v961^1)<>''then" ; "d961^c fi,v961^c, 
-             if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')', 
+             if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,if v961^f|!|:'-!'then ' 'fi')', 
           
        fi |, |v961^7,fi)),g961,        
       &uf('+7W962#'(if p(v962^z) then,v962^a, 

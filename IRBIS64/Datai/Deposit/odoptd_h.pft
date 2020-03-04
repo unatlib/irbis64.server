@@ -8,14 +8,14 @@
            fi fi fi, 
            if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
               if s(v700^1)<>''then| ; |d700^c fi,v700^c, 
-              if s(v700^1,v700^c)<>''then| ; |d700^f fi,v700^f,')' 
+              if s(v700^1,v700^c)<>''then| ; |d700^f fi,v700^f,if v700^f|!|:'-!'then' 'fi,')' 
         fi fi/ 
            (if p(v961^a) then 
                if p(v961^z) then v961^a,| |v961^d,|, |v961^g, 
                   if a(v961^g) then|, |v961^b fi, 
                   if s(v961^1,v961^c,v961^f)<>''then' (',v961^1, 
                      if s(v961^1)<>''then| ; |d961^c fi,v961^c, 
-                     if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')' 
+                     if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,if v961^f|!|:'-!'then' 'fi,')' 
             fi fi fi/)),
 &unifor('+7W11#'), 
 if s(v922^f,v925^f,v330^f,v926,v701,v702,v961,v600,v700^r)<>'' or v700^u:'2'
@@ -25,7 +25,7 @@ if v700^u:'2' then v700^a,| |v700^d,|, |v700^g,
    if a(v700^g) then|, |v700^b fi, 
    if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
       if s(v700^1)<>''then| ; |d700^c fi,v700^c, 
-      if s(v700^1,v700^c)<>''then| ; |d700^f fi,v700^f,')' 
+      if s(v700^1,v700^c)<>''then| ; |d700^f fi,v700^f,if v700^f|!|:'-!'then' 'fi,')' 
 fi fi/ 
 (if p(v922^f) then 
     if &uf('Av700#1')<>'' and v922^f:&uf('Av700^a#1') and (v922^f:&uf('Av700^b#1') or v922^?:&uf('Av700^g#1')) then else 
@@ -73,7 +73,7 @@ if p(v905^k) then
              if a(v961^g) then|, |v961^b fi, 
              if s(v961^1,v961^c,v961^f)<>''then' (',v961^1, 
                 if s(v961^1)<>''then| ; |d961^c fi,v961^c, 
-                if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')' 
+                if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,if v961^f|!|:'-!'then' 'fi,')' 
              fi, 
              if p(v961^4) then'\' 
                 if v961^4*4.1='*'then v961^4*5 else &unifor('Q'v961^4*4) fi,|, |d961^5, 
@@ -84,12 +84,12 @@ if p(v905^k) then
       (if p(v701) then v701^a,| |v701^d,|, |v701^g,if a(v701^g) then|, |v701^b fi, 
           if s(v701^1,v701^c,v701^f)<>''then' (',v701^1, 
              if s(v701^1)<>''then| ; |d701^c fi,v701^c, 
-             if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f,')' 
+             if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f,if v701^f|!|:'-!'then' 'fi,')' 
           fi/v701^r fi/)/ 
       (if p(v702) then v702^a,| |v702^d,|, |v702^g,if a(v702^g) then|, |v702^b fi, 
           if s(v702^1,v702^c,v702^f)<>''then' (',v702^1, 
              if s(v702^1)<>''then| ; |d702^c fi,v702^c, 
-             if s(v702^1,v702^c)<>''then| ; |d702^f fi,v702^f,')' 
+             if s(v702^1,v702^c)<>''then| ; |d702^f fi,v702^f,if v702^f|!|:'-!'then' 'fi,')' 
           fi, 
           if p(v702^4) then'\' 
              if v702^4*4.1='*'then v702^4*5 else &unifor('Q'v702^4*4) fi,|, |d702^5, 
@@ -100,7 +100,7 @@ if p(v905^k) then
       (if p(v926) then v926^a,| |v926^d,|, |v926^g,if a(v926^g) then|, |v926^b fi, 
           if s(v926^1,v926^c,v926^f)<>''then' (',v926^1, 
              if s(v926^1)<>''then| ; |d926^c fi,v926^c, 
-             if s(v926^1,v926^c)<>''then| ; |d926^f fi,v926^f,')' 
+             if s(v926^1,v926^c)<>''then| ; |d926^f fi,v926^f,if v926^f|!|:'-!'then' 'fi,')' 
           fi,if p(v926^4) then'\'&unifor('Q'v926^4*4.1),v926^4*5'.\' fi 
        fi/)/ 
       (if p(v600) then 
@@ -116,7 +116,7 @@ if p(v905^k) then
                 else v600^a,|, |v600^g fi, 
              fi, fi| |v600^d, 
              if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c, 
-                if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')' 
+                if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,if v600^f|!|:'-!'then' 'fi,')' 
              fi,| |v600^z,    
               '\'&unifor('Q'v600^b.1),v600^b*1,|о нем|n600^b'\'
        /v600^r,if v600^r<>''then '\'&unifor('Q'v600^b.1),v600^b*1,|о нем|n600^b'\'fi fi fi /)/ 

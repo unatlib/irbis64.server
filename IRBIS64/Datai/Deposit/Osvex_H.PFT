@@ -17,12 +17,12 @@ else
                   or rsum((if v910^a:'U' and &unifor(|Kmhrvn.mnu\|v910^d)='' then 
                               if p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 or a(v910^2)then'1;'fi fi))>0 
                   or rsum((if v910^a:'p' and &unifor(|Kmhrvn.mnu\|v910^d)='' then &uf('+7W910#'),&uf('+7W910#'v910^d),
-                              if &uf(|D,!I=|v910^p|!,(if p(v910) then if v910^d=&uf('Ag910#1') then v910^a fi fi)|):'0' then '1;'fi fi))>0 or a(v910) and p(v951) 
+                              if &uf(|D,!I=|v910^p|!,(if p(v910) then if v910^d=&uf('Ag910#1') then v910^a fi fi)|):'0' then '1;'fi fi))>0 or a(v910) and p(v951) or p(v955)
                   then '0;' else '1;'fi)
                fi))=0  
       then else '<div><dd><b>(Свободных экземпляров нет)</b></div>'
       fi, 
    else 
-      if a(v910) and p(v951) then else |<div><dd>(Нет сведений об экземплярах)</div>|d200 
+      if a(v910) and p(v951)or p(v955) then else |<div><dd>(Нет сведений об экземплярах)</div>|d200 
 fi fi fi,
 

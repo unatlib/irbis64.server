@@ -32,7 +32,6 @@ then
       &uf('+7W10#'),,&uf('+7W11#'),,&uf('+7W12#'),,&uf('+7W21#'),,&uf('+7W22#'),,
       &uf('+7W995#','^I',v3^0,,),,
       (if p(g30)  then  &uf('+7W50#',g30),,,&uf('7',,g30,,',?IDD=',,,&uf('+97',&uf('Av3^0#1') ),,,,'?,@KoDiscPolyNumEkz') fi)/,,,
-/*      if p(g10) then &uf('+7W13#',,f(rsum((if p(g10) then '1,' fi)),0,0) ) else &uf('+7W13#') fi,,
       if g10='' then &uf('+7W13#')   else &uf('+7W13#',,f(rsum((if p(g10) then '1,' fi)),0,0) ) fi,,
    fi,,,
    if val(g13)=0

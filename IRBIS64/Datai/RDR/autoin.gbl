@@ -248,3 +248,9 @@ UNTIL
 if p(v1040) then '1' fi
  
 FI
+// формирование поля 51 дата записи
+ADD
+51
+
+if a(v51) and val(mfn)<1 then &uf('3'),,,if &uf('IRequest,MaskMrg,')<>'' then '^C',,&uf('IRequest,MaskMrg,') fi fi
+

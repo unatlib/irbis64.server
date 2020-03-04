@@ -8,7 +8,7 @@ mhl,
              if s(v488^z,v488^c)='' then &uf('D'v488^#',?I='v488^T,'?,@brief') fi
           fi 
        else v488^1,
-       fi,'\b0 ' 
+       fi,'\b0  ' 
        if p(v488^9) then 
           if v488^9='1' then v488^x 
           else &unifor('E'v488^9,v488^x), 

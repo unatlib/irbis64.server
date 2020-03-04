@@ -16,7 +16,7 @@
 '       </tr>',
 '        <tr>',
 '         <td colspan="3">         ',
-'         <div align="Left"><font size="+1">Всего посещений ',&uf('32'),'.',&uf('31'),'.',&uf('30'),' - ','<font style="color: #FF0000"><b>',&uf('+7W1#',&uf('J,VS=',&uf('3'),'/',&uf('IREQUEST,MASMRG,*')))if g1='' then '0' else g1 fi,'</b></font></font><br>',
+'         <div align="Left"><font size="+1">Всего посещений ',&uf('32'),'.',&uf('31'),'.',&uf('30'),' - ','<font style="color: #FF0000"><b>',&uf('+7W1#',&uf('J,VS=',&uf('3'),'/',&uf('IREQUEST,MASKMRG,*')))if g1='' then '0' else g1 fi,'</b></font></font><br>',
 '         </div>',
 '       </tr>',
 '        <tr>',

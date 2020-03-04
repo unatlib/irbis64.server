@@ -18,7 +18,7 @@ fi,
              if v517^t.4='540 'then | [|v517^a|] | else v517^t*4,| : |v517^a 
  fi fi fi fi fi),|. - |v314,|. - |v912,|. - |v320,|. - |v327,
 if p(v330) and p(v905^k) then 
-   if v905^k='0' then else '. - ',if v905^k='1'then 'Из содерж.: 'else &unifor('Av905^k#1') fi 
+   if v905^k='0' then else '. - ',if v905^k='1'then 'Из содерж.: 'else &unifor('Av905^k#1')' ' fi 
       (if p(v330) then &uf('+S1'v330^c),| : |v330^e,
           if p(v330^g) or s(v330^f,v330^8)<>'' and &unifor('Av905^1#1')=''then' / 'fi,v330^g,if a(v330^g) then ,o330g,fi
           if p(v330^g) then 

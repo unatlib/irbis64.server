@@ -284,7 +284,13 @@ kd1k.ws
 if v991.2:'^B' then if &uf('Av88^k#1')=v13 then '1' else '0' fi else if p(v991) then if &unifor('Av88^B.6#1')>=v991.6 and &unifor('Av88^B.6#1')<=v991*6.6  and (p(v13) and &uf('Av88^k#1')=v13 or a(v13)) then '1' else '0' fi else '1' fi fi
 V1V2,"^B"v13
 *****
-
+TKSUFULL - для Интервал дат / КСУ,  источника - 991^B, подразделения - 991^D
+1
+TksuFull.ws
+if p(v88) then '"KSU=',v88,'"' else '"KSU=$"' fi
+if p(v991) then  if ( v991^1='' or val(&uf('Av88^B#1'))>=val(v991^1) ) and  ( v991^2='' or val(&uf('Av88^B#1'))<=val(v991^2) ) and  ( v13='' or &uf('+97',&uf('Av88^k#1'))=&uf('+97',v13) ) then '1' else '0' fi else '1' fi 
+"^1"V1,,if &uf('+95',V1)=6 then '01' fi,,,,"^2"V2,,if &uf('+95',V2)=6 then '31' fi,,"^A"v88,,"^B"v14,"^D"v13
+*****
 TSU2IW - Итоговые данные - Форма КСУ полная (Интервал дат / КСУ)
 1
 kd1s.ws
@@ -766,9 +772,9 @@ v991
 ListInvKsu - Инвентарный список партии
 1
 ListInvKsu.ws
-'"NKSU=$"',,if s(v80,v88,v89)<>'' or s(v80,v188,v189)<>'' then ' * ' fi,,if v80<>'' then '"MHR=',v80 '"'  if s(v88,v89)<>'' or s(v188,v189)<>'' then ' * ' fi fi,,,,,,,if p(v88) then '"NKSU=',v88,'$"' else if p(v89) then '"NAS=',v89,'"' fi fi,,,if p(v188) then '"NKSUK=',v88,'$"' else if p(v189) then '"NAS=',v189,'"' fi fi,,,
+if v881<>'' then 'RSUK=',v881 else '"NKSU=$"',,if s(v80,v88,v89)<>'' or s(v80,v188,v189)<>'' then ' * ' fi,,if v80<>'' then '"MHR=',v80 '"'  if s(v88,v89)<>'' or s(v188,v189)<>'' then ' * ' fi fi,,,,,,,if p(v88) then '"NKSU=',v88,'$"' else if p(v89) then '"NAS=',v89,'"' fi fi,,,if p(v188) then '"NKSUK=',v88,'$"' else if p(v189) then '"NAS=',v189,'"' fi fi,,,fi
 
-if s(v88,v89)<>'' then "^A"v88,,,"^B"v89 else "^A"v188,,,"^B"v189 fi,,,"^D"v80,,,"^1"v1,,,"^2"v2,,,"^Y"v10,,,,"^Z"v11,,,"^W"v20
+if s(v88,v89)<>'' then "^A"v88,,,"^B"v89 else "^A"v188,,,"^B"v189 fi,,,"^D"v80,,,"^R"v881,,,"^1"v1,,,"^2"v2,,,"^Y"v10,,,,"^Z"v11
 *****
 GrantBK
 1
@@ -784,6 +790,13 @@ RES_OUT - Сетевые удаленные ресурсы
 
 
 *****
+RES_OUTList - Список сетевых удаленных ресурсов
+1
+Res_OutList.ws
+'"RSU=$"'
+
+"^A"v10,,,"^1"v1,,,"^2"v2
+*****
 RES_OUTDAT -  Движение сетевых удаленных ресурсов
 4
 
@@ -796,4 +809,25 @@ EkzOut.ws
 if v992<>'' then '"MHR=',v992,'"' else '"I=$"' fi
 if v991='' then '1' else (if p(v910) then if &uf('Av991^A#1')='' or s('!',&uf('Av991^A#1'),'!'): s('!',v910^A,'!') then if &uf('Av991^B#1')='' or &uf('+97',&uf('Av991^B#1'))=&uf('+97',v910^D) then  '1',break fi fi fi/),,,fi
 "^A"v991,,,"^B"v992
+*****
+CheckYearMove - 
+1
+CheckYearMove.ws
+'"',,"KSI="v2,,'"+"DP=',v1,'$"+"DW=',,,v1,'$"',,
+
+"^A"v1,,,,"^B"v2
+*****
+CheckI-17-18
+1
+CheckI-17-18.ws
+'"I=$"'
+
+,'^C',v1
+*****
+CheckI-145-155
+1
+CheckI-17-18.ws
+'"I=$"'
+
+,'^C',v1
 *****

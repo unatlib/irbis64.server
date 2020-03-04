@@ -1,23 +1,25 @@
-/* используется в таблице LicenDisc
+/* используется в таблице LicenDisc, KoDiscD, KoDiscFull
 /* фильтруется по принадлежности к текущему семестру и параметрам отбора
+/* в отборе несколько значений, поэтому !
+/* можно задавать не зависимо от семестра g991^=='0'
 /* выдается кол-во студентов
 /* g991^O
 /* g991^A
 /* g991^N
 /* g991^C
 /* g991^F
-if ( &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
-   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  ) and  
-   ( &uf('KsemV.mnu\',,f(val(&uf('Av68^f#1')),0,0))<>'' or &uf('KsemV.mnu\',,f(val(&uf('Av68^f#2')),0,0))<>'' or &uf('KsemV.mnu\',,f(val(&uf('Av68^f#3')),0,0))<>'' )
+if (g991^=='0')  
+OR 
+  ( &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+     &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 and s('2 4 6 8 10 12 14'): v68^F ) 
 OR 
    ( &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
-   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 ) and  
-   ( &uf('KsemO.mnu\',,f(val(&uf('Av68^f#1')),0,0))<>'' or &uf('KsemO.mnu\',,f(val(&uf('Av68^f#2')),0,0))<>'' or &uf('KsemO.mnu\',,f(val(&uf('Av68^f#3')),0,0))<>'' )
+     &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 and  s('0 1 3 5 7 9 11 13 15'): v68^F )
 then 
-  if &uf('Ag991^O#1')='' or &uf('Ag991^O#1')=&uf('+97',v68^O) then 
-  if &uf('Ag991^A#1')='' or &uf('Ag991^A#1')=&uf('+97',v68^A) then 
-  if &uf('Ag991^N#1')='' or &uf('Ag991^N#1')=&uf('+97',v68^N) then 
-  if &uf('Ag991^C#1')='' or &uf('Ag991^C#1')=&uf('+97',v68^C) then 
+  if &uf('Ag991^O#1')='' or s('!',&uf('Ag991^O#1'),'!'): s('!',v68^O,'!') then 
+  if &uf('Ag991^A#1')='' or s('!',&uf('Ag991^A#1'),'!'): s('!',v68^A,'!') then 
+  if &uf('Ag991^N#1')='' or s('!',&uf('Ag991^N#1'),'!'): s('!',v68^N,'!') then 
+  if &uf('Ag991^C#1')='' or s('!',&uf('Ag991^C#1'),'!'): s('!',v68^C,'!') then 
   if val(&uf('Ag991^F#1'))=0 or val(&uf('Ag991^F#1'))=val(v68^F) then v68^Z","  
   fi fi fi fi fi,,,
 fi,,

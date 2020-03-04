@@ -48,7 +48,7 @@ if rsum((if p(v463)then ref(L(|I=|v463^W),if v910^A:'7'then '0;'else '1;'fi)fi/)
 
 FI
 IF
-if v992: '^0N' then if v920='NJK'then '0'else '1'fi fi
+if v992: '^0N' then if v920='NJK'or v910^a:'7' then '0'else '1'fi fi
 //------------------------ это запись номера, не входящего в подшивку и НЕ подшивка
 DEL
 1992
@@ -109,8 +109,6 @@ REP
 910^X
 F
 (if p(v910)then if p(v910^x)then if v910^v=&uf('Av991^A#1')then if &uf('+97'v910^d)=&uf('+97'&uf('Av9992^d#1'))or &uf('Av9992^d#1')='' then if &uf('Av9992^k#1')<>''and v910^b=&uf('Av9992^k#1')or &uf('Av9992^k#1')='' then f(val(v910^x)+val(v910^1),0,0)else v910^x fi else v910^xfi else v910^x fi else # fi fi/)
-
-else # fi fi/)
 
 ADD
 910^X

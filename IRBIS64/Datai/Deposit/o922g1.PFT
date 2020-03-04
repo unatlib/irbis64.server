@@ -78,9 +78,9 @@ if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then
                      else &unifor('G2 '&unifor('Av922^2#1')) 
                      fi,' '&unifor('G0,'&unifor('G0 '&unifor('Av922^2#1'))) 
                   else if &unifor('Av922^,#1')<>'' then &unifor('Av922^,#1')' 'fi,&unifor('Av922^2#1') 
-         fi fi fi fi 
+         fi fi fi
          if &unifor('Av922^t#1')<>'' then if &uf('Av922^t#1')<> &uf('Av922^s#1') then ' ; ' else', 'fi 
-            if &unifor('Av922^t*4#1')<>'' then &unifor('Av922^t*4#1'),' 'fi,else ', 'fi
+            if &unifor('Av922^t*4#1')<>'' then &unifor('Av922^t*4#1'),' 'fi,else ', 'fi  fi, 
             if &unifor('Av922^>#1')<>'' then 
                if &unifor('Av922^>#1'):'1' then &unifor('Av922^3#1') 
                else  

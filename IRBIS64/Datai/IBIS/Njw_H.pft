@@ -11,7 +11,7 @@ else '<dd> (Нет сведений об экземплярах) <br> '
 fi, 
 &uf('+7W905#'),&uf('+7W905#'if v905^y<>'' or &unifor('IPRIVATE,VZY=,')<>'' then'' else'1' fi),
 '<table><tr>'
-'<td width="80%">','<b>Шифр: 'v903,'</b></td>',
+'<td width="70%">','<b>Шифр: 'v903,'</b></td>',
 ref(l(|I=|v933),
 '<td width="20%"></td>',
 if v110^z<>'' then if g905='' then else mhu,'<td BGCOLOR="#FA8072"><font size=+1>',v110^Z,'</b>',mpl,fi fi,'</td></tr>'

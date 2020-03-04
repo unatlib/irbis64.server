@@ -242,7 +242,7 @@ if s(v982^s,v982^k)<>''then' '&unifor("Kstr.mnu|"v982^s),", "d982^k,&unifor('Av9
           '<tr>',
           '<td> <font size="3">Место хранения</td>',,           
           '<td>Дата пост.в КСУ</td>' 
-          '<td>Инв.ном.</td>',,,
+          '<td>Инв.ном./ ШК </td>',,,
           '<td>Кол-во экз.</td>',,
           '<td>Номер акта</td>',,       
           '<td>Номер КСУ</td>',,       
@@ -256,7 +256,7 @@ if s(v982^s,v982^k)<>''then' '&unifor("Kstr.mnu|"v982^s),", "d982^k,&unifor('Av9
                  '<tr>',,
                  '<td> ',if v910^d<>'' then v910^d else ' - ' fi,'</td>',,
                  '<td> ',,,ref(l(|ksu=|v910^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4'г.'), ,,,' </td>',
-                 '<td>',if v910^b<>'' then v910^b else ' - ' fi,' </td>',,
+                 '<td>',if v910^b<>'' then v910^b else if v910^H<>'' then v910^H else ' - ' fi fi,' </td>',,
                  '<td>',if v910^1<>'' then v910^1 else ' - ' fi,'</td>',,              
 /*              if &unifor('IPRIVATE,FPI,'):'2' or &unifor('IPRIVATE,FPI,'):'3' or &unifor('IPRIVATE,FPI,'):'1' 
                  '<td>',if v910^y<>'' then v910^y else ' - ' fi,' </td>',,

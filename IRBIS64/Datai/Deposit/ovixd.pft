@@ -15,14 +15,14 @@ if v920='J'then (v210^v+| ; |),fi,
        if s(v210^i,v210^c)<>''then | : |v210^i,if a(v210^i)then | : |v210^c fi fi fi,
     else 
        if &uf('+90'v210)='1' then if s(&uf('Ag2#1'))<>''then else |. - |v210^4, 
-          if v210^4=''then|. - |v210^a fi, v210^2, 
+          if v210^4=''then|. - |v210^a fi, if v210^2.1=' 'then v210^2 else | |v210^2 fi, 
           if v210^2=''then| ; |v210^x,| ; |v210^y,| ; |v210^+ fi fi,if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else| : |v210^i,
-          if a(v210^i)then| : |v210^c fi,| [|v210^6|]|,v210^3,fi, 
+          if a(v210^i)then| : |v210^c fi,| [|v210^6|]|, if v210^3.1=' 'then v210^3 else | |v210^3 fi,,fi, 
        else 
           if &unifor('Av210^3#1')=''then 
              if p(v210^?) then 
              else| ; |+v210^4, 
-                if v210^4=''then| ; |+v210^a fi,v210^2, 
+                if v210^4=''then| ; |+v210^a fi, if v210^2.1=' 'then v210^2 else | |v210^2 fi,, 
                 if v210^2=''then| ; |v210^x,| ; |v210^y,| ; |v210^+ fi, 
              fi,| : |v210^i,if a(v210^i)then | : |v210^c fi,| [|v210^6|]|, 
        fi fi,

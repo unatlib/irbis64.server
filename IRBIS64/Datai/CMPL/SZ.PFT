@@ -22,13 +22,15 @@
       if val(v45^b)= val(v62^d) then else'\par \b Внимание!\b0  Заказ введен неполностью ('v45^b' экз.)',
       fi 
    fi,
-   (if p(v62^i)then 
-      |\par \b Получено \b0 |v62^i*6.2|.|,v62^i*4.2|.|,v62^i.4|:|,| КСУ № |v62^u,| - |d62^g,
+   (if s(v62^i,v62^g,v62^J)<>'' 
+    then 
+      '\par \b Получено \b0 ',,v62^i*6.2|.|,v62^i*4.2|.|,v62^i.4|:|,| КСУ № |v62^u,| - |d62^g,
       f(val(v62^g),3,0),| экз.|d62^g,| - |v62^j| наим.|,
-      | (N сч.|v62^h,|-|v62^p,if p(v62^p) then &unifor('Korg.mnu|3')fi,
-      if s(v62^s,v62^r)<>'' then', в том числе: 'fi,
-      |почт.расходы-|v62^s,if p(v62^s) then &unifor('Korg.mnu|3')fi,
-      if p(v62^r) then |, |d62^s,|НДС-|v62^r,&unifor('Korg.mnu|3')fi,|)|d62^h   
+      | (N сч.|v62^h,|-|v62^p,if p(v62^p) then &unifor('Korg.mnu|3')
+    fi,
+    if s(v62^s,v62^r)<>'' then', в том числе: 'fi,
+    |почт.расходы-|v62^s,if p(v62^s) then &unifor('Korg.mnu|3') fi,
+    if p(v62^r) then |, |d62^s,|НДС-|v62^r,&unifor('Korg.mnu|3')fi,|)|d62^h   
    fi),
    if s(v62^g)<>''then'\par \b Всего на сумму: \b0 ',
    f(rsum((v62^p|;|,'0 ')),0,2),&unifor('Korg.mnu|3')

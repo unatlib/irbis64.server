@@ -1,6 +1,7 @@
 mhl,
 if v920='J' then '@@Номера периодического издания@@',|"I933=|v903|/$"|,| + "I=|v423^H|"|,| + "I933=|v423^H|/$"| fi,
-if v920:'NJ' then if &unifor('J,II='v903)<>'' then '@@Статьи из журнала@@',|"II=|v903|"| fi fi,
+if v920='NJP'then '@@включен в подшивки :@@', (|"I=|v463^w|" + |) fi,
+if v920:'NJ' then if &unifor('J,II='v903)<>'' then '@@Статьи из журнала@@',|"II=|v903|"| fi, fi,
 if 'PAZK PVK SPEC ':v920 then '@@',
    if &unifor('J,I470='v903)<>'' then 'Есть рецензия' fi,
    if s(v421,v422,v904)<>'' then 

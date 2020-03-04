@@ -87,5 +87,6 @@
 610 0 if p(v330) and (not(v920:'NJ')) and &unifor('Av330#2')=''and s(v932)=''then v330^5/v330^6/v330^7 fi 
 320 0 if p(v330) and (not(v920:'NJ')) and &unifor('Av330#2')=''and s(v932)=''then v330^p fi 
 690 0 if p(v330) and (not(v920:'NJ')) and &unifor('Av330#2')=''and s(v932)=''then "^L"v330^l fi,
+951 0 mhl,if s(&uf("Av922^[#"v932),&uf("Av330^[#"v932))<>''then if v920:'NJ' or a(v330)then ,if &unifor("Av922^[#"v932):'1'then'^I'else '^A'fi,&unifor("Av922^]#"v932) else if &unifor("Av330^[#"v932):'1'then'^I' else '^A' fi,&unifor("Av330^]#"v932) fi fi
 953 0 if &uf('0'):'[[' or v953^p:'1' then (v953/) else &uf('+7W36#'),(if p(v36) then if val(v36^a)=val(&uf('Av932#1')) then &uf('+7U36#'v36^i) fi fi/),(if p(g36) then &uf('Av953#'g36) fi/) fi
 36 0 &uf('S0'),(if p(v36) then if val(v36^a)=val(&uf('Av932#1')) then |^B|v36^b,|^C|v36^c,|^P|v36^p,|^D|v36^d,|^1|v36^1,|^E|v36^e,|^F|v36^f,|^G|v36^g,|^M|v36^m,|^N|v36^n,|^O|v36^o,|^Q|v36^q,|^R|v36^r,|^T|v36^t,|^Z|v36^z,|^2|v36^2,'^I'&uf('S1A') fi fi/),

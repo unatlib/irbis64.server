@@ -204,7 +204,7 @@ if v920='AUNTD'or v920='ASP'or v920='J'then else
                            v910^a|")|,| |v910^c,| |v910^d 
        fi fi fi/) 
    else 
-      if p(v951) then else/'2 ќшибка†: отсутствуют сведени€ об экземпл€рах' 
+      if p(v951) or p(v955) then else/'2 ќшибка†: отсутствуют сведени€ об экземпл€рах' 
 fi fi fi/ 
 if v920='J'then 
    if p(v936) then 
