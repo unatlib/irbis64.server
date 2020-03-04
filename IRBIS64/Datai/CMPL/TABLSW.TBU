@@ -1,0 +1,37 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+(if p(v38)then if &unifor('G0/'v38^a)=&unifor('Av991^c#1') and &unifor('G1/'v38^a)=&unifor('Av991^d#1') then f(val(v38^y)*val(v38^e),0,2) fi fi/)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx8353
+\pard \qr\widctlpar\intbl {  ИТОГО : 'if val(v1)>0 then f(val(v1),0,2),&unifor('Korg.mnu|3'),' \par 'fi,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1479\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4548\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15
+\cellx5399\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6958\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8353
+\pard \qc \fs20 \widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Индекс\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Наименование издания\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Кол. компл\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Цена 1-го комплекта\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Сумма\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

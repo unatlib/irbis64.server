@@ -1,0 +1,6 @@
+if L("RI="v30)<=0 or val(ref(l("RI="v30),mfn))=val(mfn) then '0' else '1Дублетны
+й идентификатор читателя:       ',v30,ref(L("RI="v30),' (см. N ',f(val(mfn),0,0)
+,')')fi/                                                                        
+if L('!'v21,v10,v11.6,v12.6)<=0 or val(ref(l('!'v21,v10,v11.6,v12.6),mfn))=val(m
+fn) then '0' else '1Дублетный читатель:       ',v21,v10,v11.6,v12.6,ref(L('!'v21
+,v10,v11.6,v12.6),' (см. N ',f(val(mfn),0,0),')')fi/                           

@@ -1,0 +1,30 @@
+(if p(v40^D)  then  if &unifor('Av991^P#1')<>'' and &unifor('Av991^Q#1')<>'' then
+ if v40^D>=&unifor('Av991^P#1') and v40^D<=&unifor('Av991^Q#1')  and      &unifor('Av991^S#1')='1' then v40^V 
+ fi,
+ if v40^D>=&unifor('Av991^P#1') and v40^D<=&unifor('Av991^Q#1')  and      &unifor('Av991^S#1')='2' then v40^K 
+ fi  
+else
+ if &unifor('Av991^P#1')<>'' 
+ then 
+   if v40^D>=&unifor('Av991^P#1') and &unifor('Av991^S#1')='1' 
+   then v40^V 
+   fi,
+   if v40^D>=&unifor('Av991^P#1') and &unifor('Av991^S#1')='2' 
+   then v40^K 
+   fi,
+ else
+   if &unifor('Av991^Q#1')<>'' 
+   then  
+     if v40^D<=&unifor('Av991^Q#1') and &unifor('Av991^S#1')='1' 
+     then v40^V 
+     fi 
+   fi,
+   if &unifor('Av991^Q#1')<>'' 
+   then 
+     if v40^D<=&unifor('Av991^Q#1') and &unifor('Av991^S#1')='2' 
+     then v40^K 
+     fi 
+   fi,
+ fi 
+fi fi/)
+

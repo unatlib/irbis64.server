@@ -1,0 +1,1 @@
+if p(v700) then if p(v700^a) then '0' else '1 Ошибка в структуре' fi fi

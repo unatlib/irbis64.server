@@ -1,0 +1,9 @@
+1 8 MHL,'/K=/'(v200^a/v225^a)
+200 0 MHL,"T="d200^a,&unifor("9"v200^a)
+200 0 MHL,if p(v461^c) then else if p(v910) then "TZ="d200^a,&unifor("9"v200^a)," ("v910" ύκη.)" fi fi
+461 0 MHL,if p(v461^c) then'T=',&unifor('9'v461^c,";"v200^v,":"v200^a) fi
+461 0 MHL,if p(v461^c) then if p(v910) then'TZ=',&unifor('9'v461^c,";"v200^v,":"v200^a)," ("v910" ύκη.)" fi fi
+700 0 MHL,"A="v700^a
+701 0 MHL,(|A=|v701^a|%|/)
+210 0 MHL,(|O=|d210^c,&unifor(|9|v210^c,|(|v210^a,|;|v210^x,|;|v210^y,|)|d210^a),|%|d210/)
+30 0 "PZ="v30^a," ("v30^k")"

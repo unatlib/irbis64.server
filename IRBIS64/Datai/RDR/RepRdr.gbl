@@ -1,0 +1,462 @@
+1
+RepItem.wss
+  ВВЕДИТЕ значение для изменения
+//12 PUTLOG
+// 9.1
+// поле 90 повторяющееся
+// задание на изменение данных - основное 
+IF
+if p(v54) and &unifor('Av54#1')<>'' and &unifor('Av54^C#1')='' then '1' fi
+PUTLOG
+v10" - отчислен! MFN=",f(val(mfn),0,0)
+FI
+// если студент не отчислен 
+IF
+if a(v54) or &unifor('Av54#1')<>'' and &unifor('Av54^C#1')<>'' then if a(v90^1) then '1' fi fi
+// в 1090 сходное значение поля 90
+DEL
+1090
+*
+
+
+ADD
+1090
+
+mpu,(v90/)
+
+DEL
+1991
+*
+
+
+DEL
+1992
+*
+
+
+// старые значения из опроса
+ADD
+1991
+
+mpu,"^A"v991^5,"^F"v991^1,"^E"v991^2,"^O"v991^3,"^V"v991^4,"^N"v991^6,"^C"v991^7,"^D"v991^8,"^0"v991^9
+
+// новые значени из опроса
+ADD
+1992
+
+mpu,"^A"v991^A,"^F"v991^F,"^E"v991^E,"^O"v991^O,"^V"v991^V,"^N"v991^N,"^C"v991^C,"^D"v991^D,"^0"v991^0
+
+// если поле 90 пустое, то добавляю новые значения 
+IF
+if a(v90) then '1' fi
+ADD
+90
+
+v1992
+
+FI
+// надстройка - учет повторяемости поля 90
+DEL
+9000
+*
+
+
+ADD
+9000
+
+(v90/)
+
+// для собирания измененных 90
+DEL
+9001
+*
+
+
+//.............цикл по повторениям поля 90
+REPEAT
+DEL
+90
+*
+
+
+ADD
+90
+
+&uf('Av9000#1')
+
+// корректирую, если заданные старые значения совпадают с полем 90 или они не заданы
+// заменяю поле 90 из поля 90 и поля 1991 и 1992
+IF
+if p(v90^A) then '1' fi
+REP
+90^A
+1
+if v1991^A='' and v1992^A<>'' or v1991^A<>'' and v1991^A=&uf('+97',v90^A)  then v1992^A else v90^A fi
+
+FI
+IF
+if a(v90^A) and v1992^A<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^A='' then '^A',v1992^A fi
+
+FI
+IF
+if p(v90^0) then '1' fi
+REP
+90^0
+1
+if v1991^0='' and v1992^0<>'' or v1991^0<>'' and v1991^0=&uf('+97',v90^0)  then v1992^0 else v90^0 fi
+
+FI
+IF
+if a(v90^0) and v1992^0<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^0='' then '^0',v1992^0 fi
+
+FI
+IF
+if p(v90^F) then '1' fi
+REP
+90^F
+1
+if v1991^F='' and v1992^F<>'' or v1991^F<>'' and val(v1991^F)=val(v90^F) then v1992^F else v90^F fi
+
+FI
+IF
+if a(v90^F) and v1992^F<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^F='' then '^F',v1992^F fi
+
+FI
+IF
+if p(v90^E) then '1' fi
+REP
+90^E
+1
+if v1991^E='' and v1992^E<>'' or v1991^E<>'' and v1991^E=&uf('+97',v90^E)  then v1992^E else v90^E fi
+
+FI
+IF
+if a(v90^E) and v1992^E<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^E='' then '^E',v1992^E fi
+
+FI
+IF
+if p(v90^N) then '1' fi
+REP
+90^N
+1
+if v1991^N='' and v1992^N<>'' or v1991^N<>'' and v1991^N=&uf('+97',v90^N)  then v1992^N else v90^N fi
+
+FI
+IF
+if a(v90^N) and v1992^N<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^N='' then '^N',v1992^N fi
+
+FI
+//специальность
+IF
+if p(v90^C) then '1' fi
+REP
+90^C
+1
+if v1991^C='' and v1992^C<>'' or v1991^C<>'' and v1991^C=&uf('+97',v90^C)  then v1992^C else v90^C fi
+
+FI
+IF
+if a(v90^C) and v1992^C<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^C='' then '^C',v1992^C fi
+
+FI
+IF
+if p(v90^O) then '1' fi
+REP
+90^O
+1
+if v1991^O='' and v1992^O<>'' or v1991^O<>'' and v1991^O=&uf('+97',v90^O)  then v1992^O else v90^O fi
+
+FI
+IF
+if a(v90^O) and v1992^O<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^O='' then '^O',v1992^O fi
+
+FI
+IF
+if p(v90^V) then '1' fi
+REP
+90^V
+1
+if v1991^V='' and v1992^V<>'' or v1991^V<>'' and v1991^V=&uf('+97',v90^V)  then v1992^V else v90^V fi
+
+FI
+IF
+if a(v90^V) and v1992^V<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^V='' then '^V',v1992^V fi
+
+FI
+IF
+if p(v90^D) then '1' fi
+REP
+90^D
+1
+if v1991^D='' and v1992^D<>'' or v1991^D<>'' and v1991^D=&uf('+97',v90^D)  then v1992^D else v90^D fi
+
+FI
+IF
+if a(v90^D) and v1992^D<>'' then '1' fi
+REP
+90
+1
+v90,if v1991^D='' then '^D',v1992^D fi
+
+FI
+ADD
+9001
+
+v90
+
+DEL
+9000
+1
+
+
+UNTIL
+if p(v9000) then '1' fi
+//.............конец цикла по повторением поля 90
+DEL
+90
+*
+
+
+ADD
+90
+
+(v9001/)
+
+DEL
+9001
+*
+
+
+// v1090-значение поля до, проверяю - есть ли изменения
+IF
+if v1090^0=&uf('+97',v90^0) and val(v1090^F)=val(v90^F) and v1090^E=&uf('+97',v90^E) and v1090^O=&uf('+97',v90^O) and v1090^V=&uf('+97',v90^V) and v1090^A=&uf('+97',v90^A) and v1090^N=&uf('+97',v90^N) and v1090^C=&uf('+97',v90^C) and v1090^D=v90^D then '0' else '1' fi
+//..................... формирование поей 69 заново
+// формирование заново поля 69
+DEL
+69
+*
+
+
+// надстройка - учет повторяемости поля 90
+DEL
+9000
+*
+
+
+ADD
+9000
+
+(v90/)
+
+DEL
+9001
+*
+
+
+ADD
+9001
+
+(v90/)
+
+//.............цикл по повторениям поля 90
+REPEAT
+DEL
+90
+*
+
+
+ADD
+90
+
+&uf('Av9000#1')
+
+// сначала в 112, чтобы  не повторять подполя B и D
+DEL
+112
+*
+
+
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+if p(v90) and a(v90^U) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if v90^E<>'' and val(&uf('JVUZ,VGR=',v90^E))>0 then &uf('DVUZ,?VGR=',v90^E,'?,(v69/)') fi else if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,v90^v,,v90^o,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,v90^v,,v90^o,"-S"v90^f,'?,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,v90^o,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^o,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',"-S"v90^f)>'0' then &unifor('DVUZ,?!',"-S"v90^f,'?,(v69/)') fi fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if &uf('IMAIN,DefaultModeSpec,1')='1' then '1' fi
+// если в специальности есть точка, то добавляю специальность до точки 
+IF
+if v90^C<>'' and v90^C:'.' then '1' fi
+DEL
+1090
+*
+
+
+ADD
+1090
+
+v90
+
+REP
+1090^C
+1
+&uf('G0.',v1090^C)
+
+ADD
+112
+
+if p(v1090) and a(v1090^U) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if v1090^E<>'' and val(&uf('JVUZ,VGR=',v1090^E))>0 then &uf('DVUZ,?VGR=',v1090^E,'?,(v69/)') fi else if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,v1090^v,,v1090^o,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,v1090^v,,v1090^o,"-S"v1090^f,'?,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,v1090^o,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^o,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',"-S"v1090^f)>'0' then &unifor('DVUZ,?!',"-S"v1090^f,'?,(v69/)') fi fi fi
+
+FI
+FI
+
+IF
+if &uf('IMAIN,DefaultModeSpec,1')='2' then '1' fi
+// если специальность кончается не на 00, то расширяю на 00
+IF
+if v90^C<>'' then if v90^C*4.1<>'0' or v90^C*5.1<>'0' then '1' fi fi
+DEL
+1090
+*
+
+
+ADD
+1090
+
+v90
+
+REP
+1090^C
+1
+v1090^C.4,'00'
+
+ADD
+112
+
+if p(v1090) and a(v1090^U) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if v1090^E<>'' and val(&uf('JVUZ,VGR=',v1090^E))>0 then &uf('DVUZ,?VGR=',v1090^E,'?,(v69/)') fi else if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,v1090^v,,v1090^o,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,v1090^v,,v1090^o,"-S"v1090^f,'?,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,v1090^o,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,v1090^o,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^o,,,"-S"v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^o,,,"-S"v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',"-S"v1090^f)>'0' then &unifor('DVUZ,?!',"-S"v1090^f,'?,(v69/)') fi fi fi
+
+FI
+FI
+
+REPEAT
+ADD
+69
+
+if rsum((if p(v69) then if &uf('+97',v69^B)= &uf('+97',&unifor('Av112^B#1')) and &uf('+97',v69^D)= &uf('+97',&unifor('Av112^D#1')) then '1,' else '0,' fi fi))=0 then &unifor('Av112#1') fi
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+DEL
+9000
+1
+
+
+UNTIL
+if p(v9000) then '1' fi
+//.............конец цикла по повторением поля 90
+DEL
+90
+*
+
+
+ADD
+90
+
+(v9001/)
+
+DEL
+9001
+*
+
+
+DEL
+9000
+*
+
+
+// Удаление 69 в соответствии с изучаемым языком
+DEL
+69
+F
+if v920:'VUZ' then else (if p(v69) then if v69^d:':' then if &unifor('Av26#1')<>'' then if &unifor('DRDR,@'mfn,',v26|, |'):&unifor('G2:'v69^d) then'0'else'1' fi else '1' fi else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Откорректирована запись студента ',v30,'. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+
+
+// конец - есть изменения
+FI
+// конец не отчислен
+FI
+DEL
+1090
+*
+
+
+DEL
+1069
+*
+
+
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+1991
+*
+
+
+DEL
+1992
+*
+
+

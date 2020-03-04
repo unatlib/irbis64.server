@@ -1,0 +1,10 @@
+/*&uf('+7W992#^Q1992^HПодшивка № 1,8,9/10,11/12,Подшивка № 3')/
+&uf('+7W993#'(&unifor('1*R,?g992^h#1')/)),
+&uf('+7W1#'),&uf('+7W2#'),
+(if p(g993) then if g993:'подш' then &uf('+7U1#'g993) else &uf('+7U2#'g993) fi fi),
+
+(if p(g1) then 
+    if p(g1^q) then g1 else 
+       '^Q'&uf('Ag992^q#1'),if &uf('Ag992^f#1')<>'' then'^F'&uf('Ag992^f#1'),fi,'^H'g1
+ fi fi/)/
+if g2<>'' then '^Q'&uf('Ag992^q#1'),'^H'&uf('U'|,|g2) fi,/

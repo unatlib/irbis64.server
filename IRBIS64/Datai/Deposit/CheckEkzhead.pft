@@ -1,0 +1,74 @@
+/*---g9 - инвентарь-ШК
+/*---g10 - MFN записи
+ if p(v1)
+ then 
+   &uf('+7W9#',,,&uf('G0@',v1) ),,,&uf('+7W10#',,,&uf('G2@',v1) ),,,&uf('+7W10#',,&uf('G2_',,g10) ),,,,,,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx700 \pard \ql\widctlpar\intbl {\qc \fs24 ',,&uf('+7W20#',,f(val(g20)+1,0,0)  ),,g20,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2355 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,
+/*----инвентарь
+   &uf('+7W6#'),,,
+   if val(&uf('J',,&uf('+D'),,',IN=',g9))=0 then g9 else 
+   ref(val(g10),
+              if s((|!|v910^b|!|)): s('!',&uf('Ag9#1'),'!') 
+             then 
+                &uf('Ag9#1') 
+             else 
+                (if p(v910) then if v910^h=&uf('Ag9#1') then v910^b, break fi fi) 
+             fi 
+       ),,,
+    fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4010 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,
+/*----штрих-код
+   ref(val(g10),
+              if s((|!|v910^h|!|)): s('!',&uf('Ag9#1'),'!') 
+              then 
+                 &uf('Ag9#1') 
+              else 
+                 (if p(v910)then if v910^b=&uf('Ag9#1') then v910^h, break fi fi) 
+              fi 
+        ),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4577 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,
+/*----статус
+   &uf('+7W5#'),,
+   &uf('+7U5#',,,,  
+   ref(val(g10),
+                 (if p(v910)then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^A, fi fi/) 
+        ) ),,,if &uf('Ag5#2')<>'' then '\fs20 ' else '\fs24 ' fi,,,g5+|, |,,,,
+   if s(&uf('IMAIN,StatusNoSpis,')): g5 then &uf('+7W6#(Не будет списан по статусу)') fi,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6000 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,,
+/*----место хранения
+   &uf('+7W5#'),,
+   &uf('+7U5#',,,,  
+   ref(val(g10),
+                 (if p(v910)then if v910^D<>'' then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^D fi fi fi/) 
+        ) ),,,g5+|, |,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7500 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,,
+/*----КСУ
+   ref(val(g10),
+                 (if p(v910)then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^U, break fi fi) 
+        ),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx13500 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,
+/*----заглавие
+   if val(&uf('J',,&uf('+D'),,,',IN=',g9))=0 then '\fs20 \b (Экземпляр не найден!) ',, else '\fs24 '  
+   if g6<>'' then '\b \fs20 ',,g6,,'\b0 \par ' fi,,,
+   ref(val(g10),if v920:'NJ'then &unifor('D,?I=',v933,'?,mhl,v200^a,". "v923^h,". "v923^k,mpl')," - "v934" г."," Т."v935,",N "v936 else v461^x| |,v461^c," ; "v200^v,if p(v200^v) then" : "d200^a fi,v700^a," "v700^b," "d700,v200^a,". - "v210^d,if p(v215^a) then". - "v215^a,if p(v215^1) then if v215^1:'=' then ' '&uf('G2='v215^1) else ' 'v215^1 fi fi,if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi,mpl,fi,,' (',,f(val(mfn),0,0),,')' ),,,fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx15000 \pard \ql\widctlpar\intbl {\qc \fs24 ',,,
+/*----цена
+   ref(val(g10),,,
+            if val((if p(v910) then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^e, break fi fi/))=0  
+            then 
+               v10^d,,,, 
+            else 
+               (if p(v910) then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^e, break fi fi/) 
+            fi,,
+        ),,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+ fi

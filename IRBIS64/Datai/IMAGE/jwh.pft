@@ -1,0 +1,15 @@
+&uf('+7W5#'),
+(if p(v909) then 
+    if v909^q=&uf('Ag225#1') then 
+       &uf('+7U5#'&uf('Ag225#1'),'=',|<b> компл.|v909^k,| (|v909^d|)|,'</b>'
+       if p(v909^f) then 
+          if val(v909^f.1)=0 and (not(v909^f.1='0')) then' ' else 
+             if &unifor('Av210^8#1')<>''then' '&unifor('Av210^8#1') else 'т.'
+          fi fi,v909^f|;| fi,
+       if p(v909^h) then  
+          if val(v909^h.1)=0 and (not(v909^h.1='0'))then' ' else 
+             if &unifor('Av210^9#1')<>''then' '&unifor('Av210^9#1') else' N : '
+       fi fi fi,v909^h+|;  |) 
+    fi 
+ fi),&uf('S0'),
+ &uf('+7U909#'(if g5<>'' then if val(&uf('S1A'))=1 then'^Q',&uf('G0='g5),'^B' &uf('G2='g5) else if g5<>'' then ' '&uf('G2='g5) fi fi fi)),

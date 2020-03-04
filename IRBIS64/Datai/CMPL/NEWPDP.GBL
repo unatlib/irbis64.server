@@ -1,0 +1,26 @@
+0
+ADD
+37
+XXXXXXXXXXXXXXXXXXX
+if p(v33) then "^A"v33,"^B"v86,"^C"v110^d,"^X"v110^x,"^D"v34,"^J"v24,"^E"v35,"^F"v59^a,"^G"v36^a,'^H',f(val(v34,' 0')/val(if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,2) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi,' 1'),0,2),'^N',if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,0) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi, fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+38
+XXXXXXXXXXXXXXXXXXX
+if p(v33) then (if p(v39) then if v39^a:'*'then else |^Z|v39^b,|^Y|v39^c,'^A',&unifor('Av33#1'),'^E'&unifor('Av34#1'),|^D|v39^u,if s(&unifor('Av24#1'),v39^e)<>''then'^1'v39^e,if v39^e=''then &unifor('Av24#1')fi fi ,if a(v39^a)then|^B|v39^b,|^C|v39^c else |^B|v39^a,|^C|v39^d,fi fi fi/)fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+33
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+938
+*
+
+
+DEL
+1938
+*
+
+

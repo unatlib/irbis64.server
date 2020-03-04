@@ -1,0 +1,1 @@
+if p(v88) and (p(v3) or p(v4) or p(v44) or p(v8) or p(v13) or p(v14)) then '1Несовместимые данные для Синонима и Дескриптора' else '0' fi

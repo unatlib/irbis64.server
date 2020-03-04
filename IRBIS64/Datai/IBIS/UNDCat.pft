@@ -1,0 +1,9 @@
+/* Книги для УНД
+'<table bgcolor="#FFFFFF" border=1 width="100%" cellpadding=1 cellspacing=1>',
+'<tr>',
+'<td width="5%" >',&uf('S1A'),'</td>',
+'<td> ',
+&uf('6brief'),
+'</td>',
+'</tr>',
+

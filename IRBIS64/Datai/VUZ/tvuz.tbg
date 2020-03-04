@@ -1,0 +1,35 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_TABITOGI=1
+CELL_TAB_COL_COUNT=3
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=5
+CELL_TAB2_2=Сем 2
+CELL_TAB2_3=f(rsum((if p(v83) then if a(v83^u) and (v83^f='2' or v83^f:'/2' or v83^f:'2/') then '1;' fi fi)),0,0)
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2943 \pard \ql\widctlpar\intbl {\qc \fs24 'v1'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=1
+CELL_SUM111=5
+CELL_SUM112=v1
+[SORT]
+SORT_ROW_COUNT=0
+[HDR]
+HDR_PARAMS_COUNT=0

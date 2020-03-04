@@ -1,0 +1,70 @@
+mhl,
+if p(v461) and a(v461^f) then
+   if v905^1<>'' then else 
+      if s(v961^a,v962)=''then 
+         if s(v461^x,v961^x,v461^7,v961^b)<>''then 
+            if p(v461^x)then 
+               if p(v461^9)then v461^x else 
+                  if v461^x:' 'then 
+                     if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) else 
+                        &unifor('G0.'&unifor('G2 'v461^x)),'. '&unifor('G2.'&unifor('G2 'v461^x)) fi 
+                     ' '&unifor('G0 'v461^x)
+                  else v461^x 
+               fi fi,if ' et al. и др. ':v461^y then else|, |v461^y fi,
+               (if p(v961^x) and a(v961^4) then ", "d461^x,|, |+d961,
+                   if p(v961^9)then v961^x else 
+                      if v961^x:' 'then 
+                         if &unifor('G2 'v961^x):'. ' then &unifor('G2 'v961^x) else 
+                            &unifor('G0.'&unifor('G2 'v961^x)),'. '&unifor('G2.'&unifor('G2 'v961^x)) fi 
+                         ' '&unifor('G0 'v961^x)
+                      else v961^x 
+               fi fi fi) 
+            else 
+               if rsum((if p(v961) then if p(v961^x) and a(v961^4)then'1;'else'0;'fi fi)) 
+                     >4 then &unifor('S0'),
+                  (if p(v961) then 
+                      if p(v961^x) and a(v961^4) then 
+                         if val(&unifor('S1A'))>3 then else |, |+d961,
+                            if p(v961^9)then v961^x else 
+                               if v961^x:' 'then 
+                                  if &unifor('G2 'v961^x):'. ' then &unifor('G2 'v961^x) else 
+                                     &unifor('G0.'&unifor('G2 'v961^x)),'. '&unifor('G2.'&unifor('G2 'v961^x)) fi 
+                                  ' '&unifor('G0 'v961^x)
+                               else v961^x 
+                   fi fi fi fi fi),
+                  if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi 
+               else 
+                  if rsum((if p(v961) then if p(v961^x) and a(v961^4)then'1;'else'0;'fi fi)) >0 
+                  then 
+                     (if p(v961^x) and a(v961^4) then |, |+d961,
+                         if p(v961^9)then v961^x else 
+                            if v961^x:' 'then 
+                               if &unifor('G2 'v961^x):'. ' then &unifor('G2 'v961^x) else 
+                                  &unifor('G0.'&unifor('G2 'v961^x)),'. '&unifor('G2.'&unifor('G2 'v961^x)) fi 
+                               ' '&unifor('G0 'v961^x)
+                            else v961^x 
+                      fi fi fi) 
+            fi fi fi,
+            if rsum((if p(v961) then if p(v961^x) and a(v961^4)then'1;'else'0;'fi fi))>0  
+               or s(v461^x,v461^b)<>''then if s(v961^4)<>''then' ; 'fi 
+            fi,&unifor('S0'),
+            (if p(v961^x) and p(v961^4) then 
+                if val(&unifor('S1A'))>1 then ', '&unifor('Q'v961^4*4)' ' else 
+                   mpu,v961^4*4.1,mpl,v961^4*5| | fi 
+                if p(v961^9)then v961^x else 
+                   if v961^x:' 'then 
+                      if &unifor('G2 'v961^x):'. ' then &unifor('G2 'v961^x) else 
+                         &unifor('G0.'&unifor('G2 'v961^x)),'. '&unifor('G2.'&unifor('G2 'v961^x)) fi 
+                      ' '&unifor('G0 'v961^x)
+                   else v961^x 
+            fi fi fi),
+            if s(v961^b)<>'' then 
+               if s(v461^x,v961^x)<>''then ' ; 'fi,&unifor('S0'),
+               (if p(v961) then 
+                   if p(v961^b) then 
+                      if &unifor('S1A')='1' then else |, |d961^b fi,v961^7, 
+                      if a(v961^7) then v961^b fi 
+               fi  fi) 
+         fi fi, 
+      else ,O961F,
+fi fi fi,

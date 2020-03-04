@@ -1,0 +1,50 @@
+if v920:'nj'then 
+else 
+   if p(v903) then '<b>'
+      if v903:v906.15 then v906,"    "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b,
+         if v906:v908 then else"<br>"v908 fi 
+      else 
+         if p(v908) and (v903:&unifor('Av686.15#1') or 
+            v903:&unifor('G0^'&unifor('Av675.15#1')) or 
+            v903:&unifor('Av621.15#1')) then,
+            if v903:&unifor('Av686.15#1') then &unifor('Av686#1') else 
+               if v903:&unifor('G0^'&unifor('Av675.15#1')) then 
+                  &unifor('G0^'&unifor('Av675#1')) else 
+                  if v903:&unifor('Av621.15#1') then &unifor('Av621#1') 
+            fi fi fi,
+            "     "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b,
+            "<br>"v908 
+         else 
+            if v903.1='-'or v920:'ASP'and a(v982^0) or p(v982^u) then else v903,
+               "      "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b,
+               if p(v906) then"<br>"v906,
+                  if v906:v908 then else"<br>"v908 
+      fi fi fi fi fi'</b>'
+   else 
+      if p(v982^0) and p(v982^9) and a(v982^u) then'<b>'(|, |+v982^0,| |v982^9),
+         "      "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b '</b>'
+      else 
+         if s(v906,v686,v675,v621)<>''then '<b>'
+            if p(v906) then v906,
+               "      "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b,
+               if v906:v908 then else"<br>"v908 fi 
+            else'<b>'&unifor('Av686#1'),
+               if a(v686) then &unifor('G0^'&unifor('Av675#1')),
+                  if a(v675) then &unifor('G0^'&unifor('Av621#1')) 
+               fi fi,
+               "      "d106,&unifor('K106sh.mnu|'v106^a)," "v106^b,
+               "<br>"v908 
+   fi fi fi fi,
+   if p(v982) then &unifor('S0'),
+      (if p(v982) then 
+          if &unifor('S1A')='1' then 
+             if p(v982^s) then' '
+                if &unifor(|kstr.mnu\|v982^s)<>''then &unifor(|kstr.mnu\|v982^s) else v982^s fi,
+                if p(v982^s) then|, |d982^k,v982^k fi,| |v982^i,|.|d982^k 
+       fi fi fi),"      <b>"d106,&unifor("K106sh.mnu|"v106^a)," "v106^b,"</b>"d106 
+   fi,
+   (if p(v910) then 
+       if p(v910^r) and &unifor('Av908#1')<>''then 
+          '<br>'v910^r' / '&unifor('Av908#1')'-'v910^d 
+   fi fi),
+fi,

@@ -1,0 +1,335 @@
+0
+//15 импорт-сли€ние в Ѕƒ RDR
+// 991^= - перечень подполей, которые обновл€ютс€
+// 991^? - признак создани€ новых в RDR
+// 991^1 - поиск будет по ‘»ќ
+// 991^2 - поиск будет по »ƒ
+// в 993 - запрос на поиск записей на обновление
+// в 991^3 - перечень меток полей на обновление 
+IF
+if v993='' then '1' fi
+PUTLOG
+'Ќе сформирован запрос на поиск дл€ обновлени€'
+FI
+IF
+if v993<>'' then '1' fi
+PUTLOG
+'Ќа загрузку запись: ',v10," "v11,," "v12,," "v30,,
+//                     PUTLOG
+//                     'v991=',,v991,,' v993=',,v993,,
+IF
+if v991<>'' then '1' fi,,,if val(v991^?)=1 then &uf('+7W10#1') fi,,if v991^=<>'' then &uf('+7W11#',,v991^=) fi,
+// в g10 признак создани€ новых записей, в g11 - список подполей на обновление
+// поиск записей - в 993 запрос
+DEL
+994
+*
+
+
+ADD
+994
+
+if v991^1<>'' then &uf('+3S,10,!',,,,v993,,,'!,"RI="v10," "v11," "v12/') else &uf('+3S,10,!',,,,v993,,,'!,"RI="v30/') fi
+
+//                      PUTLOG
+//                      '«апрос - ',,,v993,,'  ответы - ',,(v994|, |)
+IF
+if p(v994) then '1'  fi
+//---------------------------------цикл по найденным дл€ обновлени€ запис€м RDR
+DEL
+995
+*
+
+
+ADD
+995
+
+(v994/)
+
+REPEAT
+//                             PUTLOG
+//                             'CORREC по запросу ',,,&uf('Av995#1')
+CORREC
+'*'
+v90,,,,if s(v991^3,','): '32,' then &uf('+7W32#',v32) fi,,if s(v991^3,','): '21,' then &uf('+7W21#',v21) fi,,if s(v991^3,','): '50,' then &uf('+7W50#',v50) fi,,if s(v991^3,','): '14,' then &uf('+7W14#',v14) fi,,if s(v991^3,','): '13,' then &uf('+7W13#',v13) fi,,if s(v991^3,','): '16,' then &uf('+7W16#',v16) fi,,if s(v991^3,','): '19,' then &uf('+7W19#',v19) fi,,if s(v991^3,','): '26,' then &uf('+7W26#',v26) fi,,if s(v991^3,','): '17,' then &uf('+7W17#',v17) fi,,if s(v991^3,','): '18,' then &uf('+7W18#',v18) fi,,
+&uf('Av995#1')
+
+PUTLOG
+'Ѕƒ RDR: замена в записи MFN=',,,f(val(mfn),0,0),,,
+IF
+if p(v1001) then '1' fi
+IF
+if a(v90) then '1' fi
+ADD
+90
+
+v1001
+
+FI
+REP
+90
+F
+(if p(v90) then if s(&uf('Ag11#1')): '0' then if &uf('Av1001^0#1')<>'' then '^0',&uf('Av1001^0#1') else |^0|v90^0 fi else |^0|v90^0 fi,,,,,,if s(&uf('Ag11#1')): 'F' then if &uf('Av1001^F#1')<>'' then '^F',&uf('Av1001^F#1') else |^F|v90^F fi else |^F|v90^F fi,,,,,,if s(&uf('Ag11#1')): '1' then if &uf('Av1001^1#1')<>'' then '^1',&uf('Av1001^1#1') else |^1|v90^1 fi else |^1|v90^1 fi,,,,,,if s(&uf('Ag11#1')): 'E' then if &uf('Av1001^E#1')<>'' then '^E',&uf('Av1001^E#1') else |^E|v90^E fi else |^E|v90^E fi,,,,,,if s(&uf('Ag11#1')): 'G' then if &uf('Av1001^G#1')<>'' then '^G',&uf('Av1001^G#1') else |^G|v90^G fi else |^G|v90^G fi,,,,,,if s(&uf('Ag11#1')): 'O' then if &uf('Av1001^O#1')<>'' then '^O',&uf('Av1001^O#1') else |^O|v90^O fi else |^O|v90^O fi,,,,,,if s(&uf('Ag11#1')): 'V' then if &uf('Av1001^V#1')<>'' then '^V',&uf('Av1001^V#1') else |^V|v90^V fi else |^V|v90^V fi,,,,,,if s(&uf('Ag11#1')): 'H' then if &uf('Av1001^H#1')<>'' then '^H',&uf('Av1001^H#1') else |^H|v90^H fi else |^H|v90^H fi,,,,,,if s(&uf('Ag11#1')): 'A' then if &uf('Av1001^A#1')<>'' then '^A',&uf('Av1001^A#1') else |^A|v90^A fi else |^A|v90^A fi,,,,,,if s(&uf('Ag11#1')): 'N' then if &uf('Av1001^N#1')<>'' then '^N',&uf('Av1001^N#1') else |^N|v90^N fi else |^N|v90^N fi,,,,,,if s(&uf('Ag11#1')): 'C' then if &uf('Av1001^C#1')<>'' then '^C',&uf('Av1001^C#1') else |^C|v90^C fi else |^C|v90^C fi,,,,,,if s(&uf('Ag11#1')): 'D' then if &uf('Av1001^D#1')<>'' then '^D',&uf('Av1001^D#1') else |^D|v90^D fi else |^D|v90^D fi,,,,,,if s(&uf('Ag11#1')): '2' then if &uf('Av1001^2#1')<>'' then '^2',&uf('Av1001^2#1') else |^2|v90^2 fi else |^2|v90^2 fi,,,,,,fi/)
+
+FI
+//___блок замены пол€ 32
+IF
+if g32<>'' then '1' fi
+IF
+if a(v32) then '1' fi
+ADD
+32
+
+g32
+
+FI
+REP
+32
+F
+g32
+
+FI
+//____
+//___блок замены пол€ 21
+IF
+if g21<>'' then '1' fi
+IF
+if a(v21) then '1' fi
+ADD
+21
+
+g21
+
+FI
+REP
+21
+F
+g21
+
+FI
+//____
+//___блок замены пол€ 50
+IF
+if g50<>'' then '1' fi
+IF
+if a(v50) then '1' fi
+ADD
+50
+
+g50
+
+FI
+REP
+50
+F
+g50
+
+FI
+//____
+//___блок замены пол€ 14
+IF
+if g14<>'' then '1' fi
+IF
+if a(v14) then '1' fi
+ADD
+14
+
+g14
+
+FI
+REP
+14
+F
+g14
+
+FI
+//____
+//___блок замены пол€ 13
+IF
+if g13<>'' then '1' fi
+IF
+if a(v13) then '1' fi
+ADD
+13
+
+g13
+
+FI
+REP
+13
+F
+g13
+
+FI
+//____
+//___блок замены пол€ 16
+IF
+if g16<>'' then '1' fi
+IF
+if a(v16) then '1' fi
+ADD
+16
+
+g16
+
+FI
+REP
+16
+F
+g16
+
+FI
+//____
+//___блок замены пол€ 19
+IF
+if g19<>'' then '1' fi
+IF
+if a(v19) then '1' fi
+ADD
+19
+
+g19
+
+FI
+REP
+19
+F
+g19
+
+FI
+//____
+//___блок замены пол€ 26
+IF
+if g26<>'' then '1' fi
+IF
+if a(v26) then '1' fi
+ADD
+26
+
+g26
+
+FI
+REP
+26
+F
+g26
+
+FI
+//____
+//___блок замены пол€ 17
+IF
+if g17<>'' then '1' fi
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+g17
+
+FI
+REP
+17
+F
+g17
+
+FI
+//____
+//___блок замены пол€ 18
+IF
+if g18<>'' then '1' fi
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+g18
+
+FI
+REP
+18
+F
+g18
+
+FI
+//____
+DEL
+1001
+*
+
+
+END
+//------------------------------------обновление полей из 991^3
+//--------------использованы пол€ 32,21,50,14,13,16,19,26,17,18
+DEL
+995
+1
+
+
+UNTIL
+if p(v995) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------конец обновлени€ RDR
+IF
+if a(v994) and (val(g10)=1) then '1' fi
+//--------------------------нет записей на обновление - нова€
+NEWMFN
+'RDR'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ALL
+DEL
+991
+*
+
+
+DEL
+993
+*
+
+
+END
+PUTLOG
+'—оздана нова€ запись - ',v10,' ',v11,' ',v12
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------конец создани€ записи RDR
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------конец есть поле 991
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------конец есть поле 993
+DEL
+991
+*
+
+
+DEL
+993
+*
+
+
+DEL
+994
+*
+
+
+DEL
+995
+*
+
+

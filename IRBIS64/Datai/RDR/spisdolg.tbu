@@ -1,0 +1,82 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+#
+'\trowd\trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat15 
+\cellx12015 \pard \widctlpar\intbl {\ql \fs24 ',,'\b ',,
+'ИТОГО по категории: читателей - ',g201,,'; книг - ',,g202,
+'\cell }',,
+'\pard \widctlpar\intbl {\row }\pard \widctlpar ',,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30\clcbpat16 
+\cellx12015 	
+\pard \widctlpar\intbl {\ql \fs24 \b ',,'ВСЕГО: читателей - ',g200'; книг - ',,g203,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}{\stylesheet{\widctlpar \f0\fs20\lang1049 \snext0 Normal;}{\s1\sb240\sa60\keepn\widctlpar \b\f0\fs28\lang1049\kerning28 \sbasedon0\snext0 heading 1;}{\s2\sb240\sa60\keepn\widctlpar \b\i\f0\lang1049 \sbasedon0\snext0 heading 2;}{\*\cs10 \additiveDefault Paragraph Font;}}\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red228\green228\blue228;\red192\green192\blue192;}
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\pard \widctlpar\intbl {\qc \fs20 \par \b Категория\par № п/п\b0 \par 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2943 
+\pard \widctlpar\intbl {\qc \fs20 \par \b ФИО\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4077 
+\pard \widctlpar\intbl {\qc \fs20 \par \b Ид-р чит-ля\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs20 \par \b Краткое БО\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9747 
+\pard \widctlpar\intbl {\qc \fs20 \par \b Инв.№\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 \par \b ШК\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12015 
+\pard \widctlpar\intbl {\qc \fs20 \par \b Всего экз.\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

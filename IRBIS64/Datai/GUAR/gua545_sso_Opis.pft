@@ -1,0 +1,9 @@
+if p(v545)then            &uf('+7W2#'v545^L.2), (if p(v327)then if v327^L=&uf('Ag2#1') then v327^m fi fi)  
+   if v545^L*2.1:'.' then &uf('+7W2#'v545^L.5), (if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*5.1:'.' then &uf('+7W2#'v545^L.8), (if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*8.1:'.' then &uf('+7W2#'v545^L.11),(if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*11.1:'.'then &uf('+7W2#'v545^L.14),(if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*14.1:'.'then &uf('+7W2#'v545^L.17),(if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*17.1:'.'then &uf('+7W2#'v545^L.20),(if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+   if v545^L*20.1:'.'then &uf('+7W2#'v545^L.22),(if p(v327)then if v327^L=&uf('Ag2#1') then | --- |v327^m fi fi) else break fi,
+fi, 

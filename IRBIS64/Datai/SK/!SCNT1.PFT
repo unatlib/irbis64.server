@@ -1,0 +1,48 @@
+mhl,
+/v700^a," "v700^d,", "v700^g,if a(v700^g) then", "d700^b,if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) fi fi/v700^r/v970^a," "v970^b,
+(/v701^a,| |v701^d,|, |v701^g,if a(v701^g) then|, |d701^b,if v701^b:'. 'or (not(v701^b:'.')) then v701^b else &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) fi  fi/v701^r),
+(/v702^a,| |v702^d,|, |v702^g,if a(v702^g) then|, |d702^b,if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) fi  fi/v702^r),
+(/v926^a,| |v926^d,|, |v926^g,if a(v926^g) then|, |v926^b fi/v926^r),
+(/v391^a,| |v391^d,|, |v391^g,if a(v391^g) then|, |v391^b fi/v391^r),
+if s(v961^a)<>''then (/v961^a,| |v961^d,|, |v961^g,if a(v961^g) and p(v961^a) then |, |d961^b,if v961^b:'. 'or (not(v961^b:'.')) then v961^b else &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi  fi/v961^r) else 
+if p(v461^x) then /
+if v461^x:',' then v461^x else if v461^x:' ' then &unifor(|G0 |v461^x),', '&unifor(|G2 |v461^x) else v461^x fi fi fi 
+fi,
+(/if p(v961^x) then 
+if v961^x:',' then v961^x else if v961^x:' ' then &unifor(|G0 |v961^x),', '&unifor(|G2 |v961^x) else v961^x fi fi fi),
+(/if p(v470^a) then 
+if v470^a:',' then v470^a else if v470^a:' ' then &unifor(|G0 |v470^a),', '&unifor(|G2 |v470^a) else v470^a fi fi fi),
+(/if p(v454^d) then 
+if v454^d:',' then v454^d else if v454^d:' ' then &unifor(|G0 |v454^d),', '&unifor(|G2 |v454^d) else v454^d fi fi fi),
+(/if p(v454^e) then 
+if v454^e:',' then v454^e else if v454^e:' ' then &unifor(|G0 |v454^e),', '&unifor(|G2 |v454^e) else v454^e fi fi fi),
+(/if p(v454^f) then 
+if v454^f:',' then v454^f else if v454^f:' ' then &unifor(|G0 |v454^f),', '&unifor(|G2 |v454^f) else v454^f fi fi fi),
+(/if p(v461^y) then 
+if v461^y:',' then v461^y else if v461^y:' ' then &unifor(|G0 |v461^y),', '&unifor(|G2 |v461^y) else v461^y fi fi fi),
+(/if p(v600) then if p(v600^g) then &unifor(|G0 |v600^a),|, |v600^g else 
+if v600^a:',' then v600^a else if v600^a:' ' then &unifor(|G0 |v600^a),', '&unifor(|G2 |v600^a) else v600^a fi fi fi fi),
+(/if p(v925^f) then if p(v925^?)then &unifor(|G0 |v925^f),|, |v925^? else 
+if v925^f:',' then v925^f else if v925^f:' ' then &unifor(|G0 |v925^f),', '&unifor(|G2 |v925^f) else v925^f fi fi fi fi)
+(/if p(v925^2) then if p(v925^,)then &unifor(|G0 |v925^2),|, |v925^, else 
+if v925^2:',' then v925^2 else if v925^2:' ' then &unifor(|G0 |v925^2),', '&unifor(|G2 |v925^2) else v925^2 fi fi fi fi)
+(/if p(v925^3) then if p(v925^;)then &unifor(|G0 |v925^3),|, |v925^; else 
+if v925^3:',' then v925^3 else if v925^3:' ' then &unifor(|G0 |v925^3),', '&unifor(|G2 |v925^3) else v925^3 fi fi fi fi)
+(/if p(v922^f) then if p(v922^?)then &unifor(|G0 |v922^f),|, |v922^? else 
+if v922^f:',' then v922^f else if v922^f:' ' then &unifor(|G0 |v922^f),', '&unifor(|G2 |v922^f) else v922^f fi fi fi fi)
+(/if p(v922^2) then if p(v922^,)then &unifor(|G0 |v922^2),|, |v922^, else 
+if v922^2:',' then v922^2 else if v922^2:' ' then &unifor(|G0 |v922^2),', '&unifor(|G2 |v922^2) else v922^2 fi fi fi fi)
+(/if p(v922^3) then if p(v922^;)then &unifor(|G0 |v922^3),|, |v922^; else 
+if v922^3:',' then v922^3 else if v922^3:' ' then &unifor(|G0 |v922^3),', '&unifor(|G2 |v922^3) else v922^3 fi fi fi fi)
+(/if p(v330^f) then if p(v330^?)then &unifor(|G0 |v330^f),|, |v330^? else 
+if v330^f:',' then v330^f else if v330^f:' ' then &unifor(|G0 |v330^f),', '&unifor(|G2 |v330^f) else v330^f fi fi fi fi)
+(/if p(v330^2) then if p(v330^,)then &unifor(|G0 |v330^2),|, |v330^, else 
+if v330^2:',' then v330^2 else if v330^2:' ' then &unifor(|G0 |v330^2),', '&unifor(|G2 |v330^2) else v330^2 fi fi fi fi)
+(/if p(v330^3) then if p(v330^;)then &unifor(|G0 |v330^3),|, |v330^; else 
+if v330^3:',' then v330^3 else if v330^3:' ' then &unifor(|G0 |v330^3),', '&unifor(|G2 |v330^3) else v330^3 fi fi fi fi)
+(/if p(v481^c) then if p(v481^x) then if p(v481^?)then &unifor(|G0 |v481^x),|, |v481^? else 
+if v481^x:',' then v481^x else if v481^x:' ' then &unifor(|G0 |v481^x),', '&unifor(|G2 |v481^x) else v481^x fi fi fi fi fi)
+(/if p(v481^c) then if p(v481^2) then if p(v481^,)then &unifor(|G0 |v481^2),|, |v481^, else 
+if v481^2:',' then v481^2 else if v481^2:' ' then &unifor(|G0 |v481^2),', '&unifor(|G2 |v481^2) else v481^2 fi fi fi fi fi)
+(/if p(v481^c) then if p(v481^3) then if p(v481^;)then &unifor(|G0 |v481^3),|, |v481^; else 
+if v481^3:',' then v481^3 else if v481^3:' ' then &unifor(|G0 |v481^3),', '&unifor(|G2 |v481^3) else v481^3 fi fi fi fi fi),

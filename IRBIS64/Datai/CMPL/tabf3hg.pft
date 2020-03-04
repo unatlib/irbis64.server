@@ -1,0 +1,20 @@
+'\par \pard \li108 \ri108 ','\par \qr \fs20 ',
+ref(l('AS=',,v991^A),,,,'Дата 'v88^b*6'.'v88^b*4.2'.'v88^b.4,' г.',,&uf('+7W10#',v88^d),,&uf('+7W11#',v88^A) ),,,
+'\par \pard \li7000 \qr Источник: ',,,,,,
+ref(l('kor=',g10),v81^a". ",v81^b,if a(v81)then v89^a". ",v89^b fi),,,,,,
+'\par \pard \li108 \ri108 \ql \fs20 Номер записи в КСУ поступлений: ',g11,'\par ',,,
+if v991^B<>'' then '\pard \li108 \ri108 \ql \fs20 Для подразделения: ',v991^B,'\par ' fi,,,
+'\par '
+&uf('+7W991#',v991),,,
+ref(l('KSU=',g11),,,
+       (if p(v88) 
+        then 
+           if &uf('+97',v88^y)=&unifor('G0-'&unifor('Ag991^A*3#1')) and 
+              &uf('+97',&unifor('Av88^a*2.2#1'))=&unifor('Ag991^A.2#1')  
+           then 
+              '\par \qc \fs25 ',' АКТ N ',v88^y,'\par \fs20 Поступило всего 'v88^f,
+              ' экз.\par На общую сумму ',v88^g,&unifor('Korg.mnu|3') 
+           fi 
+        fi),
+   ),,,,,,,,,,,,
+'\par '

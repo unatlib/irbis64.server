@@ -1,0 +1,79 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1242 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2659 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4076 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5493 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6910 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8327 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9744 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11161 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12578 
+\pard \widctlpar\intbl {\qr \fs22 'v1^F/
+'\cell } \pard \widctlpar\intbl {\qr \fs22 '
+if v1^c:'_' then 
+   if L('SPEC='v920'_'v1^f'_'&uf('G0_'v1^c)'_')= mfn then 
+&uf('+7W10#'),&uf('+7U10#'(&uf('7,!SPEC='v920'_'v1^f'_'&uf('G0_'v1^c)'_','!,|^2|v2,|^3|v3,|^4|v4,|^5|v5,|^6|v6,|^7|v7,|^8|v8,|^9|v9/'))/) fi 
+else &uf('+7W11#'v1^c),&uf('+7W13#'&uf(|D|v1^y|,@1,(if p(g11) then if &uf('+Odv.mnu\'&uf('Ag11#1'))<>'' then &uf('+Odv.mnu\'&uf('Ag11#1')) fi fi/)|)),
+&uf('+7W10#'),(if p(g13) then &uf('+7W111#'),&uf('+7W111#'&uf('Av1^f#1')'_'g13),&uf('6kkospec_VL') fi/) fi,
+if rsum(v2,|;|g10^2)>0 then f(rsum((v2,|;|g10^2)),0,0) else '0' fi/
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if rsum(v3,|;|g10^3)>0 then f(rsum((v3,|;|g10^3)),0,0) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if val(v1^s)>0 then f(rsum((v1^S|;|)),0,0) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if rsum(v8,|;|g10^8)>0 and rsum(v2,|;|g10^2)>0 then f(rsum((v8,|;|g10^8))/rsum((v2,|;|g10^2)),0,2) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 '
+if p(v991^!) then '-' else if rsum(v7,|;|g10^7)>0 then f(rsum((v7,|;|g10^7)),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if rsum(v4,|;|g10^4)>0 then f(rsum((v4,|;|g10^4)),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if rsum(v6,|;|g10^6)>0 then f(rsum((v6,|;|g10^6)),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if rsum(v5,|;|g10^5)>0 and rsum(v7,|;|g10^7)>0 then f(rsum((v5,|;|g10^5))/rsum((v7,|;|g10^7)),0,2) else '0' fi fi 
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

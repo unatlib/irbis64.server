@@ -1,0 +1,186 @@
+0
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+Ввод 907
+
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if &uf('+6')='0'then '^CDEL','^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,')  else if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),'^C',&unifor('IPRIVATE,ETR,') fi fi
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ ввод шифра
+
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if a(v903) then if v920:'PLAN' then 'PL-',&unifor('R5') else if v920:'EVENT' then v900^a'-',&unifor('R5') else '-'&unifor('R5') fi fi fi/
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Технические требования 
+
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Объединение в 230 подполей ^R и ^D
+
+CHA
+230
+F
+(if p(v230^R) and a(v230^d) then '^R' fi/)
+(if p(v230^R) and a(v230^d) then '^D' fi/)
+REP
+230^D
+F
+(if p(v230^R) and p(v230^d) then v230^D| ; |,v230^R else v230^d fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+230^R
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ распаковка 
+
+ADD
+239
+XXXXXXXXXXXXXXXXXXX
+if v230^d<>'' then &uf('+7W23#'),&uf('+7U23#'if v230^d:' ; ' then (if &unifor('1*R ; ?v230^d#1')<>''then &unifor('1*R ; ?v230^d#1')fi/)/(if &unifor('1*R ; ?v230^d#2')<>''then &unifor('1*R ; ?v230^d#2')fi/)/(if &unifor('1*R ; ?v230^d#3')<>''then &unifor('1*R ; ?v230^d#3')fi),else if v230^d:'; ' then (if &unifor('1*R; ?v230^d#1')<>''then &unifor('1*R; ?v230^d#1')fi/)/(if &unifor('1*R; ?v230^d#2')<>''then &unifor('1*R; ?v230^d#2')fi/)/(if &unifor('1*R; ?v230^d#3')<>''then &unifor('1*R; ?v230^d#3')fi/)else v230^d fi fi),&uf('+7W24#'(v239/)),&uf('+7S23#24'),&uf('+7G23'),(g23/) fi
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Конец Технические требования
+
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Ввод статуса "Мероприятие завершено"
+
+IF
+if v920:'event' then if v997='' then '1' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+997
+XXXXXXXXXXXXXXXXXXX
+if v972^a:'?' then else  if a(v997) then if v900^c<>'P' and (v30^b='' and v30^a < &uf('3') or v30^b<>'' and v30^b < &uf('3')) then'^AZ' fi fi fi 
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'event' then if v997<>'' then '1' else '0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+'*'
+v997,"^X"v972^0
+'I='(if p(v488) then if v488^1:'2' then v488^w fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+330^Z
+F
+(if p(v330) then if v330^0=&uf('Av1001^x#1') then if v330^z<>'' then if v330^z.1=&uf('Av1001^A#1') then v330^z else &uf('Av1001^A#1'),&uf('Av1001^B#1') fi else v330^z fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+330^Z
+F
+(if p(v330) then if v330^0=&uf('Av1001^x#1') then if v330^z='' then &uf('Av1001^A#1'),&uf('Av1001^B#1') else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v320^0<>'' then '1' else '0' fi 
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+110
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then else v320 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+111
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then v320^0 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+(if p(v111) then &uf('+7W2#'v111),&uf('7'&uf('IPRIVATE,EKP,ibis'),',!A='v111|!,'^A'&unifor('6brief'),if v920:'NJ' then '^8'(if p(v922) then if s(v922^f,v922^2,v922^3,v922^w):&uf('G0,'&uf('Ag2#1')) then v922^f,if p(v922^2) then ', 'v922^2 fi,if p(v922^3) then', 'v922^3 fi,if p(v922^w) then', 'v922^w fi,' 'v922^c fi fi) fi,if p(v330) then '^8'(if p(v330) then if s(v330^f,v330^2,v330^3,v330^w):&uf('G0,'&uf('Ag2#1')) then ' - см.  ' v330^f,if p(v330^2) then ', 'v330^2 fi,if p(v330^3) then', 'v330^3 fi,if p(v330^w) then', 'v330^w fi,' 'v330^c fi fi) fi,'^W'v903,'^9'&uf('+D')/|) fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v111<>'' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+320
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+320
+XXXXXXXXXXXXXXXXXXX
+(v110/)/(v112/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+320
+*
+'^0'
+''
+DEL
+320
+F
+&uf('+7W2#'),(if p(v320) then if &uf('Ag2#1'):s(v320^w,v320^8,|+|d320^w) then '1' else '0',&uf('+7W2#'&uf('Ag2#1'),v320^w,v320^8,|+|d320^w) fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+110
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

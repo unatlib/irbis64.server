@@ -1,0 +1,31 @@
+mhl, 
+   (if '***'='600' then 
+       if p(v***) then '^A'
+          if p(v***^9) then 
+             if v***^9:'1' then v***^a else &unifor('E'v***^9,v***^a),|, |v***^g 
+                if a(v***^g) then 
+                   if &unifor('F'v***^9,v***^a)<>'' then ', '&unifor('F'v***^9,v***^a) 
+             fi fi fi 
+          else 
+             if v***^a:' 'then 
+                if v***^a:','then v***^a else &unifor('G0 'v***^a)', 'v***^g, 
+                   if a(v***^g) then &unifor('G2 'v***^a) 
+                fi fi 
+             else v***^a,|, |v***^g 
+          fi fi,| |v***^d, 
+          if s(v***^1,v***^c,v***^f)<>''then' (',v***^1, 
+             if s(v***^1)<>''then| ; |d***^c fi,v***^c, 
+             if s(v***^1,v***^c)<>''then| ; |d***^f fi,v***^f,')' 
+          fi,|\|v***^b|\|,'^13^W'&uf('Av903#1'),'^9'&unifor('+D') 
+       fi 
+    else 
+       if '***'='702' or '***'='700' then '^A'v***^a,| |v***^d,|, |v***^g,
+          if a(v***^g) then |, |d***^b,
+             if v***^b:'. 'or (not(v***^b:'.')) then v***^b else &unifor('G0.'v***^b),'. '&unifor('G2.'v***^b) 
+          fi fi,
+          if s(v***^1,v***^c,v***^f)<>''then' (',v***^1,
+             if s(v***^1)<>''then|; |d***^c fi,v***^c,
+             if s(v***^1,v***^c)<>''then|; |d***^f fi,v***^f,')' 
+          fi,|\|v***^4*3|\|,'^13^W'&uf('Av903#1'),'^9'&unifor('+D')   
+       fi 
+    fi/), 

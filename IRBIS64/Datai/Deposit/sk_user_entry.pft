@@ -1,0 +1,128 @@
+/* ОТЛАДКА
+/*&uf('+7W1112#5'),
+/*Формат для корректировки документа в БД  SK_USER
+/* - FREEPAR10  login пользователя; поле 1 в БД SK_USER
+/* - FREEPAR12 размер таблицы для ввода контингента
+'<title>Корректировка РЕКВИЗИТОВ и КОНТИНГЕНТАдокумента </title>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+/*'<br>mfn=',mfn,
+'<br><A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A>',
+
+'<br><br><input type="submit" class="sub1" name="nnnn" value="Ввод"><br><br>',
+
+
+if mfn<1 then 
+&uf('+7W1110#',v1110),
+&uf('+7W1112#',v1112),
+fi,
+
+'<input type="hidden" name="FREEPAR10" value="',g1110,'">',
+'<input type="hidden" name="FREEPAR12" value="',g1112,'">',
+'<input type="hidden" name="1_1R21STR" value="',g1110,'">',
+/*&uf('+7W2#',g1112),
+
+'<table width="100%">',
+'<tr>',
+    '<td>',
+    '<b>Название:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="2_R21STR" value="',v2,'">',
+    '</td>',
+'</tr>',
+'<tr>',
+    '<td>',
+    '<b>Адрес:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="3_R21STR" value="',v3,'">',
+    '</td>',
+'</tr>',
+'<tr>',
+    '<td style="width: 150px;">',
+    '<b>Тип образовательного учреждения:</b>',
+    '</td>',
+    '<td>',
+            '<select style="width: 100%;" name="4_R21STR" >',
+            '<option value=""></option>',
+            (if &uf('+5Tschool.mnu')<>'' then '<option value="',&uf('+5Tschool.mnu'),'" ',
+            if &uf('+5Tschool.mnu')=&uf('Av4#1') then 'selected' fi,
+            '>',&uf('+5Tschool.mnu'),' - ',&uf('+5Fschool.mnu'),'</option>' 
+            fi),
+'            </select>',
+    '</td>',
+'</tr>',
+
+'</table>',
+
+'<br><b>Контингент:</b>',
+'<table border="1" width="100%">',
+'<tr bgcolor="#CCCCCC">','<td style="width: 30px;">п/п</td>',,'<td>Параллель</td>',,'<td>Уровень</td>','<td>Кол-во учащихся</td>',
+'</tr>',
+&uf('+7W1#'),
+if v10<>'' then 
+(if p(v10) then 
+&uf('+7W1#',f(val(&uf('Ag1#1'))+1,0,0)),
+'<tr>',
+'<td>',
+&uf('Ag1#1'),
+'</td>',
+'<td>',
+/*'<input style="width: 100%;" name="','10_',&uf('Ag1#1'),'_FR21SUB" value="',v10^F,'">',
+&uf('6vselect#10_',&uf('Ag1#1'),'_FR21SUB,SK_class.mnu,',v10^F),
+'</td>',
+'<td>',
+/*'<input style="width: 100%;" name="','10_',&uf('Ag1#1'),'_VR21SUB" value="',v10^V,'">',
+&uf('6vselect#10_',&uf('Ag1#1'),'_VR21SUB,SK_uroven.mnu,',v10^V),
+'</td>',
+'<td>',
+'<input style="width: 100%;" name="','10_',&uf('Ag1#1'),'_AR21SUB" value="',v10^A,'">',
+'</td>',
+
+'</tr>',
+fi),
+fi,
+/* g1 - кол-во повторений 10 поля (контингент
+/* g1112 - размер таблицы
+/* g3 - текущий счетчик
+&uf('+7W3#',g1),
+(if val(&uf('Ag3#1'))<val(&uf('Ag1112#1')) then 
+&uf('+7W3#',f(val(&uf('Ag3#1'))+1,0,0)),
+'<tr>',
+'<td>',
+&uf('Ag3#1'),
+'</td>',
+'<td>',
+/*'<input style="width: 100%;" name="','10_',&uf('Ag3#1'),'_FR21SUB" value="">',
+&uf('6vselect#10_',&uf('Ag3#1'),'_FR21SUB,SK_class.mnu,9999'),
+'</td>',
+'<td>',
+/*'<input style="width: 100%;" name="','10_',&uf('Ag3#1'),'_VR21SUB" value="">',
+&uf('6vselect#10_',&uf('Ag3#1'),'_VR21SUB,SK_uroven.mnu,9999'),
+'</td>',
+'<td>',
+'<input style="width: 100%;" name="','10_',&uf('Ag3#1'),'_AR21SUB" value="">',
+'</td>',
+'</tr>',
+ else break fi),
+'</table>',
+'<br>',
+'<input type="submit" class="sub1" name="nnnn" value="Ввод">',
+'<input type="hidden" name="C21COM" value="6">',
+'<input type="hidden" name="ENTRY_MFN" value="',mfn,'">',
+'<input type="hidden" name="R21UPD" value="0">',
+'<input type="hidden" name="I21DBN" value="',&uf('+D'),'">',
+'<input type="hidden" name="PFTNAME" value="SK_USER_entry">',
+'<input type="hidden" name="ENTRY_DBNFLC" value="dbnflc">',
+'<input type="hidden" name="RELOAD" value="1">',
+'<input type="hidden" name="TOPPFTNAME" value="SK_USER_BOTTOM">',
+'<input type="hidden" name="ENTRY_MESSAGE" value="Ваши реквизиты и контингент успешно откорректированы!">',
+(if (&uf('+4T0')<>'') and (&uf('+4T0')<>'1') and (&uf('+4T0')<>'2') and (&uf('+4T0')<>'3') and (&uf('+4T0')<>'4') and (&uf('+4T0')<>'10') then '<input type="hidden" name="',&uf('+4T0'),'_1R21STR" value="',&uf('+4F0'),'">',/ fi),
+
+'</form>',
+
+if (val(g1)>=val(g1112)) and (val(g1)<200) then 
+/* ВВОД ДОПОЛНИТЕЛЬНЫХ ЭКЗЕМПЛЯРОВ
+&uf('+7W1#',f((val(f(val(g1)/10,0,0))+1)*10,0,0)),
+'<br><A HREF="IRBIS:1,,SK_USER,SK_USER_entry?RELOAD=1&KEY=',&uf('+3EI=',g1110),'&FREEPAR10=',&uf('+3E',g1110),'&FREEPAR12=',g1,'&TOPPFTNAME=SK_USER_BOTTOM','">ДОПОЛНИТЕЛЬНЫЙ КОНТИНГЕНТ...</A><br>',
+fi,

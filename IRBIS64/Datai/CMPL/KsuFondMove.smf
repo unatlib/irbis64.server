@@ -1,0 +1,49 @@
+[ROWQRY]
+"DT="v991^A
+'KSU=$'
+'KS2=$'
+"DT="v991^B
+[FLDTEXT]
+if v991^A<>'' then 'Состоит на ',,v991^A.4,'.',v991^A*4.2,'.',v991^A*6.2 fi
+'Поступило за ',,v991^A.4,'.',v991^A*4.2,'.',v991^A*6.2,'-',v991^B.4,'.',v991^B*4.2,'.',v991^B*6.2
+'Выбыло за ',,v991^A.4,'.',v991^A*4.2,'.',v991^A*6.2,'-',v991^B.4,'.',v991^B*4.2,'.',v991^B*6.2
+if v991^B<>'' then 'Состоит на ',,v991^B.4,'.',v991^B*4.2,'.',v991^B*6.2 fi
+[FLDMODE1000]
+if v991^A<>'' then '^C1' fi
+if p(v991^A) then '^A' if val(&uf('+95',v991^A))=4 then v991^A,'0101' else if val(&uf('+95',v991^A))=6 then v991^A,'01' else v991^A fi fi fi,,if p(v991^B) then '^B' if val(&uf('+95',v991^B))=4 then v991^B,'0101' else if val(&uf('+95',v991^B))=6 then v991^B,'01' else v991^B fi fi fi,,,'^C2'
+if p(v991^A) then '^A' if val(&uf('+95',v991^A))=4 then v991^A,'0101' else if val(&uf('+95',v991^A))=6 then v991^A,'01' else v991^A fi fi fi,,if p(v991^B) then '^B' if val(&uf('+95',v991^B))=4 then v991^B,'0101' else if val(&uf('+95',v991^B))=6 then v991^B,'01' else v991^B fi fi fi,,,'^C3'
+if v991^B<>'' then '^C4' fi
+[FLDSUM]
+if G1000^C='1' or G1000^C='4' then v17^1 else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v17^1 fi fi
+if G1000^C='1' or G1000^C='4' then v145^B else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^B fi fi
+if G1000^C='1' or G1000^C='4' then v145^C else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^C fi fi
+if G1000^C='1' or G1000^C='4' then v17^B else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v17^B fi fi
+if G1000^C='1' or G1000^C='4' then v145^E else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^E fi fi
+if G1000^C='1' or G1000^C='4' then v145^F else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^F fi fi
+if G1000^C='1' or G1000^C='4' then v17^A else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v17^A fi fi
+if G1000^C='1' or G1000^C='4' then v145^H else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^H fi fi
+if G1000^C='1' or G1000^C='4' then v145^I else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^I fi fi
+if G1000^C='1' or G1000^C='4' then v18^2 else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v18^2 fi fi
+if G1000^C='1' or G1000^C='4' then v145^K else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^K fi fi
+if G1000^C='1' or G1000^C='4' then v18^4 else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v18^4 fi fi
+if G1000^C='1' or G1000^C='4' then v145^U else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^U fi fi
+if G1000^C='1' or G1000^C='4' then v155^V else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v155^V fi fi
+if G1000^C='1' or G1000^C='4' then v145^V else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^V fi fi
+if G1000^C='1' or G1000^C='4' then v155^W else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v155^W fi fi
+if G1000^C='1' or G1000^C='4' then v145^W else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^W fi fi
+if G1000^C='1' or G1000^C='4' then v155^X else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v155^X fi fi
+if G1000^C='1' or G1000^C='4' then v145^X else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v145^X fi fi
+if G1000^C='1' or G1000^C='4' then v146^C else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^C fi fi
+if G1000^C='1' or G1000^C='4' then v146^D else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^D fi fi
+if G1000^C='1' or G1000^C='4' then v146^E else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^E fi fi
+if G1000^C='1' or G1000^C='4' then v146^U else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^H fi fi
+if G1000^C='1' or G1000^C='4' then v146^A else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^A fi fi
+if G1000^C='1' or G1000^C='4' then v146^B else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^B fi fi
+if G1000^C='1' or G1000^C='4' then v146^J else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^J fi fi
+if G1000^C='1' or G1000^C='4' then v146^L else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^L fi fi
+if G1000^C='1' or G1000^C='4' then v146^I else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^I fi fi
+if G1000^C='1' or G1000^C='4' then v146^m else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^m fi fi
+if G1000^C='1' or G1000^C='4' then v146^Z else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v146^Z fi fi
+if G1000^C='1' or G1000^C='4' then v147^A else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v147^A fi fi
+if G1000^C='1' or G1000^C='4' then v147^B else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v147^B fi fi
+if G1000^C='1' or G1000^C='4' then v147^C else if G1000^C='2' and val(v88^B)>=val(G1000^A) and val(v88^B)<=val(G1000^B) or G1000^C='3' and val(v888^B)>=val(G1000^A) and val(v888^B)<=val(G1000^B) then v147^C fi fi

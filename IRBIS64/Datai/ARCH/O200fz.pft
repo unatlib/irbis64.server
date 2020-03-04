@@ -1,0 +1,24 @@
+mhl, 
+if p(v200^f) then 
+   if s(v905^1,v903)<>'' then v200^f else 
+      if p(v700) and v200^f:v700^a or a(v700) or p(v922) then v200^f 
+      else 
+         if p(v700) then 
+            if p(v700^9)then v700^a," "v700^d," "v700^b, 
+               if a(v700^b)then" "v700^g fi 
+            else 
+               if v700^b:'. ' then v700^b else 
+                  if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) else v700^b fi 
+               fi,if &unifor('G2.'v700^b):'.'then" "d700^b fi, 
+            fi,if a(v700^b)then v700^g" " fi,v700^a,", "d970, 
+            if p(v970) then 
+               if p(v970^9)then v970^a," "v970^d," "v970^b, 
+                  if a(v970^b)then" "v970^g fi 
+               else 
+                  if v970^b:'. ' then v970^b else 
+                     if v970^b:'.'then &unifor('G0.'v970^b),'. '&unifor('G2.'v970^b) else v970^b fi 
+                  fi,if &unifor('G2.'v970^b):'.'then" "d970^b fi, 
+               fi,if a(v970^b)then v700^g" " fi,v970^a 
+            fi," ; "v200^f  
+         else v200^f 
+fi fi fi fi, 

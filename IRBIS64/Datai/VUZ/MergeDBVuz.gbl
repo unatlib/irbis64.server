@@ -1,0 +1,233 @@
+0
+//17 импорт-сли€ние в Ѕƒ VUZ
+// 991^? - признак создани€ новых в VUZ
+// 991^= - им€ Ѕƒ каталога, которую надо обновить
+// в g10 признак, что в VUZ были обновлени€
+// в 993 - запрос на поиск дисциплины в VUZ
+// в 992 - запрос на поиск в каталоге
+//-----------отладка
+PUTLOG
+mhl,'Ќа загрузку запись: ',v3,", "v4,,", "v5,,", "v6,,mpl,,
+//                  PUTLOG
+//                  'v991=',v991,,,'  v992=',v992,,,'  v993=',v993,,,
+DEL
+994
+*
+
+
+ADD
+994
+
+&uf('+3S,10,!',,,,v993,,,'!,"IDD="v3^0/')
+
+//-----------отладка
+//                PUTLOG
+//                'Ќайдены дл€ обновлени€: ',,,(if p(v994) then v994,,', ' fi)
+IF
+if p(v994) then '1',,&uf('+7W10#1') else &uf('+7W10#') fi
+//---------------------------------цикл по найденным дл€ обновлени€ запис€м VUZ
+DEL
+995
+*
+
+
+ADD
+995
+
+(v994/)
+
+REPEAT
+//                PUTLOG
+//                'CORREC по запросу ',,,&uf('Av995#1')
+CORREC
+'*'
+"^0"v3^0,,"^3"v3^A,,,"^4"v4,,"^5"v5,,"^6"v6/,,v83
+&uf('Av995#1')
+
+IF
+if p(v1001) then '1' fi
+PUTLOG
+'Ѕƒ VUZ: заменено в записи ',,,f(val(mfn),0,0),,,
+//---------------обновл€ю пол€ 3,4,5,6
+REP
+3
+1
+if &uf('Av1001^0#1')<>'' then '^0',&uf('Av1001^0#1') else "^0"v3^0 fi,,,if &uf('Av1001^3#1')<>'' then '^A',&uf('Av1001^3#1') else "^A"v3^A fi
+
+REP
+4
+1
+&uf('Av1001^4#1')
+
+REP
+5
+1
+&uf('Av1001^5#1')
+
+REP
+6
+1
+&uf('Av1001^6#1')
+
+ADD
+4
+
+if v4='' then &uf('Av1001^4#1') fi
+
+ADD
+5
+
+if v5='' then &uf('Av1001^5#1') fi
+
+ADD
+6
+
+if v6='' then &uf('Av1001^6#1') fi
+
+FI
+IF
+if &uf('Av1001#2')<>'' then '1' fi
+//-----------------добавл€ю поле 83 с проверкой , если есть поле в исх.записи
+ADD
+83
+
+if rsum( (if p(v83) then if &uf('Av1001^A#2')='' or &uf('+97',&uf('Av1001^A#2'))=&uf('+97',v83^A) then  if  &uf('Av1001^O#2')='' or &uf('+97',&uf('Av1001^O#2'))=&uf('+97',v83^O) then if  &uf('Av1001^V#2')='' or &uf('+97',&uf('Av1001^V#2'))=&uf('+97',v83^V) then  if &uf('Av1001^N#2')='' or &uf('+97',&uf('Av1001^N#2'))=&uf('+97',v83^N) then  if  &uf('Av1001^C#2')='' or &uf('+97',&uf('Av1001^C#2'))=&uf('+97',v83^C) then  if  &uf('Av1001^F#2')='' or &uf('+97',&uf('Av1001^F#2'))=&uf('+97',v83^F) then '1,' fi fi fi fi fi fi fi ) )=0 then &uf('Av1001#2') fi
+
+FI
+DEL
+1001
+*
+
+
+END
+DEL
+995
+1
+
+
+UNTIL
+if p(v995) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------конец обновлени€ VUZ
+IF
+if a(v994) and v991: '^?1' then '1' fi
+//--------------------------нет записей на обновление - нова€ дисциплина
+NEWMFN
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ALL
+DEL
+991
+*
+
+
+END
+PUTLOG
+'Ѕƒ VUZ: создана нова€ запись - ',v3^A
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------конец создани€ записи VUZ
+IF
+if v991^=<>'' then '1' fi
+//---------------------на замену в Ѕƒ каталога по запросу из 992
+DEL
+994
+*
+
+
+ADD
+994
+
+&uf('+3S',,v991^=,,,,',10,!',,,,v992,,,'!,"I="v903/')
+
+//----------отладка
+//         PUTLOG
+//         '¬ каталоге ',,v991^=,,,' по запросу ',,v992,,' найдено ',,,(v994|, |)
+
+IF
+if p(v994) then '1' fi
+//---------------------------------цикл по найденным дл€ обновлени€ запис€м каталога
+DEL
+995
+*
+
+
+ADD
+995
+
+(v994/)
+
+REPEAT
+//                     PUTLOG
+//                     'CORREC по запросу ',,,&uf('Av995#1'),,,,
+CORREC
+v991^=
+"^0"v3^0,,"^3"v3^A,,,"^4"v4,,"^5"v5,,"^6"v6/v83
+mpu,,&uf('Av995#1')
+
+//             PUTLOG
+//            '1001.1=',,&uf('Av1001#1'),,,,'1001.2=',,&uf('Av1001#2')
+//                  'в записи ----- ',,,f(val(mfn),0,0),,,
+IF
+if &uf('Av1001#2')<>'' then '1' fi,,,&uf('+7W12#')
+//-----------------добавл€ю поле 691 с проверкой , если есть поле в исх.записи
+ADD
+691
+
+if rsum( (if p(v691) then if &uf('Av1001^A#2')='' or &uf('+97',&uf('Av1001^A#2'))=&uf('+97',v691^A) then if &uf('Av1001^O#2')='' or &uf('+97',&uf('Av1001^O#2'))=&uf('+97',v691^O) then if &uf('Av1001^V#2')='' or &uf('+97',&uf('Av1001^V#2'))=&uf('+97',v691^V) then if &uf('Av1001^N#2')='' or &uf('+97',&uf('Av1001^N#2'))=&uf('+97',v691^N) then if &uf('Av1001^C#2')='' or &uf('+97',&uf('Av1001^C#2'))=&uf('+97',v691^C) then if &uf('Av1001^F#2')='' or &uf('+97',&uf('Av1001^F#2'))=&uf('+97',v691^F) then '1,' fi fi fi fi fi fi fi) )=0 then if &uf('Av1001^0#1')<>'' then '^I',,&uf('Av1001^0#1') fi,,,,if &uf('Av1001^3#1')<>'' then '^D',,&uf('Av1001^3#1') fi,,,,if &uf('Av1001^4#1')<>'' then '^S',,&uf('Av1001^4#1') fi,,,,if &uf('Av1001^5#1')<>'' then '^B',,&uf('Av1001^5#1') fi,,,,if &uf('Av1001^6#1')<>'' then '^K',,&uf('Av1001^6#1') fi,,,,,&uf('Av1001#2'),&uf('+7W12#1') fi
+
+IF
+if val(g12)=1 then '1' fi
+PUTLOG
+'Ѕƒ ',,&uf('+D'),,': добавлено повторение пол€ 691 в записи ',,,f(val(mfn),0,0),,,
+FI
+
+FI
+DEL
+1001
+*
+
+
+END
+DEL
+995
+1
+
+
+UNTIL
+if p(v995) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+993
+*
+
+
+DEL
+994
+*
+
+

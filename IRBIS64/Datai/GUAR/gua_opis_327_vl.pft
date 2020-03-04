@@ -1,0 +1,25 @@
+if v920:'opis' and p(v327) then 
+'<script language="JavaScript">'
+'	function DropDown(it)'
+'	{'
+'		el1 = document.getElementById(it);'
+'		if(el1.style.display=="none") '
+'		{'
+'			el1.style.display="block";'
+'		}'
+'		else'
+'		{'
+'			el1.style.display="none";'
+'		}'
+'	}'
+
+'	function loadClose()'
+'	{'
+'		document.all.el1.style.display="none";'
+'	}'
+' </script> ',
+'<br>'
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|v903|');" target="_top">|,'<i>Показать разделы описи</i>' '</a> </div>' 
+'<div id="',v903'" style="display:none">',
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|v903|');" target="_top">|,'</a></div>',(if p(v327) then v327^L,' 'v327^m'<br>' fi),'</div>'
+fi, 

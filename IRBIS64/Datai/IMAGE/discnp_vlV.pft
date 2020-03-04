@@ -1,0 +1,122 @@
+/* &uf('+7W1001#^F2^IГСЭ.18^Oз/о')/g1001/'!!!'/
+/* 10 - студенты ВС для дисц-ФО (>0 - условие для расчета),
+/* 10141 - число студентов ВС всего для заданной ФО ==44
+/* 14 - число студентов ВС всего
+/* 12 - экз. ВС :
+/*    для выделенного фонда,заданного явно (991^t) или 
+/*    для заданной ФО (1001^o) или 
+/*    экз-ры НЕ выделенные (не задано ничего)
+/* 10121 - число экз. ВС НЕ выделенных фондов == 22
+/* 10131 - число студентов ОС всего для заданной ФО=33
+/* 13 - число студентов ОС всего
+/* 20 - число оригинальных выделенных фондов (условие добавки к КО по выделенным фондам) 
+/* 111, 110 - промежуточные
+&uf('+7W10#'),&uf('+7W44#'),&uf('+7W14#'),&uf('+7W12#'),&uf('+7W22#'),&uf('+7W20#'),
+&uf('+7W111#'),&uf('+7W110#'),
+if p(g1001) then 
+   if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+      &uf('+7U111#',
+         (if p(v691) then 
+             if (&uf('Ag1001^f#1')<>'' and v691^f=&uf('Ag1001^f#1') or &uf('Ag1001^f#1')='') and 
+                (&uf('Ag1001^a#1')<>'' and &uf('+97',v691^a)=&uf('+97',&uf('Ag1001^a#1')) or 
+                 &uf('Ag1001^a#1')='') and 
+                (&uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1')) or 
+                 &uf('Ag1001^i#1')='') and 
+                (&uf('Ag1001^c#1')<>'' and &uf('+97',v691^c)=&uf('+97',&uf('Ag1001^c#1')) or 
+                 &uf('Ag1001^c#1')='')  
+             then 
+                if s(&uf('Ag991^o#1'),&uf('Ag1001^o#1'))='' or 
+                   &uf('Ag991^o#1')<>'' and &uf('+97',v691^o)=&uf('+97',&uf('Ag991^o#1')) or 
+                   &uf('Ag1001^o#1')<>''and &uf('+97',v691^o)=&uf('+97',&uf('Ag1001^o#1'))
+                then 
+                   if p(v691^9) then 
+                      &unifor('7RDR,!UPS='v691^9,'!,mfn/') 
+                      &unifor('7RDR,!?',v691^9,'!,mfn/') 
+                      &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/') 
+          fi fi fi fi)),&uf('+7G111'),
+      &unifor('+7W10#'f(rsum((if p(g111) then '1;'fi/)),0,0))    
+      &uf('+7W110#',(if p(v691) then 
+                                   if p(v691^9) then 
+                                      &unifor('7RDR,!UPS='v691^9,'!,mfn/') 
+                                      &unifor('7RDR,!?',v691^9,'!,mfn/') 
+                                      &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/') 
+                                fi fi)),&uf('+7G110'),
+      &unifor('+7W14#'f(rsum((if p(g110) then '1;'fi/)),0,0)) 
+      &uf('+7W1112#',
+               (if p(v691) then 
+                   if p(v691^9) then 
+                      if &uf('Ag991^o#1')='' and &uf('Ag1001^o#1')='' or 
+                         &uf('Ag991^o#1')<>'' and &uf('+97',v691^o)=&uf('+97',&uf('Ag991^o#1')) or 
+                         &uf('Ag1001^o#1')<>''and &uf('+97',v691^o)=&uf('+97',&uf('Ag1001^o#1')) 
+                      then 
+                         &unifor('7RDR,!UPS='v691^9,'!,mfn/') 
+                         &unifor('7RDR,!?',v691^9,'!,mfn/') 
+                         &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/') 
+                fi fi fi/)),&uf('+7G1112'),
+      &unifor('+7W44#'f(rsum((if p(g1112) then '1;'fi/)),0,0)) 
+   else 
+      &unifor('+7W10#'
+          f(rsum((if p(v691) then 
+                     if (&uf('Ag1001^f#1')<>'' and v691^f=&uf('Ag1001^f#1') or &uf('Ag1001^f#1')='') 
+                     and 
+                        (&uf('Ag1001^a#1')<>'' and &uf('+97',v691^a)=&uf('+97',&uf('Ag1001^a#1')) or 
+                         &uf('Ag1001^a#1')='') and 
+                        (&uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1')) or 
+                         &uf('Ag1001^i#1')='') and 
+                        (&uf('Ag1001^c#1')<>'' and &uf('+97',v691^c)=&uf('+97',&uf('Ag1001^c#1')) or 
+                         &uf('Ag1001^c#1')='')  
+                     then 
+                        if &uf('Ag991^o#1')='' or &uf('+97',v691^o)=&uf('+97',&uf('Ag991^o#1')) then 
+                           if p(v691^9) then 
+                              &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                  fi fi fi fi)),0,0)), 
+      &unifor('+7W14#'f(rsum((if p(v691) then 
+                                     if p(v691^9) then 
+                                        &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                                  fi fi)),0,0)), 
+      &unifor('+7W44#'f(rsum((if p(v691) then 
+                    if p(v691^9) then 
+                      if s(&uf('Ag991^o#1'),&uf('Ag1001^o#1'))='' or 
+                         &uf('Ag991^o#1')<>'' and &uf('+97',v691^o)=&uf('+97',&uf('Ag991^o#1')) or 
+                         &uf('Ag1001^o#1')<>''and &uf('+97',v691^o)=&uf('+97',&uf('Ag1001^o#1'))
+                      then 
+                         &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                 fi fi fi)),0,0)), 
+   fi,
+   &unifor('+7W12#'
+         f(rsum((if p(v910) then 
+                    if &uf('Ag991^t#1')<>'' and p(v910^t) and v910^t:&unifor('Ag991^t#1') or 
+                       &uf('Ag991^t#1')='' and &uf('Ag1001^o#1')<>'' and 
+                       p(v910^t) and v910^t:&unifor('Ag1001^o#1')
+                    then 
+                       if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                          if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                       fi fi 
+                    else 
+                       if s(&uf('Ag991^t#1'),&uf('Ag1001^o#1'))='' then  
+                          if a(v910^t) then 
+                             if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' 
+                             else 
+                                if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                 fi fi fi fi fi fi)),0,0)),
+   if g1001^o<>'' then 
+      &unifor('+7W22#'
+            f(rsum((if p(v910) then 
+                       if a(v910^t) then  
+                          if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' 
+                          else 
+                             if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                    fi fi fi fi)),0,0)),
+   fi,
+   &unifor('+7W20#',f(rsum((if p(v910) then if &uf('Pv910^t')<>'' then '1;' fi fi)),0,0)),
+   '^A',briefkt,'^D'
+   if p(v951) then f(val('100'),0,2) 
+   else 
+      if val(g10)>0 then 
+         f(val(g12)/val(g44) + val(if val(g14)>0 and val(g20)>1 then g22 fi)/val(g14),0,2) 
+      else '0'  
+   fi fi,
+         '^C'if val(g14)>0 then g14 else '0' fi,
+         '^B'if val(g12)>0 then g12 else '0' fi,
+         '^E'if val(g44)>0 then g44 else '0' fi,|^!|g1001^o 
+fi/

@@ -1,0 +1,68 @@
+'{',if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на ГЕОГРАФИЧЕСКОЕ НАИМЕНОВАНИЕ\b0 ',if p(v210) then '\par 'fi                               
+                                                if p(v510^a) or (p(v710) and a(v
+410) and a(v510)) or (p(v210) and a(v410) and a(v510) and a(v710))then'\par ', if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a,| - |v210^v,| - |v210^W,
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi fi,if p(v710) then '\par \tab \b см.также на параллельном языке:\b0 ' fi,&unifor('S0')if p(v710) then if v710:&unifor('Av710#2') then (if p(v710) then '\par ' 
+&unifor('S1A')'.',mhu,v710^g.1,mhl,v710^g*1,| |d710^g,if p(v710^g) then| - |d710^a fi,v710^a, 
+          if p(v710^b) and p(v710^x) then| (|v710^f|)|,|. |v710^b,| (|v710^x|)| 
+          else |. |v710^b,| (|v710^f|)| 
+          fi,|, |v710^h,|, |v710^I,|, |v710^J,| (|v710^c|)|,| (|v710^E|)|  
+ fi fi/) else '\par 'if p(v710) then mhu,v710^g.1,mhl,v710^g*1,| |d710^g,if p(v710^g) then| - |d710^a fi,v710^a, 
+          if p(v710^b) and p(v710^x) then| (|v710^f|)|,|. |v710^b,| (|v710^x|)| 
+          else |. |v710^b,| (|v710^f|)| 
+          fi,|, |v710^h,|, |v710^I,|, |v710^J,| (|v710^c|)|,| (|v710^E|)|  
+ fi
+ fi,if p(v510^5) and 
+a(v305^b) and (not(v510^5*1:'0')) then if v510^5:'a' then '\par \tab \b см.также
+ под прежним наименованием:\b0 ' else if v510^5:'b' then '\par \tab \b см.также 
+под последующим наименованием:\b0 ' else if v510^5:'d' then '\par \tab \b см.так
+же под сокращенным наименованием:\b0 ' else if v510^5:'z' then '\par \tab \b см.
+также:\b0 'fi fi fi fi fi,if p(v510) and a(v510^5) then '\par \tab \b см.также:\
+b0 ' else if p(v305^b) and v510^5:'0' then ("\par \b "v305^a"\b0 ",v305^b,|,|v30
+5^c,|,|v305^d,|,|v305^e/) else if p(v510^0) then ("\par \b "v510^0"\b0 ") fi fi 
+fi,&unifor('S0')if p(v510) and a(v305^b) and (not(v510^5*1:'0')) then if v510:&u
+nifor('Av510#2') then (if p(v510) then '\par '&unifor('S1A')'.',mhl,if p(v510) then mhu,v510^g.1,mhl,v510^g*1,| |d510^g,if p(v510^g) then| - |d510^a fi,v510^a, 
+          if p(v510^b) and p(v510^x) then| (|v510^f|)|,|. |v510^b,| (|v510^x|)| 
+          else |. |v510^b,| (|v510^f|)| 
+          fi,|, |v510^h,|, |v510^I,|, |v510^J,| (|v510^c|)|,| (|v510^E|)|  
+ fi fi/) else '\par 'if p(v510) then mhu,v510^g.1,mhl,v510^g*1,| |d510^g,if p(v510^g) then| - |d510^a fi,v510^a, 
+          if p(v510^b) and p(v510^x) then| (|v510^f|)|,|. |v510^b,| (|v510^x|)| 
+          else |. |v510^b,| (|v510^f|)| 
+          fi,|, |v510^h,|, |v510^I,|, |v510^J,| (|v510^c|)|,| (|v510^E|)|  
+ fi fi,if p(v510) and a(v710) and p(v410) and 
+(not(v510^5*1:'0')) and (not(v410^5*1:'0')) then "\par ***"d410 fi fi,if p(v710) and p(v510) and p(v410)then  "\par ***"d410 fi,&unifor('S
+0')if p(v410) and (not(v410^5*1:'0')) then if v410:&unifor('Av410#2') then (if p
+(v410)then '\par '&unifor('S1A')'.',mhl,if p(v410) then mhu,v410^g.1,mhl,v410^g*1,| |d410^g,if p(v410^g) then| - |d410^a fi,v410^a, 
+          if p(v410^b) and p(v410^x) then| (|v410^f|)|,|. |v410^b,| (|v410^x|)| 
+          else |. |v410^b,| (|v410^f|)| 
+          fi,|, |v410^h,|, |v410^I,|, |v410^J,| (|v410^c|)|,| (|v410^E|)|  
+ fi fi) else '\par ',mhl,if p(v410) then mhu,v410^g.1,mhl,v410^g*1,| |d410^g,if p(v410^g) then| - |d410^a fi,v410^a, 
+          if p(v410^b) and p(v410^x) then| (|v410^f|)|,|. |v410^b,| (|v410^x|)| 
+          else |. |v410^b,| (|v410^f|)| 
+          fi,|, |v410^h,|, |v410^I,|, |v410^J,| (|v410^c|)|,| (|v410^E|)|  
+ fi fi,if p(v410^5) and (not(v410^5*1:'0')) then if v410^5:'
+a'then '\par \tab \b см. под прежним наименованием\b0 ' else if v410^5:'b' then 
+'\par \tab \b см. под последующим наименованием\b0 ' else if v410^5:'d' then '\p
+ar \tab \b см. под несокращенным наименованием\b0 ' else if v410^5:'z' then '\pa
+r \tab \b см.\b0 ' fi fi fi fi fi,if p(v410) and (not(v410:'^0')) and a(v410^5) 
+then  '\par \tab \b см.\b0 'else if v410:'0' then  ("\par \b "v410^0"\b0 ") fi f
+i fi,if p(v410) then '\par ',mhl,if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a, 
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi fi fi,if p(v210) and p(v310) then '\tab \b Ссылочная запись на Географическое 
+название\b0 ','\par ',if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a, 
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi,("\par \b "v310^a"\b0 ",| |v310^b,|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p
+(v210) and p(v320) then '\tab \b Общая пояснительная запись на Географическое название\b0 ','\par ',if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a, 
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi '\par ',
+v320^a fi,if p(v810) then '\par \tab \bИсточник информации\b0 :  ' fi,('\par \tab ',| |v810^a,| |v
+810^b/),if p(v300) then '\par \tab \bПримечание:  \b0 'fi,('\par \tab ',v300^a
+/)'\par -------------}'

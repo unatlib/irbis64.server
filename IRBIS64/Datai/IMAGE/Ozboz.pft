@@ -1,0 +1,55 @@
+mhl,'\b 'v700^a," "v700^d,", "v700^g,
+   if a(v700^g)then", "d700^b 
+      if v700^b:'. ' then v700^b else 
+         if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+         else v700^b 
+   fi fi fi,
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+      if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,'). ' 
+   else"."d700^g," "d700^a 
+   fi,v710^s".",v710^a, 
+   if s(v710^n,v710^c)<>''then' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d" ; ",v710^f, 
+      if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+   fi,". "d710,v971^b, 
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d" ; ",v971^f, 
+      if p(v971^f)then" ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+   fi,". "d971^b,
+   if v920:'ASP' and s(v700,v701)='' and v961^z<>'' then 
+      (if p(v961) then 
+          if p(v961^z) then v961^a," "v961^d,", "v961^g,
+             if a(v961^g)then", "d961^b 
+                if v961^b:'. ' then v961^b else 
+                   if v961^b:'.'then &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) 
+                   else v961^b 
+             fi fi fi,
+             if s(v961^1,v961^c,v961^f)<>''then' (',v961^1, 
+                if s(v961^1)<>''then" ; "d961^c fi,v961^c, 
+                if s(v961^1,v961^c)<>''then" ; "d961^f fi,v961^f,'). ' 
+             else"."d961^g," "d961^a 
+       fi fi fi),'\b0 ',
+   fi,    
+   (if v509^2:'1' then 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| 
+          fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi fi),'\b0 ', 
+   if s(v700v710,v981,v503,v961^z)='' and &unifor('Av509^2#1')<>'1' then'\tab \b '&unifor('E3'v200^a),'\b0 ', 
+      if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
+   else "\par \tab "v200^a 
+   fi," ["v200^b"]", 
+   if a(v200^b) then &unifor('+1W1#'''), 
+      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1')))else &unifor('+1W1#0')  fi, 
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then 
+            if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+         else 
+            if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
+               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+         fi fi 
+      else 
+         if v900^t='a' and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [', 
+            if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,']',          
+   fi fi fi, &unifor('+1W1#'),

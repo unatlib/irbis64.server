@@ -1,0 +1,57 @@
+/*Формат для корректировки документа - Вариант 1:
+/*- предоставление для корректировки всех полей, СУЩЕСТВУЮЩИХ в документе
+/*- ввод НОВЫХ полей, ОТСУТСТВУЮЩИХ в документе
+/*- список всех возможных (новых) полей в fieldname.mnu
+/* - список подсказок в fieldhint.mnu
+'<title>Корректировка документа - Вариант 1 (БД ',&uf('+D'),if mfn=0 then ' Новая запись' else ' MFN: ',f(mfn,0,0),fi,')</title>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<font color="#FF00"><b>База данных: ',&uf('+D'),'<br>',if mfn=0 then 'Новая запись' else 'MFN: ',f(mfn,0,0),fi,'</font></b><br><br>',
+if &uf('+6')='0'
+        then '<b>Документ логически удален</b><br><br><input type="submit" class="sub1" name="nnnn" value="Восстановить документ"><br><br>',
+        else '<input type="submit" class="sub1" name="nnnn" value="Ввод"><br><br>',
+        fi,
+'<table border=1 width="100%">',
+'<tr><td bgcolor="#CCCCCC"><b>Метка</td><td bgcolor="#CCCCCC"><b>Значение поля</td></b>',
+(&uf('+1W1#',&uf('+4T1')),if &uf('+1R1')<>'' then '<tr><td bgcolor="#CCCCCC" title="',&uf('Kfieldname.mnu|',&uf('+1R1')),'"><b>'&uf('+1R1'),
+'</b></td><td title="',&uf('Kfieldhint.mnu|',&uf('+1R1')),'"><input ',if &uf('+6')='0' then 'readonly=""',fi,'style="width: 100%;" name="',&uf('+1R1'),'_',&uf('+4N1'),'R21STR" value="',&uf('+4F1'),'"></td>' fi),
+if &uf('+6')<>'0' then 
+(&uf('+1W1#',&uf('+5Tfieldname.mnu')),if &uf('+1R1')<>'' then if &uf('AV',&uf('+1R1'),'#1')='' then '<tr><td bgcolor="#CCCCCC" title="',&uf('+5Ffieldname.mnu'),'"><b>'&uf('+1R1'),
+'</b></td><td title="',&uf('Kfieldhint.mnu|',&uf('+1R1')),'"><input style="width: 100%;" name="',&uf('+1R1'),'R21STR" value=""></td>',fi fi),
+fi,
+'</table>',
+'<br>',
+     if &uf('+6')='0'
+        then '<b>Документ логически удален</b><br><br><input type="submit" class="sub1" name="nnnn" value="Восстановить документ"><br><br>',
+        else '<input type="submit" class="sub1" name="nnnn" value="Ввод"><br><br>',
+        fi,
+     '<input type="hidden" name="C21COM" value="6">',
+     '<input type="hidden" name="ENTRY_MFN" value="',mfn,'">',
+     '<input type="hidden" name="R21UPD" value="0">',
+     '<input type="hidden" name="I21DBN" value="',&uf('+D'),'">',
+     '<input type="hidden" name="PFTNAME" value="fullw_entry1_wn">',
+     '<input type="hidden" name="ENTRY_DBNFLC" value="dbnflc">',
+     '<input type="hidden" name="RELOAD" value="1">',
+'</form>',
+if (&uf('+6')<>'0') and (val(mfn)>0) then 
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="Удалить документ">',
+     '<input type="hidden" name="C21COM" value="6">',
+     '<input type="hidden" name="ENTRY_MFN" value="-',mfn,'">',
+     '<input type="hidden" name="R21UPD" value="0">',
+     '<input type="hidden" name="I21DBN" value="',&uf('+D'),'">',
+     '<input type="hidden" name="PFTNAME" value="fullw_entry1_wn">',
+     '<input type="hidden" name="RELOAD" value="1">',
+'</form>',
+fi,
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="submit" class="sub1" name="nnnn" value="Новый документ  ">',
+'<input type="hidden" name="C21COM" value="1">',
+'<input type="hidden" name="I21DBN" value="',&uf('+D'),'">',
+'<input type="hidden" name="PFTNAME" value="fullw_entry1_wn">',
+'<input type="hidden" name="ENTRY_MFN" value="0">',
+'<input type="hidden" name="RELOAD" value="1">',
+
+
+
+
+

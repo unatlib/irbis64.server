@@ -1,0 +1,28 @@
+&uf('+7W4#'), 
+&unifor('S0'), 
+(if p(v702)  then 
+    if v702^4=&uf('G0='&uf('Ag3#1')) then 
+       if &uf('Ag111#1'):v702^a AND 
+          (s(v702^b,v702^g)<>'' and (&uf('Ag111#1'):v702^b.1 or &uf('Ag111#1'):&uf('E1'v702^g)) or s(v702^b,v702^g)='') 
+       then else 
+         &uf('+7U4#', 
+         if &unifor('S1A')='1' then else ', ' fi, 
+         if p(v702^9)then v702^a,| |v702^d,| |v702^b, 
+            if a(v702^b)then| |v702^g fi 
+         else 
+            if v702^b:'. ' then v702^b else 
+               if v702^b:'.'then &unifor('G0.'v702^b),'.' 
+                  if &unifor('G2.'v702^b):'.' then ' ' fi,&unifor('G2.'v702^b) 
+               else v702^b 
+            fi fi, 
+            if a(v702^b)then v702^g fi, 
+            if s(v702^b,v702^g)<>'' then' 'fi,v702^a,| |v702^d,| (|v702^7|)|, 
+         fi), 
+ fi fi fi/), 
+&uf('+7U5#',
+if g4<>'' then &uf('G2='&uf('Ag3#1')),' ',
+   
+   if &uf('Ag4#4')<>'' then &uf('Ag4#1'), 
+      if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и др.]' else ' [et al.]' fi 
+   else g4 
+fi fi), 

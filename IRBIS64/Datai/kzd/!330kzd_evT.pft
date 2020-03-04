@@ -1,0 +1,9 @@
+mhl, 
+(if '***'='461' then "^C"v461^c,". "v200^v," : "v200^a, else  
+    if '***'='200' then "^C"v200^a else 
+       if '***'='309' then 
+          if v309^t:&uf('AG1#1') then |^C|v309^t,|^A|v309^e fi 
+       else 'Ошибка отбора - Заглавие не основное' 
+ fi fi fi), 
+"^D"v711^a,". "v711^c,
+"^T"v920," "v109^e

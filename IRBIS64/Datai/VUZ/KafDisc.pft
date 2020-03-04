@@ -1,0 +1,18 @@
+/* отображение кафедра - дисциплины
+/* с уходом на УНД
+/* G1100 - факультет
+/* G1101 - формат обучения
+'<A 
+HREF="IRBIS:?C21COM=2&
+I21DBN=',&uf('+3EVUZ'),'&
+CHECKNAME=CHECKMFN&
+S21ALL=',&uf('+3EIDU='),&uf('+3E',v3^0),'&
+S21CNR=100&
+PFTNAME=DiscUND&
+TOPPFTNAME=DiscUNDTop&
+FREEPAR0=',,&uf('+3E',v3^A),,'&
+FREEPAR1=',,&uf('+3E',G1100),,'&
+FREEPAR2=',,&uf('+3E',G1101),,'&
+">',
+if rsum((if p(v83) then if &uf('AG1100#1')<>'ВСЕ' then if v83^A: &uf('AG1100#1') and v83^O: &uf('AG1101#1') then '1,' else '0,' fi else if v83^A='' then '1,' else '0,' fi fi fi))>0 then 
+v3^A," ("v4")",'<br>' fi,

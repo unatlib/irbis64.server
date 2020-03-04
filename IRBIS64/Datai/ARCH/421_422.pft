@@ -1,0 +1,58 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2376 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4077 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5778 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6912 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9747 
+\pard \widctlpar\intbl {\ql \fs16 ''##'
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 'mfn
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 'v19^b
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '(if p(v421) then v421^y|-|,&uf('D,!B='v421^y|!,mfn'\par '|)fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '&uf('+7W19#'v19^b/)/(if p(v421) then &uf(|D,!B=|v421^y|!,if rsum((if p(v422) then if v422^y=&uf('Ag19#1') then '1;' else '0;'fi fi))>0 then else mfn'-NO''\par ' fi/)|) fi)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '(if p(v422) then v422^y|-|,&uf('D,!B='v422^y|!,mfn'\par '|)fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '&uf('+7W19#'v19^b/)/(if p(v422) then &uf(|D,!B=|v422^y|!,if rsum((if p(v421) then if v421^y=&uf('Ag19#1') then '1;' else '0;'fi fi))>0 then else mfn'-NO' '\par 'fi)|) fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

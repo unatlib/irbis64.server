@@ -1,0 +1,21 @@
+0
+ADD
+961^X
+F
+v461^x
+XXXXXXXXXXXXXXXXXXX
+REP
+961
+F
+(if p(v961) then if p(v961^x) then '^A', if v961^x:','then &unifor('G0,'v961^x),'^G' else &unifor('G0 'v961^x),'^B'fi,if v961^x:' 'then &unifor('G2 'v961^x) fi,|^4|v961^4,if v961^x=&unifor('Av461^x#1') then|^ZÄÀ|n961^4 fi else v961 fi fi/)/
+XXXXXXXXXXXXXXXXXXX
+ADD
+962
+XXXXXXXXXXXXXXXXXXX
+(if p(v961) then if a(v961^a) and p(v961^b) then |^A|v961^b,if v961^b=&unifor('Av461^b#1') then'^ZÄÀ'fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+961
+F
+(if p(v961) then if a(v961^a) and p(v961^b) then '1'else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX

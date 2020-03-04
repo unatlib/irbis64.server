@@ -1,0 +1,2 @@
+(if p(v40) then if v40^9<>'' then v40^9|; | else ' ' fi,if v40^H<>'' then &uf('+7W1#',v40^H) else &uf('+7W1#',v40^B) fi,if &uf('Ag1#1')<>'' then 'Цена экз. ' &uf('D',v40^G,',!IN=',&uf('Ag1#1'),'!,@price_ekz') else 'Нет цены' fi  / fi)
+

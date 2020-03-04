@@ -1,0 +1,35 @@
+/*&uf('+7W1001#^F9^AÃ“‘^PO'),
+  f(rsum((if p(v691) then 
+             if p(v691^l) then else 
+                if (&uf('Ag1001^f#1')='' or &uf('Ag1001^f#1')<>'' and v691^f=&uf('Ag1001^f#1')) and 
+                   (&uf('Ag1001^a#1')='' or &uf('Ag1001^a#1')<>'' and &uf('+97',v691^a)=&uf('+97',&uf('Ag1001^a#1'))) and 
+                   (&uf('Ag1001^i#1')='' or &uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1'))) and 
+                   (&uf('Ag1001^c#1')='' or &uf('Ag1001^c#1')<>'' and &uf('+97',v691^c)=&uf('+97',&uf('Ag1001^c#1')))
+                then 
+                   if &uf('Ag1001^o#1')='' or &uf('Ag1001^o#1')<>'' and &uf('+97',v691^o)=&uf('+97',&uf('Ag1001^o#1'))
+                   then 
+                      if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                         if &uf('Ag1001^p#1'):'V' then 
+                            if p(v691^9) then 
+                               if val(&uf('JRDR,UPS='v691^9))>0 or 
+                                  val(&uf('JRDR,?',v691^9))>0 or 
+                                  val(&uf('JRDR,',&unifor('G2*'v691^9)))>0  
+                               then '1;' 
+                            fi fi 
+                         else 
+                            if p(v691^0) then 
+                               if val(&uf('JRDR,UPS='v691^0))>0 or 
+                                  val(&uf('JRDR,?',v691^0))>0 or 
+                                  val(&uf('JRDR,',&unifor('G2*'v691^0)))>0  
+                               then '1;' 
+                            fi fi 
+                         fi    
+                      else 
+                         if &uf('Ag1001^p#1'):'V' then 
+                            if p(v691^9) then 
+                               if &unifor('DVUZ,"!',v691^9,'",v68^Z')<>''then'1;'fi
+                            fi
+                         else 
+                            if p(v691^0) then 
+                               if &unifor('DVUZ,"!',v691^0,'",v68^Z')<>''then'1;'fi
+          fi fi fi fi fi fi fi)),0,0),

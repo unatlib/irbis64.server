@@ -1,0 +1,50 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=6
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=9
+CELL_TAB2_2=Раздел плана/отчета
+CELL_TAB2_3=v1^!
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=2
+CELL_TAB3_2=План
+CELL_TAB3_3='\qr ',&uf('+7W11#'),&uf('+7W12#'),&uf('+7W11#'if p(v1^=) then'v1^',v1^=fi),&uf('+7W12#'f(val(&uf('D,@',mfn,','g11)),0,0)),g12
+CELL_TAB3_4=По центру
+CELL_TAB3_5=Нет
+CELL_TAB4_1=3
+CELL_TAB4_2=Выполнение
+CELL_TAB4_3='\qr ',&uf('+7W13#'),&uf('+7W14#'),if v1^?.3='991' then &uf('+7W14#'f(val(&unifor('J',v991^c,"IBIS"n991^c,',DNJ=',v991^a,&uf('KplnJ.mnu\'v991^b))),0,0)) else if v1:'^?' then &uf('+7W13#v'v1^*), fi,&uf('+7W14#'f(val(&uf('D,@',mfn,','g13)),0,0)) fi, g14
+CELL_TAB4_4=По центру
+CELL_TAB4_5=Нет
+CELL_TAB5_1=3
+CELL_TAB5_2=% Выполн.
+CELL_TAB5_3='\qr ',if val(g12) >0 and p(g14) then f(val(g14)/val(g12)*100,0,2) fi 
+CELL_TAB5_4=По центру
+CELL_TAB5_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=0
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=PL_Otch.wss
+HDR_PFT=PL_OtchH.pft
+HDR_PARAMS_COUNT=0

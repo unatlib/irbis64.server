@@ -1,0 +1,6 @@
+/* отображение кафедра - дисциплины
+/* с уходом на УНД
+/* G1100 - факультет
+/* G1101 - формат обучения
+
+if rsum((if p(v83) then if &uf('AG1100#1')<>'ВСЕ' then if v83^A: &uf('AG1100#1') and v83^O: &uf('AG1101#1') then '1,' else '0,' fi else if v83^A='' then '1,' else '0,' fi fi fi))>0 then '1,' else '0,' fi

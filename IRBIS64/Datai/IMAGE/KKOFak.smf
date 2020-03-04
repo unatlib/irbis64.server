@@ -1,0 +1,13 @@
+[ROWQRY]
+&uf('+7W2002#'),&uf('+7W1002#'),&uf('+7W1002#100'),&uf('+7W1003#'),&uf('+7W1003#'(if val(&uf('Ag1002#1'))>0 then  &uf('+5TFAK.mnu'),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/)),(if  G1003<>''  then KKO_kko1fak,, fi/),&uf('S0')
+[FLDTEXT]
+&uf('+7W1002#100'),&uf('+7W1003#'(if val(&uf('Ag1002#1'))>0 then ,,,,&uf('+5TFAK.mnu'),,,,&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/)),(if G1003<>'' then KKO_kko2fak fi/),&uf('S0')
+[FLDMODE1001]
+&uf('+7W1002#100'),&uf('+7W1003#'(if val(&uf('Ag1002#1'))>0 then ,,,,&uf('+5TFAK.mnu'),,,,&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/)),,(if G1003<>'' then KKO_kko2Mfak fi/)
+[FLDSUM]
+if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then '1' fi/
+if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then if &uf('KsemO.mnu\'g1001^f)<>'' then &uf('6KKO_exO') else &uf('6KKO_exV') fi fi/
+if p(g991^!) then else if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then if &uf('KsemO.mnu\'g1001^f)<>'' then &uf('6KKO_exkO') else &uf('6KKO_exkV') fi fi fi/
+if p(g991^!) then else if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then if &uf('KsemO.mnu\'g1001^f)<>'' then &uf('6KKO_kkO') else &uf('6KKO_kkV') fi fi fi/
+if p(g991^!) then else if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then if &uf('KsemO.mnu\'g1001^f)<>'' then &uf('6KKO_eluO') else &uf('6KKO_eluV') fi fi fi/
+if p(g991^!) then else if rsum((if p(v691) then if v691^F=&uf('Ag1001^F#1') and &uf('+97',v691^A)=&uf('Ag1001^A#1') then if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag991^o#1')) then '1', else '0,' fi fi fi))>0 then if &uf('KsemO.mnu\'g1001^f)<>'' then &uf('6KKO_NO') else &uf('6KKO_NV') fi fi fi/

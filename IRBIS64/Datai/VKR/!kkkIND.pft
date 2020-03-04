@@ -1,0 +1,57 @@
+if s(v905^i,&unifor('IPRIVATE,KKN,'))<>''then
+      if p(v964) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'G' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then
+            /("E√–Õ“» F"| + |+v964), 
+      fi fi,
+      if p(v675) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'U' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then 
+            /"E”ƒ  F"| + |+v675^*"\par "   
+      fi fi, 
+      if p(v621) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'B' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+            /"E¡¡  F"| + |+v621^*"\par "  
+      fi fi,
+      if p(v686) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'D' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+            /"      "| + |+v686"\par " 
+      fi fi 
+else 
+   if p(v964)then 
+      if p(v675)then 
+         (if p(v964)then c1,"√ "|    |+v964,if p(v675)then c27,"”ƒ  "|         |+v675^* fi 
+          else if p(v675)then c33,"”ƒ  "|         |+v675^* fi fi/) 
+         (if p(v621) then c33,"¡¡  "|         |+v621^* fi/) 
+         if &unifor('Av686#2')=''and v903:v686 then else(if p(v686) then  c40,v686 fi/) fi 
+      else 
+         if p(v621)then (if p(v964)then c1,"√ "|    |+v964,if p(v621)then c27,"¡¡  "|         |+v621^* fi/
+                         else if p(v621)then c33,"¡¡  "|         |+v621^* fi fi/)
+            if &unifor('Av686#2')=''and v903:v686 then else (if p(v686) then  c40,v686 fi/) fi 
+         else 
+            if p(v686)then if &unifor('Av686#2')=''and v903:v686 then else 
+                              (if p(v964)then c1,"√ "|    |+v964 fi,if p(v686)then c40,v686 fi/) fi 
+            else (if p(v964)then c1,"√ "|    |+v964 fi/) 
+      fi fi fi/
+   else 
+      (if p(v675) then c27,"”ƒ  "|         |+v675^* fi/) 
+      (if p(v621) then c27,"¡¡  "|         |+v621^* fi/) 
+      if &unifor('Av686#2')=''and v903:v686 then else (if p(v686) then c40,v686 fi/) fi 
+fi fi/
+if s(v905^x,&unifor('IPRIVATE,KKE,')):'2'then 
+   if v905^x='2' or &unifor('IPRIVATE,KKE,')='2'then &unifor('Av910^b#1'),
+      if &unifor('Av910^1#1')<>'' then ' ('&unifor('Av910^1#1'),')'fi,
+      if &unifor('Av910^d#1')<>'' then', '&unifor('Av910^d#1') fi     
+   else &uf('+7W905#'),
+      if v905^x:'2/' then &uf('+7U905#'&uf('V'&uf('G2/'v905^x))) else 
+         if &unifor('IPRIVATE,KKE,'):'2/' then &uf('+7U905#'&uf('V'&uf('G2/'&unifor('IPRIVATE,KKE,'))))
+      fi fi,   
+      &uf('+7W907#'),
+      (if &uf('Ag905#1'):',' then &uf('+7U907#'&uf('G0,'&uf('Ag905#1'))),&uf('+7W905#'&uf('G2,'&uf('Ag905#1'))) 
+       else &uf('+7U907#'&uf('Ag905#1')) break fi/), 
+      (if p(g907) then /&unifor('Av910^b#'g907),
+          if &unifor('Av910^1#'g907)<>'' then ' ('&unifor('Av910^1#'g907)')' fi 
+       ', '&unifor('Av910^d#'g907) fi/)
+fi fi,/

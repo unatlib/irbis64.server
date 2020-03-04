@@ -1,0 +1,151 @@
+'{',,,,,,,,,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+v1^c,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3963 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*---------------------------------наименований
+f(val(v2),0,0),,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4983 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*---------------------------------экземпляров
+f(val(v3),0,0),,,,,,if val(v3)<>val(V6) then ' ( \fs16 c КМИ ) \fs20 ',,f(val(v6),0,0),')' fi,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6003 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------------наименований методич.
+f(val(v4),0,0),,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7023 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------------экземпл.методич.
+f(val(v5),0,0),,,,,if val(v7)<>val(V5) then ' ( \fs16 c КМИ \fs20 ',,f(val(v7),0,0),')' fi,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8043 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------------реальна обеспеч.
+if val(v2)>0 then f(val(v8)/val(v2),0,2)  else '-' fi,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9063 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------------реальна обеспеч. методической
+if val(v4)>0 then f(val(v9)/val(v4),0,2)  else '-' fi,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10083 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*----------------------------степень новизны, экземпляры с КМИ------зкземпляра без КМИ v3
+/* v991^5 - по наименованиям
+if a(v991^5) 
+then 
+   if val(v3)>0 and p(v10)   then if f(val(v10) / val(v3) * 100,0,2) ='' then '0' else f(val(v10) / val(v3) * 100,0,2) fi else '0' fi 
+else 
+   if val(v2)>0 and p(v10) then if f(val(v10) / val(v2) * 100,0,2) ='' then '0' else f(val(v10) / val(v2) * 100,0,2) fi else '0' fi 
+fi
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11103 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*----------------------------степень новизны методической, экземпляры с КМИ
+/* v991^5 - по наименованиям
+if a(v991^5) 
+then  
+  if val(v7)>0 and p(v11)   then if f(val(v11) / val(v7) * 100,0,2) ='' then '0' else f(val(v11) / val(v7) * 100,0,2) fi else '0' fi 
+else  
+  if val(v4)>0 and p(v11) then if f(val(v11) / val(v4) * 100,0,2) ='' then '0' else f(val(v11) / val(v4) * 100,0,2) fi else '0' fi 
+fi
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12123 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------процент с грифом всего------зкземпляра без КМИ v3
+if a(v991^5) 
+then 
+   if val(v3)>0 and p(v12) then if f(val(v12) / val(v3) * 100,0,2) ='' then '0' else f(val(v12) / val(v3) * 100,0,2) fi else '0' fi 
+else 
+    if val(v2)>0 and p(v12) then if f(val(v12) / val(v2) * 100,0,2) ='' then '0' else f(val(v12) / val(v2) * 100,0,2) fi else '0' fi 
+fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13143 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------процент с грифом за последн.годы------зкземпляра без КМИ v3
+if a(v991^5) 
+then 
+   if val(v3)>0 and p(v14) then if f(val(v14) / val(v3) * 100,0,2) ='' then '0' else f(val(v14) / val(v3) * 100,0,2) fi else '0' fi 
+else 
+   if val(v2)>0 and p(v14) then if f(val(v14) / val(v2) * 100,0,2) ='' then '0' else f(val(v14) / val(v2) * 100,0,2) fi else '0' fi 
+fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14163 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------процент с грифом всего методич.
+if a(v991^5) 
+then 
+   if val(v7)>0 and p(v13) then if f(val(v13) / val(v7) * 100,0,2) ='' then '0' else f(val(v13) / val(v7) * 100,0,2) fi else '0' fi 
+else 
+   if val(v4)>0 and p(v13) then if f(val(v13) / val(v4) * 100,0,2) ='' then '0' else f(val(v13) / val(v4) * 100,0,2) fi else '0' fi 
+fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15183 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*---------------------------процент с грифом за последн.годы методич.
+if a(v991^5) 
+then 
+   if val(v7)>0 and p(v15) then if f(val(v15) / val(v7) * 100,0,2) ='' then '0' else f(val(v15) / val(v7) * 100,0,2) fi else '0' fi 
+else 
+   if val(v4)>0 and p(v15) then if f(val(v15) / val(v4) * 100,0,2) ='' then '0' else f(val(v15) / val(v4) * 100,0,2) fi else '0' fi 
+fi,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+'}'

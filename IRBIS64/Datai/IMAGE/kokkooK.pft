@@ -1,0 +1,43 @@
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^0:&unifor('Knazn.mnu|1') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+"ОС Экз. из 692 НЕ для ВК"d10000, 
+&unifor('+1W66#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 
+&unifor('+1W66#', 
+(if p(v692) then 
+    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+    AND v692^a = '' then v692^f fi fi)) fi, 
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W511#'''), 
+&unifor('+1W511#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. всего"d10000, 
+&unifor('+1W512#'''), 
+&unifor('+1W512#'f(rsum((if p(v691) then 
+                            if &unifor('Pv691^0')<>'' then 
+                               if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                  &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                  &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                  &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                               else 
+                                  &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                               fi 
+                         fi fi)),0,0)) 
+fi, 
+FI, 
+|'R66: '&unifor('+1R66')'  R511: '&unifor('+1R511')'  R512: '&unifor('+1R512')|d10000, 
+
+&unifor('S0'), 
+(if p(v691) then 
+    if &unifor('+1R201,',&unifor('+1R200')):&unifor('S1A') 
+    then 
+       if p(v691^0) then &unifor('+1R66'), 
+          if &unifor('+1R66')='' then 
+             if val(&unifor('+1R512'))> 0 then f(val(&unifor('+1R511'))/val(&unifor('+1R512')),0,2) 
+ fi fi fi fi fi/) 

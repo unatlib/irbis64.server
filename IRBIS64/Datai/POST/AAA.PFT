@@ -1,0 +1,4 @@
+if v920:'post'then 
+   if &unifor('JCMPL,IP='v86)=''then/'0' 
+   else/'2Дублетный индекс в БД CMPL - см. N ',          &unifor('DCMPL,"','IP='v86,'",f(val(mfn),0,0)')
+fi fi/

@@ -1,0 +1,27 @@
+0
+ADD
+5
+F
+(if p(v910)then if '2 6 C U':v910^a then else |^a|v910^a,|^d|v910^d,|^h|v910^h|!|,|^b|v910^b|!|,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910)then if '2 6 C U':v910^a then '0'else'1'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+5
+F
+(if p(v5)then if &unifor('Av991^b#1'):v5^h or &unifor('Av991^b#1'):v5^b then '^a6','^V',&unifor('Av991^a#1'),|^d|v5^d,|^b|v5^b,|^h|v5^h,|^e|v5^e,|^u|v5^u,|^y|v5^y,|^c|v5^c,|^f|v5^f else v5 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+F
+(if p(v5)then |^a|v5^a,|^v|v5^v,|^d|v5^d,if p(v5^h)then'^h'&unifor('G0!'v5^h)fi,if p(v5^b)then'^b'&unifor('G0!'v5^b)fi,|^e|v5^e,|^u|v5^u,|^y|v5^y,|^c|v5^c,|^f|v5^f fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

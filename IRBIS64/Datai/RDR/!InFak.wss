@@ -1,0 +1,101 @@
+10
+1
+________ФИО__________
+0
+0
+0
+
+
+
+G1^1='' or s(v10," "v11," "v12,): G1^1 
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then &uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1') fi fi fi/)
+2
+Идентификатор
+0
+0
+0
+
+
+
+G1^2='' or s('!',v30,'!'): s('!',G1^2,'!')
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2)  then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then &uf('Av30#1') fi fi fi/)
+3
+Год обучения
+0
+0
+0
+
+
+
+G1^3='' or s((if p(v90) then |!|v90^0|!|fi)): s("!"G1^3"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^0 fi fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+SEM=
+G1^F='' or s((if p(v90) then |!|v90^F|!|fi)): s("!"G1^F"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^F fi fi fi/)
+E
+Группа
+0
+0
+0
+
+
+GR=
+G1^E='' or s((if p(v90) then |!|v90^E|!|fi)): s("!"G1^E"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^E fi fi fi/)
+N
+Направление
+0
+0
+0
+
+
+NAPR=
+G1^N='' or s((if p(v90) then |!|v90^N|!|fi)): s("!"G1^N"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^N fi fi fi/)
+C
+Специальность/Профиль
+0
+0
+0
+
+
+SPEC=
+G1^C='' or s((if p(v90) then |!|v90^C|!|fi)): s("!"G1^C"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^C fi fi fi/)
+O
+Форма обучения
+0
+0
+1
+fo.mnu
+
+FO=
+G1^O='' or s((if p(v90) then |!|v90^O|!|fi)): s("!"G1^O"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^O fi fi fi/)
+V
+Вид обучения
+0
+0
+1
+vo.mnu
+
+VO=
+G1^V='' or s((if p(v90) then |!|v90^V|!|fi)): s("!"G1^V"!")
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^V fi fi fi/)
+4
+Переведен
+0
+0
+0
+
+
+
+G1^4='' or G1^4: 'нет' and v90^1<>''
+(if p(v90) then if s(|!|v90^A|!|): s('!'&unifor('Av991#1'),'!') and a(v90^2) then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^E#1')='' or s('!',v90^E,'!'): s('!',&uf('AG1^E#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',v90^N,'!'): s('!',&uf('AG1^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',v90^O,'!'): s('!',&uf('AG1^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',v90^V,'!'): s('!',&uf('AG1^V#1'),'!')) and ( &uf('AG1^4#1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then if v90^1<>'' then 'НЕТ' fi fi fi fi/)

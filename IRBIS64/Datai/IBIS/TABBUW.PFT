@@ -1,0 +1,89 @@
+'\par ','\pard \ql\li50\fs20 '&unifor('S1A')'.    \b 'mhl, 
+if v920:'asp'or a(v903) then'\par 'else 
+   if v903:v908 or v903:v906 then 
+      if p(v908)then &unifor('Av686#1'), 
+         if a(v686)then &unifor('Av675#1'), 
+            if a(v675)then &unifor('Av621#1')fi 
+         fi else v906 
+      fi, 
+   else v903, 
+   fi,'\par \b0 ',"\pard \b \li450\fs20 "v908"\par \b0 ", 
+   if v903:v906 then else"\pard \b \li300\fs20 "v906"\par \b0 " 
+fi fi,   '\pard \b \qj\li600\ri1300\fi300\fs20 ' 
+v461^x,v461^b, 
+if p(v461)then 
+   if s(v461^x,v461^b)<>''then'\par \b0 'v461^c 
+   else &unifor('E3'v461^c),'\b0  ',&unifor('F3'v461^c) 
+   fi,| : |v461^e,| / |v461^f, 
+   |. - |v461^p,(". - "| ; |+v461^d,| : |v461^g),|. - |v461^h,(|. - (|v46^a,| ; |v46^v, 
+   if s(v46^a,v46^v)<>'' then|)|d46 fi,|. - |v46^p),". - ISBN "v461^i 
+fi,"\par "d461, 
+v700^a,", "v700^g".",if a(v700^g)then" "v700^b fi,"("v700^1")",","v700^c,v710^s".",v710^a, 
+if s(v710^n,v710^c)<>''then ' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+if s(v710^d,v710^f,v710^e)<>''then' (' v710^d" ; ",v710^f, 
+   if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+fi, ". "d710,v971^b, 
+if s(v971^d,v971^f,v971^e)<>''then' (' v971^d" ; ",v971^f, 
+   if p(v971^f)then   " ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+fi ". "d971^b,'\b0 ',if s(v700v710)<>''then' 'fi, 
+"\b "v200^v"\b0 ", 
+if p(v200^v) then" : "v200^a else 
+   if s(v700v710)=''then'\b ',&unifor('E3'v200^a),'\b0  ',&unifor('F3'v200^a) else v200^a 
+fi fi, 
+if v920:'NJ'then 
+   ref(l(|I=|v933),v200^a,| / |v200^f,". - "d110^d, 
+         if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d) else 
+         "Периодичность "v110^d fi),
+   '\b '," - "v934"г.",   
+   if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi,
+   if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi),v936 fi,
+   '\b0 ', 
+else  
+   if p(v922) then &uf('6ibis922'), 
+      (| = |v510^d,| : |v510^e,| / |v510^f,| ; |v510^g),| : |v924 
+   else
+      if s(v510^e)<>''then| : |v200^e,(|. |v923^h,| : |v923^i,|. |v923^k,| : |v923^l) fi,
+      if s(v510^f)<>''then| / |v200^f,| ; |v200^g fi,
+      (| = |v510^d,| : |v510^e,| / |v510^f,| ; |v510^g),| : |v924,
+      if s(v510^e)=''then| : |v200^e,(|. |v923^h,| : |v923^i,|. |v923^k,| : |v923^l) fi,
+      if s(v510^f)=''then | / |v200^f,| ; |v200^g,
+fi fi fi,
+". - "v205^a,if p(v205^a)then" / "v205^f else". - "v205^f fi, 
+if a(v922)then 
+   (if v123^x:'0'then ". -  1 : "|, 1 : |+v123^d,| ; 1 : |v123^e,v123^f fi), 
+fi,
+". - Взамен "v982^a,if a(v982^a)then". - "d982 else" ; "d982 fi,"Введ. с "v982^b," по "v982^c,   
+if s(v210^a)=''then 
+   if s(v461^d,v463)<>''or v920:'J'then else', [б. м.]'fi 
+else (". - "| ; |+v210^a,| ; |v210^x,| ; |v210^y,| : |v210^c) 
+fi, 
+if p(v461)then 
+   if s(v210^a,v210^c)<>''then", "v210^d else". - "v210^d fi 
+else 
+   if v920:'J'or v920.1:'A'then else 
+      if s(v210^d)=''then', [б. г.]'else", "v210^d fi 
+fi fi, 
+if v920='J'then" - "d210^d" - ",v210^e fi," ("v210^1")",". - "v215^a," "v215^1, 
+if s(v215^1)=''then 
+   if v215^a:'с'or v215^a:'p'or v215^a:'S'then else" с."d215^a fi fi," : "d215^c, 
+if v215^c*1.1='-'then v215^c*2,", "v215^0*2,", "v215^7*2,", "v215^8*2 else v215^c fi," ; "v215^d, 
+(if v123^x:'1' then| : \b |v123^a*3|\b0 |,|, |v123^b*3 fi), 
+(if p(v225)then 
+    if v225^n:'0'then else|. - (|v225^a,|. |v225^h,| |v225^i,|. |v225^k, 
+       | |v225^l,| / |v225^f,|, ISSN |v225^x,| ; |v225^v,|)|d225 fi fi), 
+(if v517^n:'0'then else|. - |v517^t*4,| : |v517^a fi), 
+". - \b Пер.изд. : \b0"v454^a," / "v454^d,", "v454^e,", "v454^f,". - "v454^p, 
+". - "v454^g,", "v454^h,". - "v963^1, 
+if v920:'NJ' then else if p(v463) then ,OISTASPK, fi fi,
+if p(v215^x)then 
+   if val(v215^x)=0 then"  тираж "v215^x else"  "v215^x" экз."fi    fi,     
+if s(v910^c)<>''then
+'\par \pard \ql\li600\ri1300\fs20 Экземпляры: всего:'    
+f(rsum((if p(v910^c) then if 'C U':v910^a then v910^1|;|,|1;|n910^1 else 
+                            if '6 2 7':v910^a then else'1;'fi 
+           fi fi)),0,0),' - ',&unifor('O'), 
+fi, 
+"\par ГРНТИ "| + |+v964"\par ", 
+if &unifor('Av905^g#1')<>''or &unifor('IPRIVATE,FPA,')<>''then else 
+   "\qj \b Аннотация: \b0 "|\qj   |+v331|\par |, 
+fi,&unifor('!') 

@@ -1,0 +1,201 @@
+20
+1
+____Заглавие, автор_____
+0
+0
+0
+
+
+
+
+v461^x,if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,,if a(v461) then v700^a". ",,,v200^a, fi
+6
+Год издания
+0
+0
+0
+
+
+
+
+&uf('Av210^D#',,&uf('+N210') )
+3
+Кол-во экз-ов
+0
+0
+0
+
+
+
+
+(if p(v693) then if v693^L='' and v693^A='' and v693^X=''  or v693^L='' and v693^A='' and v693^X='!NOFOND' then v693^D,,if v693^K<>'' then /|(с КМИ |v693^K|)| fi,,if v693^Q<>'' then /|(с аналогами |d693^Q,,,,f(val(v693^D)+val(v693^Q),0,0),,,')' fi,,break,,fi fi)
+4
+Кол-во студентов
+0
+0
+0
+
+
+
+
+(if p(v693) then if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' then v693^E,,BREAK fi fi)
+5
+ККО (поле 693)
+0
+0
+0
+
+
+
+
+(if p(v693) then if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' then if val(v693^S)>0 then v693^S else if val(v693^P)>0 then v693^P else if v693^N<>'' then v693^N else v693^F,,BREAK fi,,fi,fi,fi fi),,if val(&uf('6KoElectro'))=1 then ' (ЭУ)' fi
+D
+Дисциплина
+0
+0
+2
+VUZ,VUZU=,if v920:'VUZ' then (if p(v69) then '^D'&uf('7,!IDD='v69^d'!,v3^a,if p(v3^a) then "="v3^b else v3^b fi,"^S"v4,"^K"v6'),'^B'v69^b,'^I'v69^d,'^A'&uf('Av68^a#1'),'^L'&uf('Av68^L#1')'^N'&uf('Av68^n#1'),'^C'&uf('Av68^c#1'),'^O'&uf('Av68^o#1'),'^F'&uf('Av68^f#1'),'^V'&uf('Av68^v#1'),'^H'&uf('Av68^h#1'),'^W'v69^w, fi/) else if v920:'UPL' then (if p(v99) then '^B'v99^b,'^A'&unifor('Av93#1'),'^D'ref(l(|IDD=|v99^d),v3^a,if p(v3^a) then"="v3^b else v3^b fi),'^I'v99^d,'^N'&unifor('Av92^n#1'),'^C'&unifor('Av92^c#1'),'^O'&unifor('Av98#1'),'^F'&unifor('Av95#1'),'^V'&unifor('Av96#1'),'^H'&unifor('Av94#1'),'^S'v99^s,'^k'v99^k,'^U'&unifor('Av91#1') fi/) fi fi
+
+
+
+(if p(v691) then if p(v691^D) then v691^D else ' ' fi fi/)
+I
+Идентификатор дисциплины
+0
+0
+2
+VUZ,DISCN=,v3^0,'^D'v3^a,if p(v3^a) then"="v3^b else v3^b fi
+
+
+
+(if p(v691) then if p(v691^I) then v691^I else ' ' fi fi/)
+2
+Студенты
+0
+0
+0
+
+
+
+
+(if p(v691) then if val(&uf('IMAIN,accessrdr,1'))=1 then if val(&uf('IMAIN,LinkGroup,0'))=1 then if v691^E<>'' then &uf('JRDR,GR=',v691^E) else '0' fi,,else if val(&uf('JRDR,','?',v691^A,v691^N,v691^C ,v691^V,v691^O,'-S',v691^F))=0 then '0' else &uf('JRDR,','?',v691^A,,v691^N,,v691^C,,v691^V,v691^O,'-S',v691^F) fi fi else if &uf('DVUZ,!?',v691^A|-|,v691^N|-|,,v691^C|-|,,v691^V|-|,v691^O|-|,,v691^F|-|,'!,v68^Z')='' then '0' else &uf('DVUZ,!?',v691^A|-|,v691^N|-|,,v691^C|-|,,v691^V|-|,v691^O|-|,,v691^F|-|,'!,v68^Z'),,fi,,fi,,fi/)
+F
+Семестр
+0
+0
+0
+
+
+
+
+(if p(v691) then if p(v691^F) then v691^F else ' ' fi fi/)
+A
+Факультет
+0
+0
+1
+fak.mnu\\2
+
+
+
+(if p(v691) then if p(v691^A) then v691^A else ' ' fi fi/)
+N
+Направление
+0
+0
+1
+napr.mnu\\2
+
+
+
+(if p(v691) then if p(v691^N) then v691^N else ' ' fi fi/)
+C
+Специальность
+0
+0
+6
+spec.tre\\ - 
+
+
+
+(if p(v691) then if p(v691^C) then v691^C else ' ' fi fi/)
+O
+Форма обучения
+0
+0
+1
+fo.mnu
+
+
+
+(if p(v691) then if p(v691^O) then v691^O else ' ' fi fi/)
+V
+Вид обучения
+0
+0
+1
+vo.mnu
+
+
+
+(if p(v691) then if p(v691^V) then v691^V else ' ' fi fi/)
+S
+Цикл
+0
+0
+1
+cikld.mnu
+
+
+
+(if p(v691) then if p(v691^S) then v691^S else ' ' fi fi/)
+B
+Кафедра читающая 
+0
+0
+1
+kafch.mnu\\2
+
+
+
+(if p(v691) then if p(v691^B) then v691^B else ' ' fi fi/)
+G
+Тип: осн/доп
+0
+0
+0
+
+
+
+
+(if p(v691) then if p(v691^g) then v691^g else ' ' fi fi/)
+E
+Номер группы
+0
+0
+2
+,GR=
+
+
+
+(if p(v691) then if p(v691^E) then v691^E else ' ' fi fi/)
+L
+Филиал
+0
+0
+1
+fili.mnu
+
+
+
+(if p(v691) then if p(v691^L) then v691^L else ' ' fi fi/)
+H
+Кафедра выпускающая 
+0
+0
+1
+kafv.mnu\\2
+
+
+
+(if p(v691) then if p(v691^H) then v691^H else ' ' fi fi/)

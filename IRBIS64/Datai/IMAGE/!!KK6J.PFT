@@ -1,0 +1,41 @@
+if v920='J'then 
+   if p(v430)or p(v440)then'\par \fi0 Настоящее издание \par '
+      (if p(v430)then""d430,
+          if v430^z:'361'then else| ; |+d430 fi,
+          if v430^z:'U'then'До 'v430^b.4,if a(v430^b)then v210^d fi'г.'v430^b*4,' см.: 'else 
+             if '32 33 ':v430^z then|С |v430^b.4| |,|  |n430^b else|В |v430^b.4| |,|  |n430^b fi,
+             &unifor('Krksz.mnu|'v430^z) fi,v430^a,
+          if v430^z:'36'and s(v430^c,v430^d)<>''then' ('|ISSN |v430^c.4|-|,v430^c*4.4,| Шифр |v430^d')'
+          else|. - ISSN |v430^c.4|-|,v430^c*4.4,| (Шифр |v430^d|)| fi fi),
+      if p(v440) then"\par "d430 fi,
+      (if p(v440)then""d440,
+          if v440^z:'461'then else | ; |+d440 fi,
+          if v440^z:'U'then|С |v440^b.4 else|В |v440^b.4 fi,|г.|d440^b,|  |n440^b, | (|v440^b*4|)|,
+          if v440^z:'U'then' см.: 'else &unifor('Krksz.mnu|'v440^z) fi,v440^a,
+          if v440^z:'46'and s(v440^c,v440^d)<>''then' ('|ISSN |v440^c.4|-|,v440^c*4.4,| Шифр |v440^d')' 
+          else |. - ISSN |v440^c.4|-|,v440^c*4.4,| (Шифр |v440^d|)| fi fi)
+   else if s(v210^e)<>''then"\par Прекращен с "v210^e fi'\par '
+   fi,
+   if &unifor('Av905^g#1')<>''or &unifor('IPRIVATE,FPA,')<>''then else
+   mhl,("Аннотация: "|  |+v331+|\par |),mpl,
+   fi,
+   if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else 
+      if p(v909) then 'Зарегистрированы поступления:\par ',
+         if val(&unifor('Av909^q#1'))=rmax(v909^q|;|) and 
+            val(&unifor('Av909^q#*'))=rmin(v909^q|;|) then 
+            (if p(v909)then 
+                if v909^h:'Подш'then 
+                else x3 v909^q|г. |,|экз.|v909^k| |,| (|v909^d|)|
+                   if p(v909^f) then 
+                      if &unifor('Av210^8#1')<>'' then' '&unifor('Av210^8#1') else' т.'fi,v909^f| ; | fi,
+                   if p(v909^h) then  
+                      if &unifor('Av210^9#1')<>'' then' '&unifor('Av210^9#1') else' № 'fi,v909^h+| ; | fi,'\par '
+             fi fi),
+         else mhl,(if p(v909) then if v909^h:'Подш'then else x3,&unifor('AD909'),'\par 'fi fi),mpl,
+      fi fi,
+      if v909^h:'Подш'then 'Есть переплетенные номера.\par 'fi,
+      "В одной обложке с данным изданием (его номер указан в скобках) есть поступления журналов: \par "d423,
+      (if p(v423)then v423^a ,| : |v423^1'\par ' fi)
+      if s(v909)=''then " Издание можно найти в : \par "d901,   
+         (if p(v901^d)then if &unifor('Pv901^d')<>''then &unifor('Pv901^d')' ; ' fi fi),"\par "d901 
+fi fi fi,

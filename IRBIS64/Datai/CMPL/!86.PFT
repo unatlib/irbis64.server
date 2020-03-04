@@ -1,0 +1,2 @@
+if (l("IP="v86))<=0 or val(ref(l("IP="v86),mfn))=val(mfn) the
+n '0'else '2 Ошибка: Дублетный Индекс 'v86,' mfn: 'ref(l("IP="v86),mfn) fi

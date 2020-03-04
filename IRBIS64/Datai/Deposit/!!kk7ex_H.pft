@@ -1,0 +1,89 @@
+'</>',
+if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else / 
+   if 'ASP AUNTD':v920 and a(v910) then 
+      (if p(v463) then /, if &unifor('Av463#2')<>'' then v463^w| : | fi, 
+          if l(|I=|v463^w)>0 
+          then 
+             ref(l(|I=|v463^w), 
+                if v920:'NJ'then 
+                   if rsum((if p(v910) then if p(v910^c) and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi fi))>0 then 
+                      if rsum((if v910^a:'0'and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi))>0 or 
+                         rsum((if v910^a:'U'and &unifor(|Kmhrvn.mnu\|v910^d)='' then 
+                                  if val(v910^1,|1|n910^1)>0 then '1;' else '0;'fi fi))>0  or  
+                         rsum((if v910^a:'p'and &unifor(|Kmhrvn.mnu\|v910^d)='' then 
+                               ref(l(|I=|v910^p),if v910^a:'0'then'1;'else"0;"d910 fi) fi/))>0 
+                      then  
+                         if rsum((if p(v910) then if p(v910^c) and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi fi))>0 
+                         then 
+                            if s(&unifor('IPRIVATE,KKI,'),v905^c)<>''then 
+                               (if p(v910^c)and &unifor(|Kmhrvn.mnu\|v910^d)='' 
+                                then/v910^d,|(в подшивке)|d910^p,' ('v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.', 
+                                     |(|v910^1| экз.)|,| Экз. |v910^b,| (колл. |v910^q|)|,' - ',v910^e, 
+                                   if val(v910^e)>0 then 
+                                      if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+                                      else &unifor('Korg.mnu|3') 
+                                   fi fi 
+                                   if a(v910^e)then &unifor('Av10^d#1'), 
+                                      if val(&unifor('Av10^d#1'))>0 then 
+                                         if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+                                         else &unifor('Korg.mnu|3') 
+                                      fi fi 
+                                      if &unifor('Av10^d#1')='' then 'Б.ц.'fi 
+                                   fi,|)|d910^c, 
+                                fi), 
+                            else 
+                               if rsum((if p(v910) then if p(v910^c) and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi fi))
+                                  >0 then &unifor('O') 
+                   fi fi fi fi fi, 
+                else 
+                   if rsum((if p(v910) then if p(v910^c) and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi fi))>0 
+                   then / 
+                      if s(v905^c)<>''or &unifor('IPRIVATE,KKI,')<>''then 
+                         (if p(v910) then 
+                             if '2 6 7':v910^a and &unifor(|Kmhrvn.mnu\|v910^d)<>''then 
+                             else / 
+                                if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then 
+                                   if p(v910^c)then/v910^d,'  'v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.'
+                                fi fi, 
+                                if v910^a:'U'then else| Инв.|v910^b fi,| (колл. |v910^q|)|,| (|v910^1| экз.)|, 
+                                if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'3'then else ' - ',v910^e, 
+                                   if val(v910^e)>0 then 
+                                      if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+                                      else &unifor('Korg.mnu|3') 
+                                   fi fi, 
+                                   if a(v910^e)then &unifor('Av10^d#1'), 
+                                      if val(&unifor('Av10^d#1'))>0 then 
+                                         if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+                                         else &unifor('Korg.mnu|3') 
+                                      fi fi, 
+                                      if &unifor('Av10^d#1')=''then'Б.ц.'fi 
+                                   fi,if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then |)|d910^c fi, 
+                         fi fi fi) 
+                      else 
+                         if rsum((if '2 6 7':v910^a and &unifor(|Kmhrvn.mnu\|v910^d)<>''then else|1;|d910 fi,'0;'))>0 
+                         then &unifor('O'), 
+                fi fi fi fi) 
+      fi fi) 
+   else 
+      if v920='J' then else 
+         if '1 2 3 ':v905^c or '1 2 3 ':&unifor('IPRIVATE,KKI,') then  
+            (if p(v910) then 
+                if '2 6 7':v910^a then else|; |+d910,v910^d, 
+                   if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then 
+                      if p(v910^c)then' ('v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.' fi fi, 
+                   if 'C U':v910^a and p(v910^c) then | (колл. |v910^q|)|,| (|v910^1|экз.)| else 
+                      if (not('C U':v910^a)) then | Инв.|v910^b,| (колл. |v910^q|)|, fi fi, 
+                   if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'3'then  
+                   else' - ',v910^e, 
+                      if val(v910^e)>0 then 
+                         if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3') fi fi, 
+                      if a(v910^e)then &unifor('Av10^d#1'), 
+                         if val(&unifor('Av10^d#1'))>0 then 
+                            if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3') fi fi, 
+                         if &unifor('Av10^d#1')='' then'Б.ц.'fi 
+                      fi, 
+            fi,if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then |)|d910^c fi,  fi fi) 
+         else &unifor('O') 
+         fi, 
+      ("<br> <b> Копия:</b> "| ; |+d993,&unifor('G2='v993^a),|, Шифр |v993^b,| (|v993^d|)|),'<br>' 
+fi fi fi, 

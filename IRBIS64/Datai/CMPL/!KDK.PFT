@@ -1,0 +1,259 @@
+   if v905^0:'1' then else 
+      if p(v210) and a(v461) then 
+         if p(v210^a) or p(v210^d) then 
+            if s(v225^v)<>''then 
+               if L('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                  &unifor('G1#'&unifor('Av225^v#1')),v215^a)<=0 
+               or val(ref(l('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                  &unifor('G1#'&unifor('Av225^v#1')),v215^a),
+                  mfn))= val(mfn) 
+               then 
+                  if &unifor('IMAIN,DBEK1,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK1,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),v215^a))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),v215^a,'",f(val(mfn),0,0)'),
+                  fi fi,
+                  if &unifor('IMAIN,DBEK2,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK2,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),v215^a))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),v215^a,'",f(val(mfn),0,0)'),
+                  fi fi,
+                  if &unifor('IMAIN,DBEK3,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK3,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),v215^a))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),v215^a,'",f(val(mfn),0,0)'),
+                  fi fi 
+               else /'1Дублетное описание:    ','!'v210^d*2,v10^a,
+                    &unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),v215^a,
+                    ref(l('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                    &unifor('G1#'&unifor('Av225^v#1')),v215^a),' (см. N ',f(val(mfn),0,0),')')
+               fi,
+            else 
+               if p(v200^a) then 
+                  if L('!'v210^d*2.2,v700^a.9,
+                     &unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a)<=0 
+                  or val(ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),mfn))= val(mfn) 
+                  then 
+                     if &unifor('IMAIN,DBEK1,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK1,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK2,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK2,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK3,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK3,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B',v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                  else
+                     if ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),v10^a)<>v10^a 
+                     or ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),v215^1)<>v215^1 
+                     then/'0'
+                     else/'1Дублетное описание:       ',
+                          '!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                          ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),
+                          &unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),
+                          ' (см. N',f(val(mfn),0,0),| ISBN |v10^a' ',
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi')') 
+         fi fi fi fi   fi 
+      else 
+         if p(v461) then 
+            if l('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,
+               if v461^u:'1'then" "v461^x fi,if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a)<=0 
+            or val(ref(l('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+               &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+               if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),mfn))=val(mfn) 
+            then 
+               if &unifor('IMAIN,DBEK1,')<>''then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK1,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK1,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK1,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",f(val(mfn),0,0)'), 
+               fi fi fi,
+               if &unifor('IMAIN,DBEK2,')<>''then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK2,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK2,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK2,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",f(val(mfn),0,0)'), 
+               fi fi fi, 
+               if &unifor('IMAIN,DBEK3,')<>''then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK3,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK3,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK3,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",f(val(mfn),0,0)'), 
+               fi fi fi, 
+            else 
+               if ref(l('!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                  if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                  if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                  if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),v10^a)<>v10^a 
+               or ref(l('!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                  if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                  if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                  if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),v215^1)<>v215^1 
+               then /'0'
+               else /'1Дублетное описание:       ','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                    &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                    if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                    if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                    if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+                    if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                    ref(l('!',v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                    &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                    if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                    if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                    if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),| ISBN |v10^a,' '
+                    if v215^1.2:'='then v215^1*2 else v215^1 fi,' (см. N',f(val(mfn),0,0)')') 
+   fi fi fi fi fi

@@ -1,0 +1,50 @@
+/* замена 910^0 - кол-во проверенных
+(if p(v910) 
+ then 
+    if p(v910^0) 
+    then 
+       if v910^$<>'' 
+       then 
+/* есть дата проверки
+          if '2 6 7':v910^a 
+          then 
+             v910^0,
+          else 
+             if v910^A: 'U' 
+             then 
+                if v910^h:';' and s(|;|v910^h|;|):s(';'&uf('Av1003#1')';') 
+                then 
+/* убрать старый вариант
+                   v910^0 
+                else 
+                   if &uf('+97',v910^h)=&uf('Av1003#1') or &uf('+97',v910^b)=&uf('Av1003#1') 
+                   then 
+                      if &uf('Av991^A#1')='1'and val(&uf('Ag2#1'))=0 
+                      then 
+/* условие заново - зачем проверять g2
+/* что такое g2=7 ???
+                         '1',&uf('+7W2#7'),,
+                      else 
+/* незаново
+                         if &uf('Av991^B#1')<>'' and val(v910^$)<=val(&uf('Av991^B#1')) or 
+                            &uf('Av991^B#1')='' and v910^s=&unifor('3') 
+                         then 
+                            f(val(v910^0)+1,0,0),
+                         else 
+                            v910^0,
+                         fi 
+                      fi,
+                   else 
+                      v910^0  
+                   fi,
+                fi,
+             else 
+                v910^0,
+             fi,
+          fi,
+       else 
+          v910^0,
+       fi,
+    else # 
+    fi,
+fi/),

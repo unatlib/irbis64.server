@@ -1,0 +1,66 @@
+mhl,
+'<table width="100%">',
+'<tr width="100%">',
+'<td with="3%" valign="top">',
+'<INPUT type="checkbox" name="CHECKMFN" value=',mfn,'>','</td>'
+'<td with="7%" valign="top">',
+
+'<b>','<IRBIS type=0>. ','</b>'
+'</td><td width="90%">',
+v503^a". ",v461^x,if s(v461^x)<>''then'. 'fi,v461^c,| [|v461^2|]|,
+if p(v461) then 
+   if a(v461^2) then &unifor('+1W1'''),
+      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t,
+      if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t,
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then 
+            if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+         else 
+            if s(&unifor('IPRIVATE,FPS,'),v905^s)<>'' then else 
+               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+   fi fi fi fi,| : |v461^e,
+   if p(v461^x) then else| / |v461^f fi,
+   (if s(v46^a,v46^v)<>'' then". - ("| (|+v46^a,| ; |v46^v')'fi),". "d461,v200^v,
+   if p(v200^v) then" : "v200^a else v200^a fi,
+fi,
+if a(v461) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,"."d700^g," "d700^a,
+   if p(v982) then if v200^a:v903 then else v903" "fi fi,v200^a," ["v200^b"]",
+   if p(v110) then else 
+      if p(v200) and a(v200^b) then &unifor('+1W1'''),
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t,
+         if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t,
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+fi fi fi fi fi fi,| : |v200^e,|. |v923^h,| : |v923^i,|. |v923^k,| : |v923^l,| / |v200^f,
+if v920='J'then'. - '&unifor('K110b.mnu|'v110^b)," выходит с "v210^d"г."else", "v210^d fi,
+if a(v210^d) then|, |v461^h fi,". - "| ; |+v215^a," "d215^1,if v215^1.2:'='then v215^1*2 else v215^1 fi,
+if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi,
+if v920:'NJ'then ref(l(|I=|v933),v200^a,
+   if &unifor('Kjzk.mnu|'v101.3)<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi
+   '. - '&unifor('K110b.mnu|'v110^b),|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l,|. |v923^m,|. |v923^n),", "v934"г.",
+   if p(v935) then 
+      if val(v935.1)=0 and (not(v935.1='0')) then' 'else ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т. 'fi) 
+      fi,v935 fi,
+   if p(v936) then 
+      if val(v936.1)=0 and (not(v936.1='0')) then' 'else ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' № 'fi,)
+      fi,v936 fi," ("v931^c")","  (Введено оглавление)"d922 
+fi,
+if v920:'NJ'then else" (Введено оглавление)"d330,
+".- "v963^1,if a(v963^1)then" // "d463 fi,
+(| ; |+v463^7,if a(v463^7) then| ; |+v463^c fi,| : |v963^e,| / |v963^f,|. - |v463^d,| : |v463^g,
+if p(v463^c)then 
+   if s(v463^d,v463^g)<>''then|, |v463^j else |. - |v463^j fi,|. - |v463^v else 
+      ". - "|. ; |+v463^v fi,
+   if p(v463^v)then| : |v463^a else|. |v463^a fi,
+   if p(v463^v)then| |v463^h else". - "|.; |+v463^h fi,
+   if p(v463^h)then| : |v463^i else|. |v463^i fi,|, |v463^k,
+   if p(v463^k)then| : |v463^l else|. |v463^l fi,|. - |v963^p,|.- Ст.|v463^N,|.- |v463^1,
+   if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) 
+fi,&unifor('!'),&unifor('+F'),'<A HREF=IRBIS:?C21COM=1&KEY=@',mfn,'&I21DBN=',&uf('+D'),'&PFTNAME=fullw_wn> Полностью...</A>'
+'<br>',
+if &uf('+6')='0' then '<b>ЗАПИСЬ ЛОГИЧЕСКИ УДАЛЕНА</b>' fi,
+'</table>',

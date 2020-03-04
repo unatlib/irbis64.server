@@ -1,0 +1,102 @@
+0
+// Удаление из записи полей 691
+// удаляемые поля в 991
+//12 PUTLOG
+ADD
+992
+
+(v991/)
+
+IF
+if p(v691) then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691/)
+
+REPEAT
+DEL
+691
+F
+(if p(v691) then if &uf('+97',v691^A)=&uf('+97',&unifor('Av991^A#1')) and &uf('+97',v691^N)=&uf('+97',&unifor('Av991^N#1')) and &uf('+97',v691^C)=&uf('+97',&unifor('Av991^C#1')) and &uf('+97',v691^V)=&uf('+97',&unifor('Av991^V#1')) and &uf('+97',v691^O)=&uf('+97',&unifor('Av991^O#1')) and val(v691^F)=val(&unifor('Av991^F#1')) and &uf('+97',v691^S)=&uf('+97',&unifor('Av991^S#1')) and &uf('+97',v691^G)=&uf('+97',&unifor('Av991^G#1')) and &uf('+97',v691^W)=&uf('+97',&unifor('Av991^W#1')) then '1' else '0' fi fi/)
+
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+IF
+if v111<>v691 then '1' fi
+PUTLOG
+'Удалены данные из записи MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+//----------------------------------------
+// удаление из БД CMPL, если задано имя NameCmpl и если текущая не CMPL
+IF
+if &unifor('IMAIN,NAMECMPL,')<>'' and &unifor('IMAIN,NAMECMPL,')<>&uf('+D') then '1' fi 
+CORREC
+&unifor('IMAIN,NAMECMPL,')
+(v992/)
+"I="v903
+
+IF
+if p(v691) then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691/)
+
+REPEAT
+DEL
+691
+F
+(if p(v691) then if v691^A=&unifor('Av991^A#1') and v691^B=&unifor('Av991^B#1') and &uf('+97',v691^N)=&uf('+97',&unifor('Av991^N#1')) and &uf('+97',v691^C)=&uf('+97',&unifor('Av991^C#1')) and v691^D=&unifor('Av991^D#1') and v691^V=&unifor('Av991^V#1') and v691^O=&unifor('Av991^O#1') and v691^F=&unifor('Av991^F#1') and v691^S=&unifor('Av991^S#1') and v691^G=&unifor('Av991^G#1') and v691^W=&unifor('Av991^W#1') then '1' else '0' fi fi/)
+
+DEL
+1001
+1
+
+
+UNTIL
+if p(v1001) then '1' fi
+IF
+if v111<>v691 then '1' fi
+PUTLOG
+'Удалены данные из записи БД ',&unifor('IMAIN,NAMECMPL,'),,' MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+END
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+

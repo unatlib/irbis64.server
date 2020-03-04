@@ -1,0 +1,79 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=10
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=7
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=№ п/п \par 
+CELL_TAB2_3=&uf('S1A')
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=10
+CELL_TAB3_2=Краткое БО\par 
+CELL_TAB3_3=&uf('+7W10#'),&uf('+7W10#'f(rsum((if p(v691) then if p(v691^l) then else if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),&uf('+7W20#'),&uf('+7W20#'f(rsum((if p(v691) then if p(v691^l) and &uf('+97'&uf('Av991^l#1'))=&uf('+97'v691^l) then if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),if p(v691) then if v991^l='' and val(g10)>0 or v991^l<>'' and val(g20)>0 then &uf('6briefkt') fi fi,
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=Осн/Доп
+CELL_TAB4_3=&uf('+7W10#'),&uf('+7W10#'f(rsum((if p(v691) then if p(v691^l) then else if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),&uf('+7W20#'),&uf('+7W20#'f(rsum((if p(v691) then if p(v691^l) and &uf('+97'&uf('Av991^l#1'))=&uf('+97'v691^l) then if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),&uf('+7W30#'),&uf('+7G30'&uf('+7W30#'if v991^l='' and val(g10)>0 then (if p(v691) then if p(v691^l) then else if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then v691^g fi fi fi fi fi/) else if v991^l<>'' and val(g20)>0 then (if p(v691) then if p(v691^l) and &uf('+97'v691^l)=&uf('+97'&uf('Av991^l#1')) then  if &uf('+97'v691^a)=&uf('+97'&uf('Av991^a#1')) or &unifor('Av991^a#1')='' then if &uf('+97'v691^b)=&uf('+97'&uf('Av991^b#1')) or &unifor('Av991^b#1')='' then if &uf('+97'v691^d)=&uf('+97'&uf('Av991^c#1')) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &unifor('Av991^c#1')='' then v691^g fi fi fi fi fi /) fi fi)),(g30|\par |)  
+CELL_TAB4_4=По центру
+CELL_TAB4_5=Нет
+CELL_TAB5_1=2
+CELL_TAB5_2=Число экз.
+CELL_TAB5_3=&uf('+7W10#'),&uf('+7W10#'f(rsum((if p(v691) then if p(v691^l) then else if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),&uf('+7W20#'),&uf('+7W20#'f(rsum((if p(v691) then if p(v691^l) and &uf('+97'&uf('Av991^l#1'))=&uf('+97'v691^l) then if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),if v991^l='' and val(g10)>0 then if p(v910)then f(rsum((if p(v910^c) then if 'C 2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0) fi else if v991^l<>'' and val(g20)>0 then if p(v910)then f(rsum((if p(v910^c) then if v910^a:'C' and &uf('+97'v910^d)=&uf('+97'&uf('Av991^l#1'))then v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0) fi fi fi
+CELL_TAB5_4=По правому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=2
+CELL_TAB6_2=Наимен./ Аналог
+CELL_TAB6_3=&uf('+7W10#'),&uf('+7W10#'f(rsum((if p(v691) then if p(v691^l) then else if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),&uf('+7W20#'),&uf('+7W20#'f(rsum((if p(v691) then if p(v691^l) and &uf('+97'&uf('Av991^l#1'))=&uf('+97'v691^l) then if &uf('+97'&uf('Av991^a#1'))=&uf('+97'v691^a) or &uf('Av991^a#1')='' then if &uf('+97'&uf('Av991^b#1'))=&uf('+97'v691^b) or &uf('Av991^b#1')='' then if &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^d) or &uf('+97'&uf('Av991^c#1'))=&uf('+97'v691^i) or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/)),0,0)),if p(v691) then if v991^l='' and val(g10)>0 or v991^l<>'' and val(g20)>0 then if a(v699) or p(v699)and v699^U='1' then '1' else 'аналог'fi fi fi
+CELL_TAB6_4=По правому краю
+CELL_TAB6_5=Да
+CELL_MULTI_TAB_ROW_COUNT=1
+CELL_MULTI_TAB_COL_COUNT1=5
+CELL_TAB1_1_1=1
+CELL_BORDER1_1=30
+CELL_TAB1_1_2=№ п/п \par 
+CELL_TAB1_2_1=10
+CELL_BORDER1_2=30
+CELL_TAB1_2_2=Краткое БО\par 
+CELL_TAB1_3_1=2
+CELL_BORDER1_3=30
+CELL_TAB1_3_2=Осн/Доп
+CELL_TAB1_4_1=2
+CELL_BORDER1_4=30
+CELL_TAB1_4_2=Число экз.
+CELL_TAB1_5_1=2
+CELL_BORDER1_5=30
+CELL_TAB1_5_2=Наимен./ Аналог
+CELL_SUM00='\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9747 \pard \ql\widctlpar\intbl {\ql \fs20 '' Общее число учебников (экз.)    'f(val(v1),5,0),'\par  Книгообеспеченность на кн.  'f(val(v1)/val(v991^d)/val(v2),3,2)'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=1
+CELL_SUM111=17
+CELL_SUM112=' Общее число учебников (экз.)    'f(val(v1),5,0),'\par  Книгообеспеченность на кн.  'f(val(v1)/val(v991^d)/val(v2),3,2)
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=200
+CELL_SORT4=0
+CELL_SORT5=if p(v691) then if &uf('Av991^l#1')='' and rsum((if p(v691) then if p(v691^l) then else if &uf('Av991^a#1')=v691^a or &uf('Av991^a#1')='' then if &uf('Av991^b#1')=v691^b or &uf('Av991^b#1')='' then if &uf('Av991^c#1'):v691^d or &uf('Av991^c#1'):v691^i or &uf('Av991^c#1')='' then '1;'fi fi fi fi fi/))>0 or &uf('Av991^l#1')<>'' and rsum((if p(v691) then if p(v691^l) and &uf('Av991^l#1')=v691^l then if &uf('Av991^a#1')=v691^a or &uf('Av991^a#1')='' then if &uf('Av991^b#1')=v691^b or &uf('Av991^b#1')='' then if &uf('Av991^c#1'):v691^d or &uf('Av991^c#1'):v691^i or &uf('Av991^c#1')=''  then '1;'fi fi fi fi fi/))>0 then v461^x,v461^b,&unifor("9"d461^c,&unifor('+S0',v461^c)),v700^a,v700^d,", "v700^g,if a(v700^g) then" "v700^b fi,v710^a,v200^v,&unifor("9"d200^a,&unifor('+S0',v200^a)),if v920:'NJ'then ref(l(|I=|v933),&unifor("9"d200^a,&unifor('+S0',v200^a)),|/ |v200^f),v934,"/"v935,"/"lv936 fi,v963^x,&unifor("9"d463^c,&unifor('+S0',v463^c)),v463^j,v463^v,v463^h,v463^k fi fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=tabkowg
+HDR_PFT=tabkowgh
+HDR_PARAMS_COUNT=0

@@ -1,0 +1,4 @@
+&uf('+7W2#'),(if &uf('Ag1#1'): '^' then if &uf('Ag1*1.1#1')='x'then &uf('+7U2#',&uf('G0^'&uf('Ag1*2#1')))fi,
+&uf('+7W1#',&uf('G1^'&uf('Ag1*2#1'))),else break fi),if g2<>''then'^M'fi,(if p(g2)then'<',&unifor('Kmod1.mnu|'g2),'>'fi)
+
+

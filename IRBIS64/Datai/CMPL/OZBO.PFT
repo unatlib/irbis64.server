@@ -1,0 +1,14 @@
+'\b 'v700^a," "v700^d,", "v700^g,
+   if a(v700^g)then", "v700^b fi'\b0 ',
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,
+      if s(v700^1)<>''then"; "d700^c fi,v700^c,
+      if s(v700^1,v700^c)<>''then"; "d700^f fi,v700^f,'). '
+   else"."d700^g," "d700^a 
+   fi,'\b 'v710^s".",v710^a,
+   if s(v710^n,v710^c)<>''then' ('v710^n"; ",v710^c,')'fi,". "v710^b,
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d"; ",v710^f,
+      if p(v710^f)then"; "v710^e else v710^e fi,"/ "v710^h,"/ "v710^i')'
+   fi,". "d710,v971^b,
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d"; ",v971^f,
+      if p(v971^f)then"; "v971^e else v971^e fi,"/ "v971^h,"/ "v971^i')'
+   fi,". "d971^b'\b0 '

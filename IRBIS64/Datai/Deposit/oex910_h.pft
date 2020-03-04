@@ -1,0 +1,38 @@
+mpl,if v905^W<>'' or &unifor('IPRIVATE,FPE,')<>''then else 
+if 'ASP AUNTD':v920 and (a(v910) or v910^a:'p') then 
+   (if p(v463) then '<br>', if &unifor('Av463#2')<>'' then |<b> |v463^w| : </b> | fi, 
+       if p(v463^w) then &uf('+7W903#'&uf('Av903#1')),
+          if l(|I=|v463^w)>0 then 
+              ref(l(|I=|v463^w), 
+                    if &uf('IMAIN,LimPftFull_910,10')='' and val(&uf('+N910')) > 10 OR 
+                       &uf('IMAIN,LimPftFull_910,10')<>''and val(&uf('+N910')) > val(&unifor('IMAIN,LimPftFull_910,10'))
+                    then 
+                       if &uf('O')<>'' then '<br><b>Ёкз-ры: всего: '
+                          f(rsum((if p(v910) then 
+                                     if '2 6 7 4':v910^a or v910^c='' then else 
+                                        if 'C U':v910^a then v910^1|; | else '1; ' fi fi fi)),0,0),' : ',&uf('O')'</b>' fi'<br>'
+                       if &uf('Y')<>'' then '—вободны: '&uf('Y') else'—вободных экз. нет' fi 
+                       if s(v905^d,&unifor('IPRIVATE,FPI,'))<>'' or &uf('Y')<> &uf('O')then '<br>',
+                          '<A HREF="IRBIS:1,,,oex910_H_FULL?&KEY=@',mfn,'">',
+                          '<i><font size="2"> Ёкземпл€ры ѕќƒ–ќЅЌќ в новом окне </font></i>','</A>','<br>',
+                       fi 
+                    else 
+                       Oex910_H_full
+                    fi)
+    fi fi fi)
+else 
+   if &uf('IMAIN,LimPftFull_910,10')='' and val(&uf('+N910')) > 10 OR 
+      &uf('IMAIN,LimPftFull_910,10')<>''and val(&uf('+N910')) > val(&unifor('IMAIN,LimPftFull_910,10'))
+   then 
+      if &uf('O')<>'' then '<br><b>Ёкз-ры: всего: '
+         f(rsum((if p(v910) then 
+                    if '2 6 7 4':v910^a or v910^c='' then else 
+                       if 'C U':v910^a then v910^1|; | else '1; ' fi fi fi)),0,0),' : ',&uf('O')'</b>' fi'<br>'
+      if &uf('Y')<>'' then '—вободны: '&uf('Y') else'<br> —вободных экз. нет' fi 
+      if s(v905^d,&unifor('IPRIVATE,FPI,'))<>'' or &uf('Y')<> &uf('O') then '<br>',
+         '<A HREF="IRBIS:1,,,oex910_H_FULL?&KEY=@',mfn,'">',
+         '<i><font size="2"> Ёкземпл€ры ѕќƒ–ќЅЌќ в новом окне </font></i>','</A>','<br>',
+      fi 
+   else ,Oex910_H_full,
+fi fi 
+fi,

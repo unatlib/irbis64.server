@@ -1,0 +1,20 @@
+&uf('+7W1#'),
+if p(v44) then 
+/* нрйюг
+          
+          else if p(v41) then 
+/* бшонкмеммши
+                         (if v911^A='2' then &uf('+7W1#',v911^B),break,fi),
+                         else if p(v43) then 
+/* апнмэ
+                                        (if v911^A='1' then &uf('+7W1#',v911^B),break,fi),
+
+                                        else 
+/* мебшонкмеммши
+                                        (if v911^A='0' then &uf('+7W1#',v911^B),break,fi),
+                                        
+                              fi 
+                                                                  
+               fi                     
+               if g1='' then 'мепюяоевюрюм' else 'пюяоевюрюм - ',g1*6.2,'.',g1*4.2,'.',g1.4 fi 
+fi

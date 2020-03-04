@@ -1,0 +1,147 @@
+/* отбор
+/* 991^O - форма обучени€
+/* 991^A - факультет
+/* 991^B - кафедра чит
+/* 991^H - кафедра выпуск
+/* 991^F - семестр
+/* 991^C - специальность
+/* g43=1 - учебна€  g43=2 - учебно-методическа€ g43=0 - люба€
+/* G44=0 без новизна
+/* G44=1 за посл годы учебна€ - срок в 991^8
+/* G44=2 за посл годы методич
+/* гриф по наименованию 991^5 = 1; гриф по экземпл€рам 991^5 = 
+/* G45=0 без грифа
+/* G45=1 сгрифом учебна€
+/* G45=2 с грифом  методич
+/* G46 формирую признак - дл€ текущего семестра
+/* G47=1 считаю только электронные учебники
+/* сразу отбрасываю аналоги
+/* аналоги считаю
+/* ≈кземпл€ры форматом KoKmiEkz
+/* g50 - формирую признак Ё” 
+if p(v699) and v699^u:'0'  
+then 
+else 
+&uf('+7W50#',&uf('6KoElectro') ),,,
+/*--------------- в G40 будет признак полугоди€
+if G991^=='' or G991^=='1' then &uf('+7W46#1') else &uf('+7W46#0') fi,,,,,,,,,,,,,,,,
+&uf('+7W40#'),,,
+&uf('+7W40#'
+    if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+    then 'V' 
+    else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or            
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+      then 
+        'O' 
+      fi 
+    fi),
+/*-------------- в G41 будет призна, что есть соответствие заданным услови€м отбора
+&uf('+7W41#'),
+&uf('+7W41#',,,,
+    f(rsum((if p(v691) 
+            then 
+              if  ( &uf('AG991^X#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG991^X#1'))) then 
+              if  ( val(&uf('AG991^>#1'))=0 or &uf('+97',&uf('Ag991^>#1'))=&uf('+97',v691^5) ) then 
+              if  ( &uf('AG991^A#1')='' or s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!') ) then 
+              if  ( &uf('AG991^O#1')='' or s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') ) then 
+              if  ( &uf('AG991^V#1')='' or s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!') ) then 
+              if  ( &uf('AG991^B#1')='' or s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!') ) then 
+              if  ( &uf('AG991^C#1')='' or s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!') ) then 
+              if  ( &uf('AG991^N#1')='' or s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!') ) then 
+              if  ( &uf('AG991^S#1')='' or s('!',&uf('Ag991^S#1'),'!'): s('!',v691^S,'!') ) then 
+              if  ( &uf('AG991^F#1')='' or s('!',&uf('Ag991^F#1'),'!'): s('!',v691^F,'!') )
+              then 
+/* проверка текущего семестра
+                 if &uf('Ag40#1')='O' and s(',0,1,3,5,7,9,11,13,'): s(|,|v691^F|,|) or 
+                    &uf('Ag40#1')='V' and s(',2,4,6,8,10,12,14,'):  s(|,|v691^F|,|) or
+                    v691^F=''  or 
+                    val(&uf('AG46#1'))=0 
+                 then  
+                    if  (    &uf('AG991^g#1')=''  or 
+                             &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g:'осн' or  
+                             &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g='' or  
+                             &uf('AG991^g#1')<>'' and &uf('AG991^g#1'): v691^g   
+                        ) 
+                    then '1;'else'0;' 
+                    fi 
+                 fi 
+              fi fi fi fi fi fi fi fi fi fi  
+            fi)),0,0)),
+/*--------------- вычисл€етс€ кол-во
+if val(g41)>0  
+then 
+  if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'
+  then 
+/* --------------------------------------------------------методической 
+    if val(G43)=2 or val(G43)=0 
+    then 
+      if val(G47)=1 
+      then 
+/* только электронные учебники
+         if val(&uf('6KoElectro'))>0 
+         then 
+/* это электронный учебник
+           ,'1 ',,,
+         fi,,
+      else 
+/* условие есть экземпл€ры???
+          if &unifor('6KoKmiEkz')<>'' or val(&uf('Ag50#1'))=1 
+          then 
+           (if p(v693) 
+            then 
+              if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+              then 
+                  if val(g991^=)=1 
+                  then 
+                      if v693^P<>'' then v693^P break else 
+                      if v693^N<>''  then v693^N,,break else 
+                      if v693^F<>'' then v693^F,,break fi fi fi,,
+                  else 
+                      if v693^S<>''  then v693^S break else if v693^P<>'' then v693^P break else 
+                      if v693^N<>''  then v693^N,,break else 
+                      if v693^F<>'' then v693^F,,break fi fi fi fi,,   
+                  fi,, 
+              fi,,
+            fi/) 
+          fi  
+      fi,,
+    fi,,,,
+  else 
+/*------------------------------------------ учебна€
+    if val(G43)=1 or val(G43)=0 
+    then 
+      if val(G47)=1 
+      then 
+        if val(&uf('6KoElectro'))>0 
+        then 
+/* это электронный учебник
+          ,'1 ',,,
+        fi,,
+      else    
+/* условие не аналог - убрала
+/* условие есть экземпл€ры???
+          if &unifor('6KoKmiEkz')<>'' or val(&uf('Ag50#1'))=1 
+          then 
+           (if p(v693) 
+            then 
+              if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+              then 
+                  if val(g991^=)=1 
+                  then 
+                      if v693^P<>'' then v693^P break else 
+                      if v693^N<>''  then v693^N,,break else 
+                      if v693^F<>'' then v693^F,,break fi fi fi,,
+                  else 
+                      if v693^S<>''  then v693^S break else if v693^P<>'' then v693^P break else 
+                      if v693^N<>''  then v693^N,,break else 
+                      if v693^F<>'' then v693^F,,break fi fi fi fi,,   
+                  fi,, 
+                fi,,
+            fi/) 
+          fi  
+      fi,,
+    fi,,
+  fi,,
+fi fi/

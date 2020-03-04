@@ -1,0 +1,3 @@
+if p(v903) then if (l("I="v903))<=0 or val(ref(l("I="v903),mf
+n))=val(mfn) then '0'else '1 Ошибка: Дублетный Шифр 'v903,fi else if v920:'OJK't
+hen'1 Ошибка: Отсутствует Шифр 'fi fi

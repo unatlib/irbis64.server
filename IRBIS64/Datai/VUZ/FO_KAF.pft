@@ -1,0 +1,49 @@
+/* таблица кафедра - дисциплины
+/* G1100 - факультет
+/* G1101 - формат обучения
+'<table bgcolor="#FFFFFF" border=1 width="100%" cellpadding=1 cellspacing=1>',
+'<tr>',
+'<td width="30%" align="center"> ',
+'<b>Кафедра</b>',
+'</td>',
+'<td align="center"> ',
+'<b>Дисциплины</b>',
+'</td>',
+'<td>',
+   '<table frame="void" >',
+   '<td>','&nbsp;',
+   '</td>',   
+   '</table>',
+'</td>',
+'</tr>',
+(
+if p(v5) then  
+'<tr>',
+'<td width="30%" >',
+'<b>',
+,if val(&uf('JVUZ,DISCKH=',,,v5))>0 then &uf('KKAFCH.mnu|',v5),| (|v5|)| fi,,
+'</b>',
+'</td>',
+'<td>',
+if val(&uf('JVUZ,DISCKH=',,,v5))>0 then  
+if &uf('7VUZ,!','DISCKH=',,,v5,,,'!,@KafDiscChk'): '1' then  
+if &uf('7VUZ,!','DISCKH=',,,v5,,,'!,@KafDisc')<>'' then 
+&uf('7VUZ,!','DISCKH=',,,v5,,,,'!,@KafDisc'), else '&nbsp;' fi else '&nbsp;' fi fi
+'</td>',
+'<td>',
+   '<table frame="void" >',
+   '<tr>', 
+   '<td>',
+if val(&uf('JVUZ,DISCKH=',,,v5))>0 then  
+if &uf('7VUZ,!','DISCKH=',,,v5,,,'!,@KafDiscChk'): '1' then  
+if &uf('7VUZ,!','DISCKH=',,,v5,,,'!,@KafDiscRdr')<>'' then ,
+&uf('7VUZ,!','DISCKH=',,,v5,,,,'!,@KafDiscRDR'), else '&nbsp;' fi else '&nbsp;'  fi fi,
+   '</td>',   
+   '</td>',
+   '</table>',
+'</td>',
+'</tr>',
+fi/
+)
+'</table>',
+

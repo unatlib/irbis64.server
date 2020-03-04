@@ -1,0 +1,61 @@
+6
+N
+Краткое описание книги на руках
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^C fi fi/)
+1
+___________Шифр____________
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^A fi fi/)
+2
+Инвент.ном.
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^B fi fi/)
+3
+Штрих-код
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^H fi fi/)
+F
+Дата выдачи
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^D fi fi/)
+A
+Дата предп.возврата
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^F: '*' then v40^E fi fi/)

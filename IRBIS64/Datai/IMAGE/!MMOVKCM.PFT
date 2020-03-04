@@ -1,0 +1,12 @@
+mhl,
+(if '***'='710'and v920:'PVK'or'***'='972'or'***'='601'or'***'='981'or'***'='962' 
+ then '^A'v***^a,'^B'v***^b,'^7'v***^7,'^S^R^N^C' else 
+    if '***'='710' or '***'='711' then 
+       '^A'v***^a,'^B'v***^b,'^7'v***^7,'^S'v***^s,'^R'v***^r,'^N'v***^n,'^C'v***^c 
+    else
+       if '***'='7101'then'^A'v710^b '^B^7^S^R^N^C' else 
+          if '***'='7111'then'^A' v711^b '^B^7^S^R^N^C'else 
+             if '***'='9621'then'^A'v962^b '^B^7^S^R^N^C' 
+             else '^A'v***^b,'^B^7'v***^7,'^S^R^N^C' 
+ fi fi fi fi fi/),
+mpl,

@@ -1,0 +1,5 @@
+if p(v911) then '"NKSUK=',v911,'"' fi
+if p(v99)and p(v911) then ' * ' fi,
+if p(v99) then '"VD=',v99,'"' fi
+if p(v33) and ( p(v911) or p(v99)) then ' * ' fi,
+if p(v33) then '"PP=',v33,'"' fi

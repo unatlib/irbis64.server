@@ -1,0 +1,13 @@
+[ROWQRY]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,(if G1003<>'' then,&uf('+7W1005#',G1003),,,&uf('6KoStatCycleSch'),fi/)
+[FLDMODE1001]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,(if G1003<>'' then,&uf('+7W1005#',G1003),,,&uf('6KoStatCycleMode'),fi/)
+[FLDTEXT]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,(if G1003<>'' then,&uf('+7W1005#',G1003),,,&uf('6KoStatCycleMode'),fi/)
+[FLDSUM]
+&uf('+7W1006#0'),,,&uf('6KoStatCycleBook')
+&uf('+7W1006#1'),,,&uf('6KoStatCycleBook')
+&uf('+7W1006#2'),,,&uf('6KoStatCycleBook')
+&uf('+7W1006#0'),,,&uf('6KOStatCycleEkz')
+&uf('+7W1006#1'),,,&uf('6KOStatCycleEkz')
+&uf('+7W1006#2'),,,&uf('6KOStatCycleEkz')

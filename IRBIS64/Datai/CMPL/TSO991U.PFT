@@ -1,0 +1,14 @@
+f
+(rsum(
+(if p(v910)then 
+    if '2 6':v910^a then else 
+       if v910^u=&unifor('Av991#1') then 
+          if a(v910^e)then v910^1|;|,|1;|n910^1 
+ fi fi fi fi,' 0')) * val(&unifor('Av10^d#1'),'; 0') + 
+rsum(
+(if p(v910)then 
+    if '2 6':v910^a then else 
+       if v910^u=&unifor('Av991#1') then 
+          if p(v910^e)then f(val(v910^1|;|,|1;|n910^1) * val(v910^e),0,2) 
+          else'0'
+ fi fi fi fi,' 0')),0,2),

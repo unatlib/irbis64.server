@@ -1,0 +1,18 @@
+6
+
+Старый УДК(1)
+
+Новый УДК (1)
+
+Старый УДК(2)
+
+Новый УДК (2)
+
+Старый УДК(3)
+
+Новый УДК (3)
+REP
+675
+F
+(if p(v675) then if v675='%1' then '%2',if '%2'='' then # fi else if v675='%3' then '%4',if '%4'='' then # fi else if v675='%5' then '%6',if '%6'='' then # fi else v675 fi fi fi fi/)
+

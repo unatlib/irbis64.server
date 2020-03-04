@@ -1,0 +1,101 @@
+10
+A
+Автор, заглавие
+0
+0
+0
+
+
+
+
+v461^x| |,v461^c,if p(v461) then"; "v200^v,if p(v200^v) then": "d200^a fi else ,v700^a," "v700^b," "d700,v200^a,"; "v200^v fi,(if p(v225)then'. -('v225^a, if p(v225^a)then"; "v225^v fi')'fi),if p(v215^a) then". -"v215^a,| |d215^1,&unifor('G2='v215^1), if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi,
+B
+Год издания
+0
+0
+0
+
+
+
+
+v210^D+|, |
+C
+ISBN
+0
+0
+0
+
+
+
+
+v10^A+|, |
+I
+Цена
+0
+0
+0
+
+
+
+
+&uf('Av10^D#1')
+D
+Ссылка на ЭР
+0
+0
+0
+
+
+
+
+if p(v955^A) then &uf('Av955^A#1') else &uf('Av951^I#1') fi
+E
+Кол-во экз-ов
+0
+0
+0
+
+
+
+
+f(rsum((if p(v910) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi )),0,0)
+F
+На сумму
+0
+0
+0
+
+
+
+
+,,f(rsum((if p(v910) then if '2 6 7':v910^a then else f(val(v910^e,if v910^e='' then &uf('Av10^d#1') fi) * val(v910^1,|1;|n910^1),0,2),,','  fi fi )),0,2)
+G
+Экз-в на Руках
+0
+0
+0
+
+
+
+
+,,f(rsum((if p(v910) then if v910^a='1' then '1,' else v910^2|,|, fi fi)),0,0)
+Z
+Заказано экз-ов
+0
+0
+0
+
+
+
+
+(if p(v62) then |Заказ |v62^B| - |,v62^D  fi/),,
+P
+Получено экз-ов
+0
+0
+0
+
+
+
+
+&uf('+7W12#'),&uf('+7W13#'),,,,&uf('+7W15#'),,&uf('+7W16#'),,&uf('+7W10#',(|^B|v62^b,,|^D|v62^D,,,,,,,|^U|v62^U/)),(if p(g10) then &uf('+7W9#',g10),,g10^B| - |,,&uf('6TabZakCost'),,&uf('Ag15#1')  /fi),,,,,

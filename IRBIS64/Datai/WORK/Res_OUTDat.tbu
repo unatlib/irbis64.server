@@ -1,0 +1,46 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\pard \widctlpar\intbl {\qc \fs20 Сроки отчетного периода
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4360 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во БД (пакетов)
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5777 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во док-ов
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7700 
+\pard \widctlpar\intbl {\qc \fs20 Стоимость
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9700 
+\pard \widctlpar\intbl {\qc \fs20 Примечание
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

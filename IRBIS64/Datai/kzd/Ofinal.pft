@@ -1,0 +1,6 @@
+if p(v951) then'\par —м. ссылк', 
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у: 'fi, 
+   (if p(v951) then |,  |+d951, 
+       if p(v951^a) then ' ',v951^a,| ‘ј…Ћ|n951^t, " ("v951^t")" fi, 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi) 
+fi 

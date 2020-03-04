@@ -1,0 +1,67 @@
+'</>','<title> —хема систематизации описи 'v852^a' 'v903'</title>'
+'<script language="JavaScript">'/
+'	function DropDown(it)'/
+'	{'/
+'		el1 = document.getElementById(it);'/
+'		if(el1.style.display=="none") '/
+'		{'/
+'			el1.style.display="block";'/
+'		}'/
+'		else'/
+'		{'/
+'			el1.style.display="none";'/
+'		}'/
+'	}'/
+'	function loadClose()'/
+'	{'/
+'		document.all.el1.style.display="none";'/
+'	}'/
+' </script>  ',
+/*'G3 - собранные через + ссылки вверх 327^R <br>'
+
+&uf('+7W10#'),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('+7W15#'),&uf('+7W16#'),
+&uf('+7W110#'),&uf('+7W111#'),&uf('+7W112#'),&uf('+7W113#'),&uf('+7W114#'),&uf('+7W115#'),&uf('+7W116#'),
+mpu,"<b>"v903"</b><br>",mpl,
+/*'</td></tr>'
+if p(v327) then 
+   '<table width="100%"><tr><td>'
+   '<td valign="Top" align="center">' 
+      mhu'<b> —хема систематизации описи </b><br><br>',mpl,
+   '</td></tr></table>',
+&uf('+7W3#'),&uf('+7W50#'),&uf('+7W10#'),
+&uf('+7W327#'(v327^r/)),&uf('+7G327'),&uf('+7W3#'"+"g327|+|),
+/*'<br>'(|g3:|g3'<br>'),'???'
+   &uf('+7W50#'(v327/)),
+   '<table width="100%">''<table cellpadding="0" cellspacing="0">',
+   '<td valign="Top" align="left">' 
+   (if p(g50) then  
+       if g50^L:'.' then 
+       else 
+       '<tr><td>',
+          if &uf('Ag3#1'):s('+'g50^L'+') 
+          then 
+&uf('+7W10#'),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('+7W15#'),&uf('+7W16#'),
+&uf('+7W110#'),&uf('+7W111#'),&uf('+7W112#'),&uf('+7W113#'),&uf('+7W114#'),&uf('+7W115#'),&uf('+7W116#'),
+
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|g50^L|');" target="_top">|,g50^L|.|,| |g50^m,'</a></div>'| (|g50^N| ед. хр.)| 
+          else g50^L|.|,| |g50^m,| (|g50^N| ед. хр.)&nbsp &nbsp|,
+          fi
+          if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIsso='&uf('Av903#1')'_'g50^L))>0 
+          then &uf('+7W53#'f(val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIsso='&uf('Av903#1')'_'g50^L)),0,0)),'&nbsp'
+             '<A HREF="IRBIS:2,,'&uf('IPRIVATE,EKP,GUAR')',briefK_wn,IIsso='&uf('+3E'&uf('Av903#1'))'_'g50^L
+             '?TOPPFTNAME=BOTTOM_gua_sso_WN&BOTTOMPFTNAME=BOTTOM_gua_sso_WN">',
+                if &uf('7,?IIsso='&uf('Av903#1'),|_|g50^L|?,v903|)<>'' then  ' (введено в Ё : ',&uf('Ag53#1'),' ед. хр.)'
+                   &uf('7,?IIsso='&uf('Av903#1'),|_|g50^L|?,&nbsp|) fi,
+             '</A>','</td>'
+          else '  (в Ё  не введено) &nbsp','</td>',
+          fi 
+       '</td></tr>'
+       '<tr><td>'
+'<div id="',g50^L'" style="display:none">',
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|g50^L|');" target="_top">|,'</a></div>',
+          if &uf('Ag3#1'):s('+'g50^L'+') then &uf('+7W10#'),&uf('+7W10#'g50^L),&uf('6div10_sso') fi,
+       '</td></tr>' 
+   fi fi) 
+'</table>'  
+fi,
+/*&uf('+7W50#'),

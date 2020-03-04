@@ -1,0 +1,10 @@
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F1^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F2^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F3^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F4^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F5^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F6^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F7^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F8^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F9^I',G1003 fi/
+if val(&uf('J,IDD=',G1003))>0 then &uf('Ag666#1'),'^F10^I',G1003 fi/

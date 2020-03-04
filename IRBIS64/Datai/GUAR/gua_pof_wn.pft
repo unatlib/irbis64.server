@@ -1,0 +1,11 @@
+'</>''<title>Просмотр описания фонда 'v852^a' 'v903 '</title>'
+if v331<>'' then 
+   "<b>"v903"</b><br>",v200^a,mpu,
+   '<br><dd><b>Описание <b>',if v920:'fond' then 'фонда ' else if v920:'opis' then 'описи ' fi fi'<b><dd>'mpl,
+   '<table width="90%" bgcolor="#ffffcc">'
+   (if p(v331) then mhl,
+       '<tr>','<td> <valign=top> <font size=-0>',
+        '<b>'v331'</b></td></tr>','<tr><td>-------','</td></tr>',mpl,
+    fi) 
+   '</table>',
+fi,

@@ -1,0 +1,19 @@
+if s(v606v607)<>''then '<b>Рубрики: </b>'fi,
+(if p(v606)then '<A HREF="',ssinternet_rub,&unifor('+3E',v606^a,| - |v606^b,| - |v606^c,| - |v606^d,| - |v606^g,| - |v606^e,| - |v606^o,|, |v606^h),'">',|<br><dd>|+v606^a,|--|v606^b,|--|v606^c,|--|v606^d,|--|v606^g,|--|v606^e,
+|--|v606^o,|, |v606^h,|--|v606^9, '</a>', fi),
+mpl,
+   if p(v996)then '<br>MeSH-главная: 'fi,
+   (if p(v996)then '<br>   ',&uf('DMESH,!R=',v996^K,'!,v2,| -- |v1'),if v996^m<>'' then ' (',&uf('+7W1#',v996^m),&uf('6meshmod'),')' fi,fi),
+   if p(v995)then '<br>MeSH-неглавная: 'fi,
+   (if p(v995)then '<br>   ',&uf('DMESH,!R=',v995^K,'!,v2,| -- |v1'),if v995^m<>'' then ' (',&uf('+7W1#',v995^m),&uf('6meshmod'),')' fi,fi),,
+mhl,
+if p(v607) then "<br><dd>"d606 fi,
+(if p(v607)then '<A HREF="',ssinternet_rub,&unifor('+3E',v607^a,|--|v607^b,|--|v607^c,|--|v607^d,|--|v607^g,|--|v607^e,|--|v607^o,|, |v607^h),'">',|<br><dd> |+v607^a,|--|v607^b,|--|v607^c,|--|v607^d,|--|v607^g,|--|v607^e,
+| -- |v607^o, |, |v607^h,| -- |v607^9 ,'</a>', fi),
+if s(v905^f,&unifor('IPRIVATE,FPK,')):'1' or &unifor('Korg.mnu|2'):'ГПНТБ России' then else
+   if s(v910^a):'U' and s(v330^5,v330^6,v330^7,v922^5,v922^6,v922^7):'; ' then else 
+      "<br><b>Кл.слова (ненормированные): </b>"d610,mhl,
+      if s(v905^f,&unifor('IPRIVATE,FPK,')):'2'then '<A HREF="',ssinternet_kls,&unifor('+3E',v610),'">',v610+| -- |,'</a>' else  '<A HREF="',ssinternet_kls,&unifor('+3E',v610),'">',&unifor('Q'v610+| -- |),'</a>',  
+fi fi fi,
+if s(v905^f,&unifor('IPRIVATE,FPK,')):'1'then else"<br><b>Дескрипторы: </b>"v965+| -- | fi,
+if s(v905^h)<>''or &unifor('IPRIVATE,FPA,')<>''then else ("<br><b>Аннотация: </b>"|<br> |+v331) fi,

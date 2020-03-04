@@ -1,0 +1,70 @@
+/*FREEPAR0 v1100 - формат показа в основной форме
+/*FREEPAR3 v1103 - порция в основной форме
+/*FREEPAR10 v1110 - login пользователя
+/*FREEPAR7 v1107 - поисковый запрос
+/*FREEPAR2 v1102 - кол-во найденных
+
+/* v1004 - mfn отмеченных
+/* v1000 имя БД
+/* v1004^A  отмеченные MFN
+/*'v1102=',v1102,
+/*'v1107=',v1107,
+
+'<BODY bgColor=#ffffcc>',
+
+'<title>Печать выходных форм</title>',
+
+'<br><A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A><br>',
+
+'<b><font size="+1"><center>Печать выходных форм</b><br></center></font>',
+/*"База данных: "v1000,
+/*"<br>Результат поиска - "d1101,if v1102<>'' then  v1102 else v1101 fi,
+"<br>Всего документов: "v1102,
+&uf('+7W1#',&uf('+N1004')),
+"<br>Отмеченных: "g1,
+
+'<form name="MAIN" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<table border="0" >',
+'<tr>',
+'<td style="width: 150px; ">Название формы:</td>',
+'<td >         ',
+'<select name="FORMNAME" style="width: 500px; ">',
+(if &uf('+5TSK_exitform.mnu')<>'' then '<option value="',&uf('+5TSK_exitform.mnu'),'" ','>',&uf('+5TSK_exitform.mnu'),' - ',&uf('+5FSK_exitform.mnu'),'</option>' fi),
+'</select>',
+' </td>',
+' </tr>',
+'<tr>',
+'<td>Исходные док-ты:</td>',
+'<td >         ',
+'<select name="FORMMODE" style="width: 500px; ">',
+/*if v1104='1' then 
+/*'            <option value="1" ','>Отмеченные   </option>',
+/*             else 
+'            <option value="0" ','>Все   </option>',
+      if g1<>'0' then 
+'            <option value="1" ','>Отмеченные   </option>',
+'            <option value="2" ','>Кроме отмеченных   </option>',
+      fi,
+/*fi,
+'</select>',
+' </td>',
+' </tr>',
+'<tr>',
+'<td>',
+'<input type="submit" class="sub1" name="nnnn" value="Выполнить">',
+'</td>',
+'<td><br>',
+'</td>',
+
+'</tr>',
+'<tr>',
+'<td colspan="2"><hr></td>',
+'</tr>',
+'</table>',
+'<input type="hidden" name="C21COM" value="13">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="S21ALL" value=',"'"v1107"'>",
+'<input type="hidden" name="FORMTYPE" value="1">',
+'</form>',
+
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=SK_search&FREEPAR3=',v1103,'&I21DBN=SK&FREEPAR0=',v1100,'&FREEPAR10=',&uf('+3E',v1110),'">Вернуться к основной поисковой форме</A>',

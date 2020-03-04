@@ -1,0 +1,9 @@
+   if p(v699) then 
+      &uf('+7W699#'(v699^w/)),
+      &uf('DRDR,?RI='g1002|?,(if p(v40) then if v40^f:'*' then &uf('+7W40#'v40^a/) fi fi/)|),
+      &uf('+7M40#699'),
+      if g40<>'' then '<br><b>На руках АНАЛОГ ЗАКАЗЫВАЕМОЙ КНИГИ: </b>'/,&uf('D,?I='g40|?,&uf('6brief')|)'<br>'fi
+   fi,
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<dd><b> Издание в обработке. Не выдается</b><br>'fi fi
+

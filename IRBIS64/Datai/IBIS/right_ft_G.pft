@@ -1,0 +1,42 @@
+/* ОТЛАДКА
+/*&uf('+7W30#111'),  /* ИДЕНТИФИКАТОР ЧИТАТЕЛЯ
+/*&uf('+7W31#192.168.0.1'),  /*IP-адрес   
+/*****
+if v955^B='' 
+    then '2',
+    else &uf('DRIGHT,!I=',v955^B,'!,@RIGHT0'),
+
+/* в g2 - поле v2 записи из БД RIGHT
+/* в g3 - повторнеия поля v3 записи из БД RIGHT
+/* g30 - идентификатор читателя
+/* g31 - IP-адрес клиента
+/* g32 - доменное имя клиента
+    &uf('+7W4#',if g2^d='' then '00000101' else g2^d fi),
+    &uf('+7W5#',if g2^e='' then '99990101' else g2^e fi),
+/* в g4 g5 - общие даты от и до
+    if g3=''
+        then if (&uf('3')>=g4) and (&uf('3')<=g5) then '2' else '0' fi,
+        else &uf('+7W51#'),&uf('+7W52#'),&uf('+7W53#'),&uf('+7W54#'),&uf('+7W55#'),&uf('+7W56#'),&uf('+7W57#'),
+                           (if g3<>'' then 
+                                     if (g3^d='') and (g3^e='') then &uf('+7W6#',&uf('Ag4#1')),&uf('+7W7#',&uf('Ag5#1')) else &uf('+7W6#',if g3^d='' then '00000101' else g3^d fi) ,&uf('+7W7#',if g3^e='' then '99990101' else g3^e fi) fi 
+                                     if g3^a='01' then &uf('+7W1#',g3^b),if &uf('DRDR,!RI=',&uf('Ag30#1'),'!,@RIGHT_RID')='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U51#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U51#0') fi fi fi, 
+                                     if g3^a='02' then &uf('+7W1#',g3^b),if &uf('DRDR,!RI=',&uf('Ag30#1'),'!,@RIGHT_RKAT')='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U52#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U52#0') fi fi fi, 
+
+                                     if g3^a='05' then &uf('+7W1#',g3^b),if &uf('DRDR,!RI=',&uf('Ag30#1'),'!,@RIGHT_RFAK')='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U55#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U55#0') fi fi fi, 
+                                     if g3^a='06' then &uf('+7W1#',g3^b),if &uf('DRDR,!RI=',&uf('Ag30#1'),'!,@RIGHT_RSEM')='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U56#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U56#0') fi fi fi, 
+                                     if g3^a='07' then &uf('+7W1#',g3^b),if &uf('DRDR,!RI=',&uf('Ag30#1'),'!,@RIGHT_RSPC')='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U57#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U57#0') fi fi fi, 
+                                     if g3^a='03' then if &uf(':',g3^b,'#',&uf('Ag31#1'))='1' then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U53#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U53#0') fi fi fi, 
+                                     if g3^a='04' then if g3^b=&uf('Ag32#1') then if (&uf('3')>=&uf('Ag6#1')) and (&uf('3')<=&uf('Ag7#1')) then &uf('+7U54#',g3^C,|#|g3^F,if g3^G<>'' then '%' fi) else &uf('+7U54#0') fi fi fi, 
+
+                            fi),,&uf('+7W10#'),&uf('+7U10#',&uf('6right3_ft_G#51')),,
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#52')),
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#53')),
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#54')),
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#55')),
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#56')),
+                                              ,&uf('+7U10#',&uf('6right3_ft_G#57')),
+                                              /*(g10/)'****'//* ОТЛАДКА
+                                              &uf('+7W10#',&uf('6right4_ft_G#10')),
+                                              &uf('6right2_ft_G'),
+    fi     
+fi

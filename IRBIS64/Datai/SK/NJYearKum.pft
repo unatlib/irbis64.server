@@ -1,0 +1,31 @@
+/* отбор номеров журналов для формирования поля 909 для последующей кумуляции
+/* учет записей NJ-SPEC
+if v920: 'NJ' or s(v936,v934)<>''
+then 
+  (if p(v910) 
+   then 
+     if s('0 3 4 5 p 8'): v910^A  
+     then 
+       '^A',,&uf('Av933#1'),
+       '^Q',,&uf('Av934#1'),
+       '^F',,&uf('Av935#1'),
+       |^D|v910^D,|^K|v910^B,
+       '^H',,&uf('Av936#1'),
+     fi, 
+   fi/),
+else 
+   if  v920: 'SPEC' and  s(v936,v934)=''
+   then  &uf('+7W6#'if &uf('G2#'v200^v):' 'then &UF('G2 '&uf('G2 'v200^v))else &uf('G2 'v200^v) fi),&uf('+7W7#'if &uf('G2#'v200^v):' 'then &UF('G0 '&uf('G1#'v200^v))fi),
+     (if p(v910) 
+      then  if s('0 3 4 5 p 8'): v910^A  
+        then 
+       
+          '^A',,&uf('Av933#1'),
+          '^Q',,&uf('Av210^D#1'),
+         '^F',,&uf('Ag7#1') ,
+          |^D|v910^D,|^K|v910^B,
+          '^H',,&uf('Ag6#1'),
+       fi, 
+      fi/),
+   fi,
+fi,

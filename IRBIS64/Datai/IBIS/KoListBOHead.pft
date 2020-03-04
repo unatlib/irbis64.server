@@ -1,0 +1,122 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^Y<>'' 
+then 
+/*-------------------------------запись
+/*--------если задано по рабочей программе + отбор по дисциплине или заголовок по дисц.- фильтрую по подполю 5
+/*   в v1^7 имя отобранной дисциплины
+/*   в v1^3 ИД дисциплины-заголовка
+  &uf('+7W11#'),,&uf('+7W12#',&uf('Av1^>#1'),,),,
+  if val(&uf('Av1^>#1'))=1 and &uf('Av1^3#1')<>'' or 
+     &uf('Av1^>#1')<>'' and &uf('Av1^>#1')<>'0' and &uf('Av1^3#1')<>'' or 
+     val(&uf('Av1^>#1'))=1 and &uf('Av1^7#1')<>'' or 
+     &uf('Av1^>#1')<>'' and &uf('Av1^>#1')<>'0' and &uf('Av1^7#1')<>'' 
+  then 
+/*----G1010 - признак, что по РП, в 691^5 можно задать ФИО
+      &uf('+7W1010#1'),,,,,,,,,, 
+      if v1^7<>'' 
+      then 
+/*--     в g10 кладу ИД дисциплины, которая в отборе
+         &uf('+7W10#',,v1^7),,,,
+      else 
+/*--     в g10 кладу ИД дисциплины-заголовка
+/*--     в ^H: гриф@дисц10|ИД
+        &uf('+7W10#',&uf('G2@',v1^H) ),,,,,
+        &uf('+7W10#',,&uf('G2|',g10) ),,,,
+      fi,,,,,
+/*---- в g11 фильтр по РП
+    ref(val(v1^Y),,,,,,,,,
+        (if p(v691) then if &uf('+97',v691^I)=&uf('+97',&uf('Ag10#1')) and &uf('+97',v691^5)=&uf('+97',&uf('Ag12#1')) then &uf('+7W11#1') break fi fi),,,
+       ),,, 
+  else &uf('+7W11#1'),, 
+  fi,,,,,,,,,,
+/*отладка  'v1^3=',v1^3,,,,' v1^7=',v1^7,,,,,,' g10=',g10,,,' g11=',g11,,,' g12=',g12,,,
+  if val(g11)=1 
+  then 
+/*----запись беру  
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx400 
+\pard \widctlpar\intbl {\qc \fs20 ',,&uf('S1A'),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10000 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+if v1^X<>'' then ref(val(v1^Y),&uf('6brief') )  fi,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+ fi,,,,,,,,,,,,,,,,,,,,,,,,
+else 
+/*------------------------------------------заголовки-------------- 
+  &uf('S0'),,,,,
+  '\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clcbpat16
+\cellx10000 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+  if v1^H<>' ' and v1^H<>''
+  then 
+    ,'\cf27 ',,,'              Дисциплина: ',,,
+/* сначала дисциплину ищу по справочнику, потом по VUZ, потом ИД
+        &uf('+7W3#',,,&uf('G2@',v1^H) )
+        if &uf('KDisc.mnu!',&uf('G2|',g3) )<>'' then &uf('KDisc.mnu!',&uf('G2|',g3) ) else 
+        if &uf('DVUZ,?IDD=',,&uf('G2|',g3),,'?,v3^A')<>'' then &uf('DVUZ,?IDD=',,&uf('G2|',g3),,'?,v3^A') else &uf('G2|',g3) fi fi
+        ,,'\cf ',,'\par ' 
+  else 
+    if v1^I<>'' and v1^I<>' ' 
+    then 
+      '\cf27 ',
+      if v1^I: 'M' then ' Учебно-Методическая' else ' Учебная' fi,,,
+    else 
+      if v1^J<>'' and v1^J<>' ' 
+      then 
+        ,'\cf27 ',,,'            Тип: ',v1^J*1,,'\cf ',,'\par ' 
+      else 
+        if v1^G<>'' and v1^G<>' ' 
+        then 
+          ,'\cf27 ',,,'          Цикл: ',
+          if &uf('Kcicld.mnu!',v1^G)<>'' then &uf('Kcicld.mnu!',v1^G) else v1^G fi,,
+          if v1^R<>'' then ' (степень новизны - ',if val(v1^R)=0 then if &uf('KCycleNew.mnu!',v1^R)<>'' then &uf('KCycleNew.mnu!',v1^R) else v1^R fi else v1^R fi,,')' fi,,,,,
+          '\cf ',,'\par ' 
+          else 
+            if v1^F<>'' and v1^F<>' ' 
+            then 
+              ,'\cf27 ',,,'        Специальность: ',
+              if &uf('KSpec.mnu!',v1^F)<>'' then &uf('KSpec.mnu!',v1^F)  ' (',v1^F,')'  else v1^F fi,,'\cf ',,'\par ' 
+            else 
+              if v1^E<>'' and v1^E<>' ' 
+              then 
+                ,'\cf27 ',,,'        Направление: ',
+                if &uf('KNapr.mnu!',v1^E)<>'' then &uf('KNapr.mnu!',v1^E)  ' (',v1^E,')'  else v1^E fi,,'\cf ',,'\par ' 
+              else 
+                if v1^D<>'' and v1^D<>' ' 
+                then 
+                  ,'\cf27 ',,,'      Кафедра: ',
+                  if &uf('KKafch.mnu!',v1^D)<>'' then &uf('Kkafch.mnu!',v1^D) else v1^D fi,,'\cf ',,'\par ' 
+                else 
+                  if v1^C<>'' and v1^C<>' ' 
+                  then 
+                    ,'\cf27 ',,'    Факультет: ',
+                    if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else v1^C fi,,'\cf ',,'\par ' 
+                  else 
+                    if v1^B<>'' and v1^B<>' ' 
+                    then 
+                      ,'\cf27 ',,,,'  Вид обучения: ',
+                      if &uf('Kvo.mnu|',v1^B)<>'' then &uf('Kvo.mnu|',v1^B) else v1^B fi,,'\cf ',,'\par ' 
+                      else 
+                        if v1^A<>'' and v1^A<>' ' 
+                        then 
+                          ,'\cf27 ','Форма обучения: ',
+                          if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else v1^A fi,,'\cf ',,'\par ' 
+fi fi fi fi fi fi fi fi fi fi,,,,,,,,,
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}'

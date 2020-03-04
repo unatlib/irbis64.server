@@ -1,0 +1,4 @@
+&unifor('MI910^D'),&unifor('S0'),&unifor('Av910^d#1'),
+(if v910^a='6'then else if p(v910^d) then 
+    if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then else /v910^d fi,
+ | - |v910^b,|(|v910^1|)| fi fi)

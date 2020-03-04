@@ -1,0 +1,196 @@
+0
+//12 PUTLOG
+// удаление контингента по словарю !
+// имя задания через ini
+// выполняется на записи VUZ
+// используется в основной и УП
+//в 991 связка
+PUTLOG
+mdl,'Удаление контингента ',v991
+// из записи VUZ беру идентификаторы дисциплин
+// и поля - аналог поля 83 
+ADD
+111
+
+(v69/)
+
+ADD
+1068
+
+"^N"v68^N,"^C"v68^C,"^A"v68^A,"^V"v68^V,"^O"v68^O,"^F"v68^F
+
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Удалена запись контингента (VUZ). MFN=',f(val(mfn),0,0)
+// цикл по повторениям поля 69
+REPEAT
+// в v111^D - идентификатор дисциплины
+CORREC
+'VUZ'
+mpu,'^W',&unifor('Av111^W#1'),&unifor('Av1068#1')
+'IDD=',&unifor('Av111^D#1')
+
+// запись DISC
+DEL
+183
+*
+
+
+ADD
+183
+
+(v83/)
+
+// Удаление семестра из 83^f
+CHA
+1001^F
+1
+'10'
+'A'
+CHA
+1001^F
+1
+'11'
+'B'
+CHA
+1001^F
+1
+'12'
+'C'
+CHA
+83^F
+*
+'10'
+'A'
+CHA
+83^F
+*
+'11'
+'B'
+CHA
+83^F
+*
+'12'
+'C'
+CHA
+83^F
+F
+(if p(v83) then if ( (&unifor('Av1001^w#1')<>''and &uf('+97',v83^w)=&unifor('Av1001^w#1') and &unifor('Av1001^u#1')='') or (&unifor('Av1001^u#1')<>''and v83^u=&unifor('Av1001^u#1') and &unifor('Av1001^w#1')<>''and &uf('+97',v83^w)=&unifor('Av1001^w#1'))) and (&unifor('Av1001^A#1')<>''and &uf('+97',v83^A)=&unifor('Av1001^A#1') or &unifor('Av1001^A#1')='') and (&unifor('Av1001^n#1')<>''and &uf('+97',v83^n)=&unifor('Av1001^n#1') or &unifor('Av1001^n#1')='') and (&unifor('Av1001^c#1')<>''and &uf('+97',v83^c)=&unifor('Av1001^c#1') or &unifor('Av1001^c#1')='') and (&unifor('Av1001^v#1')<>''and &uf('+97',v83^v)=&unifor('Av1001^v#1') or &unifor('Av1001^v#1')='') and (&unifor('Av1001^o#1')<>''and &uf('+97',v83^o)=&unifor('Av1001^o#1') or &unifor('Av1001^o#1')='') and (&unifor('Av1001^f#1')<>''and v83^f:&unifor('Av1001^f#1')) then &unifor('Av1001^f#1') else # fi else # fi/)
+''
+CHA
+83^F
+*
+'A'
+'10'
+CHA
+83^F
+*
+'B'
+'11'
+CHA
+83^F
+*
+'C'
+'12'
+CHA
+83^F
+*
+'//'
+'/'
+CHA
+83^F
+*
+'^F/'
+'^F'
+DEL
+83
+F
+(if p(v83) then if v83^f='' or v83^f='/' then'1'else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if v83<>v183 then '1' fi
+PUTLOG
+'Удалено в записи DISC 'v3^A,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+183
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------
+// IBIS - удаление дисциплины из записи БО 
+CORREC
+if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi
+&unifor('Av1068#1'),'^0',&unifor('Av111^D#1')
+'NDUNS=',&unifor('Av111^w#1'),'-S'&unifor('Av1068^f#1')
+XXXXXXXXXXXXXXXXXXX
+//определяю какие повторения удалятся 
+DEL
+112
+*
+
+
+ADD
+112
+
+(if p(v691) then if (&unifor('Av1001^u#1')<>''and v691^u=&unifor('Av1001^u#1') and v691^I=&unifor('Av1001^0#1')  or &unifor('Av1001^u#1')='') and (&unifor('Av1001^u#1')=''and &unifor('Av1001^w#1')<>''and v691^w=&unifor('Av1001^w#1') or &unifor('Av1001^w#1')='')  and (&unifor('Av1001^A#1')<>''and &uf('+97',v691^A)=&uf('+97',&unifor('Av1001^A#1')) or &unifor('Av1001^A#1')='') and (&unifor('Av1001^v#1')<>''and &uf('+97',v691^v)=&uf('+97',&unifor('Av1001^v#1')) or &unifor('Av1001^v#1')='') and (&unifor('Av1001^o#1')<>''and &uf('+97',v691^o)=&uf('+97',&unifor('Av1001^o#1')) or &unifor('Av1001^o#1')='') and (&unifor('Av1001^f#1')<>''and v691^f=&unifor('Av1001^f#1')) then v691^I fi fi/)
+
+DEL
+691
+F
+(if p(v691) then if (&unifor('Av1001^u#1')<>''and v691^u=&unifor('Av1001^u#1') and v691^I=&unifor('Av1001^0#1')  or &unifor('Av1001^u#1')='') and (&unifor('Av1001^u#1')=''and &unifor('Av1001^w#1')<>''and v691^w=&unifor('Av1001^w#1') or &unifor('Av1001^w#1')='')  and (&unifor('Av1001^A#1')<>''and &uf('+97',v691^A)=&uf('+97',&unifor('Av1001^A#1')) or &unifor('Av1001^A#1')='') and (&unifor('Av1001^v#1')<>''and &uf('+97',v691^v)=&uf('+97',&unifor('Av1001^v#1')) or &unifor('Av1001^v#1')='') and (&unifor('Av1001^o#1')<>''and &uf('+97',v691^o)=&uf('+97',&unifor('Av1001^o#1')) or &unifor('Av1001^o#1')='') and (&unifor('Av1001^f#1')<>''and v691^f=&unifor('Av1001^f#1')) then '1' else '0' fi fi/)
+
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&unifor('+N112'))>0 then '1' else '0' fi
+PUTLOG
+'Удалены дисциплины: "',v112+|, |,'" в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+112
+*
+
+
+DEL
+1001
+
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------
+DEL
+111
+1
+
+
+UNTIL
+if p(v111) then '1' else '0' fi
+// запись студента при условии ACCESSRDR
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+PUTLOG
+'LINKCORRTASK=LINKRDR%DBN=RDR%QUERY=',,,'"?',&unifor('Av1068^a#1'),if &unifor('Av1068^c#1')<>'' then &unifor('Av1068^c#1') else &unifor('Av1068^n#1') fi,,&unifor('Av1068^v#1'),&unifor('Av1068^o#1'),'-S'&unifor('Av1068^f#1'),'"%'
+FI
+DEL
+1068
+*
+
+

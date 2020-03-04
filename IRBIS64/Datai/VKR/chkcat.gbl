@@ -1,0 +1,329 @@
+0
+// v991^A - значение поля 920 для записи WORK
+// v991^G - ИМЯ БД каталога
+// v991^B - признак кор-ки 0 - не кор-ть, 1 - кор-ть запись каталога
+// даработано Паршиков
+DEL
+1910
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1910
+XXXXXXXXXXXXXXXXXXX
+if v991^B='1' then (v910/) else (if p(v910) then if v910^A='1' or v910^A='U' and val(v910^2)>0 then v910 fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в поле 2106 номер повторения поля 910
+DEL
+2106
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+2106
+XXXXXXXXXXXXXXXXXXX
+'0'
+XXXXXXXXXXXXXXXXXXX
+//поле для признаков корректировки записи каталога
+DEL
+3333
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//дополнительное поле для признаков корректировки записи каталога
+DEL
+3334
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------------------------------------------------------цикл по повторениям поля 910
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+2106
+1
+f(val(v2106)+1,0,0)
+XXXXXXXXXXXXXXXXXXX
+ADD
+3333
+
+'0'
+
+ADD
+3334
+
+'0'
+
+//------- проверяю для статуса U по БД DR соотношение количеств выданных
+IF
+if &unifor('Av1910^A#1')='U' and val(&unifor('Av1910^2#1'))>0 and val(  &uf('JRDR,H=',if &uf('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi )   )<>val(&unifor('Av1910^2#1')) then '1' else '0' fi
+PUTFLD
+'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,'^D',if val(  &uf('JRDR,H=',&uf('Av1910^H#1')) )<>0 then if &uf('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi,'^FНесоответствует кол-во выданных со статусом U и кол-во по БД RDR','^x',v2106 else if &unifor('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi,'^FНет данных о выданных со статусом U по БД RDR','^x',v2106 fi
+REP
+3334
+L
+'1'
+
+FI
+// проверяю для статуса U соотношение количеств выданных
+IF
+if &unifor('Av1910^A#1')='U' and val(&unifor('Av1910^2#1'))>0 and val(&unifor('Av1910^1#1'))<val(&unifor('Av1910^2#1')) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTFLD
+'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,'^D',if &unifor('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi,'^FKол-во выданных со статусом U больше зарегистрированных','^x',v2106
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if &unifor('Av1910^A#1')='U' and val(&unifor('Av1910^2#1'))>0 and val(&unifor('Av1910^1#1'))<val(&uf('JRDR,H=',if &unifor('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi  )) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTFLD
+'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,'^D',if &unifor('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi,'^FKол-во выданных со статусом U по БД RDR больше зарегистрированных','^x',v2106
+REP
+3334
+L
+'0'
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+
+//-----------------------------------------------проверка статуса 1
+IF
+if &unifor('Av1910^A#1')='1' then '1' fi
+//            есть ли должник по инвентарю - в G10
+DEL
+2000
+*
+
+
+ADD
+2000
+XXXXXXXXXXXXXXXXXXX
+if &unifor('DRDR,?H=',,&unifor('Av1910^H#1'),'?,mfn')<>'' then &uf('+7W10#',&unifor('Av1910^H#1')),,,&unifor('DRDR,?H=',,&unifor('Av1910^H#1'),'?,mfn') else &uf('+7W10#',&unifor('Av1910^B#1')),,,&unifor('DRDR,?H=',,&unifor('Av1910^B#1'),'?,mfn') fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v2000='' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//     нет
+PUTFLD
+'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,,'^D',if &unifor('Av1910^H#1')<>'' then ,&unifor('Av1910^H#1') else if &unifor('Av1910^B#1')<>'' then &unifor('Av1910^B#1') else ' ' fi fi,'^FЭкземпляр статус 1 - нет должника (',G10,,')',,'^x',v2106
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+3333
+L
+'1'
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v2000<>'' then '1' else '0' fi,,,,,,&uf('+7W11#'),,,&uf('+7W12#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------есть должник по инвентарю/штрих-коду в G10
+//
+// проверка по записи читателю на согласованность инвентарь-БД-на руках
+CORREC
+'RDR'
+mpu,'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,'^D',G10,'^X',v2106
+'H=',G10
+
+//--------------в записи читателя
+// в G12 MFN читателя в G11 признак OK
+ADD
+1001
+
+&uf('+7U12#',f(val(mfn),0,0))
+
+ADD
+1001
+
+&uf('+7U11#',(if p(v40) then if v40^F: '**' then if &uf('+97',v40^G)=&uf('Av1001^A#1') then if &uf('+97',v40^A)=&uf('Av1001^C#1') then if &uf('+97',v40^B)=&uf('Av1001^D#1')  or &uf('+97',v40^H)=&uf('Av1001^D#1') then 'OK',,,,break fi fi fi fi fi/))
+
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------- в записи каталога - проверка признака ОК
+IF
+if G11='' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// несогласованные записи - в G2 MFN записи читателя
+PUTFLD
+'^A',v991^G,'^B',f(val(MFN),0,0),'^C',v903,'^D',if &unifor('Av1910^H#1')<>'' then &unifor('Av1910^H#1') else &unifor('Av1910^B#1') fi,'^E',G12,'^FНесогласованные записи','^X',v1001^X
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+3333
+L
+'1'
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------------------- конец v2000<>'' - есть должник для очередного повторения 910
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------------------------конец проверки статуса 1
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//       будет ли корректироваться повторение
+IF
+if v991^B='1' and &uf('Av3333#',&uf('+N3333'))='1' then '1' else '0' fi
+PUTFLD
+'^FСнят признак занятости'
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991^B='1' and &uf('Av3334#',&uf('+N3334'))='1' then '1' else '0' fi
+PUTFLD
+'^FУстановлено число выданных экз-ров для статуса U по БД RDR'
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1910
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1910) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------------------------------------------конец цикла по полю 910
+// 
+//корректировка каталога, если задано
+IF
+if v991^B='1' then '1' else '0' fi
+REP
+910^A
+F
+(if p(v910) then if v3333='1' and v910^A='1' then '0' else v910^A fi fi/)
+
+REP
+910^2
+F
+(if p(v910) then if p(v910^2) then if v910^A='U' then if(F(val(  &uf('JRDR,H=',v910^H)  ),0,0)<>'') then F(val( &uf('JRDR,H=',v910^H) ),0,0) else '0' fi else v910^2 fi else # fi fi/)
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+GETFLD
+4000
+
+
+
+IF
+if v4000<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+'WORK'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+(v4000/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+v991^A
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+3333
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+3334
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2106
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1910
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

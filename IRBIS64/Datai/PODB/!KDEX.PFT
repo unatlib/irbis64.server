@@ -1,0 +1,45 @@
+if p(v210) then 
+   if p(v210^a) or p(v210^d) then 
+      if s(v225^v)<>''then 
+         if &unifor('JCMPL,',
+               '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'
+&unifor('Av225^v#1')),v215^a)<='0'         then 
+            if &unifor('JIBIS,',
+               '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'
+&unifor('Av225^v#1')),v215^a)<='0' 
+            then/'0' 
+            else/'2Дублетное описание в БД IBIS - см. N ',
+&unifor('DIBIS,"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'
+&unifor('Av225^v#1')),v215^a,'",f(val(mfn),0,0)')
+            fi 
+         else/'2Дублетное описание в БД CMPL - см. N ',
+&unifor('DCMPL,"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'
+&unifor('Av225^v#1')),v215^a,'",f(val(mfn),0,0)')
+         fi 
+      else 
+         if p(v200^a) then 
+            if &unifor('JCMPL,',
+                  '!'v210^d*2.2,&unifor('G0 'v700^a.10),&unifor('B',v711^a," ",v972^a" ",v200^a)
+,&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi
+,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a) > '0'
+            then /'2Дублетное описание в БД CMPL - см. N ' 
+&unifor('DCMPL,"','!'v210^d*2.2,&unifor('G0 'v700^a.10),&unifor('B'v711^a," ",v972^a" ",v200^a),
+&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",f(val(mfn),0,0)')
+            else 
+               if &unifor('JIBIS,',
+                  '!'v210^d*2.2,&unifor('G0 'v700^a.10),&unifor('B',v711^a," ",v972^a" ",v200^a)
+,&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi
+,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a) >'0'
+               then /'2Дублетное описание в БД IBIS - см. N ' 
+&unifor('DIBIS,"','!'v210^d*2.2,&unifor('G0 'v700^a.10),&unifor('B'v711^a," ",v972^a" ",v200^a),
+&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,'",f(val(mfn),0,0)')
+               else/'0',
+            fi fi 
+         else/'1 Ошибка в структуре' 
+     fi fi    
+   else/'1 Ошибка в структуре' 
+fi fi/
+if p(v910)then 
+   if val(v910)<=0 then /'1Ошибка: Введено не число' fi fi

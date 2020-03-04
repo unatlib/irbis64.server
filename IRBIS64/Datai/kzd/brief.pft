@@ -1,0 +1,5 @@
+ 
+if v920:'VS' or v920:'KF' then  v972^a, fi, 
+if p(v200) then v200^a, fi 
+if p(v700)and a(v200) then   v700^a," "v700^B  fi 
+ 

@@ -1,0 +1,147 @@
+if p(v903) then '\\$A0,11$B\\'
+   if v903:v906.15 then"E"v906"F",if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi, 
+      if v906:v908 then else/"\\$A0,11$B\\E"v908"F"fi 
+   else 
+      if v903:&unifor('Av686.15#1')or v903:&unifor('G0^'&unifor('Av675.15#1'))or 
+         v903:&unifor('G0^'&unifor('Av621.15#1')) then'E', 
+         if v903:&unifor('Av686.15#1') then &unifor('Av686#1') else 
+            if v903:&unifor('G0^'&unifor('Av675.15#1')) then &unifor('G0^'&unifor('Av675#1')) else 
+               if v903:&unifor('G0^'&unifor('Av621.15#1')) then &unifor('G0^'&unifor('Av621#1')) 
+         fi fi fi'F', 
+         if p(v106)then x10, &unifor('K106sh.mnu|'v106^a)," "v106^b fi,if p(v908) then/'\\$A0,11$B\\E'v908'F'fi 
+      else 
+         if v903.1='-'or v920:'ASP' and a(v982^0) or p(v982^u) then 
+         else"E"v903"F",if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi, 
+            if p(v906) then/"E"v906"F", 
+               if v906:v908 then else/"\\$A0,11$B\\E"v908"F" 
+   fi fi fi fi fi 
+else '\\$A0,11$B\\'
+   if p(v982^0) and p(v982^9) and a(v982^u) then'E'v982^0' 'v982^9'F', 
+      if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi 
+   else 
+      if s(v906,v686,v675,v621)<>''then 
+         if p(v906) then"E"v906"F",if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi, 
+            if v906:v908 then else/"\\$A0,11$B\\E"v908"F" fi 
+         else'E'&unifor('Av686#1'), 
+            if a(v686) then &unifor('G0^'&unifor('Av675#1')), 
+               if a(v675) then &unifor('G0^'&unifor('Av621#1')) 
+            fi fi'F', 
+            if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi,if p(v908) then/'\\$A0,11$B\\E'v908'F'fi 
+fi fi fi fi, 
+if s(v982^s,v982^k)<>'' then' '&unifor("kstr.mnu|"v982^s),", "d982^k,&unifor('Av982^k#1'),"  "d982^i, 
+   &unifor('Av982^i#1'),"."d982^k, 
+   if p(v106) then x10,&unifor("K106sh.mnu|"v106^a)," "v106^b fi fi,mhl,
+(if p(v910) then
+    if p(v910^r) and &unifor('Av908#1')<>''then/
+       '\\$A0,11$B\\E'v910^r'/'&unifor('Av908#1')'-'v910^d'F'/
+fi fi), 'E',if p(v503)then/v503^a". "fi,if p(v981)then/|. |+v981^a". "fi, 
+if p(v461) then 
+   if s(v461^x,v461^b)<>''then / fi, 
+   if p(v461^9) or v461^x:','then v461^x else 
+      if v461^x:' 'then &unifor('G0 'v461^x),', ' 
+         if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) 
+         else &unifor('G0.'&unifor('G2 'v461^x)),'. '&unifor('G2.'&unifor('G2 'v461^x))'.'fi 
+      else v461^x  
+   fi fi,v461^b, 
+   if v461^x:','or p(v461^b) then'.'fi,    
+   (if v509^2:'1' then 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+   fi  fi),|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi,'F', 
+   if p(v461^c)then/'\\$A9,6$C\\E',&unifor('E2'v461^c)' ...F',fi,mpl, 
+   if p(v461^c)then mhl,/'\\$A9,6\\E',v461^c,'F',mpl,| [|v461^2|]|, 
+      if a(v461^2) then &unifor('+1W1#'''), 
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1')))else &unifor('+1W1#0')  fi, 
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPrivate,KKS,'),v905^t)<>'' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+            fi fi 
+         else 
+            if (v900^t='a' or v110^t='a') and s(&unifor('IPrivate,KKS,'),v905^t)<>'' then 
+            else ' [', 
+               if p(v900^t) then 
+                  if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t)fi
+               else
+                  if p(v110^t) then 
+                     if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v110^t) else &unifor("Koomi.mnu|"v110^t)fi
+               fi fi,']',          
+      fi fi fi,(| = |v46^l,| : |d461^e, 
+      if s(v982^0,v982^9)<>'' or v905^2:'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 then v461^e else 
+      &unifor('Q'v461^e.1),v461^e*1 fi),| : |v982^1, 
+      if p(v461^f) then' / ' 
+         if p(v905^1)then v461^f else,o461fz,fi 
+      else 
+         if p(v905^1) then else 
+            if s(v461^x,v461^b,v461^7,v961^x,v961^a,v962)<>'' or v961^b<>''and v961^a=''then' / ',o461f,fi, 
+      fi fi,|. - |v461^p,". - "d230^a, 
+      (if p(v230^a) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| и |+v230^a else ""| and |+v230^a fi fi), 
+      ,ovixdm,if a(v215^d) then |. - |v461^r fi, 
+      (". - ("| (|+v46^a,| : |v46^e,| / |v46^f,|, ISSN |v46^j,| ; |v46^v,if s(v46^a,v46^v)<>''then|)|d46 fi,|. - |v46^t*4,| : |v46^r,|. - |v46^p), 
+      if s(v454^u)<>'' then,Origs454, fi, 
+      if s(v337v230^d)<>''then/'\\$A9,6\\', 
+         (if p(v230) then if v230^x<='0'then"Систем. требования: "|. |+v230^d,| (|v230^e|)| fi fi), 
+         (|. - Режим доступа: |v951^i,| (|v951^t|)|,|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,v337^a), 
+      fi,|. - |v461^t| экз.|, 
+      if v10^a:v461^i or s(v10^a)=''then else|. - ISBN |v461^i,| (|v461^v|)| fi, 
+      if v10^z:v461^1 or s(v10^a)=''then else". - ISBN "v461^1|(ошибочный )| fi,". - ISSN "v461^j, 
+      ". "d461,mhl, 
+      if a(v461^c)then/'\\$A9,6$C\\ E',&unifor('E2'v200^a),' ...F'/'\\$A0,0$C\\ 'else 
+         if p(v200^v) then/'\\$A9,6$C\\ E',v200^v,'...F'/'\\$A0,0$C\\ 'fi fi,mpl, 
+      if p(v461^c) then /'\\$A9,6\\', 
+         if p(v200^v)then'E'v200^v'F'," : "v200^a, else v200^a fi 
+fi fi fi, 
+if a(v461)then if s(v700,v710)<>'' or v509^2:'1' then /fi,mhl, 
+   'E'v700^a," "v700^d,", "v700^g, 
+   if a(v700^g)then", "d700^b 
+      if v700^b:'. ' then v700^b else 
+         if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+         else v700^b 
+   fi fi fi'F', 
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+      if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,'). ' 
+   else"."d700^g," "d700^a 
+   fi, 
+   (if v509^2:'1' then 'E' 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| 
+          fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi'F' fi), 
+   'E'v710^s".",v710^a, 
+   if s(v710^n,v710^c)<>''then' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d" ; ",v710^f, 
+      if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+   fi,". "d710,v971^b, 
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d" ; ",v971^f, 
+      if p(v971^f)then" ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+   fi,". "d971^b'F' 
+   if s(v700,v710,v981,v503)<>'' or &unifor('Av509^2#1')='1' then /'\\$A9,6\\',mhl,v200^a,mpl else 
+   /'\\$A9,6\\',mhl,' E'&unifor('E2',v200^a),'F', 
+      if &unifor('F2',v200^a)<>''then' '&unifor('F2'v200^a) fi,mpl, 
+   fi," ["v200^b"]", 
+   if a(v200^b) then &unifor('+1W1#'''), 
+      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1')))else &unifor('+1W1#0')  fi, 
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then 
+            if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+         else 
+            if s(&unifor('IPrivate,KKS,'),v905^t)<>'' then else 
+               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+         fi fi 
+      else 
+         if (v900^t='a' or v110^t='a') and s(&unifor('IPrivate,KKS,'),v905^t)<>'' then 
+         else ' [', 
+            if p(v900^t) then 
+               if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t)fi
+            else
+               if p(v110^t) then 
+                  if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v110^t) else &unifor("Koomi.mnu|"v110^t)fi
+            fi fi,']',          
+fi fi fi fi, 
+if p(v925) then &uf('6ibis925K') fi,otitkn,oizd,ospec,ovixd, 

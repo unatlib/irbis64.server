@@ -1,0 +1,46 @@
+0
+IF
+if &unifor('IPRIVATE,PROVFOND,')='1'or &unifor('Korg.mnu|7')='1' then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+910^S
+F
+(if p(v910) then if '2 6 7':v910^a then # else if p(v910^s)then if v910^b=&unifor(|Av1001#1|d910) or v910^h=&unifor('Av1001#1') or s(v910^b|Ï|)=&unifor(|Av1001#1|d910) or s(v910^h|Ï|)=&unifor('Av1001#1')then if &unifor('IPRIVATE,PRFDDAT,')<>'' and &unifor('IPRIVATE,PRFDDAT,')=v910^s  or &unifor('IPRIVATE,PRFDDAT,')='' and &unifor('3')=v910^s then v910^s else if &unifor('IPRIVATE,PRFDDAT,')<>'' then &unifor('IPRIVATE,PRFDDAT,') else &unifor('3') fi fi,if &unifor('IPRIVATE,PRFDMHR,')=v910^d then else '^!'&unifor('IPRIVATE,PRFDMHR,') fi else v910^s fi else # fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^$
+F
+(if p(v910) then if '2 6 7':v910^a then # else if a(v910^s)then  if v910^b=&unifor('Av1001#1') or v910^h=&unifor('Av1001#1') or v910^b|Ï|=&unifor('Av1001#1') or v910^h|Ï|=&unifor('Av1001#1') then if &unifor('IPRIVATE,PRFDDAT,')<>'' and &unifor('IPRIVATE,PRFDDAT,')=v910^s  or &unifor('IPRIVATE,PRFDDAT,')='' and &unifor('3')=v910^s then # else if &unifor('IPRIVATE,PRFDDAT,')<>'' then &unifor('IPRIVATE,PRFDDAT,') else &unifor('3') fi fi else #  fi else # fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99
+XXXXXXXXXXXXXXXXXXX
+(if p(v910)then if p(v910^$) then v910,if &unifor('IPRIVATE,PRFDMHR,')<>'' then if &unifor('IPRIVATE,PRFDMHR,')=v910^d then else '^!'&unifor('IPRIVATE,PRFDMHR,') fi fi fi fi /)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910) then if p(v910^$) then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(v99/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+910
+*
+'^$'
+'^S'
+DEL
+99
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

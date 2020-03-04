@@ -1,0 +1,21 @@
+'</>',
+&uf('+7W1#'),
+(if p(v910) then if p(v910^h) then if v910^a : 'U' then &uf('+7W2#',v910^h),&uf('+7W3#',v910^1),&uf('6multi') else &uf('+7U1#',v910^h) fi fi fi),
+/* в G1 - значени€ всех штрих-кодов
+/* в G2 - количество колонок
+&uf('+7W2#4'), /* кол-во колонок 4 - ћ≈Ќя“№ «ƒ≈—№!!!
+'<table>',
+'<tr>',
+&uf('+7W3#',&uf('AG2#1')),/* в G3 - счетчик текущих колонок
+(if p(g1) then if val(&uf('AG3#1'))=0 then '</tr><tr>',&uf('+7W3#',&uf('AG2#1')), fi,
+'<td>',
+'<img src="IRBIS:!!',g1,'!!"><br>',g1,
+'</td>',
+&uf('+7W3#',f(val(&uf('AG3#1'))-1,0,0)),
+ fi)
+'</tr>',
+'</table>'
+
+
+/*(if p(g1) then '<img src="IRBIS:!!',g1,'!!" align="top" height="40px">' '<br>',g1,'<br>' fi)
+

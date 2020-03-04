@@ -1,0 +1,72 @@
+/* FREEPAR0 v1100 формат показа
+/* FREEPAR1 v1101 запрос
+/* FREEPAR2 v1102 формулировка запроса
+/* FREEPAR3 v1103 кол-во документов
+/* FREEPAR4 v1104 Признак: 1 - ТОЛЬКО ОТМЕЧЕННЫЕ; 0 - не только отмеченные
+/* v1000 имя БД
+/* v1004^A  отмеченные MFN
+/*"Формат показа: "v1100"<br>",
+/*"Запрос: "v1101"<br>",
+/*"Формулировка запроса: "v1102"<br>",
+/*"Кол-во док-ов: "v1103"<br>",
+/*"Имя БД: "v1000"<br>",
+/*"Отмеченные: "v1004^A+|, |,
+
+'<BODY bgColor=#ffffcc>',
+
+'<title>Печать выходных форм</title>',
+
+'<br><A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A><br>',
+
+'<b><font size="+1"><center>Печать выходных форм</b><br></center></font>',
+"База данных: "v1000,
+"<br>Результат поиска - "d1101,if v1102<>'' then  v1102 else v1101 fi,
+"<br>Всего документов: "v1103,
+&uf('+7W1#',&uf('+N1004')),
+"<br>Отмеченных: "g1,
+
+'<form name="MAIN" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<table border="0" width="100%">',
+'<tr>',
+'<td style="width: 150px; ">Название формы:</td>',
+'<td >         ',
+'<select name="FORMNAME" style="width: 100%; ">',
+(if &uf('+5TCL_exitform.mnu')<>'' then '<option value="',&uf('+5TCL_exitform.mnu'),'" ','>',&uf('+5TCL_exitform.mnu'),' - ',&uf('+5FCL_exitform.mnu'),'</option>' fi),
+'</select>',
+' </td>',
+' </tr>',
+'<tr>',
+'<td>Исходные док-ты:</td>',
+'<td >         ',
+'<select name="FORMMODE" style="width: 100%; ">',
+if v1104='1' then 
+'            <option value="1" ','>Отмеченные   </option>',
+             else 
+'            <option value="0" ','>Все   </option>',
+      if g1<>'0' then 
+'            <option value="1" ','>Отмеченные   </option>',
+'            <option value="2" ','>Кроме отмеченных   </option>',
+      fi,
+fi,
+'</select>',
+' </td>',
+' </tr>',
+'<tr>',
+'<td>',
+'<input type="submit" class="sub1" name="nnnn" value="Выполнить">',
+'</td>',
+'<td><br>',
+'</td>',
+
+'</tr>',
+'<tr>',
+'<td colspan="2"><hr></td>',
+'</tr>',
+'</table>',
+'<input type="hidden" name="C21COM" value="13">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="S21ALL" value="',v1101,'">',
+'<input type="hidden" name="FORMTYPE" value="1">',
+'</form>',
+
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=CL_search&S21CNR=',v1006,'&I21DBN=',v1000,'&FREEPAR0=',v1100,'">Вернуться к основной поисковой форме</A>',

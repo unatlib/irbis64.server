@@ -1,0 +1,3 @@
+if a(v3^0) then '2 Ошибка: отсутствует Идентификатор ' fi,,,/
+if l("IDD="v3^0)<=0 or val(ref(l("IDD="v3^0),mfn))=val(mfn) then'0'
+else/'2 Ошибка: Дублетный Идентификатор ',v3^0,' - см № в БД ', &unifor("DVUZ,!IDD="v3^0"!,f(val(mfn),0,0)") fi/

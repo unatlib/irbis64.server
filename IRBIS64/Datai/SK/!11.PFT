@@ -1,0 +1,5 @@
+if p(v11)then (if p(v11) then if v11:'^a' then if (L('B='&unifor('Av11^a#1'))<=0
+ or val(ref(l('B='&unifor('Av11^a#1')),mfn))=val(mfn)) then if &unifor('C'v11^A)
+='0'then'0'else'2     Ошибка в ISSN: 'v11^a fi else '2Дублетный ISSN: ',v11^a,re
+f(l('B='&unifor('Av11^a#1')),' (см. N ',f(val(mfn),0,0),')') fi else '1 Ошибка в
+ структуре' fi fi/) else '0' fi

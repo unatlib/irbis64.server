@@ -1,0 +1,47 @@
+' 
+\trowd \trqc\trgaph108\trleft-108\trkeep 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx6759\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx8056\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx9353 
+\pard \qc\widctlpar\intbl {##\cell} 
+\pard \ql\widctlpar\intbl {'  
+if v920:'J'then v591,
+ if a(v591) then v200^a,v923^h,v923^i,v923^k,v923^l fi else 
+ if p(v461) then v461^x" ",v461^c,";"v200^v,":"v200^a else v700^a," "v700^b," "d700,v200^a," "v200^v fi,fi,
+(|. |v922^c,|/|v922^f),|=|v510^d,|: |v200^e,|, |v923^h,|: |v923^i,|, |v923^k,|: |v923^l,|/|v200^f,|; |v200^g,". -"v205^a,if p(v205^a)then"/"v205^c else". -"v205^c fi,(|. -|v210^a,|: |v210^c),'\cell } 
+\pard \qc\widctlpar\intbl {' 
+f(rsum(if v991^A=v30^k then 
+   if a(v30^u) then f(val(v30^d),0,0) ',' fi fi, 
+if v991^A=v31^k then 
+   if a(v31^u) then f(val(v31^d),0,0) ',' fi fi, 
+if v991^A=v32^k then 
+   if a(v32^u) then f(val(v32^d),0,0) ','  fi fi),0,0)/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if s(v30,v31,v32)='' then 
+f(rsum((if p(v62)  then 
+    if &uf('Av991^A#1')='' and &uf('Av991^B#1')='' or 
+      &uf('Av991^B#1')='' and &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^K) or 
+      &uf('Av991^A#1')='' and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b)  or 
+     &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^k) and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b) 
+    then 
+       if a(v62^u) then v62^d ',',,,,,,,  
+    fi fi fi)),0,0)/ 
+fi,,,,,
+'\cell } 
+\pard \qc\widctlpar\intbl {'  
+if v991^A=v30^k then 
+   if a(v30^u) then f(val(v30^d)*val(v10^d,' 0'),0,2) fi fi, 
+if v991^A=v31^k then 
+   if a(v31^u) then f(val(v31^d)*val(v10^d,' 0'),0,2) fi fi, 
+if v991^A=v32^k then 
+   if a(v32^u) then f(val(v32^d)*val(v10^d,' 0'),0,2) fi fi/ 
+f(rsum((if p(v62)  then 
+    if &uf('Av991^A#1')='' and &uf('Av991^B#1')='' or 
+      &uf('Av991^B#1')='' and &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^K) or  
+      &uf('Av991^A#1')='' and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b)  or 
+     &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^k) and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b) 
+then 
+   if a(v62^u) then f(val(v62^d)*val(&unifor('Av10^d#1'),' 0'),0,2)  ',' fi fi fi) ),0,2) 
+'\cell } 
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar'

@@ -1,0 +1,31 @@
+/*&uf('+7W1001#^F3^A‘»—“^PO'),
+&uf('+7W100#'
+if rsum((if p(v691) then 
+            if p(v691^l) then '0,' else 
+               if v691^F=&uf('Ag1001^F#1') and 
+                  (&uf('Ag1001^A#1')<>'' and &uf('+97',v691^A)=&uf('+97',&uf('Ag1001^A#1')) or 
+                   &uf('Ag1001^C#1')<>'' and &uf('+97',v691^C)=&uf('+97',&uf('Ag1001^C#1')) or 
+                   &uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1'))) then 
+                  if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97'&uf('Ag991^o#1')) then '1,' else '0,' fi 
+               else '0,' 
+         fi fi fi/))>0 
+then'1' else '0' fi),
+if val(g100)>0 then 
+   if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'O' or  &uf('KsemV.mnu\'g1001^f)<>''then 
+      if v693^x:'!NOFOND' then 
+         (if p(v693) then 
+             if v693^x:'!NOFOND' then v693^d fi fi) 
+      else (if p(v693) then 
+               if s(v693^a,v693^l,v693^x)='' then v693^d fi fi)
+      fi       
+   else 
+      if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'V' then 
+         &uf('+7W692#'(if p(v692) then if v692^b=&uf('Av693^b#1') and v692^C:'O' then v692 fi fi/)),
+         if g692^x:'!NOFOND' then 
+            (if p(g692) then 
+                if g692^x:'!NOFOND' then g692^d fi fi) 
+         else 
+            (if p(g692) then 
+                if s(g692^a,g692^l,g692^x)='' then g692^d fi fi)
+   fi fi fi 
+else '0' fi

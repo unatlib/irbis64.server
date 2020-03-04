@@ -1,0 +1,23 @@
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')= '' and val(&unifor('34'))>8 then 
+"Студ. ОС для 991^a"d10000,
+&unifor('+1W2#'''),
+&unifor('+1W2#',f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if &unifor('Av991^a#1')<>'' and &unifor('Pv691^0'):&unifor('Av991^a#1') or &unifor('Av991^a#1') ='' 
+                              then &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                   &unifor('JRDR,','?',&unifor('Pv691^0'))'; '
+                                   &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';'
+                        fi fi';'fi)),0,0)),
+"Студ. ОС всего"d10000,
+&unifor('+1W3#'''),
+&unifor('+1W3#',f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; '
+                              &unifor('JRDR,','?',&unifor('Pv691^0'))'; '
+                              &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';'
+                        fi';'fi)),0,0)),
+|'R2: '&unifor('+1R2')/'R3: '&unifor('+1R3')/|d10000,
+   if &unifor('+1R2')='' then '0' else &unifor('+1R2')fi,
+   if &unifor('+1R3')<>'' then ' (всего '&unifor('+1R3')')' fi 
+fi,

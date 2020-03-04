@@ -1,0 +1,5 @@
+if p(v33) then 
+   if &unifor('G0/'v33):'.'then '1 Ошибка: неправильно введен год подписки  ' v33.4 else '0' fi/
+   if v33*5.1='P'then'0' else 
+if &unifor('Krkint6.mnu|'v33*4)<>''then'0' else '1 Ошибка: неправильно введен период подписки  ' v33*4 fi 
+fi fi

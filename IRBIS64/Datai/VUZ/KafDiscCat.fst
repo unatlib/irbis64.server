@@ -1,0 +1,2 @@
+991 0 if val(&uf('IMAIN,MOVECATFULL,1'))=0 then (if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then |^I|v69^D,,,ref(l(|IDD=|v69^D),"^S"v4,,"^K"v6) break fi fi),,,"^A"v68^A,"^V"v68^V,"^O"v68^O,,"^F"v68^F,"^H"v68^H ,"^L"v68^L else (if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then |^I|v69^D,,,ref(l(|IDD=|v69^D),"^D"v3^A,"^S"v4,"^B"v5,"^K"v6) break fi fi),,,,"^A"v68^A,"^V"v68^V,"^O"v68^O,"^C"v68^C,"^N"v68^N,"^F"v68^F,"^H"v68^H,"^L"v68^L fi
+993 0 (if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then v69^W fi fi/)

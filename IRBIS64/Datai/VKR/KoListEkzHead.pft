@@ -1,0 +1,143 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^Y<>'' 
+then 
+/*-------------------------------запись
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx400 
+\pard \widctlpar\intbl {\qc \fs20 ',,&uf('S1A'),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6600 
+\pard \widctlpar\intbl {\ql \fs20 ',,if v1^X<>'' then v1^X fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7300 
+\pard \widctlpar\intbl {\qc \fs20 ',,&uf('+7W991#',&uf('+97',v1)),,,,,,,,,,,,,
+/*----------------экземпляры с учетом экземпляров аналогов, если задано в 991^-
+&uf('+7W10#'),,,,,
+if &uf('AG991^-#1')='' OR val(&uf('AG991^-#1'))=0 
+then 
+/*--------------в G11 кол-во экземпляров-аналогов
+  ref(val(V1^Y),(if p(v699) and v699: '^U1' then &uf('+7U10#',v699^W) fi)   ),,,,
+  &uf('+7W11#',
+    f(rsum(
+           (if p(G10) 
+            then 
+              ref(l('I=',G10),f(rsum((if p(v910) then if v910^A: 'U' then v910^1|,| else if 'C 6 2 7':v910^a then else '1,' fi fi fi)),0,0)),,', ',,  
+            fi )  
+     ),0,0)  ),,,,,,,,,,,,, 
+fi,,,,,,,,,,,,,,
+ref(val(V1^Y),
+    if p(v699) and v699: '^U1' and &uf('AG991^-#1')='' OR val(&uf('AG991^-#1'))=0 
+    then 
+/*------------- вместе с экземплярами-аналогами
+      f(rsum(
+(if p(v910) then if &uf('AG991^T#1')='' or  s('!',v910^T,'!'):  &uf('AG991^T#1')  then if v910^A: 'U' then v910^1|,| else if 'C 6 2 7':v910^a then else '1,' fi fi fi fi)
+                 )+ val(&uf('AG11#1')),0,0),,,
+    else
+      f(rsum((if p(v910) then if &uf('AG991^T#1')='' or s('!',v910^T,'!'):  &uf('AG991^T#1') then if v910^A: 'U' then v910^1|,| else if 'C 6 2 7':v910^a then else '1,' fi fi fi fi)),0,0),
+    fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8000 
+\pard \widctlpar\intbl {\qc \fs20 ',
+ref(val(V1^Y),if p(v699) and v699^U='0' then 'ДА' fi),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9000 
+\pard \widctlpar\intbl {\qc \fs20 ',
+ref(val(V1^Y),,,,,f(rmax((v210^D|,,|)),0,0),,,,,,),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10000 
+\pard \widctlpar\intbl {\qc \fs16 ',,,,
+/*,,,,,,,,,,,,,,,последний год издания
+ref(val(V1^Y),&uf('Av907^A#1')),,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+/*------------------------------------------заголовки-------------- 
+  &uf('S0'),,,,,
+  '\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clcbpat16
+\cellx10000 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+  if v1^J<>' ' and v1^J<>''
+  then 
+    ,'\cf27 ',,,'              Дисциплина: ',,,
+    if &uf('KDisc.mnu!',&uf('G2@',v1^J))<>'' then &uf('KDisc.mnu!',&uf('G2@',v1^J)) else &uf('G2@',v1^J) fi,,'\cf ',
+    '\par ' 
+  else 
+    if v1^I<>'' and v1^I<>' ' 
+    then 
+      '\cf27 ',
+      if v1^I: 'M' then ' Учебно-Методическая' else ' Учебная' fi,,,
+    else 
+      if v1^H<>'' and v1^H<>' ' 
+      then 
+        ,'\cf27 ',,,'            Тип: ',v1^H,,'\cf ',,'\par ' 
+      else 
+        if v1^G<>'' and v1^G<>' ' 
+        then 
+          ,'\cf27 ',,,'          Цикл: ',
+          if &uf('Kcicld.mnu!',v1^G)<>'' then &uf('Kcicld.mnu!',v1^G) else v1^G fi,,
+          if v1^R<>'' then ' (степень новизны - ',if val(v1^R)=0 then if &uf('KCycleNew.mnu!',v1^R)<>'' then &uf('KCycleNew.mnu!',v1^R) else v1^R fi else v1^R fi,,')' fi,,,,,
+          '\cf ',,'\par ' 
+          else 
+            if v1^F<>'' and v1^F<>' ' 
+            then 
+              ,'\cf27 ',,,'        Специальность: ',
+              if &uf('KSpec.mnu!',v1^F)<>'' then &uf('KSpec.mnu!',v1^F)  ' (',v1^F,')'  else v1^F fi,,'\cf ',,'\par ' 
+            else 
+              if v1^E<>'' and v1^E<>' ' 
+              then 
+                ,'\cf27 ',,,'        Направление: ',
+                if &uf('KNapr.mnu!',v1^E)<>'' then &uf('KNapr.mnu!',v1^E)  ' (',v1^E,')'  else v1^E fi,,'\cf ',,'\par ' 
+              else 
+                if v1^D<>'' and v1^D<>' ' 
+                then 
+                  ,'\cf27 ',,,'      Кафедра: ',
+                  if &uf('KKafch.mnu!',v1^D)<>'' then &uf('Kkafch.mnu!',v1^D) else v1^D fi,,'\cf ',,'\par ' 
+                else 
+                  if v1^C<>'' and v1^C<>' ' 
+                  then 
+                    ,'\cf27 ',,'    Факультет: ',
+                    if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else v1^C fi,,'\cf ',,'\par ' 
+                  else 
+                    if v1^B<>'' and v1^B<>' ' 
+                    then 
+                      ,'\cf27 ',,,,'  Вид обучения: ',
+                      if &uf('Kvo.mnu|',v1^B)<>'' then &uf('Kvo.mnu|',v1^B) else v1^B fi,,'\cf ',,'\par ' 
+                      else 
+                        if v1^A<>'' and v1^A<>' ' 
+                        then 
+                          ,'\cf27 ','Форма обучения: ',
+                          if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else v1^A fi,,'\cf ',,'\par ' 
+fi fi fi fi fi fi fi fi fi fi,,,,,,,,,
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}'

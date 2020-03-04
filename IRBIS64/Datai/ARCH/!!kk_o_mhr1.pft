@@ -1,0 +1,14 @@
+&uf('+7W3#'),
+&uf('+7U3#'&uf('MI910^D'),&uf('S0'),&uf('Av910^d#1'),
+   (if p(v910^d) then 
+       if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then else /v910^d fi,
+          | - |v910^b,|(|v910^1|)| 
+    fi)),
+(if p(g3) then mfn,'^A1','^+'g3 fi/)    
+if &uf('IPrivate,TOK,')<>'' or &uf('G0/'&uf('G0^'v905))<>'' then 
+   &uf('+7W21#'),
+   (if p(g3) then 
+       if &uf('KMhr_TirajO.mnu\'&uf('G0 'g3))<>'' then 
+          &uf('+7U21#'&uf('KMhr_TirajO.mnu\'&uf('G0 '&uf('+97'g3))),'^X'g3),&uf('+7W31#'),&uf('+7W31#'g21),&uf('6!!kk_o_mhr3')
+    fi fi),
+fi

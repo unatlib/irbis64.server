@@ -1,0 +1,763 @@
+1
+ChkVuz.wss
+Для исправления найденных ошибок задайте:
+//15
+// проверка записей БД VUZ
+// 991^A - Удалять запись VUZ, если нет поля 69
+// 991^B - Удалять несвязанную/ненайденную дисциплину в записи VUZ
+//991^C - Удалять дублетные контингенты
+//991^D - Удалять DISC, если нет 83
+//991^E - Удалять DISC, если дубль по v3-v4-v5-v6
+//991^F - выдавать сообщения об отсутствии записей VUZ
+//15 приписывать из удаленных VUZ поля 69 в первую запись
+//-------------------------------------------------------------------------------------------- проверка записи DISC
+IF
+if v920:'DISC' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(v991^E)<>2 then '1' fi
+//-----------------------проверка на дублетность DISC 
+IF
+if val(&uf('J,IDD=',,v3^0))>1 then '1' fi
+//-----это дубль по идентификатору
+// в v112 MFN всех дублетов
+DEL
+112
+*
+
+
+DEL
+113
+*
+
+
+ADD
+112
+
+&uf('7,?IDD=',,,v3^0,,,'?,mfn/'),,,&uf('+7W11#',,v3^A,,' - дублетные идентификаторы')
+
+ADD
+113
+
+&uf('Av112#1'),,,&uf('+7W13#'),,,&uf('+7W14#')
+
+DEL
+112
+F
+(if p(v112) then if val(mfn)=val(v112) then '1' else '0' fi fi/)
+
+//---цикл по дублетным записям
+REPEAT
+IF
+if &uf('+97',,v3^A)=&uf('+97',,ref(val(&uf('Av112#1')),v3^A) ) and &uf('+97',,v4)=&uf('+97',,ref(val(&uf('Av112#1')),v4) ) and &uf('+97',,v5)=&uf('+97',,ref(val(&uf('Av112#1')),v5) ) and &uf('+97',,v6)=&uf('+97',,ref(val(&uf('Av112#1')),v6) )  then '1' fi
+ADD
+112
+
+&uf('+7U13#',,,,f(val(&uf('Av112#1')),0,0)  )
+
+IF
+if val(v991^E)=1 then '1' fi,,,,
+//----удаление, в первую переношу поля 83
+IF
+if val(mfn)=val(v113) then '1' fi
+//---это первая запись
+DEL
+114
+*
+
+
+ADD
+114
+
+&uf('7,?IDD=',,,v3^0,,,'?,(v83/)/')
+
+REPEAT
+ADD
+83
+
+if rsum((if p(v83) then if &uf('+97',,v83^A)=&uf('+97',,&uf('Av114^A#1')) and &uf('+97',,v83^N)=&uf('+97',,&uf('Av114^N#1')) and &uf('+97',,v83^C)=&uf('+97',,&uf('Av114^C#1')) and &uf('+97',,v83^V)=&uf('+97',,&uf('Av114^V#1')) and &uf('+97',,v83^O)=&uf('+97',,&uf('Av114^O#1')) and &uf('+97',,v83^H)=&uf('+97',,&uf('Av114^H#1')) and &uf('+97',,v83^E)=&uf('+97',,&uf('Av114^E#1')) and &uf('+97',,v83^L)=&uf('+97',,&uf('Av114^L#1')) and val(v83^F)=val(&uf('Av114^F#1'))  then '1,' break fi fi))=0 then &uf('Av114#1') fi
+
+DEL
+114
+1
+
+
+UNTIL
+if p(v114) then '1' fi
+FI
+IF
+if val(mfn)<>val(v113) then '1' fi
+DELR
+
+
+
+
+ADD
+112
+
+&uf('+7W14#1')
+
+FI
+FI
+FI
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+PUTLOG
+g11,,,,if p(g13) then ', полные дублеты: ',,(g13,', ') fi,,,if val(g14)=1 then '. Удалены ' fi
+DEL
+112
+*
+
+
+DEL
+113
+*
+
+
+FI
+FI
+//--------------------------
+IF
+if val(v991^D)<>2 then '1' fi
+//---------------------------------контроль на присутствие полей 83
+IF
+if a(v83) then '1' fi
+PUTLOG
+'DISC ',v3^A.30"...",,': нет данных о контингентах, поле 83. (MFN=',f(val(mfn),0,0),')',,,,,if val(v991^D)=1 then '. Запись удалена' fi
+IF
+if val(v991^D)=1 then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+FI
+FI
+//--------------------------------
+IF
+if p(v83) then '1' fi
+//-----------------------------корректировка разделителя семестров
+REP
+83^F
+F
+(if p(v83) then if p(v83^F) then  if v83^F: '-' then  if &uf('G2-',v83^F): '-' then &uf('+98-/',v83^F) else &uf('+98,/',&uf('V',v83^F) ) fi,,else v83^F fi  else # fi fi/)
+
+// Формирование полей 1932 - добавляемых и 932 размноженных по cестрам
+DEL
+932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1932
+
+(if p(v83) then v83 fi/)
+
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1932^f#1'):'/' then (if &unifor('1*R/?v1932^f#1')<>''then if &unifor('Av1932^W#1')<>'' then '^W',&unifor('Av1932^W#1') fi,if &unifor('Av1932^U#1')<>'' then '^U',&unifor('Av1932^U#1') fi,if &unifor('Av1932^H#1')<>'' then '^H',&unifor('Av1932^H#1') fi,if &unifor('Av1932^N#1')<>'' then '^N',&unifor('Av1932^N#1') fi,if &unifor('Av1932^C#1')<>'' then '^C',&unifor('Av1932^C#1') fi,if &unifor('Av1932^A#1')<>'' then '^A',&unifor('Av1932^A#1') fi,if &unifor('Av1932^V#1')<>'' then '^V',&unifor('Av1932^V#1') fi,if &unifor('Av1932^L#1')<>'' then '^L',&unifor('Av1932^L#1') fi,if &unifor('Av1932^O#1')<>'' then '^O',&unifor('Av1932^O#1') fi,,'^F',&unifor('1*R/?v1932^f#1') fi/) else &unifor('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------------выдача сообщений об отсутствии VUZ
+IF
+if val(v991^F)=1 then '1' fi
+// поиск записи vuz
+IF
+if val(&unifor('JVUZ,?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi))<=0 then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'DISC ',v3^A.30"...",,': нет записи VUZ - ',&unifor('Av932^a#1'),,&unifor('Av932^n#1') &unifor('Av932^c#1'),&unifor('Av932^v#1'),&unifor('Av932^o#1'),,&unifor('Av932^f#1'),' (MFN: ',f(val(mfn),0,0),')'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// если есть запись VUZ есть ли в ней дисциплина?
+
+
+IF
+if val(v991^B)=2 then '0' else '1' fi
+IF
+if val(&unifor('JVUZ,?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi))>0 then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1069
+*
+
+
+ADD
+1069
+
+&unifor('DVUZ,!?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi,'!,(v69/)')/
+
+IF
+if s((|!|v1069^D|!|)): s('!',v3^0,'!') then '0' else '1' fi
+PUTLOG
+'В записи контингента ',,,if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),' (',,f(val(mfn),0,0),,') -' fi,,,,' нет дисциплины ',,v3^0
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1069
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+
+
+
+DEL
+932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v932) then '1'else'' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---конец есть поле 83
+FI
+//--- конец проверки записи DISC
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------------------------------------------------------------------------проверка записи VUZ
+IF
+if v920: 'VUZ' then '1' else '0' fi
+IF
+if val(v991^C)<>2 then '1' fi
+//-------------991^C---------------проверка на дублетные записи VUZ
+IF
+if val(&unifor('JVUZ,?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-"))>1 then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------------------------------------------ больше одной записи VUZ
+IF
+if val(&uf('DVUZ,!',, '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))=val(mfn) then '1' fi
+// на первой записи  беру в G11 перечень MFN
+ADD
+111
+
+&uf('+7W11#',,&uf('7,!','?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",'!,mfn/') )
+
+PUTLOG
+'Дублетные записи VUZ, MFN: ',,(if p(g11) then f(val(g11),0,0) ',' fi)
+FI
+IF
+if val(v991^C)=1 then '1' fi
+IF
+if val(&uf('DVUZ,!', '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))=val(mfn) then '1' fi
+//------------------------ эта запись ПЕРВАЯ в группе дублетных
+ADD
+111
+
+&uf('+7W6#',,&uf('7,!',,,'?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,,'!,(v69/)') ),,,(g6/)
+
+//------ накопленные G6 вношу в первую запись с проверкой 
+DEL
+1006
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1006
+XXXXXXXXXXXXXXXXXXX
+mpu,(G6/),,,&uf('+7W7#')
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------- проверка необходимости нового повторения 
+IF
+if p(v69) then if rsum((if p(v69) then if &uf('+97',v69^B)=&unifor('Av1006^B#1') and &uf('+97',v69^D)=&unifor('Av1006^D#1') then'1;'else'0;' fi fi))>0 then '0' else '1' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+if p(v69) then if rsum((if p(v69) then if &uf('+97',v69^B)=&unifor('Av1006^B#1') and &uf('+97',v69^D)=&unifor('Av1006^D#1') then'1;'else'0;' fi fi))>0 then else &unifor('Av1006#1') fi else &unifor('Av1006#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+1006
+1
+&uf('+7W7#1')
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1006
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1006) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(g7)=1 then '1' fi
+PUTLOG
+'Дописана запись VUZ. MFN=',f(val(mfn),0,0)
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--- конец - первая запись на кор-ке
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('DVUZ,!',, '?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",'!,mfn'))<val(mfn) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------------------ эта запись не первая из группы записей по одному термину
+//---------- она удаляется, если совпали поля 68
+ADD
+111
+
+&uf('+7W10#',,&uf('DVUZ,!','?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",'!,v68') ),,
+
+IF
+if &uf('+97',G10^A)=&uf('+97',v68^A) and &uf('+97',G10^C)=&uf('+97',v68^C) and &uf('+97',G10^N)=&uf('+97',v68^N) and &uf('+97',G10^O)=&uf('+97',v68^O) and &uf('+97',G10^V)=&uf('+97',v68^V) and val(G10^F)=val(v68^F) then '1' fi 
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Удалена дублетная запись VUZ. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+//---- конец - не первая запись на кор-ке
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--- конец задана корректировка
+FI
+//---- конец больше одной записи
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------------- конец контроля на дублетность
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+ADD
+111
+
+(v69/)
+
+IF
+if val(v991^A)<>2 then '1' fi
+//-------------991^A--------------------------контрольна наличие полей 69
+//-------------- есть ли DISC для повторений полей 69
+IF
+if a(v111) then '1' fi
+//----------Нет поля 69-- удалять запись VUZ?
+IF
+if val(v991^A)=1 then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Запись VUZ: нет поля связанных дисциплин для контингента ',v68^A,"-"v68^N,"-"v68^C ,"-"v68^v,,,"-"v68^o,'-S',,v68^F,,' MFN=',f(val(mfn),0,0),,' - удалена',,
+FI
+IF
+if val(v991^A)=0 then '1' fi
+PUTLOG
+'Запись VUZ: нет поля связанных дисциплин для контингента ',v68^A,"-"v68^N,"-"v68^C ,"-"v68^v,,,"-"v68^o,'-S',,v68^F,,' MFN=',f(val(mfn),0,0)
+FI
+FI
+//---конец контроля на наличие 69
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------991^B--------------------контрольна связанность дисциплин из поля 69, в поле 111 поля 69
+IF
+if val(v991^B)<>2 then '1' fi
+IF
+if p(v111) then '1' fi
+DEL
+2069
+*
+
+
+REPEAT
+IF
+if val(&unifor('JVUZ,IDD=',,&unifor('Av111^d#1'),))<=0 then '1' else '0' fi
+IF
+if val(v991^B)=1 then '1' fi
+PUTLOG
+'Записи VUZ: не найдена дисциплина ',&unifor('Av111^d#1'),,' MFN=',f(val(mfn),0,0),' - удалена из записи',
+ADD
+2069
+
+mpu,,&unifor('Av111^d#1')
+
+FI
+IF
+if val(v991^B)=0 then '1' fi
+PUTLOG
+'Записи VUZ: не найдена дисциплина ',&unifor('Av111^d#1'),,' MFN=',f(val(mfn),0,0),
+FI
+FI
+IF
+if val(&unifor('JVUZ,IDD=',,&unifor('Av111^d#1'),))>0 then '1' else '0' fi 
+// дисциплина найдена 
+IF
+if &uf('Av111^b#1')<>'' and &unifor('DVUZ,!IDD=',,&uf('Av111^d#1'),,'!,v5')<>&uf('Av111^b#1') then '1' fi
+PUTLOG
+'Запись VUZ: не совпадает кафедра ',,,,&uf('Av111^b#1'),,,,' с кафедрой в DISC',,,,,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+1
+
+
+UNTIL
+if p(v111) then '1' else '0' fi
+//----удаление 69 с ненайденной дисциплиной
+IF
+if val(v991^B)=1 and p(v2069) then '1' fi
+REPEAT
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('+97',v69^D)=&uf('Av2069#1') then '1' else '0' fi  else '0' fi fi/)
+
+DEL
+2069
+1
+
+
+UNTIL
+if p(v2069) then '1' fi
+FI
+FI
+// запись DISC м.б. найдена, но в ней нет этого контингента 
+DEL
+1069
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в поле 1069 идентификаторы дисциплин
+ADD
+1069
+XXXXXXXXXXXXXXXXXXX
+(v69^D/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v1069) then '1' fi
+// цикл по идентификаторам дисциплин из поля 69
+DEL
+2069
+*
+
+
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в поле 111 поля 83 дисциплины
+ADD
+111
+XXXXXXXXXXXXXXXXXXX
+&uf('DVUZ,?IDD=',&uf('Av1069#1'),'?,(mpu,v83/)')
+XXXXXXXXXXXXXXXXXX
+IF
+if a(v111) then '1' fi
+ADD
+2069
+
+mpu,,if val(v991^B)=1 then &uf('Av1069#1') fi
+
+PUTLOG
+mdl,'Запись VUZ: не найден контингент ',v68,,' для дисциплины ',,&uf('Av1069#1'),,'. MFN=',f(val(mfn),0,0),,,,if val(v991^B)=1 then ' - повторение 69 удалено'  fi
+FI
+IF
+if p(v111) then '1' fi
+//----- в поле 68  идентифик. запис DISC кладу в 113
+DEL
+113
+*
+
+
+ADD
+113
+
+&uf('DVUZ,?IDD=',&uf('Av1069#1'),'?,v3^0'),&uf('+7W5#')
+
+// в G5 идентиф.дисц., если в поля 83 нет поля 68
+ADD
+111
+
+&uf('+7U5#',(if p(v111) then if v111^A=&uf('+97',&uf('Av68^A#1')) and v111^C=&uf('+97',&uf('Av68^C#1')) and v111^N=&uf('+97',&uf('Av68^N#1')) and v111^V=&uf('+97',&uf('Av68^V#1')) and v111^O=&uf('+97',&uf('Av68^O#1')) and v111^F: &uf('Av68^F#1') then else &uf('Av113#1') fi fi/))
+
+ADD
+111
+
+&uf('+7G5')
+
+IF
+if rsum((if p(v111) then if v111^A=&uf('+97',&uf('Av68^A#1')) and v111^C=&uf('+97',&uf('Av68^C#1')) and v111^N=&uf('+97',&uf('Av68^N#1')) and v111^V=&uf('+97',&uf('Av68^V#1')) and v111^O=&uf('+97',&uf('Av68^O#1')) and v111^F: &uf('Av68^F#1') then '1,' fi fi))<=0 then '1' fi
+//---Если дисциплина в поле 69 не связана с контингентом, то поле 69 удаляется
+ADD
+2069
+
+mpu,,if val(v991^B)=1 then &uf('Av1069#1') fi
+
+PUTLOG
+mdl,'Запись VUZ: не найден контингент ',v68,,' для дисциплины ',,G5+|, |,'MFN=',f(val(mfn),0,0),,if  val(v991^B)=1 then ' - повторение 69 удалено'  fi
+FI
+//----конец если поле 111
+FI
+DEL
+1069
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1069) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----- конец  p(v1069)
+FI
+IF
+if val(v991^B)=1 and p(v2069) then '1' fi
+REPEAT
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('+97',v69^D)=&uf('Av2069#1') then '1' else '0' fi  else '0' fi fi/)
+
+DEL
+2069
+1
+
+
+UNTIL
+if p(v2069) then '1' fi
+FI
+//-------конец контроля на несвязанность
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+113
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1069
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2069
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------конец проверки VUZ
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------------------------ проверка записи FAK
+IF
+if v920: 'FAK' then '1' fi
+IF
+if val(&unifor('JVUZ,VFAK=',v93))<=0 then '1' else '0' fi
+PUTLOG
+'Запись FAK: нет записей контингента для факультета ',v93,'. MFN=',f(val(mfn),0,0)
+FI
+IF
+if val(&unifor('JVUZ,VFAK=',v93))>0 then '1' else '0' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+mpu,&uf('7VUZ,?VFAK=',v93,'?,v68^O/')
+
+IF
+if v98: 'ВСЕ' then else if s((|!|v111|!|)): s("!"v98"!") then else '1' fi fi
+PUTLOG
+'Запись FAK: нет записей контингента для факультета-ФО ',v93,'-',v98,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+// конец проверки FAK
+FI
+
+
+IF
+if val(v991^G)=1 then '1' fi,,,&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('+7W15#'),
+//-------------------------------------------------------проверка и удаление пробелов в конце
+REPEAT
+//---цикл-1-
+REP
+4
+1
+if p(v4) then if &uf('+961.1#',v4)=' ' then &uf('+7W11#1'),,&uf('+960.',,f(val(&uf('+95',v4))-1,0,0),'#',v4 ) else v4 fi fi
+
+UNTIL
+if &uf('+961.1#',v4)=' ' then '1' fi
+REPEAT
+//---кафедра-2-
+REP
+5
+1
+if p(v5) then if &uf('+961.1#',v5)=' ' then &uf('+7W12#1'),,&uf('+960.',,f(val(&uf('+95',v5))-1,0,0),'#',v5 ) else v5 fi fi
+
+UNTIL
+if &uf('+961.1#',v5)=' ' then '1' fi
+REPEAT
+//---направление-3-
+REP
+83^N
+F
+(if p(v83) then if &uf('+961.1#',v83^N)=' ' then &uf('+7W13#1'),,&uf('+960.',,f(val(&uf('+95',v83^N))-1,0,0),'#',v83^N ) else v83^N fi fi/)
+
+UNTIL
+if rsum((if p(v83) then if &uf('+961.1#',v83^N)=' ' then '1,' fi fi))>0 then '1' fi
+REPEAT
+//---специальность-4-
+REP
+83^C
+F
+(if p(v83) then if &uf('+961.1#',v83^C)=' ' then &uf('+7W14#1'),,&uf('+960.',,f(val(&uf('+95',v83^C))-1,0,0),'#',v83^C ) else v83^C fi fi/)
+
+UNTIL
+if rsum((if p(v83) then if &uf('+961.1#',v83^C)=' ' then '1,' fi fi))>0 then '1' fi
+REPEAT
+//---факультет-5-
+REP
+83^A
+F
+(if p(v83) then if &uf('+961.1#',v83^A)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v83^A))-1,0,0),'#',v83^A ) else v83^A fi fi/)
+
+UNTIL
+if rsum((if p(v83) then if &uf('+961.1#',v83^A)=' ' then '1,' fi fi))>0 then '1' fi
+IF
+if val(g11)>0 or val(g12)>0 or val(g13)>0 or val(g14)>0 or val(g15)>0 then '1' fi
+PUTLOG
+'Удалены пробелы в: ',,if val(g11)=1 then ' цикле' fi,,if val(g12)=1 then ' кафедре' fi,,if val(g13)=1 then ' направлении' fi,,if val(g14)=1 then ' специальности' fi,,if val(g15)=1 then ' факультете' fi ,,,,,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+
+
+DEL
+991
+*
+
+

@@ -1,0 +1,209 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^k)then v44^k|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^a)then v44^a|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^b)then v44^b|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^c)then v44^c|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^d)then v44^d|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if s(v44^e,v44^f,v44^g,v44^x)>'0'then v44^e|;|,v44^f|;|,v44^g|;|,v44^x|;| fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^1)then v44^1|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^2)then v44^2|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^3)then v44^3|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^4)then v44^4|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^5)then v44^5|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^6)then v44^6|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^7)then v44^7|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^8)then v44^8|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^9)then v44^9|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if s(v44^t,v44^u,v44^v,v44^w,v44^y,v44^z,v44^0)>'0'then v44^t|;|,v44^u|;|,v44^v|;|,v44^w|;|,v44^y|;|,v44^z|;|,v44^0|;| fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^q)then v44^q|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^r)then v44^r|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^s)then v44^s|;| else'0;'fi fi fi)),0,0)
+f(rsum((if p(v44) then if &unifor('Av991^b#1')='' or &unifor('Av991^b#1')<>'' and (v44^i=&unifor('Av991^b#1') or v44^?=&unifor('Av991^b#1')) then if p(v44^+)then v44^+|;| else'0;'fi fi fi)),0,2)
+#
+'
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx4742
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5270
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5724
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx6179
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx6633
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7088
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7612
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8136
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8661
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx9185
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx9710
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx10234
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx10758
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx11283
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx11807
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx12332
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx12899
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx13466
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx14034
+\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\pard\plain \s15\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049 
+{\qr ÈÒÎÃÎ:\tab Íà ñóììó: 'v20,if val(v20)>0 then &unifor('KORG.MNU|3'),'\tab \tab ' fi,v1'\cell }
+{'v2'\cell }{'v3'\cell }{'v4'\cell }{'v5'\cell }{'v6'\cell }{'v7'\cell }
+{'v8'\cell }{'v9'\cell }{'v10'\cell }{'v11'\cell }{'v12'\cell }{'v13'\cell }
+{'v14'\cell }{'v15'\cell }{'v16'\cell }{'v17'\cell }{'v18'\cell }{'v19'\cell }
+\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid {\row }
+\pard\plain \s15\qc\nowidctlpar\widctlpar\adjustright \fs20\lang1049 '
+*****
+[Tab]
+\paperw16727\paperh11907\margl567\margr567\margt567\margb1134
+{\b\fs20 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx851
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2001
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2851
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx3544
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx14034
+\pard\plain \s17\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049 
+{\fs24    }{\f17 \'c4\'e0\'f2\'e0 }{  }{\f17 \'e7\'e0\'ef\'e8\'f1\'e8\cell 
+\'cd\'ee\'ec\'e5\'f0 \'e2 \'ca\'d1\'d3}{\cell }
+{\f17 \'c8\'f1\'f2\'ee\'f7\'ed\'e8\'ea \'ef\'ee\'f1\'f2}
+{.\cell }{\f17\lang1033 N }
+{\f17\lang1033 \'f1}{\f17 \'ee\'ef\'f0}{ }{\f17 \'e4\'ee\'ea}{\lang1033 \cell }
+\pard \s17\qc\nowidctlpar\widctlpar\intbl\adjustright 
+{\f17\fs28 \'cf\'ee\'f1\'f2\'f3\'ef\'e8\'eb\'ee\cell }
+\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid {\row }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx851\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2001\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2851\clvertalt\cltxlrtb 
+\cellx3544\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4743\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx14034
+\pard\plain \s17\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049 
+{\cell \cell \cell \cell }
+\pard \s17\qc\nowidctlpar\widctlpar\intbl\adjustright 
+{\f17 \'c2\'f1\'e5\'e3\'ee\par }
+\pard \s17\nowidctlpar\widctlpar\intbl\adjustright {\cell }
+\pard \s17\qc\nowidctlpar\widctlpar\intbl\adjustright 
+{\f17\fs28 \'c2 \'f2\'ee\'ec \'f7\'e8\'f1\'eb\'e5}{\fs28  }
+{\f17\fs28  (\'ea\'ee\'eb\'e8\'f7\'e5\'f1\'f2\'e2\'ee \'fd
+\'ea\'e7\'e5\'ec\'ef\'eb\'ff\'f0\'ee\'e2)}{\cell }
+\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid {\row }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx851\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2001\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2851\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx3544\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4111\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4742\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb 
+\cellx7088\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb 
+\cellx12332\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx14034\pard\plain \s17\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049 
+{\cell \cell \cell \cell }{\f17 \'cd\'e0\'e7}{\cell }
+{\f17 \'dd\'ea\'e7}{\cell }
+\pard \s17\qc\nowidctlpar\widctlpar\intbl\adjustright 
+{\f17\fs24 \'cf\'ee \'e2\'e8\'e4\'e0\'ec\cell \'cf\'ee \'f1
+\'ee\'e4\'e5\'f0\'e6\'e0\'ed\'e8\'fe\cell \'cf\'ee \'ff\'e7\'fb\'ea\'e0\'ec
+\cell }\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid 
+{\row }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx851\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx2001\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx2851\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx3544\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx4111\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx4742\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5270\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5724\clvertalt\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx6179\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx6633\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7088\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7612\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8136\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8661\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx9185\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx9710\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx10234\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx10758\clvertaltclbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx11283\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx11807\clvertalt\clbrdrt\brdrs\brdrw15\cltxlrtb 
+\cellx12332\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx12899\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx13466\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx14034
+\pard\plain \s17\nowidctlpar\widctlpar\intbl\adjustright\fs20 \lang1049 
+{\cell \cell \cell \cell \cell \cell }{\f17 \'ca\'ed\'e8\'e3\'e8\cell \'c1\'f0}
+{\cell }{\f17 \'c6}{\cell }{\f17 \'c0\'c2}{\cell }{\f17 \'c4\'f0}{
+\cell 1\cell 2\cell 3\cell 4\cell 5
+\cell 6\cell 7\cell 8\cell 9\cell }
+{\f17\lang1033 \'c4\'f0}{\cell }{\f17 \'f0\'f3\'f1}{\cell }{\f17 \'ed\'e0\'f6
+\cell \'c4\'f0}{\cell }
+\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid {\row }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clvertalt\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx851\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx2001\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx2851\clvertalt\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx3544\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx4111\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx4742\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5270\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx5724\clvertalt\cltxlrtb 
+\cellx6179\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\cltxlrtb 
+\cellx6633\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7088\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx7612\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8136\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx8661\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\cltxlrtb 
+\cellx9185\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx9710\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx10234\clvertalt\clbrdrt\brdrs\brdrw15\cltxlrtb 
+\cellx10758\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx11283\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\cltxlrtb 
+\cellx11807\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx12332\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx12899\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx13466\clvertalt\clbrdrt\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cltxlrtb 
+\cellx14034
+\pard\plain \s17\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049 
+{\cell \cell \cell \cell }
+{\lang1033 1}{\cell }{\lang1033 2}{\cell }{\lang1033 3}{\cell }{\lang1033 4}
+{\cell }{\lang1033 5}{\cell }{\lang1033 6}{\cell }{\lang1033 7}{\cell }
+{\lang1033 8}{\cell }{\lang1033 9}{\cell }{\lang1033 10}{\cell }{\lang1033 11}
+{\cell }{\lang1033 12}{\cell }{\lang1033 13}{\cell }{\lang1033 14}{\cell }
+{\lang1033 15}{\cell }{\lang1033 16}{\cell }{\lang1033 17}{\cell }
+{\lang1033 18}{\cell }{\lang1033 19}{\cell }{\lang1033 20}{\cell }
+\pard\plain \nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1049\cgrid {\row }
+{}
+\par}

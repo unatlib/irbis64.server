@@ -1,0 +1,28 @@
+mhl,
+(if '***'='971'then 
+    v***^b,'^V'v971^v,'^D'v971^d,'^F'v971^f,'^E'v971^e,'^H'v971^h,'^I'v971^i,
+           '^7'v971^7,'^3^S^R^N^C^A^!^K^M^8^Q^T^O^J^0' 
+ else 
+    if '***'='710' and v920:'PVK' or '***'='972' then v***^a,'^V'v***^v,
+             '^D'v***^d,'^F'v***^f,'^E'v***^e,'^H'v***^h,'^I'v***^i,'^7'v***^7,
+             '^3^S^R^N^C^A^L^!^K^M^8^Q^T^O^J^0' 
+    else 
+       if '***'='601' and p(v601^P) then v***^p,'^V'v***^v,
+             '^D'v***^d,'^F'v***^f,'^E'v***^e,'^H'v***^h,'^I'v***^i,'^7'v***^7,'^B'v***^B,
+             '^!'v601^!,'^K'v601^k,'^M'v601^m,'^8'v601^8,'^Q'v601^q,'^T'v601^t,'^O'v601^o,'^J'v601^j,'^0'v601^0,'^3^A^S^R^N^C'
+       else 
+          if '***'='710' or '***'='711' or '***'='601'and a(v601^p) or '***'='981'then v***^a,'^L'v***^b,'^7'v***^7
+             '^3^V^D^F^E^H^I^A^!^K^M^Q^T^O^J^0' 
+          else 
+             if '***'='962'then v***^a,'^S'v***^s,'^R'v***^r,'^N'v***^n,'^C'v***^c,
+             '^V'v***^v,'^D'v***^d,'^F'v***^f,'^E'v***^e,'^H'v***^h,'^I'v***^i,
+             '^7'v***^7,'^L'v962^b,'^3^A^!^K^M^8^Q^T^O^J^0'
+             else 
+                if '***'='7101'then v710^b '^3^Z^V^D^F^E^H^I^7^A^L^!^K^M^8^Q^T^O^J^0' else 
+                   if '***'='7111'then v711^b '^3^Z^V^D^F^E^H^I^7^A^L^!^K^M^8^Q^T^O^J^0' else 
+                      if '***'='9621'then v962^b '^3^Z^V^D^F^E^H^I^7^A^L^!^K^M^8^Q^T^O^J^0' else 
+                         if '***'='6011'then 
+                            v601^l,'^3^Z^V^D^F^E^H^I^7^A','^!'v601^!,'^K'v601^k,'^M'v601^m,'^8'v601^8,
+                            '^Q'v601^q,'^T'v601^t,'^O'v601^o,'^J'v601^j,'^0'v601^0 
+                         else v***^b,'^7'v***^7,'^3^V^D^F^E^H^I^A^!^K^M^8^Q^T^O^J^0' 
+ fi fi fi fi fi fi fi fi fi/),mpl

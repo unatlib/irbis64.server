@@ -1,0 +1,76 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx500 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1900 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2400 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3500 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4000 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7800 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8700 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9800 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10500 
+\pard \widctlpar\intbl {\ql \fs18 ',,,
+&uf('S1A'),,,,,
+'\cell }\pard \widctlpar\intbl {\ql  \fs20 ',,,,
+/* инв.ном, ШК
+v1^A,,if v1^F<>'' then &uf('+7W12#',,f(val(g12)+1,0,0)  ) fi,,,,,
+if v1^G='4' then '\par \fs16 (утерян)' fi,,
+if v1^G='6' then '\par \fs16 (списан)' fi,,
+if v1^F='1' then '\par \fs16 (не на баланс)' fi,,
+'\cell }\pard \widctlpar\intbl {\ql  \fs18 ',,,,
+/* количество
+v1^C,,&uf('+7W13#',,f(val(g13)+val(v1^C),0,0)  ),,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* место хранения
+v1^B,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* отметка о проверке
+' ',,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* БО
+ref(val(v1^Y),&uf('6Brief')  ),,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* год издания
+ref(val(v1^Y),&uf('Av210^D#1')  ),,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* Цена
+v1^E,,&uf('+7W10#',,f(val(v1^C) * val(v1^E),0,2) ),,&uf('+7W11#',,f(val(g11)+val(g10),0,2)  ),,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,,
+/* Цена
+' ',,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,393 @@
+0
+DEL
+922
+1
+
+XXXXXXXXXXXXXXXXXX
+REP
+210
+F
+(if p(v210)then if v210^a:'S.l'or v210^a:'Á.ì'then if s(v210^d,v210^c)=''then # fi else|^A|v210^a,if val(&umarci('2210#^a'))>1 then'^X'&umarci('1210#a#2')fi,if val(&umarci('2210#^a'))>2 then'^Y'&umarci('1210#a#3')fi fi,if v210^c:'S.n.'then else|^C|v210^c fi,if v210^d:'Á.ã.'then else|^D|v210^dfi,|^1|v210^e fi/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v461)and l("ID="v461^1)>0 then'0'else'1'fi
+
+
+
+DEL
+461^1
+*
+
+
+ADD
+1002
+
+(if v998.4:'461:'then v998*6 fi/)
+
+IF
+if v1002<>''then'1'fi
+
+
+
+REPEAT
+
+
+
+
+ADD
+1001
+
+(if &unifor('1*L^1?v1002#1')<>''then ,&unifor('1*L^1?v1002#1')/ fi)
+
+DEL
+1002
+1
+
+
+UNTIL
+if v1002<>''then'1'fi
+
+
+
+FI
+
+
+
+
+ADD
+961
+
+(if v1001.3='700'then v1001*5,if v1001*4.1:'0'then '^L1'fi,'^ZÄÀ'fi/)
+
+ADD
+961
+
+(if v1001.3='701'then v1001*5,if v1001*4.1:'0'then '^L1'fi fi/)
+
+ADD
+961
+
+(if v1001.3='702'then|^A|v1001^a,|^B|v1001^b,|^C|v1001^c,|^D|v1001^d,|^F|v1001^f,|^G|v1001^g,|^4|v1001^4,if v1001^4:'340'then' Ðåä.'fi,if v1001^4:'220'then' Ñîñò.'fi,if v1001^4:'730'then' Ïåð.'fi,if v1001*1.1:'0'then '^L1'fi fi/)
+
+DEL
+961^4
+F
+(if p(v961)then if v961^4.3='070'then '1'else '0'fi fi/)
+
+ADD
+962
+
+(if '710':v1001.3 then v1001*5,'^ZÄÀ' fi/)
+
+ADD
+962
+
+(if v1001.3='711'then v1001*5 fi/)
+
+ADD
+962
+
+(if v1001.3='712'then v1001*5 fi/)
+
+REP
+962
+F
+(if p(v962)then &umarci('5962'),fi/)
+
+ADD
+666
+
+(if v1001.3='606'then v1001*5 fi/)
+
+REP
+666
+F
+(if p(v666)then |^A|v666^a,|^B|v666^x,if &umarci('1666#x#2')<>''then'^C'&umarci('1666#x#2'),if &umarci('1666#x#3')<>''then'^D'&umarci('1666#x#3')fi fi,|^G|v666^y,if &umarci('1666#y#2')<>''then'^E'&umarci('1666#y#2'),if &umarci('1666#y#3')<>''then'^O'&umarci('1666#y#3')fi fi,|^H|v666^z,|^9|v666^j fi/)
+
+ADD
+606
+
+(v666/)
+
+DEL
+666
+*
+
+
+ADD
+686
+
+(if v1001.3='686'then v1001*5 fi/)
+
+ADD
+621
+
+(if v686^2:'rubbk'then v686^a/&umarci('1686#a#2')/&umarci('1686#a#3')/&umarci('1686#a#4')/&umarci('1686#a#5')fi/)
+
+ADD
+328
+
+(if v686^2:'oksvnk'then |^N|v686^a/if &umarci('1686#a#2')<>''then '^0'&umarci('1686#a#2')fi/if &umarci('1686#a#3')<>''then '^9'&umarci('1686#a#3')fi,fi/)
+
+ADD
+964
+
+(if v686^2:'rugasnti'then v686^a/&umarci('1686#a#2')/&umarci('1686#a#3')fi/)
+
+DEL
+1001
+*
+
+
+DEL
+686
+F
+(if v686:'^2'then'1' else'0'fi/)
+
+FI
+
+
+
+
+IF
+if p(v461)and l("ID="v461^1)>0 then'1'else'0'fi
+
+
+
+DEL
+46
+*
+
+
+ADD
+46
+
+ref(l("ID="v461^1),("^L"v510^d+|=|),(v225^a/),(|^T|v517^t,|^R|v517^a/),)
+
+ADD
+961
+
+ref(l("ID="v461^1), "^ZÄÀ"v700)
+
+ADD
+961
+
+ref(l("ID="v461^1),(if p(v701)then v701 fi/))
+
+ADD
+961
+
+ref(l("ID="v461^1),(if p(v702)then v702 fi/))
+
+ADD
+962
+
+ref(l("ID="v461^1),if p(v710)then |^ZÄÀ|v710 fi)
+
+ADD
+962
+
+ref(l("ID="v461^1),(if p(v711)then v711 fi/))
+
+ADD
+621
+
+ref(l("ID="v461^1),(if p(v621)then v621fi/))
+
+ADD
+675
+
+ref(l("ID="v461^1),(if p(v675)then v675fi/))
+
+ADD
+964
+
+ref(l("ID="v461^1),(if p(v964)then v964fi/))
+
+ADD
+606
+
+ref(l("ID="v461^1),(v606/))
+
+ADD
+607
+
+ref(l("ID="v461^1),(v607/))
+
+ADD
+215^d
+1
+ref(l("ID="v461^1),if p(v215^d)then v215^d fi)
+
+REP
+461
+*
+(if p(v461)then if v461^1=''then v461 else if l("ID="v461^1)>0 then ref(l("ID="v461^1),"^C"v200^a,"^E"v200^e,"^F"v200^f,";"v200^g,if v210^a:'S.l'or v210^a:'Á.ì'then else"^D"v210^a fi,if v210^c:'S.n.'then else"^G"v210^c fi,"^H"v210^d,"^X"v700^a," "v700^b,(|^I|v10^a/)),else v461fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+
+FI
+
+
+
+
+REP
+991
+F
+(if p(v991)then if v991.1:'^'then v991 else &unifor(|G1^|v991)fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+(if p(v991)then if p(v991^a)then'^C'&umarci('3991#2#^a')if val(&umarci('2991#^a'))>1then'^Uäà/N'fi|^Y|v991^y,|^2|v991^2/if val(&umarci('2991#^a'))>1then'^C'&umarci('3991#3#^a')if val(&umarci('2991#^a'))>2then'^Uäà/N'fi|^Y|v991^y,|^2|v991^2 fi/if val(&umarci('2991#^a'))>2then'^C'&umarci('1991#a#3')fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+F
+(if p(v991)then if p(v991^a)or (not(s(v991^c,v991^e,v991^g,v991^d,v991^h)<>''))then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+991
+*
+'^f'
+'^G'
+CHA
+991
+*
+'^F'
+'^G'
+ADD
+991^n
+F
+&unifor('S0'),(if p(v991)then &unifor('S1A')fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+991^u
+*
+'N'
+if p(v991)then &unifor('S0')fi(if p(v991)then if v991^u:'N'then ,f(val(v991^n)+val(&umarci('2991#'v991^Y,v991^2,v991^3))-val(&unifor('S1A'))+1,0,0)fi fi/)
+DEL
+991^y
+F
+(if p(v991)then if p(v991^u)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+991
+*
+'^Y'
+'^F'
+REP
+991
+F
+(if p(v991)then if v991:'^'then|^C|v991^c,|^E|v991^e,if val(&umarci('2991#^e'))>1then':'&umarci('1991#e#2')fi,if val(&umarci('2991#^e'))>2then':'&umarci('1991#e#3')fi,|^F|v991^f,|^2|v991^2,|^3|v991^3,|^G|v991^g,if val(&umarci('2991#^g'))>1then';'&umarci('1991#g#2')fi,if val(&umarci('2991#^g'))>2then';'&umarci('1991#g#3')fi,|^H|v991^h,|^I|v991^i,if val(&umarci('2991#^h'))>1then'^K'&umarci('1991#h#2')fi,if val(&umarci('2991#^i'))>1then'^L'&umarci('1991#i#2')fi,|^D|v991^d,|^U|v991^u else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+922
+XXXXXXXXXXXXXXXXXXX
+(v991/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+F
+(if p(v991)then'1'else'xxx'fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+700^4
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+701^4
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+328
+F
+"^A"v328^a,(if p(v992)then |^N|v992^a,if val(&umarci('2992#^a'),'a0')>1then '^0'&umarci('1992#a#2')fi,if val(&umarci('2992#^a'),'a0')>2 then '^9'&umarci('1992#a#3')fi fi)
+XXXXXXXXXXXXXXXXXXX
+DEL
+992
+F
+(if p(v992)then'1'else'xxx'fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910^R
+F
+(if p(v910)then if v910^r<>''and &unifor('Av906#1'):v910^r then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+463^1
+F
+(if p(v463)then if v463^S:'. 'then &unifor(|G0.|v463^s),'.'else # fi fi/)
+
+REP
+463^S
+F
+(if p(v463)then if v463^S:'. 'then &unifor(|G2 |d463^s,&unifor(|G2.|v463^s))else v463^s fi fi/)
+
+ADD
+1610
+
+(v610/)
+
+DEL
+610
+*
+
+
+REPEAT
+
+
+
+
+ADD
+111
+
+&unifor('Av1610#1')
+
+
+REPEAT
+
+
+
+
+ADD
+610
+
+(if p(v111)then &umarci('1111#a#1')fi)
+
+REP
+111
+1
+if &unifor('G1^'&unifor(|G2^|v111)):'^'then &unifor('G1^'&unifor(|G2^|v111))else '' fi
+
+UNTIL
+if v111^a<>''then'1'else'0'fi
+
+
+
+DEL
+1610
+1
+
+
+UNTIL
+if v1610<>''then'1'else'0'fi
+
+
+
+ADD
+601^!
+F
+(if p(v601)then v601^a fi/)
+
+ADD
+601^?
+F
+(if p(v601)then if v601^b<>''then v601^b else # fi fi/)
+
+REP
+601^a
+F
+(if p(v601)then v601^a,|. |v601^b,| (|v601^e,if v601^e<>''then |; |v601^f,|)|d601^e else | (|v601^f|)|fi fi/)
+

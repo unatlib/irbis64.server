@@ -1,0 +1,98 @@
+0
+// 10.1 проверка записей каталога по данным книгообеспеченности
+IF
+if p(v691) then '1' fi
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(if p(v691) then if a(v691^U) then v691 fi fi/)
+
+DEL
+111
+*
+
+
+ADD
+111
+
+'0'
+
+IF
+if p(v1691) then '1' fi
+//-------------------------------------- цикл по полям 691
+REPEAT
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+IF
+if &uf('Av1691^I#1')='' then '1' fi
+PUTLOG
+'Нет идентификатора дисциплины ',&uf('Av1691^D#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+IF
+if &uf('Av1691^I#1')<>'' then '1' fi
+// есть ли запись дисциплины с идентификатором
+IF
+if Val(&uf('JVUZ,IDD=',&uf('Av1691^I#1')))<=0 then '1' fi
+PUTLOG
+'Нет дисциплины с идентификатором ',&uf('Av1691^I#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+// проверяю запись VUZ
+//-----------------------------------------
+IF
+if val(&uf('JVUZ,?',if &unifor('Av1691^a#1')<>'' then &unifor('Av1691^a#1'),'-' fi,,if &unifor('Av1691^n#1')<>'' then &unifor('Av1691^n#1'),'-' fi,,if &unifor('Av1691^c#1')<>'' then &unifor('Av1691^c#1'),'-' fi,,if &unifor('Av1691^v#1')<>'' then &unifor('Av1691^v#1'),'-' fi,,if &unifor('Av1691^o#1')<>'' then &unifor('Av1691^o#1'),'-' fi,,if &unifor('Av1691^f#1')<>'' then &unifor('Av1691^f#1'),'-' fi))<=0 then '1' fi 
+PUTLOG
+'Нет записи VUZ по связке ',,,,,,&uf('Av1691^A#1'),'-',&uf('Av1691^C#1'),'-',&uf('Av1691^N#1'),'-',,&uf('Av1691^V#1'),'-',,,&uf('Av1691^O#1'),'-',,&uf('Av1691^F#1'),'-',,,,,,,,' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+FI
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+FI
+DEL
+111
+*
+
+
+FI
+//----------проверка записи-аналога
+IF
+if p(v699) and v699^U: '0' then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('7,!I=',v699^W,'!,(v699/)')
+
+
+IF
+if a(v111) then '1' fi
+PUTLOG
+'Запись-аналог - нет основной записи. MFN=',f(val(mfn),0,0)
+FI
+IF
+if p(v111) then '1' fi
+PUTLOG
+if rsum((if p(v111) then if v111^U='1' then if &uf('+97',v111^W)=&uf('+97',&uf('Av903#1')) then '1,' fi fi fi))=0 then 'Запись-аналог - в основной записи нет ссылки на этот аналог. MFN=',f(val(mfn),0,0) fi/
+FI
+DEL
+111
+*
+
+
+FI

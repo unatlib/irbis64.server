@@ -1,0 +1,103 @@
+mhl,
+if &unifor('Av905^1#1')<>'' then v330^g else 
+   if p(v330^f) then 
+      if  (v330^g:&unifor('G0 'v330^f) or v330^g:&unifor('G0,'v330^f) or p(v330^x) and 
+           v330^g:&unifor('E'v330^x,v330^f)) 
+      AND (v330^f:'.' and (v330^g:&unifor('G0.'&unifor('G2 'v330^f)) or val(v330^x)>1 and 
+           v330^g:&unifor('G0.'&unifor('F'v330^x,v330^f))) or (not(v330^f:'.'))) 
+      AND (v330^f:',' and (v330^g:&unifor('G0 '&unifor('G2 'v330^f)) or val(v330^x)>1 and 
+           v330^g:&unifor('G2,'&unifor('F'v330^x,v330^f))) or (not(v330^f:','))) 
+      AND (p(v330^?) and (v330^g:v330^? or v330^g:v330^?.1) or a(v330^?)) 
+      then v330^g 
+      else 
+         if p(v330^g) and &unifor('Av903#1')<>'' then v330^g 
+         else 
+            if p(v330^q) then if v330^q*4.1='*'then v330^q*5 else &unifor('Q'v330^q*4) fi' ' fi
+            if p(v330^x) then 
+               if v330^x:'1' then v330^f 
+               else 
+                  if &unifor('F'v330^x,v330^f)<>'' then 
+                     if &unifor('F'v330^x,v330^f):'. ' then &unifor('F'v330^x,v330^f) else 
+                        if &unifor('F'v330^x,v330^f):'.' then &unifor('G0.'&unifor('F'v330^x,v330^f)),'.' 
+                           if &unifor('G2.'&unifor('F'v330^x,v330^f)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v330^x,v330^f)), 
+                        else &unifor('F'v330^x,v330^f) fi 
+                     fi 
+                  else v330^? 
+                  fi,' '&unifor('G0,'&unifor('E'v330^x,v330^f)) 
+               fi 
+            else 
+               if v330^f:', ' then &unifor('G2 'v330^f)' '&unifor('G0,'v330^f)  
+               else 
+                  if v330^f:' 'then 
+                     if &unifor('G2 'v330^f):'.'then 
+                        if &unifor('G2 'v330^f):'. ' then &unifor('G2 'v330^f) 
+                        else &unifor('G0.'&unifor('G2 'v330^f)),'.' 
+                           if &unifor('G2.'&unifor('G2 'v330^f)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v330^f)) 
+                        fi 
+                     else &unifor('G2 'v330^f)' ' 
+                     fi,' '&unifor('G0,'&unifor('G0 'v330^f)) 
+                  else v330^?| |,v330^f    
+            fi fi fi 
+            if p(v330^w) and a(v330^q) then 
+               if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]' fi 
+            else 
+               if p(v330^2) then ', ' 
+                  if p(v330^s) then if v330^s=v330^q then else if v330^s*4.1='*'then v330^s*5 else &unifor('Q'v330^s*4) fi' ' fi fi
+                  if p(v330^<) then 
+                     if v330^<:'1' then v330^2 
+                     else 
+                        if &unifor('F'v330^<,v330^2)<>'' then 
+                           if &unifor('F'v330^<,v330^2):'. ' then &unifor('F'v330^<,v330^2) else 
+                              if &unifor('F'v330^<,v330^2):'.' then &unifor('G0.'&unifor('F'v330^<,v330^2)),'.' 
+                                 if &unifor('G2.'&unifor('F'v330^<,v330^2)):'.' then ' 'fi, 
+                                    &unifor('G2.'&unifor('F'v330^<,v330^2)) 
+                              else &unifor('F'v330^<,v330^2) fi 
+                           fi 
+                        else v330^, 
+                        fi,' '&unifor('G0,'&unifor('E'v330^<,v330^2)) 
+                     fi 
+                  else 
+                     if v330^2:', ' then &unifor('G2 'v330^2)' '&unifor('G0,'v330^2)  
+                     else 
+                        if v330^2:' 'then 
+                           if &unifor('G2 'v330^2):'.'then 
+                              if &unifor('G2 'v330^2):'. ' then &unifor('G2 'v330^2)  
+                              else &unifor('G0.'&unifor('G2 'v330^2)),'.' 
+                              if &unifor('G2.'&unifor('G2 'v330^2)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v330^2)) 
+                              fi 
+                           else &unifor('G2 'v330^2) ' ' 
+                           fi,' '&unifor('G0,'&unifor('G0 'v330^2)) 
+                        else v330^,| |,v330^2    
+               fi fi fi fi 
+               if p(v330^3) then ', ' 
+                  if p(v330^t) then if v330^t=v330^s then else if v330^t*4.1='*'then v330^t*5 else &unifor('Q'v330^t*4) fi' ' fi fi
+                  if p(v330^>) then 
+                     if v330^>:'1' then v330^3 
+                     else  
+                        if &unifor('F'v330^>,v330^3)<>'' then 
+                           if &unifor('F'v330^>,v330^3):'. ' then &unifor('F'v330^>,v330^3) else 
+                              if &unifor('F'v330^>,v330^3):'.' then &unifor('G0.'&unifor('F'v330^>,v330^3)),'.' 
+                                 if &unifor('G2.'&unifor('F'v330^>,v330^3)):'.' then ' 'fi, 
+                                    &unifor('G2.'&unifor('F'v330^>,v330^3)) 
+                              else &unifor('F'v330^>,v330^3) fi 
+                           fi 
+                        else v330^; 
+                        fi,' '&unifor('G0,'&unifor('E'v330^>,v330^3)) 
+                     fi 
+                  else 
+                     if v330^3:', ' then &unifor('G2 'v330^3)' '&unifor('G0,'v330^3)  
+                     else 
+                        if v330^3:' 'then 
+                           if &unifor('G2 'v330^3):'.'then 
+                              if &unifor('G2 'v330^3):'. ' then &unifor('G2 'v330^3) 
+                              else &unifor('G0.'&unifor('G2 'v330^3)),'.' 
+                              if &unifor('G2.'&unifor('G2 'v330^3)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v330^3)) 
+                              fi 
+                           else &unifor('G2 'v330^3) ' ' 
+                           fi,' '&unifor('G0,'&unifor('G0 'v330^3)) 
+                        else v330^;| |,v330^3 
+            fi fi fi fi fi,| ; |v330^g  
+      fi fi 
+   else v330^g   
+fi fi,
+mpl,

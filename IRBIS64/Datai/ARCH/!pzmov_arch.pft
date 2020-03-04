@@ -1,0 +1,24 @@
+mhl,
+(if '***'='6061'then v606^a, fi/)/ 
+(if '***'='6062'then if p(v606) then v606^b,| |n606^b fi fi/)/
+(if '***'='6063'then if p(v606) then v606^c,| |n606^c fi fi/)/ 
+(if '***'='6064'then if p(v606) then v606^d,| |n606^d fi fi/)/ 
+(if '***'='6065'then if p(v606) then v606^g,| |n606^g fi fi/)/ 
+(if '***'='6066'then if p(v606) then v606^e,| |n606^e fi fi/)/ 
+(if '***'='6067'then if p(v606) then v606^o,| |n606^o fi fi/)/ 
+(if '***'='6068'then if p(v606) then v606^h,| |n606^h fi fi/)/
+(if '***'='6071'then v607^a fi/)/ 
+(if '***'='6072'then if p(v607) then v607^b,| |n607^b fi fi/)/
+(if '***'='6073'then if p(v607) then v607^c,| |n607^c fi fi/)/ 
+(if '***'='6074'then if p(v607) then v607^d,| |n607^d fi fi/)/ 
+(if '***'='6075'then if p(v607) then v607^g,| |n607^g fi fi/)/ 
+(if '***'='6076'then if p(v607) then v607^e,| |n607^e fi fi/)/ 
+(if '***'='6077'then if p(v607) then v607^o,| |n607^o fi fi/)/ 
+(if '***'='6078'then if p(v607) then v607^h,| |n607^h fi fi/)/
+(if '***'='6191'then if p(v619) then v619^d,| |n619^d fi fi/)/ 
+(if '***'='6192'then if p(v619) then v619^o,| |n619^o fi fi/)/ 
+(if '***'='6193'then if p(v619) then v619^h,| |n619^h fi fi/)/
+(if '***'='6191'then if p(v619) then v619^d,| |n619^d fi fi/)/ 
+(if '***'='6192'then if p(v619) then v619^o,| |n619^o fi fi/)/ 
+(if '***'='6193'then if p(v619) then v619^h,| |n619^h fi fi/)/
+mpl,

@@ -1,0 +1,65 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=8
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=2
+CELL_TAB2_2= Индекс издания
+CELL_TAB2_3=v86
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=5
+CELL_TAB3_2=Наименование издания
+CELL_TAB3_3=if p(v591)then v591.100,if v591*100<>''then '...' fi else v200^a.100,if v200^a*100<>''then '...' fi fi,
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=1
+CELL_TAB4_2=Кол. компл
+CELL_TAB4_3=f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then v39^c|;| fi fi)),0,0)
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Да
+CELL_TAB5_1=2
+CELL_TAB5_2=Цена 1-го комплекта
+CELL_TAB5_3=v34
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Нет
+CELL_TAB6_1=2
+CELL_TAB6_2=Сумма
+CELL_TAB6_3=f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then f((val(v39^c)*val(&unifor('Av34#1'))),0,2)';'fi fi)),0,2)
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Да
+CELL_TAB7_1=2
+CELL_TAB7_2=Подразделение
+CELL_TAB7_3=&unifor('S0'),(if p(v39)then if &unifor('Q'v39^b)=''then if &unifor('S1A')='1'then &unifor('S0'),v39^a,|(|v39^d|), |fi else if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then &unifor('S0'),v39^a,|(|v39^d|), |,if v39^a=''then v39^b,|(|v39^c|), |fi,else &unifor('S2')fi fi fi),
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=' Итого : ',v1" компл.", if val(v2)>0 then ' на сумму ',f(val(v2),0,2)' '&unifor('Korg.mnu|3')fi,
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=700
+CELL_SORT4=0
+CELL_SORT5=if p(v33) then if p(v591)then v591 else v200^a,v923^h,v923^i,v923^k,v923^l fi,'  'mfn,fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=
+HDR_PFT=tablohw.pft
+HDR_PARAMS_COUNT=0

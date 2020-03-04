@@ -1,0 +1,51 @@
+      if a(v461) then ". - <b>Систем. требования:</b> "d230^d,&unifor('S0'),
+         (if p(v230) then 
+             if v230^x='' then |. |+d230^d,&unifor('S1') else 
+                if v230^x='1' then
+                   if &unifor('S1A')='1' then|Прил.: |d230^d else | ; Прил.: |d230^d fi 
+             fi fi,v230^d,| (|v230^e|)|
+         fi),
+        (|. - Режим доступа: |v337^d,|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a) 
+      fi,
+      (if v517^n:'0'then else 
+          if p(v517) then'. - ',
+             if v517^t.4='540 'then | [|v517^a|] | else v517^t*4,| : |v517^a 
+      fi  fi fi),
+      |. - |v314,|. - |v912,|. - |v320,|. - |v327,
+      if p(v330)then 
+         if p(v905^k) then 
+            if v905^k='0' then else '. - '
+               if v905^k='1' then 'Из содерж.: ' else v905^k fi,
+               (if p(v330) then | |+v330^c,| / |v330^g,
+                   if p(v330^g) then 
+                      if v330^g|!|:'.!' then else '. 'fi 
+                   else mhl,v330.1+| ; |,mpl,
+               fi fi)
+            fi 
+         else'. - Содержание: '
+            (if p(v330) then v330^c,| / |v330^g fi,
+             if a(v330^g) and p(v330^f) and &unifor('Av905^1#1')=''then' / ',o330g, fi,
+             if p(v330^g) then 
+                if v330^g|!|:'.!' then else '.'fi 
+             else mhl,v330.1+| ; |,mpl,fi) 
+      fi fi,
+      if v920:'NJ' and p(v922)then 
+         if p(v905^k) then 
+            if v905^k='0' then else '. - '
+               if v905^k='1' then 'Из содерж.: ' else v905^k fi,
+               (if p(v922) then | |+v922^c,| / |v922^g,
+                   if p(v922^g) then 
+                      if v922^g|!|:'.!' then else '. 'fi 
+                   else mhl,v922.1+| ; |,mpl,
+               fi fi)
+            fi 
+         else'. - Содержание: '
+            (if p(v922) then v922^c,| / |v922^g fi,
+             if a(v922^g) and p(v922^f) and &unifor('Av905^1#1')=''then' / ',o922gnj, fi,
+             if p(v922^g) then 
+                if v922^g|!|:'.!' then else '.'fi 
+             else mhl,v922.1+| ; |,mpl,fi) 
+      fi fi,
+      if s(v905^l)<>''or &unifor('IPRIVATE,KKP,')<>''then mhl,|. - |v300,mpl fi,
+      ,origp454,
+      if p(v215^x)then if val(v215^x)=0 then|. - Тираж |v215^x else|. - |v215^x| экз.|fi fi,

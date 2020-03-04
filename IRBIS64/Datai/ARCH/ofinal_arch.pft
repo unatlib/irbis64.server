@@ -1,0 +1,13 @@
+if p(v951) then'\par ',
+   (if p(v951) then 
+       if p(v951^i) then 
+          if p(v951^t) then |\par |+d951 else | , |+d951 fi,
+       &unifor('+I$0,,'v951^i'$',v951^t,if a(v951^t) then v951^i fi) 
+    fi fi,
+    if p(v951^a) then 
+       if p(v951^i) then 
+          if v951^i:v951^a then else 
+             if p(v951^t) then |\par |+d951 else ' , ' fi,
+          &unifor('+I$3,10,,'v951^a'$',v951^t,if a(v951^t) then v951^a fi)     
+    fi fi fi) 
+fi,

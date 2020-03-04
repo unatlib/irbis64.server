@@ -1,0 +1,45 @@
+mpl,
+   if rsum((if p(v910) then 
+               if '2 6 7':v910^a or &unifor(|Kmhrvn.mnu\|v910^d)<>''then '0;' 
+               else 
+                  if 'C U':v910^a then 
+                     if p(v910^v) then 
+                        if val(v910^x,|1;|n910^x)-val(v910^z,|0;|n910^z) >= val(v910^1) 
+                        then '0;' else|1;|d910^v 
+                        fi 
+                     else |1;|d910^c fi 
+                  else |1;|d910^c 
+            fi fi fi,'0;'))  = 0 
+   then 
+      if v910^a:'6'or p(v940) then '<br><b>Все экземпляры списаны </b>'fi  
+   else '<br><b>Имеются экземпляры в отделах: </b>' 
+      if s(v905^d)<>''or &unifor('IPRIVATE,FPI,')<>''then 
+         (if p(v910) then 
+             if '2 6 7':v910^a or &unifor(|Kmhrvn.mnu\|v910^d)<>''or 
+                v910^a:'U' and (p(v910^v) and val(v910^x,|1;|n910^x)-val(v910^z,|0;|n910^z) >= val(v910^1)) 
+             then else '<br>' 
+                if s(&unifor('Av905^d#1'),&unifor('IPRIVATE,FPI,'))<>''then 
+                   if p(v910^c)then v910^d, 
+                      if s(&unifor('Av905^d#1'),&unifor('IPRIVATE,FPI,')):'1'then
+                      ' ('v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.'fi, 
+                      if v910^a:'U'then| Инв./УК |v910^b else| Инв.|v910^b fi,| (колл. |v910^q|)|,| (|v910^1| экз.)|, 
+                     if s(&unifor('Av905^d#1'),&unifor('IPRIVATE,FPI,')):'1'then |)|d910^c fi, 
+         fi fi fi fi) 
+      else 
+         if rsum((if '2 6 7':v910^a and &unifor(|Kmhrvn.mnu\|v910^d)<>''then else|1;|d910^c fi,'0;'))>0 
+         then 
+             ,EXU_H, 
+         fi fi fi, 
+   if v910^a:'2'then'<br>Заказаны экз-ры для отделов: ' 
+      (if v910^a:'2'and &unifor(|Kmhrvn.mnu\|v910^d)=''then v910^d+|, |fi)'<br>' 
+   fi, 
+   (if &unifor(|Kmhrvn.mnu\|v910^d)=''then 
+       if v910^a:'a'then|Инв.|v910^b,| (|v910^d|)|,' аннулирован'fi, 
+       if v910^a:'3'then|<br> Инв.|v910^b,| (|v910^d|)|,' в переплете'fi, 
+       if v910^a:'4'then|<br> Инв.|v910^b,| (|v910^d|)|,' утерян'fi, 
+       if v910^a:'5'then|<br> Инв.|v910^b,| (|v910^d|)|,' временно не выдается'fi 
+   fi), 
+   if p(v993) then'<br><b>Копия: </b>',(| ; |+d993,&unifor('G2='v993^a),| Шифр |v993^b,| (|v993^d|)|)'<br>' 
+   fi, 
+   ("<br> Держатели документа: "|<br>|v902^a)
+   

@@ -1,0 +1,62 @@
+'</>',
+&uf('+7W11#'),
+   &uf('+7W11#'&uf(|D,?I=|d933,&uf('Av933#1'),|?,&uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))|d933)),
+         (if p(v922)then'<br>' 
+            if p(v922^q) then else 
+               if p(v922^x) then 
+               &uf('+S1'
+                  if v922^x='1' then v922^f 
+                  else &unifor('E'v922^x,v922^f), 
+                     if p(v922^?)then |, |v922^? else 
+                        if &unifor('F'v922^x,v922^f)<>'' then ', '&unifor('F'v922^x,v922^f) fi fi,'.' 
+                  fi), 
+               else 
+               &uf('+S1'
+                  if v922^f:',' then v922^f|.| else 
+                     if v922^f:' ' then &unifor('G0 'v922^f),|, |v922^?|.| 
+                        if a(v922^?) then 
+                           if v922^f:'.' then ', ' 
+                              if v922^f:'. ' 
+                              then &unifor('G2 'v922^f) else &unifor('G0.'&unifor('G2 'v922^f)),'. ' &unifor('G2.'v922^f) 
+                              fi 
+                           else ', '&unifor('G2 'v922^f)'.' 
+                        fi fi 
+                     else v922^f,|, |v922^?,|.|d922^f, 
+                     fi 
+                  fi) 
+               fi,| |d922^f,
+            fi   
+            if s(v922^(,v922^))<>''then v922^(,| |v922^),'. 'fi,
+            if p(v922^u) then if f(val(v922^u),0,0)=v922^u then else if v922^u:'/' then &uf('G2/'v922^u)'. ' fi fi fi, 
+            if v922^]<>''then if v922^[='1'then '<A HREF="',&uf('+\1',v922^]),'">', else if v922^[='0'then '<A HREF="IRBIS:3,10,,',v922^],'">',fi fi fi &uf('+S1'v922^c),'</A>',| : |v922^e, 
+            if p(v922^f) and &uf('Av905^1#1')='' or p(v922^g) then ' / ', 
+               if &uf('Av905^1#1')<>'' then v922^g else 
+                  if (v922^g:&unifor('G0 'v922^f) or v922^g:&unifor('G0,'v922^f)) and 
+                     (v922^g:&unifor('G2 'v922^f) or v922^g:&unifor('G2 'v922^f.1) or v922^g:v922^?) or 
+                      v922^g:v922^f and a(v922^?) or a(v922^f) 
+                  then v922^g 
+                  else ,o922gnj,| ; |v922^g 
+                  fi, 
+               fi, 
+            fi, 
+            if p(v922^4)then'. - ', 
+               if v922^4:'s'or v922^4:'p'or v922^4:'с'then 
+               else mpu,
+                  if &uf('Ag11#1')<>'' then &uf('Ag11#1') else &unifor('Korg.mnu|4') fi,mpl,'.' 
+               fi,v922^4,|. - |v922^p, 
+            fi, 
+            if v922^0*1.1='-'then| : |v922^0*2 else| : |v922^0 fi, 
+            if p(v922^w) then'<br> Другие авторы: '
+               if v922^s='' then v922^2 fi,
+               if v922^t='' then |, |n922^s,v922^3 fi,
+               if s(v922^2,v922^3)<>'' and s(v922^s,v922^t)='' then ', ' fi,
+               v922^w fi, 
+            if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='1'then 
+            else|<br> Кл.слова: |d922^5, 
+               if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='2' 
+               then mhu,v922^5,|, |v922^6,|, |v922^7,mpl else 
+                  if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='3' 
+                  then &unifor('Q'v922^5,|, |v922^6,|, |v922^7) 
+                  else mhl,v922^5,|, |v922^6,|, |v922^7,mpl, 
+            fi fi fi 
+        fi) 

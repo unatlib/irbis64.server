@@ -1,0 +1,62 @@
+mhl, 
+if v920='J'then else 
+   if a(v200^f) then 
+      if p(v905^1) then 
+      else 
+         if p(v922) or p(v330) and v330^g<>''  
+         then 
+            &uf('+7W112#'), 
+            &uf('+7W112#'if p(v922) and (&uf('Av922^g#1')<>'' or &uf('Av922^u#1')<>'') 
+                         or (&uf('Av922^g#1')='' and &uf('Av922^f#1')<>'' and &uf('Av700#1')<>''and 
+                             &uf('Av922^f#1'):&uf('Av700^a#1')) 
+                         then '1'fi), 
+            if g112:'1' then else 
+               if s(v700v701)<>''then ,osoa, 
+            fi fi,
+            if s(v702)<>''
+            then 
+               &uf('+7W111#'),&uf('+7W111#'v922^g| |,v925^g| |,v330^g| |), 
+               if rsum((if p(v702) then if &unifor('Ag111#1'):s(v702^b| |,if a(v702^b) then v702^g| | fi,v702^a) 
+                        then '0;' else'1;' fi fi))>0 
+               then 
+                  if (g112:'1' or s(v700,v701)<>'') and g111<>'' then ' ; '
+               fi fi 
+               if s(v702^5)<>'' then 
+                  (if p(v702^4) then 
+                      if &unifor('Ag111#1'):s(v702^b| |,if a(v702^b) then v702^g| | fi,v702^a) then else |, |+d702, 
+                         if v702^4*4.1='*'then v702^4*5 else &unifor('Q'v702^4*4) fi,|, |d702^5, 
+                         if v702^5*4.1='*'then v702^5*5 else &unifor('Q'v702^5*4) fi,|, |d702^6, 
+                         if v702^6*4.1='*'then v702^6*5 else &unifor('Q'v702^6*4) fi,| |d702^4, 
+                         if p(v702^9)then v702^a,| |v702^d,| |v702^b, 
+                            if a(v702^b)then| |v702^g fi 
+                         else 
+                            if v702^b:'. ' then v702^b else 
+                               if v702^b:'.'then &unifor('G0.'v702^b),'.', 
+                                  if &unifor('G2.'v702^b):'.' then ' ' fi,&unifor('G2.'v702^b) 
+                               else v702^b fi 
+                            fi, 
+                            if a(v702^b)then v702^g fi, 
+                            if s(v702^b,v702^g)<>'' then| | fi,v702^a,| |v702^d,| (|v702^7|)|, 
+                  fi fi fi) 
+               else ,702redK, 
+            fi fi 
+         else 
+            if s(v922^g,v925^g,v330^g)='' then 
+               if s(v700v701v328v702)<>''then  
+                  if s(v700v701)<>''then osoa, " ; "d702 fi, 
+                  if s(v702^5)<>'' then 
+                     (if p(v702^4) then  |, |+d702, 
+                         if v702^4*4.1='*'then v702^4*5 else &unifor('Q'v702^4*4) fi,|, |d702^5, 
+                         if v702^5*4.1='*'then v702^5*5 else &unifor('Q'v702^5*4) fi,|, |d702^6, 
+                         if v702^6*4.1='*'then v702^6*5 else &unifor('Q'v702^6*4) fi,| |d702^4, 
+                         if p(v702^9)then v702^a,| |v702^d,| |v702^b, 
+                            if a(v702^b)then| |v702^g fi 
+                         else 
+                            if v702^b:'. ' then v702^b else 
+                               if v702^b:'.'then &unifor('G0.'v702^b),'.' 
+                                  if &unifor('G2.'v702^b):'.' then ' ' fi,&unifor('G2.'v702^b) else v702^b fi 
+                            fi, 
+                            if a(v702^b)then v702^g fi,| |v702^a,| |v702^d,| (|v702^7|)|, 
+                      fi fi) 
+                  else 702redK 
+fi fi fi fi fi fi fi, 

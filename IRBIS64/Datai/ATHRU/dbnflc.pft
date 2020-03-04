@@ -1,0 +1,2 @@
+if p(v210^a) then IF (l(if p(v210^b)then '!',v210^b fi)<=0) or (val(ref(l(if p(v210^b)then '!'v210^b fi),mfn))=val(mfn)) THEN '0' ELSE '1 Ошибка: Дублетная 
+запись ' ,v210^A," - "v210^b,ref(l("!"v210^b),' (см. N ',f(val(mfn),0,0),')') fi fi

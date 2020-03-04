@@ -1,0 +1,56 @@
+0
+DEL
+691^0
+F
+(if p(v691) then if p(v691^0) then if (v691^0:v691^a or v691^a='') and (v691^0:v691^c or v691^c='') and (v691^0:v691^v or v691^v='') and (v691^0:v691^o or v691^o='') and &unifor('G2S'v691^0):v691^f then '0' else '1' fi else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+691^9
+F
+(if p(v691) then if p(v691^9) then if (v691^9:v691^a or v691^a='') and (v691^9:v691^c or v691^c='') and (v691^9:v691^v or v691^v='') and (v691^9:v691^o or v691^o='') and &unifor('G2S'v691^9):v691^f then '0' else '1' fi else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+691^!
+F
+if s(v691^w,v691^u)<>'' then (if p(v691^f) and p(v691^!) then if v691^!:v691^f then'0'else'1'fi else'0'fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+691^0
+F
+(if p(v691) then if a(v691^0) then if &unifor('Ksemo.mnu|'v691^f)<>'' then if v691^i:':' then if &unifor('Kjzko.mnu|'&unifor('G2:'v691^i))<>'' then if p(v691^u) then '-' else |*|d691^w fi,&unifor('Kjzko.mnu|'&unifor('G2:'v691^i)) fi fi,v691^a,if p(v691^C) then v691^c else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F'!,v68^C')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^C') else if p(v691^n) then v691^n else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^n') fi fi fi,v691^v,v691^o,|-S|v691^f else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+691^9
+F
+(if p(v691) then if a(v691^9) then if &unifor('Ksemv.mnu|'v691^f)<>'' then if v691^i:':' then if &unifor('Kjzko.mnu|'&unifor('G2:'v691^i))<>'' then if p(v691^u) then '-' else |*|d691^w fi,&unifor('Kjzko.mnu|'&unifor('G2:'v691^i)) fi fi,v691^a,if p(v691^C) then v691^c else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F'!,v68^C')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^C') else if p(v691^n) then v691^n else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^n') fi fi fi,v691^v,v691^o,|-S|v691^f else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+691^!
+F
+if s(v691^w,v691^u)<>''then (if p(v691) then if a(v691^!) then f(val(v691^f),2,0) else # fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+REP
+691
+F
+if s(v691^w,v691^u)<>''then if s(v691.2)='^!'then else (if v691.2:'^!'then v691 else |^!|v691^!,&unifor('G0!'v691),'^' fi/) fi fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+691
+*
+'^^'
+''
+REP
+691
+F
+(&unifor('AI691')/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),'^C',&unifor('IPRIVATE,ETR,') fi
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+if v920='J' then else (if p(v910) then v910,if 'C U':v910^a and p(v910^c) or '0 8':v910^a then if a(v910^u) and &unifor('IPRIVATE,KSU,')<>''then if p(v910^c) and val(v910^c)<>val(&unifor('DCMPL,?KSU=',&unifor('IPRIVATE,KSU,'),'?,v88^b')) then else '^U'&unifor('IPRIVATE,KSU,') if a(v910^y) and &unifor('IPRIVATE,NA,')<>''then'^Y'&unifor('IPRIVATE,NA,') fi,if a(v910^c)then '^C',if &unifor('IPRIVATE,KSUD,')<>''then &unifor('IPRIVATE,KSUD,') else &unifor('+1W100#'&unifor('DCMPL,?KSU=',&unifor('IPRIVATE,KSU,'),'?,v88^b')),if &unifor('+1R100')<>'' then &unifor('+1R100') else &unifor('3') fi fi fi fi fi fi fi/) fi
+XXXXXXXXXXXXXXXXXXX

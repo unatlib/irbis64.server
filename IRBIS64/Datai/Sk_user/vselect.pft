@@ -1,0 +1,7 @@
+            '<select style="width: 100%;" name="%1" >',
+            '<option value=""></option>',
+            (if &uf('+5T%2')<>'' then '<option value="',&uf('+5T%2'),'" ',
+            if &uf('+5T%2')='%3' then 'selected' fi,
+            '>',&uf('+5T%2'),' - ',&uf('+5F%2'),'</option>' 
+            fi),
+'            </select>',

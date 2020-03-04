@@ -1,0 +1,22 @@
+'\pard \li108 \ri108 ','\par \qc \fs28 Лист инвентарной книги (общий) ', 
+'\par  \fs24 ',"для подразделения "v991^b,
+if s(v991^a,v991^c)<>'' then ' ( ', 
+" КСУ N  "v991^a,
+if p(v991^a)then '  от ', ref(L('KSU='v991^a),v88^b*6.2|.|,v88^b*4.2|.|,v88^b.4)  fi,", Акт № "v991^c,"-"v991^d,')' fi,'\par \qc '
+if p(v991^b) then &uf('+7W10#'),&uf('+7W10#'v991^b),
+   if p(v991^a)then  
+      ref(L('KSU='v991^a),
+      if rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^c';' fi fi))>0 then 'На баланс (список прилагается): ' fi,
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^a';' fi fi)),0,0),' назв., ',
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^b';' fi fi)),0,0),' экз.,' 
+      if rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^+';' fi fi))>0 then ' на сумму ',
+         f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^+';' fi fi)),0,2),' '&uf('Korg.mnu|3'),
+      else ' бесплатно' fi,
+      if rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^c';' fi fi))>0 then '\par \qc Не на баланс: '
+         f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^c';' fi fi)),0,0),' назв., ',
+         f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^d';' fi fi)),0,0),' экз.,' 
+         if rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^e';' fi fi))>0 then ' на сумму ',
+            f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') then v744^e';' fi fi)),0,2),' '&uf('Korg.mnu|3'),
+      fi fi),
+fi fi 
+'\par '

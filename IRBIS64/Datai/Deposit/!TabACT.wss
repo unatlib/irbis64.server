@@ -1,0 +1,111 @@
+11
+U
+Дата, № КСУ
+0
+0
+0
+
+
+
+
+&uf('+7W10#',,,,,,,,if a(v910) then '^B - ' else (if p(v910) then if '2 7':v910^a  then else if &uf('Av991#1')='' or &unifor('Av991#1'): s('-',v910^Y,'-') then if v910^b<>'' then '^A',,v910^B,,,if 'C U': v910^A then '^B',v910^1,,|-|n910^1 else '^B1' fi,,,if v910^4<>'' or &uf('Av215^Y#1')<>'' then '^CДА' else '^C ' fi,,else '^A',if v910^h<>'' then v910^h if 'C U': v910^A then '^B',v910^1,,|-|n910^1 else '^B1' fi  else '-' fi,,if v910^4<>'' or &uf('Av215^Y#1')<>'' then '^CДА' else '^C ' fi,,fi ,,fi fi fi/),,fi,,),ref(L('AS=',v991),v88^b*6.2|.|,v88^b*4.2|.|,v88^b.4,' (',v88^A,')'),,,,,
+B
+Инв.№ / Штрих-код
+0
+0
+0
+
+
+
+
+(g10^A/)
+K
+Кол-во экз.
+0
+0
+0
+
+
+
+
+(g10^B/)
+D
+Место хранения
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then if '2 7':v910^a  then  else if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,v910^d,,,,,,,,fi fi fi/),,,,),,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)
+A
+Автор, заглавие
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,if p(v461) then v461^x| |,v461^c.25,if v461^c*25<>''then '...' fi,|; |v200^v else v700^a,| |v700^b,| |d700,v200^a.25,if v200^a*25<>''then '...'fi,| |v200^v fi,(|. -(|d225,v225^a.25,if v225^a*25<>'' then '...' fi,|; |v225^n,|)|d225),if p(v215^a) then|. - |v215^a,| |d215^1,&unifor('G2='v215^1),if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi),,,,,,,,,,(if p(g10) then if g11<>'' then &uf('Ag11#1') else ' ' fi fi/)
+G
+Год изд.
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then  if '2 7':v910^a then else if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,,,&uf('Av210^d#1'),,,,,,,,,,,,fi fi fi/),,,,),,,,,,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)
+P
+Раздел зн.
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then if '2 7':v910^a  then else if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,,,&uf('Av60#1'),,,,,,,,,,,fi fi fi/),,,,,),,,,,,,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)
+C
+Цена
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then if '2 7':v910^a  then else  if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,,,if v910: '^e' then f(val(v910^e,' 0'),0,2) else if val(&unifor('Av10^d#1'))>0 then f(val(&unifor('Av10^d#1'),' 0'),0,2) else &unifor('Av10^d#1') fi fi,,,,,,,,,,,,,fi fi fi/),,,,),,,,,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)
+S
+Статус экз-ра
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then if '2 7':v910^a  then  else if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,v910^A,,,,,,,,fi fi fi/),,,,),,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)
+L
+Не на баланс
+0
+0
+0
+
+
+
+
+,,,(g10^C/)
+F
+Дата пост.экз.
+0
+0
+0
+
+
+
+
+&uf('+7W11#',,(if p(v910) then if '2 7':v910^a  then  else if &unifor('Av991#1')='' or &unifor('Av991#1')<>'' and &unifor('Av991#1'): s('-',v910^Y,'-') then,,,,,,,,v910^C,,,,,,,,fi fi fi/),,,,),,,(if p(g10) then if g11<>'' then g11 else ' ' fi fi/)

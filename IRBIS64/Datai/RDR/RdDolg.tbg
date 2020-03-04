@@ -1,0 +1,64 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=7
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=NN
+CELL_TAB2_3=&uf('+7W11#',f(val(G11)+1,0,0)),,,G11
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=8
+CELL_TAB3_2=ФИО
+CELL_TAB3_3=v10,' ',v11,' ' ,v12
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Да
+CELL_TAB4_1=2.5
+CELL_TAB4_2=ИДЕНТ
+CELL_TAB4_3=V30
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=1.5
+CELL_TAB5_2=Отчислен
+CELL_TAB5_3=,(if p(v90) then if &uf('+97',v90^A)=&uf('AG12^B#1') and v90^2<>'' then 'ДА',break fi fi/),
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=1.5
+CELL_TAB6_2=Кол-во книг
+CELL_TAB6_3=f(rsum((if p(v40) then if v40^F='******' and val(v40^E)<val(&unifor('3')) then '1,' else '0,' fi fi)),0,0)
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='ИТОГО: ',v1,' Среди отчисленных ',v2
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=10
+CELL_SORT1=1
+CELL_SORT2='\b ',,if v1^D='' then "ФО-"v1^A,&uf('+7W11#'),&uf('+7W12#',V1),,fi,if v1^C='' then " Фак.- "d1^B,&unifor('KFAK.mnu|',v1^B),&uf('+7W11#'),&uf('+7W12#',V1),,fi,'\b0 ',
+CELL_SORT3=100
+CELL_SORT4=1
+CELL_SORT5=mpu,if rsum((if p(v40) then if v40^F: '*****' and val(v40^E)<val(&unifor('3')) then '1,' else '0,' fi fi))>0 then (if p(v90) then if &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v90^A) or &uf('Av991^A#1')='' then if &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v90^O) or &uf('Av991^B#1')='' then if &uf('Av991^C#1')<>'' and &uf('Av991^C#1')=&uf('+97',v90^C) or &uf('Av991^C#1')='' then '^A',if v90^O<>'' then v90^O else '-' fi,'^B',if v90^A<>'' then v90^A else '-' fi,,,if &uf('Av991^A#1')<>'' then '^C',&uf('Av991^A#1') fi,if &uf('Av991^B#1')<>'' then '^D',&uf('Av991^B#1') fi,,,fi fi fi fi/),fi,
+CELL_SORT6=v3
+CELL_SORT7=30
+CELL_SORT8=0
+CELL_SORT9=v10,v11,v12
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=RdDolg.wss
+HDR_PFT=RdDolgH
+HDR_PARAMS_COUNT=0

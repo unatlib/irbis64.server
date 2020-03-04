@@ -1,0 +1,54 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+if v910^v:v991 or v940^v:v991 then f(rsum((if s(v910^v)<>''then if &unifor('Av991#1')=v910^v then if p(v910^k)then f(val(v910^k|;|,' 0'),1,0) else'0;'fi else'0;'fi fi/)) + rsum((if s(v940^v)<>''then if &unifor('Av991#1')=v940^v then if v940^a:'6'then else if p(v940^k)then f(val(v940^k|;|,' 0'),1,0) else'0;'fi else'0;'fi fi fi/)),1,0) fi 
+#
+'\trowd \trqc\trgaph108\trleft-108\trhdr 
+\cellx7513 
+\pard \qr\widctlpar\intbl {  ИТОГО: 'f(val(v1),5,0)' наимен. ',f(val(v2),5,0),' экз. '
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs24 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4184
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5202
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6499
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7513
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Авторы, заглавие,\par  выходные данные\cell }
+\pard \qc\widctlpar\intbl {\b Место хранения\cell }
+\pard \qc\widctlpar\intbl {\b Количество экз.,\par для докомплектования\cell }
+\pard \qc\widctlpar\intbl {\b ВСЕГО\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

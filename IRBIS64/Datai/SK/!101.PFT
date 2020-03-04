@@ -1,0 +1,6 @@
+if p(v101)then 
+   (if p(v101) then 
+       if &unifor('Kjz.mnu|'v101)='' then/'1 Ошибка: неверен код языка  'v101 else '0'     fi fi/) 
+else/'2 Ошибка: Отсутствует код языка основного текста' fi/
+(if p(v911) then 
+    if &unifor('Kjz.mnu|'v911)='' then/'1 Ошибка: неверен код языка  'v911 fi else/'0'fi/)

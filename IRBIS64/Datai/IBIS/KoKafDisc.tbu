@@ -1,0 +1,116 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+#
+'\cf13 ',
+'\trowd \trqc\trgaph108\trleft-108 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qr \fs20 ',,
+'По специальности:  ',,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+g997,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+f(val(g992) / val(g15),0,2),,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+'\trowd \trqc\trgaph108\trleft-108 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \ql\fs24\widctlpar\intbl {\b0 ',,,
+'Всего дисциплин: ',g995,,,,,,,,,
+if p(g998) then &uf('+7G998'),,,,,,&uf('+7W996#',,,f(rsum((if p(g998) then '1,' fi)),0,0) ) fi,,,
+'   Дисциплин, имеющих ЭУ: ',g996,,' - ',,if val(g996)=0 then '0' else if val(g995)=0 then '-' else f(val(g996)/val(g995)*100,0,2) fi fi,,'%',,,,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \b0 \qc\widctlpar '
+*****
+[Tab]
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; \red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green0\blue64;\red128\green0\blue128;\red128\green0\blue255; \red0\green64\blue255; \red150\green0\blue128; \red0\green128\blue128; \red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; \red128\green128\blue128;\red192\green192\blue192;\red0\green0\blue128;}
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs20 N
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7479 
+\pard \widctlpar\intbl {\qc \fs20 Автор, заглавие, дата издания (не аналог)
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs20 Цикл дисц-ны
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во экземпл. с аналогами (с КМИ) 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во студ. по книге	 / по специальности
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ККО по книге / среднее по специальности
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13716 
+\pard \widctlpar\intbl {\qc \fs20 Год издания (последний)
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\qc \fs24 ЭУ?
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

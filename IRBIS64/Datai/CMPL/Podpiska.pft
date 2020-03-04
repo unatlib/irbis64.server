@@ -1,0 +1,66 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx958 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4360 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4927 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5494 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6628 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8045 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9179 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10313 
+\pard \widctlpar\intbl {\ql \fs24 'v86
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',v591,if a(v591) then v200^a fi,&unifor('S1')
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'v110^x
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs24 'f(rsum((v39^c|;|)),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs24 'v34
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs24 'f(rsum((v39^c|;|))*val(v34),0,2)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'v39^a+|, |
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'v36^a,"Роспечать"n36^a
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

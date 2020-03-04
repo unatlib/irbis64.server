@@ -1,0 +1,27 @@
+mhl, 
+(if '***'='7021'then v702^a,| |v702^b,'^,'v702^g,'^<'v702^9,if a(v702^9) then if v702^a:' 'then if &unifor('F3'v702^a)<>''then'4'else if &unifor('F2'v702^a)<>''then'3'else if &unifor('F1'v702^a)<>''then'2'fi fi fi fi fi,'^Z'v702^y,'^+'v702^p,'^.'fi/) 
+(if '***'='9261'then v926^a,| |v926^b,'^,'v926^g,'^<'v926^9,if a(v926^9) then if v926^a:' 'then if &unifor('F3'v926^a)<>''then'4'else if &unifor('F2'v926^a)<>''then'3'else if &unifor('F1'v926^a)<>''then'2'fi fi fi fi fi,'^Z'v926^y,'^+'v926^p,'^.'fi/) 
+
+(if '***'='9612'then if v961^r:' ' then if v961^r:','then &unifor('G0,'v961^r),'^,' else &unifor('G0 'v961^r),' ' fi,&unifor('G2 'v961^r) else v961^r fi,'^<''^,''^Z''^+''^.' fi/)/ 
+(if '***'='9262'then if v923^r:' ' then if v926^r:','then &unifor('G0,'v926^r),'^,' else &unifor('G0 'v926^r),' ' fi,&unifor('G2 'v926^r) else v926^r fi,'^<''^,''^Z''^+''^.' fi/)/ 
+(if '***'='7022'then if v702^r:' ' then if v702^r:','then &unifor('G0,'v702^r),'^,' else &unifor('G0 'v702^r),' ' fi,&unifor('G2 'v702^r) else v702^r fi,'^<''^,''^Z''^+''^.' fi/)/ 
+(if '***'='9254'then v925^f,'^,'v925^?,'^<'v925^X,'^Z'v925^y,'^+'v925^=,'^.',| |n925^f fi/) 
+(if '***'='9255'then v925^2,'^,'v925^,,'^<'v925^<,'^Z'v925^z,'^+'v925^+,'^.',| |n925^2 fi/) 
+(if '***'='9256'then v925^3,'^,'v925^;,'^<'v925^>,'^Z'v925^n,'^+'v925^-,'^.',| |n925^3 fi/) 
+(if '***'='3301'then v330^f,'^,'v330^?,'^<'v330^X,'^Z'v330^y,'^+'v330^=,'^.',| |n330^f fi/) 
+(if '***'='3302'then v330^2,'^,'v330^,,'^<'v330^<,'^Z'v330^z,'^+'v330^+,'^.',| |n330^2 fi/) 
+(if '***'='3303'then v330^3,'^,'v330^;,'^<'v330^>,'^Z'v330^n,'^+'v330^-,'^.',| |n330^3 fi/) 
+
+(if '***'='4811'then v481^x,'^,'v481^?,'^<'v481^9,'^Z'v481^y,'^+'v481^=,'^.',| |n481^x fi/) 
+(if '***'='4812'then v481^2,'^,'v481^,,'^<'v481^<,'^Z'v481^z,'^+'v481^+,'^.',| |n481^2 fi/) 
+(if '***'='4813'then v481^3,'^,'v481^;,'^<'v481^>,'^Z'v481^n,'^+'v481^-,'^.',| |n481^3 fi/) 
+(if '***'='4881'then v488^x,'^,'v488^?,'^<'v488^9,'^Z'v488^y,'^+'v488^=,'^.',| |n488^x fi/) 
+(if '***'='4882'then v488^2,'^,'v488^,,'^<'v488^<,'^Z'v488^z,'^+'v488^+,'^.',| |n488^2 fi/) 
+(if '***'='4883'then v488^3,'^,'v488^;,'^<'v488^>,'^Z'v488^n,'^+'v488^-,'^.',| |n488^3 fi/) 
+
+
+(if '***'='4611'then if p(v461^9) then if v461^9:'1' then v461^x '^,'else &unifor('E'v461^9,&unifor('G0,'v461^x)),if &unifor('F'v461^9,v461^x)<>'' then if v461^x:','then '^,'&unifor('F'v461^9,v461^x) else' '&unifor('F'v461^9,v461^x)'^,'fi else ','fi fi else if v461^x:', ' then &unifor('G0,'v461^x),'^,'&unifor('G2 'v461^x) else v461^x,'^,'fi fi,'^<'v461^9'^Z''^+''^.' fi/) 
+(if '***'='9611'then 
+   if p(v961^x) then if p(v961^9) then if v961^9:'1' then v961^x '^,'else &unifor('E'v961^9,&unifor('G0,'v961^x)),if &unifor('F'v961^9,v961^x)<>'' then if v961^x:','then '^,'&unifor('F'v961^9,v961^x) else' '&unifor('F'v961^9,v961^x)'^,'fi else ','fi fi else if v961^x:', ' then &unifor('G0,'v961^x),'^,'&unifor('G2 'v961^x) else v961^x,'^,'fi fi,'^<'v961^9'^Z''^+''^.' else 
+      if p(v961^a) then v961^a,' 'v961^b,'^,'v961^g,'^<'v961^9, 
+         if a(v961^9) then if v961^a:' 'then if &unifor('F3'v961^a)<>''then'4'else if &unifor('F2'v961)<>''then'3'else if &unifor('F1'v961)<>''then'2'fi fi fi fi fi,'^Z'v961^y,'^+''^.' fi fi fi/) 

@@ -1,0 +1,8 @@
+'</>',
+&unifor('MI910^DB'),&unifor('S0'),
+'<b>'&unifor('Av910^d#1')'</b>',
+(if p(v910^d) then 
+    if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then 
+    else |<br><b>|v910^d|</b>|  
+    fi,| - |v910^b,|(|v910^1|)|,
+fi)

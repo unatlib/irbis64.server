@@ -1,0 +1,49 @@
+/* v1000 - имя БД
+/*v1004 - список элементов (терминов)
+/*v1011 - префикс терминов
+/*v1006 - порция терминов
+'<title>Словарь ',&uf('Kprefix_wn.mnu|',v1011),' (БД ',v1000,' начиная с ',&uf('AV1004^A#1'),')</title>',
+"<b>База данных: "v1000" - Словарь ",&uf('Kprefix_wn.mnu|',v1011),'<br></b>',
+'<table border=0 cellpadding=1 cellspacing=1>',
+'<td>',
+'</td>',
+'<td>',
+'<b>Термины</b>',
+'</td>',
+'<td>',
+'<b>Док-ов</b>',
+'</td>',
+('<tr>',
+'<td>',
+if val(v1004^B)>0 then 
+'<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',v1004^A,'">',
+fi,
+'</td>'
+'<td>',
+,v1004^A,
+'</td>',
+'<td>',
+| - |v1004^B,
+'</td>')
+'</table>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input name="T21TRM" value="',&uf('AV1004^A#',&uf('+N1004'))'">',
+'<input type="submit" name="" value="Продолжить">',
+'<input type="hidden" name="C21COM" value="4">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="PFTNAME" value="trm0_wn">',
+'<input type="hidden" name="T21PRF" value="',v1011,'">',
+'<input type="hidden" name="T21CNR" value="',v1006,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'</form>'
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" name="" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="T21PRF" value="',v1011,'">',
+     '<input type="hidden" name="PFTNAME" value="select_trm0_wn">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+     '<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'</form>'
+

@@ -1,0 +1,4 @@
+1 0 /'SIGNAL',/'NEWJ',/'NP',/'AVTRF',/'RUSSIA'
+2 0 MHL,/v115*2
+3 0 MHL,/v110*2
+11 0 /'RUB'

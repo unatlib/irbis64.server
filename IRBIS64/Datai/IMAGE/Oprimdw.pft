@@ -1,0 +1,64 @@
+"<br><b>  Перевод заглавия: </b> "v541,
+if p(v391)then" <br><b>Есть автограф: </b>"d391,
+   (if p(v391)then v391^a,|, |v391^g,
+       if a(v391^g) then |, |d391^b 
+          if v391^b:'. 'then v391^b else 
+             if v391^b:'.'then &unifor('G0.'v391^b)'. '&unifor('G2.'v391^b) else v391^b 
+       fi fi fi,| (|v391^c|)|,mhl,v391.1+|; |,mpl fi) fi,
+"<br><b>Экслибрис: </b>"|; |+v398,"<br><b>Пометки автора: </b>"|; |+v395,
+"<br><b>Пометки владельца коллекции: </b>"|; |+v396,
+"<br><b>Сохранность документа: </b>"|; |+v399,
+,oantw,
+,opri451w,
+,opril421w,
+,Opris488w,
+if val(&unifor('J,I470='v903))>0 then '<br><A HREF="',ssinternet2,&unifor('+3E',v903),'">Есть рецензия / реферат</A>' fi,
+if p(v330)then 
+   if v905^k='0' or a(v905^k) then'<br>     <b>Содержание: </b>',
+      (if p(v330)then'<br>  <b>'
+          if p(v330^x) then 
+             if v330^x='1' then v330^f 
+             else &unifor('E'v330^x,v330^f),
+                if p(v330^?)then |, |v330^? else 
+                   if &unifor('F'v330^x,v330^f)<>'' then ', '&unifor('F'v330^x,v330^f) fi fi,'.' 
+             fi 
+          else 
+             if v330^f:',' then v330^f|.| else 
+                if v330^f:' ' then &unifor('G0 'v330^f),|, |v330^?|.| 
+                   if a(v330^?) then 
+                      if v330^f:'.' then ', '
+                         if v330^f:'. ' 
+                         then &unifor('G2 'v330^f) else &unifor('G0.'&unifor('G2 'v330^f)),'. ' &unifor('G2.'v330^f)
+                         fi 
+                      else ', '&unifor('G2 'v330^f)'.' 
+                   fi fi 
+                else v330^f,|, |v330^?,|.|d330^f, 
+          fi fi fi,| |d330^f,
+          if s(v330^(,v330^))<>''then v330^(,| |v330^),'. 'fi,v330^c'</b>',|: |v330^e,
+          if s(v330^f,v330^g)<>''then' / ',
+             if p(v905^1) then v330^g else 
+                if (v330^g:&unifor('G0 'v330^f) or v330^g:&unifor('G0,'v330^f)) and 
+                   (v330^g:&unifor('G2 'v330^f) or v330^g:&unifor('G2 'v330^f.1) or v330^g:v330^?) or 
+                    v330^g:v330^f and a(v330^?) or a(v330^f) 
+                then v330^g 
+                else ,o330g,|; |v330^g 
+                fi,
+             fi,
+          fi,
+          if p(v330^4)then'. - <b>',
+             if v330^4:'s'or v330^4:'p'or v330^4:'с'then 
+             else mpu,&unifor('Korg.mnu|4'),mpl,'</b>''.' 
+             fi,v330^4,
+          fi,|. - |v330^p,
+          if v330^0*1.1='-'then| : |v330^0*2 else| : |v330^0 fi,
+          if p(v330^w) then'<br>Другие авторы: 'v330^2,', 'v330^3,', 'v330^w fi,
+          if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='1'then 
+          else|<br>Кл.слова: |d330^5,
+             if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='2'
+             then mpu,v330^5,|, |v330^6,|, |v330^7,mpl else 
+                if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='3'
+                then &unifor('Q'v330^5,|, |v330^6,|, |v330^7) 
+                else v330^5,|, |v330^6,|, |v330^7 
+          fi fi fi
+       fi) 
+fi fi,

@@ -1,0 +1,28 @@
+mhl,
+'@@',
+if p(v421) and p(v422) then 
+         ' Приложения к документу и Основной документ, к которому относится данное приложение'
+else 
+   if p(v421) then ' Приложения' else ' Основной документ, к которому относится данное приложение'
+fi fi,
+if p(v452) then ' Параллельные издания' fi,
+if &unifor('J,II='v903)<>'' then ' Статьи из сборника' fi,
+if p(v461^c) then 
+   if val(&unifor('J,TMN=',&unifor('9'v461^c,
+          if v461^u:'1'then|/|v461^x,|/|v461^b fi)))>1 
+   then 'Тома того же многотомного издания'
+fi fi,'@@'
+|"I=|v421^w|" + |,if a(v421^w) then |"B=|v421^y|" + | fi,
+if s(v421^w,v421^y,v421^x)=''then |"B=|v421^y|" + | fi,
+|"I=|v422^w|" + |,if a(v422^w) then |"B=|v422^y|" + | fi,
+if s(v422^w,v422^y)=''then|"B=|v422^x|" + | fi,
+|"I=|v452^w|" + |,if a(v452^w) then |"B=|v452^y|" + | fi,
+if &unifor('J,II='v903)<>'' then |"II=|v903|" + | fi,
+if val(&unifor('J,TMN=',&unifor('9'v461^c,
+                        if v461^u:'1'then|/|v461^x,|/|v461^b fi)))>1 
+then |"TMN=|d461^c,&unifor('9'v461^c,if v461^u:'1'then|/|v461^x,|/|v461^b fi),
+'" + ' fi,
+if val(&unifor('J,II='v463^w))>1 then 
+  '@@Источник(и) статьи и Cтатьи из того же источника@@',|"I=|v463^w|" + |,|"II=|v463^w|" + | else 
+  '@@Источник(и) статьи@@',|"I=|v463^w|" + |,
+fi,

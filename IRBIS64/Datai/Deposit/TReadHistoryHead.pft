@@ -1,0 +1,107 @@
+/* g10 - идентификатор читателя   g15 - запоминаю идентификатор g20 - счетчик БО
+/* v1^C - ИД читателя
+/* v1^D - дата выдычи
+/* v1^I - шифр издания
+/* v1^F - дата возврата
+/* v1^V - место выдачи
+/* v1^P - инв.ном
+/* v1^H - штрих-код
+/* v1^K - место хранения
+/* v1^Z - mfn записи БО
+/* v1^X - имя БД RDR или RDR_ARH или LICH
+'\trowd \trqc\trgaph108\trleft-108'
+if p(v1^Z) 
+then 
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx400 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6345 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10214 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11815 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15480
+ \pard \widctlpar\intbl {\ql \fs24 ',,,
+f(val(g20)+1,0,0),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+else 
+'\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx400 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6345 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10214 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11815 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15480 
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----------Издание
+if p(v1^Z) then &uf('D',v1^G,,,,,',@',,,,f(val(v1^Z),0,0),,,,,,',@brief' ),,,,&uf('+7W20#',,f(val(g20)+1,0,0)  ),,,,,else ' ' fi,,,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+/*-------Фамилия читателя - всегда из RDR
+if p(v1^C) 
+then 
+   if s(v1^C,v1^I)<>g15 
+   then 
+      &uf('DRDR,!RI=',,,v1^C,,,'!,v10," "v11.1".",,v12.1".",,'),,if &uf('+97',v1^X)='RDR_ARH' then '\fs20 (архив) \fs24 ' fi,,,,,,,&uf('+7W15#',v1^C,v1^I),,&uf('+7W10#',v1^C),,,,
+   else 
+      &uf('+7W10#')  
+   fi, 
+else ' '  
+fi,,,
+/*   '\par ',,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+/*-----дата выдачи
+v1^D*6.2,'.',v1^D*4.2,'.',v1^D.4,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+/*-----дата возврата
+if v1^F.1='*' then ' долг' else v1^F*6.2,'.',v1^F*4.2,'.',v1^F.4 fi,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----экземпляр
+'\fs20 ',,
+if s(v1^P,v1^H,v1^K)='' and &uf('+97',v1^X)='LICH' then ' эл.ресурс' else 
+v1^P,,if v1^P<>'' and v1^H<>'' then ' - ' fi,,,v1^H,," ("v1^K")"  fi,,
+'\fs24 ',,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----место выдачи
+v1^V,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

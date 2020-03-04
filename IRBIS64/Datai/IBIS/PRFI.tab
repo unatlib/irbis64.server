@@ -1,0 +1,60 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}{\stylesheet{\widctlpar \f0\fs20\lang1049 \snext0 Normal;}{\s1\sb240\sa60\keepn\widctlpar \b\f0\fs28\lang1049\kerning28 \sbasedon0\snext0 heading 1;}{\s2\sb240\sa60\keepn\widctlpar \b\i\f0\lang1049 \sbasedon0\snext0 heading 2;}{\*\cs10 \additiveDefault Paragraph Font;}}\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1327 
+\pard \widctlpar\intbl {\qc \fs20 \b Дата,№ КСУ\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2177 
+\pard \widctlpar\intbl {\qc \fs20 \b № п/п\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3878 
+\pard \widctlpar\intbl {\qc \fs20 \b Инв.номер,штрих-код\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6004 
+\pard \widctlpar\intbl {\qc \fs20 \b Автор и заглавие\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6854 
+\pard \widctlpar\intbl {\qc \fs20 \b Год изд.\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8129 
+\pard \widctlpar\intbl {\qc \fs20 \b Цена\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9121 
+\pard \widctlpar\intbl {\qc \fs20 \b № акта спис.\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

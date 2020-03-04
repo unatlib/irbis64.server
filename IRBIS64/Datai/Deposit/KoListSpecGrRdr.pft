@@ -1,0 +1,22 @@
+&uf('+7W31#'),,,
+(if p(v691) then  
+if val(&uf('Ag991^-#1'))=1 and p(v691^N) or val(&uf('Ag991^-#1'))=0 and p(v691^C) then 
+if &uf('Ag991^A#1')='' or &uf('Ag991^A#1')=' ' or s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!') then 
+if &uf('Ag991^O#1')='' or &uf('Ag991^O#1')=' ' or s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') then 
+if &uf('Ag991^V#1')='' or &uf('Ag991^V#1')=' ' or s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!') then 
+if &uf('Ag991^N#1')='' or &uf('Ag991^N#1')=' ' or s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!') then 
+if &uf('Ag991^C#1')='' or &uf('Ag991^C#1')=' ' or s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!') then 
+if &uf('Ag991^B#1')='' or &uf('Ag991^B#1')=' ' or s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!') then 
+if &uf('Ag991^S#1')='' or &uf('Ag991^S#1')=' ' or s('!',&uf('Ag991^S#1'),'!'): s('!',v691^S,'!') then 
+if &uf('Ag991^F#1')='' or &uf('Ag991^F#1')=' ' or &uf('+97',,&uf('Ag991^F#1'))=&uf('+97',,v691^F) then 
+if &uf('Ag991^G#1')='' or &uf('Ag991^G#1')=' ' or v691^G: &uf('Ag991^G#1') then 
+'^A',,&uf('+7W31#',,,f(val(&uf('Ag31#1'))+1,0,0) ),&uf('Ag31#1'),,,,
+'^C',,v691^C,,
+'^N',v691^N,,
+'^E',,v691^E,
+'^O',,if s(v691^O,v691^V,v691^F)<>'' then ' (',v691^O|,|,v691^V|,|,v691^F,,')' fi,,,,
+'^D'&uf('JRDR,LN=',v691^a,v691^n,v691^c,v691^v,v691^o,'-S'v691^f),,,
+fi fi fi fi fi fi fi fi fi fi fi/)/
+&uf('+7W12#',,
+f(rsum((if p(v910) then if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                 if 'C 6 2 4 7':v910^a then else f(val(v910^=,|1|n910^=)0,0)';' fi fi fi )),0,0)   ),,,,,

@@ -1,0 +1,20 @@
+if p(v964) or p(v686) then '<br>'
+   if s(v905^j)<>''or &unifor('IPRIVATE,FPN,')<>''then
+      "<br><b>ГРНТИ </b>"| + |+v964,"<br>"| + |+v686 
+   else '<br>'
+      if p(v964)then 
+         if p(v686)then
+         '<table width="100%">',
+         '<tr> <td><b> ГРНТИ </b><td width="50%"><b>Различные обозначения</b><td></td> </tr>'
+         (|<tr> <td>|v964,
+            if p(v964)then'<td width="50%">'v686 else |<tr> <td>|v686 fi) 
+         else'<b>ГРНТИ</b> '| + |+v964 
+         fi 
+      else 
+         if p(v686) then
+         '<table width="100%">',
+         '<tr> <td width="50%"><td><b>Различные обозначения</b></td> </tr>',
+         (|<tr><td width="50%"><td>|v686|</td></tr>|)
+         '</table>',fi, 
+   fi fi,
+fi 

@@ -1,0 +1,8 @@
+mhl,
+if v920:'fond' then 
+   if val(&uf('J,RF='v615^N))>1 then '@@Другие фонды данного раздела Рубрикатора фондов@@',|"RF=|v615^n|" + | fi fi/
+if v920:'fond' then else 
+   if val(&uf('J,SK='v615^N))>1 then '@@Другие дела/документы той же Рубрики системы классификации архива@@',|"SK=|v615^n|" + | fi fi/
+if v920:'fond' or v920:'opis' then else 
+   if val(&uf('J,'if p(v545) then (if p(v488) then if v488^1:'опись' then |IISSO=|v488^t'_'&uf('Av545^L#1') fi fi) fi))>1 then '@@Другие дела/документы того же раздела описи@@',(if p(v488) then if v488^1:'опись' then |"IIsso=|v488^t'_'&uf('Av545^L#1'),'" + ' fi fi) fi fi/
+   

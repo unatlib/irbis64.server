@@ -1,0 +1,49 @@
+&uf('+1W761#'), 
+(if p(v691) then, 
+  if  v691^B<>'' and v691^b= &uf('Av991^a#1') and p(v691^f) or
+      &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v5')<>'' and 
+      s(&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v5'))= &uf('Av991^a#1') and p(v691^f) 
+      then  
+/*Дисциплина 
+    if v691^d<>'' then 
+       if &uf('+1R761'):s('^A'v691^d,'  ') then else 
+       '^A'v691^d,'  '#, 
+       fi, 
+    else 
+       if &uf('+1R761'): s('^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  ') then else 
+       '^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  '#, 
+       fi,     
+    fi   
+/*Дисциплина + специальность
+    if v691^d<>'' then 
+       if &uf('+1R761'):s('^A'v691^d,'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi) then else 
+       '^A'v691^d,'  ', 
+/*Полагаю, что в типовом варианте будет лучше писать просто '^B'v691^c. В отличие от большинства библиотек, мы вводим не специальности, а специализации поэтому, при необходимости, мы вынуждены их обрезать.
+       '^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,# 
+       fi, 
+    else
+       if &uf('+1R761'):s('^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi) then else 
+       '^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  ', 
+       '^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,#     
+      fi   
+    fi   
+/*Дисциплина + специальность + сортировка по заглавию и автору + MFN
+    if v691^d<>'' then 
+       if &uf('+1R761'):s('^A'v691^d,'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,'^C',mfn,'*') then else 
+       '^A'v691^d,' ',if &uf('Av991^b#1')<>'' then ' ' fi,
+       '^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi, 
+       '^B',&uf('av461^x#1'),&uf('av461^c.6#1'),&uf('av700^a#1'),&uf('av700^b#1'),&uf('av200^a.6#1'), 
+       '^C',mfn  
+       &uf('+1W761#','^A'v691^d,'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,'^C',mfn,'*',&uf('+1R761')) 
+       fi, 
+    else 
+       if &uf('+1R761'):s('^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,'^C',mfn,'*') then else 
+       '^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),' ',if &uf('Av991^b#1')<>'' then ' ' fi,
+       '^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi, 
+       '^B',&uf('av461^x#1'),&uf('av461^c.6#1'),&uf('av700^a#1'),&uf('av700^b#1'),&uf('av200^a.6#1'), 
+       '^C',mfn  ,,,,,
+       &uf('+1W761#','^A',&uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A'),'  ','^D',if v691^C<>'' then v691^c else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^C') fi,'^C',mfn,'*',&uf('+1R761')) 
+       fi,     
+    fi   
+  fi, 
+fi/),  

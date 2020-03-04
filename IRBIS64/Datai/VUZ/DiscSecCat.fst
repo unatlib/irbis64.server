@@ -1,0 +1,1 @@
+991 0  "^I"v991^0,,"^S"v991^S,"^B"v991^B,"^K"v991^K,"^A"v68^A,"^V"v68^V,"^O"v68^O,"^C"v68^C,"^N"v68^N,"^F"v68^F,"^H"v68^H,"^L"v68^L,,"^E"v68^E,,,,,(if p(v69) then if v69^W<>'' and &uf('+97',v69^D)=&uf('+97',&uf('Av991^0#1')) then '^W',v69^W,,break, fi fi)

@@ -1,0 +1,299 @@
+'{'
+,,'{\colortbl;
+\red0\green0\blue0;
+\red0\green0\blue255;
+\red0\green255\blue255; 
+\red0\green255\blue0;
+\red255\green0\blue255;
+\red255\green0\blue0;
+\red255\green255\blue0;
+\red255\green255\blue255;
+\red0\green0\blue128;
+\red0\green0\blue64;
+\red128\green0\blue128;
+\red128\green0\blue255; 
+\red0\green64\blue255; 
+\red150\green0\blue128; 
+\red0\green128\blue128; 
+\red0\green128\blue0;
+\red128\green0\blue128;
+\red128\green0\blue0;
+\red128\green128\blue0; 
+\red128\green128\blue128;
+\red192\green192\blue192;
+\red0\green0\blue128;
+}',,,,,,,
+/*------------------------g15 - счетчик записей в пределах специальности
+/*------------------------g994 - ККО книги из v1^W
+/*------------------------g995 - счетчик дисциплин
+/*------------------------g992 - суммирует ККО книг в пределах специальности
+/*------------------------g998 - кладу ID дисциплин, у которых ЭУ
+/*------------------------g997 - студенты по специальности
+/*------------------------g999 - признак показать ККО меньше из v1^Y
+if v1^Z<>'' 
+then 
+/*----------------------------------------------------------------------------запись
+'\cf14 ',
+/*------------------------KKO
+&uf('+7W43#'),,,&uf('+7W994#',v1^W  ),,&uf('+7W999#',v1^Y  ),,
+,,&uf('+7W992#',,f(val(g992)+val(g994),0,2) ),,,,
+&uf('+7W15#',,,,f(val(g15)+1,0,0),,,,),,,
+if val(v1^Y)=0 or val(g994)<val(v1^Y) 
+then 
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+G15,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/* ref(val(v1^Z),v700^A,' ',v200^A),,,,,,,,,,,,,,,,,,,,,,,,,,,
+&uf('D,@',,v1^Z,,',@BriefKoNew1'),,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----------------------------------------кол-во экземпляров
+v1^X,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',,,
+/*--------------------------кол-во студентов
+&uf('+7W43#'),,,
+/*    ref(val(V1^Z),&uf('6LncRdr'),,,),,,,,,,,,,,,,
+/* студенты по записи каталога g50 - осенние g51 - весенние
+ref(val(V1^Z),&uf('6NumbRdr'),,,),,,,,,,,,,,,,
+f(val(g50)+val(g51),0,0),,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*------------------------KKO
+g994,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13716 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*----------------------------------------------год издания
+ref(val(V1^Z),,,,,f(rmax((v210^D|,,|)),0,0),,,,,,),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 \pard \widctlpar\intbl {\ql \fs20 ',,
+/*---------------------------------------ЭУ
+if v1^9<>'' then 'Да',,,&uf('+7U998#',v1^C,,,if v1^C='' then v1^B fi),,fi,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+fi,,,,,,,,,,,,,,,
+else 
+if v1^D<>'' and v1^Z='' 
+then 
+'\cf13 ',
+/*------------------------------------------------------------------------------------------------------специальность
+if val(g15)>0 then 
+/*-------------конец специальности
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qr \fs20 ',,'\cf13 ',
+'По специальности:  ',,,if val(g999)>0 then '(по всем книгам)' fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----------------------число студентов по специальности - НЕТ
+,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*---------------------KKO по специальности
+/*отладка------------g992,,'/',,g15,,,
+f(val(g992) / val(g15),0,2),,,,&uf('+7W15#'),,,,&uf('+7W992#'),,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+/*-----------начало специальности
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\ql \fs20 \b ',,'\cf13 ',
+"Специальность: "v1^D,,'\b0 ',,,,
+/*-----студентов по специальности - НЕТ
+,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+else 
+if v1^B<>'' and v1^D='' 
+then 
+/*-------------------------------------------------------------------------------------------------------------------------дисциплина
+'\cf12 ',
+&uf('+7W995#',,f(val(g995)+1,0,0) ),,,,
+if val(g15)>0 then 
+/*-------------конец специальности
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qr \fs20 ',,'\cf13 ',
+'По специальности:  ',,,if val(g999)>0 then '(по всем книгам)' fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----студентов по специальности - НЕТ
+,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*--------KKO по специальности
+/*отладка------------g992,,'/',,g15,,,
+f(val(g992) / val(g15),0,2),,,,&uf('+7W15#'),,,,&uf('+7W992#'),,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+'\cf12 ',
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7479 
+\pard \widctlpar\intbl {\ql \fs20 \b ',,
+"Дисциплина: "v1^B,,' (',,v1^C,,')\b0 ',,,&uf('+7W15#'),,,&uf('+7W992#'),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*----------------Цикл
+/*отладка------------'v1=',,v1,,,,,,
+&uf('DVUZ,?IDD=',v1^C,'?,v4'),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs20 ',,,,,
+/*---------------Кол-во ЭУ
+/*---&uf('+7W994#'),,&uf('+7U994#',,,,&uf('7,?IDD=',v1^C,'?,@KoElectro')  ),,f(rsum((if p(g994) then '1,' fi)),0,0),,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+if v1^A<>'' and v1^B='' 
+then 
+/*-------------------------------------------------------------------------------------------------------Кафедра
+'\cf15 ',
+if val(g15)>0 then 
+/*-------------конец специальности
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qr \fs20 ',,'\cf13 ',
+'По специальности:  ',,,if val(g999)>0 then '(по всем книгам)' fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----студентов по специальности - НЕТ
+,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12582 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*---------------------KKO по специальности
+/*отладка------------g992,,'/',,g15,,,
+f(val(g992) / val(g15),0,2),,,,&uf('+7W15#'),,,,&uf('+7W992#'),,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+'\trowd \trqc\trgaph108\trleft-108',,,
+'\cf15 ',
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14283 \pard \widctlpar\intbl {\qc \fs24 \b ',,'\cf15 ',,,,,
+"Кафедра: "d1^A,,if &uf('Kkafch.mnu!',v1^A)<>'' then &uf('Kkafch.mnu!',v1^A),,,' (',v1^A,')' else v1^A fi,,,,,,,,
+&uf('+7W15#'),,,&uf('+7W992#'),,,
+'\b0 ',,'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,
+fi fi fi fi,,
+'}',

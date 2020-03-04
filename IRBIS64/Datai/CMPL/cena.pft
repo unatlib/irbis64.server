@@ -1,0 +1,5 @@
+/* 991^A - для организации
+/* 991^B - для заказа
+f(rsum((if p(v62) then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v62^k) then if a(v62^u) then if &uf('Ag991^B#1')='' or &uf('Ag991^B#1')=&uf('+97',v62^b) then  f(val(v62^d),0,0),',' fi fi fi fi)),0,0),,,
+,'|',
+f(rsum( (if p(v62) then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v62^k) then if a(v62^u) then if &uf('Ag991^B#1')='' or &uf('Ag991^B#1')=&uf('+97',v62^b) then  f(val(v62^d)*val(&unifor('Av10^d#1'),' 0'),0,2),', ',,fi fi fi fi/) ),0,2),,,,

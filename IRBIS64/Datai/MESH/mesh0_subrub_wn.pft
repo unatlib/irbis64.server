@@ -1,0 +1,57 @@
+/* В глобальной переменной 1 - переключатель: пусто - представление термина группы; не пусто - представление головного термина группы
+/* В глобальной переменно1 2 - текст вышестоящего термина для головного термина группы
+/* В глобальной переменно1 3 - код вышестоящего термина для головного термина группы
+/* В глобальной переменно1 33 - текущий код головного термина группы
+/* В глобальной переменной 4 - переключатель: пусто - показывать СМОТРИ ТАКЖЕ; не пусто - НЕ показывать
+/* В глобальной переменной 88 - переключатель: пусто - показывать СМОТРИ; не пусто - НЕ показывать
+/*
+/* определение: есть ли нижестоящие - результат в переменно1 100
+if p(v3) then &uf('+1W101#',&uf('+H',&uf('Av3#1'))) else &uf('+1W101#0') fi,
+'<SCRIPT language=JavaScript>',
+'function DropDown',&uf('+1R101'),'(id){',
+'div = document.getElementById(id);',
+'if(div.style.display=="none") ',
+'{div.style.display="block"; form',&uf('+1R101'),'.CHECKINDEX.checked=true;}',
+'else {div.style.display="none"; form',&uf('+1R101'),'.CHECKINDEX.checked=false; for(i=0; i<form',&uf('+1R101'),'.CHECKINDEX_.length;i++) form',&uf('+1R101'),'.CHECKINDEX_[i].checked=false;}',
+'}',
+'function DropUp',&uf('+1R101'),'(id){',
+'div=document.getElementById(id); if(div.style.display=="none") {div.style.display="block";}',
+'else {div.style.display="none";}',
+'}',
+'</SCRIPT>',
+
+if &uf('+1R33')='0' then &uf('+1W100#1') 
+                    else &uf('+1W100#'),(if p(v3) then if ((&uf('+1R33')='') or (v3 : &uf('+1R33'))) and (&uf('J,G=',v3)<>'') then &uf('+1W100#1') fi fi),fi,
+                    
+'<FORM name=form',&uf('+1R101'),'>',
+
+'<table>', 
+if v3<>'0' then 
+'<tr>', 
+'<td width=20>', 
+if p(v3) then '<input type="checkbox" ',if p(v13) then 'onclick="javascript:DropDown',&uf('+1R101'),|('id|d3,&uf('+1R101'),|');"|d3,fi,' name="CHECKINDEX" value="^K',&uf('Av3#1'),'">' fi, 
+'</td>', 
+'<td>', 
+'<img src=','"','IRBIS:10,MESH,', 
+   if a(v3) then 'text.gif' else if &uf('+1R100')<>'' then 'folder.gif' else 'textfolder.gif' fi fi, 
+,'">', 
+'</td>', 
+'<td>', 
+if (&uf('+1R1')='') and (&uf('+1R100')<>'') then '<A HREF="IRBIS:1,,,mesh_wn,R=',&uf('Av3#1'),'">' fi, 
+&uf('Av2#1'),'</A>',
+if &uf('+1R1')<>'' then ' <A HREF="IRBIS:1,,,mesh_wn,R=',&uf('+1R3'),'">','(Выщестоящий: ',&uf('+1R2'),' - ',&uf('+1R3'),')</A>' fi,
+if (p(v4)) and (&uf('+1R4')='') then ' <A HREF="IRBIS:1,,,meshseeso_wn,R=',&uf('Av3#1'),'">(Смотри также...)</A>' fi 
+if a(v3)  and (&uf('+1R88')='') then ' <A HREF="IRBIS:1,,,mesh_wn,@',ref(l('T=',&uf('Av88#1')),mfn),'">(Смотри ',v88')</A>' fi, 
+'</td>' 
+'</tr>',
+fi, 
+'</table>',
+'<DIV id=id',&uf('+1R101'),' style="DISPLAY: none; MARGIN-LEFT: 20px">',
+(if p(v13) then
+'<INPUT type=checkbox name=CHECKINDEX_ value="^K',&uf('Av3#1'),'^M',v13,'">',v13,'<BR>',fi),
+'<a style="cursor:hand; text-decoration:underline;color:blue" onClick="javascript:DropUp',&uf('+1R101'),|('id|d3,&uf('+1R101'),|');">закрыть</a>|d3,
+'</DIV>',
+'</FORM>',
+/*&uf('+1W2#'),&uf('+1W3#'),&uf('+1W33#')
+
+

@@ -1,0 +1,24 @@
+'</>',
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<DIV ALIGN=CENTER><b> Издание в обработке. Не выдается<br> </b> <DIV ALIGN-LEFT>' fi fi, 
+&uf('6osvex_H'), 
+&uf('6orchifr_H'),
+&uf('6otit461_H'), 
+if p(v925) then &uf('6ibis925_H') fi,  mhl,
+,Otitkn, 
+'. - ',oizd, 
+'. - ',ospec, 
+'. - ',ovixd, 
+'. - ',ofizxar_H, 
+'. - ',oser, 
+'. - ',oprim_H, 
+'. - ',oISBNcn_H, 
+,oprimd_H, 
+,ogrudk_H, 
+,orubdks_H,
+,oprip481_H, 
+,Odoptd_H, 
+&uf('6oex910_H'), 
+,ofinal_H, 
+'<br> ',&unifor('!'), 
+

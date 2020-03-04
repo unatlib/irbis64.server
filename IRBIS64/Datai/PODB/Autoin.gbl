@@ -1,0 +1,21 @@
+0
+DEL
+10
+F
+if &uf('Av30#2')<>'' then if &uf('+97'&uf('Av30^a#1'))=&uf('+97'&uf('Av30^a#2')) then (if p(v30) then if a(v30^k) then '1' else '0' fi fi/) else if &uf('+97'&uf('Av30^k#1'))=&uf('+97'&uf('Av30^k#2')) then (if p(v30) then if a(v30^a) then '1' else '0' fi fi/) else (|0|d30/) fi fi else '0' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+210^A
+1
+if p(v210) then if a(v210^a) then &uf('IPRIVATE,MI,') fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+210^C
+1
+if p(v210) then if a(v210^c) then &uf('IPRIVATE,IZD,') fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+40
+ 
+if p(v210) then if a(v40) then '^T'&uf('IPRIVATE,IST,'),'^I'&uf('IPRIVATE,VAL,') fi fi
+XXXXXXXXXXXXXXXXXXX

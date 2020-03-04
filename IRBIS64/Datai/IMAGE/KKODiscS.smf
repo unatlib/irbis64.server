@@ -1,0 +1,8 @@
+[ROWQRY]
+&uf('+7W1003#'if p(g9999) then (g9999/) else if p(v991^d) then &uf('+7W1002#900'),(if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Av991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko5discS,fi/),
+[FLDTEXT]
+&uf('+7W1003#'if p(g9999) then (g9999/) else if p(v991^d) then &uf('+7W1002#900'),(if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Av991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko6discS,fi/),
+[FLDMODE1001]
+&uf('+7W1003#'if p(g9999) then (g9999/) else if p(v991^d) then &uf('+7W1002#900'),(if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Av991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko6MdiscS,fi/)
+[FLDSUM]
+'1'

@@ -1,0 +1,3 @@
+if v600^w<>'' then if rsum((if p(v600) then if p(v600^w) then if s(v600^a,v600^z)<>'' then '1;' else '0;' fi fi fi))>0 then 
+/'1 Поле с ^W не должно содержать ^A и ^Z ' else /'0' fi fi /
+(if p(v600) then if p(v600^z) and a(v600^)) then /'1 не введен "Тип заглавия"'  else /'0' fi fi/)

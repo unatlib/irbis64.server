@@ -1,0 +1,41 @@
+4
+1
+______Наименование______
+0
+0
+0
+
+
+
+G1^1='' or v3^A: G1^1
+if G1='' or ( G1^1='' or G1^1<>'' and v3^A: G1^1 ) and ( G1^2='' or G1^2<>'' and &uf('+97',v4)=&uf('+97',G1^2) ) and ( G1^5='' or G1^5<>'' and &uf('+97',v5)=&uf('+97',G1^5) ) then ,,,,&uf('+7W15#',if &uf('IPRIVATE,DBN,IBIS')='' then 'IBIS' else &uf('IPRIVATE,DBN,IBIS') fi),,,, if &uf('7',G15,',?IDD=',v3^0,'?,mfn')='' then v3^A else       &uf('+7W10#',v3^A),&uf('+7W11#'),,&uf('7',G15,',?IDD=',v3^0,'?,if a(G11) then G10,&uf("+7W11#1"d920),,, fi,,/') fi fi
+2
+Цикл
+0
+0
+1
+CIKLD.mnu
+
+DiscCKL=
+G1^2='' or s('!',v4,'!'): s('!',G1^2,'!')
+if G1='' or ( G1^1='' or G1^1<>'' and v3^A: G1^1 ) and ( G1^2='' or G1^2<>'' and &uf('+97',v4)=&uf('+97',G1^2) ) and ( G1^5='' or G1^5<>'' and &uf('+97',v5)=&uf('+97',G1^5) ) then ,,,&uf('+7W15#',if &uf('IPRIVATE,DBN,IBIS')='' then 'IBIS' else &uf('IPRIVATE,DBN,IBIS') fi),,, if &uf('7',G15,',?IDD=',v3^0,'?,mfn')='' then v4 else &uf('+7W10#'," "n4,v4),,&uf('+7W11#'),,&uf('7',G15,',?IDD=',v3^0,'?,if a(G11) then G10,&uf("+7W11#1"d920),,, fi/') fi fi
+5
+Кафедра чит.
+0
+0
+1
+kafch.mnu
+
+DISCKH=
+G1^5='' or s('!',v5,'!'): s('!',G1^5,'!')
+if G1='' or ( G1^1='' or G1^1<>'' and v3^A: G1^1 ) and ( G1^2='' or G1^2<>'' and &uf('+97',v4)=&uf('+97',G1^2) ) and ( G1^5='' or G1^5<>'' and &uf('+97',v5)=&uf('+97',G1^5) ) then ,,&uf('+7W15#',if &uf('IPRIVATE,DBN,IBIS')='' then 'IBIS' else &uf('IPRIVATE,DBN,IBIS') fi),,, if &uf('7',G15,',?IDD=',v3^0,'?,mfn')='' then v5 else &uf('+7W10#'," "n5,v5),,&uf('+7W11#'),,&uf('7',G15,',?IDD=',v3^0,'?,if a(G11) then G10,&uf("+7W11#1"d920),,, fi/') fi fi
+6
+_________________________________Книги________________________________
+0
+0
+0
+
+
+
+
+if G1='' or ( G1^1='' or G1^1<>'' and v3^A: G1^1 ) and ( G1^2='' or G1^2<>'' and &uf('+97',v4)=&uf('+97',G1^2) ) and ( G1^5='' or G1^5<>'' and &uf('+97',v5)=&uf('+97',G1^5) ) then &uf('+7W12#',v991),, &uf('+7W15#',if &uf('IPRIVATE,DBN,IBIS')='' then 'IBIS' else &uf('IPRIVATE,DBN,IBIS') fi),,&uf('7',G15,,',?IDD=',v3^0,'?,@!vuzbook')  fi

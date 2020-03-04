@@ -1,0 +1,68 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=8
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=8
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=\b № п/п\b0 
+CELL_TAB2_3=if v920:'KSU' then '\qc 1' else'\qr ' &unifor('S1A')'. ' fi
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=5.75
+CELL_TAB3_2=\b Автор, заглавие, место издания, издательство, объём\b0 
+CELL_TAB3_3=if v920:'KSU' then '\qc 2' else '\ql 'v461^x| |,v461^c,if p(v461) then"; "v200^v,if p(v200^v) then": "d200^a fi else ,v700^a," "v700^b," "d700,v200^a,"; "v200^v fi,(if p(v225)then'. -('v225^a,if p(v225^a)then"; "v225^v fi')'fi),if p(v215^a) then". -"v215^a,| |d215^1,&unifor('G2='v215^1),if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi fi
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2.75
+CELL_TAB4_2=\b Цена экз.\b0 
+CELL_TAB4_3=if v920:'KSU' then '\qc 3' else '\qr '   (if s(v910^y)<>''then        if v910^y=&unifor('G0-'&unifor('Av991*3#1')) and v910^u*2.2=&unifor('G0-'&unifor('Av991#1')) then           if p(v910^e)then f(val(v910^e,' 0'),0,2) else f(val(&unifor('Av10^d#1'),' 0'),0,2)          fi,| (|v910^1| экз.)|,'\par '   fi  fi) fi,
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=1.75
+CELL_TAB5_2=\b Количество экз.\b0 
+CELL_TAB5_3=if v920:'KSU'then else f(rsum((if s(v910^y)<>''then if v910^y=&unifor('G0-'&unifor('Av991*3#1')) and v910^u*2.2= &unifor('G0-'&unifor('Av991#1')) then v910^1|;|,|1;|n910^1,' 0'fi fi)),0,0) fi 
+CELL_TAB5_4=По правому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=2
+CELL_TAB6_2=\b На сумму\b0 
+CELL_TAB6_3=if v920:'KSU'then else  f(rsum((if p(v910^y) then            if &unifor('G0-'&unifor('Av991*3#1'))=v910^y and v910^u*2.2=&unifor('Av991.2#1')then               if a(v910^e)then v910^1|;|,|1;|n910^1         fi fi fi,' 0')) * val(&unifor('Av10^d#1'),'; 0') +   rsum((if s(v910^y)<>''then            if v910^y=&unifor('G0-'&unifor('Av991*3#1')) and v910^u*2.2=&unifor('Av991.2#1') then               if p(v910^e)then f(val(v910^1|;|,|1;|n910^1) * val(v910^e),0,2)else'0'        fi fi fi,' 0')),0,2),fi
+CELL_TAB6_4=По правому краю
+CELL_TAB6_5=Да
+CELL_TAB7_1=2.75
+CELL_TAB7_2=\b УДК/ББК\b0 
+CELL_TAB7_3=if v920:'KSU' then '\qc 6' else '\ql 'if p(v675)then v675+| + | else v621+| + | fi,if a(v675) and a(v621)then'-'fi fi
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9936 \pard \ql\widctlpar\intbl {\qc \fs20 ''\par \qr Итого в партии: 'v1'экз.  на  сумму ' v2, &unifor('Korg.mnu|3')'\par 
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=1
+CELL_SUM111=16
+CELL_SUM112='\par \qr Итого в партии: 'v1'экз.  на  сумму ' v2, &unifor('Korg.mnu|3')'\par '
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=11
+CELL_SORT4=0
+CELL_SORT5=v920,f(val(mfn),0,0)
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=
+HDR_PFT=Tabf4hw
+HDR_PARAMS_COUNT=0

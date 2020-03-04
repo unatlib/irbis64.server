@@ -1,0 +1,72 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx642 
+\pard \widctlpar\intbl {\qc \fs24 № п/п
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7111 
+\pard \widctlpar\intbl {\qc \fs24 Наименование индикатора
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8345 
+\pard \widctlpar\intbl {\qc \fs24 Единица измерения/значение
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9479 
+\pard \widctlpar\intbl {\qc \fs24 Значение сведений
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx642 
+\pard \widctlpar\intbl {\qc \fs24 1
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7111 
+\pard \widctlpar\intbl {\qc \fs24 2 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8345 
+\pard \widctlpar\intbl {\qc \fs24 3
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9479 
+\pard \widctlpar\intbl {\qc \fs24 4 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

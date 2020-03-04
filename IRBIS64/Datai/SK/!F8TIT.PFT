@@ -1,0 +1,82 @@
+mhl,
+(if ('***'='510') then v***^d else 
+    if ('***'='470') then v***^c| \реценз.док.\| else 
+       if ('***'='923') then /v923^i,|. |v923^l else 
+          if ('***'='200') then /v200^a,ref(mfn,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l)),
+             if a(v461) and v200^u:'1' then | / |v200^f fi,| (Шифр |v903|)|,
+          else 
+             if ('***'='461') then /v461^c,
+                |. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                 |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi,
+                if v461^u:'1'then|/|v461^x,|/|v461^b,
+                   if s(v461^x,v461^b)=''then|/|v461^f 
+                fi fi,";"v200^v,
+                if v200^u:'1'then ":"d200^v,"."n200^v,v200^a,ref(mfn,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l)) 
+                else ref(mfn,(|. |v923^h,|. |v923^k)) fi/ 
+             else 
+                if ('***'='463') or ('***'='330') or ('***'='922') then v***^c,
+                   if '***'='463' then "/ "v963^b,'\ист. ст.-',v463^j,| |v463^v,
+                      | |v463^h,| |v463^k,'\'fi,
+                else 
+                   if '***'='4601' then v46^a,|/|v46^f else 
+                      if '***'='4602' then v46^l else 
+                         if '***'='481' then 
+                            if p(v481^z) then/&unifor('Av461^c#1'),
+                               (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                                |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),
+                               if &unifor('Av461^u#1'):'1'then 
+                                     |/ |d461^x,&unifor('Av461^x#1'),
+                                     |/ |d461^b,&unifor('Av461^b#1'),
+                                  if s(v461^x,v461^b)=''then 
+                                     |/ |d461^f,&unifor('Av461^f#1'),
+                               fi fi,|;|v481^v,if v481^u:'1'then|: |v481^c fi 
+                            else 
+                               if v481^u:'1'then else / v481^c fi,
+                            fi 
+                         else 
+                            if '***'='9251' then 
+                               if a(v925^u) then v925^a else &unifor('Av461^c#1'),
+                                  (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                                   |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),
+                                  if &unifor('Av461^u#1'):'1'then 
+                                     if s(&unifor('Av461^x#1'),&unifor('Av461^b#1'))<>''then
+                                        '/' &unifor('Av461^x#1'),&unifor('Av461^b#1') 
+                                  fi fi,|;|v925^v,|:|v925^a fi,| |n925^a 
+                            else 
+                               if '***'='9252' then 
+                                  if a(v925^u) then v925^b else &unifor('Av461^c#1'),
+                                     (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                                      |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),
+                                     if &unifor('Av461^u#1'):'1'then 
+                                        if s(&unifor('Av461^x#1'),&unifor('Av461^b#1'))<>''then
+                                           '/' &unifor('Av461^x#1'),&unifor('Av461^b#1') 
+                                     fi fi,|;|v925^v,|:|v925^b fi,| |n925^b 
+                               else 
+                                  if '***'='9253' then 
+                                     if a(v925^u) then v925^c else &unifor('Av461^c#1'),
+                                        (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                                         |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),
+                                        if &unifor('Av461^u#1'):'1'then 
+                                           if s(&unifor('Av461^x#1'),&unifor('Av461^b#1'))<>''then
+                                              '/' &unifor('Av461^x#1'),&unifor('Av461^b#1') 
+                                        fi fi,|;|v925^v,|:|v925^c fi,| |n925^c 
+                                  else 
+                                     if '***'='925' then &unifor('Av461^c#1'),
+                                        (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,
+                                         |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),
+                                        if &unifor('Av461^u#1'):'1'then 
+                                           if s(&unifor('Av461^x#1'),&unifor('Av461^b#1'))<>''then
+                                              '/'&unifor('Av461^x#1'),&unifor('Av461^b#1') 
+                                        fi fi,|;|v925^v 
+                                     else 
+                                        if '***'='4611' then &unifor('Av461^a#1') 
+                                        else 
+                                           if p(v***^a) then /v***^a,
+                                              if '***'='225' then |/|v225^f fi,
+                                              if '***'='46' then |/|v46^f fi,
+                                              if '***'='454' then |/|v454^b fi,|; |v***^v 
+                                              
+                                           else  
+                                              if '***'='541'then /v*** fi 
+ fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi/),
+mpl

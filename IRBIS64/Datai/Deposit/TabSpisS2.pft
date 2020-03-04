@@ -1,0 +1,51 @@
+/*--------------------передано на сумму
+if v940^v:v991 
+then 
+   f(rsum(
+       (if p(v940^v)
+        then 
+            if &uf('Av991#1')<>'' and &uf('+97',v940^v)=&uf('+97',&uf('Av991#1')) 
+            then 
+/*------------для статуса  0 коэф =1
+                if v940^a:'6' then &uf('+7W10#1') else &uf('+7W10#',,v940^Z,) fi,,,
+                if p(v940^e)
+                then 
+/*----------есть цена
+                    if p(v940^c) 
+                    then 
+                        if &unifor('Kizc.mnu|'v940^c.6)<>'' 
+                        then 
+                            f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6))*val( &uf('Ag10#1'),' 0'),0,2) 
+                        else 
+                            if &unifor('Kizc.mnu|'v940^c.4)<>'' 
+                            then 
+                                 f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4))*val(&uf('Ag10#1'),' 0'),0,2) 
+                            else 
+                                  f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980'))*val(&uf('Ag10#1'),' 0'),0,2)  
+                            fi 
+                        fi 
+                    else 
+                       f(val(v940^e|;|)*val(&uf('Ag10#1'),' 0'),0,2) 
+                    fi 
+                else 
+/*------------нет цены
+                   if p(v940^c) 
+                   then 
+                      if &unifor('Kizc.mnu|'v940^c.6)<>'' 
+                      then 
+                         f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6))*val(&uf('Ag10#1'),' 0'),0,2)';',, 
+                      else 
+                         if &unifor('Kizc.mnu|'v940^c.4)<>'' 
+                         then 
+                            f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4))*val(&uf('Ag10#1'),' 0'),0,2)';',, 
+                         else 
+                            f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980'))*val(&uf('Ag10#1'),' 0'),0,2)';',, 
+                         fi 
+                      fi 
+                  else 
+                     f(val(&unifor('Av10^d#1'),' 0')*val(&uf('Ag10#1'),' 0'),0,2)';',,
+                  fi 
+               fi 
+            fi 
+        fi/)),0,2) 
+fi,

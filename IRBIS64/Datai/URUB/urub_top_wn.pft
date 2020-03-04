@@ -1,0 +1,73 @@
+'<body bgcolor="#ffffcc">'
+
+'<script language="JavaScript">',
+
+'function IfEmpty1()',
+'{',
+'if (SEARCH1.S21STR.value == "") return false;',
+'return true;',
+'}',
+
+'</script>',
+'<title>',
+if v1001<>''
+     then 'Фрагмент Тезауруса по запросу: ',v1001,
+     else 'Тезаурус - Верхний уровень' 
+fi,
+'</title>',
+'<TABLE width="100%"><TR><TD>',
+'Выделение фрагмента Тезауруса по ключевым словам',
+'</TD></TR>',
+'<TR><TD>',
+'<form name="SEARCH1" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" NAME="C21COM" value="2">',
+'<input type="hidden" NAME=I21DBN value="URUB">',
+'<input type="hidden" name="PFTNAME" value="urub0_wn">',
+'<input type="hidden" name="TOPPFTNAME" value="urub_top_wn">',
+'<input type="hidden" name="BOTTOMPFTNAME" value="urub_bottom_wn">',
+'<input type="hidden" name="S21P02" value="1">',
+'<input type="hidden" name="S21P03" value="K=">',
+'<input type="text" name="S21STR" style="width:100%" value="',v1001,'" size="75" onkeydown="if ((this.value.length>1) && (event.keyCode==13)) SEARCH1.submit()">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="S21CNR" value="100">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR2" value="',v1102,'">',
+'<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+'<input type="hidden" name="FREEPAR5" value="',v1105,'">',
+'</TD>',
+
+'<TD>',
+'<input type="submit" name="1111" value="Выполнить" onclick="return IfEmpty1()">',
+'</TD>',
+'</TR>',
+
+'<tr>',
+'<td>Логика : ',
+'<select name="S21LOG">',
+'<option value="0">ИЛИ    </option>',
+'<option value="1" selected="">И    </option>',
+'<option value="2">ФРАЗА ЦЕЛИКОМ  </option>',
+'</select>',
+'</td>',
+'</tr>',
+
+'<tr>',
+'<td>Окончания слов : ',
+'<input type="radio" name="S21P01" value="3" checked="checked">',
+'не учитывать /   <input type="radio" name="S21P01" value="1">учитывать',
+'</td>',
+'</tr>',
+'</form>',
+'</TABLE>',
+'<hr>',
+'<b>'
+if v1001<>'' then 
+             if v1002='0'
+                 then 'Фрагмент Тезауруса не найден' 
+                 else 'Фрагмент Тезауруса по запросу: ',v1001,if val(v1002)>val(v1006) then '<br>(Представлены первые ',v1006' терминов)' fi, 
+             fi,
+             else 'Тезаурус - Верхний уровень'    ,
+fi,
+'</b>'
+

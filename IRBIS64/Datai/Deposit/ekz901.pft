@@ -1,0 +1,20 @@
+,&uf('+7W2#'g10),&uf('S0'),if p(v901) then 
+      if v901^q:g10^q then ,
+         (if p(v901) then 
+             if v901^Q=&uf(|Ag10^q#1|d901^q) then
+             |\pard\tx2\tx480\tx980\tx1580\tx2490\par \b  |d901^q,&uf('Ag10^q#1')'\tab ',&uf('Ag5#1'),&uf('+7W5#'f(val(&uf('Ag5#1'))+1,0,0)),'\tab 'v901^D,'\tab 'v901^E, 
+&uf('+7W4#'&uf('G2=',&uf('Ag2^e#1'))),
+&uf('+7W3#',&uf('G0;',&uf('Ag4#1'))), 
+&uf('+7W2#','^Q'&uf('Ag10^q#1'),'^e'&uf('G2;',&uf('Ag2^e#1'))),&uf('Ag3#1'),
+     ,'\tab 'v901^F,,'\tab 'v901^1 '\b0 '
+          fi fi) 
+      else
+         (if p(v901) then if v901^q*4='' then 
+             if &uf(|Ag10^q#1|d901^q):v901^q.4 then
+             |\pard\tx2\tx480\tx980\tx1580\tx2490\par \b |d901^q,&uf('Ag10^q#1')'\tab ',&uf('S1A'),'\tab 'v901^D,'\tab 'v901^E, 
+&uf('+7W4#'&uf('G2=',&uf('Ag2^e#1'))), 
+&uf('+7W3#',&uf('G0;',&uf('Ag4#1'))), 
+&uf('+7W2#^e',&uf('G2;',&uf('Ag2^e#1'))),&uf('Ag3#1'), 
+     ,'\tab 'v901^F,'\tab 'v901^1 '\b0 '
+          fi fi fi) fi fi
+

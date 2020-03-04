@@ -1,0 +1,80 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=1
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=29.7
+TAB_PAGE_HEIGHT=21
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=8
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=12
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1.5
+CELL_TAB2_2=\b № п/п\b0
+CELL_TAB2_3=&uf('S1A')
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=1.75
+CELL_TAB3_2=\b Инвентарный номер\b0
+CELL_TAB3_3=if v940^v:v991 then    (if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then        if p(v940^b)then v940^b else v940^h fi'\par 'fi fi)fi,
+CELL_TAB3_4=По правому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=1.75
+CELL_TAB4_2=\b Число экз.(ЦБС или БИУ)\b0
+CELL_TAB4_3=if v940^v:v991 then (if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then    f(val(v940^x|;|,|1;|n940^x),0,0)'\par ' fi fi)fi,
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=1.75
+CELL_TAB5_2=\bМесто хранения\b0
+CELL_TAB5_3=if v940^v:v991 then(if p(v940) then if p(v940^v) and v940^v=&unifor('Av991#1')then v940^d'\par 'fi fi) fi,
+CELL_TAB5_4=По центру
+CELL_TAB5_5=Нет
+CELL_TAB6_1=6
+CELL_TAB6_2=\bАвторы, заглавие, выходные данные\b0
+CELL_TAB6_3=if rsum((if'2 7':v940^a then'0;'else|1;|d910 fi/))>0 then if v920:'NJ'then ref(l(|I=|v933), mhl,v200^a,". "v923^h,". "v923^k,mpl,)," - "v934" г."," т."v935,",N "v936 else mhl,v461^x| |,v461^c," ; "v200^v,if p(v200^v) then" : "d200^a fi,v700^a," "v700^b," "d700,v200^a,if p(v215^a) then". - "v215^a,if p(v215^1) then if v215^1:'=' then ' '&uf('G2='v215^1) else ' 'v215^1 fi fi,if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi fi,mpl,fi,
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_TAB7_1=1.75
+CELL_TAB7_2=\b Дата поступления\b0
+CELL_TAB7_3=if v940^v:v991 then(if p(v940) then if p(v940^v) and v940^v=&unifor('Av991#1')then v940^c.4'\par ' fi fi)fi,
+CELL_TAB7_4=По центру
+CELL_TAB7_5=Нет
+CELL_TAB8_1=1.75
+CELL_TAB8_2=\b Цена экз. при поступлении\b0
+CELL_TAB8_3=if v940^v:v991 then (if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then  if p(v940^e)then v940^e else &unifor('Av10^d#1') fi'\par ' fi fi)fi,
+CELL_TAB8_4=По правому краю
+CELL_TAB8_5=Нет
+CELL_TAB9_1=2
+CELL_TAB9_2=\b Стоимость экз. при выбытии\b0
+CELL_TAB9_3=if v940^v:v991 then (if p(v940) then     if p(v940^v) and &unifor('Av991#1'):v940^v then        if p(v940^e) then           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>'' then f(val(v940^e)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2)'\par '              else                 if &unifor('Kizc.mnu|'v940^c.4)<>'' then f(val(v940^e)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2)'\par '                 else f(val(v940^e)*val(&unifor('Kizc.mnu|1980')),0,2)'\par '              fi fi           else f(val(v940^e),0,2)'\par '           fi        else           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>'' then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2),'\par '              else                 if &unifor('Kizc.mnu|'v940^c.4)<>'' then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2),'\par '                 else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2),'\par '              fi fi           else f(val(&unifor('Av10^d#1'),' 0'),0,2),'\par '  fi fi fi fi/)fi,
+CELL_TAB9_4=По правому краю
+CELL_TAB9_5=Нет
+CELL_TAB10_1=1.75
+CELL_TAB10_2=\b Всего выбыло экз.\b0 
+CELL_TAB10_3=if v940^v:v991 then f(rsum((if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then f(val(v940^x|;|,|1;|n940^x,' 0'),0,0) fi fi/)),0,0)fi,
+CELL_TAB10_4=По правому краю
+CELL_TAB10_5=Да
+CELL_TAB11_1=2.5
+CELL_TAB11_2=На сумму\b0
+CELL_TAB11_3=if v940^v:v991 then f(rsum((if p(v940)then     if p(v940^v) and v940^v=&unifor('Av991#1')then        if p(v940^e) then           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>''             then f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '              else                 if &unifor('Kizc.mnu|'v940^c.4)<>''                then f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '                 else f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '              fi fi           else f(val(v940^e|;|)*val(v940^x,|1|n940^x,' 0'),0,2)'\par '           fi        else           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>''              then f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',             else                 if &unifor('Kizc.mnu|'v940^c.4)<>''                 then f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',                else f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',             fi fi           else f(val(&unifor('Av10^d#1'),' 0')*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ', fi fi fi fi/)),0,2)fi,
+CELL_TAB11_4=По правому краю
+CELL_TAB11_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\qr ИТОГО: 'v1' экз. на сумму 'v2,if val(v2)>0 then &uf('Korg.mnu\3') fi
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=0
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=
+HDR_PFT=Tabwbhw.pft
+HDR_PARAMS_COUNT=0

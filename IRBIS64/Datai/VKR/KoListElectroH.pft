@@ -1,0 +1,16 @@
+'{ \par \qc',,,'Возможность доступа студентов к электронным фондам учебно-методической документации ',,
+if s(v991^1,v991^2,v991^3)<>'' 
+then 
+   '\par для типа ресурса: ',,&uf('K951h.mnu!',v991^1),,if &uf('K951h.mnu!',v991^2)<>'' then ', ',,&uf('K951h.mnu!',v991^2) fi,,,if &uf('K951h.mnu!',v991^3)<>'' then ', ',,&uf('K951h.mnu!',v991^3) fi,,,
+fi,,,,,,,,,
+if p(v991^G) then '\par \ql \tab \tab \tab \tab Тип дисциплин - ',v991^G fi,,,,,
+if p(v991^S) then '\par \ql \tab \tab \tab \tab Цикл дисциплин - ',v991^S fi,,,,,
+if p(v991^I) then '\par \ql \tab \tab \tab \tab Дисциплина - ',v991^I fi,,,,,
+if p(v991^F) then '\par \ql \tab \tab \tab \tab Семестр - ',v991^F fi,,,,,
+if p(v991^B) then '\par \ql \tab \tab \tab \tab Кафедра - ',v991^B fi,,,,,
+if p(v991^A) then '\par \ql \tab \tab \tab \tab Факультет - ',v991^A fi,,,,,
+if p(v991^O) then '\par \ql \tab \tab \tab \tab Форма обучения - ',v991^O fi,,,,,
+if p(v991^V) then '\par \ql \tab \tab \tab \tab Вид обучения - ',v991^V fi,,,,,
+if p(v991^C) then '\par \ql \tab \tab \tab \tab Специальность - ',v991^C fi,,,,,
+if p(v991^N) then '\par \ql \tab \tab \tab \tab Направление - ',v991^N fi,,,,,
+'\par }'

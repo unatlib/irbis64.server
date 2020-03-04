@@ -1,0 +1,48 @@
+1
+
+
+DEL
+910
+F
+(if v910^a='7'then'1'else'0'fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+940
+F
+(if v910^v:'%1' and 'C U':v910^a then v910 fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(if v910^v: '%1' and 'C U':v910^a then |^a|v910^a,|^d|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f else v910 fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if 'C U':v910^a then if s(v910^1)=''then'1'else'0'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+F
+(if v910^v:'%1' and p(v910^w)then'^a0',|^d|v910^m,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+F
+(if v940^v:'%1' and p(v940^w)then |^a|v940^a,|^1|v940^z,|^d|v940^m,|^b|v940^b,|^h|v940^h,|^e|v940^e,|^u|v940^u,|^y|v940^y,|^c|v940^c,|^f|v940^f,|^2|v940^2 fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+5
+F
+if p(v910)then f(rsum((if p(v910)then if v910^a<>'6'then '1;' else '0;'fi fi/)),0,0)else if p(v940)then '0'fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+F
+if val(v5)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

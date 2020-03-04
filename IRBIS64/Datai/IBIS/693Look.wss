@@ -1,0 +1,121 @@
+12
+B
+______Автор, заглавие_______
+0
+0
+0
+
+
+
+
+&unifor('6briefko')
+A
+Выделен.
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^A<>'' then v693^A else ' ' fi fi fi else ' ' fi/)
+D
+Экз. без КМИ
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^D<>'' then v693^D else ' ' fi fi fi else ' ' fi/)
+K
+Экз. с КМИ
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^K<>'' then v693^K else ' ' fi fi fi else ' ' fi/)
+Q
+Число экз.аналогов
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^Q<>'' then v693^Q else ' ' fi fi fi else ' ' fi/)
+E
+Студентов
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^E<>'' then v693^E else ' ' fi fi fi else ' ' fi/)
+F
+Коэффиц.КО
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^F<>'' then v693^F else ' ' fi fi fi else ' ' fi/)
+M
++ общие (остальные)
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^M<>'' then v693^M else ' ' fi fi fi else ' ' fi/)
+N
+ККО без учета ВК
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^N<>'' then v693^N else ' ' fi fi fi else ' ' fi/)
+P
+KKO с аналогами
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^P<>'' then v693^P else ' ' fi fi fi else ' ' fi/)
+S
+Среднее для весеннего
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^S<>'' then v693^S else ' ' fi fi fi else ' ' fi/)
+L
+Филиал
+0
+0
+0
+
+
+
+
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then &uf('+7W77#O') else &uf('+7W77#V') fi,,,,,(if p(v693) then if v693^C: &uf('AG77#1') and v693^B: s(&uf('30')) then if v693^X: 'NOZO' then else if v693^L<>'' then v693^L else ' ' fi fi fi else ' ' fi/)

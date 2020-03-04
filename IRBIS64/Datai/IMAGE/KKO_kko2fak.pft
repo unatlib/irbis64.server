@@ -1,0 +1,10 @@
+mpu,'^F1^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=1!,@numbfak')/
+mpu,'^F2^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=2!,@numbfak')/
+mpu,'^F3^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=3!,@numbfak')/
+mpu,'^F4^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=4!,@numbfak')/
+mpu,'^F5^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=5!,@numbfak')/
+mpu,'^F6^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=6!,@numbfak')/
+mpu,'^F7^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=7!,@numbfak')/
+mpu,'^F8^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=8!,@numbfak')/
+mpu,'^F9^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=9!,@numbfak')/
+mpu,'^F10^A',G1003 ,'^R',&uf('Kfak.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=10!,@numbfak')/

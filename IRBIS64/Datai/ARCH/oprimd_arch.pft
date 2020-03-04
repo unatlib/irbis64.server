@@ -1,0 +1,57 @@
+'{'
+if s(v905^m)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"\par \b Общие примечания: \b0 "|. |+v300,mpl fi, 
+"\par \b Перевод заглавия: \b0  "v541, 
+"\par \b Сохранность документа: \b0 "| ; |+v399, 
+,opril421_arch, 
+,Opris488, 
+if p(v330)then 
+   if a(v905^k) then'\par \tab \b Содержание: \b0 ', 
+      (if p(v330)then'\par \b '
+          if p(v330^q) then else 
+            if p(v330^x) then 
+            &uf('+S0'
+               if v330^x='1' then v330^f 
+               else &unifor('E'v330^x,v330^f), 
+                  if p(v330^?)then |, |v330^? else 
+                     if &unifor('F'v330^x,v330^f)<>'' then ', '&unifor('F'v330^x,v330^f) fi fi,'.' 
+               fi) 
+            else 
+            &uf('+S0'
+               if v330^f:',' then v330^f|.| else 
+                  if v330^f:' ' then &unifor('G0 'v330^f),|, |v330^?|.| 
+                     if a(v330^?) then 
+                        if v330^f:'.' then ', ' 
+                           if v330^f:'. ' 
+                           then &unifor('G2 'v330^f) else &unifor('G0.'&unifor('G2 'v330^f)),'. ' &unifor('G2.'v330^f) 
+                           fi 
+                        else ', '&unifor('G2 'v330^f)'.' 
+                     fi fi 
+                  else v330^f,|, |v330^?,|.|d330^f, 
+                  fi 
+               fi) 
+            fi,| |d330^f, 
+         fi
+         if s(v330^(,v330^))<>''then v330^(,| |v330^),'. 'fi,
+         if p(v330^u) then if f(val(v330^u),0,0)=v330^u then else if v330^u:'/' then &uf('G2/'v330^u)'. ' fi fi fi, 
+         &uf('+S0'v330^c)'\b0 ',| : |v330^e, 
+         if s(v330^f,v330^g)<>'' and &unifor('Av905^1#1')='' then 
+            if (p(v330^g) and (not(v330^g:'<')) and (not(v330^g|!|:'>!'))) or 
+               a(v330^g) and p(v330^f) then' / 'fi ,o330g, fi,
+         if p(v330^4)then'. - \b ', 
+            if v330^4:'s'or v330^4:'p'or v330^4:'с'then 
+            else mpu,&unifor('Korg.mnu|4'),mpl,'\b0 ''.' 
+            fi,v330^4, 
+         fi,|. - |v330^p, 
+         if v330^0*1.1='-'then| : |v330^0*2 else| : |v330^0 fi, 
+         if p(v330^w) then'\par Другие авторы: 'v330^2,', 'v330^3,', 'v330^w fi, 
+         if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='1'then 
+         else|\par Кл.слова: |d330^5, 
+            if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='2' 
+            then mpu,v330^5,|, |v330^6,|, |v330^7,mpl else 
+               if s(&unifor('Av905^f#1'),&unifor('IPRIVATE,FPK,'))='3' 
+               then &unifor('Q'v330^5,|, |v330^6,|, |v330^7) 
+               else v330^5,|, |v330^6,|, |v330^7 
+         fi fi fi 
+      fi)
+fi fi, 
+'}'

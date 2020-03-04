@@ -1,0 +1,5 @@
+if p(v953) and (&uf('Av953^A#1')='' or &uf('Av953^A#1'):'BMP' or &uf('Av953^A#1'):'GIF' or &uf('Av953^A#1'):'JPG' or &uf('Av953^A#1'):'JPEG') 
+      then '<IMG SRC="IRBIS:12,',&uf('+D'),',',mfn,',1">',
+      else &uf('+7W1#',&uf('+93',&uf('Av951^A#1'))),if g1:'BMP' or g1:'GIF' or g1:'JPG' or g1:'JPEG' then '<IMG src="IRBIS:10,',&uf('+D'),',',&uf('Av951^A#1'),
+              else &uf('+7W1#',&uf('+93',&uf('Av951^M#1'))),if g1:'BMP' or g1:'GIF' or g1:'JPG' or g1:'JPEG' then '<IMG src="IRBIS:10,',&uf('+D'),',',&uf('Av951^A#1'),&uf('Av951^M#1') else 'Нет образа' fi fi,
+fi,

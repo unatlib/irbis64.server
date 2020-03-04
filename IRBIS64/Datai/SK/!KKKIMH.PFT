@@ -1,0 +1,7 @@
+&unifor('MI910^DB'),
+&unifor('S0'),/'\$A0,0$D\','E',&unifor('Av910^d#1'),'F',
+(if v910^a='6'then else if p(v910^d) then 
+    if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then 
+    else /'\$A0,0$D\','E'v910^d'F'
+    fi,| - |v910^b 
+fi fi)

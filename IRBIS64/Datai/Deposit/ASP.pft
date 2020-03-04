@@ -1,0 +1,23 @@
+'{' 
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'\qc\b Издание в обработке. Не выдается\par \b0 \ql' fi fi, 
+&uf('6osvex'), 
+&uf('6orchifr'), 
+&uf('6ozboz'), 
+&uf('6otitkn'), 
+oizd,
+ospec, 
+ovixd, 
+ofizxar, 
+ if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,
+oistasp, 
+oprimd, 
+ogrudk, 
+orubdks, 
+oprip481, 
+odoptd, 
+oex910, 
+ofinal,
+bibl390 
+'\par ',&unifor('!') 
+'}' 

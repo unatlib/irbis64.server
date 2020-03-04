@@ -1,0 +1,120 @@
+/*v1006 - порция выдаваемых документов
+/*v1100 - FREEPAR0 имя формата
+
+'<script language="JavaScript">',
+
+
+'function TransferParam()',
+'{',
+'if ((SEARCH.A_S21STR.value == "") || (SEARCH.B_S21STR.value == "")) return true;',
+'SEARCH.D_S21STR.value = SEARCH.A_S21STR.value+','"/"','+SEARCH.B_S21STR.value;',
+'SEARCH.A_S21STR.value = "";',
+'SEARCH.B_S21STR.value = "";',
+'return true;',
+'}',
+
+'</script>',
+
+
+'<title>Поиск в КАТАЛОГЕ МОИХ КНИГ</title>'
+
+'<BODY  bgColor=#ffffcc>',
+
+&uf('+7W4#',&uf('JSK_EKZ,RI=',v1110)), /* В g4 - кол-во книг в личном каталоге
+&uf('+7W5#',f(RSUM(&uf('7SK_EKZ,!RI=',v1110,'!,(v910^1| |,|1 |N910^1)')),0,0)),  /* в g5 - кол-во экземпляров
+if val(g4)>0 then
+'<form name="SEARCH" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" name="CHECKNAME" value="CHECKMFN">',
+'<input type="hidden" name="I21DBN" value="SK_EKZ">',  /*ИМЯ БД СВОДНОГО КАТАЛОГА
+'<input type="hidden" name="C21COM" value="2">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="TOPPFTNAME" value="SK_top">',
+'<input type="hidden" name="BOTTOMPFTNAME" value="SK_bottom">',
+'<input type="hidden" name="PFTNAME_DEFAULT" value="SK_fullw">',
+'<input type="hidden" name="PFTNAME" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR10" value="',v1110,'">',
+'<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+'<input type="hidden" name="CHECKCLEAR" value="1">', /* для обнуления отмеченных 
+
+
+'<table border="0" >',
+'        <tbody>',
+'          <tr>',
+'         <td valign="Top" rowspan="1" colspan="4">         ',
+'       </tr>',
+'    <tr>',
+'         <td colspan="4" align="Center"><b>  Поиск в КАТАЛОГЕ МОИХ КНИГ</b><br><br>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td align="Right"><font size="-1">  Учебный предмет:  </font></td>',
+'         <td colspan="3">',
+          '<input type="hidden" name="A_S21P01" value="0">',
+          '<input type="hidden" name="A_S21P02" value="1">',
+          '<input type="hidden" name="A_S21P03" value="DISC=">',
+          '<input type="hidden" name="A_S21P05" value="Предмет">',
+          
+'            <select class="" name="A_S21STR" width="45" style="height: 22px; width: 313px; ">',
+'            <option selected=""></option>',
+(if &uf('+5TSK_predmet.mnu')<>'' then '<option value="',&uf('+5TSK_predmet.mnu'),'" >',&uf('+5TSK_predmet.mnu'),'</option>' fi),
+'            </select>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td align="Right"><font size="-1">  Параллель:  </font></td>',
+'         <td colspan="3">',
+          '<input type="hidden" name="B_S21P01" value="0">',
+          '<input type="hidden" name="B_S21P02" value="0">',
+          '<input type="hidden" name="B_S21P03" value="SEM=">',
+          '<input type="hidden" name="B_S21P05" value="Параллель">',
+'            <select class="" name="B_S21STR" width="45" style="height: 22px; width: 313px; ">',
+'            <option selected=""></option>',
+(if &uf('+5TSK_class.mnu')<>'' then '<option value="',&uf('+5TSK_class.mnu'),'" >',&uf('+5FSK_class.mnu'),'</option>' fi),
+'            </select>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td colspan="4"><br>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td colspan="4" align="Center"><font size="-1">',
+         '<input type="submit" ',
+         ' onclick="return TransferParam()"',
+         ' class="sub1" name="nnnn" value="Поиск">',
+         '<input type="reset" class="sub1" value="Сброс">',
+         '</font><br>',
+'            <br>',
+'            </td>',
+'       </tr>',
+'       ',
+'        </tbody>   ',
+'      </table>',
+'  <br>',
+'<input type="hidden" name="C_S21STR" value="',v1110,'">',
+'<input type="hidden" name="C_S21P03" value="RI=">',
+'<input type="hidden" name="C_S21P01" value="0">',
+'<input type="hidden" name="C_S21P05" value="Пользователь">',
+'<input type="hidden" name="D_S21STR" value="">',
+'<input type="hidden" name="D_S21P03" value="KO=">',
+'<input type="hidden" name="D_S21P01" value="0">',
+'<input type="hidden" name="D_S21P02" value="1">',
+'<input type="hidden" name="D_S21P05" value="Уч.предмет/Параллель">',
+'  ',
+'</form>',
+'В ВАШЕМ каталоге книг - ',g4,';  экземпляров - ',g5,
+'<br>Для просмотра каталога полностью просто нажмите кнопку ПОИСК',
+else 
+'Каталог ВАШИХ книг пуст.',
+'<br>Ищите ВАШИ книги в СВОДНОМ каталоге и вводите для них ВАШИ ЭКЗЕМПЛЯРЫ - ',
+'тогда книги попадут в ВАШ каталог.',
+'<br>Также не забудьте ввести ВАШИ реквизиты и контингент.',
+'<br><br><A HREF="IRBIS:?C21COM=9&ACTION=2">Вернуться назад к поиску в СВОДНОМ каталоге...</A>',
+
+fi,
+
+
+&uf('+7W1#',&uf('DSK_USER,!I=',v1110,'!,&uf("+N10"D1)')),/* кол-во повторений поля КОНТИНГЕНТ g10
+&uf('+7W1#',f((val(f(val(g1)/20,0,0))+1)*20,0,0)),
+   '<br><br><A HREF="IRBIS:1,,SK_USER,SK_USER_entry?RELOAD=1&KEY=',&uf('+3EI=',v1110),'&FREEPAR10=',&uf('+3E',v1110),'&FREEPAR12=',g1,'&TOPPFTNAME=SK_USER_BOTTOM','">МОИ РЕКВИЗИТЫ И КОНТИНГЕНТ...</A><br>',

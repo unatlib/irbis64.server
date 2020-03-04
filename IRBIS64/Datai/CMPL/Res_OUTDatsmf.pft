@@ -1,0 +1,72 @@
+/*-v2------------------------------------------------------------кол-во БД - записей RSU
+if &uf('Ag1001#1')='1' 
+then 
+/*----состояние доступа на g991^A
+   if val(v882^E)<=val(g991^A) and val(v882^F)>=val(g991^A) then '1' fi,,
+else 
+   if &uf('Ag1001#1')='2' 
+   then 
+/*-----оформлено в доступ за g991^A-g991^B
+      if val(v882^E)>=val(g991^A)  and val(v882^E)<=val(g991^B) then '1' fi,,
+   else 
+      if &uf('Ag1001#1')='3' 
+      then 
+/*------прекращен доступ за g991^A-g991^B
+         if val(v882^F)>=val(v991^A) and  val(v882^F)<=val(g991^B) then '1' fi,,
+      else 
+         if &uf('Ag1001#1')='4' 
+         then 
+/*------состояние на g991^B
+            if val(v882^E)<=val(g991^B) and val(v882^F)>=val(g991^B) then '1' fi,,
+         fi 
+      fi 
+   fi 
+fi
+/*---v3------------------------------------------кол-во документов 881^E
+if &uf('Ag1001#1')='1' 
+then 
+/*----состояние доступа на g991^A
+   if val(v882^E)<=val(g991^A) and val(v882^F)>=val(g991^A) then v881^E fi,,
+else 
+   if &uf('Ag1001#1')='2' 
+   then 
+/*-----оформлено в доступ за g991^A-g991^B
+      if val(v882^E)>=val(g991^A)  and val(v882^E)<=val(g991^B) then v881^E fi,,
+   else 
+      if &uf('Ag1001#1')='3' 
+      then 
+/*------прекращен доступ за g991^A-g991^B
+         if val(v882^F)>=val(v991^A) and  val(v882^F)<=val(g991^B) then v881^E fi,,
+      else 
+         if &uf('Ag1001#1')='4' 
+         then 
+/*------состояние на g991^B
+            if val(v882^E)<=val(g991^B) and val(v882^F)>=val(g991^B) then v881^E fi,,
+         fi 
+      fi 
+   fi 
+fi
+/*---v4-----------------------------------------стоимость 881^G
+if &uf('Ag1001#1')='1' 
+then 
+/*----состояние доступа на g991^A
+   if val(v882^E)<=val(g991^A) and val(v882^F)>=val(g991^A) then v881^G fi,,
+else 
+   if &uf('Ag1001#1')='2' 
+   then 
+/*-----оформлено в доступ за g991^A-g991^B
+      if val(v882^E)>=val(g991^A)  and val(v882^E)<=val(g991^B) then v881^G fi,,
+   else 
+      if &uf('Ag1001#1')='3' 
+      then 
+/*------прекращен доступ за g991^A-g991^B
+         if val(v882^F)>=val(v991^A) and  val(v882^F)<=val(g991^B) then v881^G fi,,
+      else 
+         if &uf('Ag1001#1')='4' 
+         then 
+/*------состояние на g991^B
+            if val(v882^E)<=val(g991^B) and val(v882^F)>=val(g991^B) then v881^G fi,,
+         fi 
+      fi 
+   fi 
+fi

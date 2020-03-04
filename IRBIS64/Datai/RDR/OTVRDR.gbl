@@ -1,0 +1,25 @@
+1
+RDRDO.wss
+  ¬¬≈ƒ»“≈ данные
+//12 PUTLOG 
+// 9.1 отчисление-восстановление студента, с учетом группы
+// запуск в конце LinkRdr
+ADD
+54
+
+v991
+
+REP
+54
+F
+(&unifor('AD54')/)
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+if p(v991^C) then v10,' - восстановлен',,if v991^F<>'' then ' на ',v991^F fi,,else v10,' - отчислен',,if v991^F<>'' then ' с ',v991^F fi,, fi,
+DEL
+991
+*
+
+
+PUTLOG
+'LINKCORRTASK=Linkrdr%'

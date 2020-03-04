@@ -1,0 +1,51 @@
+5
+A
+Автор, заглавие...
+0
+0
+0
+
+
+
+
+v461^x| |,v461^c,if p(v461) then"; "v200^v,if p(v200^v) then": "d200^a fi else ,v700^a," "v700^b," "d700,v200^a,"; "v200^v fi,(if p(v225)then'. -('v225^a, if p(v225^a)then"; "v225^v fi')'fi),if p(v215^a) then". -"v215^a,| |d215^1,&unifor('G2='v215^1), if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi,
+B
+Заявка по КО?
+0
+0
+0
+
+
+
+
+if p(v694) then 'ДА' fi
+C
+Экземпляры заказанные
+0
+0
+0
+
+
+
+
+(if p(v62) then v62^D fi/)
+D
+Экземпляров требуется
+0
+0
+0
+
+
+
+
+if v62^1<>'' then f(rsum((if p(v62^1) then v62^1|,| fi)),0,0)  else  f(rsum((if p(v694^1) then v694^1|,| fi)),0,0) fi,,
+E
+Автор заказа/заявки
+0
+0
+0
+
+
+
+
+if v62^9<>'' then '(62) ' fi,,v62^9+|, |,,,,,,,if v694^9<>'' then '(КО) ' fi,,,v694^9+|, |

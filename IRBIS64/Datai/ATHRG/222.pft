@@ -1,0 +1,5 @@
+if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a, 
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi

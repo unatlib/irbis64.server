@@ -1,0 +1,60 @@
+0
+IF
+if v920: 'DISC' then '1' fi
+DEL
+1932
+*
+
+
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+(v83/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1932^f#1'):'/' then (if &unifor('1*R/?v1932^f#1')<>''then if &unifor('Av1932^W#1')<>'' then '^W',&unifor('Av1932^W#1') fi,if &unifor('Av1932^U#1')<>'' then '^U',&unifor('Av1932^U#1') fi,if &unifor('Av1932^L#1')<>'' then '^L',&unifor('Av1932^L#1') fi,if &unifor('Av1932^H#1')<>'' then '^H',&unifor('Av1932^H#1') fi,if &unifor('Av1932^N#1')<>'' then '^N',&unifor('Av1932^N#1') fi,if &unifor('Av1932^C#1')<>'' then '^C',&unifor('Av1932^C#1') fi,if &unifor('Av1932^A#1')<>'' then '^A',&unifor('Av1932^A#1') fi,if &unifor('Av1932^V#1')<>'' then '^V',&unifor('Av1932^V#1') fi,if &unifor('Av1932^O#1')<>'' then '^O',&unifor('Av1932^O#1') fi,,'^F',&unifor('1*R/?v1932^f#1') fi/) else &unifor('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+932
+F
+(if p(v932) then v932,if a(v932^W) then '^W',v932^U,'S',v932^F fi fi/)
+
+DEL
+932^U
+*
+
+
+DEL
+83
+*
+
+
+ADD
+83
+
+(v932/)
+
+DEL
+932
+*
+
+
+// конец запись DISC
+FI

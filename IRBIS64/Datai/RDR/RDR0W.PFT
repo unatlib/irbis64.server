@@ -1,0 +1,38 @@
+'{'
+   if &uf('IRequest,MaskMrg,')<>'*' and 
+         (rsum((if p(v51) then if v51.4:&uf('30') and v51^c=&uf('IRequest,MaskMrg,') then '1;' fi fi))>0 or 
+          rsum((if p(v52) then if v52.4:&uf('30') and v52^c=&uf('IRequest,MaskMrg,') then '1;' fi fi))>0) 
+      or s(v51.4|+|,v52.4|+|):&uf('30') and &uf('IRequest,MaskMrg,')='*' 
+   then else 
+      if s(v51.4) : &uf('30') then else 
+         if s(v52.4) : &uf('30') 
+         then 
+            (if p(v52) then 
+                if v52.4=&uf('30') then 
+                   if &uf('IRequest,MaskMrg,')<>'' and &uf('IRequest,MaskMrg,')<>'*' then 
+                      if v52^c=&uf('IRequest,MaskMrg,') then else 
+                      &uf('+7W54#'&uf('30')' год - НЕТ перерегистрации в '&uf('IRequest,MaskMrg,')), 
+             fi fi fi fi),&uf('+7Q54'),(|\b |g54|\b0 \par \par |) 
+         else '\b '&uf('30')' год - НЕТ ПЕРЕРЕГИСТРАЦИИ \b0 \par \par ' 
+   fi fi fi/
+MHL,"\b Идентификатор читателя: \b0 "v30,
+"\par \b ФИО: \b0 "v10," "v11," "v12,
+"\par \b Год рождения: \b0 "v21,
+"\par \b Дата записи: \b0 "d51,(if v51.1:'^' then else|.,|+v51*6.2|.|,v51*4.2|.|,v51.4|г.|fi),
+"\par \b Дата перерегистрации: \b0 "d52,(if v52.1:'^' then else|.,|+v52*6.2|.|,v52*4.2|.|,v52.4|г.|,| - |v52^c fi),
+"\par \b Пол: \b0 "v23,"\par \b Образование: \b0 "v20,"\par \b Категория: \b0 "|, |+v50,
+if s(v19,v90)<>''then'\par \b Место обучения: \b0 'v19^a,
+   if s(v19^b,v19^c,v19^e)<>''then
+   ", Фак: "v19^c,", "v19^b," (Инд.N "v19^f"), ","Группа/класс: "v19^e fi,
+   if a(v19) then "фак: "v90^a,", Сем.: "v90^f,", Гр.: "v90^e,"( Инд.N "v90^j fi 
+fi,
+"\par \b Право пользования: \b0 "v29,"\par \b Прописан до: \b0 "v34,
+"\par \b Дом. адрес: \b0 "d13,if v13:'^'then v13^a,", "v13^b," г."v13^c,", ул."
+v13^d," д."v13^e," п."v13^g,", кв."v13^h," ("v13^f")" else v13 fi,
+"\par \b Паспортные данные: \b0 "v14,
+"\par \b Место работы: \b0 "v15,"\par \b Должность: \b0 "v16,
+if s(v17v18)<>''then'\par \b Телефон: \b0 '," Дом.: "v17+|, |," Служ.: "v18+|, |
+ fi,mpl,"\par \b E-mail: \b0 "v32,mhl,
+"\par \b Примечания:  \b0 "v33,
+"\par \b Брайль - \b0 "v41";"," \b   Р-П Шрифт - \b0 "v42";","\b   ГК - \b0 "v43
+";","\b   ППК - \b0 "v44,'}'

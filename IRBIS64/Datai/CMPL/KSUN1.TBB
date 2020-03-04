@@ -1,0 +1,93 @@
+15
+2
+1
+(if p(v88^a) then v88^b*6,|.|v88^b*4.2,|.|v88^b*2.2 fi/)
+Нет
+2
+2
+v88^a
+Нет
+4
+3
+(if p(v88^d) then ref(l('kor='v88^d),v89^a,if a(v89^a)then v81^a.15 fi) fi/)
+Нет
+2
+4
+v88^c
+Нет
+1.1
+5
+v145^A
+Нет
+1.1
+6
+v145^B
+Да
+2
+7
+v145^C
+Да
+1.1
+8
+v145^D
+Нет
+1.1
+9
+v145^E
+Да
+2
+10
+v145^F
+Да
+1.1
+11
+v145^G
+Нет
+1.1
+12
+v145^H
+Да
+2.2
+13
+v145^I
+Да
+[FONTS]
+2
+2
+0
+0
+2
+2
+2
+2
+2
+2
+2
+2
+2
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+10 0 0 0 Arial
+******
+[AUTONUM]=2
+[SUM]=
+[SORT]=@ksundat - Записи КСУ по дате ввода
+[FORMATSORT]=
+[HDR]=
+[ALBOM]=0
+[TAB_HEADER_FILE]=
+\trowd \trqc\trgaph108\trrh299\trleft-108\trkeep \clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx1080\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx2160\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4320\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5400\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx12312\pard\plain \qc\nowidctlpar\widctlpar\intbl\adjustright \f1\fs28\lang1049\cgrid {\fs24\cgrid0 \par }{\f61\fs24\cgrid0 \'c4\'e0\'f2\'e0 \'e7\'e0\'ef\'e8\'f1\'e8\cell }{\fs24\lang1033\cgrid0 \par }{\f61\fs24\cgrid0 \'cd\'ee\'ec\'e5\'f0 \'e7\'e0\'ef\'e8\'f1\'e8\'ca\'d1\'d3\cell }{\fs24\lang1033\cgrid0 \par }{\f61\fs24\cgrid0 \'c8\'f1\'f2\'ee\'f7\'ed\'e8\'ea \'ef\'ee\'f1\'f2\'f3-\'ef\'eb\'e5\'ed\'e8\'ff\cell }{\fs24\cgrid0 \par }{\f61\fs24\cgrid0 \'b9\par \'f1\'ee\'ef\'f0. \'e4\'ee\'ea\'f3\'ec\'e5\'ed\'f2\'e0}{\fs24\lang1033\cgrid0 \cell }\pard \qc\keepn\nowidctlpar\widctlpar\intbl\outlinelevel2\adjustright {\f61\fs24\cgrid0 \'cf\'ce\'d1\'d2\'d3\'cf\'c8\'cb\'ce \'c8\'c7\'c4\'c0\'cd\'c8\'c9\par }\pard \nowidctlpar\widctlpar\intbl\adjustright {\cgrid0 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 \row }\trowd \trqc\trgaph108\trrh411\trleft-108\trkeep \clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx1080\clvmrg\clvertalt\clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx2160\clvmrg\clvertalt\clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4320\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5400\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx7668\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9936\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx12312\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\cgrid0 \cell \cell }{\fs24\cgrid0 \cell \cell }\pard \qc\keepn\nowidctlpar\widctlpar\intbl\outlinelevel2\adjustright {\f61\fs20\cgrid0 \'cd\'c0}{\fs20\cgrid0  }{\f61\fs20\cgrid0 \'c1\'c0\'cb\'c0\'cd\'d1}{\fs20\cgrid0 \cell }{\f61\fs20\cgrid0 \'cd\'c5 \'cd\'c0 \'c1\'c0\'cb\'c0\'cd\'d1}{\fs20\cgrid0 \cell }{\f61\fs20\cgrid0 \'c2\'d1\'c5\'c3\'ce\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 \row }\trowd \trqc\trgaph108\trrh448\trleft-108\trkeep \clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx1080\clvmrg\clvertalt\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx2160\clvmrg\clvertalt\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4320\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5400\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5994\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx6588\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx7668\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8262\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8856\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9936\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx10530\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx11124\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx12312\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\cgrid0 \cell \cell }{\fs24\cgrid0 \cell \cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'e0\'e8\'ec\'e5\'ed}{\fs20\lang1033\cgrid0 \cell }{\fs20\cgrid0 \par }{\f61\fs20\cgrid0 \'dd\'ea\'e7\cell }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'e0 \'f1\'f3\'ec\'ec\'f3}{\fs20\cgrid0 \cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'e0\'e8\'ec\'e5\'ed}{\cgrid0 \cell }{\fs20\cgrid0 \par }{\f61\fs20\cgrid0 \'dd\'ea\'e7\cell }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'e0 \'f1\'f3\'ec\'ec\'f3}{\cgrid0 \cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'e0\'e8\'ec\'e5\'ed}{\cgrid0 \cell }{\fs20\cgrid0 \par }{\f61\fs20\cgrid0 \'dd\'ea\'e7\cell }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\f61\fs20\cgrid0 \'cd\'c0}{\fs20\cgrid0  }{\f61\fs20\cgrid0 \'d1\'d3\'cc\'cc\'d3}{\cgrid0 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 \row }\trowd \trqc\trgaph108\trrh120\trleft-108\trkeep \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx1080\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw10 \cltxlrtb \cellx2160\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4320\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5400\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5994\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx6588\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx7668\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8262\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8856\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9936\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx10530\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx11124\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx12312\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs20\cgrid0 1\cell 2\cell 3\cell 4\cell 5\cell 6\cell 7\cell 8\cell 9\cell 10\cell 11\cell 12\cell 13\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs20 \row }\pard \nowidctlpar\widctlpar\adjustright
+[SUM_HEADER_FILE]=
+'\trowd \trqc\trgaph108\trleft-108\trkeep \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5400\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx5994\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx6588\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx7668\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8262\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx8856\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9936\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx10530\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx11124\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx12312\pard \qr\widctlpar\intbl\ {\qc \f0 \fs24 ИТОГО: \cell }{\cell }{\qr \fs20 'v1'\cell }{\qr \fs20 'v2'\cell }{\cell }{\qr \fs20 'v3'\cell }{\qr \fs20 'v4'\cell }{\cell }{\qr \fs20 'v5'\cell }{\qr \fs20 'v6'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'

@@ -1,0 +1,51 @@
+if (v2225<>'') then 
+
+/* ОБРАЩЕНИЕ К БД LICH
+,,,&uf('+7W2#',mpl,&uf('7LICH,!RI=',v30,'!,@40')),,,
+
+/* СОРТИРОВКА g2 по g2^D  14.04.2016
+&uf('+7W3#'),
+(if g2<>'' then if g2^D<>'' then &uf('+7U3#',g2^d,g2) fi,fi),
+&uf('+7T3'),
+&uf('+7W2#'),
+(if g3<>'' then &uf('+7U2#',g3*8) fi), 
+
+
+/* СОРТИРОВКА 40 полей по v40^D 14.04.2016
+&uf('MI40^D'),
+
+
+'<table width=100%><tr>',
+'<td>',
+ if p(v40) then 
+/*'<span style="vertical-align: super;"><b>~~Литература на руках~~</b></span>',
+
+   '<span> <a title="~~Напечатать~~" href="<--CGI_PATH-->?LNG=',&uf('Av5500#1'),'&P21DBN=RDR&I21DBN=RDR_PRINT&C21COM=F&Z21ID=',&uf('+3E',v2225),'">',
+   '<img border=0 width=32 height=32  src="<--HTTP_PATH-->/images/printer.jpg"></a></span>',
+
+   '<br><br>',
+   &uf('+1W1#'), 
+
+   (if p(v40) and v40^f.1<>'*' then &uf('+1W1#',F(val(&uf('+1R1'))+1,0,0)), &uf('+1R1'), 
+   if v40^B='!' then |. ~~Обращение к эл.ресурсу~~ |v40^D*6.2'.'v40^D*4.2'.'v40^D.4,  else 
+   |. ~~Выдано~~ |v40^D*6.2'.'v40^D*4.2'.'v40^D.4,
+
+   |, ~~Возвращено~~ |v40^f*6.2'.'v40^f*4.2'.'v40^f.4 
+   fi,
+,|,  ~~Шифр~~: |v40^A,
+
+/*| ~~Инв.~~№ |v40^B.9,
+/*| |v40^c, 
+
+if v40^c='' then ' - ', &uf('D',v40^G,',!I=',v40^A,'!,@brief') else | - |v40^c fi
+
+'<br><br>', fi)     else if g2='' then '<b>~~Книговыдач нет.~~</b><br><br>'  fi fi,
+
+/*&uf('+7W2#',mpl,&uf('7LICH,!RI=',v30,'!,@40')), /* ОБРАЩЕНИЕ К БД LICH
+
+(if g2<>'' then &uf('+1W1#',F(val(&uf('+1R1'))+1,0,0)), &uf('+1R1'), |. ~~Обращение к эл.ресурсу~~ |g2^D*6.2,'.',g2^D*4.2,'.',g2^D.4,|,  ~~Шифр~~: |g2^A,| - |g2^c,|,  ~~БД~~: |g2^G, 
+'<br><br>', fi),
+
+'<!hr noshade size="1"></td></tr></table>'
+
+fi

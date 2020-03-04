@@ -1,0 +1,31 @@
+/* формирует строки поискового запроса, термины уже в "
+/* используется - в переносе в ЭК, в таблице дублей МП
+/* кол-во страниц числом, ISBN включен
+/*-------------'OJL-----'
+/if v920:'ojk' then &uf('+7W2#',v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591,if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi) ) if g2<>'' then '"!',,g2, '"' fi,fi/
+/*------------'PAZK----'
+if v920: 'ZK' or v920:'PVK' then ,,&uf('+7W2#',v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0) ),if g2<>'' then '"!',g2,'"' fi,,,,,fi/
+/*---------'461-----'
+if p(v461) then &uf('+7W2#',v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,if a(v200^v)then " "v200^a fi),&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0) ) if g2<>'' then '"!',,g2,,'"' fi,,fi/
+/*-----------'ZK------'
+if v920='ZK'or v920='zk' 
+then  
+   if s(v225^v)<>'' 
+   then 
+      '"!',,v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),f(rsum(v215^a),0,0),'"',,
+   else 
+      if p(v200^a) 
+      then 
+         '"!',,v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+         if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+         if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,f(rsum(v215^a),0,0),,,,'"',,
+      fi 
+   fi 
+fi/
+/* запрос по автору-заглавию-году
+if v210^d<>'' and v700^a<>'' and &unifor("B"v200^a)<>'' 
+then 
+  &uf('+7W10#"A=',,v700^A,,'$"'),,&uf('+7U10#"T=',,v200^A,,'$"'),,
+  &uf('+7U10#',,if &uf('Av210^D#1')<>'' then '"G=',&uf('Av210^D#1'),'"' fi),,
+  (if p(g10) then if val(&uf('+90'))>1 then ' * ' fi,,,g10 fi)
+fi,,

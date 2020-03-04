@@ -1,0 +1,47 @@
+if s(v964v675v621v686)<>''then ''
+'<table class=advanced border="0" bgcolor="#FFFFFF">',
+      if p(v964) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'G' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then
+           '<br>' 
+'<TR>'
+'<TD>',
+'<b>√–Õ“» </b>',
+'</TD>',           
+           fi fi,
+&uf('+1W77#1'),
+&uf('+1W78#<div align="center" class="sub3">'),
+&uf('+1W79#<div align="center" class="sub4">'),
+mpl,     (if p(v964) then '<TD VALIGN=TOP>',if &uf('+1R77')='1' then &uf('+1W77#2'),&uf('+1R78') else &uf('+1W77#1'),&uf('+1R79') fi,'<A HREF="',ssinternet_grn,&unifor('+3E',v964),'">',v964,'</a></div></td>' fi),
+mhl,
+'</tr>'
+     
+     
+      if p(v675) then if s(v905^o,&unifor('IPRIVATE,KKO,')):'U' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))='' then 
+            
+'<TR>'
+'<TD>',
+'<b>”ƒ  </b>',
+'</TD>',                      
+            fi fi,
+            
+&uf('+1W77#1'),
+&uf('+1W78#<div align="center" class="sub4">'),
+&uf('+1W79#<div align="center" class="sub3">'),            
+mpl,      (if p(v675) then '<TD VALIGN=TOP>',if &uf('+1R77')='1' then &uf('+1W77#2'),&uf('+1R78') else &uf('+1W77#1'),&uf('+1R79') fi,'<A HREF="',ssinternet_udc,&unifor('+3E',v675),'">',v675,'</a></div></td>'fi), 
+mhl,
+'</TR></TABLE>',           
+      
+      
+      if p(v621) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'B' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+             "<b>¡¡  </b>"| + |+v621^*"<br>"   
+      fi fi,
+      if p(v686) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'D' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+            | + |+v686"<br>" 
+      fi fi 
+ fi,

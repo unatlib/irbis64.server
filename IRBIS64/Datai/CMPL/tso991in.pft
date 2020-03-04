@@ -1,0 +1,11 @@
+if v920:'KSU'then '7' else 
+f(rsum((if s(v910^y)<>''then 
+           if &unifor('G0-'&unifor('Av991*3#1'))=v910^y and v910^c*2.2=&unifor('Av991.2#1')then 
+              if a(v910^e)then v910^1|;|,|1;|n910^1 
+        fi fi fi,' 0')) * val(&unifor('Av10^d#1'),'; 0') + 
+  rsum((if s(v910^y)<>''then 
+           if v910^y=&unifor('G0-'&unifor('Av991*3#1')) and v910^c*2.2=&unifor('Av991.2#1') then 
+              if p(v910^e)then f(val(v910^1|;|,|1;|n910^1) * val(v910^e),0,2)else'0'
+        fi fi fi,' 0')),
+0,2),
+fi

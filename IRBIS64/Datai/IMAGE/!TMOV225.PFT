@@ -1,0 +1,5 @@
+mhl,
+(if '***'='225'then v***^a,'^E'v***^e,'^F'v***^f,'^X'v***^x else 
+    if '***'='963'then v963^a,'^E^F'v963^o,'^X' else 
+       if '***'='46'then v46^a,'^E^F^X'
+ fi fi fi/)

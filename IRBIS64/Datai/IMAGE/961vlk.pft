@@ -1,0 +1,26 @@
+&uf('+7W4#'), 
+&unifor('S0'), 
+(if p(v961) then 
+    if p(v961^4) then 
+       if v961^4:&uf('G0='&uf('Ag3#1')) then 
+         &uf('+7U4#', 
+         if &unifor('S1A')='1' then else ', ' fi, 
+         if p(v961^9)then v961^a,| |v961^d,| |v961^b, 
+            if a(v961^b)then| |v961^g fi 
+         else 
+            if v961^b:'. ' then v961^b else 
+               if v961^b:'.'then &unifor('G0.'v961^b),'.' 
+                  if &unifor('G2.'v961^b):'.' then ' ' fi,&unifor('G2.'v961^b) 
+               else v961^b 
+            fi fi, 
+            if a(v961^b)then v961^g fi, 
+            if s(v961^b,v961^g)<>'' then' 'fi,v961^a,| |v961^d,| (|v961^7|)|, 
+         fi), 
+ fi fi fi/), 
+&uf('+7U5#',
+if g4<>'' then &uf('G2='&uf('Ag3#1')),
+   ' ', 
+   if &uf('Ag4#4')<>'' then &uf('Ag4#1'), 
+      if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и др.]' else ' [et al.]' fi 
+   else g4 
+fi fi), 

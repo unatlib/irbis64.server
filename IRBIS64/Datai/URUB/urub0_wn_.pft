@@ -1,0 +1,41 @@
+/* В глобальной переменной 1 - переключатель: пусто - показывать СМОТРИ СМОТРИ ТАКЖЕ; не пусто - не показывать
+/* В глобальной переменной 2 - переключатель: пусто - не показывать ВЫШЕСТОЯЩИЙ; не пусто - показывать
+/* В глобальной переменной 3 - переключатель: пусто - показывать ТЕРМИН как ссылку; не пусто - не показывать
+v1,'^',
+if p(v2) then &uf('+7W4#',v2) else &uf('+7W4#',v1) fi,
+'<table>', 
+'<tr>', 
+'<td width=20>',&uf('+7W9#',&uf('G0 ',v1)), 
+        if g9:'0' then else if a(v6) and a(v7) and a(v8) then '<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">' fi,fi 
+'</td>', 
+'<td>', 
+'<img src=','"','IRBIS:10,,', 
+   if p(v6) or p(v7) or p(v8) then 'text.gif' else if l("U="g4)>0 then 'textfolder.gif' else 'folder.gif' fi fi, 
+,'">', 
+'</td>', 
+'<td>', 
+    if g3='' then '<A HREF="IRBIS:1,,URUB,urub_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=',&uf('+3E',g4),'&FREEPAR1=',g1101,'&FREEPAR2=',g1102,'&FREEPAR3=',g1103,'&FREEPAR0=',g1100,'&FREEPAR5=',g1105,'">',fi,
+    g4,'</A>',
+    if g1='' then 
+         if p(v6) then '(Смотри: ' fi,
+         (if p(v6) then ' <A HREF="IRBIS:1,,URUB,urub_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=' &uf('+3E',v6),'&FREEPAR1=',&uf('AG1101#1'),'&FREEPAR2=',&uf('AG1102#1'),'&FREEPAR3=',&uf('AG1103#1'),'&FREEPAR0=',&uf('AG1100#1'),'&FREEPAR5=',&uf('AG1105#1'),'">',v6,'</A>;&nbsp' fi,)
+         if p(v6) then ')' fi,
+         if p(v7) then '(Смотри комбинацию: ' fi,
+         (if p(v7) then ' <A HREF="IRBIS:1,,URUB,urub_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=' &uf('+3E',v7),'&FREEPAR1=',&uf('AG1101#1'),'&FREEPAR2=',&uf('AG1102#1'),'&FREEPAR3=',&uf('AG1103#1'),'&FREEPAR0=',&uf('AG1100#1'),'&FREEPAR5=',&uf('AG1105#1'),'">',v7,'</A>;&nbsp' fi,)
+         if p(v7) then ')' fi,
+         if p(v8) then '(Смотри альтернативу: ' fi,
+         (if p(v8) then ' <A HREF="IRBIS:1,,URUB,urub_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=' &uf('+3E',v8),'&FREEPAR1=',&uf('AG1101#1'),'&FREEPAR2=',&uf('AG1102#1'),'&FREEPAR3=',&uf('AG1103#1'),'&FREEPAR0=',&uf('AG1100#1'),'&FREEPAR5=',&uf('AG1105#1'),'">',v8,'</A>;&nbsp' fi,)
+         if p(v8) then ')' fi,
+
+         if p(v5) then ' <A HREF="IRBIS:1,,URUB,urub_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=',&uf('+3E',g4),'&FREEPAR1=',g1101,'&FREEPAR2=',g1102,'&FREEPAR3=',g1103,'&FREEPAR0=',g1100,'&FREEPAR5=',g1105,'">(Смотри также...)</A>' fi 
+    fi,
+    if (g2<>'') and p(v4) then '<br>(',
+         (if p(v4) then '<A HREF="IRBIS:1,,URUB,URUB_wn?BOTTOMPFTNAME=urub_bottom_wn&KEY=I=',&uf('+3E',v4),'&FREEPAR1=',&uf('AG1101#1'),'&FREEPAR2=',&uf('AG1102#1'),'&FREEPAR3=',&uf('AG1103#1'),'&FREEPAR0=',&uf('AG1100#1'),'&FREEPAR5=',&uf('AG1105#1'),|">Вышестоящий: |v4+|;<br>|,'</A>' fi),')'
+    fi,
+'</td>' 
+'</tr>', 
+'</table>',/
+
+
+
+

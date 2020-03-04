@@ -1,0 +1,54 @@
+IF s(v210^a,v210^c,v210^d,v461^d,v461^g,v461^h)='' and (not(v920.1:'A')) then ' - ' 
+ELSE 
+if s(v210^a,v210^4,v210^c)=''then 
+   if &unifor('Av461#2')<>''then &unifor('S0'), 
+      (if p(v461) then 
+          if val(&unifor('S1A'))=1 then v461^4, 
+             if v461^4=''then v461^d fi, 
+             if v461^d=''then 
+                if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then  
+                   if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then '[Á. ì.]'else'[S. l.]' 
+             fi,fi,fi,| : |v461^g,| [|v461^6|]| 
+          else 
+             if p(v461^?) then else| ; |v461^4,if v461^4=''then | ; |v461^d fi 
+             fi,| : |v461^g,| [|v461^6|]| 
+       fi fi) 
+   else v461^4 
+      if v461^4=''then v461^d , 
+         if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then  
+            if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then|[Á. ì.]|n461^d else|[S. l.]|n461^d fi, 
+         fi,| : |v461^g,| [|v461^6|]|, 
+   fi fi, 
+else 
+   if s(v210^a,v210^4)=''then 
+      if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then 
+         if s(v210^c)=''then 
+            if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then'[Á. ì. : á. è.]'else'[S. l. : s. n.]' fi 
+         else 
+            if v210^c=''then else 
+               if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then'[Á. ì.]'else'[S. l.]' 
+      fi fi fi fi 
+   fi,&unifor('S0'), 
+   (if p(v210) then 
+       if val(&unifor('S1A'))=1 then v210^4, 
+          if v210^4=''then v210^a fi, v210^2, 
+             if v210^2=''then| ; |v210^x,| ; |v210^y,fi,| : |v210^c,| [|v210^6|]|,v210^3, 
+          else 
+             if &unifor('Av210^3#1')=''then 
+                if p(v210^?) then 
+             else| ; |+v210^4, 
+                if v210^4=''then| ; |+v210^a fi,v210^2, 
+                if v210^2=''then| ; |v210^x,| ; |v210^y fi, 
+             fi,| : |v210^c,| [|v210^6|]|, 
+   fi fi fi), 
+   if s(v210^a,v210^4)<>''and s(v210^c,v461)='' then 
+      if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then 
+         if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' : [á. è.]'else' : [s. n.]' 
+   fi fi fi, 
+   if p(v210^d) then 
+      if s(v461^d,v461^g,v210^a,v210^c)<>''then|, |d210^d,v210^5| |,v210^d else v210^5| |,v210^d fi 
+   else 
+      if s(v461^d,v461^g,v210^a,v210^c)<>''then|, |d461^h,v461^5| |,v461^h else v461^5| |,v461^h fi 
+fi fi, 
+if v920.1:'A' then ,OISTASPB, fi, 
+FI,

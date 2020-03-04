@@ -1,0 +1,48 @@
+'{ \par \qc',,,'Книгообеспеченность ',,
+if p(v991^G) or p(v991^S) or p(v991^F) or p(v991^B) or p(v991^A) or p(v991^C) or p(v991^O) or p(v991^L) or p(v991^T) or 
+   p(v991^I) or p(v991^D) or p(v991^Z) or p(v991^5) or p(v991^>) then 'для' fi,,,,,
+if p(v991^G) then '\par \ql \tab \tab \tab \tab типа литературы - ',v991^G fi,,,,,
+if p(v991^5) then '\par \ql \tab \tab \tab \tab характера документа - ',&uf('+98! ',v991^5) fi,,,,,
+if p(v991^S) then '\par \ql \tab \tab \tab \tab цикла дисциплин - ',&uf('+98! ',v991^S) fi,,,,,
+if p(v991^I) then '\par \ql \tab \tab \tab \tab дисциплины - ',v991^I fi,,,,,
+if p(v991^F) then '\par \ql \tab \tab \tab \tab семестра - ',&uf('+98! ',v991^F) fi,,,,,
+if p(v991^B) then '\par \ql \tab \tab \tab \tab кафедры - ',&uf('+98! ',v991^B) fi,,,,,
+if p(v991^A) then '\par \ql \tab \tab \tab \tab факультета - ',&uf('+98! ',v991^A) fi,,,,,
+if p(v991^O) then '\par \ql \tab \tab \tab \tab формы обучения - ',&uf('+98! ',v991^O) fi,,,,,
+if p(v991^V) then '\par \ql \tab \tab \tab \tab вида обучения - ',&uf('+98! ',v991^V) fi,,,,,
+if p(v991^C) then '\par \ql \tab \tab \tab \tab специальность - ',&uf('+98! ',v991^C) fi,,,,,
+if p(v991^N) then '\par \ql \tab \tab \tab \tab направление - ',&uf('+98! ',v991^N) fi,,,,,
+if p(v991^T) then '\par \ql \tab \tab \tab \tab выделенного фонда - ',v991^T fi,,,,,
+if p(v991^L) then '\par \ql \tab \tab \tab \tab филиала - ',v991^L fi,,,,,
+if P(V991^D) then '\par \ql \tab \tab \tab \tab Поступление с ',v991^D*6.2,'.',v991^D*4.2,'.',v991^D.4 fi,,,
+if P(V991^Z) then '\par \ql \tab \tab \tab \tab Год издания с ',v991^Z fi,,,
+if P(V991^Q) then '\par \ql \tab \tab \tab \tab Нормативный ККО - ',v991^Q fi,,,
+if a(v991^T) then '\par \ql \tab \tab \tab \tab (Без учета выделенных фондов)' fi,,,,
+if p(v991^-) and val(v991^-)=1 then '\par \ql \tab \tab \tab \tab (Аналоги отдельной строкой)' else 
+                                    '\par \ql \tab \tab \tab \tab (Не аналоги. С учетом экземпляров аналогов)' fi,,,,
+if v991^><>'' and  v991^><>'0' then '\par \ql \tab \tab \tab \tab (Если дисциплины - заголовки, то учебники по рабочим программам)' fi,,,,
+if p(v991^&) then '\par \ql \tab \tab \tab \tab Данные по запросу ',v991^& fi,,,,,,,,,,
+if val(v991^9)>0 then '\par \ql \tab \tab \tab \tab Только электронные учебники' fi,,
+if &uf('IPRIVATE,DBN,')='' or &uf('IPRIVATE,DBN,'): 'IBIS' then else '\par \ql \tab \tab \tab \tab (данные по БД ',,&uf('IPRIVATE,DBN,'),,')' fi,,
+if p(v991^K)or p(v991^M)or p(v991^P)or p(v991^R)or p(v991^U)or p(v991^W) or p(v991^1)or 
+   p(v991^2)or p(v991^3) or p(v991^4) 
+then 
+  '\par \qc ',,,
+  'Заданы заголовки: ',
+  "форма обучения, "d991^K,
+  "вид обучения, "d991^4,
+  "факультет, "d991^M,,,,
+  "кафедра, "d991^2,,,,,,,,,,,,,,,,,,,,,,,
+  "специальность, "d991^P,
+  "направление, "d991^1,
+  "цикл, "d991^R,
+  "тип, "d991^U,
+   "гриф, "d991^W, 
+  "дисциплина "d991^3, 
+fi,,,,,,,,,,,,,,,,,,,
+&uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),,,,,,,,,,,,,,
+if v991^?='1' then '\par \qc (данные заново сформированы в документах по ',,v991^=,,')'  fi,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+'\par }'

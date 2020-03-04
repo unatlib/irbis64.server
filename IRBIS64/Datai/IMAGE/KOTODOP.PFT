@@ -1,0 +1,9 @@
+if (p(v991^a) and s(v691^0,v691^9):&unifor('Av991^a#1')) or a(v991^a) then 
+   if rsum((if p(v910^c) then 
+               if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                  if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+            fi fi fi))>0 
+   then 
+      (if p(v691) then if s(v691^0,v691^9):&unifor('Av991^a#1') or &unifor('Av991^a#1')='' then 
+           if &unifor('Pv691^g')<>''then &unifor('Pv691^g')'. ' else "Îñí."d691 fi fi fi) 
+fi fi, 

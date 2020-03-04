@@ -1,0 +1,45 @@
+'<table  cellpadding=1 cellspacing=1>',
+'<tr><td>&nbsp;</td></tr>',
+'<tr>',
+
+if &unifor('Av3#1')<>'.' then
+   '<td align=center width=20>',
+   '<input type=','"','checkbox','"',' name="CHECKINDEX" value=','"',&unifor('Av3#1'),'">',
+   '</td>'
+fi,   
+
+
+
+'<td width=16>',
+'<img src=','"','IRBIS:10,,',
+if p(v12) then 'folder.gif' else 'text.gif' fi,
+,'"',' width=16 height=16 hspace=0 vspace=0 border=0>'
+'</td>',
+
+
+'<td>',
+if p(v12) then '<a href=','"','IRBIS:1,,,udc_wn,U=',v3,'"','>',fi 
+,mhl,v3" - ",&unifor('Av4#1'),mpl,
+if p(v12) then '</a>  ' fi,
+if (p(v1111) and &unifor('Av3#1')<>'.') then
+'<a href=','"','IRBIS:1,,,udc_wn,U=',v1111,'"','>',
+        if &unifor('Av3#1')<>'.' then '<br> (Вышестоящий индекс: ',
+        mhl,&unifor(|D,!U=|v1111|!,v3" - ",&unifor('Av4#1')|),mpl,
+        ')</a> ' 
+        fi,
+fi, 
+
+if p(v11) then 
+'  <a href=','"','IRBIS:1,,,udcseeso_wn,U=',v3,'"','>',
+'<br>(Смотри также...)',
+' </a>' fi,
+
+
+if p(v10) then 
+'  <a href=','"','IRBIS:1,,,udcsee_wn,U=',v3,'"','>',
+'<br>(Смотри...)',
+' </a>' fi,
+'</td>',
+'</tr>'
+
+'</table>'

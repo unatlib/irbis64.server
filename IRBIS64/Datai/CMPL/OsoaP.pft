@@ -1,0 +1,37 @@
+mhl,
+if p(v700^9)then v700^a," "v700^d," "v700^b,if a(v700^b)then v700^g fi else 
+   if v700^b:'. ' then v700^b else 
+      if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) else v700^b fi 
+   fi,if &unifor('G2.'v700^b):'.'then" "d700^b fi,
+   if a(v700^b)then v700^g" " fi,v700^a," "v700^d 
+fi,", "d970,
+if p(v700^9)then v970^a," "v970^d," "v970^b,if a(v970^b)then v970^g fi else 
+   if v970^b:'. ' then v970^b else 
+      if v970^b:'.'then &unifor('G0.'v970^b),'. '&unifor('G2.'v970^b) else v970^b fi 
+   fi,if &unifor('G2.'v970^b):'.'then" "d970^b fi,
+   if a(v970^b)then v970^g" " fi,v970^a," "v970^d 
+fi,
+if p(v700)then", "d701 fi,
+if &unifor('Av701#5')<>''then &unifor('S0'),
+   (if p(v701) then 
+       if val(&unifor('S1A'))>3 then else 
+          if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b| |,
+             if a(v701^b)then| |v701^g| | fi 
+          else|, |+d701^b,
+             if v701^b:'. ' then v701^b else 
+                if v701^b:'.'then &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) else v701^b fi 
+             fi,if &unifor('G2.'v701^b):'.'then| |d701^b fi,
+             if a(v701^b)then|, |+v701^g| | fi,v701^a,| |v701^d 
+   fi  fi fi),
+   if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и др.]',"."d200^g else ' [et al.]',"."d200^g 
+   fi 
+else 
+   (if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b| |,
+       if a(v701^b)then| |v701^g| | fi 
+    else|, |+d701^b,
+       if v701^b:'. ' then v701^b else 
+          if v701^b:'.'then &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) else v701^b fi 
+       fi,if &unifor('G2.'v701^b):'.'then| |d701^b fi,
+       if a(v701^b)then|, |+v701^g| | fi,v701^a,| |v701^d 
+   fi),
+fi,

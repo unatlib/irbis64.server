@@ -1,0 +1,32 @@
+IF s(v461^x,v461^b,v700,v701,v710)='' THEN ' - '
+ELSE 
+mhl, 
+if p(v461) then 
+   if p(v461^x) then 
+      if p(v461^9) or v461^x:','then v461^x else 
+         if v461^x:' 'then &unifor('G0 'v461^x),', ' 
+            if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) 
+            else &unifor('G0.'&unifor('G2 'v461^x)),'. '&unifor('G2.'&unifor('G2 'v461^x))fi 
+         else v461^x  
+      fi fi,if v461^x|!|:'.!' then else|.|d461^x fi, 
+   else v461^b|. | fi, 
+else v700^a," "v700^d,", "v700^g, 
+   if a(v700^g)then", "d700^b 
+      if v700^b:'. ' then v700^b else 
+         if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+         else v700^b 
+   fi fi fi, 
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+      if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,'). ' 
+   else"."d700^g," "d700^a 
+   fi,v710^s".",v710^a, 
+   if s(v710^n,v710^c)<>''then' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d" ; ",v710^f, 
+      if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+   fi,". "d710,v971^b, 
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d" ; ",v971^f, 
+      if p(v971^f)then" ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+   fi,". "d971^b 
+fi,
+FI,&unifor('!'), 

@@ -1,0 +1,7 @@
+(if p(v710) then '\par ' 
+&unifor('S1A')'.',mhl,v710^a,if s(v710^n,v710^c,v710^S)<>''then' ('v710^n,if v710^N<>'' and v710^C<>'' then | ; |,v710^c else v710^c fi,
+ if v710^S<>'' and (v710^C<>'' or v710^N<>'') then | ; |v710^S else v710^S fi,')' fi,|.|v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then |;|v710^f else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then |;|v710^e,| / |v710^H, | / |v710^I else v710^e,| / |v710^H, | / |v710^I fi, ')' fi,,|(|v710^X|)|,if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi/)/
+
+(if p(v710) then '\par ' 
+&unifor('S1A')'.',mhl,v710^a,if s(v710^n,v710^c,v710^S)<>''then' ('v710^n,if v710^N<>'' and v710^C<>'' then | ; |,v710^c else v710^c fi,
+ if v710^S<>'' and (v710^C<>'' or v710^N<>'') then | ; |v710^S else v710^S fi,')' fi,|.|v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then |;|v710^f else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then |;|v710^e,| / |v710^H, | / |v710^I else v710^e,| / |v710^H, | / |v710^I fi,')' fi,,|(|v710^X|)|,if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi/)

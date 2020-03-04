@@ -1,0 +1,111 @@
+0
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if p(v1991) then if v1991|+| : &unifor('Av1003#1') then else &unifor('Av1003#1')'/1' fi fi  
+XXXXXXXXXXXXXXXXXXX
+REP
+1991
+F
+(if p(v1991) then if &unifor('G0/'v1991)=&unifor('Av1003#1')then &unifor('G0/'v1991),'/' f(val(&unifor('G2/'v1991))+1,0,0) else v1991 fi fi/)/
+XXXXXXXXXXXXXXXXXXX
+ADD
+1991
+XXXXXXXXXXXXXXXXXXX
+if a(v1991) then &unifor('Av1003#1')'/1' fi  
+XXXXXXXXXXXXXXXXXXX
+ADD
+1991
+XXXXXXXXXXXXXXXXXXX
+v1
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1003
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if &unifor('Av1003#1')<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+&unifor('+D')
+'^A'&uf('G0/'&unifor('Av1991#1')),"^B"v991^b,"^C"v991^c,if val(&unifor('G2/'&unifor('Av1991#1')))<>1 then '^D'&unifor('G1/'&unifor('Av1991#1')) fi
+'IN='&unifor('G0/'&unifor('Av1991#1'))
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^$
+F
+(if p(v910) then if '2 6 7':v910^a then # else if v910^h=&unifor('Av1001^A#1')  then if &unifor('Av1001^B#1')<>'' and &uf('G0/'v910^s)=&unifor('Av1001^B#1') or &unifor('Av1001^B#1')='' and &uf('G0/'v910^s)=&unifor('3') then # else if &unifor('Av1001^B#1')<>'' then &unifor('Av1001^B#1') else &unifor('3') fi,if val(&uf('G2/'&unifor('Av1001^D#1')))<>1 then &unifor('Av1001^D#1') fi fi else # fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+941
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) and p(v910^$) then |^A|v910^a,|^B|v910^b,|^H|v910^h,|^C|v910^c,|^D|v910^d,|^F|v910^f,|^S|v910^s,|^U|v910^u,|^Y|v910^Y,|^1|v910^1,|^2|v910^2,|^E|v910^e,if a(v910^e)then if &unifor('Av10^d#1')<>'' then '^E'&unifor('Av10^d#1') fi fi,|^T|v910^t,|^R|v910^r,|^4|v910^4,|^=|v910^=,|^Q|v910^q fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99
+XXXXXXXXXXXXXXXXXXX
+(if p(v910)then if p(v910^$) then  |^A|v910^a,|^B|v910^b,|^H|v910^h,|^C|d910^$,&unifor('G0/'v910^$),|^D|v910^d,|^F|v910^f,|^S|v910^$,|^U|v910^u,|^Y|v910^Y,if p(v910^1)then v910^1,'^0'f(val(&unifor('G2/'v910^$)),0,0) fi,|^2|v910^2,|^T|v910^t,|^R|v910^r,|^4|v910^4,|^=|v910^=,|^Q|v910^q,if &unifor('Av1001^C#1')<>'' then if &unifor('Av1001^C#1')=v910^d then else '^!'&unifor('Av1001^C#1') fi fi,'^E',if p(v910^e)then if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)else f(val(v910^e)*val(&unifor('Kizc.mnu|1990')),0,2)fi fi else f(val(v910^e),0,2)fi else if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1990')),0,2)fi fi else f(val(&unifor('Av10^d#1'),' 0'),0,2)fi fi fi fi /)
+XXXXXXXXXXXXXXXXXXX
+DEL
+99^E
+F
+(if p(v99) then if p(v99^s) then if &unifor('Av1001^B#1')<>'' and &uf('G0/'v99^s)=&unifor('Av1001^B#1') or &unifor('Av1001^B#1')='' and &uf('G0/'v99^s)=&unifor('3') then if f(val(v99^e),0,2)=f(val(&unifor('Av10^d#1')),0,2) then '1'else'0' fi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910) then if p(v910^$) then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(v99/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+99
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1991
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if &unifor('Av1991#1')<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

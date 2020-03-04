@@ -1,0 +1,198 @@
+0
+//---------------удалние дублей поля 69
+IF
+if v920: 'VUZ' then '1' fi
+//-------------------------------запись VUZ - проверка поляя 69 на дубли
+IF
+if p(v69) then '1' fi
+DEL
+1069
+*
+
+
+REPEAT
+ADD
+1069
+
+if a(v1069) or rsum((if p(v1069) then if &uf('+97',v1069^B)=&uf('+97',&uf('Av69^B#1')) and &uf('+97',v1069^D)=&uf('+97',&uf('Av69^D#1')) then '1,' fi fi))=0 then &uf('Av69#1') fi
+
+DEL
+69
+1
+
+
+UNTIL
+if p(v69) then '1' fi
+ADD
+69
+
+(v1069/)
+
+DEL
+1069
+*
+
+
+
+FI
+FI
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Исправление ошибок в поле 910 (группа без ид-ра студента - поле удаляется)
+
+DEL
+910
+F
+(if p(v910) then if v910^b<>'' then'0' else '1'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'DISC' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// версия 11.1
+IF
+if p(v84) then '1' fi
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v84/)
+
+REPEAT
+IF
+&uf('+7W5#',&uf('Av1083^A#1'),&uf('Av1083^N#1'),&uf('Av1083^C#1'),&uf('Av1083^V#1'),&uf('Av1083^O#1'),&uf('Av1083^F#1'),&uf('Av1083^E#1'),),,,if rsum((if p(v83) then if &uf('+97',&uf('AG5#1'))=&uf('+97',v83^A,v83^N,v83^C,v83^V,v83^O,v83^F,v83^E) then '1,' fi  fi))=0 then '1' fi
+ADD
+83
+
+&uf('Av1083#1')
+
+FI
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+FI
+// убираю последний пробел в идентификаторе
+REP
+3^0
+1
+if &uf('+961.1#',v3^0)=' ' then &uf('+960.',,f(val(&uf('+95',v3^0))-1,0,0),,'#',v3^0) else v3^0 fi
+
+//--------------Формирование полей 932, которые разложенные по семестрам 83
+DEL
+932
+*
+
+
+DEL
+1932
+*
+
+
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+(v83/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1932^f#1'):'/'then (if &unifor('1*R/?v1932^f#1')<>''then &unifor('G0F'&unifor('Av1932#1')),'F',&unifor('1*R/?v1932^f#1')fi/) else &unifor('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------------------------------------Цикл по полям 932, которые разложенные по семестрам 83
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------- Корректировка записи VUZ 
+CORREC
+if val(&unifor('JVUZ,?'if &unifor('Av932^a#1')<>''then &unifor('Av932^a#1')'-'fi,if &unifor('Av932^n#1')<>''then &unifor('Av932^n#1')'-'fi,if &unifor('Av932^c#1')<>''then &unifor('Av932^c#1')'-'fi,if &unifor('Av932^v#1')<>''then &unifor('Av932^v#1')'-'fi,if &unifor('Av932^o#1')<>''then &unifor('Av932^o#1')'-'fi,&unifor('Av932^f#1')'-'))>0 then 'VUZ' fi
+"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,
+'?'if &unifor('Av932^a#1')<>''then &unifor('Av932^a#1')'-'fi,if &unifor('Av932^n#1')<>''then &unifor('Av932^n#1')'-'fi,if &unifor('Av932^c#1')<>''then &unifor('Av932^c#1')'-'fi,if &unifor('Av932^v#1')<>''then &unifor('Av932^v#1')'-'fi,if &unifor('Av932^o#1')<>''then &unifor('Av932^o#1')'-'fi,&unifor('Av932^f#1')'-'
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+if p(v69) then if rsum((if p(v69) then if &uf('+97',v69^B)=&uf('+97',&unifor('Av1001^B#1')) and &uf('+97',v69^D)=&uf('+97',&unifor('Av1001^D#1')) then'1;'else'0;' fi fi))>0 then else &unifor('Av1001#1') fi else v1001 fi/
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------ Ввод новой записи VUZ 
+NEWMFN
+if val(&unifor('JVUZ,?'if &unifor('Av932^a#1')<>''then &unifor('Av932^a#1')'-'fi,if &unifor('Av932^n#1')<>''then &unifor('Av932^n#1')'-'fi,if &unifor('Av932^c#1')<>''then &unifor('Av932^c#1')'-'fi,if &unifor('Av932^v#1')<>''then &unifor('Av932^v#1')'-'fi,if &unifor('Av932^o#1')<>''then &unifor('Av932^o#1')'-'fi,&unifor('Av932^f#1')'-'))<=0 then'VUZ' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+68
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av932^a#1')<>''then'^A'&unifor('Av932^a#1') fi,if &unifor('Av932^n#1')<>''then'^N'&unifor('Av932^n#1') fi,if &unifor('Av932^c#1')<>''then'^C'&unifor('Av932^c#1') fi,if &unifor('Av932^v#1')<>''then'^V'&unifor('Av932^v#1') fi,if &unifor('Av932^o#1')<>''then'^O'&unifor('Av932^o#1') fi,if &unifor('Av932^f#1')<>''then'^F'&unifor('Av932^f#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then "="v3^b else v3^b fi fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v932) then '1'else'' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

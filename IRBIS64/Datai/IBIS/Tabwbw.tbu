@@ -1,0 +1,95 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v940^v:v991 then f(rsum((if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then f(val(v940^x|;|,|1;|n940^x,' 0'),0,0) fi fi/)),0,0)fi,
+if v940^v:v991 then f(rsum((if p(v940)then     if p(v940^v) and v940^v=&unifor('Av991#1')then        if p(v940^e) then           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>''             then f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '              else                 if &unifor('Kizc.mnu|'v940^c.4)<>''                then f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '                 else f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)'\par '              fi fi           else f(val(v940^e|;|)*val(v940^x,|1|n940^x,' 0'),0,2)'\par '           fi        else           if p(v940^c) then              if &unifor('Kizc.mnu|'v940^c.6)<>''              then f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',             else                 if &unifor('Kizc.mnu|'v940^c.4)<>''                 then f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',                else f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ',             fi fi           else f(val(&unifor('Av10^d#1'),' 0')*val(v940^x,|1|n940^x,' 0'),0,2)';','\par ', fi fi fi fi/)),0,2)fi,
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12863 
+\pard \widctlpar\intbl {\qc \fs16 ''\qr ИТОГО: 'v1' экз. на сумму 'v2,if val(v2)>0 then &uf('Korg.mnu\3') fi'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx958 
+\pard \widctlpar\intbl {\qc \fs16 \b № п/п\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1950 
+\pard \widctlpar\intbl {\qc \fs16 \b Инвентарный номер\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2942 
+\pard \widctlpar\intbl {\qc \fs16 \b Число экз.(ЦБС или БИУ)\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3934 
+\pard \widctlpar\intbl {\qc \fs16 \bМесто хранения\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7336 
+\pard \widctlpar\intbl {\qc \fs16 \bАвторы, заглавие, выходные данные\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8328 
+\pard \widctlpar\intbl {\qc \fs16 \b Дата поступления\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9320 
+\pard \widctlpar\intbl {\qc \fs16 \b Цена экз. при поступлении\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10454 
+\pard \widctlpar\intbl {\qc \fs16 \b Стоимость экз. при выбытии\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11446 
+\pard \widctlpar\intbl {\qc \fs16 \b Всего выбыло экз.\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12863 
+\pard \widctlpar\intbl {\qc \fs16 На сумму\b0
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

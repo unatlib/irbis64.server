@@ -1,0 +1,30 @@
+/* v1000 - имя БД
+/*v1004^A - список элементов (терминов)
+/*v1011 - префикс терминов
+/*v1100 - свободный параметр FREEPAR0, в котором формат показа документов
+/*V1101 - свободный параметр FREEPAR1,в котором порция показа документов
+'<title>Отмеченные термины (БД ',v1000,')</title>'
+'<A HREF=IRBIS:?C21COM=9&ACTION=2>Вернуться...</A><br>',
+"<b>База данных: "v1000"<br></b>",
+'<table border=0 cellpadding=1 cellspacing=1>',
+'<td>',
+'</td>',
+'<td>',
+if p(v1004) then '<b>Отмеченные термины</b>' else 'Нет отмеченных терминов' fi,
+'</td>',
+(if p(v1004) then  
+'<tr>',
+'<td>',
+'<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',v1004^A,'">',
+'</td>'
+'<td>',
+,v1004^A,
+'</td>',
+fi)
+'</table>',
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" name="" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="PFTNAME" value="select_trm0_wn">',
+     '</form>',

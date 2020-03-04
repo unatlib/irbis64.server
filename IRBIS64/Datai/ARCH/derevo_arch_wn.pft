@@ -1,0 +1,22 @@
+'</>',
+&uf('+7W200#'),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W400#'),&uf('+7W500#'),
+if s(v14,v422)<>'' then '<b>Вышестоящие:</b><br>' 
+'("xx" означает, что ссылка на этот документ уже была выше)'
+   if p(v14) then &uf('S0'),
+      (if p(v14) then 
+          if val(&uf('S1A'))>15 then else |<br>|+d14 ,&uf('+7W14#'v14), &uf('6ur_up') fi fi) 
+   else 
+      if p(v422) then &uf('S0'), 
+         (if p(v422) then 
+             if val(&uf('S1A'))>15 then else '<br>' ,&uf('+7W14#^B'v422^y), &uf('6ur_up') fi fi) 
+fi fi fi,
+if p(v19^b) then '<br><b>ОСНОВНОЙ ДОКУМЕНТ',
+   '<table><tr>', 
+     '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">','</td>', 
+     '<td valign=top>','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+     '<td valign=top>','<b>'v19^b"__",brief_arch,'</b>','</td>'
+   '</tr></table>', 
+fi,
+if &uf('J,B422='v19^b)<>'' then '<b>Нижестоящие:</b>', mpl,&uf('+7W4#'),&uf('+7W6#'),&uf('6ur_dn_d14') fi,  
+
+&uf('!')

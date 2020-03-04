@@ -1,0 +1,39 @@
+mhl,
+if p(v***) then 
+    if '***'='510' or '***'='923' or '***'='463' or '***'='330' or 
+       '***'='922' or '***'='470' or '***'='481' or '***'='541' or 
+       '***'='430' or '***'='454' or '***'='517' or '***'='225' or '***'='46' 
+    then  
+       (if '***'='510' then v***^d else 
+           if '***'='923' then v923^i,". "v923^l else 
+              if '***'='463' or'***'='330' or'***'='922' or '***'='481' or
+                 '***'='470'then v***^c else 
+                 if '***'='541'then v*** else v***^a 
+        fi fi fi fi/)
+    else 
+       if '***'='200' or '***'='461' then 
+          if p(v461) then v461^c,"^H"v200^v,"^I"v200^a,"^F"v461^x,
+             if &unifor('Av961^x#1')<>''and &unifor('Av961^4#1')=''
+             then "^2"d461^x,"^F"n461^x,&unifor('Av961^x#1') fi,
+             if &unifor('Av961^x#2')<>''and &unifor('Av961^4#2')=''
+             then "^3"d461^x,"^2"n461^x,&unifor('Av961^x#2') fi,
+          else v200^a,"^F"v700^a," "v700^d,", "v700^g 
+             if p(v700^g) then " ("v700^b")" else " "v700^b fi,
+             if &unifor('Av701#1')<>''then'^2',&unifor('Av701^a#1'),
+                if &unifor('Av701^d#1')<>''then' '&unifor('Av701^d#1') fi,
+                if &unifor('Av701^g#1')<>''then', '&unifor('Av701^g#1') fi,
+                if &unifor('Av701^b#1')<>''then
+                   if &unifor('Av701^g#1')<>''then' ('&unifor('Av701^b#1')')' 
+                   else' '&unifor('Av701^b#1') 
+             fi fi fi,
+             if &unifor('Av701#2')<>''then'^3',&unifor('Av701^a#2'),
+                if &unifor('Av701^d#2')<>''then' '&unifor('Av701^d#2') fi,
+                if &unifor('Av701^g#2')<>''then', '&unifor('Av701^g#2') fi,
+                if &unifor('Av701^b#2')<>''then
+                   if &unifor('Av701^g#1')<>''then' ('&unifor('Av701^b#2')')' 
+                     else' '&unifor('Av701^b#2') 
+             fi fi fi,
+          fi,'^J',v210^d,if a(v210^d) then v461^h fi,"^V"v900^b,"^S"v215^a,"^A"v903,
+          '^!1'
+ fi fi fi/,
+mpl

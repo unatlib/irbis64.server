@@ -1,0 +1,95 @@
+0
+REP
+54
+F
+(&unifor('AD54')/)
+XXXXXXXXXXXXXXXXXXX
+// Удаление 69 в соответствии с изучаемым языком
+DEL
+69
+F
+if v920:'VUZ' then else (if p(v69) then if v69^d:':' then if &unifor('Av26#1')<>'' then if &unifor('DRDR,@'mfn,',v26|, |'):&unifor('G2:'v69^d) then'0'else'1' fi else '1' fi else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi
+XXXXXXXXXXXXXXXXXXX
+//=============новое в 8.1=====================
+// удаляю признак отчисления ^21 в поле 90, если нет поля 54
+IF
+if a(v54) then '1' fi
+DEL
+90^2
+*
+
+
+FI
+//формирую признак отчислен в поле 90, если есть поле 54
+IF
+if p(v54) then '1' fi
+// случай одного места обучения
+IF
+if val(&uf('+N90'))=1 then '1' fi
+DEL
+90^2
+*
+
+
+REP
+90
+1
+v90,if p(v54) and &uf('Av54^C#1')='' then '^21' fi
+
+FI
+// случай БОЛЕЕ одного места обучения
+IF
+if val(&uf('+N90'))>1 then '1' fi
+IF
+if p(v54) and &uf('Av54^C#1')='' and &uf('Av54^F#1')='' and &uf('Av54^S#1')='' then '1' fi
+// отчисление без указания фак-та - значит все фак-ты
+DEL
+90^2
+*
+
+
+REP
+90
+F
+(v90,'^21'/)
+
+FI
+IF
+if p(v54) and &uf('Av54^C#1')<>'' and &uf('Av54^F#1')='' and &uf('Av54^S#1')='' then '1' fi
+// восстановление без указания фак-та - значит все фак-ты
+DEL
+90^2
+*
+
+
+FI
+//...............
+IF
+if p(v54) then if &uf('Av54^C#1')='' and &uf('Av54^F#1')<>'' or &uf('Av54^C#1')='' and &uf('Av54^S#1')<>'' then '1',&uf('+7W91#',&uf('+97',&uf('Av54^F#1'),&uf('Av54^S#1'))) fi,fi
+// отчисление с факультета
+REP
+90
+F
+(if p(v90) then v90,if &uf('+97',s(v90^A,v90^C)): &uf('AG91#1') then if v90^2='' then '^21' fi fi fi/)
+
+FI
+//..................
+IF
+if p(v54) then if &uf('Av54^C#1')<>'' and &uf('Av54^F#1')<>'' or &uf('Av54^C#1')<>'' and &uf('Av54^S#1')<>'' then '1',&uf('+7W91#',&uf('+97',&uf('Av54^F#1'),&uf('Av54^S#1'))) fi,fi
+/* восстановление на факультет
+CHA
+90^2
+F
+(if p(v90) then if v90^2<>'' then '^2',v90^2 else # fi fi/)
+(if p(v90) then if v90^2<>'' then if &uf('+97',s(v90^A,v90^C)): &uf('AG91#1') then # else '^2',v90^2 fi else # fi fi/)
+FI
+//...................
+// конец случай БОЛЕЕ одного места обучения
+FI
+// конец есть поле 54
+FI

@@ -1,0 +1,37 @@
+if p(v200) then 
+   if s(v200^b,v200^k)<>'' then 
+      if val(&unifor(|J|v200^g|,|,|JIBIS,|n200^g,|IN=|v200^b))<=0 then/'0' 
+         else/'2 Ошибка:Дублетный инв.номер в БД ' v200^g,"IBIS"n200^g,| (|v200^b|)| 
+      fi,
+      if val(&unifor(|J|v200^g|,|,|JIBIS,|n200^g,|IN=|v200^k))<=0 then/'0' 
+         else/'1 Ошибка:Дублетный штрих-код в БД ' v200^g,"IBIS"n200^g,| (|v200^k|)| 
+      fi 
+   else /'1 Ошибка:Не введены Инв. номер. и Штрих-код' 
+   fi/
+   if p(v200^9) then else 
+      if val(&unifor(|J|v200^g|,|,|JIBIS,|n200^g,'!'v200^j*2.2, 
+         if v200^v:'03'then &unifor('B'v200^c,if v200^u:'1'then' 'v200^f fi),
+            &unifor('G1#'v200^h) 
+         else if v200^f:',' then &unifor('G0,'v200^f.9) else 
+                 if v200^f:' 'then &unifor('G0 'v200^f.9) 
+              fi fi,&unifor('B'v200^c),
+              if val(v200^h)>0 then &unifor('G1#'v200^h) else v200^h fi 
+         fi,v200^s))<=0
+      then/'0' 
+      else 
+         if p(v200^!) then /'0' else 
+         /'1 Ошибка:Дублетное описание в БД 'v200^g,"IBIS"n200^g,' - см. N  ', 
+         &unifor(|D|v200^g|,"|,|DIBIS,"|n200^g,'!'v200^j*2.2,
+            if v200^v:'03'then &unifor('B'v200^c,if v200^u:'1'then' 'v200^f fi),
+               &unifor('G1#'v200^h) 
+            else if v200^f:',' then &unifor('G0,'v200^f.9) else 
+                    if v200^f:' 'then &unifor('G0 'v200^f.9) 
+                 fi fi,&unifor('B'v200^c),
+                 if val(v200^h)>0 then &unifor('G1#'v200^h) else v200^h fi 
+            fi,v200^s'",f(val(mfn),0,0)')
+   fi fi fi/
+   if a(v200^c) then /'1 Ошибка:Не введено Заглавие.' fi 
+   if a(v200^a) then /'1 Ошибка:Не введен Полочный шифр.' fi 
+   if &unifor('IMAIN,OtvFace,')=''and a(v200^l)then 
+      /'2 Ошибка:Не введено ФИО ответственного лица'fi 
+fi 

@@ -1,0 +1,38 @@
+'{ \par \qc',,,'Учебники по ',,if val(v991^-)=0 then 'специальностям' else 'направлениям' fi,,,,,
+if p(v991^G) or p(v991^S) or p(v991^F) or p(v991^B) or p(v991^A) or p(v991^C) or p(v991^N) or p(v991^O) or p(v991^V)  or p(v991^I)   
+then ' для ' fi,,,,,
+if p(v991^G) then 'типа литературы - ',v991^G ,,,,,
+if s(v991^S,v991^I,v991^F,v991^B,v991^A,v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^S) then 'цикла дисциплин - ',&uf('+98! ',v991^S) 
+if s(v991^I,v991^F,v991^B,v991^A,v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^I) then 'дисциплины - ',v991^I 
+if s(v991^F,v991^B,v991^A,v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^F) then 'семестра - ',&uf('+98! ',v991^F) 
+if s(v991^B,v991^A,v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^B) then 'кафедры - ',&uf('+98! ',v991^B) 
+if s(v991^A,v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^A) then 'факультета - ',&uf('+98! ',v991^A) 
+if s(v991^O,v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^O) then 'формы обучения - ',&uf('+98! ',v991^O) 
+if s(v991^V,v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^V) then 'вида обучения - ',&uf('+98! ',v991^V) 
+if s(v991^C,v991^N)<>'' then ', ' fi fi,,,
+if p(v991^C) then 'специальность - ',&uf('+98! ',v991^C) 
+if s(v991^N)<>'' then ', ' fi fi,,,
+if p(v991^N) then 'направление - ',&uf('+98! ',v991^N) fi,,,
+'\par \qc ',,,
+if p(v991^K)or p(v991^M)or p(v991^P)or p(v991^R)or p(v991^U)or p(v991^V)or p(v991^W)or p(v991^2)or p(v991^1)or p(v991^3)or p(v991^4) then 'Заданы заголовки: ',
+if p(v991^4) then 'вид обучения',,,if s(v991^M,v991^2,v991^P,v991^1,v991^R,v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^M) then 'факультет',,,if s(v991^2,v991^P,v991^1,v991^R,v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^2) then 'кафедра',,,if s(v991^P,v991^1,v991^R,v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^P) then 'специальность',,,if s(v991^1,v991^R,v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^1) then 'направление',,,if s(v991^R,v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^R) then 'цикл',,,if s(v991^U,v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^U) then 'тип',,,if s(v991^W,v991^3)<>'' then ', ' fi fi,,,
+if p(v991^W) then 'гриф',,,if s(v991^3)<>'' then ', ' fi fi,,,
+if p(v991^3) then 'дисциплина'  fi,,,fi,,,,
+&uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),,,,,,,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+'\par }'

@@ -1,0 +1,12 @@
+if p(g35) then 
+'  Студентов - '
+&uf('+7W691#'(if p(v691) then 
+                 if p(v691^l) then 
+                    if &uf('+97'v691^l)=&uf('+97'&uf('Ag35#1')) then 
+&unifor(|DVUZ,"!|v691^0|",(if p(v68) then if v68^l:&uf('Ag35#1') then v68^Z fi fi)|) 
+              fi fi fi/)),f(rsum((g691|;|)),0,0)
+',  Экз. - 'f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi)),0,0)
+'\b   ККО\b0 - ' 
+f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi))/rsum((g691|;|)),0,2) 
+&uf('+7W35#'),
+fi,

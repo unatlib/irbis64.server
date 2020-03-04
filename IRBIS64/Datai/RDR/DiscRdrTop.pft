@@ -1,0 +1,33 @@
+/* верхнее отображение книги для дисциплины
+/* v1100 - факультет
+/* v1101 - ФО
+/* v1102 - наименование дисциплины
+'<body bgcolor="#C0C0C0">',
+'<p><font color="black" size=+1>',
+'<b>Студенты, изучающие дисциплину ',v1102,'</b><br>Факультет ',&uf('KFak.mnu|',v1100),,,
+'<br>Форма обучения ',&uf('KFO.mnu|',v1101),,,,,,
+'<p><font color="white" size=+1>',
+'<table bgcolor="#FFFFFF" border=1 width="100%" cellpadding=1 cellspacing=1>',
+'<tr>',
+'<p><font size=+1>',
+'<td align="center" width="7%" > ',
+'n/n',
+'<td align="center" width="50%" > ',
+'<b>ФИО',
+'</td>',
+'<td align="center" width="15%" > ',
+'<b>Год обучения',
+'</td>',
+'<td align="center" width="5%" > ',
+'<b>Семестр',
+'</td>',
+'<td align="center" width="15%" > ',
+'<b>Специальность',
+'</td>',
+'<td align="center" > ',
+'<b>Группа',
+'</td>',
+'</tr>',
+&uf('S0'),
+
+

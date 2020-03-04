@@ -1,0 +1,12 @@
+&uf('+7W100#'
+if rsum((if p(v691) then 
+            if p(v691^l) then '0,' else 
+               if v691^F=&uf('Ag1001^F#1') and 
+                  (&uf('Ag1001^A#1')<>'' and &uf('+97',v691^A)=&uf('+97',&uf('Ag1001^A#1')) or 
+                   &uf('Ag1001^C#1')<>'' and &uf('+97',v691^C)=&uf('+97',&uf('Ag1001^C#1')) or 
+                   &uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1'))) then 
+                  if &uf('Ag991^o#1')='' or &uf('+97',v691^O)=&uf('+97'&uf('Ag991^o#1')) then '1,' else '0,' fi 
+               else '0,' 
+         fi fi fi/))>0 
+then'1' else '0' fi),
+if val(g100)>0 then if rsum((if p(v910) then if 'C 2 6 7':v910^a then else |1;|d910 fi fi))>0 then '1' else '0' fi else '0' fi 

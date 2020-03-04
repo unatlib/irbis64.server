@@ -1,0 +1,15 @@
+&uf('+7W1#'),
+&uf('+7G1'&uf('+7W1#'(v910^d,if v910^d='' then'+++'fi/))), &uf('+7W6#'), &uf('+7W7#'),
+&uf('+7G6'&uf('+7W6#',(if &uf('Kmhrvn.mnu|'v910^d)=''then if v910^a='2'or 'U C':v910^a and a(v910^c)then v910^d fi fi/))),
+&uf('+7W5#'), 
+
+(if p(g1) then if &uf('Kmhrvn.mnu|'g1)=''then &uf('+7W2#'),&uf('+7W2#',g1),&uf('6EXUVL'),fi fi/), 
+mpl,
+'всего 'f(rsum((g5^a|;|)),0,0),
+if g5.1='^' then else ' : '
+&unifor('S0'),(if g5^a<>'' then if &uf('S1A')='1' then else ', 'fi,&uf('G0^'g5),| (|g5^a|)| fi), 
+fi,
+if f(rsum((g5^b|;|)),0,0)<>''then'<br> Свободны: ' 
+if g5.1='^' then g5^b else 
+&unifor('S0'),(if p(g5^b) then if &uf('S1A')='1' then else ', 'fi,if &uf('G0^'g5)='+++'then else &uf('G0^'g5) fi,| (|g5^b|)| fi) fi 
+else'<br> Свободных экз. нет' fi /

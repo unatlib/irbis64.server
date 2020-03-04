@@ -1,0 +1,103 @@
+1
+
+Введите имя БД ЭК
+ADD
+66
+
+if v66^A:'%1'then else '^A%1^B'&unifor('3')fi
+
+CORREC
+'CMPL'
+"^E"v938^e,"^Y"v938^y
+(if p(v488)then if v488^1:'Дубль'then "I="v488^t fi fi)
+
+DEL
+1938
+F
+if v1938^Q=v938^Q then '0'else'1'fi
+
+ADD
+111
+
+if a(v1938^e)then v938^e else v1938^e fi
+
+ADD
+1111
+
+&umarci('2111#=')
+
+REPEAT
+
+
+
+
+REP
+1111
+1
+f(val(v1111,' 0')+1,0,0)
+
+ADD
+222
+
+if p(v1001^e)then &unifor('G0;'&unifor(|G2=|v1001^e))fi
+
+REP
+333
+F
+if p(v333)then v333,v1111,'='v222";"fi
+
+ADD
+333
+
+if a(v333)then v1111,'='v222";"fi
+
+REP
+1001^e
+1
+&unifor('G2;'v1001^e)
+
+DEL
+222
+
+
+
+UNTIL
+if v1001^e<>''then'1'else'0'fi
+
+
+
+REP
+1938
+1
+v1938,v333
+
+ADD
+1938
+
+if a(v1938)then |^Q|v938^q,|^A|v938^a,if s(v938^y,v1001^y)<>''then '^Y',f(val(v938^y,' 0')+val(v1001^y,' 0'),0,2)fi,|^B|v938^b,|^N|v938^n,|^X|v938^x,|^D|v938^d,|^E|v938^e,v333fi
+
+DEL
+333
+
+
+
+DEL
+111
+
+
+
+DEL
+1111
+
+
+
+DEL
+1001
+
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

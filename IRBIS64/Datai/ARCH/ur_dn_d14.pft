@@ -1,0 +1,33 @@
+&uf('+7W34#'),&uf('+7W15#'),&uf('+7W4#'),
+&uf('+7W34#'(if p(v14) then '^?'&uf('Av19^b#1') fi/))/
+if val(&uf('J,B422='v19^b))>0 then &uf('7,?B422='v19^b'?,@d14') fi,
+&uf('+7G34'),
+/*(|g34: |g34|<br>|)/
+&uf('+7U4#'(if p(g34) then if g34:&uf('Av19^b#1') then g34 fi fi/)),
+&uf('+7G4'),&uf('+7T4')/&uf('+7W19#'v19^b),
+/*(|g4: |g4|<br>|)/
+&uf('+7W11#'),&uf('+7W124#'),
+(if g4<>'' then &uf('+7W5#'),&uf('+7W5#'g4),&uf('6ur_dn_d14VL') fi),
+&uf('+7G124'),
+/*(g124|<br>|),
+if p(g124) then 
+/*&uf('+7W400#'),
+  (if g124<>'' then 
+      if &uf('J,B='g124^M)<>'' then 
+         '<table><tr>'
+           '<td valign=top>',&uf('Kdd.mnu\'g124^!),
+            if &uf('Ag500#1'):s('+'&uf('D,!B='g124^m'!,mfn')'+') then 'xx' '</td>' else 
+              '<input type="checkbox" name="CHECKINDEX"  value="',&uf('D,!B='g124^M'!,mfn'),'">','</td>', 
+              &uf('+7U400#',&uf('D,!B='g124^M'!,mfn')),&uf('+7W500#'&uf('Ag500#1'),|+|g400|+|) 
+
+            fi,
+            '<td valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>',
+            '<td>',
+            '<A HREF="IRBIS:2,,,derevo_ARCH_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=B=',
+            &uf('+3E'g124^M),'">'
+            &uf('D,!B=',&uf('+97'g124^M),'!,@brief_derevo'),
+            '</A>','</td>'
+         '</tr></table>'
+    fi fi/),
+fi,
+&uf('+7W4#'),

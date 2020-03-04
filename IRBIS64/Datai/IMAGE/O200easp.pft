@@ -1,0 +1,11 @@
+         if a(v200^e) then 
+            if p(v328^a) or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1' 
+                         or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then 
+               if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1'then'автореферат дис. ... 'else 
+                  if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then' : дис. ... '
+               fi fi,v328^a," : "v328^n,", "v328^0,", "v328^9 
+            else 
+               if p(v463) then else 
+                  if a(v905^2) and p(v900^c)then &unifor('K200ehd.mnu|'v900^c) fi
+         fi fi fi,
+ 

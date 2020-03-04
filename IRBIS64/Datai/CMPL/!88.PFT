@@ -1,0 +1,28 @@
+if (l(|ksu=|v88^a))<=0 or val(ref(l(|ksu=|v88^a),mfn))=val(mfn) 
+then
+   '0'
+else 
+   '1 Ошибка: Дублетный Номер записи КСУ 'v88^a,,,,,
+fi/
+(if p(v88) then 
+    if p(v88^y) then 
+       if (l(if p(v88^y) then'AS=',&unifor('Av88^a*2.2#1'),|-|v88^y|-| fi))<=0 or 
+          val(ref(l(if p(v88^y) then'AS=',&unifor('Av88^a*2.2#1'),|-|v88^y|-| fi),mfn))=val(mfn) 
+       then/'0'
+       else
+          /'1 Ошибка: Дублетный Номер акта '&unifor('Av88^a*2.2#1'),|-|v88^y  
+       fi fi fi/),
+(if p(v88) then if p(v88^g) then if val(v88^g)>0 then 
+   if &unifor('G1#'v88^g):',' or &unifor('G1#'v88^g):'=' or 
+      &unifor('G1#'v88^g):'-' or &unifor('G1#'v88^g):'\' then 
+      /'1 Ошибка: Нарушена структура данных СУММА "NNNN.NN"  'v88^g 
+fi fi fi fi/),
+if &unifor('Av88^y#1')<>'' then if &unifor('Av88^y#2')<>'' then   
+/'1 Ошибка: Номер акта, если он повторяется, записывается, начиная со 2-го повторения 
+поля ','N акта '&unifor('Av88^y#1') else /'0' fi fi/
+if &unifor('Av88^a#2')<>''then /'1 Ошибка: Номер записи КСУ записывается только в
+ первом повторении поля '&unifor('Av88^a#1') else /'0' fi/
+if &unifor('Av88^d#2')<>''then /'1 Ошибка: Источник комплектования записывается  
+только в первом повторении поля ',&unifor('Av88^d#1') else /'0' fi/
+if &unifor('Av88^b#2')<>''then /'1 Ошибка: Дата поступления партии по одному N КСУ 
+записывается только в первом повторении поля '&unifor('Av88^a#1') else /'0' fi/

@@ -1,0 +1,6 @@
+if &uf('+D')='LICH' 
+then 
+   "^C"v1,,"^D"v40^D,,"^G"v5,,,"^F"v40^D,,,"^I"v6,,,'^XLICH'/,,,,
+else 
+   (if p(v40) then '^C',&uf('Av30#1'),,|^D|v40^D,,,|^G|v40^G,,|^F|v40^F,,,|^I|v40^A,,|^P|v40^B,,|^H|v40^H,,|^K|v40^K,,,|^V|v40^V,,'^X',&uf('+D') fi/)  
+fi

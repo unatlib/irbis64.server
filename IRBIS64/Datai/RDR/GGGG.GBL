@@ -1,0 +1,27 @@
+0
+REP
+51
+F
+(if v51.1='9'then |19|v51 else if v51.1='0'then |20|v51 else v51 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+52
+F
+(if v52.1='9'then |19|v52 else if v52.1='0'then |20|v52 else v52 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+40^D
+F
+(if p(v40^d)then if v40^d.1='9'then |19|v40^d else if v40^d.1='0'then |20|v40^d else v40^d fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+40^E
+F
+(if p(v40^e)then if v40^e.1='9'then |19|v40^e else if v40^e.1='0'then |20|v40^e else v40^e fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+40^F
+F
+(if p(v40^f)then if v40^f:'*'then v40^f else if v40^f.1='9'then |19|v40^f else if v40^f.1='0'then |20|v40^f fi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+

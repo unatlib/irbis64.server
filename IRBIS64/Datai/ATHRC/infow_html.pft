@@ -1,0 +1,40 @@
+if p(v210) then '<b>нCмнбмне мюхлемнбюмхе йнккейрхбю/лепнопхърхъ/хгдюрекэярбю:</b>  
+','<br>',mhl,v210^a,if s(v210^n,v210^c,v210^S)<>''then' ('v210^n,if v210^N<>'' and v210^C<>'' then " ; ",v210^c else v210^c fi,
+ if v210^S<>'' and (v210^C<>'' or v210^N<>'') then " ; "v210^S else v210^S fi,')' fi,,". "v210^b," ("v210^X")",if v210:'^d' or v210:'^f' or v210:'^e' then 
+' (',v210^d,if v210:'^d' and v210:'^f' then ";"v210^f  else v210^f fi,if v210:'^e
+' and (v210:'^f' or v210:'^d') then "; "v210^e else v210^e fi,')', fi,
+'</td>',
+'<td>',
+if p(v950) then '<br><IMG SRC="IRBIS:10,,',v950,'">',
+           else if p(v953) then '<IMG SRC=IRBIS:12,,',mfn,',1','>' fi,
+fi,
+'</td>',
+'</table>',
+,,,,,,if p(v510) then '<br><b> ябъгюммше нямнбмше мюхлемнбюмхъ йнккейрхбю/лепноп
+хърхъ/хгдюрекэярбю:</b>' fi,(if p(v510) then ,'<br>',mhl,v510^a,if s(v510^n,v510^c,v510^S)<>''then' ('v510^n,if v510^N<>'' and v510^C<>'' then | ; |v510^c else v510^c fi,
+ if v510^S<>'' and (v510^C<>'' or v510^N<>'') then | ; |v510^S else v510^S fi,')' fi,|. |v510^b,if v510:'^
+d' or v510:'^f' or v510:'^e' then ' (',v510^d,if v510:'^d' and v510:'^f' then |; |
+v510^f  else v510^f fi,if v510:'^e' and (v510:'^f' or v510:'^d') then |; |v510^e 
+else v510^e fi,')' fi,| (|v510^X|).  |  fi,if v510^5:'a' then ' (ОПЕФМХИ ГЮЦНКНБНЙ
+)'fi,if v510^5:'b' then ' (ОНЯКЕДСЧЫХИ ГЮЦНКНБНЙ)'fi,if v510^5:'d' then ' (ЯНЙПЮЫЕ
+МХЕ)'fi,if v510^5:'z' then ' (ДПСЦНИ ГЮЦНКНБНЙ)' fi/),if p(v410) then '<br><b>дп
+сцхе (бюпхюмрмше) мюхлемнбюмхъ йнккейрхбю/лепнопхърхъ/хгдюрекэярбю:</b>' fi,(if p(v410) the
+n ,'<br>',mhl,v410^a,if s(v410^n,v410^c,v410^S)<>''then' ('v410^n,if v410^N<>'' and v410^C<>'' then | ; |v410^c else v410^c fi,
+ if v410^S<>'' and (v410^C<>'' or v410^N<>'') then | ; |v410^S else v410^S fi,')' fi,|. |v410^b,if v410:'^d' or v410:'^f' or v410:'^e' then
+ ' (',v410^d,if v410:'^d' and v410:'^f' then |;|v410^f  else v410^f fi,if v410:'^
+e' and (v410:'^f' or v410:'^d') then |; |v410^e else v410^e fi,')' fi,| (|v410^X|).  |fi,if v410^5:'a' then ' (ОПЕФМХИ ГЮЦНКНБНЙ)'fi,if v410^5:'b' then ' (ОНЯКЕДСЧЫХИ
+ ГЮЦНКНБНЙ)'fi,if v410^5:'d' then ' (ЯНЙПЮЫЕМХЕ)'fi,if v410^5:'z' then ' (ДПСЦНИ Г
+ЮЦНКНБНЙ)'fi/),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,if p(v710) then '<br><b>ябъгюммше нямнбмше мюхлемнбюмхъ йнккейрхбю/лепно
+пхърхъ мю дпсцху ъгшйюу:</b>' fi,(if p(v710) then ,'<br>',mhl,v710^a,if s(v710^n,v710^c,v710^S)<>''then' ('v710^n,if v710^N<>'' and v710^C<>'' then | ; |v710^c else v710^c fi,
+ if v710^S<>'' and (v710^C<>'' or v710^N<>'') then | ; |v710^S else v710^S fi,')' fi,|. |v710^b,if v710:'^d' or v710:'^f' or v710:'^e' then ' (',v710^d,if v710:'^d' and v
+710:'^f' then |; |v710^f  else v710^f fi,if v710:'^e' and (v710:'^f' or v710:'^d'
+) then |; |v710^e else v710^e fi,')' fi fi/),if p(v900^a)then '<br><b>бх
+д йнккейрхбю/лепнопхърхъ/хгдюрекэярбю:</b> ',v900^a fi,if p(v210^9)then '<br><b>рхо нпцюмхгюжхх:</b> ',&unifor('Ktip.mnu|'v210^9) fi, if p(v300) then '<br><b>хмтнплюжхнммне 
+опхлевюмхе\b0 :  ',('<br>',v300^a), fi,if p(v810) then '<br><b>хярнвмхй, б
+ йнрнпнл бшъбкемю хмтнплюжхъ н гюцнкнбйе:</b>',('<br>',| |v810^a,| |v
+810^b) fi,if p(v305) then '<br><b>рейярнбне яяшкнвмне опхлевюмхе ял.рюйфе:</b>'
+,('<br>',v305^a/| |v305^b/| |v305^c/| |v305^d/| |v305^e/) fi,if p(v310) th
+en '<br><b>рейярнбне яяшкнвмне опхлевюмхе ял.:</b>',('<br>',| |v310^
+a,| |v310^b,| |v310^c,| |v310^d,| |v310^e/) fi,if p(v830) then '<br><b>наыее опхле
+вюмхе йюрюкнцхгюрнпю:</b>',(| |v830) fi fi,

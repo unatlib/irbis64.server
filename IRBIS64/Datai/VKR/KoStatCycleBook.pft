@@ -1,0 +1,7 @@
+if a(v699) or 
+   p(v699) and v699: '^U1' 
+then 
+  if val(G1006)=0 then '1' fi,,,, 
+  if val(G1006)=1 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else '1' fi fi,,,,,
+  if val(G1006)=2 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21'  then '1' fi fi,,,,,
+fi

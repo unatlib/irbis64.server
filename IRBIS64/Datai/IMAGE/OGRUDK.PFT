@@ -1,0 +1,29 @@
+
+if p(v675) or p(v621) or p(v964) or p(v686) then '\par '
+   if s(v905^j)<>''or &unifor('IPRIVATE,FPN,')<>''then
+      "\b √–Õ“» \b0 "| + |+v964,"\par \b ”ƒ  \b0 "| + |+v675^*, 
+      "\par \b ¡¡  \b0 "| + |+v621^*,"\par "| + |+v686 
+   else 
+      if p(v964)then 
+         if p(v675)then'\pard\tx5\tx2000\b √–Õ“»\tab ”ƒ \b0 '
+            (|\par |v964,
+            if p(v964)then|\tab |v675^* else |\par \tab |v675^* fi),
+            if p(v621)then'\pard\tx2000\par \tab \b ¡¡ \b0 '(|\par \tab |v621^*) fi
+            if p(v686)then'\pard\tx2000\par \tab \b –”¡\b0 '(|\par \tab |v686) fi 
+         else 
+            if p(v621)then'\pard\tx5\tx2000\b √–Õ“»\tab ¡¡ \b0 '
+               (|\par |v964,
+               if p(v964)then|\tab |v621^* else |\par \tab |v621^* fi),
+               if p(v686)then'\pard\tx2000\par \tab \b –”¡\b0 '(|\par \tab |v686) fi 
+            else 
+               if p(v686)then'\pard\tx5\tx2000\b √–Õ“»\tab –”¡\b0 '
+                  (|\par |v964,
+                  if p(v964)then|\tab |v686 else |\par \tab |v686 fi) 
+               else'\b √–Õ“»\b0   '| + |+v964 
+         fi fi fi 
+      else 
+         if p(v675) then'\pard\tx2000\tab \b ”ƒ \b0 '(|\par \tab |v675^*)fi,
+         if p(v621) then "\par "d675,'\pard\tx2000\tab \b ¡¡ \b0 '(|\par \tab |v621^*)fi,
+         if p(v686) then if s(v675,v621)<>''then'\par 'fi,'\pard\tx2000\tab \b –”¡\b0 '(|\par \tab |v686)fi 
+   fi fi,'\par \pard\tx4 ',
+fi 

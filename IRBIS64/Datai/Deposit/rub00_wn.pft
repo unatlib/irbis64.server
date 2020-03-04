@@ -1,0 +1,4 @@
+v3,' - ','<A HREF="IRBIS:1,,,rub_wn,',v3'">',v2,'</A>',
+if p(v20) then ' <A HREF="IRBIS:1,,,rub_see_wn,',v3,'">(Смотри также...)</A>' fi 
+
+

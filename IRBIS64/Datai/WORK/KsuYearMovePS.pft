@@ -1,0 +1,169 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1888 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2534 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3611 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4257 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4903 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5980 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6626 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7272 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8349 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8995 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9641 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10287 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10933 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11579 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12225 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12871 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13517 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14163 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14810 
+\pard \widctlpar\intbl {\ql \fs16 ',v1*1,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',
+/*--------- На баланс
+if v1.1='P' then f(val(v2),0,0) else if v1.1='S' then f(val(v3),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',
+if v1.1='P' then f(val(v4),0,0) else if v1.1='S' then f(val(v5),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',
+if v1.1='P' then f(val(v6),0,0) else if v1.1='S' then f(val(v7),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*---------не на баланс
+if v1.1='P' then f(val(v8),0,0) else if v1.1='S' then f(val(v9),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v10),0,0) else if v1.1='S' then f(val(v11),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v12),0,0) else if v1.1='S' then f(val(v13),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*---------Всего
+if v1.1='P' then f(val(v14),0,0) else if v1.1='S' then f(val(v15),0,0)  fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v16),0,0) else if v1.1='S' then f(val(v17),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v18),0,0) else if v1.1='S' then f(val(v19),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs16 ',,
+/*-------------Книг
+if v1.1='P' then f(val(v20),0,0) else if v1.1='S' then f(val(v21),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v22),0,0) else if v1.1='S' then f(val(v23),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*----------брошюр
+if v1.1='P' then f(val(v24),0,0) else if v1.1='S' then f(val(v25),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v26),0,0) else if v1.1='S' then f(val(v27),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*-----------Журналы всего
+if v1.1='P' then f(val(v28),0,0) else if v1.1='S' then f(val(v29),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v30),0,0) else if v1.1='S' then f(val(v31),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*----------Журналы в т.ч. инф
+if v1.1='P' then f(val(v32),0,0) else if v1.1='S' then f(val(v33),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v34),0,0) else if v1.1='S' then f(val(v35),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+/*-----------Газеты
+if v1.1='P' then f(val(v36),0,0) else if v1.1='S' then f(val(v37),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\qr \fs16 ',,
+if v1.1='P' then f(val(v38),0,0) else if v1.1='S' then f(val(v39),0,0) fi fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,50 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx642 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7111 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8345 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9479 
+\pard \widctlpar\intbl {\ql \fs24 ''##',,,'.',,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+v1,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,
+if v1.2='1-' then 'есть/нет' else 
+if v1.1='2' then 'ед.' else 
+if v1.1='3' then 'ед.' else 
+if v1.1='4' then 'экз.' else 
+if v1.1='5' then 'ед.' else 
+if v1.1='6' then 'экз.' else 
+if v1.1='7' then 'ед.' else 
+if v1.1='8' then 'да/нет' else 
+if v1.1='9' then 'ед.' else 
+if v1.2='10' then 'да/нет' 
+fi fi fi fi fi fi fi fi fi fi,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+if v1.2='1-' then else 
+if v1.1='2' then f(val(v3),0,0) else 
+if v1.1='3' then f(val(v4),0,0) else 
+if v1.1='4' then f(val(v5),0,0) else 
+if v1.1='5' then f(val(v6),0,0) else 
+if v1.1='6' then f(val(v7),0,0) else 
+if v1.1='7' then f(val(v8),0,0) 
+fi fi fi fi fi fi fi,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

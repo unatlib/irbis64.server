@@ -1,0 +1,24 @@
+'{ ',,,
+'\fs24 \b \qc Учебная литература по кафедрам - дисциплинам - специальностям',,,,,
+if p(v991^O) or p(v991^V) or p(v991^A) or p(v991^S) or p(v991^N)or p(v991^C)or p(v991^B) or p(v991^G)  then ' для' fi,,,,,
+if p(v991^O) then '\par \ql \tab \tab \tab \tab формы обучения - ',&uf('+98! ',v991^O) fi,,,,,
+if p(v991^V) then '\par \ql \tab \tab \tab \tab вида обучения - ',&uf('+98! ',v991^V) fi,,,,,
+if p(v991^A) then '\par \ql \tab \tab \tab \tab факультета - ',&uf('+98! ',v991^A) fi,,,,,
+if p(v991^N) then '\par \ql \tab \tab \tab \tab направления - ',&uf('+98! ',v991^N) fi,,,,,
+if p(v991^C) then '\par \ql \tab \tab \tab \tab специальности - ',&uf('+98! ',v991^C) fi,,,,,
+if p(v991^B) then '\par \ql \tab \tab \tab \tab кафедры - ',&uf('+98! ',v991^B) fi,,,,,
+if v991^S<>'' then '\par \ql \tab \tab \tab \tab цикла дисциплин - ',&uf('+98! ',v991^S), fi,,,,,
+if p(v991^G) then '\par \ql \tab \tab \tab \tab типа литературы - ',v991^G fi,,,,,
+if val(V991^8)>0 then 
+   if val(v991^8)=1 then '\par \ql \tab \tab \tab \tab Только учебная ' 
+   else
+   if val(v991^8)=2 then '\par \ql \tab \tab \tab \tab Только учебнo-методическая ' 
+   fi fi,,
+fi,,,
+if val(v991^9)=1 then '\par \ql \tab \tab \tab \tab (только электронные учебники)' else 
+if val(v991^9)=2 then '\par \ql \tab \tab \tab \tab (без электронных учебников)' 
+fi fi,,,,,
+if v991^=='' or v991^=='1' then '\par \ql \tab \tab \tab \tab (для текущего семестра)' else '\par \ql \tab \tab \tab \tab (независимо от семестра)' fi,,,
+if P(V991^W) then '\par \qc для дисциплин, не имеющих учебников, издания после ',,v991^W,,' года (по всем контингентам)' fi,,,
+if P(V991^Y) then '\par \qc только книги с ККО меньше чем ',,v991^Y fi,,,
+'\par }'

@@ -1,0 +1,564 @@
+1
+noyes.mnu
+Переносить в архивное поле?
+//12 PUTLOG
+//11 учет отмеченной записи VUZ по MFN, чтобы удалялись только отмеченные дубли
+// используется: изменение контингента, УПЛ: удаление дисциплины
+//10.1 убрала поле 942, при удалении 69 учла специальность-направление
+//10.1 убрала студентов при замене контингента - это через программу
+//10.1 при удалении проверяется идентификатор дисциплины
+// имя задания в ini для удаления по словарю дисциплин
+// удаление повторений поля 83 из записи DISC
+// 991 - удаляемые повторения в виде контингента в соотв. подполях, в подполе 1 MFN записи VUZ на удаление
+// УДАЛЕНИЕ В записи VUZ, каталога
+// v992 - новое значение поля 68, если оно задано, то это изменение контингента, поле не удаляется
+//14 удаленные повторения в каталоге в поле 943
+DEL
+993
+*
+
+
+ADD
+993
+
+&uf('+7W993#','%1')
+
+IF
+if v920:'DISC' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------корректировка разделителя семестров
+REP
+83^F
+F
+(if p(v83) then if p(v83^F) then  if v83^F: '-' then  if &uf('G2-',v83^F): '-' then &uf('+98-/',v83^F) else &uf('+98,/',&uf('V',v83^F) ) fi,,else v83^F fi  else # fi fi/)
+
+IF
+if p(v991) then '1'else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//    Формирование модельного поля 1000 из полей 991 и совпавших полей 83
+DEL
+1000
+*
+
+
+DEL
+1002
+*
+
+
+// глобальная G5 признак, что в записи VUZ есть удаление
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+(v991/),,&uf('+7W5#')
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Развертка неповторяющегося поля 1000#1 для ^F:'/' в повторяющееся 1002
+
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+mpu,if &unifor('Av1000^f#1'):'/' then (if &unifor('1*R/?v1000^f#1')<>''then if &unifor('Av1000^0#1')<>'' then '^0',&unifor('Av1000^0#1') fi,,,,,if &unifor('Av1000^1#1')<>'' then '^1',&unifor('Av1000^1#1') fi,,,,,if &unifor('Av1000^I#1')<>'' then '^I',&unifor('Av1000^I#1') fi,,,,,if &unifor('Av1000^B#1')<>'' then '^?',&unifor('Av1000^B#1') fi,,,,if &unifor('Av1000^H#1')<>'' then '^H',&unifor('Av1000^H#1') fi,if &unifor('Av1000^N#1')<>'' then '^N',&unifor('Av1000^N#1') fi,if &unifor('Av1000^C#1')<>'' then '^C',&unifor('Av1000^C#1') fi,if &unifor('Av1000^A#1')<>'' then '^A',&unifor('Av1000^A#1') fi,if &unifor('Av1000^V#1')<>'' then '^V',&unifor('Av1000^V#1') fi,if &unifor('Av1000^O#1')<>'' then '^O',&unifor('Av1000^O#1') fi,,'^F',&unifor('1*R/?v1000^f#1'),,if &unifor('Av1000^E#1')<>'' then '^E',&unifor('Av1000^E#1') fi fi/) else &unifor('Av1000#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1000)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//17---если в поле не встретился удаляемый контингент, то удаление по 991
+IF
+if a(v1002) then '1' fi
+ADD
+1002
+
+(v991/)
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v1002) then '1' fi
+//******************************************** цикл по удаляемым повторениям, поле 1002
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//*******************************************цикл при условии совпадения кафедр
+IF
+if &uf('Av1002^?#1')='' or &uf('Av1002^?#1')=&uf('+97',v5) then '1' fi
+
+// VUZ - удаление дисциплины в записи VUZ
+CORREC
+'*'
+mpu,"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,&unifor('Av1002#1')
+'?',if &unifor('Av1002^a#1')<>'' then &unifor('Av1002^a#1'),'-' fi,,if &unifor('Av1002^n#1')<>'' then &unifor('Av1002^n#1'),'-' fi,,if &unifor('Av1002^c#1')<>'' then &unifor('Av1002^c#1'),'-' fi,,if &unifor('Av1002^v#1')<>'' then &unifor('Av1002^v#1'),'-' fi,,if &unifor('Av1002^o#1')<>'' then &unifor('Av1002^o#1'),'-' fi,,if &unifor('Av1002^f#1')<>'' then &unifor('Av1002^f#1'),'-' fi
+XXXXXXXXXXXXXXXXXXX
+// тот ли MFN записи?
+IF
+if &uf('Av1001^1#1')='' or val(&uf('Av1001^1#1'))=val(mfn) then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v69/)
+
+DEL
+69
+F
+(if p(v69) then if &unifor('Av1001^A#1')=&uf('+97',&unifor('Av68^A#1')) and &unifor('Av1001^C#1')=&uf('+97',&unifor('Av68^C#1')) and &unifor('Av1001^N#1')=&uf('+97',&unifor('Av68^N#1')) and &unifor('Av1001^O#1')=&uf('+97',&unifor('Av68^O#1')) and &unifor('Av1001^V#1')=&uf('+97',&unifor('Av68^V#1')) and val(&unifor('Av1001^F#1'))=val(&unifor('Av68^F#1')) and  &uf('+97',v69^B)=&unifor('Av1001^B#1') and &uf('+97',v69^D)=&unifor('Av1001^D#1') then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+// проверка реального удаления 
+IF
+if &uf('+97',v111)<>&uf('+97',v69) then '1' else '0' fi
+PUTLOG
+'vDel83: Удалена дисциплина "',v1001^D,"-"v1001^B,,'" в записи VUZ. MFN=',f(val(mfn),0,0)
+ADD
+111
+
+&uf('+7W5#1')
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------------------------------------------корректировка БД RDR 
+//------------------------запись студента при условии ACCESSRDR
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if v992<>'' then '1' fi
+//-------------------случай замены контингента, в 992 новые поля - задан признак кор-ки студентов
+CORREC
+'RDR'
+&uf('Av1002#1')/v992
+'?',,&unifor('Av1002^a#1'),&unifor('Av1002^n#1'),&unifor('Av1002^c#1'),,&unifor('Av1002^v#1'),&unifor('Av1002^o#1'),'-S',&unifor('Av1002^f#1') 
+XXXXXXXXXXXXXXXXXXX
+DEL
+1090
+*
+
+
+ADD
+1090
+
+(v90/)
+
+REP
+90
+F
+(if p(v90) then |^0|v90^0,,|^1|v90^1,,|^E|v90^E,,|^G|v90^G,,|^H|v90^H,,|^J|v90^J,,|^D|v90^D,,|^2|v90^2,,if p(v90^A) then '^A',,if &uf('+97',v90^A)=&uf('+97',&uf('Av1001^A#1') ) then if &uf('Av1001^A#2')<>'' then &uf('Av1001^A#2') else v90^A fi else v90^A fi fi,,,if p(v90^V) then '^V',,if &uf('+97',v90^V)=&uf('+97',&uf('Av1001^V#1') ) then if &uf('Av1001^V#2')<>'' then &uf('Av1001^V#2') else v90^V fi else v90^V fi fi,,,if p(v90^O) then '^O',,if &uf('+97',v90^O)=&uf('+97',&uf('Av1001^O#1') ) then if &uf('Av1001^O#2')<>'' then &uf('Av1001^O#2') else v90^O fi else v90^O fi fi,,,if p(v90^N) then '^N',,if &uf('+97',v90^N)=&uf('+97',&uf('Av1001^N#1') ) then if &uf('Av1001^N#2')<>'' then &uf('Av1001^N#2') else v90^N fi else v90^N fi fi,,,if p(v90^C) then '^C',,if &uf('+97',v90^C)=&uf('+97',&uf('Av1001^C#1') ) then if &uf('Av1001^C#2')<>'' then &uf('Av1001^C#2') else v90^C fi else v90^C fi fi,,,if p(v90^F) then '^F',,if &uf('+97',v90^F)=&uf('+97',&uf('Av1001^F#1') ) then if &uf('Av1001^F#2')<>'' then &uf('Av1001^F#2') else v90^F fi else v90^F fi fi,,,fi/)
+
+IF
+if v90<>v1090 then '1' fi
+PUTLOG
+'БД RDR: изменено поле 90 в записи MFN=',f(val(mfn),0,0)
+FI
+DEL
+1090
+*
+
+
+DEL
+1001
+*
+
+
+END
+FI
+IF
+if v992='' then '1' fi
+//--------------------------------- случай удаления контингента
+CORREC
+'RDR'
+mpu,"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,&unifor('Av1002#1')
+'?',,&unifor('Av1002^a#1'),&unifor('Av1002^n#1'),&unifor('Av1002^c#1'),,&unifor('Av1002^v#1'),&unifor('Av1002^o#1'),'-S',&unifor('Av1002^f#1') 
+XXXXXXXXXXXXXXXXXXX
+// если студент не отчислен и нет признака НЕ ПЕРЕВЕДЕН
+IF
+if a(v54) or &unifor('Av54^*#1')<>'' and &unifor('Av54^C#1')<>'' then if a(v90^1) then '1' fi fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v69/)
+
+REP
+69
+F
+(mpu,v69/)
+
+// с учетом повторений поля 90
+DEL
+1090
+*
+
+
+ADD
+1090
+
+(v90/)
+
+REPEAT
+DEL
+69
+F
+(if p(v69) then if ( &uf('Av1001^A#1')=&uf('+97',&uf('Av1090^A#1')) or s(&uf('Av1001^A#1'),&uf('Av1090^A#1'))='' ) and ( &uf('Av1001^N#1')=&uf('+97',&uf('Av1090^N#1')) or s(&uf('Av1001^N#1'),&uf('Av1090^N#1'))='' ) and ( &uf('Av1001^C#1')=&uf('+97',&uf('Av1090^C#1')) or s(&uf('Av1001^C#1'),&uf('Av1090^C#1'))='' ) and ( &uf('Av1001^O#1')=&uf('+97',&uf('Av1090^O#1')) or s(&uf('Av1001^O#1'),&uf('Av1090^O#1'))='' ) and ( &uf('Av1001^V#1')=&uf('+97',&uf('Av1090^V#1')) or s(&uf('Av1001^V#1'),&uf('Av1090^V#1'))='' ) and ( val(&uf('Av1001^F#1'))=val(&uf('Av1090^F#1')) or s(&uf('Av1001^F#1'),&uf('Av1090^F#1'))='' ) then if v69^B=&unifor('Av1001^B#1')and v69^D=&unifor('Av1001^D#1') then '1' else '0' fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+1090
+1
+
+
+UNTIL
+if p(v1090) then '1' fi
+// проверка реального удаления 
+IF
+if &uf('+97',v111)<>&uf('+97',v69) then '1' else '0' fi
+PUTLOG
+'vDel83: Удалена дисциплина "',v1001^D,"-"v1001^B,'" в записи студента (',v30,')'
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец случай удаления контингента
+FI
+//-----------------конец--------------запись студента при условии ACCESSRDR
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------запись DISC
+// в записи DISC удаляю контингент, если было удаление записи VUZ
+IF
+if val(G5)=1 then '1' fi
+IF
+if &uf('Av1002^A#1')<>'' then '1' fi
+// Удаление семестра из 83^f
+// запомню повторения, где не было семестров в 1084
+DEL
+1084
+*
+
+
+ADD
+1084
+
+(if p(v83) and v83^F='' then v83 fi/)
+
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v83/)
+
+CHA
+1002^F
+1
+'10'
+'A'
+CHA
+1002^F
+1
+'11'
+'B'
+CHA
+1002^F
+1
+'12'
+'C'
+CHA
+83^F
+*
+'10'
+'A'
+CHA
+83^F
+*
+'11'
+'B'
+CHA
+83^F
+*
+'12'
+'C'
+CHA
+83^F
+F
+(if p(v83) then if v83^f<>'' then if  &uf('+97',v83^A)=&unifor('Av1002^A#1') and &uf('+97',v83^n)=&unifor('Av1002^n#1')  and  &uf('+97',v83^c)=&unifor('Av1002^c#1')  and &uf('+97',v83^v)=&unifor('Av1002^v#1')  and &uf('+97',v83^o)=&unifor('Av1002^o#1')  and  v83^f:&unifor('Av1002^f#1')  then &unifor('Av1002^f#1') else # fi else # fi  fi/)
+''
+CHA
+83^F
+*
+'A'
+'10'
+CHA
+83^F
+*
+'B'
+'11'
+CHA
+83^F
+*
+'C'
+'12'
+CHA
+83^F
+*
+'//'
+'/'
+CHA
+83^F
+*
+'^F/'
+'^F'
+//     Удаление поля 83 в которых не осталось семестра
+DEL
+83
+F
+(if p(v83) then  if v83^f='' or v83^f='/' then'1'else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+//удаляю, если полное совпадение
+DEL
+83
+F
+(if p(v83) then if val(&uf('IMAIN,LINKGROUP,o'))=1 then if &unifor('Av1002^E#1')<>''and &uf('+97',v83^E)=&unifor('Av1002^E#1') then '1' else '0' fi  else if &uf('+97',v83^A)=&unifor('Av1002^A#1') and &uf('+97',v83^n)=&unifor('Av1002^n#1') and &uf('+97',v83^c)=&unifor('Av1002^c#1')  and &uf('+97',v83^v)=&unifor('Av1002^v#1')  and &uf('+97',v83^o)=&unifor('Av1002^o#1') and ( &unifor('Av1002^f#1')<>''and v83^f:&unifor('Av1002^f#1')  or  &uf('Av1002^f#1')='' and v83^f='' ) then '1' else '0' fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+// может удалялись повторения без семестра ?
+IF
+if &unifor('Av1002^f#1')='' then '1' fi
+DEL
+83
+F
+(if p(v83) then if &uf('+97',v83^A)=&unifor('Av1002^A#1')  and &uf('+97',v83^n)=&unifor('Av1002^n#1') and &uf('+97',v83^c)=&unifor('Av1002^c#1')  and &uf('+97',v83^v)=&unifor('Av1002^v#1')  and &uf('+97',v83^o)=&unifor('Av1002^o#1')   then '1' else '0' fi  fi/)
+
+FI
+// восстанавливаю повторения без семестра
+ADD
+83
+
+(v1084/)
+
+IF
+if v83<>v1083 then '1' fi
+PUTLOG
+'vDel83: Откорректирована дисциплина ',v3^A,' (',v3^0,')'
+FI
+DEL
+1083
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------------------------------------------------- IBIS - удаление дисциплины из записи БО 
+CORREC
+if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,,&uf('+7W10#')
+mpu,&unifor('Av1002#1'),,,,,,&uf('+7W11#')
+"IDD="v3^0
+XXXXXXXXXXXXXXXXXXX
+//определяю какие повторения удалятся - участвует идентификатор дисциплины
+DEL
+111
+*
+
+
+ADD
+111
+
+f(rsum((if p(v691) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if &unifor('Av1001^E#1')<>'' and &uf('+97',v691^E)=&unifor('Av1001^E#1') then '1,' else '0,' fi else if (&unifor('Av1001^I#1')<>''and &uf('+97',v691^I)=&unifor('Av1001^I#1') or &unifor('Av1001^I#1')='') and &uf('+97',v691^n)=&unifor('Av1001^n#1') and &uf('+97',v691^A)=&unifor('Av1001^A#1') and &uf('+97',v691^c)=&unifor('Av1001^c#1') and &uf('+97',v691^n)=&unifor('Av1001^n#1') and &uf('+97',v691^v)=&unifor('Av1001^v#1') and &uf('+97',v691^o)=&unifor('Av1001^o#1') and val(v691^f)=val(&unifor('Av1001^f#1')) then '1,' else  '0,' fi fi fi)),0,0)
+
+DEL
+691
+F
+(if p(v691) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if &unifor('Av1001^E#1')<>'' and &uf('+97',v691^E)=&unifor('Av1001^E#1') then '1' else '0' fi else  if (&unifor('Av1001^I#1')<>''and &uf('+97',v691^I)=&unifor('Av1001^I#1') or &unifor('Av1001^I#1')='') and &uf('+97',v691^A)=&unifor('Av1001^A#1') and &uf('+97',v691^c)=&unifor('Av1001^c#1') and &uf('+97',v691^n)=&unifor('Av1001^n#1') and &uf('+97',v691^v)=&unifor('Av1001^v#1') and &uf('+97',v691^o)=&unifor('Av1001^o#1') and val(v691^f)=val(&unifor('Av1001^f#1')) then '1',,,&uf('+7U11#',|^D|v691^D,,|^I|v691^I,,|^A|v691^A,,|^L|v691^L,,|^H|v691^H,,|^N|v691^N,,|^C|v691^C,,|^B|v691^B,,|^S|v691^S,,|^K|v691^K,,|^V|v691^V,,|^O|v691^O,,|^F|v691^F,,|^G|v691^G,,|^E|v691^E,,),,, else  '0' fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(v111)>0 then '1' else '0' fi
+PUTLOG
+&uf('+7U10#',,'vDel83: удалено в записи каталога ',,&unifor('Av1001^A#1'),'-',&unifor('Av1001^O#1'),'-',&unifor('Av1001^V#1'),'-',&unifor('Av1001^N#1'),&unifor('Av1001^C#1'),'-',&unifor('Av1001^F#1'),,'.  MFN=',f(val(mfn),0,0),)
+IF
+if val(g993)>0 and g11<>'' then '1',,,&uf('+7G11') fi
+ADD
+943
+
+(g11/)
+
+FI
+FI
+DEL
+111
+*
+
+
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+(g10/)
+//*****************************конец условия совпадения кафедр
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//***************************************************
+UNTIL
+if p(v1002) then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//*********конец цикла по 1002
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+992
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+993
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+*
+
+
+DEL
+1002
+*
+
+
+DEL
+1083
+*
+
+
+DEL
+1084
+*
+
+

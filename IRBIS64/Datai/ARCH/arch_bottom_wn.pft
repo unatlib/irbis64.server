@@ -1,0 +1,12 @@
+'<title>Просмотр документов</title>',
+'<hr><br>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5" 
+>',
+     '<input type="hidden" name="PFTNAME" value="arch_select_mfn_wn">',
+     '</form>',
+'<hr><br>'
+
+
+

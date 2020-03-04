@@ -1,0 +1,11 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\par }

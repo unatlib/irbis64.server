@@ -1,0 +1,25 @@
+/* Студенты для дисциплины
+/* G1100 - факультет
+/* G1101 - ФО
+if G1100: 'ВСЕ' or s('!',v90^A,'!'): s('!',G1100,'!') then if G1101='' or s('!',v90^O,'!'): s('!',G1101,'!') then 
+'<tr>',
+'<td>',
+&uf('S1A'),
+'</td>',
+'<td>',
+v10," "v11," "v12,
+'</td>',
+'<td>',
+if p(v90^0) then v90^0 else '&nbsp;' fi,
+'</td>',
+'<td>',
+if p(v90^F) then v90^F else '&nbsp;' fi,
+'</td>',
+'<td>',
+if p(v90^C) then v90^C else '&nbsp;' fi,
+'</td>',
+'<td> ',
+if p(v90^E) then v90^E else '&nbsp;' fi,
+'</td>',
+'</tr>',
+fi fi,

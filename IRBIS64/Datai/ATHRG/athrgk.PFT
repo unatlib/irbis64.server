@@ -1,0 +1,4 @@
+mhl,(if p(v***) then mhu,v***^g.1,mhl,v***^g*1,if p(v***^g) then ' ', fi ,if p(v***^g) and p(v***^a)then ' - ' fi,v***^a,if p(v***^b) and p(v***^x) then| (|v***^f|)|,|. |v***^b,| (|v***^x|)|  else |. |v***^b,| (|v***^f|)| fi,|, |v***^h,|, |v***^I,|, |v***^J,| (|v***^c|)|,| (|v***^E|)| fi)
+('^3',f(mfn,0,0),|^A|v***^a ,|^B|v***^b,|^C|v***^c,|^E|v***^E,|^F|v***^F,|^X|v***^X,|^G|v***^G,|^H|v***^H,|^I|v***^I,|^J|v***^J/)
+mhl,(if p(v***) then mhu,v***^g.1,mhl,v***^g*1,if p(v***^g) then ' ', fi ,if p(v***^g) and p(v***^a)then ' - ' fi,v***^a,if p(v***^b) and p(v***^x) then| (|v***^f|)|,|. |v***^b,| (|v***^x|)|  else |. |v***^b,| (|v***^f|)| fi,|, |v***^h,|, |v***^I,|, |v***^J,| (|v***^c|)|,| (|v***^E|)| fi)
+

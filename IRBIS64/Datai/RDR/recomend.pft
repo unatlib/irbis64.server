@@ -1,0 +1,18 @@
+/*(if p(v69) then |+|+d69^d,|"IDD=|v69^d|"|,,if &uf('Av90^F#1')<>'' then ' (F) "SEM=',&uf('Av90^F#1'),'"',,fi fi)/
+mpu,
+(if p(v90) 
+ then 
+    if val(&uf('+90'))>1 then '+' fi,,
+    &uf('+7W10#',,|FAK=|v90^A,),,,
+   &uf('+7W11#',,|NAPR=|v90^N),,,
+   &uf('+7W12#',,|SPEC=|v90^C,),,,
+   &uf('+7W13#',,|VO=|v90^V,),,,
+   &uf('+7W14#',,|FO=|v90^O,),,,
+   &uf('+7W15#',,|SEM=|v90^F,),,,
+   if &uf('Ag10#1')<>'' then '"',&uf('Ag10#1'),'"' ,,if s(&uf('Ag11#1'),&uf('Ag12#1'),&uf('Ag13#1'),&uf('Ag14#1'),&uf('Ag15#1'))<>'' then '(F)' fi fi,,
+   if &uf('Ag11#1')<>'' then '"',&uf('Ag11#1'),'"' ,,if s(&uf('Ag12#1'),&uf('Ag13#1'),&uf('Ag14#1'),&uf('Ag15#1'))<>'' then '(F)' fi fi,,
+   if &uf('Ag12#1')<>'' then '"',&uf('Ag12#1'),'"' ,,if s(&uf('Ag13#1'),&uf('Ag14#1'),&uf('Ag15#1'))<>'' then '(F)' fi fi,,
+   if &uf('Ag13#1')<>'' then '"',&uf('Ag13#1'),'"' ,,if s(&uf('Ag14#1'),&uf('Ag15#1'))<>'' then '(F)' fi fi,,
+   if &uf('Ag14#1')<>'' then '"',&uf('Ag14#1'),'"' ,,if &uf('Ag15#1')<>'' then '(F)' fi fi,,
+   if &uf('Ag15#1')<>'' then '"',&uf('Ag15#1'),'"' fi,,
+ fi)

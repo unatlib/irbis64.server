@@ -1,0 +1,25 @@
+
+if p(v951) then 
+
+&uf('+1W1#',&uf(|DRDR,!RI=|v1002|!,&unifor('Av50^a#1')|)),
+
+&uf('+1W2#'),
+&uf('+1W10#kt_passw.mnu'),
+(if &uf('+5T',&uf('+1R10'))<>'' 
+   then if &uf('+5T',&uf('+1R10'))=&uf('+1R1') then &uf('+1W2#',&uf('+5F',&uf('+1R10'))) break fi, 
+   else break fi/)
+
+   (if p(v951) then |,  |+d951,
+       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if (&uf('+1R1')<>'') and (val(&uf('+1R1'))<=val(v951^U)) then
+       if p(v951^I) then |<br>|+d951,
+       'Скачать: <A target=blank onmouseover=','"','return ref_hide()','" ','HREF="ftp://',&uf('+1R2'),'@192.168.30.253',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi 
+       fi
+       fi),
+fi,
+"<br><b> Учебная литература: </b>"d691,
+(|<br>|d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g),
+("<br><b>Держатели документа: </b>"|<br>|v902^a,| : |v902^b),
+if s(,odfp,)<>'' then '<br>',odfp, fi,
+
+

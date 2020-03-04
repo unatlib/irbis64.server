@@ -1,0 +1,5 @@
+      if p(v488)then'\par \b См. также : ', if &uf('Av488#2')<>'' then '\par ' fi, 
+      (if p(v488) then|\par |+d488, 
+              if p(v488^w) then &unifor(|+I?1,,|d488^w,v488^9,|,I=|v488^w|?|,v488^a+|,|,v488^p+|,|) 
+              else v488^a+|,|,v488^p fi, 
+          fi) fi 

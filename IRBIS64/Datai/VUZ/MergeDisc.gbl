@@ -1,0 +1,164 @@
+1
+Слияние дисциплин, отмеченных в основном окне, с дисциплиной в правом окне. Продолжить?
+
+// Вливание записей DISC в правую, базовую, на ней задание, левые записи удаляются
+// в поле 991 поля 83 вливаемых дисциплин
+// в поле 992 ИД вливаемых записей, которые надо удалить
+// вложенные задания: LINKDISCNORDR для форм-я записей VUZ
+// REPDISC - для замены идентификаторв в записях каталога на ИД базовой дисц.
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v83/)
+
+REPEAT
+ADD
+83
+
+if a(v83) or rsum((if p(v83) then  if &uf('+97',v83^A)=&uf('+97',&uf('Av991^A#1')) and  &uf('+97',v83^V)=&uf('+97',&uf('Av991^V#1')) and  &uf('+97',v83^O)=&uf('+97',&uf('Av991^O#1')) and  &uf('+97',v83^N)=&uf('+97',&uf('Av991^N#1')) and  &uf('+97',v83^C)=&uf('+97',&uf('Av991^C#1')) and  &uf('+97',v83^F)=&uf('+97',&uf('Av991^F#1')) then '1,' fi fi))=0 then &uf('Av991#1') fi
+
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+IF
+if val(&uf('+N83'))>val(&uf('+N1083')) then '1' fi
+PUTLOG
+'Пополнена запись дисциплины MFN=',,f(val(mfn),0,0)
+FI
+//----на удаление переносимых записей
+DEL
+1992
+*
+
+
+ADD
+1992
+
+(v992/),,,&uf('+7W10#')
+
+REPEAT
+IF
+if val(&uf('D,?IDD=',&uf('Av1992#1'),'?,mfn'))<>val(mfn) then '1' fi,,,
+CORREC
+'*'
+''
+'IDD=',,&uf('Av1992#1')
+
+IF
+if val(&uf('+6'))=1 then '1',,,,&uf('+7U10#',,"^D"v3^0,,,"^B"v5) fi
+DELR
+
+
+
+
+PUTLOG
+'Удалена дисциплина MFN=',f(val(mfn),0,0)
+FI
+DEL
+1001
+*
+
+
+END
+
+//-------------для книг вливаемых дисциплин меняю ИД на новый - ИД базовой записи
+//  замена цикла на базовый
+PUTLOG
+if v4<>'' then 'LINKCORRTASK=REPDISC%DBN=',,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,'%QUERY="IDD=',,&uf('Av1992#1'),,,,,'"%V991=',,if &uf('Av1992#1')<>'' then '^I',&uf('Av1992#1'),'^CS^A',&uf('D,!IDD=',,&uf('Av1992#1'),,'!,v4'),,,'^B',v4, fi,'%' fi
+//  замена кафедры на базовую
+PUTLOG
+if v5<>'' then 'LINKCORRTASK=REPDISC%DBN=',,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,'%QUERY="IDD=',,&uf('Av1992#1'),,,,,'"%V991=',,if &uf('Av1992#1')<>'' then '^I',&uf('Av1992#1'),'^CB^A',&uf('D,!IDD=',,&uf('Av1992#1'),,'!,v5'),,,'^B',v5, fi,'%' fi
+//  замена УК на базовый
+PUTLOG
+if v6<>'' then 'LINKCORRTASK=REPDISC%DBN=',,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,'%QUERY="IDD=',,&uf('Av1992#1'),,,,,'"%V991=',,if &uf('Av1992#1')<>'' then '^I',&uf('Av1992#1'),'^CK^A',&uf('D,!IDD=',,&uf('Av1992#1'),,'!,v6'),,,'^B',v6, fi,'%' fi
+// ИД старый в ^A на ИД новый в ^B
+PUTLOG
+'LINKCORRTASK=REPDISC%DBN=',,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,'%QUERY="IDD=',,&uf('Av1992#1'),,,,,'"%V991=',,if &uf('Av1992#1')<>'' then '^CI^A',&uf('Av1992#1'),,'^B',v3^0, fi,'%'
+//-------------конец дисциплина на удаление
+FI
+DEL
+1992
+1
+
+
+UNTIL
+if p(v1992) then '1' fi
+
+//-----------------удаление из контингентов
+IF
+if g10^D<>'' then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(g10/)
+
+//---цикл по удаленным ИД дисциплин
+REPEAT
+CORREC
+'*'
+&uf('Av111#1')
+'IDV=',&uf('Av111^D#1')
+
+DEL
+69
+F
+(if p(v69) then if &uf('+97',v69^D)=&uf('+97',&uf('Av1001^D#1')) and &uf('+97',v69^B)=&uf('+97',&uf('Av1001^B#1')) then '1' else '0' fi fi/)
+
+DEL
+1001
+*
+
+
+END
+DEL
+111
+1
+
+
+UNTIL
+if p(v111) then '1' fi
+FI
+//-----------------конец удаление из контингентов
+//-----------------дисциплина на создание/корректирвка связей
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%MFN=',,f(val(mfn),0,0),,,'%'
+DEL
+1992
+*
+
+
+DEL
+1083
+*
+
+
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+994
+*
+
+
+

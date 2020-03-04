@@ -1,0 +1,46 @@
+mhl, 
+v200^g, 
+if a(v200^g) then 
+  if v905^1<>'' or v200^u:'US'or (s(v700,v701,v702)=''or v920='J') and p(v200^f) and s(v710,v711,v972)<>''then 
+  else 
+     if s(v710,v711,v972)<>'' then 
+        if v710^U:'3' then else 
+           if s(v710^a,v710^7)<>''and p(v710^4) then  
+             if v710^4*4.1='*'then v710^4*5 else &unifor('Q'v710^4*4) fi,|, |d710^5, 
+             if v710^5*4.1='*'then v710^5*5 else &unifor('Q'v710^5*4) fi,|, |d710^6, 
+             if v710^6*4.1='*'then v710^6*5 else &unifor('Q'v710^6*4) fi,| |d710^4,  
+           fi,v710^7,  
+           if a(v710^7) then v710^a,if s(v710^n,v710^c)<>''then' ('v710^n| ; |,v710^c')'fi,|, |v710^b, 
+              if s(v710^d,v710^f,v710^e)<>''then' ('v710^d| ; |,v710^f, 
+                 if p(v710^f)then| ; |v710^e else v710^e fi,| / |v710^h,| / |v710^i,') ' 
+        fi fi fi, 
+        (if p(v711) and (not(v711^U:'3')) then 
+            if &uf('Av710#1')<>'' and (not(&uf('Av710^U#1'):'3')) then ", "d711 fi,|, |+d711,
+            if p(v711) then ,
+               if (p(v711^a) or p(v711^7)) and p(v711^4) then  
+                  if v711^4*4.1='*'then v711^4*5 else &unifor('Q'v711^4*4) fi,|, |d711^5, 
+                  if v711^5*4.1='*'then v711^5*5 else &unifor('Q'v711^5*4) fi,|, |d711^6, 
+                  if v711^6*4.1='*'then v711^6*5 else &unifor('Q'v711^6*4) fi,| |d711^4,  
+               fi, v711^7, 
+            if a(v711^7) then v711^a,if s(v711^n,v711^c)<>''then' ('v711^n| ; |,v711^c')'fi,|, |v711^b, 
+               if s(v711^d,v711^f,v711^e)<>''then' ('v711^d| ; |,v711^f, 
+                  if p(v711^f)then| ; |v711^e else v711^e fi ,| / |v711^h,| / |v711^i,')! ' 
+        fi  fi fi fi), 
+        (if p(v972) and (not(v972^U:'3')) then
+            if &uf('Av710#1')<>'' and (not(&uf('Av710^U#1'):'3')) or 
+               &uf('Av711#1')<>'' and (not(&uf('Av711^U#1'):'3'))
+            then'. '
+            fi,|, |+d972,
+            if (p(v972^a) or p(v972^7)) and p(v972^4) then  
+               if v972^4*4.1='*'then v972^4*5 else &unifor('Q'v972^4*4) fi,|, |d972^5, 
+               if v972^5*4.1='*'then v972^5*5 else &unifor('Q'v972^5*4) fi,|, |d972^6, 
+               if v972^6*4.1='*'then v972^6*5 else &unifor('Q'v972^6*4) fi,| |d972^4,  
+            fi, v972^7, 
+            if a(v972^7) then v972^a, 
+               if s(v972^n,v972^c)<>''then' ('v972^n| ; |,v972^c') 'fi,|, |v972^b, 
+               if s(v972^d,v972^f,v972^e)<>''then' ('v972^d| ; |,v972^f, 
+                  if p(v972^f)then| ; |v972^e else v972^e 
+               fi fi,| / |v972^h,| / |v972^i,')' 
+        fi  fi) 
+      else v328^b 
+fi fi fi 

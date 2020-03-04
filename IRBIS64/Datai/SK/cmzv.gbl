@@ -1,0 +1,132 @@
+0
+DEL
+910
+F
+(if v910^a='7'then'1'else'0'fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+4
+XXXXXXXXXXXXXXXXXXX
+if &unifor('IPRIVATE,KS2,')<>''then (if p(v910^v) then if v910^v=&unifor('IPRIVATE,KS2,') then v910 fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+940
+F
+(if p(v940) then if v940^v=&unifor('Av4^v#1') and v940^a='6' and &unifor('Av4^a#1')='6'and (v940^b<>''and &unifor('Av4^b#1')=v940^b or v940^h<>''and &unifor('Av4^h#1')=v940^h)and v940^w='' and &unifor('Av4^w#1')<>'' then &unifor('Av4#1') else v940 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+940
+XXXXXXXXXXXXXXXXXXX
+if p(v940) then if 'C U':&unifor('Av4^a#1') then if rsum((if p(v940) then if 'C U':v940^a and v940=&unifor('Av4#1')then'1;'else'0;'fi fi))>0 then else &unifor('Av4#1') fi else if &unifor('Av4^a#1'):'6' then if rsum((if p(v940) then if v940^v=&unifor('Av4^v#1') and v940^a='6'and (v940^b<>''and &unifor('Av4^b#1')=v940^b or v940^h<>''and &unifor('Av4^h#1')=v940^h) then '1;'else'0;'fi fi))>0 then else &unifor('Av4#1') fi fi fi else &unifor('Av4#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+4
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v4) then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(if p(v910) then if v910^v=&unifor('IPRIVATE,KS2,') and 'C U':v910^a then |^A|v910^a,|^D|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^B|v910^b,|^H|v910^h,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^C|v910^c,|^F|v910^f,|^2|v910^2,|^R|v910^R,|^9|v910^9,|^T|v910^T,|^=|v910^=,|^4|v910^4,|^Z|v910^Z,|^S|v910^S,|^0|v910^0,|^!|v910^! else v910 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if 'C U':v910^a then if v910^1=''then'1'else'0'fi else '0' fi/)
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'J' then '0'else'1'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+4
+XXXXXXXXXXXXXXXXXXX
+(if p(v940) then if v940^v=&unifor('IPRIVATE,KS2,') and p(v940^w) then if v940^a:'6' then '^A0' else |^A|v940^a fi,|^1|v940^z,|^D|v940^m,|^B|v940^b,|^H|v940^h,|^K|v910^k,|^E|v940^e,|^U|v940^u,|^Y|v940^y,|^C|v940^c,|^F|v940^f,|^2|v940^2,|^R|v940^R fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v910:&unifor('Av4#1') then else &unifor('Av4#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+4
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v4) then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910)then if v910^a='6'and v910^w<>''then'1'else'0'fi fi/)
+
+ADD
+5
+XXXXXXXXXXXXXXXXXXX
+if p(v910)then f(rsum((if p(v910)then if v910^a<>'6'then '1;' else '0;'fi fi/)),0,0)else if p(v940)then '0'else'1'fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if val(v5)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if l("II="v903)>0 then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+'*'
+(v910/)
+"II="v903
+
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v1001:'^A7'then'^A7'fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+if v1001:'^A0'or v1001:'^AU'or v1001:'^AC'then (if p(v910)then if v910^A='7'then'1'else '0'fi fi/)fi
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

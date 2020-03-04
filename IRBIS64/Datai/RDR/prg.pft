@@ -1,0 +1,2 @@
+&uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),mhl,&uf('+7W1#'),(if p(g40) then &uf('+7U1#',g40^d),if g40^f.1<>'*' and g40^f<>'' then &uf('+7U1#',g40^f) fi,if g40^l<>'' then &uf('+7U1#',g40^l) fi fi),
+&uf('+7W3#',&uf('30')),&uf('+7W4#'),(if g1<>'' then if &uf('Ag3#1')=g1.4 then &uf('+7W4#1'),break fi fi),/if g4='' then 'Нет посещений' else 'Есть посещения' fi,' в текущем году'

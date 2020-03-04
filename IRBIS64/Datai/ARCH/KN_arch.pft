@@ -1,0 +1,20 @@
+'{'
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<dd><b>Издание в обработке. Не выдается\par \b ' fi fi, 
+&uf('6osvex'), 
+&uf('6orchifr_arch'), 
+&uf('6ozboz_arch'), 
+&uf('6otitkn_arch'),
+'. - ',ospec_arch, 
+'. - ',ovixd, 
+'. - ',ofizxar, 
+'. - ',oser_arch, 
+'. - ',oprim_arch, 
+oprimd_arch, 
+ogrudk_arch, 
+orubdks_arch, 
+Odoptd_arch,
+oex910_arch, 
+ofinal_arch, 
+'\par ',&unifor('!'), 
+'}'

@@ -1,0 +1,23 @@
+mhl,
+(if ('***'='510') then v***^d else 
+    if ('***'='923') then /v923^i,". "v923^l else 
+       if ('***'='200') then /v200^a,". "v923^h,"."v923^i,". "v923^k,"."v923^l 
+       else 
+         if ('***'='461') then /v461^c,
+            if v461^u:'1'then|/|v461^x,|/|v461^b,
+               if s(v461^x,v461^b)=''then|/|v461^f 
+            fi fi,";"v200^v,
+            if v200^u:'1'then ":"v200^a fi 
+         else 
+            if ('***'='463') or ('***'='330') or ('***'='922') or 
+               ('***'='481') then /v***^c,
+               if p(v481^x) then &unifor('Av461^c#1'),|;|v481^v fi 
+               if '***'='463' then '\ист. ст.-',v463^j,| |v463^v,| |v463^h,
+                  | |v463^k,'\'fi,
+            else 
+               if p(v***^a) then /v***^a,". "v***^v 
+                  if '***'='225' then "/"v225^f fi,
+               else  
+                  if '***'='541'then /v*** fi 
+fi fi fi fi fi fi/)
+

@@ -1,0 +1,355 @@
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^9:&unifor('Knazn.mnu|1') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+"Экз. для ВК1"d10000, 
+&unifor('+1W1#'''), 
+&unifor('+1W1#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|1') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+"Экз. для ВК1 Доп (910^t есть)"d10000, 
+&unifor('+1W2#'''), 
+if v910^t<>'' then 
+   if rsum((if p(v910) then if &unifor('Pv910^T')<>'' then '1;'fi fi))> 1 then  
+&unifor('+1W2#',f(rsum((if p(v910^c) then 
+                           if a(v910^t) then 
+                              if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                 if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                        fi fi fi fi)),0,0)) 
+fi fi, 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W3#'''), 
+&unifor('+1W3#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. тек. для ВК1"d10000, 
+&unifor('+1W7#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W7#',f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if &unifor('Pv691^0'):&unifor('Knazn.mnu|1') then 
+                                 if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                    &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                 else 
+                                    &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                 fi 
+                        fi fi fi)),0,0)) fi, 
+"ОС Студ. всего"d10000, 
+&unifor('+1W8#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W8#'f(rsum((if p(v691) then 
+                          if &unifor('Pv691^0')<>'' then 
+                             if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                             else 
+                                &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                             fi 
+                       fi fi)),0,0)) fi, 
+"ОС КО из 692 для ВК1"d10000, 
+&unifor('+1W9#'''), 
+&unifor('+1W9#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|1') then f(val(v692^f),0,2) fi fi)), 
+FI, 
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^9:&unifor('Knazn.mnu|2') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+
+"Экз. для ВК2"d10000, 
+&unifor('+1W') 
+&unifor('+1W21#'''), 
+&unifor('+1W21#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|2') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+"Экз. для ВК2 Доп (910^t есть)"d10000, 
+&unifor('+1W22#'''), 
+&unifor('+1W22#',if v910:'^t' then f(rsum((if p(v910^c) then 
+                                             if a(v910^t) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                          fi fi fi fi)),0,0) fi), 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W23#'''), 
+&unifor('+1W23#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. тек. для ВК2"d10000, 
+&unifor('+1W27#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W27#',f(rsum((if p(v691) then 
+                            if &unifor('Pv691^0')<>'' then 
+                               if &unifor('Pv691^0'):&unifor('Knazn.mnu|2') then 
+                                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                     &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                  else 
+                                     &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                  fi 
+                         fi fi fi)),0,0)) fi, 
+"ОС Студ. всего"d10000, 
+&unifor('+1W28#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W28#'f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                 &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                              else 
+                                 &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                              fi 
+                        fi fi)),0,0)) fi, 
+"ОС КО из 692 для ВК2"d10000, 
+&unifor('+1W29#'''), 
+&unifor('+1W29#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^f),0,2) fi fi)), 
+FI, 
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^9:&unifor('Knazn.mnu|3') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+"Экз. для ВК3"d10000, 
+&unifor('+1W') 
+&unifor('+1W31#'''), 
+&unifor('+1W31#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|3') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+"Экз. для ВК3 Доп (910^t есть)"d10000, 
+&unifor('+1W32#'''), 
+&unifor('+1W32#',if v910:'^t' then f(rsum((if p(v910^c) then 
+                                             if a(v910^t) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                          fi fi fi fi)),0,0) fi), 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W33#'''), 
+&unifor('+1W33#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. тек. для ВК3"d10000, 
+&unifor('+1W37#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W37#',f(rsum((if p(v691) then 
+                            if &unifor('Pv691^0')<>'' then 
+                               if &unifor('Pv691^0'):&unifor('Knazn.mnu|3') then 
+                                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                     &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                  else 
+                                     &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                  fi 
+                         fi fi fi)),0,0)) fi, 
+"ОС Студ. всего"d10000, 
+&unifor('+1W38#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W38#'f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                 &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                              else 
+                                 &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                              fi 
+                        fi fi)),0,0)) fi, 
+"ОС КО из 692 для ВК3"d10000, 
+&unifor('+1W39#'''), 
+&unifor('+1W39#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|3') then f(val(v692^f),0,2) fi fi)), 
+FI, 
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^9:&unifor('Knazn.mnu|4') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+"Экз. для ВК4"d10000, 
+&unifor('+1W') 
+&unifor('+1W41#'''), 
+&unifor('+1W41#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|4') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+"Экз. для ВК2 Доп (910^t есть)"d10000, 
+&unifor('+1W42#'''), 
+&unifor('+1W42#',if v910:'^t' then f(rsum((if p(v910^c) then 
+                                             if a(v910^t) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                          fi fi fi fi)),0,0) fi), 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W43#'''), 
+&unifor('+1W43#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. тек. для ВК4"d10000, 
+&unifor('+1W47#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W47#',f(rsum((if p(v691) then 
+                            if &unifor('Pv691^0')<>'' then 
+                               if &unifor('Pv691^0'):&unifor('Knazn.mnu|4') then 
+                                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                     &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                  else 
+                                     &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                  fi 
+                        fi fi fi)),0,0)) fi, 
+"ОС Студ. всего"d10000, 
+&unifor('+1W48#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W48#'f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                 &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                              else 
+                                 &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                              fi 
+                        fi fi)),0,0)) fi, 
+"ОС КО из 692 для ВК4"d10000, 
+&unifor('+1W49#'''), 
+&unifor('+1W49#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|4') then f(val(v692^f),0,2) fi fi)), 
+FI, 
+IF rsum((if p(v691) then if &unifor('Av991#1') <>'' then if v691^9:&unifor('Knazn.mnu|5') then 
+   if val(&unifor('+1R201,',&unifor('+1R200')))>0 then '1;' fi fi fi fi))>0 then 
+"Экз. для ВК5"d10000, 
+&unifor('+1W') 
+&unifor('+1W51#'''), 
+&unifor('+1W51#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|5') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+"Экз. для ВК5 Доп (910^t есть)"d10000, 
+&unifor('+1W52#'''), 
+&unifor('+1W52#',if v910:'^t' then f(rsum((if p(v910^c) then 
+                                             if a(v910^t) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                          fi fi fi fi)),0,0) fi), 
+"Экз. всего (910^t отсутствует)"d10000, 
+&unifor('+1W53#'''), 
+&unifor('+1W53#',if s(v910^t)='' then f(rsum((if p(v910^c) then 
+                                                if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                                   if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                             fi fi fi)),0,0) fi), 
+"ОС Студ. тек. для ВК5"d10000, 
+&unifor('+1W57#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W57#',f(rsum((if p(v691) then 
+                            if &unifor('Pv691^0')<>'' then 
+                               if &unifor('Pv691^0'):&unifor('Knazn.mnu|5') then 
+                                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                     &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                  else 
+                                     &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                  fi 
+                         fi fi fi)),0,0)) fi, 
+"ОС Студ. всего"d10000, 
+&unifor('+1W58#'''), 
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+&unifor('+1W58#'f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                 &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                 &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                              else 
+                                 &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                              fi 
+                        fi fi)),0,0)) fi, 
+"ОС КО из 692 для ВК5"d10000, 
+&unifor('+1W59#'''), 
+&unifor('+1W59#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|5') then f(val(v692^f),0,2) fi fi)), 
+FI, 
+|'R1: '&unifor('+1R1')'  R2: '&unifor('+1R2')'  R3: '&unifor('+1R3')'  R7: '&unifor('+1R7')'  R8: '&unifor('+1R8') 
+'  R9: '&unifor('+1R9')/ 
+'  R21: '&unifor('+1R21')'  R22: '&unifor('+1R22')'  R23: '&unifor('+1R23')'  R27: '&unifor('+1R27')'  R28: '&unifor('+1R28') 
+'  R29: '&unifor('+1R29')/ 
+'  R31: '&unifor('+1R31')'  R32: '&unifor('+1R32')'  R33: '&unifor('+1R33')'  R37: '&unifor('+1R37')'  R38: '&unifor('+1R38') 
+'  R39: '&unifor('+1R39')/ 
+'  R41: '&unifor('+1R41')'  R42: '&unifor('+1R42')'  R43: '&unifor('+1R43')'  R47: '&unifor('+1R47')'  R48: '&unifor('+1R48') 
+'  R49: '&unifor('+1R49')/ 
+'  R51: '&unifor('+1R51')'  R52: '&unifor('+1R52')'  R53: '&unifor('+1R53')'  R57: '&unifor('+1R57')'  R58: '&unifor('+1R58') 
+'  R59: '&unifor('+1R59')|d10000, 
+&unifor('S0'), 
+(if p(v691) then 
+    if &unifor('+1R201,',&unifor('+1R200')):&unifor('S1A') 
+    then 
+       if p(v691^9) then 
+          if v691^9 : &unifor('Knazn.mnu|1') then 
+             if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+                if &unifor('+1R7')<>'' then f(val(&unifor('+1R1')) / val(&unifor('+1R7')) + 
+                   val(if &unifor('+1R8')<>'' then &unifor('+1R2') fi) / val(&unifor('+1R8')),0,2) fi 
+                if s(&unifor('+1R1'),&unifor('+1R2'))='' then 
+                   if &unifor('+1R8')<>'' then f(val(&unifor('+1R3')) / val(&unifor('+1R8')),0,2) else 
+                      if &unifor('+1R7')<>'' then f(val(&unifor('+1R3')) / val(&unifor('+1R7')),0,2) 
+          fi fi fi fi fi 
+          if v691^9 : &unifor('Knazn.mnu|2') then  
+             if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+                if &unifor('+1R27')<>'' then f(val(&unifor('+1R21')) / val(&unifor('+1R27')) + 
+                   val(if &unifor('+1R28')<>'' then &unifor('+1R22') fi) / val(&unifor('+1R28')),0,2) fi 
+                if s(&unifor('+1R21'),&unifor('+1R22'))='' then 
+                   if &unifor('+1R28')<>'' then f(val(&unifor('+1R23')) / val(&unifor('+1R28')),0,2) else 
+                      if &unifor('+1R27')<>'' then f(val(&unifor('+1R23')) / val(&unifor('+1R27')),0,2) 
+          fi fi fi fi fi 
+          if v691^9 : &unifor('Knazn.mnu|3') then 
+             if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+                if &unifor('+1R37')<>'' then f(val(&unifor('+1R31')) / val(&unifor('+1R37')) + 
+                   val(if &unifor('+1R38')<>'' then &unifor('+1R32') fi) / val(&unifor('+1R38')),0,2) fi  
+                if s(&unifor('+1R31'),&unifor('+1R32'))='' then 
+                   if &unifor('+1R38')<>'' then f(val(&unifor('+1R33')) / val(&unifor('+1R38')),0,2) else 
+                      if &unifor('+1R37')<>'' then f(val(&unifor('+1R33')) / val(&unifor('+1R37')),0,2) 
+          fi fi fi fi fi 
+          if v691^9 : &unifor('Knazn.mnu|4') then 
+             if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+                if &unifor('+1R47')<>'' then f(val(&unifor('+1R41')) / val(&unifor('+1R47')) + 
+                   val(if &unifor('+1R48')<>'' then &unifor('+1R42') fi) / val(&unifor('+1R48')),0,2) fi 
+                if s(&unifor('+1R41'),&unifor('+1R42'))='' then 
+                   if &unifor('+1R48')<>'' then f(val(&unifor('+1R43')) / val(&unifor('+1R48')),0,2) else 
+                      if &unifor('+1R47')<>'' then f(val(&unifor('+1R43')) / val(&unifor('+1R47')),0,2) 
+          fi fi fi fi fi 
+          if v691^9 : &unifor('Knazn.mnu|5') then 
+             if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) > 8 then 
+                if &unifor('+1R57')<>'' then f(val(&unifor('+1R51')) / val(&unifor('+1R57')) + 
+                   val(if &unifor('+1R58')<>'' then &unifor('+1R52') fi) / val(&unifor('+1R58')),0,2) fi 
+                if s(&unifor('+1R51'),&unifor('+1R52'))='' then 
+                   if &unifor('+1R58')<>'' then f(val(&unifor('+1R53')) / val(&unifor('+1R58')),0,2) else 
+                      if &unifor('+1R57')<>'' then f(val(&unifor('+1R53')) / val(&unifor('+1R57')),0,2) 
+          fi fi fi fi fi 
+       else ' ' 
+ fi fi fi/) 

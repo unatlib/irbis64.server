@@ -1,0 +1,20 @@
+if s(v905^o,&unifor('IPRIVATE,KKO,'))=''then 
+   if p(v908) and p(v675) then &uf('S0'),
+      if &uf('G0/'v903)=&unifor('G0^'&unifor('Av675#1')) then else '”ƒ  '&unifor('G0^'&unifor('Av675#1'))fi/
+      (if p(v675) then if &uf('S1A')='1' then else '”ƒ  '&unifor('G0^'v675)fi fi/) fi/
+   if p(v908) and p(v621) then &uf('S0'),
+      if &uf('G0/'v903)=&unifor('Av621#1') then else '¡¡  '&unifor('Av621#1')fi/
+      (if p(v621) then if &uf('S1A')='1' then else '¡¡  '&unifor('G0^'v621)fi fi/) fi/
+   if p(v908) and p(v686) then &uf('S0'),
+      if &uf('G0/'v903)=&unifor('Av686#1') then else &unifor('Av686#1')fi/
+      (if p(v686) then if &uf('S1A')='1' then else v686 fi fi/) fi/
+   if a(v908) then 
+      (if p(v675) then '”ƒ  '&unifor('G0^'v675)fi/)/
+      (if p(v621) then '¡¡  'v621 fi/)/
+      if &unifor('Av686#2')=''and &uf('G0/'v903)=v686 then else 
+         (if p(v686) then v686 fi/)fi fi 
+else 
+   if s(v905^o,&unifor('IPRIVATE,KKO,')):'U'then (if p(v675) then '”ƒ  '&unifor('G0^'v675)fi/)fi/
+   if s(v905^o,&unifor('IPRIVATE,KKO,')):'B'then (if p(v621) then '¡¡  'v621 fi/)fi/
+   if s(v905^o,&unifor('IPRIVATE,KKO,')):'D'then (if p(v686) then v686 fi/)fi 
+fi/,

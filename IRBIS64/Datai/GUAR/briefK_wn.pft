@@ -1,0 +1,42 @@
+'</>','<title> Просмотр Ед. хр. описи '
+(if p(v488) then if v488^1:'опись' then v488^T fi fi),", раздел "v545^L,". "v545^M  
+'</title>'
+'<table><tr>', 
+  '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">','</td>', 
+  '<td valign=top>','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+  '<td valign=top>'
+(if p(v953) then 
+    if v953^p:'2' then  
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+ fi fi) 
+  '<td valign=top width=100%>'
+'<b>'v903'&nbsp &nbsp &nbsp',if p(v215) then ' ('(| ; |+d215,v215^a,| |v215^1),,')'fi, ,'</b>'
+"<br><br>"v200^a," ("v200^j")",
+/*if v920:'delo' then else 
+if s(v700,v701,v702)<>'' then &uf('6gua_pers_vl') fi, 
+/*fi,
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+   (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',
+       if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+   (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  
+       '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',
+       if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi fi),
+   (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+fi,
+(if p(v953) then 
+    if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+ fi fi),
+
+mpl,'<font size="3">'
+if s(v392,&uf('6gua_podrob_vl')) <>'' then 
+   if &uf('6gua_podrob_vl')<>'' then &uf('6gua_podrob_vl') fi 
+/*   if p(v392) then &uf('6gua_list_vl') fi,
+else '<br>' fi,
+'----------------------------------------<br>'
+   '</tr></table>', 
+

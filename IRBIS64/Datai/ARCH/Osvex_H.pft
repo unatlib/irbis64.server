@@ -1,0 +1,13 @@
+if s(v910^c,v993)<>''then 
+   if rsum((if v910^a:'0' and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910^d fi))>0 or 
+      rsum((if v910^a:'U' and &unifor(|Kmhrvn.mnu\|v910^d)='' then 
+               if p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 or a(v910^2)then'1;'fi fi))>0 
+   then else 
+      if v910^a:'C'then'<dd> <b> (Издание есть только в отделениях)</b> <br>'else 
+         if p(v993) then'<dd> <b> (Есть только копии издания)</b> <br>' else 
+         '<dd> <b> (Свободных экземпляров нет)</b> <br>'
+   fi fi fi 
+else 
+   if v920.1='A'or a(v910) and p(v951)
+   then else |<dd> (Нет сведений об экземплярах)<br>|d200 
+fi fi,

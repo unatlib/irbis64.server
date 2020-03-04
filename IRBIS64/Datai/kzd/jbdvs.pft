@@ -1,0 +1,26 @@
+&uf('+7W103#'),&uf('+7W100#'),&uf('+7W101#'),&uf('+7W102#'),
+(if p(v309) then 
+    if p(v309^i) AND v309^i<>' '
+    then
+       &unifor('+7U100#'F((val(&unifor('30'))-val(v309^e.4))/val(v309^i),4,2)),
+       &unifor('+7U101#'F((val(v309^i)-val(v309^i)/100*val(&unifor('G2.'G100))),0,0)),
+       &uf('+7U102#'if &unifor('G2.'G100)='00' then &unifor('30') else &unifor('G2.'G101) fi) 
+    fi
+    if v309^i='1' then 
+       if &uf('Av309#2')<>'' then v309^t' - 'fi,' Событие отмечается ежегодно' 
+    else  
+       if &unifor('G2.'G100)='00' then 
+          if &uf('Av309#2')<>'' then v309^t' - 'fi,'\b Текущий год - юбилейный \b0 ' 
+       else 
+          if &uf('Av309#2')<>'' then v309^t' - 'fi,'До юбилея 'G102,if g102='' then '(нет данных)' fi 
+          if g102*1.1<>'' then 
+             if g102.1='1' then ' лет' else 
+                if g102*1.1 ='1' then ' год' else 
+                   if '2 3 4 ':g102*1.1 then ' года' else ' лет' 
+             fi fi fi 
+          else    
+             if g102 ='1' then ' год' else 
+                if '2 3 4 ':g102 then ' года' else ' лет' 
+       fi fi fi fi,| (интервал |v309^i| лет)| 
+    fi    
+ else fi'\par '), 

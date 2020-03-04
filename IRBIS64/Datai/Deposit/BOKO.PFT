@@ -1,0 +1,81 @@
+'{\pard\tx4',
+if v691:'^u'or v691:'^w' then
+   if a(v910) and p(v951) or v951^k<>'' then'\b Электронный учебник в Internet \tab Коэфф. КО=1 \b0 '       '\par \par '
+   else &uf('+7G'&uf('+7W910#'(v910^t/))),
+      if g910<>'' then 
+         (if p(g910) then &uf('+7W91#'g910),&uf('6kos')'\par ' fi/)
+         if rsum((if p(v910^c) then 
+                     if a(v910^t) then  
+                        if 'U':v910^a then v910^1|;|,|1;|n910^1 else 
+                           if 'C 6 2 7':v910^a then else'1;'
+                  fi fi fi fi))>0 
+         then 
+            if rsum((if p(v910) then if &unifor('Pv910^T')<>'' then '1;'fi fi))> 1 then  
+               '\b  Экз-ры общего пользования\b0 \par '
+            else  '\b  Для остальных\b0 \par '  fi,
+         &unifor('6kosost') fi 
+      else &unifor('6KOO')
+      fi,
+      &uf('+7W33#'),&uf('+7G33'&uf('+7U33#'(if p(v910) then if v910^a:'C' then v910^d fi fi/))),
+      &uf('+7W36#'),&uf('+7W36#',"+"v691^l|+|),
+      &uf('+7W34#'),&uf('+7U34#'(if p(g33) then if &uf('Ag36#1'):s(|+|g33|+|) then g33 fi fi/)),
+      if g34<>'' then 
+      '\b \par \par По филиалам:\b0 '  
+         (if p(g34) then '\par \b '&uf('Kfili.mnu\'g34)':\b0 ',&uf('+7W35#'g34),&uf('6Kos_filial') fi)
+      fi,
+   fi '\par '
+fi,!!KK1BO'\par '
+if p(v699) then 
+   if v699^u:'0' then &uf('+I?2,,,,I='v699^w,'? Является аналогом '),&uf('D,?I='v699^w'?,@brief'),  
+   else 
+      'Есть аналог',
+      if &uf('Av699#2')<>'' then 'и:\par ' else ' : ' fi,
+      (if p(v699) then if v699^u:'1' then &uf('+I?2,,,,I='v699^w'?'&uf(|D,?I=|v699^w|?,@brief|)) '\par ' fi fi)
+fi fi, 
+if p(v691) then'\par ',
+   "\b "d900^c,&unifor("Khd.mnu|"v900^c),". "d900^2, &unifor("Khd.mnu|"v900^2),
+   ". "d900^3,&unifor("Khd.mnu|"v900^3),". "d900^4,&unifor("Khd.mnu|"v900^4),
+   ". "d900^5,&unifor("Khd.mnu|"v900^5),". "d900^6,&unifor("Khd.mnu|"v900^6),"\b0 "d900^c,
+   if s(v691^d,v691^i)<>'' then'\par \b Дисциплины: \b0 ',
+      &uf('+7W666#'), &uf('+7U666#'(v691^d,| (|v691^i|)|/)),&uf('+7G666'),|; |+g666,
+   else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A')
+   fi,
+'\pard\tx2\tx480\tx1180\tx1880\tx2680\tx3280\tx3900\tx4300\tx4600\par \b  ВО  \tab Напр.\tab Спец.\tab УП/Д\tab Фак.\tab Каф. Ч.\tab Сем.\tab ФО  \Тип\b0 '
+   (if p(v691) then'\par '
+       if a(v691^x) then v691^v else v691^v.1,|/|v691^x.1,|/|v691^y.1 fi,
+       '\tab 'v691^n,if a(v691^n) then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^n')fi,
+       '\tab 'v691^c,if a(v691^n) then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^c')fi,
+       '\tab 'v691^u,v691^w,
+       '\tab 'v691^a,
+       '\tab 'v691^b,if a(v691^b) then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v5') fi,
+       '\tab 'v691^f,'\tab 'v691^o,'\tab 'v691^g    
+    fi),
+   if s(v691^u)<>'' then 
+      (if p(v691) then 
+          if p(v691^u) then '\par ',&unifor('DVUZ,"UPS=',v691^u'-S'v691^f,'",@gr') 
+       fi fi),
+   fi,
+   if &uf('IPrivate,KATKO=,0')='0' or &uf('IMAIN,AccessRDR=,0')='1' then else 
+      if s(v691^w)<>'' then 
+         (if p(v691) then 
+             if p(v691^w) then '\par ',&unifor('DVUZ,"DUNS=',v691^w'-S'v691^f,'",@gr') 
+          fi fi),
+fi fi fi,
+if p(v692) then '\par \b Данные по книгообеспеченности (из архивных полей)\b0 '
+'\pard\tx2\tx450\tx1080\tx1480\tx2980\tx3880\tx4700\par \b  Уч.год \tab О/В\tab Экз.\tab Студ.\tab КО\tab ВК \tab Фил.\b0 '
+   (if p(v692) then 
+       if p(v692^z) and a(v692^f) then else'\par '
+       v692^b,
+       '\tab 'v692^c,'\tab 'v692^d,'\tab 'v692^e,
+       '\tab 'v692^f,if a(v692^f) then v692^m,if a(v692^m) then v692^n fi fi,
+       '\tab 'v692^a,| |n692^a,'\tab 'v692^L,
+    fi fi),'\tx2\par '
+fi,
+if p(v910) then '\par '&unifor('6oex910') fi,
+if p(v951) then'\par  см. ССЫЛК',
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'И'else'У'fi,
+   if s(v951^i)<>''then' - INTERNET (',(|  |+v951^i)')'fi,
+   if s(v951^a)<>''then' - ФАЙЛ (',(|  |+v951^a)')'fi,'\par '
+fi,"\par  см. ГРАФИКУ\par "d950,
+mpl,
+'\par ----------------------------------------\par \pard\tx4 }',&unifor('!')

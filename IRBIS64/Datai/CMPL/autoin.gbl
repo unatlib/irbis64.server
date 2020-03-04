@@ -1,0 +1,1794 @@
+0
+ADD
+52
+XXXXXXXXXXXXXXXXXXX
+if v910^a:'R' then (if p(v910) then if (a(v910^a) or v910^a:'2') and p(v910^d) then v910 fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+&unifor('Z')
+XXXXXXXXXXXXXXXXXXX
+ADD
+51
+XXXXXXXXXXXXXXXXXXX
+if p(v52) then (if p(v910) then if a(v910^d) then v910 fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+if p(v51) and p(v52) then (if p(v910) then if (p(v910^d) and (a(v910^a) or v910^a:'2') or a(v910^d)) then |1|d910 else |0|d910 fi fi/) else (|0|d910/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(if p(v52) then if p(v51) then v51,|^D|v52^d else if a(v52^a) then |^A2|v52 else v52 fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+51
+F
+if p(v910) then (|1|d51/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+52
+F
+if p(v910) then (|1|d52/) fi
+XXXXXXXXXXXXXXXXXXX
+REP
+910^A
+F
+(if p(v910) then if v910^a='0'and p(v910^1) then'C'else v910^a fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+33
+F
+if v33*4.1<>'/'then if val(v33*4.2)<=12 and val(v33*6.2)<=31 then v33.4,v33*8 else v33 fi else v33 fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+200^F
+F
+,o200f,
+XXXXXXXXXXXXXXXXXXX
+ADD
+200^G
+*
+,o200g,
+XXXXXXXXXXXXXXXXXXX
+ADD
+200^E
+*
+,o200e,
+XXXXXXXXXXXXXXXXXXX
+ADD
+701
+XXXXXXXXXXXXXXXXXXX
+v970
+XXXXXXXXXXXXXXXXXXX
+DEL
+970
+F
+if p(v200^f)then'1'fi
+XXXXXXXXXXXXXXXXXXX
+REP
+200
+1
+"^V"v200^v,"^U"v200^u,"^A"v200^a,"^E"v200^e,"^L"v200^l,"^7"v200^7,"^B"v200^b,if p(v200^f) and p(v200^g) and s(v700,v701,v328^b)='' then if v200^f:&unifor('Av702^a#1') then "^F"v200^g,"^G"v200^f else "^F"v200^f,"^G"v200^g fi else if a(v200^f) then "^F"v200^g else "^F"v200^f,"^G"v200^g fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v461) then '1'else'' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+461^X
+F
+if a(v461^x) and s(v961^z)<>''then (if p(v961) then if p(v961^z) then v961^a,| |v961^d,|, |v961^g,if a(v961^g)then| |d961^b,if v961^b:' 'then v961^b else if v961^b:'.'then &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi fi fi,if s(v961^1,v961^c,v961^f)<>''then' (',v961^1,if s(v961^1)<>''then| ; |d961^c fi,v961^c,if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')' fi,|^9|v961^9 fi fi) fi/
+XXXXXXXXXXXXXXXXXXX
+ADD
+461^B
+F
+if a(v461^b) and p(v962) then (if p(v962) then if p(v962^z) then v962^a,if s(v962^n,v962^c)<>''then' ('v962^n| ; |,v962^c')'fi,|. |v962^b,if s(v962^d,v962^f,v962^e)<>''then' ('v962^d| ; |,v962^f,if p(v962^f)then| ; |v962^e else v962^e fi,| / |v962^h,| / |v962^i,')'fi fi fi) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+461^F
+1
+if p(v461) and s(v461^f)='' then ,o461f, fi
+XXXXXXXXXXXXXXXXXXX
+REP
+461^F
+F
+if p(v461) then if p(v461^f) then if s(&unifor('Av905^1#1'),&unifor('Av903#1'))<>'' then v461^f else ,o461fz,fi else # fi fi 
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+908
+XXXXXXXXXXXXXXXXXXX
+if a(v908) then if &unifor('Korg.mnu|9'):'1' then else if a(v903) and s(v906,v686,v675,v621)<>'' and a(v982^0) and a(v982^9) or p(v903) and p(v906) then &unifor('+Khav.mnu|'&unifor('+S0',v981^a" ",v503^a" ",v461^x" ",v461^b" ",v461^c" ",v700^a" ",v710^a" ",v200^a)) if v461^c:'Собрание сочинений'then v200^v fi fi fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+922^G
+1
+if v920:'NJ' then else if a(v922^g) then ,o922g1, else # fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+922^G
+1
+if v920:'NJ' then else if &unifor('Av922^g#1')<>'' then if &unifor('Av922^f#1')<>'' and (&unifor('Av922^g#1'):&unifor('G0 '&unifor('Av922^f#1')) or &unifor('Av922^g#1'):&unifor('G0,'&unifor('Av922^f#1'))) or &unifor('Av922^f#1')='' or p(v903) then &unifor('Av922^g#1') else ,o922g1, fi fi fi 
+XXXXXXXXXXXXXXXXXXX
+ADD
+922^G
+F
+if v920:'NJ' then else if p(v922) then &unifor('S0'),(if p(v922) then if val(&unifor('S1A'))=1 then # else if p(v922^f) and a(v922^g)  then ,ibis922g, else # fi fi fi/) fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+922^G
+F
+if v920:'NJ' then else if p(v922) then &unifor('S0'),(if p(v922) then if val(&unifor('S1A'))=1 then v922^g,if a(v922^g) then # fi else if p(v922^g) then if p(v922^f) and (v922^g:&unifor('G0 'v922^f) or v922^g:&unifor('G0,'v922^f)) or a(v922^f)  or &uf('Av903#1')<>'' then v922^g else ,ibis922g, fi else # fi fi fi/) fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+922^G
+F
+if v920:'NJ' then      (if p(v922) then if p(v922^f) and a(v922^g) then ,o922gnj, else # fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+REP
+922^G
+F
+if v920:'NJ' then      (if p(v922) then if &uf('Av903#1')<>''then v922^g else if p(v922^f) then ,o922gnj, else # fi fi else # fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+330^G
+F
+(if p(v330) then if p(v330^f) and a(v330^g) then ,o330g, else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+330^G
+F
+(if p(v330) then if s(&uf('Av905^1#1'),&uf('Av903#1'))<>''then v330^g,if a(v330^g) then # fi else if p(v330^f) then ,o330g, else # fi fi else # fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+925^G
+F
+if p(v925) then (if p(v925) then if p(v925^f) and a(v925^g) then ,ibis925g, else # fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+REP
+925^G
+F
+if p(v925) then (if p(v925) then if s(&uf('Av905^1#1'),&uf('Av903#1'))<>'' then v925^g,if a(v925^g) then # fi else if p(v925^f) then ,ibis925g, else # fi fi else #  fi/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+903
+F
+if v903.1='-' then if s(v906,v686,v621,v675,v910^r)<>''then'1' else '0' fi fi 
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if 'PAZKK PVKK SPECK OJK':v920 then if a(v903) then if p(v982^0) and p(v982^9) then (|, |v982^0,| |v982^9) else if v920:'J' and a(v908) then v200^a.1,if a(v200)then v591.1 fi,&unifor('R9') else if p(v906)or p(v686)or p(v675)or p(v621)then if p(v906) and v906:v908 then v906.17,'-',&unifor('R9') else v906.17,if a(v906) then &unifor('Av686.17#1'),if a(v686)then &unifor('G0^'&unifor('Av675.17#1')),if a(v675)then &unifor('Av621.17#1') fi fi fi,"/"v908,'-',&unifor('R9') fi else if v920:'asp'then v463^j*2.2,v700^a.5,&unifor('B'v200^a," "d463^c,&unifor('Av463^c#1')),v463^v,v463^h,v463^k else if p(v215^y)then v210^d*2.2,v700^a.5,&unifor('B'v710^a),&unifor('B'v200^a),f(val(v215^a),0,0),'-',&unifor('R9') else '-'&unifor('R9') fi fi fi fi fi fi fi/
+XXXXXXXXXXXXXXXXXXX
+CHA
+510
+*
+if v510:'^F'then else if v510:'^G'then'^G'fi fi
+if v510:'^F'then else if v510:'^G'then'^F'fi fi
+REP
+910
+F
+if &unifor('IPRIVATE,KSU,')<>''  then &uf('+7W88#',&uf('D,!KSU='&unifor('IPRIVATE,KSU,'),'!,&uf(|Av88#1|d920)') ),if &unifor('Av920#1')='KSU' then else (if p(v910)  then  v910,if s(v910^b,v910^h)<>'' then if p(v910^c) and val(v910^c) < val(&uf('Ag88^b#1')) or p(v910^u) and v910^u <> &uf('Ag88^a#1') then # else  if '0 8':v910^a or  'C U':v910^a  then  if a(v910^u) then  '^U'&uf('Ag88^a#1') fi, if &uf('Ag88^D#1')<>'' then if v910^F='' then  '^F',if s(v910^F)='' then if &unifor('KKPORG.mnu|'&uf('Ag88^D#1'))<>''  then  &unifor('KKPORG.mnu|'&uf('Ag88^D#1')) else &uf('Ag88^D#1') fi fi fi  fi, if a(v910^y) and &unifor('IPRIVATE,NA,')<>''then'^Y'&unifor('IPRIVATE,NA,') fi, if s(v910^u,v910^c)='' then'^C'&uf('Ag88^b#1') fi, if a(v910^9) and &unifor('IPRIVATE,SZ,')<>'' then  '^9' &unifor('IPRIVATE,SZ,')  else  if a(v910^9) then if ref(L('SZKSU='&unifor('IPRIVATE,KSU,')),v62^6)<>''  then if p(v910^u) and v910^u=&uf('Ag88^a#1') or a(v910^u) then '^9' ref(L('SZKSU='&uf('Ag88^a#1')),v62^6) fi fi fi fi,,fi fi fi fi/) fi fi/
+XXXXXXXXXXXXXXXXXXX
+REP
+910^C
+F
+if &unifor('Av920#1')='KSU'then else (if p(v910) then if p(v910^c) and p(v910^u) then if &uf('Ag88^a#1')<>'' and v910^u = &uf('Ag88^a#1') then if 'C U':v910^a and v910^c > &uf('Ag88^b#1') then &uf('Ag88^b#1') else v910^c fi else v910^c fi else v910^c,if a(v910^c)then # fi fi fi/) fi/
+XXXXXXXXXXXXXXXXXXX
+REP
+30
+F
+(if p(v30) then v30,if p(v30^d) then if a(v30^k) and &unifor('IPRIVATE,OR,')<>''then'^K'&unifor('IPRIVATE,OR,') fi,if a(v30^b) and &unifor('IPRIVATE,NZ,')<>''then'^B'&unifor('IPRIVATE,NZ,') fi,if a(v30^c) then'^C'if &unifor('IPRIVATE,DZ,')<>''then &unifor('IPRIVATE,DZ,') else &unifor('3') fi fi fi,if p(v30^g) then if a(v30^u) and &unifor('IPRIVATE,KSU,')<>''then'^U'&unifor('IPRIVATE,KSU,') fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+31
+F
+(if p(v31) then v31,if p(v31^d) then if a(v31^k) and &unifor('IPRIVATE,OR,')<>''then'^K'&unifor('IPRIVATE,OR,') fi,if a(v31^b) and &unifor('IPRIVATE,NZ,')<>''then'^B'&unifor('IPRIVATE,NZ,') fi,if a(v31^c) then'^C'if  &unifor('IPRIVATE,DZ,')<>''then &unifor('IPRIVATE,DZ,') else &unifor('3')fi fi fi,if p(v31^g) then if a(v31^u) and &unifor('IPRIVATE,KSU,')<>''then'^U'&unifor('IPRIVATE,KSU,') fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+32
+F
+(if p(v32) then v32,if p(v32^d) then if a(v32^k) and &unifor('IPRIVATE,OR,')<>''then'^K'&unifor('IPRIVATE,OR,') fi,if a(v32^b) and &unifor('IPRIVATE,NZ,')<>''then'^B'&unifor('IPRIVATE,NZ,') fi,if a(v32^c) then'^C'if &unifor('IPRIVATE,DZ,')<>''then &unifor('IPRIVATE,DZ,') else &unifor('3') fi fi fi,if p(v32^g) then if a(v32^u) and &unifor('IPRIVATE,KSU,')<>''then'^U'&unifor('IPRIVATE,KSU,') fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+//очагова - в заказе SZ и БО дописываю дату, в БО заказа НЕ дописываю организацию и СЗ из настройки
+REP
+62
+F
+if v920:'sz' then  (if p(v62) then v62,,,if v62^6<>'' and v62^C='' then '^C',&uf('3') fi fi/)  else (if p(v62) then v62,,,,if p(v62^d) and p(v62^b) and a(v62^c) then '^C',,&unifor('3') fi fi/)  fi
+XXXXXXXXXXXXXXXXXXX
+//--------------Очагова - вписываю/корректирую в записи заказа кол-во по БО
+IF
+if v920: 'sz' then '1' fi,,,&uf('+7W1#'),&uf('+7W2#'),&uf('+7W3#'),&uf('+7W4#'),
+//-----в G2 сумма заказанных экземпляров по записям БД для сум.заказа из 62^6 записи SZ----в G4 сумма наименований
+REP
+62
+F
+(if p(v62) then v62,,,,if p(v62^6) then &uf('+7U1#',,&uf('7,!VSZK=',,&uf('Av62^6#1'),,'!,(v62^D| |)' ) ),,,,&uf('+7U3#',,&uf('7,!VSZK=',,&uf('Av62^6#1'),,'!,"1 "d62 ' ) )    fi fi/),,,,&uf('+7W2#',,f(rsum(g1),0,0) ),,,,,&uf('+7W4#',,f(rsum(g3),0,0) )
+
+IF
+if val(g2)>0 then '1' fi
+REP
+62
+F
+(if p(v62) then v62,,if p(v62^6) and a(v62^D) then '^D',&uf('Ag2#1') fi fi/)
+
+REP
+62^D
+F
+(if p(v62) then if p(v62^D) then &uf('Ag2#')  else # fi fi/)
+
+
+REP
+62
+F
+(if p(v62) then v62,,if p(v62^6) and a(v62^E) then '^E',&uf('Ag4#1') fi fi/)
+
+REP
+62^E
+F
+(if p(v62) then if p(v62^E) then &uf('Ag4#')  else # fi fi/)
+
+FI
+FI
+//----^------------------------
+//-------------------- Корректировка записи SZ на основе записи KSU - убрала
+//----------^----------
+//------------V-----корректировка полей 62 по полям 910 - добавление ^G, кол-во поступивших
+IF
+if p(v62) then if v920:'sz' then else if s(v910^u):&unifor('IPRIVATE,KSU,') then '1'else'0'fi fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v910) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1962
+XXXXXXXXXXXXXXXXXXX
+mpu,,(v62/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+1962^G
+1
+if p(v1962) then if &unifor('Av1962^G#1')<>'' then f(rsum((if p(v910) then if &uf('+97'v910^9)=&unifor('Av1962^B#1') and &uf('+97'v910^U)=&unifor('Av1962^U#1') then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1 fi fi fi/)),0,0) fi fi/
+XXXXXXXXXXXXXXXXXXX
+ADD
+1962^G
+1
+if p(v1962) then if &unifor('Av1962^G#1')='' and &unifor('Av1962^U#1')<>'' then  f(rsum((if p(v910) then if &uf('+97'v910^9)=&unifor('Av1962^B#1') and &uf('+97'v910^U)=&unifor('Av1962^U#1') then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1 fi fi fi/)),0,0) fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+1963
+XXXXXXXXXXXXXXXXXXX
+&unifor('Av1962#1')
+XXXXXXXXXXXXXXXXXXX
+DEL
+1962
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1962)then'1'else '0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+62
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+62
+XXXXXXXXXXXXXXXXXXX
+(v1963/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+1963
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1800
+XXXXXXXXXXXXXXXXXXX
+if v920='POLZV' then else if p(v1800) then if v1800:v800 then else v800 fi else v800 fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+907
+F
+(if p(v907) then if p(v907^c) and a(v907^a) then v907,'^A'&unifor('3') else v907 fi else v907 fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+907
+F
+(if p(v907) then if p(v907^c) and p(v907^a) and a(v907^b) then v907,'^B'&unifor('IPRIVATE,FIO,') else v907 fi else v907 fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if v920: 'POLZV'  then else if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') and (v907^c = &unifor('IPRIVATE,ETR,')or &unifor('IPRIVATE,ETR,')='') then '1;'else'0;'fi fi))> 0 then else'^C',&unifor('IPRIVATE,ETR,'),'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'OJK'and v33<>''then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+(if p(v39)then '^C'v39^d,if a(v39^d)then v39^c fi,|^E|v39^e,|^U|v39^u,|^S|v39^s fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+&unifor('Av1000#1')
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+'^E',f(rsum(v1001^s";",if v1001^s=''then v34";"fi,v1001^e";",if v1001^e=''then v24";"fi),0,2)
+XXXXXXXXXXXXXXXXXXX
+REP
+1001^c
+F
+if p(v1001^c)then if v1001^c='1'or 'C U':v1001^u then'0'else f(val(v1001^c)-1,0,0)fi fi
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v1001^c<>''and v1001^c<>'0'then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v1000<>''then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+938
+XXXXXXXXXXXXXXXXXXX
+if a(v938)then "^V"v35,"^Q"v33,"^Y"v34,"^D"v110^d,"^X"v110^x,&unifor('S0'),"^E"d1002,(if p(v1002)then &unifor('S1A'),'=',f(val(v1002^e)/val(if &unifor('Av110^x#1')<>''then if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f((val(&unifor('Av110^x#1'),' 0')/2),0,2) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi fi,' 1'),0,2),|;|d1002,fi)'^N' if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f(val(&unifor('Av110^x#1'),' 0')/2,0,0) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0)fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi,if v33*5='0'then'^A1^B'v110^x fi,if v33*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v33*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v33*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v33*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v33*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v33*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v33*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av33*5#1'))),'^B',&unifor('G2-'&unifor('Av33*5#1'))fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+938
+F
+if p(v938)then "^V"v35,"^Q"v33,"^Y"v34,"^D"v110^d,"^X"v110^x,&unifor('S0'),"^E"d1002,(if p(v1002)then &unifor('S1A'),'=',f(val(v1002^e)/val(if &unifor('Av110^x#1')<>''then if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f((val(&unifor('Av110^x#1'),' 0')/2),0,2) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi fi,' 1'),0,2),|;|d1002,fi)'^N' if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f(val(&unifor('Av110^x#1'),' 0')/2,0,0) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0)fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi,if v33*5='0'then'^A1^B'v110^x fi,if v33*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v33*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v33*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v33*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v33*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v33*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v33*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av33*5#1'))),'^B',&unifor('G2-'&unifor('Av33*5#1'))fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+39^N
+F
+if p(v33)then &uf('+7W1#'f(val(if v110^x<>''then if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,0) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi,if v33*5.1='P'then f(val(&uf('G2-'v33*5),'a0')-val(&unifor('G0-'&unifor('G2P'v33*5)),'a0')+1,0,0)fi fi,' 1'),0,0)),(if p(v39)then if v39^N=''then ,&uf('+7W2#'if p(v39^b)then v39^e,if a(v39^e)then &uf('Av24#1')fi fi),f((val(v39^s,if a(v39^s)then &uf('Av34#1')fi)+val(&uf('Ag2#1'),' 0'))/val(&uf('Ag1#1'),' 1'),0,2), else # fi fi/) fi
+
+REP
+39^N
+F
+if p(v33)then &uf('+7W1#'f(val(if v110^x<>''then if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,0) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi,if v33*5.1='P'then f(val(&uf('G2-'v33*5),'a0')-val(&unifor('G0-'&unifor('G2P'v33*5)),'a0')+1,0,0)fi fi,' 1'),0,0)),(if p(v39)then if v39^N<>''then ,&uf('+7W2#'v39^e,if a(v39^e)then &uf('Av24#1')fi),f((val(v39^s,if a(v39^s)then &uf('Av34#1')fi)+val(&uf('Ag2#1'),' 0'))/val(&uf('Ag1#1'),' 1'),0,2), else # fi fi/) fi
+
+REP
+905
+F
+v905,if v905^a='' then if &unifor('IPRIVATE,KKC,')='1' then '^A1' fi fi,if v905^b='' then if &unifor('IPRIVATE,FPC,')='1' then '^B1' fi fi,if v905^x='' then if &unifor('IPRIVATE,KKE,')<>'' then '^X'&unifor('IPRIVATE,KKE,') fi fi,if v905^c='' then if &unifor('IPRIVATE,KKI,')<>'' then '^C'&unifor('IPRIVATE,KKI,') fi fi,if v905^d='' then if &unifor('IPRIVATE,FPI,')<>'' then '^D'&unifor('IPRIVATE,FPI,') fi fi,if v905^e='' then if &unifor('IPRIVATE,KKK,')<>'' then '^E'&unifor('IPRIVATE,KKK,') fi fi,if v905^f='' then if &unifor('IPRIVATE,FPK,')<>'' then '^F'&unifor('IPRIVATE,FPK,') fi fi,if v905^g='' then if &unifor('IPRIVATE,KKA,')='1' then '^G1' fi fi,if v905^h='' then if &unifor('IPRIVATE,FPA,')='1' then '^H1' fi fi,if v905^o='' then if &unifor('IPRIVATE,KKO,')<>'' then '^O'&unifor('IPRIVATE,KKO,') fi fi,if v905^i='' then if &unifor('IPRIVATE,KKN,')='1' then '^I1' fi fi,if v905^j='' then if &unifor('IPRIVATE,FPN,')='1' then '^J1' fi fi,if v905^l='' then if &unifor('IPRIVATE,KKP,')='1' then '^L1' fi fi,if v905^m='' then if &unifor('IPRIVATE,FPP,')='1' then '^M1' fi fi,if v905^t='' then if &unifor('IPRIVATE,KKS,')='1' then '^T1' fi fi,if v905^s='' then if &unifor('IPRIVATE,FPS,')='1' then '^S1' fi fi,if v905^2='' then if &unifor('IPRIVATE,EEE,')<>'' then '^2',&unifor('IPRIVATE,EEE,') fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+905
+XXXXXXXXXXXXXXXXXXX
+if a(v905) then if &unifor('IPRIVATE,KKC,')='1' then '^A1' fi,if &unifor('IPRIVATE,FPC,')='1' then '^B1' fi,if &unifor('IPRIVATE,KKE,')<>'' then '^X'&unifor('IPRIVATE,KKE,') fi,if &unifor('IPRIVATE,KKI,')<>'' then '^C'&unifor('IPRIVATE,KKI,') fi,if &unifor('IPRIVATE,FPI,')<>'' then '^D'&unifor('IPRIVATE,FPI,') fi,if &unifor('IPRIVATE,KKK,')<>'' then '^E'&unifor('IPRIVATE,KKK,') fi,if &unifor('IPRIVATE,FPK,')<>'' then '^F'&unifor('IPRIVATE,FPK,') fi,if &unifor('IPRIVATE,KKA,')='1' then '^G1' fi,if &unifor('IPRIVATE,FPA,')='1' then '^H1' fi,if &unifor('IPRIVATE,KKO,')<>'' then '^O'&unifor('IPRIVATE,KKO,') fi,if &unifor('IPRIVATE,KKN,')='1' then '^I1' fi,if &unifor('IPRIVATE,FPN,')='1' then '^J1' fi,if &unifor('IPRIVATE,KKP,')='1' then '^L1' fi,if &unifor('IPRIVATE,FPP,')='1' then '^M1' fi,if &unifor('IPRIVATE,KKS,')='1' then '^T1' fi,if &unifor('IPRIVATE,FPS,')='1' then '^S1' fi,if &unifor('IPRIVATE,EEE,')<>'' then '^2',&unifor('IPRIVATE,EEE,') fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920='J' then '0' else if p(v905^!) then '1' else '0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(v910^h,v910/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99999
+XXXXXXXXXXXXXXXXXXX
+(&unifor('MI910')/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(&unifor(|G1^|v910)/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ !!!!!!! ВСТАВКА ОЧАГОВА - корректировка макс. значений в POLZV
+
+//----------------------------------- запись организации
+IF
+if v920='IZD' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+IF V81: '^E' THEN '*' ELSE '' FI
+v81^E
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N81'))<=val(&uf('IMAIN,MAX81Polzv,50')) then '1' fi
+DEL
+1002
+*
+
+
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+&unifor('+XMKOR=#',v1001)
+XXXXXXXXXXXXXXXXXXX
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v81) then (if p(v81) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+81
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',&uf('Av1001#1'))=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+81
+F
+mpu,(if p(v81) then if v81=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v81 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 81
+ADD
+1001
+
+&uf('+7W10#',(V81/)),&uf('+7G10')
+
+DEL
+81
+*
+
+
+ADD
+81
+
+(G10/)
+
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец запись заказа
+IF
+if v920: 'ZK' or v920: 'pvk' or v920: 'spec' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------запись ZK - c 2017 для всех записей БО----------------------------------------
+//---------------------------------- код заказа
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+первый,второй,третий заказы
+
+CORREC
+if v30:'^B' then '*' else '' fi
+(v30^B/)/(V31^b/)/(V32^b/)
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N30'))<=val(&uf('IMAIN,MAX30Polzv,50')) then '1' fi,,,&uf('+7W10#')
+DEL
+3011
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+3011
+XXXXXXXXXXXXXXXXXXX
+(V30/)
+XXXXXXXXXXXXXXXXXXX
+// цикл по полям 30,31,32
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then &unifor('+XMNZ=#',&unifor('Av1001#1')) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v30) then (if p(v30) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+30
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',v1001)=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+3011
+XXXXXXXXXXXXXXXXXXX
+mpu,v1
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+3011
+F
+mpu,(if p(v30) then if v30=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v30 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1001) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+30
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+30
+XXXXXXXXXXXXXXXXXXX
+(V3011/)
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 30
+ADD
+1001
+
+&uf('+7W10#',(V30/)),&uf('+7G10')
+
+DEL
+30
+*
+
+
+ADD
+30
+
+(G10/)
+
+DEL
+3011
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------------------------- инвентарный номер
+//------------------- при условии параметра MAXINVENT
+IF
+if &unifor('IMAIN,MAXINVENT,1')='1' then '1' fi,,,&uf('+7W10#')
+//------------------- если кол-во полей 910 меньше заданного
+IF
+&uf('+7W1#',&uf('D,?VD=POLZV?,(v910/)')),,,if rsum((if p(G1) then '1,' fi))<=val(&uf('IMAIN,MAX910Polzv,50')) then '1' fi
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>в запись POLV
+CORREC
+if v910:'^B' then '*' else '' fi
+(v910^B/)
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXX
+ADD
+910
+
+if a(v910) then '1' fi
+
+// прочитаем модель из ini-файла
+DEL
+2
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT,'),,,&uf('+7W910#',v910|?|)
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT1,'),,,
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT2,'),,
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT3,'),,
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT4,'),,
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+&unifor('IMAIN,MODEINVENT5,'),,
+XXXXXXXXXXXXXXXXXXX
+//---------------------------на цикл по разным моделям по полю 112
+DEL
+112
+*
+
+
+ADD
+112
+
+(v2/),,,,,,,,,&uf('+7W10#',(V910/)),&uf('+7G10')
+
+DEL
+111
+*
+
+
+ADD
+111
+
+(v1001/)
+
+DEL
+9101
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+9101
+XXXXXXXXXXXXXXXXXXX
+(v910/)
+XXXXXXXXXXXXXXXXXXX
+//========================цикл по v112, по моделям
+REPEAT
+DEL
+2
+*
+
+
+ADD
+2
+
+&uf('Av112#1')
+
+DEL
+1001
+*
+
+
+ADD
+1001
+
+(v111/)
+
+// цикл по внешним инвентарным номерам из v1001, т.е. по инвентарям записи
+//-------------------------------цикл по v1001
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then if G910='' then &uf('+7W101#',,,,'+XMIN=#',&unifor('Av1001#1'),if v2<>'' then '#',v2 fi)  &unifor('+XMIN=#',&unifor('Av1001#1'),if v2<>'' then '#',v2 fi) else &uf('+7W101#','+W',,G910,,'#',&unifor('Av1001#1'),if v2<>'' then '#',v2 fi    )   &unifor('+W',,G910,,'#',&unifor('Av1001#1'),if v2<>'' then '#',v2 fi) fi fi
+XXXXXXXXXXXXXXXXXXX
+// в v1 вариант замены
+IF
+if p(v1) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+//отладка
+ADD
+9101
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',&uf('Av1001#1'))=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+9101
+F
+mpu,(if p(v9101) then if v9101=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v9101 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//заново G910
+ADD
+1
+
+&uf('+7W910#',v9101|?|)
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1001) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------конец цикл по v1001
+// новые значения поля 910 в переменную G10
+ADD
+910
+
+&uf('+7W10#',(V9101/)),&uf('+7G10')
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+//====================Конец цикла по моделям v112
+DEL
+9101
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+
+
+DEL
+111
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>конец POLZV
+// на реальную замену поля 910
+CORREC
+if v910:'^B' then '*' else '' fi
+(G10/)
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXX
+DEL
+910
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// новые значения поля 910
+ADD
+910
+
+(v1001/)
+
+DEL
+1001
+*
+
+
+END
+
+// конец условия полей 910 меньше заданного
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец условия MAXINVENT
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец условия запись ZK
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------------------------------- запись КСУ
+IF
+if v920: 'KSU' then '1' else '0' fi,,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if v88:'^A' then '*' else '' fi
+v88^A
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N88'))<=val(&uf('IMAIN,MAX88Polzv,50')) then '1' fi
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then &unifor('+XMKSU=#',v1001) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v88) then (if p(v88) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+88
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',v1001)=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+88
+F
+mpu,(if p(v88) then if v88=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v88 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 88
+ADD
+1001
+
+&uf('+7W10#',(V88/)),&uf('+7G10')
+
+DEL
+88
+*
+
+
+ADD
+88
+
+(G10/)
+
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------------------------------запись КСУ выбытия
+IF
+if v920: 'KS2' then '1' else '0' fi,,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if v888:'^A' then '*' else '' fi
+v888^A
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N888'))<=val(&uf('IMAIN,MAX888Polzv,50')) then '1' fi
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then &unifor('+XMKS2=#',v1001) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v888) then (if p(v888) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+     
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+888
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',v1001)=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+888
+F
+mpu,(if p(v888) then if v888=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v888 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 888
+ADD
+1001
+
+&uf('+7W10#',(V888/)),&uf('+7G10')
+
+DEL
+888
+*
+
+
+ADD
+888
+
+(G10/)
+
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------------- номер акта индивидуального учета
+IF
+if v920: 'KSU' then '1' else '0' fi,,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if v88:'^Y' then '*' else '' fi
+(v88^y/)
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N80'))<=val(&uf('IMAIN,MAX80Polzv,50')) then '1' fi
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then &unifor('+XMNA=#',&uf('Av1001#1')) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v88) then (if p(v88) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+80
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',&uf('Av1001#1'))=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+80
+F
+mpu,(if p(v80) then if v80=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v80 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v1001<>''then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 80
+ADD
+1001
+
+&uf('+7W10#',(V80/)),&uf('+7G10')
+
+DEL
+80
+*
+
+
+ADD
+80
+
+(G10/)
+
+FI
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------------------- номер акта передачи
+
+IF
+if v920: 'KS2' then '1' else '0' fi,,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if v800:'^A' then '*' else '' fi
+v800^A
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N800'))<=val(&uf('IMAIN,MAX800Polzv,50')) then '1' fi
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+if v1001<>'' then &unifor('+XMNAP=#',v1001) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v800) then (if p(v800) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+800
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',&uf('Av1001#1'))=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+800
+F
+mpu,(if p(v800) then if v800=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v800 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 800
+ADD
+1001
+
+&uf('+7W10#',(V800/)),&uf('+7G10')
+
+DEL
+800
+*
+
+
+ADD
+800
+
+(G10/)
+
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------------------------------------- Суммарный заказ
+IF
+if v920:'SZ'then '1' else '0' fi,,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if v62:'^6' then '*' else'' fi
+v62^6
+'VD=POLZV'
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&uf('+N30'))<=val(&uf('IMAIN,MAX30Polzv,50')) then '1' fi
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+&unifor('+XMNZ=#',v1001)
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+
+
+// в v1 все варианты замен
+ADD
+1002
+
+if v1<>'' then if p(v30) then (if p(v30) then &unifor('1*R#?v1#1')  fi/) else v1 fi fi
+
+IF
+if p(v1002) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 1002 все варианты замен
+// цикл по заменам в v1002
+REPEAT
+DEL
+1
+*
+
+
+ADD
+1
+
+&uf('Av1002#1')
+
+IF
+if v1<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// НЕ добавляю новое, если в процедуре строка не изменилась
+ADD
+30
+XXXXXXXXXXXXXXXXXXX
+mpu,if &uf('+97',&uf('Av1001#1'))=&uf('+97',v1) then else v1 fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1: '@' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+30
+F
+mpu,(if p(v30) then if v30=&unifor('G0@',&unifor('Av1#1')) then &unifor('G2@',&unifor('Av1#1')) else v30 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// удаление дублей поля 30
+ADD
+1001
+
+&uf('+7W10#',(V30/)),&uf('+7G10')
+
+DEL
+30
+*
+
+
+ADD
+30
+
+(G10/)
+
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1800
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,8 @@
+mhl,
+if p(v11) then v11^a,'^A', v200^a,". "v923^h,". "v923^i,". "v923^k,". "v923^l,". "v923^m,". "v923^n,
+   " : "v200^e," / "v200^f,
+   '^V',(if &unifor('Knosnt.mnu|'v215^1)<>''then| ; |+d215^1, &unifor('G2='v215^1) fi),
+   '^Y'v19^a*2" ",v19^b,
+   '^W'v903,
+else 'Неправильно выбран ISSN^X^A^V^Y^W' 
+fi,mpl

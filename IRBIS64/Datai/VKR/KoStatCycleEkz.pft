@@ -1,0 +1,16 @@
+if a(v699) or 
+   p(v699) and v699: '^U1' 
+then 
+  if val(G1006)=0 then 
+f(rsum((if p(v910) then if 'C 6 2 7': v910^A then else if v910^A: 'U' then v910^1|,| else '1,' fi fi fi)),0,0),,,
+  fi,,,, 
+  if val(G1006)=1 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else 
+f(rsum((if p(v910) then if 'C 6 2 7': v910^A then else if v910^A: 'U' then v910^1|,| else '1,' fi fi fi)),0,0),,, 
+  fi fi,,,,,
+  if val(G1006)=2 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21'  then 
+f(rsum((if p(v910) then if 'C 6 2 7': v910^A then else if v910^A: 'U' then v910^1|,| else '1,' fi fi fi)),0,0),,, 
+  fi fi,,,,,
+fi
+
+
+

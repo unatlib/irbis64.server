@@ -1,0 +1,30 @@
+/*----‚ g10 ËÏˇ ¡ƒ Í‡Ú‡ÎÓ„‡
+&uf('+7W10#',,,,,if v991^B<>'' then v991^B else &unifor('IPRIVATE,DBN,IBIS') fi ),,,,
+if p(v90) 
+then 
+   (if p(v90) 
+    then 
+       if  val(&uf('J',,&uf('Ag10#1'),,',!0=',v90^A,v90^N,v90^C,v90^V,v90^O,'-S',v90^f)  )=0 and 
+           val(&uf('J',,&uf('Ag10#1'),,',!9=',v90^A,v90^N,v90^C,v90^V,v90^O,'-S',v90^f)  )=0 
+       then 
+          '^A¿¿¿¿¿',/,'^A¿¿¿¿¿^B',,,
+          v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,/,,
+          if val(&uf('Av991^A#1'))=1 
+          then 
+              '^A¿¿¿¿¿',/,'^A¿¿¿¿¿^B',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,'^O',,
+              &uf('7RDR,!LN=',v90^A,v90^N,v90^C,v90^V,v90^O,'-S',v90^f,,'!,f(val(mfn),0,0),,","d920') 
+          fi/,,
+       fi,,
+ /*----ÔÓ‚ÂÍ‡ ÔÓ Ù‡ÍÛÎ¸ÚÂÚÛ
+       if v90^<>'' and 
+          val(&uf('J',,&uf('Ag10#1'),,',FAK=',v90^A ) )<=0 
+       then 
+          '^E¡¡¡¡¡',/,'^E¡¡¡¡¡^F',,
+          v90^A/,,
+       fi,,,
+       if v90^C<>'' and val(&uf('J',,&uf('Ag10#1'),,',SPEC=',v90^C))<=0 then '^G¬¬¬¬¬',/,'^G¬¬¬¬¬^H',,v90^C/ fi,,,
+       if v90^N<>'' and  val(&uf('J',,&uf('Ag10#1'),,',NAPR=',v90^N))<=0 then '^I√√√√√',/,'^I√√√√√^J',,v90^N/,,fi,,,
+       if v90^O<>'' and val(&uf('J',,&uf('Ag10#1'),,',FO=',v90^O))<=0 then '^Kƒƒƒƒƒ',/,'^Kƒƒƒƒƒ^L',,v90^O/,,fi,,,
+       if v90^V<>'' and val(&uf('J',,&uf('Ag10#1'),,',VO=',v90^V))<=0 then '^M≈≈≈≈≈',/,'^M≈≈≈≈≈^N',,v90^V/,,fi,,,
+    fi/),,,
+fi,,

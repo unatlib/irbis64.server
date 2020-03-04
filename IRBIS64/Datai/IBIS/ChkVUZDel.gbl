@@ -1,0 +1,245 @@
+1
+ChkVuzDel.wss
+ƒл€ исправлени€ найденных ошибок задайте:
+// 10.1 проверка записей каталога с удаление
+//13 опрос об удалении повторений, не прошедших контролль
+// 991^A - удал€ть повторение в случае отсутстви€ конт-та
+// в g10 удал€емые повторени€, переношу в поле 943
+//17 добавила проверку »ƒ дисциплины при совпадении контингента
+//17 из задани€ CHKVUZ добавила проверку аналогов
+IF
+if p(v691) then '1' fi
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/),,,&uf('+7W10#')
+
+// дл€ признаков удалени€ 
+DEL
+112
+*
+
+
+DEL
+111
+*
+
+
+ADD
+111
+
+'0'
+
+//-------------------------------------- цикл по пол€м 691
+REPEAT
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+IF
+if &uf('Av1691^I#1')='' then '1' fi
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - Ќет идентификатора дисциплины ',&uf('Av1691^D#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+ADD
+112
+
+'0'
+
+IF
+if &uf('Av1691^I#1')<>'' then '1' fi
+// есть ли запись дисциплины с идентификатором
+
+
+
+IF
+if Val(&uf('JVUZ,IDD=',&uf('Av1691^I#1')))<=0 then '1' fi
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - Ќет дисциплины с идентификатором ',&uf('Av1691^I#1'),,,,' (',v111,')',,if val(v991^A)=1 then ' - повторение удалено' fi
+REP
+112
+L
+'1',,,&uf('+7U10#',,&uf('Av1691#1') )
+
+//^^^^^^^^
+FI
+
+
+
+// провер€ю наличие записи VUZ
+//-----------------------------------------
+IF
+if val(&uf('JVUZ,?',if &unifor('Av1691^a#1')<>'' then &unifor('Av1691^a#1'),'-' fi,,if &unifor('Av1691^n#1')<>'' then &unifor('Av1691^n#1'),'-' fi,,if &unifor('Av1691^c#1')<>'' then &unifor('Av1691^c#1'),'-' fi,,if &unifor('Av1691^v#1')<>'' then &unifor('Av1691^v#1'),'-' fi,,if &unifor('Av1691^o#1')<>'' then &unifor('Av1691^o#1'),'-' fi,,if &unifor('Av1691^f#1')<>'' then &unifor('Av1691^f#1'),'-' fi))<=0 then '1' fi 
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - Ќет записи VUZ по св€зке ',,,,,,&uf('Av1691^A#1'),'-',&uf('Av1691^N#1'),'-',&uf('Av1691^C#1'),'-',,&uf('Av1691^V#1'),'-',,,&uf('Av1691^O#1'),'-',,&uf('Av1691^F#1'),'-',,,,,,,,' (',v111,')',,if val(v991^A)=1 then ' - повторение удалено' fi
+REP
+112
+L
+'1',,,&uf('+7U10#',,&uf('Av1691#1') )
+
+//^^^^^^^^
+FI
+// если есть запись VUZ, провер€ю в ней контингент-дисциплина
+//-----------------------------------------
+IF
+if val(&uf('JVUZ,?',if &unifor('Av1691^a#1')<>'' then &unifor('Av1691^a#1'),'-' fi,,if &unifor('Av1691^n#1')<>'' then &unifor('Av1691^n#1'),'-' fi,,if &unifor('Av1691^c#1')<>'' then &unifor('Av1691^c#1'),'-' fi,,if &unifor('Av1691^v#1')<>'' then &unifor('Av1691^v#1'),'-' fi,,if &unifor('Av1691^o#1')<>'' then &unifor('Av1691^o#1'),'-' fi,,if &unifor('Av1691^f#1')<>'' then &unifor('Av1691^f#1'),'-' fi))>0 then '1' fi 
+DEL
+113
+*
+
+
+ADD
+113
+
+&uf('DVUZ,!?',if &unifor('Av1691^a#1')<>'' then &unifor('Av1691^a#1'),'-' fi,,if &unifor('Av1691^n#1')<>'' then &unifor('Av1691^n#1'),'-' fi,,if &unifor('Av1691^c#1')<>'' then &unifor('Av1691^c#1'),'-' fi,,if &unifor('Av1691^v#1')<>'' then &unifor('Av1691^v#1'),'-' fi,,if &unifor('Av1691^o#1')<>'' then &unifor('Av1691^o#1'),'-' fi,,if &unifor('Av1691^f#1')<>'' then &unifor('Av1691^f#1'),'-' fi,,,'!,(v69^D/)',,,)
+
+IF
+if s(|!|v113|!|): s('!',,&uf('Av1691^I#1'),,'!') then  else  '1' fi
+PUTLOG
+'¬ записи VUZ по св€зке ',,,,,,&uf('Av1691^A#1'),'-',&uf('Av1691^N#1'),'-',&uf('Av1691^C#1'),'-',,&uf('Av1691^V#1'),'-',,,&uf('Av1691^O#1'),'-',,&uf('Av1691^F#1'),'-',,,,,,,,' MFN=',f(val(mfn),0,0),' (',v111,')',,,' друга€ дисциплина',,,,,if val(v991^A)=1 then ' - повторение удалено' fi
+REP
+112
+L
+'1',,,&uf('+7U10#',,&uf('Av1691#1') ) 
+
+FI
+DEL
+113
+*
+
+
+//^^^^^^^^
+FI
+FI
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+//----------------------------------------
+IF
+if val(v991^A)=1 then '1' fi
+// удал€ю повторени€
+DEL
+691
+F
+(v112/)
+
+IF
+if g10<>'' then '1',,,&uf('+7G10') fi
+ADD
+943
+
+(g10/)
+
+
+FI
+FI
+
+
+//--------------- проверка и удаление на дублетность полей 691
+DEL
+1691
+*
+
+
+ADD
+1691
+
+mpu,(v691/)
+
+REPEAT
+REP
+691
+F
+&uf('S0'),,,,(if p(v691) then v691,,,if v691^Z='' then if  &uf('+97',v691^I)=&uf('Av1691^I#1') and &uf('+97',v691^S)=&uf('Av1691^S#1') and &uf('+97',v691^B)=&uf('Av1691^B#1') and &uf('+97',v691^K)=&uf('Av1691^K#1') and &uf('+97',v691^L)=&uf('Av1691^L#1') and &uf('+97',v691^A)=&uf('Av1691^A#1') and &uf('+97',v691^V)=&uf('Av1691^V#1') and &uf('+97',v691^O)=&uf('Av1691^O#1') and &uf('+97',v691^C)=&uf('Av1691^C#1') and &uf('+97',v691^N)=&uf('Av1691^N#1') and val(v691^F)=val(&uf('Av1691^F#1'))  and v691^G: &uf('Av1691^G#1') then if  val(&uf('S1A'))>1 then '^Z1,' fi fi fi fi/),,,
+
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+IF
+if v691^Z<>'' then '1' fi
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - »меютс€ дубли пол€ 691. ',,,,if val(v991^B)=1 then ' - удалены' fi
+FI
+IF
+if val(v991^B)=1 then '1' fi
+DEL
+691
+F
+&uf('+7W1#'),,,(if p(v691) then if p(v691^Z) then '1' &uf('+7W1#',,,,f(val(&uf('Ag1#1'))+1,0,0)  ) else '0' fi fi/)
+
+IF
+if val(g1)>0 then '1' fi
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - ”далено дублетных повторений пол€ ',G1,,
+FI
+FI
+DEL
+691^Z
+*
+
+
+DEL
+111
+*
+
+
+DEL
+112
+*
+
+
+DEL
+1691
+*
+
+
+DEL
+991
+*
+
+
+FI
+//----------проверка записи-аналога
+IF
+if p(v699) and v699^U: '0' then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('7,!I=',v699^W,'!,(v699/)')
+
+
+IF
+if a(v111) then '1' fi
+PUTLOG
+&uf('+D'),,': MFN=',f(val(mfn),0,0),' - «апись-аналог - нет основной записи',
+FI
+IF
+if p(v111) then '1' fi
+PUTLOG
+if rsum((if p(v111) then if v111^U='1' then if &uf('+97',v111^W)=&uf('+97',&uf('Av903#1')) then '1,' fi fi fi))=0 then &uf('+D'),,': MFN=',f(val(mfn),0,0),' - «апись-аналог - в основной записи нет ссылки на этот аналог', fi/
+FI
+DEL
+111
+*
+
+
+FI

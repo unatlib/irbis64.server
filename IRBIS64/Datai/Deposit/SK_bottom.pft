@@ -1,0 +1,151 @@
+/* v1000 - имя БД
+/* v1002 - число найденных
+/* v1006 - порция  FREEPAR3
+/* v1008^A - стартовый номер
+/* 10 - число видимых ссылок
+/* v1007 - поисковое выражение
+/* v1010 - запрос на естественном языке
+/*v1009 - слова для раскраски
+/*v1012 - имя формата показа   FREEPAR0
+/*v1110 - login пользователя
+if val(v1002)>0 then 
+'</table>',
+'<table>',
+'<tr> <td colspan="3" align=left> <font size=-1>',
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/*"Число найденных v1002="v1002"<br>",
+/*"Номер последнего в списке v1005^A="v1005^A"<br>",
+/*"Стартовый номер v1008^A="d1008,F(val(v1008^A),0,0),
+/*"Поисковое выражение: "v1007"<br>",&uf('+3E',&uf('Av1007#1')),"<br>",
+'<meta http-equiv=Content-Type content="text/html; charset=utf-8">',
+'<title>',if p(v1007) then 'Результат поиска (БД ',v1000,' Запрос: ',if v1010<>'' then v1010 else v1007 fi,')',
+                      else 'Просмотр документов (БД ',v1000,')' fi," с "v1008^A"...",
+'</title>',
+'<b>',
+if v1000='SK' then 'База данных СВОДНОГО КАТАЛОГА' else 'База данных КАТАЛОГА МОИХ КНИГ' fi,'<br>',
+"Запрос - "d1007,if v1010<>'' then v1010 else v1007 fi,"<br>"d1007,
+if v1007<>'' then 'Найдено документов: ' else 'Всего документов: ' fi,v1002"<br>",
+if val(v1002)>val(v1006) then 'Документы: ' fi,
+'</b>',
+
+if val(v1002)>2*val(v1006) 
+  then
+        &uf('+1W1#',F((val(v1008^A))/val(v1006)+6,0,0)),
+        if val(&uf('+1R1'))>(val(v1002)/val(v1006)) then &uf('+1W1#',&unifor('+3T',v1002,','v1006)) fi  
+        &uf('+1W2#',F(val(v1002)-val(&uf('+1R1'))*val(v1006),0,0)),
+        &uf('+1W3#',v1006),
+        &uf('+1W4#',F((val(v1008^A))/val(v1006)-10/2,0,0)),
+        if val(&uf('+1R4'))<1 then &uf('+1W4#1')fi,
+        if (val(v1008^A)=1) then else '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=1','&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">' fi,
+        '1',
+        if val(v1006)<>1 then
+                '-',F(val(&uf('+1R4'))*val(&uf('+1R3')),0,0),
+        fi        
+                 if (val(v1008^A)=1) then else '</a>' fi/,
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        (if val(&uf('+1R1'))>val(&uf('+1R4')) 
+              then 
+                      if (val(&unifor('Av1008^A#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1) then else '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),'&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALL=',&uf('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">' fi,
+                      F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),
+                      if ((val(&uf('+1R4'))*val(&uf('+1R3'))+1)<>(val(&uf('+1R4'))+1)*val(&uf('+1R3'))) then
+                              '-',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0),
+                      fi
+                      &uf('+1W5#',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0)),&uf('+1W4#',F(val(&uf('+1R4'))+1,0,0)),                      
+                      if (val(&unifor('Av1008^A#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1-val(&uf('+1R3'))) then else '</a>' fi,      
+              else &uf('+1W1#'),&uf('+1W4#') 
+        fi/),
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        if (1+val(v1006)*val(&unifor('+3T',v1002,','v1006))<=val(v1002)) then
+                if (val(v1008^A)=val(v1006)*val(&unifor('+3T',v1002,','v1006))+1) then else '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1006)*val(&unifor('+3T',v1002,','v1006))+1,0,0),'&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">' fi,
+                F(val(v1006)*val(&unifor('+3T',v1002,','v1006))+1,0,0),
+                if (val(v1006)*val(&unifor('+3T',v1002,','v1006))+1<val(v1002)) then
+                        '-',v1002
+                fi        
+                        if (val(v1008^A)=val(v1006)*val(&unifor('+3T',v1002,','v1006))+1) then else '</a>' fi,
+        else if val(&uf('+1R5'))<val(v1002) then '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1002)-val(v1006)+1,0,0),'&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">',F(val(&uf('+1R5'))+1,0,0),'-',v1002,'</a>' fi
+        fi        
+  else
+        if val(v1002)>val(v1006)    then
+                if (val(v1008^A)=1) then else '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=1&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">' fi,
+                '1',
+                if val(v1006)>1 then
+                        '-',v1006,
+                fi
+                if (val(v1008^A)=1) then else '</a>' fi/,
+                if (val(v1008^A)-1=val(v1006)) then else '<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=2','&PFTNAME=',&uf('Av1012#1'),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&QUERY=',&unifor('+3E',&unifor('Av1010#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1006)+1,0,0),'&S21SRD=&S21SRW=&BOTTOMPFTNAME=SK_bottom&TOPPFTNAME=SK_top&S21ALLTRM=',&unifor('+3E',&unifor('Av1009#1')),'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR10=',&uf('+3E',&uf('Av1110#1')),'">' fi,
+                F(val(v1006)+1,0,0),
+                if (val(v1006)+1<val(v1002))then
+                        '-',v1002
+                fi        
+                        if (val(v1008^A)-1=val(v1006)) then else '</a>' fi/,               
+        fi        
+fi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'</font> </td></tr>',
+/*if v1007<>'' then '<tr><td></td></tr>',
+/*     if val(v1002)>val(v1006) then 
+/*     '<tr><td><form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+/*     '<input type="submit" class="sub1" name="nnnn" value="Поиск в найденном">',
+/*     '<input type="hidden" name="C21COM" value="1">',
+/*     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+/*     '<input type="hidden" name="PFTNAME" value="SK_search">',
+/*     '<input type="hidden" name="S21CNR" value="',v1006,'">',
+/*     '<input type="hidden" name="S21ALL" value="',v1007,'">',     
+/*     '<input type="hidden" name="QUERY" value="',v1010,'">',     
+/*     '<input type="hidden" name="S21ALLTRM" value="',v1009,'">',     
+/*     '<input type="hidden" name="FREEPAR0" value="',v1012,'">',
+/*     '<input type="hidden" name="FREEPAR10" value="',v1110,'">',
+/*     '</form></td></tr>',
+/*     fi,
+/*'<tr><td>',
+/*'</td></tr>',
+/*fi,
+if val(v1002)>0 then 
+     '<tr><td><form name="SELECT" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+     '<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+     '<input type="hidden" name="PFTNAME" value="SK_select">',
+     '<input type="hidden" name="FREEPAR10" value="',v1110,'">',
+     '</form></td></tr>',
+          if v1000='SK_EKZ' then
+                '<tr><td><form name="TABFORM" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+                '<input type="submit" class="sub1" name="nnnn" value="Выходные формы...">',
+                '<input type="hidden" name="C21COM" value="1">',
+                '<input type="hidden" name="I21DBN" value="',v1000,'">',
+                '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+                '<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+/*                '<input type="hidden" name="PFTNAME" value="SK_tabform">',
+                '<input type="hidden" name="PFTNAME" value="SK_exitform">',
+                '<input type="hidden" name="FREEPAR10" value="',v1110,'">',
+                '<input type="hidden" name="FREEPAR7" value="',v1007,'">',  /*поисковый запрос
+                '<input type="hidden" name="FREEPAR2" value="',v1002,'">',  /* кол-во найденных
+                '</form></td></tr>',
+          fi,
+     else 
+     if v1000='SK' then 
+     '<form name="" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<tr><td>',
+     'Если Вы не ошиблись в запросе и действительно не нашли нужной книги, сделайте ЗАЯВКУ на включение этой книги в СВОДНЫЙ каталог',
+     ' и попробуйте найти ее на следующий рабочий день.',
+     '</td></tr>',
+     '<tr><td>',
+     '<input type="submit" class="sub1" name="nnnn" value="Сделать ЗАЯВКУ...">',
+     '<input type="hidden" name="C21COM" value="1">',
+     '<input type="hidden" name="I21DBN" value="SK_NEW">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+     '<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+     '<input type="hidden" name="PFTNAME" value="SK_NEW_ENTRY">',
+     '<input type="hidden" name="FREEPAR10" value="',v1110,'">',
+     '</td></tr>',
+     '</form>',
+     fi,
+fi,
+'</table>',
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=SK_search&FREEPAR3=',v1103,'&I21DBN=',v1000,'&FREEPAR0=',v1100,'&FREEPAR10=',&uf('+3E',v1110),'">Вернуться к основной поисковой форме</A>',
+'<hr><br>',
+
+'<table border="0">',
+fi 

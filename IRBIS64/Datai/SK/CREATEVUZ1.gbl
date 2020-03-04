@@ -1,0 +1,539 @@
+1
+CreateVuz.wss
+Определите способ корректировки
+// формирование в БД VUZ записей дисциплин по полям 691
+//13 - добавлено формирование записей VUZ, если не заданы в 691 дисциплины
+// ^A - связь с БД VUZ по имени дисциплины
+// ^B - связь с БД VUZ по идентификатору дисциплины
+// ^C - связь с БД VUZ по двум параметрам (имя + идентификатор)
+//12 PUTLOG
+IF
+if v991^A<>'' or v991^B<>'' or v991^C<>'' then '1' fi
+IF
+if v991^A<>'' and v991^B<>'' then '1' fi
+REP
+991
+1
+v991,if v991^C='' then '^C1' fi
+
+FI
+DEL
+1691
+*
+
+
+ADD
+1691
+
+&uf('+7W10#'),(if p(v691) then if s(v691^D,v691^I)<>'' then v691 fi fi/)
+
+IF
+if p(v1691) then '1' fi
+//========================================== цикл по полю 691
+// сначала в глобальную G10 записываю идентификатоы/имена дисциплин чтобы взять уникальные 
+REPEAT
+DEL
+2691
+*
+
+
+ADD
+2691
+
+&uf('Av1691#1')
+
+IF
+if v991^C='' then '1' fi
+// задан один параметр
+IF
+if v991^A<>'' and v991^B='' or v991^A='' and v991^B<>'' then '1' fi
+//------------------------------------------ идентификация по имени или идентификатору
+// есть ли уже запись дисциплины ?
+IF
+if v991^A<>'' and v2691^D<>'' and val(&uf('JVUZ,DISCN=',v2691^D))=0 or v991^B<>'' and v2691^I<>'' and val(&uf('JVUZ,IDD=',v2691^I))=0 then '1' fi
+//------ нет записи с именем дисциплины - на создание новой - в G10
+ADD
+1001
+
+&uf('+7U10#',"^A"v2691^D,,"^0"v2691^I,,"^S"v2691^S,,,"^K"v2691^K,,,,"^B"v2691^B,'^X1')
+
+FI
+IF
+if v991^A<>'' and v2691^D<>'' and val(&uf('JVUZ,DISCN=',v2691^D))>0 or v991^B<>'' and v2691^I<>'' and val(&uf('JVUZ,IDD=',v2691^I))>0 then '1' fi
+//------------------- запись DISC есть, проверяю по циклу, кафедре, УК. Если отличие, то новую
+//--------в G5 все варианты из VUZ комдинации - цикл-каф-УК
+ADD
+991
+
+&uf('+7W5#',&uf('7VUZ,?',  if v991^A<>'' and v2691^D<>'' then 'DISCN=',v2691^D else if v991^B<>'' and v2691^I<>'' then 'IDD=',v2691^I fi fi   ,'?,(v4,v5,v6/)' ) )
+
+IF
+if rsum((if p(g5) then if g5=s(&uf('Av2691^S#1'),&uf('Av2691^B#1'),&uf('Av2691^K#1')) then else '1,' fi fi))>0 then '1' fi
+//------ есть отличие по кафедре/циклу/УК 
+//------создавать новую или дописывать ???
+CORREC
+'VUZ'
+"^S"v2691^S,,,"^B"v2691^B,,"^K"v2691^K,,"^A"v2691^D,,,,,&uf('+7W11#')
+mpu,,if v991^A<>'' and v2691^D<>'' then 'DISCN=',v2691^D else if v991^B<>'' and v2691^I<>'' then 'IDD=',v2691^I fi fi
+
+DEL
+991
+*
+
+
+ADD
+991
+
+v4,v5,v6
+
+// дописываю пустые поля
+ADD
+4
+
+if v4='' then v1001^S fi
+
+ADD
+5
+
+if v5='' then v1001^B fi
+
+ADD
+6
+
+if v6='' then v1001^K fi
+
+IF
+if v991<>s(v4,v5,v6) then '1' fi
+PUTLOG
+'Изменена запись дисциплины - ',,v1^A,,' (MFN=',,f(val(mfn),0,0),,')'
+FI
+// надо ли создавать новую запись ?? g11=1 признак не надо
+ADD
+991
+
+if &uf('+97',s(v4,v5,v6))=&uf('+97',s(v1001^S,v1001^B,v1001^K,)) then &uf('+7W11#1') fi
+
+DEL
+991
+*
+
+
+DEL
+1001
+*
+
+
+END
+ADD
+991
+
+if val(g11)=0 then &uf('+7U10#',"^A"v2691^D,,"^0"v2691^I,,"^S"v2691^S,,,"^K"v2691^K,,,,"^B"v2691^B,'^X1') fi
+
+//------ конец есть отличия
+FI
+IF
+if rsum((if p(g5) then if g5=s(&uf('Av2691^S#1'),&uf('Av2691^B#1'),&uf('Av2691^K#1')) then '1,' fi fi))=0 then '1' fi/
+//----- создаю новую DISC
+ADD
+991
+
+&uf('+7U10#',"^A"v2691^D,,"^0"v2691^I,,"^S"v2691^S,,,"^K"v2691^K,,,,"^B"v2691^B,'^X2)
+
+//----конец создаю новую
+FI
+//--------------------конец запись DISC есть
+FI
+// конец идентификация по имени или идентификатору
+FI
+// конец задан один параметр
+FI
+IF
+if v991^C<>'' then '1' fi
+//----------------------идентификация по двум параметрам
+// есть ли уже запись дисциплины ?
+IF
+if v2691^D<>'' and v2691^I<>'' then if val(&uf('JVUZ,DISCN=',v2691^D))=0 and val(&uf('JVUZ,IDD=',v2691^I))=0 then '1' fi fi
+//----- нет записи с именем дисциплины - создаю новую
+ADD
+1001
+
+&uf('+7U10#',"^A"v2691^D,,"^0"v2691^I,,"^S"v2691^S,,,"^K"v2691^K,,,,"^B"v2691^B,'^X3)
+
+FI
+IF
+if v2691^D<>'' and v2691^I<>'' then if val(&uf('JVUZ,DISCN=',v2691^D))>0 and val(&uf('JVUZ,IDD=',v2691^I))>0 then '1' fi fi
+//-------------------------------- уже есть
+ADD
+991
+
+&uf('+7W5#',&uf('7VUZ,?',,'DISCN=',v2691^D,,'?,(v4,v5,v6/)' ) )
+
+IF
+if rsum((if p(g5) then if g5=s(&uf('Av2691^S#1'),&uf('Av2691^B#1'),&uf('Av2691^K#1')) then else '1,' fi fi))>0 then '1' fi/
+//------ есть отличие по кафедре/циклу/УК 
+CORREC
+'VUZ'
+"^S"v2691^S,,,"^B"v2691^B,,"^K"v2691^K,,"^0"v2691^I
+mpu,,'DISCN=',v2691^D
+
+DEL
+991
+*
+
+
+ADD
+991
+
+v4,v5,v6
+
+// дописываю запись дисципдины
+ADD
+4
+
+if v4='' then v1001^S fi
+
+ADD
+5
+
+if v5='' then v1001^B fi
+
+ADD
+6
+
+if v6='' then v1001^K fi
+
+REP
+3
+1
+if a(v3^0) then "^0"v1001^0 fi
+
+IF
+if v991<>s(v4,v5,v6) then '1' fi
+PUTLOG
+'Изменена запись дисциплины - ',,v1^A,,' (MFN=',,f(val(mfn),0,0),,')'
+FI
+DEL
+991
+*
+
+
+DEL
+1001
+*
+
+
+END
+//------ конец есть отличия
+FI
+IF
+if rsum((if p(g5) then if g5=s(&uf('Av2691^S#1'),&uf('Av2691^B#1'),&uf('Av2691^K#1')) then '1,' fi fi))=0 then '1' fi/
+//----- создаю новую DISC
+ADD
+991
+
+&uf('+7U10#',"^A"v2691^D,,"^0"v2691^I,,"^S"v2691^S,,,"^K"v2691^K,,,,"^B"v2691^B,'^X4)
+
+//----конец создаю новую
+FI
+//-----------------------конец уже есть дисциплина
+FI
+// конец оба параметра
+FI
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+FI
+//=======================конец первого цикла по 691
+DEL
+2691
+*
+
+
+// есть ли данные для создания дисциплины?
+// отладка
+IF
+if G10<>'' then '1' fi
+DEL
+1691
+*
+
+
+ADD
+1691
+
+&uf('+7G10'),,(G10/)
+
+//=============================цикл создания записей DISC по глобальной G10
+REPEAT
+DEL
+2691
+*
+
+
+ADD
+2691
+
+&uf('Av1691#1')
+
+// проверка - есть ли идентификатор
+IF
+if v2691^0='' then '1' fi
+//-------------- нет идентификатора - создаю
+
+DEL
+111
+*
+
+
+IF
+if val(&uf('JVUZ,IDD=',v2691^A.5))>0 or s((|!|v113|!|)): v2691^A.5 then '1' fi
+ADD
+111
+
+'0'
+
+REPEAT
+IF
+if val(&uf('JVUZ,IDD=',v2691^A.5,f(val(v111),0,0)))>0 or s((|!|v113|!|)):  s( v2691^A.5,,f(val(v111),0,0)  ) then '1' fi
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+FI
+// запоминаю идентификатор, котрый ,будет присвоен
+UNTIL
+if val(&uf('JVUZ,IDD=',v2691^A.5,f(val(v111),0,0)))>0 or s((|!|v113|!|)):  s( v2691^A.5,,f(val(v111),0,0)  ) then '1' else '0' fi
+FI
+ADD
+113
+
+v2691^A.5,v111
+
+//идентификатор создан в 2691^0
+REP
+2691
+1
+v2691,'^0',v2691^A.5,v111
+
+//----------
+FI
+DEL
+111
+*
+
+
+//-------------------новая запись DISC
+NEWMFN
+'VUZ'
+ADD
+920
+
+'DISC'
+
+ADD
+3
+
+"^A"v2691^A,"^0"v2691^0,
+
+ADD
+4
+
+v2691^S
+
+ADD
+6
+
+v2691^K
+
+ADD
+5
+
+v2691^B
+
+DEL
+1001
+*
+
+
+END
+PUTLOG
+'Создана новая запись дисциплины - ',v2691^A
+//запоминаю из какого повторения 691 создана запись
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+//==============================конец цикла создания VUZ по переменной G10
+// конец G10 не пустое
+FI
+// конец задан параметр
+FI
+//----------------------создание записей контингентов из повторений, где нет дисциплины
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(if p(v691) then if s(v691^D,v691^I)='' then v691 fi fi/),,,,&uf('+7W10#'),,
+
+IF
+if p(v1691) then '1' fi
+REPEAT
+IF
+if val(&uf('JVUZ,?',if &unifor('Av1691^a#1')<>'' then &unifor('Av1691^a#1'),'-' fi,,if &unifor('Av1691^n#1')<>'' then &unifor('Av1691^n#1'),'-' fi,,if &unifor('Av1691^c#1')<>'' then &unifor('Av1691^c#1'),'-' fi,,if &unifor('Av1691^v#1')<>'' then &unifor('Av1691^v#1'),'-' fi,,if &unifor('Av1691^o#1')<>'' then &unifor('Av1691^o#1'),'-' fi,,if &unifor('Av1691^f#1')<>'' then &unifor('Av1691^f#1'),'-' fi))<=0 then '1' fi 
+NEWMFN
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+68
+XXXXXXXXXXXXXXXXXXX
+if &uf('Av1691^a#1')<>''then'^A'&uf('Av1691^a#1') fi,if &uf('Av1691^L#1')<>''then'^L'&uf('Av1691^L#1') fi,,if &uf('Av1691^T#1')<>''then'^T'&uf('Av1691^T#1') fi,,if &uf('Av1691^n#1')<>''then'^N'&uf('Av1691^n#1') fi,if &uf('Av1691^c#1')<>''then'^C'&uf('Av1691^c#1') fi,if &uf('Av1691^v#1')<>''then'^V'&uf('Av1691^v#1') fi,if &uf('Av1691^o#1')<>''then'^O'&uf('Av1691^o#1') fi,if &uf('Av1691^h#1')<>''then'^H'&uf('Av1691^h#1') fi,if &uf('Av1691^f#1')<>''then'^F'&uf('Av1691^f#1') fi,,if &uf('Av1691^E#1')<>''then'^E'&uf('Av1691^E#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+mhl,'Создана новая запись VUZ (',v68,')',,,mpl,,&uf('+7U10#',v68,,'^B',&uf('Av1691^B#1'),,),
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+//---------------------------------- по записям VUZ создаю записи FAK
+IF
+if p(g10) then '1' fi,
+DEL
+113
+*
+
+
+ADD
+113
+
+&uf('+7W11#',,,(if p(g10) then if g10^A<>'' then '^A',g10^A fi,,if g10^L<>'' then '^L',g10^L fi,,if g10^T<>'' then '^T',g10^T fi,,if g10^O<>'' then '^O',g10^O fi,,if g10^B<>'' then '^B',g10^B fi fi/) ),,,&uf('+7G11')
+
+ADD
+113
+
+(g11/)
+
+REPEAT
+DEL
+1068
+*
+
+
+ADD
+1068
+
+&uf('Av113#1')
+
+IF
+if val(&unifor('JVUZ,',,,,,,'FFO=',v1068^A,"ВСЕ"n1068^A,v1068^L,v1068^T'-',v1068^O,"ВСЕ"n1068^O,,,,,,,,,,))<=0 then '1' fi
+// записи FAK-FO еще нет - создаю
+NEWMFN
+'VUZ'
+ADD
+920
+
+'FAK'
+
+ADD
+93
+
+if v1068^A<>'' then v1068^A else 'ВСЕ' fi
+
+ADD
+91
+
+v1068^L
+
+ADD
+92
+
+v1068^T
+
+ADD
+98
+
+if v1068^O<>'' then v1068^O else 'ВСЕ' fi
+
+// на случай одинаковой кафедры
+ADD
+5
+
+(if p(v69^B) then &uf('Pv69^B')/ fi/)
+
+PUTLOG
+'Создана запись факультета ',,v93,," - "v98
+END
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+113
+1
+
+
+UNTIL
+if p(v113) then '1' fi
+// конец создания записей FAK
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------конец создания записей VUZ
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+
+
+DEL
+2691
+*
+
+
+DEL
+113
+*
+
+
+DEL
+1068
+*
+
+

@@ -1,0 +1,243 @@
+1
+692g.wss
+  ббедхре 
+IF
+if p(v691) then '1' else'0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+'%1'
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^C
+1
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) < 9 then 'V' else if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) >8 then 'O' fi fi 
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^A
+1
+if &unifor('Knazn.mnu|1')<>''then if v910^t:&unifor('Knazn.mnu|1') then &unifor('Knazn.mnu|1')fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+if p(v991^a) then (if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+if p(v991^a) then "^A"v991^a,"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if &unifor('Knazn.mnu|2')<>''then if v910^t:&unifor('Knazn.mnu|2') then '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^A
+1
+if &unifor('Knazn.mnu|2')<>''then &unifor('Knazn.mnu|2') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+if p(v991^a) then (if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+if p(v991^a) then "^A"v991^a,"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if &unifor('Knazn.mnu|3')<>''then if v910^t:&unifor('Knazn.mnu|3') then  '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^A
+1
+if &unifor('Knazn.mnu|3')<>''then &unifor('Knazn.mnu|3') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+if p(v991^a) then (if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+if p(v991^a) then "^A"v991^a,"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if &unifor('Knazn.mnu|4')<>''then if v910^t:&unifor('Knazn.mnu|4') then  '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^A
+1
+if &unifor('Knazn.mnu|4')<>''then &unifor('Knazn.mnu|4') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+if p(v991^a) then (if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+if p(v991^a) then "^A"v991^a,"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if &unifor('Knazn.mnu|5')<>''then if v910^t:&unifor('Knazn.mnu|5') then  '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^A
+1
+if &unifor('Knazn.mnu|5')<>''then &unifor('Knazn.mnu|5') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+if p(v991^a) then (if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+if p(v991^a) then "^A"v991^a,"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if s(v910^t)<>'' then if rsum((if p(v910^c) then if '2 6 7 8':v910^a  then else if a(v910^t) then '1;' else'0;' fi fi fi))>0 then  '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+(if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^L',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if s(v910^t)='' then if rsum((if '2 6 7 8':v910^a then else if p(v910^c) then '1;' else'0;' fi fi))>0 then  '1' else'0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+(if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')<>'' and v692^a=&unifor('Av991^a#1') or &unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1')  then '1'else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+"^B"v991^u,"^C"v991^c,'^D',&unifor('6ko692ex'),'^E',if v991^c:'O'then &unifor('6ko692stos') else &unifor('6ko692stvs') fi,'^F',if v991^c:'O'then &unifor('6ko692os') else &unifor('6ko692vs') fi,'^G'&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v910^t:'Г/Н' and rsum((if p(v910^c) then if '2 6 7':v910^a  then else if v910^t:'Г/Н' then '0;' else'1;' fi fi fi))>0 or s(v910^t)=''then  '1' else'0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^A
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+(if p(v692) then if (&unifor('Av991^u#1')<>'' and v692^b=&unifor('Av991^u#1') or &unifor('Av991^u#1')='' and a(v692^u)) and (&unifor('Av991^a#1')='' and a(v692^a)) and &unifor('Av991^c#1')<>'' and v692^c=&unifor('Av991^c#1') and p(v692^z) then '1'else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+692
+XXXXXXXXXXXXXXXXXXX
+"^B"v991^u,"^C"v991^c,'^D',ko692exnzo,'^E',ko692stnzo,'^Z',ko692konzo,'^G'&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+692
+F
+(if p(v692) then if val(v692^e)=0 then '1' else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

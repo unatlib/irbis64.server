@@ -1,0 +1,149 @@
+0
+//14 создание записи заказа по полю 62 или 30-32 БО
+//--------------------------из поля 62
+IF
+if p(v62) then '1' fi
+DEL
+1062
+*
+
+
+ADD
+1062
+
+(v62/)
+
+REPEAT
+IF
+if &uf('Av1062^A#1')<>'' and &uf('Av1062^K#1')<>'' and &uf('Av1062^B#1')<>'' and val(&uf('J,SORZ=',&uf('Av1062^K#1'),,'!',,&uf('Av1062^B#1') ) )<=0 then '1' fi
+// такого организация+заказ нет
+NEWMFN
+'*'
+ADD
+62
+
+&uf('Av1062#1')
+
+CHA
+62
+1
+'^B'
+'^6'
+ADD
+920
+
+'SZ'
+
+END
+
+FI
+DEL
+1062
+1
+
+
+UNTIL
+if p(v1062) then '1' fi
+FI
+//--------------------------из поля 30-31
+IF
+if s(v30,v31,v32)<>'' then '1' fi
+IF
+if p(v30) and &uf('Av30^A#1')<>'' and &uf('Av30^K#1')<>'' and &uf('Av30^B#1')<>'' then '1' fi
+IF
+if val(&uf('J,SORZ=',&uf('Av30^K#1'),,'!',,&uf('Av30^B#1') ) )<=0 then '1' fi
+// такого организация+заказ нет
+NEWMFN
+'*'
+ADD
+62
+
+&uf('Av30#1')
+
+CHA
+62
+1
+'^B'
+'^6'
+ADD
+920
+
+'SZ'
+
+END
+FI
+//---перенос из поля 30 а поле 62
+ADD
+62
+
+if a(v62) or rsum((if p(v62) then if &uf('+97',v62^A)=&uf('+97',&uf('Av30^A#1')) and &uf('+97',v62^K)=&uf('+97',&uf('Av30^K#1')) and &uf('+97',v62^B)=&uf('+97',&uf('Av30^B#1')) then '1,' fi fi))=0 then  &uf('Av30#1') fi
+
+//---  новая SZ по полю 30
+FI
+IF
+if p(v31) and &uf('Av31^A#1')<>'' and &uf('Av31^K#1')<>'' and &uf('Av31^B#1')<>'' then '1' fi
+IF
+if val(&uf('J,SORZ=',&uf('Av31^K#1'),,'!',,&uf('Av31^B#1') ) )<=0 then '1' fi
+// такого организация+заказ нет
+NEWMFN
+'*'
+ADD
+62
+
+&uf('Av31#1')
+
+CHA
+62
+1
+'^B'
+'^6'
+ADD
+920
+
+'SZ'
+
+END
+FI
+//---перенос из поля 31 а поле 62
+ADD
+62
+
+if a(v62) or rsum((if p(v62) then if &uf('+97',v62^A)=&uf('+97',&uf('Av31^A#1')) and &uf('+97',v62^K)=&uf('+97',&uf('Av31^K#1')) and &uf('+97',v62^B)=&uf('+97',&uf('Av31^B#1')) then '1,' fi fi))=0 then  &uf('Av31#1') fi
+
+//---  новая SZ по полю 31
+FI
+IF
+if p(v32) and &uf('Av32^A#1')<>'' and &uf('Av32^K#1')<>'' and &uf('Av32^B#1')<>'' then '1' fi
+IF
+if val(&uf('J,SORZ=',&uf('Av32^K#1'),,'!',,&uf('Av32^B#1') ) )<=0 then '1' fi
+// такого организация+заказ нет
+NEWMFN
+'*'
+ADD
+62
+
+&uf('Av32#1')
+
+CHA
+62
+1
+'^B'
+'^6'
+ADD
+920
+
+'SZ'
+
+END
+FI
+//---перенос из поля 32 а поле 62
+ADD
+62
+
+if a(v62) or rsum((if p(v62) then if &uf('+97',v62^A)=&uf('+97',&uf('Av32^A#1')) and &uf('+97',v62^K)=&uf('+97',&uf('Av32^K#1')) and &uf('+97',v62^B)=&uf('+97',&uf('Av32^B#1')) then '1,' fi fi))=0 then  &uf('Av32#1') fi
+
+//---  новая SZ по полю 32
+FI
+//---------------из поля 30-32
+FI
+

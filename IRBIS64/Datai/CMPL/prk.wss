@@ -1,0 +1,151 @@
+15
+A
+Предметный заголовок (из ЭК)
+0
+0
+2
+@IPRIVATE/EKP/IBIS,S=,@!smov
+
+
+
+
+B
+1-й подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+
+
+
+
+C
+2-й подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+
+
+
+
+D
+3-й подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+
+
+
+R; 
+G
+Географический подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+
+
+
+
+E
+Географический подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+
+
+
+
+O
+Географический подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+
+
+
+R; 
+H
+Хронологический подзаголовок
+0
+0
+2
+@IPRIVATE/EKP/IBIS,HS=,@!pzmov
+
+
+
+R; 
+9
+Формальный подзаголовок (аспект)
+0
+0
+1
+fpz.mnu
+
+
+
+R; 
+U
+Роль (ДК?)
+0
+0
+1
+rols3.mnu
+
+
+
+
+1
+ББК1 из AUTHORITY-файла
+0
+0
+0
+
+
+
+
+
+2
+ББК2 из AUTHORITY-файла
+0
+0
+0
+
+
+
+
+
+4
+ББК3 из AUTHORITY-файла
+0
+0
+0
+
+
+
+
+
+5
+ББК4 из AUTHORITY-файла
+0
+0
+0
+
+
+
+
+
+6
+ББК5 из AUTHORITY-файла
+0
+0
+0
+
+
+
+
+

@@ -1,0 +1,252 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+/* восстанавливаю значения отбора в G991
+&uf('+7W991#',&uf('+97',v1),,),,,
+if v1^Z<>'' 
+then 
+'\trowd \trqc\trgaph108\trleft-108 ',,
+   if val(G991^+)=1 
+   then 
+/* выводить список книг
+      if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,,,
+      &uf('+7W43#1'),,&uf('+7W44#0'),,&uf('+7W45#0'),,,,
+      &uf('+7W51#',ref(val(v1^Z),&uf('6lncnam'))   ),,, 
+      if val(G51)>0 
+      then 
+'\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15183 
+\pard \widctlpar\intbl {\ql \fs20 ',
+          '\b '&uf('+7W10#',f(val(G10)+1,0,0))   G10,,,,,,,,'.  \b0 ',,
+          ref(val(v1^Z),&uf('6briefKONew') ),,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \ql\widctlpar ' 
+      fi,,,,,
+   fi,,,
+else 
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,,,&uf('+7W43#1'),,&uf('+7W44#0'),,&uf('+7W45#0'),,,,,,,,,,,,,,,,
+&uf('+7W51#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,,,,
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#2'),,&uf('+7W44#0'),,&uf('+7W45#0'),,&uf('+7W53#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,,
+
+if v1^1<>'' and v1^1<>' ' and val(&uf('Ag51#1'))>0 
+then 
+'\trowd \trqc\trgaph108\trleft-108 ',,
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\pard \widctlpar\intbl {\ql \fs20 \b ',,
+/* ------------------дисциплина
+if val(G991^Y)<>0 then '\cf27 ' fi,,,,
+,V1^1,,if val(G991^Y)<>0 then ' (ЭУ)' fi,,'\cf ',,,,&uf('+7W10#'),,,
+/* студенты по дисциплине в g60
+if &uf('IMAIN,AccessRdr,1')='1' then &uf('+7W60#',,f(rsum(&uf('7RDR,!IDD=',v1^X,'!,@lncRDR')),0,0)   ) else
+                                     &uf('+7W60#',,f(rsum(&uf('7VUZ,!IDV=',v1^X,'!,@lncRDRVuz')),0,0)  ) fi,,'\b0 ',
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3963 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/* ------------------кол-во учебная
+,,,G51,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4983 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/* ------------------экземпл. учебная
+if val(G991^Y)<>0 then ' - ' else 
+,,&uf('+7W43#1'),,,,&uf('+7W52#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncex')),0,0)),,G52,,fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6003 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/* ------------------кол-во методическая
+,,,G53,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7023 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/* ------------------экземпл. методическая
+if val(G991^Y)<>0 then ' - ' else 
+,&uf('+7W992#',V1),,,&uf('+7W43#2'),,,,&uf('+7W54#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncex')),0,0)),,,G54,fi,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8043 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*-------------- реальная обеспеченность учебной
+if val(G991^Y)<>0 then if val(G51)>0 then ' 1 ' else ' -' fi else 
+,,if val(G60)>0 and val(G51)>0 then f((val(G52) / val(G60) / val(G51) ),0,3),,
+,,if &uf('IDISPLAY,ChekRdrInTabl,0')='1' then ' (',,G52,,'/',,G60,,,'/',,G51,,,')' fi,,
+fi fi,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9063 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*-------------- реальная обеспеченность методической
+if val(G991^Y)<>0 then if val(G53)>0 then ' 1 ' else ' -' fi else 
+,,if val(G60)>0 and val(G53)>0 then f((val(G54) / val(G60) / val(G53) ),0,3),,
+if &uf('IDISPLAY,ChekRdrInTabl,0')='1' then ' (',,G54,,'/',,G60,'/',,G53,,,')' fi,,
+fi fi,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10083 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/* G43=1 учебная
+/* G43=2 методическая
+/* G44=0 без новизна
+/* G44=1 за посл года учебная
+/* G44=2 за посл года методич
+/* G45=0 без грифи
+/* G45=1 сгрифом учебная
+/* G45=2 с грифом  методич
+/*------------------------------ степень новизны  - учебная,,,,,,,,,,
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#1'),,&uf('+7W44#1'),,&uf('+7W45#0'),,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),
+  if val(G51)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G51) * 100,0,3) ='' 
+    then ' ' 
+    else 
+      f(val(G57) / val(G51) * 100,0,3) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11103 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*-------------------------------- степень новизны  - методтческая
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#2'),,&uf('+7W44#2'),,&uf('+7W45#0'),,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,
+  if val(G53)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G53) * 100,0,3) ='' 
+    then ' ' 
+    else 
+      f(val(G57) / val(G53) * 100,0,3) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12123 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*--------------------------------- гриф - учебная - всего
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#1'),,&uf('+7W44#0'),,&uf('+7W45#1'),,,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,
+  if val(G51)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G51) * 100,0,2) ='' 
+    then 
+      ' ' 
+    else 
+      f(val(G57) / val(G51) * 100,0,2) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13143 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*-------------------------------- гриф - учебная - за посл.годы
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#1'),,&uf('+7W44#1'),,&uf('+7W45#1'),,,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,
+  if val(G51)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G51) * 100,0,2) ='' 
+    then 
+      ' ' 
+    else 
+      f(val(G57) / val(G51) * 100,0,2) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14163 
+\pard \widctlpar\intbl {\ql \fs24 ',
+/*--------------------------------- гриф - метод - всего
+if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#2'),,&uf('+7W44#0'),,&uf('+7W45#2'),,,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,
+  if val(G53)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G53) * 100,0,2) ='' 
+    then 
+      ' ' 
+    else 
+      f(val(G57) / val(G53) * 100,0,2) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15183 
+\pard \widctlpar\intbl {\ql \fs24 ',
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+/*-------------------------------- гриф - метод - за посл. годы
+ if val(G991^Y)<>0 then &uf('+7W47#1') else &uf('+7W47#') fi,,
+,&uf('+7W992#',V1),,,&uf('+7W43#2'),,&uf('+7W44#2'),,&uf('+7W45#2'),,,&uf('+7W57#',f(rsum(&uf('7,!IDD=',v1^X,'!,@lncNam')),0,0)),,,
+  if val(G53)>0 and p(G57) 
+  then 
+    if f(val(G57) / val(G53) * 100,0,2) ='' 
+    then 
+      ' ' 
+    else 
+      f(val(G57) / val(G53) * 100,0,2) 
+    fi 
+  else 
+    ' ' 
+  fi 
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \ql \widctlpar ' 
+fi,,
+fi,
+'}'

@@ -1,0 +1,64 @@
+0
+//12 PUTLOG
+//замена кода кафедры читающей
+//в 991^A что заменить, 991^B на что 
+// использую - замена по всей БД
+// несколько значений 
+IF
+if v920: 'DISC' then '1' fi
+//--------------------откорректирую код в записях DISC
+DEL
+111
+*
+
+
+ADD
+111
+
+v5
+
+REP
+5
+1
+v991^B
+
+IF
+if &uf('+97',v111)<>&uf('+97',v5) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^A,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v920: 'VUZ' then '1' fi
+//--------------------откорректирую код в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v69^B/)
+
+REP
+69^B
+F
+(if p(v69) then if p(v69^B) then if &uf('+97',v69^B)=&uf('+97',&uf('Av991^A#1')) then &uf('Av991^B#1') else v69^B fi else if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v69^B) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+DEL
+991
+*
+
+

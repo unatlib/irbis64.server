@@ -1,0 +1,1 @@
+(if G1004<>'' then '^A',&uf('AG1005#1'),'^B',G1004,'^C',,&uf('KCikld.mnu!',&uf('AG1005#1')),,'^D',&uf('Kfo.mnu!',G1004), fi/)

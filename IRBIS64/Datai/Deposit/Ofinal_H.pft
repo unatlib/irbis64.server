@@ -1,0 +1,59 @@
+/* для 955
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     if g140 : 'IRI' 
+         then if p(v955^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?LNG=&I21DBN=',&uf('+D'),'_FULLTEXT&P21DBN=',&uf('+D'),if v991='' then '&Z21ID=GUEST' else '&Z21ID=',&uf('+3E',v991^A),'&Z21FAMILY=',&uf('+3E',v991^B) fi,
+                 '&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=I=&USES21ALL=1&S21STR=',
+                 &uf('+3E',v903),'">',if p(v955^T) then v955^T else 'Полный текст' fi,'</A>', fi, 
+         else     
+         if p(v955^A) then '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group955&FREEPAR1=1&KEY=@',mfn,'">',if p(v955^T) then v955^T else 'Постраничный просмотр полного текста' fi,'</A>', fi,
+     fi,
+fi,
+/* ***
+/* для 951
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+     if g140 : 'IRI' 
+         then (if p(v951^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?&C21COM=2&IMAGE_FILE_DOWNLOAD=1
+&I21DBN=',&uf('+D'),'&Image_file_name=',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+         else (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+     fi     
+     (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi  fi),
+fi,(if p(v19)then if v19^a:'DOI'then If &uf('Av951#1')<>''then', 'fi,'<br><A HREF="',&uf('+\1','http://dx.doi.org/'v19^b),'">',|Переход по DOI|d19^b,'</A>', fi fi)
+(if p(v600) then 
+    if p(v600^w) then 
+       if v600^w:'VS' then 
+       '<A HREF="IRBIS:2,,,,I='v600^w,'">',' ЗАПИСЬ из ЭК, "связанная" с текущей ','</A>',' <b> \о произв.\','</b><br>' 
+ fi fi fi), 
+if val(&unifor('J,I600='v903))>0 
+then '<br>','<A HREF="IRBIS:2,,,,I600='v903,'">','Есть запись "О произведении"','</A>' fi, 
+if p(v691) then 
+   if &uf('IMAIN,LimPftFull_691,10')='' and val(&uf('+N691')) > 10 OR 
+      &uf('IMAIN,LimPftFull_691,10')<>''and val(&uf('+N691')) > val(&unifor('IMAIN,LimPftFull_691,10'))
+   then    
+      '<A HREF="IRBIS:1,,,691_FULL?&KEY=@',mfn,'">',
+      '<i><font size="3"> <br> Учебная литература (в новом окне) </font></i>','</A>','<br>',
+   else "<br> <b> Учебная литература: </b> "d691,
+        (|<br> |d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g), 
+fi fi,
+("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b),
+if a(v902) then if v920:'ASP' then ref(l("I="v463^w),("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b)) fi fi 
+
+if s(,odfp_H,)<>'' then '<br> ',odfp_H, fi,
+if p(v36^i) then '<br><b>Нотный инципит:</b><br>',
+   (if p(v36) then mdl,'<b>'v36^a,v36^b,v36^c,mpl,
+       if p(v36^a) then &uf('Av330^c#'v36^a) fi,| Часть |v36^b,if p(v36^b) then | : |d36^f fi,
+       | |v36^f,'</b>',
+       if s(v36^d,v36^1,v36^g,v36^m,v36^n,v36^o)<>'' then mdl,' (',v36^d,v36^1,
+          if v36^g:'=' then &uf('G2='v36^g) else v36^g     fi,mdl,v36^m,v36^n,v36^o,')',mpl,|. - |v36^q 
+       fi,
+       if p(v36^p) then '<br>'&uf('+S0'v36^p) fi,| (|v36^t|)|,
+       |<br>[[|,v36^i|]]<br>| fi), mpl,
+else 
+   (if p(v953) then 
+       if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+    fi fi) 
+fi 
+

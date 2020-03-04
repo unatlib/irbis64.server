@@ -1,0 +1,131 @@
+0
+// 11 991^W=пусто - признак, что обр-с€ перва€ порци€, дл€ суммировани€ со статусом U
+//8.1
+//полный и краткий вариант проверки фонда
+// выполн€етс€ на запис€х по запросу инвентарных номеров
+// 991: B - дата проверки C - провер€емый фонд A - заново?
+// 991^D=1 - полный вариант
+// в поле 1003 инвентари провер€емой порции
+IF
+if a(v1003) then '1' fi
+// инвентари беру все со статусом 0
+ADD
+1003
+
+(if p(v910) then if v910^a:&unifor('IMAIN,StatusProvFond,') then if p(v910^B) then v910^B else v910^H fi fi fi/)/
+
+FI
+REP
+1003
+F
+mpu,(v1003/),if v991^W=''then &uf('+7W2#2'),&uf('+7W11#'),&uf('+7W12#')fi,&uf('+7W10#'),&uf('+7W13#',v991^W)
+
+// цикл по пол€м 1003 - повторение 1003 находит свой инвентарь
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1941
+*
+
+
+IF
+if val(&uf('J',&unifor('+D'),',IN=',&uf('Av1003#1')))=0 then '1' fi
+PUTLOG
+&uf('Av1003#1'),' - экземпл€р не найден'
+FI
+//1003 - провер€емый инвентарь
+//v991^B - дата проверки
+//v991^c - провер€емый фонд=место хранени€
+// добавл€ю промежуточное подполе $ вместе с подполем 0=1 дл€ статуса U
+// в случае несовпадени€ дат проверки или если «јЌќ¬ќ
+ADD
+910^$
+F
+(if p(v910) then if v910^a:'U' and v910^h:';' then if &uf('+97',v910^h): &uf('Av1003#1') then if val(v910^0)<val(v910^1) then if &uf('Av991^A#1')='1' then if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else &uf('3') fi,,,if v910^0='' then ,,,'^01' else '^0',,f(val(v910^0)+1,0,0) fi,if v910^9='' then ,,,'^9'&uf('Av1003#1') else if v910^9:&uf('Av1003#1') then else '^9'v910^9,';'&uf('Av1003#1') fi fi,if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1')) then '^!'&uf('Av991^c#1') fi,,else if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else if a(v910^s) then &uf('3')else v910^s,fi,fi,if v910^0='' then ,,,'^01' else '^0'f(val(v910^0)+1,0,0) fi,if v910^9='' then '^9'&uf('Av1003#1') else if v910^9:&uf('Av1003#1')then else '^9'v910^9,';'&uf('Av1003#1') fi fi,,fi,fi,BREAK,else # fi else if &uf('+97',v910^h)=&uf('Av1003#1') or &uf('+97',v910^b)=&uf('Av1003#1') then if s(&uf('IMAIN,StatusProvFond,U,0,1')): v910^A then if val(v910^0)<val(v910^1) or a(v910^1) then if &uf('Av991^A#1')='1' then if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else &uf('3')fi,,,if v910^A:'U' and v910^0='' then ,,,'^01',&uf('+7W2#'),fi,,if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1')) then '^!'&uf('Av991^c#1') fi,,else if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else if a(v910^s) then &uf('3')else v910^s,fi,,fi,,if v910^A: 'U' then if v910^0='' then ,,,'^00',,&uf('+7W2#'),if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1')) then '^!'&uf('Av991^c#1') fi,fi,else if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1')) then '^!'&uf('Av991^c#1') fi,fi,fi,fi,else &uf('+7U12#',,&uf('Av1003#1'),': неверный статус - ',v910^A),,,fi,BREAK,else # fi fi,fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910^0
+F
+(if p(v910) then if p(v910^0) then if v910^$<>'' then if '2 6 7':v910^a then v910^0,else if v910^A: 'U' then if v910^h:';' and s(|;|v910^h|;|):s(';'&uf('Av1003#1')';') then v910^0 else if &uf('+97',v910^h)=&uf('Av1003#1') or &uf('+97',v910^b)=&uf('Av1003#1') then if &uf('Av991^A#1')='1'and val(&uf('Ag2#1'))=0 then '1',&uf('+7W2#7'),,else if &uf('Av991^B#1')<>'' and val(v910^$)<=val(&uf('Av991^B#1')) or &uf('Av991^B#1')='' and v910^s=&unifor('3') then f(val(v910^0)+1,0,0),else v910^0,fi fi,else v910^0fi,fi,else v910^0,fi,fi,else v910^0,fi,else # fi,fi/),
+XXXXXXXXXXXXXXXXXXX
+IF
+v991^D
+// с пересчетом цен
+ADD
+99
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) then if p(v910^$) then &uf('+7U11#',|^B|v910^b,|^H|v910^h),|^A|v910^a,|^B|v910^b,|^H|v910^h,|^C|d910^$,&uf('G0/'v910^$),|^D|v910^d,|^F|v910^f,|^S|v910^$,|^U|v910^u,|^Y|v910^Y,|^1|v910^1,if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1'))then |^!|d910^!,if &umarci('1910#!#2')<>''then &umarci('1910#!#2')else v910^! fi,|^0|d910^0,if &umarci('1910#0#2')<>''then &umarci('1910#0#2')else v910^0 fi,|^9|d910^9,if &umarci('1910#9#2')<>''then &umarci('1910#9#2')else v910^9 fi fi,|^2|v910^2,|^T|v910^t,|^R|v910^r,|^4|v910^4,|^=|v910^=,|^Q|v910^q,'^E',if p(v910^e) then if &uf('Av991^B#1')<>'' and val(v910^s)<=val(&uf('Av991^B#1')) or &uf('Av991^B#1')='' and  v910^s=&unifor('3') then v910^e else if p(v910^c) then if &unifor('Kizc.mnu|'v910^c.6)<>'' then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.6)),0,2) else if &unifor('Kizc.mnu|'v910^c.4)<>'' then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.4)),0,2) else f(val(v910^e)*val(&unifor('Kizc.mnu|1980')),0,2) fi fi else f(val(v910^e),0,2) fi fi else if p(v910^c) then if &unifor('Kizc.mnu|'v910^c.6)<>'' then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.6)),0,2) else if &unifor('Kizc.mnu|'v910^c.4)<>'' then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.4)),0,2) else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2) fi fi else f(val(&unifor('Av10^d#1'),' 0'),0,2) fi fi fi fi/),
+XXXXXXXXXXXXXXXXXXX
+// удал€етс€ цена, если она совпала с общей
+DEL
+99^E
+F
+(if p(v99) then if p(v99^s) then if &unifor('Av991^B#1')<>'' and &uf('G0/'v99^s)=&unifor('Av991^B#1') or &unifor('Av991^B#1')='' and &uf('G0/'v99^s)=&unifor('3') then if f(val(v99^e),0,2)=f(val(&unifor('Av10^d#1')),0,2) then '1' else '0' fi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if v991^D<>'1' then '1' fi
+/* без пересчета цен
+ADD
+99
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) then if p(v910^$) then &uf('+7U11#',|^B|v910^b,|^H|v910^h),|^A|v910^a,|^B|v910^b,|^H|v910^h,|^C|v910^C,,|^D|v910^d,|^F|v910^f,|^S|v910^$,|^U|v910^u,|^Y|v910^Y,|^1|v910^1,if &uf('Av991^c#1')<>''and &uf('+97'v910^d)<>&uf('+97',&uf('Av991^c#1'))then |^!|d910^!,if &umarci('1910#!#2')<>''then &umarci('1910#!#2')else v910^! fi,fi,|^0|d910^0,if &umarci('1910#0#2')<>''then &umarci('1910#0#2')else v910^0 fi,|^9|d910^9,if &umarci('1910#9#2')<>''then &umarci('1910#9#2')else v910^9 fi,|^2|v910^2,|^T|v910^t,|^R|v910^r,|^4|v910^4,|^=|v910^=,|^Q|v910^q,|^e|v910^E fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+// в архивное поле
+ADD
+1941
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) and p(v910^$) then |^A|v910^a,|^B|v910^b,|^H|v910^h,|^D|v910^d,|^F|v910^f,|^S|v910^$,|^U|v910^u,|^Y|v910^Y,|^1|v910^1,|^2|v910^2,|^T|v910^t,|^R|v910^r,|^4|v910^4,|^=|v910^=,|^Q|v910^q,|^!|d910^!,if &umarci('1910#!#2')<>''then &umarci('1910#!#2')else v910^!fi,|^E|v910^e,if a(v910^e)then if &unifor('Av10^d#1')<>'' then '^E'&unifor('Av10^d#1') fi fi,|^C|v910^c,|^0|d910^0,if &umarci('1910#0#2')<>''then &umarci('1910#0#2')else v910^0 fi,|^9|d910^9,if &umarci('1910#9#2')<>''then &umarci('1910#9#2')else v910^9 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+941
+XXXXXXXXXXXXXXXXXXX
+if s(v941): s(|^A|v1941^a,|^B|v1941^b,|^H|v1941^h,|^D|v1941^d,|^F|v1941^f,|^S|v1941^s,|^U|v1941^u,|^Y|v1941^Y,|^1|v1941^1,|^2|v1941^2,|^T|v1941^t,|^R|v1941^r,|^4|v1941^4,|^=|v1941^=,|^Q|v1941^q,|^!|v1941^!) then else v1941 fi
+XXXXXXXXXXXXXXXXXXX
+REP
+941
+F
+(if p(v941)then |^A|v941^a,|^B|v941^b,|^H|v941^h,|^D|v941^d,|^F|v941^f,|^S|v941^s,|^U|v941^u,|^Y|v941^Y,|^1|v941^1,|^2|v941^2,|^T|v941^t,|^R|v941^r,|^4|v941^4,|^=|v941^=,|^!|v941^!,|^Q|v941^q,|^C|v941^c,if p(v941^0)then if v941^a:'U' and v941^h:';' then if &uf('+97',v941^h):&uf('Av1941^h#1') and v941^s=&uf('Av1941^s#1') then '^0'&uf('Av1941^0#1'),'^9'&uf('Av1941^9#1') else |^0|v941^0,|^9|v941^9 fi else '^0'if (&uf('+97',v941^h)=&uf('Av1941^h#1') or &uf('+97',v941^b)=&uf('Av1941^b#1')) and v941^s=&uf('Av1941^s#1') then &uf('Av1941^0#1') else v941^0 fi fi fi fi/)
+// если тот же инвентарь и экз-р на проверке, то счетчик в подполе 0
+DEL
+910
+F
+(if p(v910) then if p(v910^$)then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(v99/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+99
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1003
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1941
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1003) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// формирование протокола проверки
+PUTLOG
+&uf('+7W15#'&uf('+1G11')),&uf('+7W14#'(| |g15| |)),&uf('+7U12#'(if p(v910)then if &uf('Ag14#1'):s(' '|^B|v910^b,|^H|v910^h' ')then v910^9,if a(v910^9)then v910^b,if p(v910^b)then |(|v910^h|)|else v910^h fi fi,if p(v910^!)then ': проверено, не на месте ('v910^!|)|else ': проверено'fi,,|(|v910^0| из |,v910^1|)|fi fi/)),(g12/)
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

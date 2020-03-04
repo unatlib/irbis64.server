@@ -1,0 +1,11 @@
+&uf('+7W11#'),
+&uf('+7W11#',
+if &uf('Kmhr.mnu|'g10)<>'' then &uf('Kmhr.mnu|'g10) else g10 fi,': ',
+f(rsum((if p(v44) then if v44^i=&uf('Ag10#1') then v44^j|;| fi fi)),0,0),' назв., ',
+f(rsum((if p(v44) then if v44^i=&uf('Ag10#1') then v44^k|;| fi fi)),0,0),' экз. ' 
+if rsum((if p(v44) then if v44^i=&uf('Ag10#1') then v44^+|;| fi fi))>0 then 'на сумму ',
+   f(rsum((if p(v44) then if v44^i=&uf('Ag10#1') then v44^+|;| fi fi)),0,2),' '&uf('Korg.mnu|3'),
+   else ' бесплатно' fi),
+&uf('+7U12#',g11),
+
+

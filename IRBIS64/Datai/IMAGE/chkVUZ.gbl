@@ -1,0 +1,86 @@
+0
+// 7.1 проверка записей каталога
+IF
+if p(v691) then '1' fi
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(if p(v691) then if a(v691^U) then v691 fi fi/)
+
+DEL
+111
+*
+
+
+ADD
+111
+
+'0'
+
+IF
+if p(v1691) then '1' fi
+// цикл по полям 691
+REPEAT
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+IF
+if &uf('Av1691^I#1')='' then '1' fi
+PUTFLD
+'Нет идентификатора дисциплины ',&uf('Av1691^D#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+IF
+if &uf('Av1691^I#1')<>'' then '1' fi
+// есть ли запись дисциплины с идентификатором
+IF
+if Val(&uf('JVUZ,IDD=',&uf('Av1691^I#1')))<=0 then '1' fi
+PUTFLD
+'Нет дисциплины с идентификатором ',&uf('Av1691^I#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+IF
+if val(&uf('JVUZ,IDD=',&uf('Av1691^I#1')))>0 then '1' fi
+// проверяю запись VUZ
+IF
+if val(&uf('JVUZ,DUNS=',&uf('Av1691^W#1'),'-S',&uf('Av1691^F#1')))<=0 then '1' fi 
+PUTFLD
+'Нет записи VUZ с идентификатором-семестром ',&uf('Av1691^W#1'),'-',&uf('Av1691^F#1'),' MFN=',f(val(mfn),0,0),' (',v111,')'
+FI
+FI
+FI
+DEL
+1691
+1
+
+
+UNTIL
+if p(v1691) then '1' fi
+FI
+DEL
+111
+*
+
+
+GETFLD
+4000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI

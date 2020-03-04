@@ -1,0 +1,9 @@
+(if p(v925) then '. <b>'v925^v'</b>',
+    if p(v925^a) then | : |d925^v,mhl,v925^a,| ; |v925^b,| ; |v925^c mpl fi,
+    | = |v925^d,| = |v925^p,| = |v925^r,| : |v925^e,
+    if s(v925^h,v925^i)<>''then'. 'fi,v925^h,
+    if p(v925^h)then| : |d925^i fi,v925^i,
+    if s(v925^k,v925^l)<>''then'. 'fi,v925^k,
+    if p(v925^k)then| : |d925^l fi,v925^l,| / |v925^g,
+    if a(v925^g) and p(v925^f) then' / ',ibis925g,fi 
+fi)

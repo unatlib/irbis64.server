@@ -1,0 +1,18 @@
+if a(v30) then &uf('6enter0_cee'),'<br><b><font style="color: #FF0000">Читатель не найден - ',v1007*3,'</font><b><br>' else 
+if val(&uf('J,RI=',v30))>1 /* проверка на неоднозначность читателя 
+   then &uf('6enter0_cee'),'<br><b><font style="color: #FF0000">Неоднозначность читателя - ',v30,'</font><b><br>',
+   else  /* ПРОВЕРКА: ФЛК на ВХОД
+        &uf('+7W10#',&uf('6enterflc_cee')), 
+        /* в глобальной 10 - результат ФЛК
+        if g10.1='1' 
+             then &uf('6enter0_cee'),'<br><b><font style="color: #FF0000">Вход запрещен. ',g10*1,'</font><b>',&uf('6rdrw_html_dolg'),
+             else if v999='1'  /* проверка: не числится ли читатель уже среди посетителей
+                      then &uf('6enter0_cee'),'<br><b><font style="color: #FF0000">Читатель уже числится среди текущих посетителей</font><b>',&uf('6rdrw_html_dolg'), 
+                      else /* формирование конвейерной команды на корректировку записи читателя в части ПОСЕЩЕНИЯ
+                           /* в глобальной 2 - заготовка для поля 40
+                           &uf('+7W2#','^F',&uf('3'),'^D',&uf('3'),'^C(Посещение)^1',&uf('39'),'^2',&uf('39'),'^V',&uf('IREQUEST,MASKMRG,*'),'^I',&uf('IMAIN,OTVFACE,')),
+                           'IRBIS:?C21COM=6&RELOAD=1&PFTNAME=enter2_cee&R21UPD=1&ENTRY_MESSAGE=!&ENTRY_MFN=',mfn,'&999_0R21STR=1&40_0R21STR=',&uf('+3E',g2),'&FREEPAR0=',&uf('+3E',g10*1)
+                  fi 
+        fi 
+fi 
+fi

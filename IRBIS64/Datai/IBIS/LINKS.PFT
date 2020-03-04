@@ -1,0 +1,7 @@
+/'<HTML>',
+'<meta http-equiv="Content-Type" content="text/html; charset=utf-8">',
+/'<BODY>',
+(/if p(v951^I) then '<A HREF="',&uf(|+\1|v951^I),'">' else if p(v951^A) then |<A HREF="IRBIS:3,11,,|v951^A|">| fi fi,
+if p(v951^T) then v951^T else if p(v951^I) then &uf(|+\1|v951^I) else v951^A fi fi,|</A><BR>|d951),
+/'</BODY>',
+/'</HTML>'

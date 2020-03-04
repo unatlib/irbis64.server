@@ -1,0 +1,9 @@
+mhl,v210^a,
+if s(v210^n,v210^c,v210^S)<>''then' ('v210^n,if v210^N<>'' and v210^C<>'' then " ; ",v210^c else v210^c fi,
+ if v210^S<>'' and (v210^C<>'' or v210^N<>'') then ' ; ',&uf('Kstr.mnu|'v210^S) else &uf('Kstr.mnu|'v210^S) fi,')' fi,
+". "v210^b,if v210:'^d' or v210:'^f' or v210:'^e' then ' (',v210^d,
+if v210:'^d' and v210:'^f' then ";"v210^f  else v210^f fi,if v210:'^e' and (v210:'^f' or v
+210:'^d') then ";"v210^e," / "v210^H, " / "v210^I else v210^e," / "v210^H, " / "v210^I fi,')' fi,if v210:'^X' or v210:'^y' or v210:'^z' then ' (',v210^X,if v210:'^
+X' and v210:'^Y' then ";"v210^Y  fi,if v210:'^X' and v210:'^Y' AND V210:'^Z' then ";"v210^z fi,')' fi
+
+

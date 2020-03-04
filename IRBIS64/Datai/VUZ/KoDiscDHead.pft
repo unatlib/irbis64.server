@@ -1,0 +1,247 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^W<>'' 
+then 
+/*-----------------------------------------строка-------------------------------
+/*---------------------еще раз проверяю строку с учетом заголовка
+/*------------- набор наименований в G10, экземпляров в G11, ККО в G12
+        &uf('+7W992#',,,,
+        &uf('+97',
+         '^O',,,if v1^A<>'' and  v1^A<>' ' then v1^A else v1^O fi,,,
+         '^V',,,if v1^B<>'' and  v1^B<>' ' then v1^B else v1^V fi,,,
+         '^A',,,if v1^C<>'' and  v1^C<>' ' then v1^C else v1^1 fi,,,
+         '^N',,,if v1^F<>'' and  v1^F<>' ' then v1^F else v1^2 fi,,,
+         '^C',,,if v1^G<>'' and  v1^G<>' ' then v1^G else v1^3 fi,,,
+         '^I',V1^X,,
+         '^F',,,if v1^I<>'' and  v1^I<>' ' then v1^I else v1^4 fi,,,
+         '^S',,,if v1^E<>'' and  v1^E<>' ' then v1^E else v1^S fi,,,
+/*  тип
+        '^G',,,if v1^5<>'' and  v1^5<>' ' then v1^5 fi,,,
+        '^=',v1^=  ) ),,,,,,,
+        &uf('+7W10#'),,&uf('+7W11#'),,&uf('+7W12#'),,&uf('+7W20#'),,
+        &uf('7',,G30,,',!IDD=',v1^X,'!,@KoDiscNumEkz'),,,,
+/*отладка '!!!v1=',,v1,,,,,,,,'   !!!992=',g992,,,' G10=',(g10/),,,'\par ',,,
+/* наименований в G13
+        &uf('+7W13#'  f(rsum((if p(G10) then '1,' fi)),0,0)  ),,
+/*-----фильтр - есть учебники
+         if val(G13)>0 or val(G13)=0 and val(v1^Q)=0 
+         then 
+/*................................................есть учебники.......................
+/* экземпляров в G15        
+           &uf('+7W15#'  f(rsum((if p(G11) then G11,',' fi)),0,0)  ),,
+/*-------------------сумма ККО в G14
+           &uf('+7W14#'  f(rsum((if p(G12) then G12,,',' fi)),0,2)  ),,
+/*-------------------фильтр по - есть наименования и ККО больше/меньше заданного
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx500 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*------- число дисциплин перевожу на g54 - счетчик дисциплин по специальности
+&uf('+7W54#',,,f(val(g54)+1,0,0) ),,,
+/*g54,,
+&uf('+7W55#',,,f(val(g55)+1,0,0) ),,,,,g55,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4500 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*---------наименование
+v1^W,,' (',,V1^X,,')',,,
+/*отладка  
+if val(v1^:)=1 then '\par 992=',v992,,,,'\par ',,'MFN->',,,(if p(g10) then f(val(g10),0,0),', ' fi),,,,'   ЭКЗ->',,,(if p(g11) then g11,', ' fi),,,,' ККО->',,,(if p(g12) then g12,', ' fi),,fi,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----------------цикл
+ref(l('IDD=',v1^X),v4),,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5900 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*--------------УК
+ref(l('IDD=',v1^X),v6),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6600 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*--------------кафедра
+ref(l('IDD=',v1^X),v5),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7200 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*------------- наименований в G13  
+/* отладка (g10,'\par '/),,,
+&uf('+7W13#'  f(rsum((if p(G10) then '1,' fi)),0,0)  ),,g13,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7900 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*--------------экземпляры в G15  V1^8,,,
+,,&uf('+7W15#'  f(rsum((if p(G11) then G11,',' fi)),0,0)  ),,g15,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8500 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*-------------------студенты
+&uf('+7W991#',,,,
+'^O',if v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
+'^V',if v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
+'^A',if v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
+'^N',if v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
+'^C',if v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
+'^F',if v1^4<>' ' and v1^4<>'' then v1^4 else v1^I fi,,
+/* тип литературы
+'^G',,,if v1^5<>'' and  v1^5<>' ' then v1^5 fi,,,
+'^I',v1^X,,
+'^=',v1^=,,
+'^:',v1^:,,,
+),,,,
+/* ----отладка 
+if val(v1^:)=1 then 'V1=',v1^X,,,' g991=',G991,,,'---', &uf('7RDR,!IDD=',v1^X,'!,mfn/') '---->'fi,,,
+if &uf('IMAIN,AccessRdr,1')='1' then &uf('+7W60#',,f(rsum(&uf('7RDR,!IDD=',v1^X,'!,@KoNumbRDR')),0,0)   ) else
+                                     &uf('+7W60#',,f(rsum(&uf('7VUZ,!IDV=',v1^X,'!,@lncRDRVuz')),0,0)  ) fi,,,
+G60,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9300 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-------------------средний ККО по полю 693 - деление суммы ККО в g14 на число наимен. в g13
+/*---отладка  
+if val(v1^:)=1 then g14,,'/',,g13,,,'--->' fi,,,
+if val(v1^^)=1 
+then
+   &uf('+7W71#',if val(g13)>0 then if val(g14)>0 then f(val(g14)/val(g13),0,2) fi  fi ),,
+   if val(g71)>1 then '1' else g71 fi,,,,
+else 
+   if val(g13)>0 then if val(g14)>0 then f(val(g14)/val(g13),0,2) fi  fi,,,,,,,,
+fi,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10000 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-------------------Последний год издания
+V1^T,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10600 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-------------------Кол-во ЭУ
+&uf('+7W10#'),,&uf('+7W11#'),,&uf('+7W12#'),,
+/*---g11 - кол-во ЭУ по дисциплине
+if &uf('IPRIVATE,DBN,')<>'' then &uf('+7W30#',,,&uf('IPRIVATE,DBN,') ) else &uf('+7W30#IBIS') fi,,
+&uf('+7U11#',,&uf(  '7',G30,',!IDD=',,,V1^X,,'!,@KoElectroFiltr'  )  ),,
+&uf('+7W52#',,,f(rsum((if p(G11) then '1,' fi)) ,0,0)  ),,,,,,,g52,,,
+/*----- отладка
+if val(v1^:)=1 then '\par ',,g991,,'-->',(if p(g12) then '\par ',,g12, fi/) fi,,,,,,,,,,,,,
+/*---g54 - кол-во всех дисциплин по специальности
+/*---g53 - кол-во дисциплин по специальности, у кот кол-во ЭУ превышает v1^0
+/*---g52 - кол-во ЭУ по дисциплине
+/*---v1^% - признак, что задан заголовок по специальности и признак вычислять КЭИ
+if Val(v1^%)=1 
+then 
+   if val(g52)>0 and val(g52)>=val(v1^0) then &uf('+7W53#',,,f(val(g53)+1,0,0)  )  fi,,,,,,,,,,,,
+fi,,
+/*******************************************'g52 ',g52,'\par ',,'^0 ',v1^0,,'\par ',,'g53 ',g53,,'\par ',,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+/*...........................................есть учебники......................................
+         fi,,,,,,,,,,,,,,
+else 
+/*-----------------------------------------------итоги
+   if val(v1^%)=1 and val(g50)=1 
+   then 
+      '\trowd \trqc\trgaph108\trleft-108\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat16\cellx10600 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+       '\gl  Всего дисциплин: ',,,G54,,'\par ',,
+       ' Дисциплин, обеспеченных ЭУ ',,,if v1^0<>'' then '(в количестве равно-более ',,v1^0,,,,,')' fi,,,': ',,,,,G53,,'\par ',,
+       if val(g54)>0 then ' КЭИ: ',,f(val(g53)/val(g54),0,2) fi,,,
+       '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '       
+   fi,,,,,,,,,,,,,,,
+/*-----------------------------------------------заголовки-------------- 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrt\brdrs\brdrw30
+\clcbpat16 
+\cellx10600 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+/*---g55 - порядковый номер внутри заголовка
+  &uf('+7W55#'),
+  if v1^I<>'' and v1^I<>' ' 
+  then 
+     ,'\cb11 \cf9 ','              Семестр: ',v1^I,,'\cb \cf ',,'\par ' 
+  else 
+    if v1^H<>'' and v1^H<>' ' 
+    then 
+       ,'\cb11 \cf9 ','            Кафедра выпкскающая: ',v1^H,,'\cb \cf ',,'\par ' 
+    else 
+      if v1^G<>'' and v1^G<>' ' 
+      then 
+         '\cb11 \cf9 ',,'          Специальность: ',v1^G ,,,,,,,,'\cb \cf ',,'\par ' 
+/* счетчик для ЭУ
+/*---g54 - кол-во всех дисциплин по специальности
+/*---g53 - кол-во дисциплин по специальности, у кот кол-во ЭУ превышает v1^0
+/*---g50 - признак вывод заголовка (для вывода итогов)
+/*---g70 - признак выводить итогов TBU
+         &uf('+7W53#'),,&uf('+7W54#'),,,&uf('+7W50#1'),
+         if val(v1^%)=1 then &uf('+7W70#1') fi,,,,,
+      else 
+        if v1^F<>'' and v1^F<>' ' 
+        then 
+          ,'\cb11 \cf9 ','          Направление: ',v1^F,,'\cb \cf ',,'\par ' 
+        else 
+          if v1^E<>'' and v1^E<>' ' 
+          then 
+            ,'\cb11 \cf9 ','        Цикл: ',if &uf('Kcikld.mnu!',v1^E)<>'' then &uf('Kcikld.mnu!',v1^E) else V1^E fi,,'\cb \cf ',,'\par ' ,
+          else 
+            if v1^D<>'' and v1^D<>' '           
+            then 
+              ,'\cb11 \cf9 ','      Кафедра: ',V1^D,,'\cb \cf ',,'\par ' ,            
+            else 
+              if v1^C<>'' and v1^C<>' '           
+              then 
+                '\cb11 \cf9 ','    Факультет: ',if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C),,' (',v1^C,')',,,, else V1^C fi,,'\cb \cf ','\par ' ,                          
+             else           
+                if v1^B<>'' and v1^B<>' '           
+                then 
+                  ,'\cb11 \cf9 ','  Вид обучения: ',if &uf('Kvo.mnu!',v1^B)<>'' then &uf('Kvo.mnu!',v1^B) else V1^B fi,,'\cb \cf ',,'\par '                         
+                else           
+                  if v1^A<>'' and v1^A<>' ' 
+                  then 
+                    ,'\cb11 \cf9 ','Форма обучения: ',if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else V1^A fi,,'\cb \cf ',,'\par ' 
+fi fi fi fi fi fi fi fi fi 
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}'

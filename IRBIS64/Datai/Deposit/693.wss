@@ -1,0 +1,141 @@
+14
+B
+Учебный год
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C  then v692^B fi fi/)
+C
+Полугодие
+0
+0
+1
+ovs.mnu
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then v692^C fi fi/)
+L
+Филиал
+0
+0
+1
+fili.mnu
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^L) then v692^L else '-' fi fi fi/)
+A
+Выдел.категория
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^A) then v692^A else '-' fi fi fi/)
+D
+Число экз. без КМИ
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^D) then v692^D else '-' fi fi fi/)
+K
+Число экз. с КМИ
+0
+0
+0
+
+
+
+
+
+Q
+Число экз.аналогов
+0
+0
+0
+
+
+
+
+
+E
+Число студентов
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^E) then v692^E else '-' fi fi fi/)
+F
+Коэффиц.КО
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^F) then v692^F else '-' fi fi fi/)
+M
+ККО  - общие или остальные (есть ВК)
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^M) then v692^M else '-' fi fi fi/)
+N
+ККО без учета ВК
+0
+0
+0
+
+
+
+
+(if p(v692) then if &uf('G0-', &uf('Av991#1'))=v692^B and  &uf('G2-', &uf('Av991#1'))=v692^C then if p(v692^N) then v692^N else '-' fi fi fi/)
+P
+KKO с аналогами
+0
+0
+0
+
+
+
+
+
+S
+Среднее для весеннего
+0
+0
+0
+
+
+
+
+
+X
+Признак общих или без учета ВК
+0
+0
+0
+
+
+
+
+

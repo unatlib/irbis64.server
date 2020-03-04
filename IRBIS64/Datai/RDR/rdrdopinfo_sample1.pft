@@ -1,0 +1,2 @@
+(if p(v40) then ,if (v40^A<>'') and (v40^F:'*') then  &uf('D',v40^G,',!I=',v40^A,'!,@oblogka') else '-' fi  / fi)
+

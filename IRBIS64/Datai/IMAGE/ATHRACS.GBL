@@ -1,0 +1,407 @@
+0
+IF
+if s(v700,v701,v702,v600,v330^f,v922^f,v925^f,v926,v961^x,v961^a,v391,v454^d,v470^a,v481^x)<>''then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+,oavtor,
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^A'then if &unifor('JATHRA,','!',if &unifor('Av1002^a*23.1#1')<>''then &unifor('B'&unifor('Av1002^a#1')) else &unifor('Av1002^a#1') fi,if &unifor('Av1002#1'):'^G'then &unifor('B'&unifor('Av1002^G#1')) else &unifor('Av1002^b#1') fi,&unifor('Av1002^1#1'),&unifor('Av1002^d#1'),&unifor('Av1002^f#1'),if &unifor('Av1002#1'):'^A'then '?' fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^A'then '^A',&unifor('Av1002^A#1')fi,if &unifor('Av1002#1'):'^B'then '^B',&unifor('Av1002^B#1') fi,if &unifor('Av1002#1'):'^G'then '^G',&unifor('Av1002^G#1') fi,if &unifor('Av1002#1'):'^1'then '^1',&unifor('Av1002^1#1')fi,if &unifor('Av1002#1'):'^C'then '^C',&unifor('Av1002^C#1')fi,if &unifor('Av1002#1'):'^D'then '^D',&unifor('Av1002^D#1')fi,if &unifor('Av1002^L#1')<>''then '^9',&unifor('Av1002^L#1') else if &unifor('Av1002^9#1')<>''then '^90' fi fi,if &unifor('Av1002#1'):'^F'then '^F',&unifor('Av1002^F#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^P'then  '^P',&unifor('Av1002^P#1')fi,if &unifor('Av1002#1'):'^Y'then '^Y',&unifor('Av1002^Y#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+510
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002^R#1'):','then '^A',&unifor('G0,'&unifor('Av1002^R#1')),'^B',&unifor('B'&unifor('G2 '&unifor('G2,'&unifor('Av1002^R#1')))) else if &unifor('Av1002^R#1'):' ' and (not(&unifor('Av1002^R#1'):',')) then '^A',&unifor('G0 '&unifor('Av1002^R#1')),'^B',&unifor('G2 '&unifor('Av1002^R#1')) else if (not(&unifor('Av1002^R#1'):' ')) and (not(&unifor('Av1002^R#1'):','))then '^A',&unifor('Av1002^R#1') fi fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^5'then if &unifor('JATHRA,','!',if (not(&unifor('Av1002^5#1'):' ')) and (&unifor('Av1002^X#1')='' or &unifor('Av1002^X.1#1'):'1') then &unifor('Av1002^5#1') else if &unifor('Av1002^5#1'):' ' and ((not(&unifor('Av1002#1'):'^X')) or &unifor('Av1002^X.1#1'):'1') then &unifor('G0 '&unifor('Av1002^5#1')),if (not(&unifor('Av1002#1'):'^G')) then &unifor('G2 '&unifor('Av1002^5#1')) fi else if &unifor('Av1002^5#1'):' ' and &unifor('Av1002#1'):'^X'then &unifor('E'&unifor('Av1002^X#1'),&unifor('Av1002^5#1')),if (not(&unifor('Av1002#1'):'^B')) and &unifor('Av1002^5#1'):'.' then &unifor('F'&unifor('Av1002^X#1'),&unifor('Av1002^5#1')) else &unifor('Av1002^B#1')fi fi fi fi,if &unifor('Av1002#1'):'^G' then &unifor('B'&unifor('Av1002^G#1')) fi,&unifor('Av1002^1#1'),&unifor('Av1002^d#1'),&unifor('Av1002^f#1'),if &unifor('Av1002#1'):'^5'then '?' fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^G' then '^G',&unifor('Av1002^G#1') fi,if (not(&unifor('Av1002^5#1'):' ')) and (&unifor('Av1002^X#1')='' or &unifor('Av1002^X.1#1'):'1') then '^A',&unifor('Av1002^5#1') else if &unifor('Av1002^5#1'):' ' and ((not(&unifor('Av1002#1'):'^X')) or &unifor('Av1002^X.1#1'):'1')then '^A',&unifor('G0 '&unifor('Av1002^5#1')),'^B',&unifor('G2 '&unifor('Av1002^5#1')) else if &unifor('Av1002^5#1'):' ' and &unifor('Av1002#1'):'^X'then '^A',&unifor('E'&unifor('Av1002^X#1'),&unifor('Av1002^5#1')),if (not(&unifor('Av1002#1'):'^B')) and &unifor('Av1002^5#1'):'.' then '^B',&unifor('F'&unifor('Av1002^X#1'),&unifor('Av1002^5#1'))  else '^B',&unifor('Av1002^B#1')fi fi fi fi,if &unifor('Av1002#1'):'^1'then '^1',&unifor('Av1002^1#1') fi,if &unifor('Av1002#1'):'^C'then '^C',&unifor('Av1002^C#1') fi,if &unifor('Av1002#1'):'^D'then '^D',&unifor('Av1002^D#1') fi,if &unifor('Av1002#1'):'^L'then '^9',&unifor('Av1002^L#1') fi,if &unifor('Av1002#1'):'^F'then '^F',&unifor('Av1002^F#1') fi,if &unifor('Av1002#1'):'^X'then '^<',&unifor('Av1002^X#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^P'then '^P',&unifor('Av1002^P#1')fi,if &unifor('Av1002#1'):'^Y'then '^Y',&unifor('Av1002^Y#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+510
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002^R#1'):','then '^A',&unifor('G0,'&unifor('Av1002^R#1')),'^B',&unifor('B'&unifor('G2 '&unifor('G2,'&unifor('Av1002^R#1')))) else if &unifor('Av1002^R#1'):' ' and (not(&unifor('Av1002^R#1'):',')) then '^A',&unifor('G0 '&unifor('Av1002^R#1')),'^B',&unifor('G2 '&unifor('Av1002^R#1')) else if (not(&unifor('Av1002^R#1'):' ')) and (not(&unifor('Av1002^R#1'):','))then '^A',&unifor('Av1002^R#1') fi fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^R'then if &unifor('JATHRA,','!',if &unifor('Av1002^R#1'):','then &unifor('G0,'&unifor('Av1002^R#1')),&unifor('B'&unifor('G2 '&unifor('G2,'&unifor('Av1002^R#1')))) else if &unifor('Av1002^R#1'):' ' and (not(&unifor('Av1002^R#1'):',')) then &unifor('G0 '&unifor('Av1002^R#1')),&unifor('G2 '&unifor('Av1002^R#1')) else if (not(&unifor('Av1002^R#1'):' ')) and (not(&unifor('Av1002^R#1'):','))then &unifor('Av1002^R#1') fi fi fi,if &unifor('Av1002#1'):'^R'then '?' fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002^R#1'):','then '^A',&unifor('G0,'&unifor('Av1002^R#1')),'^G',&unifor('G2 '&unifor('G2,'&unifor('Av1002^R#1'))) else if &unifor('Av1002^R#1'):' ' then '^A',&unifor('G0 '&unifor('Av1002^R#1')),'^B',&unifor('G2 '&unifor('Av1002^R#1')) else '^A'&unifor('Av1002^R#1') fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^P'then '^P',&unifor('Av1002^P#1')fi,if &unifor('Av1002#1'):'^Y'then '^Y',&unifor('Av1002^Y#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^8' then if &unifor('JATHRA,','!',if &unifor('Av1002^8#1'):','then &unifor('G0,'&unifor('Av1002^8#1')),&unifor('B'&unifor('G2 '&unifor('G2,'&unifor('Av1002^8#1')))) else if &unifor('Av1002^8#1'):' ' then if &unifor('Av1002^X#1'):'1' or &unifor('Av1002^X#1')='' then &unifor('G0 '&unifor('Av1002^8#1')),&unifor('G2 '&unifor('Av1002^8#1')) else &unifor('E'&unifor('Av1002^X#1'),&unifor('Av1002^8#1')),&unifor('G0.'&unifor('F'&unifor('Av1002^X#1'),&unifor('Av1002^8#1')))'.'  fi else if (not(&unifor('Av1002^8#1'):' ')) and (not(&unifor('Av1002^8#1'):','))then &unifor('Av1002^8#1') fi fi fi,if &unifor('Av1002#1'):'^8'then '?' fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002^8#1'):','then '^A',&unifor('G0,'&unifor('Av1002^8#1')),'^G',&unifor('G2 '&unifor('G2,'&unifor('Av1002^8#1'))) else if &unifor('Av1002^8#1'):' ' then if &unifor('Av1002^X#1')=''or &unifor('Av1002^X#1.1'):'1'then '^A',&unifor('G0 '&unifor('Av1002^8#1')),'^B',&unifor('G2 '&unifor('Av1002^8#1')) else '^A',&unifor('E'&unifor('Av1002^X#1'),&unifor('Av1002^8#1')),'^B',&unifor('F'&unifor('Av1002^X#1'),&unifor('Av1002^8#1')) fi else '^A'&unifor('Av1002^8#1') fi fi,if &unifor('Av1002#1'):'^X'then '^<',&unifor('Av1002^X#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^P'then '^P',&unifor('Av1002^P#1')fi,if &unifor('Av1002#1'):'^Y'then '^Y',&unifor('Av1002^Y#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^6'then if &unifor('JATHRA,','!',if &unifor('Av1002^6#1'):' ' and &unifor('Av1002#1'):'^G' and (not(&unifor('Av1002#1'):'^X')) then &unifor('G0 '&unifor('Av1002^6#1')),&unifor('B'&unifor('Av1002^G#1')) else if (&unifor('Av1002#1'):'^G' and (not(&unifor('Av1002^6#1'):' '))) or (&unifor('Av1002#1'):'^G' and &unifor('Av1002#1'):'^X')then &unifor('Av1002^6#1'),&unifor('B'&unifor('Av1002^G#1')) else if &unifor('Av1002^G#1')='' and &unifor('Av1002^6#1'):' ' and (not(&unifor('Av1002#1'):'^X'))then &unifor('G0 '&unifor('Av1002^6#1')),&unifor('G2 '&unifor('Av1002^6#1')) fi fi fi,if &unifor('Av1002#1'):'^6'then '?' fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^6' then '^G',&unifor('Av1002^G#1') fi,if (not(&unifor('Av1002^6#1'):' ')) and (&unifor('Av1002^X#1')='' or &unifor('Av1002^X.1#1'):'1') then '^A',&unifor('Av1002^6#1') else if &unifor('Av1002^6#1'):' ' and (&unifor('Av1002^X#1')='' or &unifor('Av1002^X.1#1'):'1')then '^A',&unifor('G0 '&unifor('Av1002^6#1')),'^B',&unifor('G2 '&unifor('Av1002^6#1')) else if &unifor('Av1002^6#1'):' ' and &unifor('Av1002#1'):'^X'then '^A',&unifor('E'&unifor('Av1002^X#1'),&unifor('Av1002^6#1')),if (not(&unifor('Av1002#1'):'^B')) and &unifor('Av1002^6#1'):'.' then '^B',&unifor('G0.'&unifor('F'&unifor('Av1002^X#1'),&unifor('Av1002^6#1'))),'.'  else '^B',&unifor('Av1002^B#1')fi fi fi fi,if &unifor('Av1002#1'):'^?' then'^A'&unifor('Av1002^?#1') fi,if &unifor('Av1002#1'):'^9' then '^B'&unifor('Av1002^9#1') fi,if &unifor('Av1002#1'):'^X' then '^<'&unifor('Av1002^X#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^P'then '^P',&unifor('Av1002^P#1')fi,if &unifor('Av1002#1'):'^Y'then '^Y',&unifor('Av1002^Y#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1002) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if s(v710,v711,v971,v972,v962,v210^A,v461^G)<>''then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1005
+XXXXXXXXXXXXXXXXXXX
+(v710/v711/v972/v962/|^A|v210^c,|^X|v210^A,|^Y|v210^X,|^Z|v210^Y/|^A|v461^G,|^X|v461^D/|^1|v971^B,|^V|v971^v,|^D|v971^D,|^F|v971^F,|^E|v971^E,|^H|v971^H,|^I|v971^I,|^7|v971^7/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1005#1'):'^A'then if &unifor('JATHRC,',if &unifor('Av1005^E#1')='' and &unifor('Av1005^D#1')='' and &unifor('Av1005^F#1')='' and (&unifor('Av1005#1')='^N' or &unifor('Av1005#1'):'^C' or &unifor('Av1005#1'):'^X' or &unifor('Av1005#1'):'^A')then '!',&unifor('Av1005^c#1'),&unifor('Av1005^X#1'),if &unifor('Av1005^a*6.1#1')<>''then &unifor('B',&unifor('Av1005^a#1')) else &unifor('Av1005^A#1') fi,if &unifor('Av1005^b*6.1#1')<>''then &unifor('B'&unifor('Av1005^b#1')) else &unifor('Av1005^b#1') fi, else if &unifor('Av1005#1'):'^D' or &unifor('Av1005#1'):'^E' or &unifor('Av1005#1'):'^F' then '!',&unifor('Av1005^D#1'),&unifor('Av1005^F#1'),&unifor('Av1005^E#1'),if &unifor('Av1005^a*6.1#1')<>''then &unifor('B'&unifor('Av1005^a#1'))else &unifor('Av1005^a#1') fi fi fi,)=''then 'ATHRC' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^A'then '^A'&unifor('Av1005^A#1') fi,if &unifor('Av1005#1'):'^7'then '^6',&unifor('Av1005^7#1') fi,if &unifor('Av1005#1'):'^S'then '^S',&unifor('Av1005^S#1') fi,if &unifor('Av1005#1'):'^B'then '^B',&unifor('Av1005^B#1') fi,if &unifor('Av1005#1'):'^N'then '^N',&unifor('Av1005^N#1') fi,if &unifor('Av1005#1'):'^C'then '^C',&unifor('Av1005^C#1')fi,if (&unifor('Av1005#1'):'^N' or &unifor('Av1005#1'):'^C' or &unifor('Av1005#1'):'^A') and (&unifor('Av1005^E#1')='' and &unifor('Av1005^D#1')='' and &unifor('Av1005^F#1')=''and &unifor('Av1005^X#1')='')then '^90' fi,if &unifor('Av1005#1'):'^X'then '^X',&unifor('Av1005^X#1')fi,if &unifor('Av1005#1'):'^Y'then '^Y',&unifor('Av1005^Y#1')fi,if &unifor('Av1005#1'):'^Z'then '^Z',&unifor('Av1005^Z#1')fi,if &unifor('Av1005#1'):'^D'then '^D'&unifor('Av1005^D#1') fi,if &unifor('Av1005#1'):'^E'then '^E'&unifor('Av1005^E#1') fi,if &unifor('Av1005#1'):'^F'then '^F'&unifor('Av1005^F#1') fi,if &unifor('Av1005#1'):'^D' or &unifor('Av1005#1'):'^E' or &unifor('Av1005#1'):'^F' then '^91'fi,if &unifor('Av1005#1'):'^X' then '^92' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+410
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^R' and &unifor('Av1005^V#1')='' then '^A'&unifor('Av1005^R#1') else if &unifor('Av1005#1'):'^V' and &unifor('Av1005^R#1')='' then '^A',&unifor('Av1005^V#1')fi fi,if &unifor('Av1005#1'):'^R'then '^90' fi,if &unifor('Av1005#1'):'^V'then '^91' fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRC'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1005#1'):'^1'then if &unifor('JATHRC,','!',&unifor('Av1005^d#1'),&unifor('Av1005^f#1'),&unifor('Av1005^e#1'),if &unifor('Av1005^1*6.1#1')<>''then &unifor('B'&unifor('Av1005^1#1'))else &unifor('Av1005^b#1') fi)=''then 'ATHRC' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^1'then '^A'&unifor('Av1005^1#1') fi,if &unifor('Av1005#1'):'^7'then '^6',&unifor('Av1005^7#1') fi,if &unifor('Av1005#1'):'^D'then '^D'&unifor('Av1005^D#1') fi,if &unifor('Av1005#1'):'^E'then '^E'&unifor('Av1005^E#1') fi,if &unifor('Av1005#1'):'^F'then '^F'&unifor('Av1005^F#1') fi,if v1005:&unifor('Av1005^1#1')then '^91'fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+410
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^V'then '^A'&unifor('Av1005^V#1')fi,if &unifor('Av1005#1'):'^V'then '^91' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRC'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1005
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1005) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if s(v606v607v600v601)<>''then'1'else'' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1006
+XXXXXXXXXXXXXXXXXXX
+(|^A|v606^A,|^B|v606^B,|^C|v606^C,|^D|v606^D,|^G|v606^G,|^E|v606^E,|^O|v606^O,|^H|v606^H,|^9|v606^9,|^3|v606^1,|^2|v606^2,|^4|v606^4,|^5|v606^5/|^A|v607^A,|^B|v607^B,|^C|v607^C,|^D|v607^D,|^G|v607^G,|^E|v607^E,|^O|v607^O,|^H|v607^H,|^9|v607^9,|^3|v607^1,|^2|v607^2,|^4|v607^4,|^5|v607^5/if a(v600^b)then |^1|v600^a,|^2|v600^G,|^3|v600^1,|^4|v600^C,|^U|v600^L,|^X|v600^D,|^7|v600^F,|^!|v600^!,|^K|v600^K,|^M|v600^M,|^8|v600^8,|^Q|v600^Q,|^T|v600^T,|^?|v600^O,|^J|v600^J,|^0|v600^0,|^Z|v600^Z,|^5|v600^5,|^6|v600^6,|^+|v600^+,|^; |v600^;,|^,|v600^,,|^<|v600^<,|^>|v600^> fi/if a(v601^b)then |^P|v601^A,|^S|v601^S,|^R|v601^R,|^N|v601^N,|^W|v601^c,|^L|v601^L,|^Y|v601^D,|^=|v601^F,|^.|v601^E,|^!|v601^!,|^K|v601^K,|^M|v601^M,|^8|v601^8,|^Q|v601^Q,|^T|v601^T,|^?|v601^O,|^J|v601^J,|^0|v600^1,|^Z|v601^Z,|^5|v601^5,|^6|v601^6,|^+|v601^+,|^; |v601^;,|^,|v601^,,|^<|v601^<,|^>|v601^> fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1006#1'):'^a'then if &unifor('JATHRS,','!',if &unifor('Av1006#1'):'^a' and &unifor('Av1006^b#1')='' and &unifor('Av1006^G#1')='' and &unifor('Av1006^H#1')='' and &unifor('Av1006^9#1')='' and &unifor('Av1006^a*27#1')=''then &unifor('Av1006^a#1') else &unifor('Av1006^a.10#1'),&unifor('+B'&unifor('Av1006^a*10#1'))fi,if &unifor('Av1006^B#1')<>''then if &unifor('Av1006^d#1')='' and &unifor('Av1006^b*10#1')='' then &unifor('Av1006^b#1') else &unifor('Av1006^b.1#1'),&unifor('+B'&unifor('Av1006^B*1#1')) fi fi,if &unifor('Av1006^C#1')<>''then &unifor('+B'&unifor('Av1006^C#1')) fi,if &unifor('Av1006^D#1')<>''then &unifor('+B'&unifor('Av1006^d#1')) fi,if &unifor('Av1006^G#1')<>''then &unifor('+B'&unifor('Av1006^G#1')) fi,if &unifor('Av1006^E#1')<>''then &unifor('+B'&unifor('Av1006^E#1')) fi,if &unifor('Av1006^O#1')<>''then &unifor('+B'&unifor('Av1006^O#1')) fi,if &unifor('Av1006^H#1')<>''then &unifor('+B'&unifor('Av1006^H#1')) fi,if &unifor('Av1006^9#1')<>''then &unifor('+B'&unifor('Av1006^9#1')) fi)=''then 'ATHRS' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Av1006^a#1'),if &unifor('Av1006#1'):'^B'then '^B',&unifor('Av1006^b#1')fi,if &unifor('Av1006#1'):'^C'then '^C',&unifor('Av1006^c#1')fi,if &unifor('Av1006#1'):'^D'then '^D',&unifor('Av1006^d#1') fi,if &unifor('Av1006#1'):'^G'then '^G',&unifor('Av1006^G#1') fi,if &unifor('Av1006#1'):'^E'then '^E',&unifor('Av1006^E#1') fi,if &unifor('Av1006#1'):'^O'then '^O',&unifor('Av1006^O#1') fi,if &unifor('Av1006#1'):'^H'then '^H',&unifor('Av1006^H#1') fi,if &unifor('Av1006#1'):'^9'then '^9',&unifor('Av1006^9#1') fi,if &unifor('Av1006#1'):'^1'then '^1',&unifor('Av1006^1#1') fi,if &unifor('Av1006#1'):'^2'then '^2',&unifor('Av1006^2#1') fi,if &unifor('Av1006#1'):'^3'then '^3',&unifor('Av1006^3#1') fi,if &unifor('Av1006#1'):'^4'then '^4',&unifor('Av1006^4#1') fi,if &unifor('Av1006#1'):'^5'then '^5',&unifor('Av1006^5#1') fi,if &unifor('Av1006#1'):'^6'then '^6',&unifor('Av1006^6#1') fi,'^!1'
+XXXXXXXXXXXXXXXXXXX
+ADD
+689
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1006#1'):'^3'then '^A',&unifor('Av1006^3#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+689
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1006#1'):'^2'then '^A',&unifor('Av1006^2#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+689
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1006#1'):'^4'then '^A',&unifor('Av1006^4#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+689
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1006#1'):'^5'then '^A',&unifor('Av1006^5#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRS'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1006#1'):'^1'then if &unifor('JATHRS,','!',if (not(&unifor('Av1006^1#1'):' ')) and (&unifor('Av1006^9#1')='' or &unifor('Av1006^9.1#1'):'1') then &unifor('Av1006^1#1') else if &unifor('Av1006^1#1'):' ' then &unifor('G0 '&unifor('Av1006^1#1'))fi fi,if (not(&unifor('Av1006#1'):'^2')) then &unifor('G2 '&unifor('Av1006^1#1')) else  &unifor('B'&unifor('Av1006^2#1'))fi,&unifor('Av1006^3#1'),&unifor('Av1006^X#1'),&unifor('Av1006^7#1'),if &unifor('Av1006^K#1')<>''then &unifor('B'&unifor('Av1006^K#1')) fi,if &unifor('Av1006^M#1')<>''then &unifor('B'&unifor('Av1006^M#1')) fi,if &unifor('Av1006^8#1')<>''then &unifor('B'&unifor('Av1006^8#1')) fi,if &unifor('Av1006^Q#1')<>''then &unifor('B'&unifor('Av1006^Q#1')) fi,if &unifor('Av1006^T#1')<>''then &unifor('B'&unifor('Av1006^T#1')) fi,if &unifor('Av1006^O#1')<>''then &unifor('B'&unifor('Av1006^O#1')) fi,if &unifor('Av1006^J#1')<>''then &unifor('B'&unifor('Av1006^J#1')) fi,if &unifor('Av1006^0#1')<>''then &unifor('B'&unifor('Av1006^0#1')) fi,if &unifor('Av1006^Z#1')<>''then &unifor('B'&unifor('Av1006^Z#1')) fi,if &unifor('Av1006^5#1')<>''then &unifor('B'&unifor('Av1006^5#1')) fi,if &unifor('Av1006^+#1')<>''then &unifor('B'&unifor('Av1006^+#1')) fi)=''then 'ATHRS' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if (not(&unifor('Av1006^1#1'):' ')) and (&unifor('Av1006^9#1')='' or &unifor('Av1006^9.1#1'):'1') then '^A',&unifor('Av1006^1#1') else if &unifor('Av1006^1#1'):' ' and ((not(&unifor('Av1006#1'):'^9')) or &unifor('Av1006^9.1#1'):'1')then '^A',&unifor('G0 '&unifor('Av1006^1#1')),'^B',&unifor('G2 '&unifor('Av1006^1#1')) else if &unifor('Av1006^1#1'):' ' and &unifor('Av1006#1'):'^9'then '^A',&unifor('E'&unifor('Av1006^9#1'),&unifor('Av1006^1#1')),if (not(&unifor('Av1006#1'):'^B')) and &unifor('Av1006^1#1'):'.' then '^B',&unifor('F'&unifor('Av1006^9#1'),&unifor('Av1006^1#1'))  else '^B',&unifor('Av1006^B#1')fi fi fi fi,if &unifor('Av1006#1'):'^2'then '^G',&unifor('Av1006^2#1')fi,if &unifor('Av1006#1'):'^4'then '^C',&unifor('Av1006^4#1')fi,if &unifor('Av1006#1'):'^X'then '^D',&unifor('Av1006^X#1') fi,if &unifor('Av1006#1'):'^!'then '^!',&unifor('Av1006^!#1') fi,if &unifor('Av1006#1'):'^K'then '^K',&unifor('Av1006^K#1') fi,if &unifor('Av1006#1'):'^M'then '^M',&unifor('Av1006^M#1') fi,if &unifor('Av1006#1'):'^8'then '^8',&unifor('Av1006^8#1') fi,if &unifor('Av1006#1'):'^Q'then '^Q',&unifor('Av1006^Q#1') fi,if &unifor('Av1006#1'):'^T'then '^T',&unifor('Av1006^T#1') fi,if &unifor('Av1006#1'):'^?'then '^O',&unifor('Av1006^?#1') fi,if &unifor('Av1006#1'):'^J'then '^J',&unifor('Av1006^J#1') fi,if &unifor('Av1006#1'):'^0'then '^0',&unifor('Av1006^0#1') fi,if &unifor('Av1006#1'):'^Z'then '^Z',&unifor('Av1006^Z#1') fi,if &unifor('Av1006#1'):'^7'then '^F',&unifor('Av1006^7#1') fi,if &unifor('Av1006#1'):'^5'then '^5',&unifor('Av1006^5#1') fi,if &unifor('Av1006#1'):'^6'then '^6',&unifor('Av1006^6#1') fi,if &unifor('Av1006#1'):'^+'then '^+',&unifor('Av1006^+#1') fi,if &unifor('Av1006#1'):'^;'then '^;',&unifor('Av1006^;#1') fi,if &unifor('Av1006#1'):'^,'then '^,',&unifor('Av1006^,#1') fi,if &unifor('Av1006#1'):'^<'then '^<',&unifor('Av1006^<#1') fi,if &unifor('Av1006#1'):'^>'then '^>',&unifor('Av1006^>#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1006#1'):'^P'then if &unifor('JATHRS,',if &unifor('Av1006^.#1')='' and &unifor('Av1006^Y#1')='' and &unifor('Av1006^=#1')='' and (&unifor('Av1006#1')='^N' or &unifor('Av1006#1'):'^W')then '!',&unifor('Av1006^W#1'),if &unifor('Av1006^P*6.1#1')<>''then &unifor('B',&unifor('Av1006^P#1')) else &unifor('Av1006^P#1') fi,if &unifor('Av1006^L*6.1#1')<>''then &unifor('B'&unifor('Av1006^L#1')) else &unifor('Av1006^L#1') fi, else if &unifor('Av1006#1'):'^Y' or &unifor('Av1006#1'):'^.' or &unifor('Av1006#1'):'^=' then '!',&unifor('Av1006^Y#1'),&unifor('Av1006^=#1'),&unifor('Av1006^.#1'),if &unifor('Av1006^P*6.1#1')<>''then &unifor('B'&unifor('Av1006^P#1'))else &unifor('Av1006^P#1') fi fi,if &unifor('Av1006^K#1')<>''then &unifor('+B'&unifor('Av1006^K#1')) fi,if &unifor('Av1006^M#1')<>''then &unifor('+B'&unifor('Av1006^M#1')) fi,if &unifor('Av1006^8#1')<>''then &unifor('+B'&unifor('Av1006^8#1')) fi,if &unifor('Av1006^Q#1')<>''then &unifor('+B'&unifor('Av1006^Q#1')) fi,if &unifor('Av1006^T#1')<>''then &unifor('+B'&unifor('Av1006^T#1')) fi,if &unifor('Av1006^O#1')<>''then &unifor('+B'&unifor('Av1006^O#1')) fi,if &unifor('Av1006^J#1')<>''then &unifor('+B'&unifor('Av1006^J#1')) fi,if &unifor('Av1006^0#1')<>''then &unifor('+B'&unifor('Av1006^0+#1')) fi,if &unifor('Av1006^Z#1')<>''then &unifor('+B'&unifor('Av1006^Z#1')) fi,if &unifor('Av1006^5#1')<>''then &unifor('+B'&unifor('Av1006^5#1')) fi,if &unifor('Av1006^+#1')<>''then &unifor('+B'&unifor('Av1006^+#1'))fi fi)=''then 'ATHRS' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Av1006^P#1'),if &unifor('Av1006#1'):'^S'then '^S',&unifor('Av1006^S#1')fi,if &unifor('Av1006#1'):'^R'then '^R',&unifor('Av1006^R#1')fi,if &unifor('Av1006#1'):'^N'then '^N',&unifor('Av1006^N#1') fi,if &unifor('Av1006#1'):'^W'then '^C',&unifor('Av1006^W#1') fi,if &unifor('Av1006#1'):'^L'then '^B',&unifor('Av1006^L#1') fi,if &unifor('Av1006#1'):'^Y'then '^D',&unifor('Av1006^Y#1') fi,if &unifor('Av1006#1'):'^='then '^F',&unifor('Av1006^=#1') fi,if &unifor('Av1006#1'):'^.'then '^E',&unifor('Av1006^.#1') fi,if &unifor('Av1006#1'):'^K'then '^K',&unifor('Av1006^K#1') fi,if &unifor('Av1006#1'):'^M'then '^M',&unifor('Av1006^M#1') fi,if &unifor('Av1006#1'):'^8'then '^8',&unifor('Av1006^8#1') fi,if &unifor('Av1006#1'):'^Q'then '^Q',&unifor('Av1006^Q#1') fi,if &unifor('Av1006#1'):'^T'then '^T',&unifor('Av1006^T#1') fi,if &unifor('Av1006#1'):'^?'then '^O',&unifor('Av1006^?#1') fi,if &unifor('Av1006#1'):'^J'then '^J',&unifor('Av1006^J#1') fi,if &unifor('Av1006#1'):'^0'then '^0',&unifor('Av1006^0#1') fi,if &unifor('Av1006#1'):'^Z'then '^Z',&unifor('Av1006^Z#1') fi,if &unifor('Av1006#1'):'^5'then '^5',&unifor('Av1006^5#1') fi,if &unifor('Av1006#1'):'^6'then '^6',&unifor('Av1006^6#1') fi,if &unifor('Av1006#1'):'^+'then '^+',&unifor('Av1006^+#1') fi,if &unifor('Av1006#1'):'^;'then '^;',&unifor('Av1006^;#1') fi,if &unifor('Av1006#1'):'^,'then '^,',&unifor('Av1006^,#1') fi,if &unifor('Av1006#1'):'^<'then '^<',&unifor('Av1006^<#1') fi,if &unifor('Av1006#1'):'^>'then '^>',&unifor('Av1006^>#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRC'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1006
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1006) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

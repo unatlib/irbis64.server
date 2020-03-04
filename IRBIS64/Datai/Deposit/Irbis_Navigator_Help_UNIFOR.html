@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>Описание ИРБИС-Навигатора - Дополнительные форматные выходы - &amp;UNIFOR(…) 
+– используемые в форматах для ИРБИС-Навигатора</title>
+<style><!--
+.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" class="Normal" lang=RU>
+<div class=Section1> 
+  <p align=center style='text-align:center'><b><span
+style='font-size:14.0pt;'>Дополнительные форматные выходы - &amp;</span><span lang=EN-US style='font-size:14.0pt;
+'>UNIFOR</span><span
+style='font-size:14.0pt;'>(...) – используемые в форматах для ИРБИС-Навигатора</span></b>
+  <table border=1 cellspacing=0 cellpadding=0>
+    <thead>
+      <tr> 
+        <td width=81 valign=top class="Normal"> <b>Вид функции</b></td>
+        <td width=193 valign=top class="Normal"> <b>Назначение</b></td>
+        <td width=243 valign=top class="Normal"> <b>Формат (передаваемая строка)</b></td>
+        <td width=239 valign=top class="Normal"> <b>Пример</b></td>
+      </tr>
+    </thead>
+    <tr> 
+      <td width=81 valign=top class="Normal"> +3<span lang=EN-US>E</span></td>
+      <td width=193 valign=top class="Normal"> Кодирование данных для представления 
+        в <span lang=EN-US>URL</span></td>
+      <td width=243 valign=top class="Normal"> <span lang=EN-US>+3E&lt;</span>данные<span
+  lang=EN-US>&gt;</span></td>
+      <td width=239 valign=top class="Normal"> <span lang=EN-US>…&amp;unifor(‘+3E’,v1007)…</span></td>
+    </tr>
+    <tr> 
+      <td width=81 valign=top class="Normal"> +3<span lang=EN-US>D</span></td>
+      <td width=193 valign=top class="Normal"> Декодирование данных из <span lang=EN-US>URL</span></td>
+      <td width=243 valign=top class="Normal"> +3<span lang=EN-US>D</span>&lt;данные&gt;</td>
+      <td width=239 valign=top class="Normal">&nbsp; </td>
+    </tr>
+    <tr> 
+      <td width=81 valign=top class="Normal"> +4</td>
+      <td width=193 valign=top class="Normal"> Выдача метки, порядкового номера 
+        и значения поля в соответствии с индексом (номером повторения) повторяющейся 
+        группы.</td>
+      <td width=243 valign=top class="Normal"> +4<span lang=EN-US>XY</span> <br>
+        где
+        <br>
+        Х принимает три значения: T – выдать метку; F – выдать значение поле; 
+        N – выдать порядковый номер поля в записи (отличается от индекса повторения, 
+        если <span lang=EN-US>Y</span> принимает значение 1); <br>
+        Y принимает значения: 0 – поля выдаются в порядке расположения в записи; 
+        1 – поля выдаются в порядке возрастания меток (по умолчанию <span lang=EN-US>0).</span></td>
+      <td width=239 valign=top class="Normal"> <span lang=EN-US>…(…..&amp;unifor(‘+4T1’),’_’ 
+        &amp;unifor(‘+4N1’),’: ‘, &amp;unifor(‘+4F1’),’&lt;br&gt;’….)</span></td>
+    </tr>
+    <tr> 
+      <td width=81 valign=top class="Normal"> +5</td>
+      <td width=193 valign=top class="Normal"> Выдача элемента списка/справочника 
+        в соответствии с индексом (номером повторения) повторяющейся группы.</td>
+      <td width=243 valign=top class="Normal"> +5Х&lt;имя_справочника/списка&gt; 
+        <br>
+        где Х принимает значения: Т – выдать значение; <span
+  lang=EN-US>F</span> – выдать пояснение (имеет смысл, если задается справочник, 
+          т.е. файл с расширением <span lang=EN-US>MNU</span>)</td>
+      <td width=239 valign=top class="Normal"> <span lang=EN-US>…(…..&amp;unifor(‘+5Tfield.mnu’),’ 
+        - ’,&amp;unifor(‘+5Ffield.mnu’),’&lt;br&gt;’….)</span></td>
+    </tr>
+    <tr> 
+      <td width=81 valign=top class="Normal"> +6</td>
+      <td width=193 valign=top class="Normal"> Выдать статус записи. Если запись 
+        логически удаленная, возвращается 0, в противном случае - 1 </td>
+      <td width=243 valign=top class="Normal"> +6</td>
+      <td width=239 valign=top class="Normal"> …<span lang=EN-US>if</span> &amp;<span lang=EN-US>unifor</span>(‘+6’)=’0’ 
+        <span lang=EN-US>then</span> ‘запись логически удаленная’ <span lang=EN-US>fi</span>…</td>
+    </tr>
+  </table>
+</div>
+  <br><b>Пояснения:</b>
+  <br>Все описанные выше форматные выходы могут применяться в любых форматах для 
+    любых технологий системы ИРБИС.
+</body>
+</html>

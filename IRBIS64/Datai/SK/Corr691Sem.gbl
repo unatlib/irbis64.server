@@ -1,0 +1,107 @@
+0
+DEL
+1691
+*
+
+
+//-----------------------------корректировка разделител€ семестров
+REP
+691^F
+F
+(if p(v691) then if p(v691^F) then  if v691^F: '-' then  if &uf('G2-',v691^F): '-' then &uf('+98-/',v691^F) else &uf('+98,/',&uf('V',v691^F) ) fi,,else v691^F fi  else # fi fi/)
+
+// размножение повторений пол€ 691 по подполю F
+IF
+if v691^F: '/' then '1' fi
+// если семестры через / или ,
+DEL
+932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+(v691/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+if &uf('Av1932^f#1'):'/' then (if &uf('1*R/?v1932^f#1')<>''then if &uf('Av1932^D#1')<>'' then '^D',&uf('Av1932^D#1') fi,if &uf('Av1932^I#1')<>'' then '^I',&uf('Av1932^I#1') fi,if &uf('Av1932^A#1')<>'' then '^A',&uf('Av1932^A#1') fi,if &uf('Av1932^L#1')<>'' then '^L',&uf('Av1932^L#1') fi,,if &uf('Av1932^H#1')<>'' then '^H',&uf('Av1932^H#1') fi,,if &uf('Av1932^N#1')<>'' then '^N',&uf('Av1932^N#1') fi,if &uf('Av1932^C#1')<>'' then '^C',&uf('Av1932^C#1') fi,if &uf('Av1932^B#1')<>'' then '^B',&uf('Av1932^B#1') fi,if &uf('Av1932^S#1')<>'' then '^S',&uf('Av1932^S#1') fi,if &uf('Av1932^K#1')<>'' then '^K',&uf('Av1932^K#1') fi,if &uf('Av1932^V#1')<>'' then '^V',&uf('Av1932^V#1') fi,,if &uf('Av1932^O#1')<>'' then  '^O',&uf('Av1932^O#1') fi,,if &uf('Av1932^G#1')<>'' then  '^G',&uf('Av1932^G#1') fi,,if &uf('Av1932^E#1')<>'' then  '^E',&uf('Av1932^E#1') fi,,if &uf('Av1932^U#1')<>'' then '^U',&uf('Av1932^U#1') fi,if &uf('Av1932^W#1')<>'' then '^W',&uf('Av1932^W#1') fi,if &uf('Av1932^H#1')<>'' then '^H',&uf('Av1932^H#1')  fi,if &uf('Av1932^T#1')<>'' then '^T',&uf('Av1932^T#1') fi,,'^F',&uf('1*R/?v1932^f#1'),,fi/) else &uf('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+691
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+691
+XXXXXXXXXXXXXXXXXXX
+(v932/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------удал€ю ¬—≈ в специальност€х, формах, видах
+DEL
+691^A
+F
+(if p(v691) then if p(v691^A) then  if v691^A: 'все' then '1' else '0' fi  else '0' fi  fi/)
+
+DEL
+691^C
+F
+(if p(v691) then if p(v691^C) then  if v691^C: 'все' then '1' else '0' fi  else '0' fi  fi/)
+
+DEL
+691^N
+F
+(if p(v691) then if p(v691^N) then  if v691^N: 'все' then '1' else '0' fi  else '0' fi  fi/)
+
+DEL
+691^O
+F
+(if p(v691) then if p(v691^O) then  if v691^O: 'все' then '1' else '0' fi  else '0' fi  fi/)
+
+DEL
+691^V
+F
+(if p(v691) then if p(v691^V) then  if v691^V: 'все' then '1' else '0' fi  else '0' fi  fi/)
+
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),'^C',&unifor('IPRIVATE,ETR,') fi
+XXXXXXXXXXXXXXXXXXX

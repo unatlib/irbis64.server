@@ -1,0 +1,23 @@
+mhl,
+if p(v10^a) or p(v461^i) then 
+   v10^a,if a(v10^a) then v461^i fi,'^A',
+   if p(v461) then v461^c,| : |v461^e,|/ |v461^f," ; "v200^v," : "v200^a 
+   else v200^a fi,". "v923^h,". "v923^i,". "v923^k,". "v923^l," : "v200^e,
+                  "/ "v200^f,'^V',
+   (if &unifor('Knosnt.mnu|'v215^1)<>''then| ; |+d215^1,&unifor('G2='v215^1)fi),
+      '^Y'v19^a*2" ",v19^b,'^G',v210^5| |,v210^d,if a(v210^d) then v461^5| |,v461^h fi,
+      '^D',&unifor('Av210^4#1'),if &unifor('Av210^4#1')=''then &unifor('Av210^a#1')fi,
+   if &unifor('Av210^x#1')<>''then' ; '&unifor('Av210^x#1') fi,
+   if &unifor('Av210^y#1')<>''then' ; '&unifor('Av210^y#1') fi,
+   if a(v210^a) then v461^4,if v461^4=''then v461^d fi fi,
+      '^H',&unifor('Av210^c#1'),if &unifor('Av210^6#1')<>''then' ['&unifor('Av210^6#1')']'fi,
+ ,if a(v210^c)then &unifor('Av461^g#1'),if &unifor('Av461^6#1')<>''then' ['&unifor('Av461^6#1')']'fi,fi,
+      '^4'(" "| ; |+d215,v215^a,if s(&unifor('Knos.mnu|'v215^1),&unifor('Knosnt.mnu|'v215^1))<>''then,&unifor('G2='v215^1) fi,
+   if p(v215^a) and a(v215^1) then 
+      if v215^a:'c'or v215^a:'s'or v215^a:'p'or v215^a:'с' then 
+      else &unifor('Korg.mnu|4')'.' fi 
+   fi),'^W'
+   if v920:'ASP'then else v903 fi,'^X'v11^a,if a(v11^a) then v461^j fi,
+   '^5','^Z'v908,if a(v908) then if v903:v906 then v906 fi fi,
+else 'Неправильно выбран ISBN' 
+fi,mpl

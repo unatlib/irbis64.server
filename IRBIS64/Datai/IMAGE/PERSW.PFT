@@ -1,0 +1,16 @@
+'{'
+if &unifor('Av600#2')<>'' or &unifor('Av601#2')<>'' then 
+'\tab \b Персоналии: \b0 'else"\tab \b  Персоналия \b0 "d600 fi,
+(if p(v600)then |\par |v600^a,| |v600^d,| (|v600^g|)|,
+    if s(v600^1,v600^c,v600^f)<>''then ' (',v600^1,
+       if s(v600^1)<>''then"; "d600^c fi,v600^c,
+       if s(v600^1,v600^c)<>''then"; "d600^f fi,v600^f,')'
+    fi,
+    if s(v600^y,v600^p)<>''then '\par 'fi,
+    if p(v600^y)then &unifor('Korg.mnu|2') fi,v600^p,|\b ( |v600^b|)\b0 |,'\par '
+fi),
+(if p(v601)then |\b |v601^a|\b0 \par | fi),
+if s(v600v601)<>''then'\par 'fi,
+if v920:'J' then else if p(v461) then &unifor('6MN')  else if p(v463) then &unifor('6ASP') else &unifor('6KN') fi fi fi
+
+'}'

@@ -1,0 +1,120 @@
+'#000-','n',if v920:'J' then v110^t.1,if a(v110^t) then 'a' fi,else v900^t.1,if a(v900^t) then 'a' fi,fi,if v900^b:'05'or v900^b:'03'or v900:'04'or v900:'07' then 'm' else if val(v900^b)>07 then 'a' else 's' fi fi if v920='J' then '1 ' else '0 ' fi,' i  ',/,
+if p(v1) then '#001-',mfn,'/',v1,/, fi,
+if a(v1) then '#001-',mfn,'/',v903,/, fi,
+if p(v5) then '#005-',v5,/ fi,
+if p(v10) then (if p(v10) then '#010-  ^a',if s(v10^a,v461^i) <> '' then v10^a,if v10^a:' 'then'^b',v10^a fi,if a(v10^a)and v900^b:'03'then v461^i fi fi ,
+'^d',if p(v10^d) then if val(v10^d)>0 then if a(v10^c) then 'р' else v10^c fi,v10^d else v10^d fi else 'Б.ц.' fi ,/,fi) fi,
+if a(v10) then '#010-  ^dБ.ц.',/,fi,
+if p(v11) then '#011-  ^a',if v11^a:'-' then v11^a else v11^a*0.4,|-|v11^a*4.4 fi,if a(v11) and v900^b<>'03' then if v461^i:'-' then v461^i else v461^i*0.4,|-|v461^i*4.4 fi fi,
+if p(v11^z) then '^z',if v11^z:'-' then v11^z else v11^z*0.4,|-|v11^z*4.4 fi fi fi,/,
+if p(v100) then '#100-  ^a', v100^a,/, fi,
+if a(v100) then '#100-  ^a',if p(v907^a) then &unifor('Av907^a#1') else '??????' fi,'d',if p(v210^d) then if v210^d*0.1='1' then v210^d else if v210^d*0.5='cop. ' then '',v210^d*5.4 else if v210^d*0.5='cop.1' then '',v210^d*4.4 else X4 fi fi fi  else X4, fi,X4,'|||',if v920:'U' then 'a' else 'y' fi '0',if p(v101) then v101 else 'rus' fi,'y' if v101:'ru' or v101:'bol' or v101:'ukr' or a(v101) then'0204',X4,'ca' else '0289',fi,fi,/,
+if p(v454) then '#101-1 ^a',if p(v101) then v101 else 'rus' fi if p(v911) then '^d',v911 fi fi,/,
+if a(v454) then '#101-0 ^a',if p(v101) then v101 else 'rus' fi if p(v911) then '^d',v911 fi fi,/,
+'#102-  ^a',v102,if a(v102) then 'RU' fi,/,
+if p(v105^a) then '#105-  ^a',v105^a,/, fi,
+if a(v105) then '#105-  ^a','y','   ','000','y','y',/,fi,
+if p(v106) then '#106-  ^a',v106^a.1 fi,/,
+if p(v110) then '#110-  ^a',if a(v110) then '' else v110^b,if v110^d*0.1 < 'a' then 'z' else v110^d fi,if a(v110^d) then 'u' fi,if p(v110^e) then v110^e else 'u' fi,if v110^f*0.1 < 'a' then 'z' else v110^f fi,if a(v110^f) then ' ' fi,if p(v110^g) then v110^g else '   ' fi,v110^h,if a(v110^h) then if p(v710) then '1' else '0' fi fi 'x',if p(v110^i) then v110^i else 'x' fi,if p(v110^j) then v110^j else 'x' fi, fi fi,/,
+if a(v200^a) then '#200-0 ^a',v461^c,|^e|v461^e,|^f|v461^f,|^h|v200^v,if a(v461) then v200^a,if a(v200^f) then "^f"d700,v700^b,| |v700^a fi else |^i|v200^a fi,|^e|v200^e,|^f|v200^f,|^g|v200^g,|^d|v510^d,if p(v922) then if a(v922^f) then if &unifor('Av461#1'):'^c' then |^i|v922^c else |^a|+v922^c fi else |^c|v922^c,|^f|v922^f,|, |v922^2,|, |v922^3 fi fi,|^h|v923^h,|^i|v923^i,|^h|v923^k,|^i|v923^l fi,/,
+if p(v200^a) then '#200-1 ^a',v461^c,|^e|v461^e,|^f|v461^f,|^h|v200^v,if a(v461) then v200^a,if a(v200^f) then "^f"d700,v700^b,| |v700^a fi else |^i|v200^a fi,|^e|v200^e,|^f|v200^f,|^g|v200^g,|^d|v510^d,if p(v922) then if a(v922^f) then if &unifor('Av461#1'):'^c' then |^i|v922^c else |^a|+v922^c fi else |^c|v922^c,|^f|v922^f,|, |v922^2,|, |v922^3 fi fi,|^h|v923^h,|^i|v923^i,|^h|v923^k,|^i|v923^l fi,/,
+if p(v205) then '#205-  ^a',v205^a,|^b|v205^b fi,/,
+'#210-  ^a',|^a|+v210^a,|^a|v210^x,|^a|v210^y,|^c|v210^c,if p(v210^a) then '' else if p(v461) then |^a|+v461^d,if a(v461^d) then 'Б.м.' fi else if p(v463^d) then |^a|+v463^d else 'Б.м.' fi,|^c|v461^g fi fi,|^d|v210^d,if a(v210^d) then |^d|v461^h fi,if v920='J' then if p(v910^d) then '-' fi fi ,/,
+if p(v215) then '#215-  ^a',v215^a,v215^1,if a(v215^1) then if v215^a:'с' or v215^a:'p' then '' else if p(v215^a) then '' fi fi fi,|^c|v215^c,|^d|v215^d,|^e|v215^e,v215^2,if a(v215^2) then if v215^e:'с' or v215^e:'p' then else if p(v215^e) then ' c.' fi fi fi fi,/,
+if p(v46) then '#225-2 ^a',(v46^a,|^v|v46^v/) fi,/,
+if p(v225) then '#225-2 ^a', (v225^a,|^e|v225^e,|^f|v225^f,|^h|v225^h,|^i|v225^i,|^h|v225^k,|^i|v225^l,|^x|v225^x,|^v|v225^v/) fi,/,
+if p(v300) then (if p(v300) then '#300-  ^a',v300,/, fi) fi,
+if p(v314) then '#314-  ^a',v314 fi,/,
+if p(v320) then '#320-  ^a',v320 fi,/,
+if p(v327) then '#327-  ^a',v327^a fi,/,
+if p(v331) then '#330-  ^a',mhl,v331 fi,/,
+if p(v421) then '#421- 0^1',|2001 ^a|v421^a,|^1011  ^a|v421^x fi,/,
+if p(v422) then '#422- 0^1',|2001 ^a|v422^a,|^1011  ^a|v422^x fi,/,
+if p(v423) then '#423- 0^1',(if p(v922^f) then |2001 ^a|v922^c,'^17001 ^a',v922^f,if p(v922^2) then '^17011 ^a',v922^2 fi fi) fi,/,
+if v430^z='30' or v430^z='U' then '#430- 0^1',|2001 ^a|v430^a,if p(v430^c) then '^1011  ^a',if v430^c:'-' then v430^c else v430^c*0.4,|-|v430^c*4.4 fi fi fi,/,
+if v430^z='32' then '#432- 0^1',|2001 ^a|v430^a,|^1011  ^a|v430^c fi,/,
+if v430^z='34' then '#434- 0^1',|2001 ^a|v430^a,|^1011  ^a|v430^c fi,/,
+if v430^z='36' then '#436- 0^1',|2001 ^a|v430^a,|^1011  ^a|v430^c fi,/,
+if v430^z='37' then '#437- 0^1',|2001 ^a|v430^a,|^1011  ^a|v430^c fi,/,
+if v440^z='40' or v440^z='U' then '#440- 0^1',mhl,|2001 ^a|v440^a,if p(v440^c) then '^1011  ^a',if v440^c:'-' then v440^c else v440^c*0.4,|-|v440^c*4.4 fi fi fi,/,
+if v440^z='42' then '#442- 0^1',|2001 ^a|v440^a,|^1011  ^a|v440^c fi,/,
+if v440^z='44' then '#444- 0^1',|2001 ^a|v440^a,|^1011  ^a|v440^c fi,/,
+if v440^z='46' then '#446- 0^1',|2001 ^a|v440^a,|^1011  ^a|v440^c fi,/,
+if v440^z='47' then '#447- 0^1',|2001 ^a|v440^a,|^1011  ^a|v440^c fi,/,
+if p(v454) then '#454- 0^1','7001 ^a',v454^d,'^17011 ^a',v454^e,'^17011 ^a',v454^f,'^12001 ^a',v454^a,'^12101 ^a',v454^g,'^c',v454^c,'^d',v454^h,'^1205  ^a',v454^p,'^1010  ^a',v454^i fi,/,
+if v920='NJ' then '#461- 0^1',|001|v903 fi,/,
+if p(v461) then (if p(v461) then '#461- 0^1','2001 ','^a', v461^c,'^1210 0^d',v461^j fi,/) fi,
+if p(v463) then (if p(v463) then '#463- 0^1','2001 ','^a',v463^c,if p(v463^h) or p(v463^k) or p(v463^v) then '^v',v463^h,v463^k,if p(v463^h) then '.' fi,v463^v fi,'; с. ',v463^s,'^1210 0^d',v463^j fi,/) fi,
+if v503^u='1' then '#503-1 ^a',v503^a fi,/,
+if p(v503) then if v503^u<>'1' then '#503-0 ^a',v503^a fi fi,/,
+if p(v510) then '#510-1 ^a',(v510^d/) fi,/,
+(if v517^t:'512' then '#512-1 ^a',v517^a fi/),
+(if v517^t:'513' then '#513-1 ^a',v517^a fi/),
+(if v517^t:'515' then '#515-1 ^a',v517^a fi/),
+(if v517^t:'516' then '#516-1 ^a',v517^a fi/),
+if p(v541) then '#541-1 ^a',v541 fi,/,
+if p(v600^a) then '#600-  ^a',(v600^a/) fi,
+if p(v601^a) then '#601-  ^a',(v601^a/) fi,
+if p(v606) then (if p(v606^a) then '#606-  ^a',v606^a,if p(v606^b) then '^x',v606^b fi,|^x|v606^c,|^x|v606^d,|^x|v606^x/ fi) fi,
+if p(v610) then (if p(v610^a) then '#610-1 ^a',v610^a/ fi) fi,
+if p(v675) then (if p(v675) then '#675-  ^a',v675/ fi) fi,
+if p(v964) then '#686-  ^a',(v964|^2rugasnti|/) fi,
+if p(v621) then '#686-  ^a',(v621|^2rubbk|/) fi,
+if p(v700) or p(v461^x) then (if p(v700^a) then '#700- 1^a',v700^a,if p(v700^b) then '^b',v700^b fi,if p(v700^g) then '^g',v700^g fi / fi),if a(v700) then v461^x fi fi,/,
+if p(v701) then (if p(v701^a) then '#701- 1^a',v701^a,|^b|v701^b,|^g|v701^g / fi) fi,
+if p(v922^f) then '#701- 1^a',(v922^f) fi,/,
+if p(v922^2) then '#701- 1^a',(v922^2) fi,/,
+if p(v922^3) then '#701- 1^a',(v922^3) fi,/,
+if p(v461^y) then if a(v700) then if v461^y:'и др' or v461:'et al' then '' else '#701- 1^a', 
+v461^y fi fi fi,/,
+if p(v702) then (if p(v702^a) then '#702- 1^a',v702^a,|^b|v702^b,|^4|v702^4.3/ fi) fi,
+if v920='PVK' then if p(v710^s) then '#710-11^a',if p(v710^s) then  v710^s|.|,v710^a,|^c(|v710^c|)|,|^b|v710^b,|^d(|v710^d,if p(v710^d) then |:^f|v710^f else |^f(|v710^f fi,,if s(v710^d,v710^e)<>'' then |:^e|v710^e else |^e(|v710^e fi,|/|v710^h,|/|v710^i,if s(v710^d,v710^f,v710^e)<>'' then ')' fi,if v920='PVK' then '' else ,|^b|v971^b,|^d(|v971^d,if p(v971^d) then |:^f|v971^f else |^f(|v971^f fi,if s(v971^d,v971^f)<>'' then |:^e|v971^e else |^e(|v971^e fi,|/|v971^h,|/|v971^i,if s(v971^d,v971^f,v971^e)<>'' then ')' fi fi fi fi fi,/,
+if v920='PVK' then if a(v710^s) then '#710-12^a',if a(v710^s) then  v710^s|.|,v710^a,|^c(|v710^c|)|,|^b|v710^b,|^d(|v710^d,if p(v710^d) then |:^f|v710^f else |^f(|v710^f fi,,if s(v710^d,v710^e)<>'' then |:^e|v710^e else |^e(|v710^e fi,|/|v710^h,|/|v710^i,if s(v710^d,v710^f,v710^e)<>'' then ')' fi,if v920='PVK' then '' else ,|^b|v971^b,|^d(|v971^d,if p(v971^d) then |:^f|v971^f else |^f(|v971^f fi,if s(v971^d,v971^f)<>'' then |:^e|v971^e else |^e(|v971^e fi,|/|v971^h,|/|v971^i,if s(v971^d,v971^f,v971^e)<>'' then ')' fi fi fi fi fi,/, 
+if v920<>'PVK' then if p(v710^s) then '#710-01^a',if p(v710^s) then  v710^s|.|,v710^a,|^c(|v710^c|)|,|^b|v710^b,|^d(|v710^d,if p(v710^d) then |:^f|v710^f else |^f(|v710^f fi,,if s(v710^d,v710^e)<>'' then |:^e|v710^e else |^e(|v710^e fi,|/|v710^h,|/|v710^i,if s(v710^d,v710^f,v710^e)<>'' then ')' fi,if v920='PVK' then '' else ,|^b|v971^b,|^d(|v971^d,if p(v971^d) then |:^f|v971^f else |^f(|v971^f fi,if s(v971^d,v971^f)<>'' then |:^e|v971^e else |^e(|v971^e fi,|/|v971^h,|/|v971^i,if s(v971^d,v971^f,v971^e)<>'' then ')' fi fi fi fi fi,/,
+if v920<>'PVK' then if p(v710) then if a(v710^s) then '#710-02^a',if a(v710^s) then  v710^s|.|,v710^a,|^c(|v710^c|)|,|^b|v710^b,|^d(|v710^d,if p(v710^d) then |:^f|v710^f else |^f(|v710^f fi,,if s(v710^d,v710^e)<>'' then |:^e|v710^e else |^e(|v710^e fi,|/|v710^h,|/|v710^i,if s(v710^d,v710^f,v710^e)<>'' then ')' fi,if v920='PVK' then '' else ,|^b|v971^b,|^d(|v971^d,if p(v971^d) then |:^f|v971^f else |^f(|v971^f fi,if s(v971^d,v971^f)<>'' then |:^e|v971^e else |^e(|v971^e fi,|/|v971^h,|/|v971^i,if s(v971^d,v971^f,v971^e)<>'' then ')' fi fi fi fi fi fi,/,
+if p(v711) then if p(v711^s) then '#711-01^a',(if p(v711) then if p(v711^s) then v711^s|.|,v711^a,|^c(|v711^c|)|,|^b|v711^b fi fi/) fi fi,/,
+if p(v711) then if a(v711^s) then '#711-02^a',(if a(v711^s) then v711^s|.|,v711^a,|^c(|v711^c|)|,|^b|v711^b fi /) fi fi,/,
+if p(v971) then if v920='PVK' then '#711-12^a',(v972^a,|^d(|v972^d,if p(v972^d) then |:^f|v972^f else |^f(|v972^f fi,if s(v972^d,v972^f)<>'' then |:^e|v972^e else |^e(|v972^e fi,|/|v972^h,|/|v972^i,if s(v972^d,v972^f,v972^e)<>'' then ')' fi/) fi fi,/,
+if p(v801) then (if p(v801) then '#801- 0', if p(v801^a) then '^a',v801^a,if p(v801^b) then '^b',v801^b,if p(v801^c) then '^c',v801^c,if p(v801^g) then '^g',v801^g fi,fi,fi,fi,fi,/) fi,
+if a(v801) then '#801- 0^a',if v910^d='OSI' then 'RU^b',v910^d else 'RU^bGPNTB' fi,'^c',if p(v907^a) then &unifor('Av907^a#1') else '??????' fi,'^gpsbo' fi,/,
+if p(v856^u) then '#856-  ^u',v856^u fi,/,
+if p(v951) then '#856-4 ^u',v951^i fi,/,
+if p(v902) then (if p(v902) then '#899-  ',if p(v902^a) then |^a|v902^a fi,if p(v902^b) then |^c|v902^a,': ',v902^b fi,if p(v903) then |^j|v903 fi,|^h|v906 fi,/) fi,
+if p(v907) then '#899-  ^a',if v907^b='OSI' then v907^b else '1001702X' fi,if p(v902) then '^c',v902 fi,if p(v903) then '^j',v903 fi,if p(v906) then '^h',v906 fi fi,/,
+if p(v910) then (if p(v910^b) then '#999-  ^p',v910^b,|^b|v910^d/ fi) fi,
+'#999-  ^a',&uf('2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

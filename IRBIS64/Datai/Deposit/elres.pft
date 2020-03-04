@@ -1,0 +1,16 @@
+&uf('+7W10#'),
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then 
+   &uf('+7W10#'if val(&unifor('IMAIN,ACCESSRDR,1'))=1 
+               then f(val(&uf("JRDR,FOSO="g34)),0,0) 
+               else f(rsum(&uf('7VUZ,!FOSO='g34,'!,if p(v68^z) then v68^z|;| else |0;|d68 fi')),0,0)  
+               fi) 
+else 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  then 
+      &uf('+7W10#'if val(&unifor('IMAIN,ACCESSRDR,1'))=1 
+                  then f(val(&uf("JRDR,FOSV="g34)),0,0) 
+                  else f(rsum(&uf('7VUZ,!FOSV='g34,'!,if p(v68^z) then v68^z|;| else |0;|d68 fi')),0,0) 
+                  fi) 
+fi fi,
+if g34<>'' then &uf('+7U35#^A'g34,'^B'g10,'^C'f(val(g10)*val(&uf('Kfo_elkko.mnu\'g34)),0,0)) fi,

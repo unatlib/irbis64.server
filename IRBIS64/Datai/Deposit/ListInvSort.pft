@@ -1,0 +1,35 @@
+(if p(v910) 
+ then 
+    if s('2 7'): v910^A 
+    then 
+    else 
+/*-----выводить не на баланс?
+       if val(&uf('Av991^Y#1'))=1 or 
+         ( &uf('Av215^Y#1')='' and v910^4='' ) 
+       then 
+/*-----выводить утерян/списан?          
+          if val(&uf('Av991^Z#1'))=1 or 
+             ( v910^A<>'4' and v910^A<>'6') 
+          then  
+             if &uf('Av991^A#1')='' or 
+                &uf('+97',v910^U)=&uf('+97',&uf('Av991^A#1')) or 
+                ( &uf('Av991^A#1')='' and &uf('Av991^B#1')<>'' and &uf('+97',v910^Y)=&uf('+97',&uf('Av991^A#1')) ) 
+             then 
+/*----пройден по КСУ
+                if &uf('Av991^D#1')='' or  
+                   &uf('+97',&uf('Av991^D#1'))=&uf('+97',v910^D) 
+                then 
+/*----пройден по месту хранения
+                   if (&uf('Av991^1#1')='' or val(&uf('Av991^1#1') )<=val(v910^C)  ) 
+                      and
+                      (&uf('Av991^2#1')='' or val(&uf('Av991^2#1') )>=val(v910^C)  ) 
+                   then 
+/*------пройден по датам
+                      if val(&uf('Av991^W#1'))>0 then '^0',,&uf('+960.20#',&uf('6Brief') ), fi,,,,
+                      '^A',v910^B,,if v910^B='' then v910^H fi,,,|^B|v910^D,,,
+                      '^E',,,if v910^E<>'' then v910^E else &uf('Av10^D#1') fi ,,,
+                      '^C',,,if s('U C'): v910^A then v910^1 else '1' fi,,,
+                      '^G',v910^A,,,,,
+                      if &uf('Av215^Y#1')<>'' or v910^4<>'' then '^F1' fi,,,
+                      '^Y',mfn 
+                   fi fi fi fi fi fi fi/)

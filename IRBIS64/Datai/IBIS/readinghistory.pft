@@ -1,0 +1,12 @@
+/* g1 - имя БД ЭК
+/* g2 - шифр издания 
+/* g3 - результат
+/*(if p(v40) then if (&uf('Ag1#1')=v40^G) and (&uf('Ag2#1')=v40^A) then &uf('Av30#1'),v40/ fi fi)
+
+&uf('&'),
+&uf('+7W1#',&uf('+D')),&uf('+7W2#',v903),&uf('+7W3#'),
+&uf('+7U3#',&uf('7RDR,!AR=',g1,'/',g2,"!,(if p(v40) then if (&uf('Ag1#1')=v40^G) and (&uf('Ag2#1')=v40^A) then &uf('Av30#1'),v40,'^!RDR'/ fi fi)"D903)),
+&uf('+7U3#',&uf('7RDR_ARH,!AR=',g1,'/',g2,'!,v30,v40,"^!RDR_ARH"D30/')),
+&uf('+7U3#',&uf('7LICH,!DI=',g1,'/',g2,'!,v1,v40,"^G"v5,"^A"V6,"^!LICH"D1/')),
+
+(g3/)

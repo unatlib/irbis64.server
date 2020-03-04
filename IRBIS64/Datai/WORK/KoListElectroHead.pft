@@ -1,0 +1,101 @@
+'{',,,
+if v1^Y='' 
+then 
+/*--------------------------------------------------------------------------заголовок
+   &uf('+7W1#'),,,&uf('+7W2#'),,,
+  '\trowd \trqc\trgaph108\trleft-108
+  \clbrdrt\brdrs\clbrdrl\brdrs\brdrw30 \clbrdrr\brdrs\brdrw30
+  \clcbpat16\cellx15200 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+ if v1^J<>'' and v1^J<>' ' then 
+/*----дисциплина
+'\cf15 ',,'Дисциплина - ',&uf('G2@',v1^J),,,'\cf ',,
+else 
+ if v1^I<>'' and v1^I<>' ' then 
+/*----гриф
+'\cf10 ',,'Гриф - ',if v1^I: 'K' then 'учебная' else 'методическая' fi,,,'\cf ',,
+else 
+ if v1^H<>'' and v1^H<>' ' then 
+/*----тип
+'\cf17 ',,'Тип литературы - ',v1^H*1,,,,,'\cf ',,
+else 
+ if v1^G<>'' and v1^G<>' ' then 
+/*----цикл	
+ '\cf13 ',,'Цикл - ',v1^G,,,,,'\cf ',,
+else
+ if v1^F<>'' and v1^F<>' ' then 
+/*----специальност
+'\cf7 ',,'Специальность - ',v1^F,,,,,'\cf ',,
+else 
+ if v1^E<>'' and v1^E<>' ' then 
+/*----Направление
+ '\cf7 ',,'Направление - ',V1^E,,,,'\cf ',,
+else 
+ if v1^D<>'' and v1^D<>' ' then 
+/*----Кафедра
+'\cf6 ',,'Кафедра - ',V1^D,,,,'\cf ',,
+else 
+ if v1^C<>'' and v1^C<>' ' then 
+/*----факультет
+'\cf12 ',,'Факультет - ',V1^C,,,,'\cf ',,
+else 
+ if v1^B<>'' and v1^B<>' ' then 
+/*----Вид обучения	
+'\cf15 ',,'Уровень подготовки - ',V1^B,,,,'\cf ',,
+else 
+ if v1^A<>'' and v1^A<>' ' then 
+/*----форма обучен
+'\cf2 ',,'Форма обучения - ',V1^A,,,,'\cf ',,
+fi fi fi fi fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,,,,,,,,,,,,,,,,
+else 
+/*----------------------------------------------------запись
+'\trowd \trqc\trgaph108\trleft-108',,
+   if v1^T: 'яяяяя' 
+   then 
+/*----------завершение таблицы
+'\clbrdrt\brdrs\brdrw30\cellx15200 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,,,,,,,,,,,,,,,,
+   else 
+      if &uf('+97',G2)=&uf('+97',v1^T) then else 
+'\clbrdrt\brdrs\brdrw30',,fi,,,,,,,,,,,,,,,,,,,,,
+'\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx675 ',,,
+if &uf('+97',G2)=&uf('+97',v1^T) then else 
+'\clbrdrt\brdrs\brdrw30',,,fi,,,,,,,,,,,,,,,,,,,,,
+if &uf('+97',v1^_) = &uf('+97',&uf('IPRIVATE,DBN,IBIS') ) or 
+   &uf('+97',v1^_)='IBIS' and &uf('IPRIVATE,DBN,IBIS')='' 
+then 
+'\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx3000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx14000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx15200 ',,
+else 
+'\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx3000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat4\clshdng0\cellx6000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat4\clshdng0\cellx14000 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat4\clshdng0\cellx15200 ',,
+fi,,,,,,,
+'\pard \widctlpar\intbl {\ql \fs20 ',,,
+if &uf('+97',G2)=&uf('+97',v1^T) then else &uf('+7W1#',,f(val(G1)+1,0,0) ),,,G1 fi,,,
+'\cell }',,
+'\pard \widctlpar\intbl {\ql \fs20 ',,,
+if &uf('+97',G2)=&uf('+97',v1^T) then else v1^T,,,&uf('+7W2#',v1^T) fi,,,
+'\cell }',,
+'\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*----------------------- ссылка на ресурс
+&uf('D',,v1^_,,',@',,,,v1^Y,',@KoListElectroRef'),,
+'\cell }',,
+'\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*------------------------------------------------------------------- БО
+&uf('D',,v1^_,,',@',,,,v1^Y,',@BriefKoNew'),,
+'\cell }',,
+'\pard \widctlpar\intbl {\ql \fs20 ',,,
+/* в g951 поле 951
+if g551='' and g955<>'' then 'Полный текст в ЛВС' else 
+if g951<>'' and &uf('Ag951^L#1')<>'' then    ' из ЛВС' else    ' из Интернет'  fi,,,,,,,,,,,,
+if g951<>'' and &uf('Ag951^d#1')<>'' then  ' для категор.: '&uf('Ag951^d#1') fi,,,,,,,,,,
+fi,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,,,,,,,,,,,,,,,,
+   fi,,
+fi,,
+'}',,

@@ -1,0 +1,15 @@
+&uf('6enterexit0_cee')
+
+if g1101='1'
+    then /* оформлялся ВХОД    
+         if v999='1' 
+            then '<br><b><font style="color: #FF0000">Посещение зафиксировано',". "g1100,'</font></b><br><BGSOUND src="C:\Windows\Media\Windows XP - восстановление.wav">',
+            else '<br><b><font style="color: #FF0000">Посещение НЕ зафиксировано!</font></b><br><BGSOUND src="C:\Windows\Media\Windows XP - критическая ошибка.wav">',
+         fi 
+    else /* оформлялся ВЫХОД     
+         if a(v999) 
+            then '<br><b><font style="color: #FF0000">Выход зафиксирован',". "g1100,'</font></b><br><BGSOUND src="C:\Windows\Media\Windows XP - восстановление.wav">', 
+            else '<br><b><font style="color: #FF0000">Выход НЕ зафиксирован!</font></b><br><BGSOUND src="C:\Windows\Media\Windows XP - критическая ошибка.wav">',
+         fi 
+fi
+&uf('6rdrw_html_dolg'),

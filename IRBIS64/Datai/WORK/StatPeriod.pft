@@ -1,0 +1,18 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5211 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\pard \widctlpar\intbl {\ql \fs24 ',,v1
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'f(val(V2),0,0),,,if v2='' then ' - ' fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,66 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3510 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5778 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7195 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8612 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10029 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11446 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12863 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14280 
+\pard \widctlpar\intbl {\ql \fs24 ',,,if v1^A<>'' then v1^C,' (',v1^A,')' else  if v1^E<>'' then v1^E else '     -' fi fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,if v1^B<>'' then v1^D,' (',v1^B,')' else '     -' fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,,if v1^E<>'' then f(val(v8),0,0) else f(val(v2),0,0) fi,,,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,,if v1^E<>'' then f(val(v9),0,0) else f(val(v5),0,0) fi,,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,if v1^E='' then f(val(v3),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,if v1^E='' then f(val(v6),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,if v1^E='' then f(val(v4),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,if v1^E='' then f(val(v7),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

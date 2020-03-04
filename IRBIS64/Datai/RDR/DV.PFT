@@ -1,0 +1,27 @@
+if p(v200^e) then 
+   if '01 03 05 07 08 10 12':v200^e*4.2 then 
+      if (val(v200^e*6)+20)>31 then 
+         if v200^e*4.2:'12'then 
+            f((val(v200^e.4)+1),0,0),'01' 
+         else v200^e.4,if v200^e*4.2:'10'then else'0'fi,
+            f((val(v200^e*4.2)+1),0,0),
+         fi,if val(v200^e*6)>=21 then else'0'fi,
+            f((val(v200^e*6)+20-31),0,0) 
+      else v200^e.6,f((val(v200^e*6)+20),0,0) 
+      fi 
+   else 
+      if v200^e*4.2:'02' then 
+         if (val(v200^e*6)+20)>28 then v200^e.4,'03',
+            if val(v200^e*6)>=18 then else'0'fi,
+            f((val(v200^e*6)+20-28),0,0) 
+         else v200^e.6,f((val(v200^e*6)+20),0,0) 
+         fi 
+      else 
+         if (val(v200^e*6)+20)>30 then v200^e.4,
+            if val(v200^e*4.2)>=9 then else'0' fi,
+            f((val(v200^e*4.2)+1),0,0),
+            if val(v200^e*6)>=20 then else'0'fi,
+               f((val(v200^e*6)+20-30),0,0) 
+         else v200^e.6,f((val(v200^e*6)+20),0,0) 
+fi fi fi fi
+

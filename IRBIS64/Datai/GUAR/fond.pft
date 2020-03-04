@@ -1,0 +1,108 @@
+'</>', 
+ '<table width="100%"<font style="font-size: 16"><tr>'
+   '<tr>''<b>'v852^a'</b>''</tr>',
+   '<tr>''<td valign="Top" width="10%">'mpu,'<b>'v251^c," "n251,'</b>'mpl,'</td>'
+   '<td> ''Шифр: <b>'v903'&nbsp ','</b>'
+   if p(v215) then '('(| ; |+d215,v215^a,| |v215^1),')'fi, 
+   '</td>''</tr>'
+/*       '<td></td>'
+ '</font></table>'
+/*'<font size="3">',
+if v920:'fond' then '&nbsp &nbsp'
+   if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIopis='&uf('Av903#1')))>0 OR
+      val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 OR 
+      val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIdelo='&uf('Av903#1')))>0 then 
+'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+' в БД: &nbsp &nbsp'
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIopis='&uf('Av903#1')))>0 then 
+'<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIopis='v903,'">',
+'Описей: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIopis='&uf('Av903#1')) '</A>' '&nbsp &nbsp &nbsp',
+      fi 
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIdelo='&uf('Av903#1')))>0 then 
+      '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIdelo='v903,'">',
+'Дел: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIdelo='&uf('Av903#1')) '</A>' '&nbsp &nbsp &nbsp',
+      fi
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+      '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIguar='v903,'">',
+'Док.: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')) '</A>' 
+      fi '&nbsp &nbsp &nbsp','<br>'
+   fi,
+ '<table>' 
+   if v953<>''and v953^p:'2'then 
+ '<tr>''<td valign="top" width="10%">'
+       '<A HREF="IRBIS:3,12,,',mfn,',','1','">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',','1','"></A>'
+      '</td>',
+   else 
+      if v951^h:'02a'and v951^a<>'' then 
+ '<tr>''<td valign="top">',
+          '<A HREF="IRBIS:3?PATH=10&FILENAME=',&uf('Av951^a#1'),'">',
+          '<IMG  style="width:150 px" SRC="IRBIS:10,,',&uf('Av951^a#1'),'"></A>'
+       '</td>',
+   fi fi 
+ '</table>'
+   '<b><br>Номер фонда: </b >'v852^J, 
+   '<b><br> Название фонда: </b >'v200^a,
+   
+   '<table width="100%" font style="font-size: 14"><tr><td width="20%">'
+   '<b>Фондообразователи </b> ''</td>',
+   '<td>'"<b> - персоны:</b> "d700,v700^a," "v700^d," "v700^g,
+   if a(v700^g) then| |d700^b,
+      if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+   fi fi,
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,
+      if s(v700^1)<>''then"; "d700^c fi,v700^c,
+      if s(v700^1,v700^c)<>''then"; "d700^f fi,v700^f,')' 
+   fi,"\"v700^4*4,", "v700^5*4,", "v700^6*4,"("v700^7")","\"d700^4
+   if p(v700) then "<br>"d710 fi,"<b> - организация:</b> "d710,v710^a,
+   if s(v700,v710)<>'' then "<br>"d720 fi,"<b> - семья:</b> "d720,v720^a,
+   '</td></tr></table>'
+   '<br><b>Крайние даты документов в фонде: </b>',
+   (if p(v122) then if v122:'['then v122^a,|-|v122^b else|, |+d122,v122^a*6|.|,v122^a*4.2|.|,v122^a.4,| - |d122^b,
+       v122^b*6|.|,v122^b*4.2|.|,v122^b.4, fi fi)," г."d122^a,if s(v122^b,&uf('Av122#2'))<>'' then 'г.' fi,
+   if p(v615) then'<br><br><b>Рубрикатор фондов: </b>'v615^F"<br><br>"fi,
+   '<table width="100%" font style="font-size: 14">'
+      '<tr>'
+   if p(v331) then 
+      '<td valign="Top">','<A HREF="IRBIS:1,,'&uf('IPRIVATE,gua,GUAR')',gua_pof_wn,',&uf('+3EI='v903),
+          '?&TOPPFTNAME=BOTTOM_gua_WN&BOTTOMPFTNAME=BOTTOM_gua_WN&CHECKNAME=CHECKINDEX">',
+'Просмотреть описание фонда ','</A>',
+          '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp'
+   else '<td valign="Top" align=right>'
+   fi,
+   if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIopis='&uf('Av903#1')))>0 then
+      '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',opis_wn,',&uf('+3EI='v903),
+      '?&TOPPFTNAME=BOTTOM_gua_WN&BOTTOMPFTNAME=BOTTOM_gua_WN&CHECKNAME=CHECKINDEX">',
+'Просмотреть описи фонда ','</A>',
+   fi,
+   '</td></tr>'
+ '</font></table>'
+ ,gua_prim_vl,mpl,
+ 
+   if p(v331) then &uf('6gua_fond_vl')  fi,
+   if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIopis='&uf('Av903#1')))>0 then '<br>'
+ '<table width="100%" font style="font-size: 14">' 
+   '<tr>''<td valign="Top">',   
+'Перейти к описям фонда: ''</td></tr>'
+   '<tr>''<td>'
+      &uf('+7W903#'&uf('7',&uf('IPRIVATE,gua,GUAR'),',?IIopis='v903'?,|^A|v903,|^B|v200^a/')),
+      (if p(g903) then '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,I='g903^a,'">',
+      g903^a,'</A>',| &nbsp &nbsp |g903^b,'<br>' fi/) 
+   '</td></tr>'
+ '</font></table>',
+   fi 
+   if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+      (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',
+          if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+      (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  
+          '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',
+          if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi fi),
+      (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+      (if p(v953) then 
+          if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+          '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+          '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+       fi fi) 
+fi fi 
+'</font>'

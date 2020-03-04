@@ -1,0 +1,52 @@
+/* поиск дублей в БД комплектования, используется при переносе описания из БД каталога в МП
+if p(v461) 
+then
+  '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi),&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,f(rsum(v215^a),0,0) 
+else 
+  if v920='ZK'or v920='zk'
+  then 
+    if s(v225^v)<>''
+    then
+      '!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),,f(rsum(v215^a),0,0) 
+    else 
+      if p(v200^a) 
+      then
+        '!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+        ,f(rsum(v215^a),0,0),, 
+      fi 
+    fi 
+  else 
+    if v920:'ojk'then'!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591,if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi) 
+    else 
+      if v920:'PAZK'or v920:'PVK'then'!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,f(rsum(v215^a),0,0) fi,
+    fi,
+  fi,
+fi,/
+/*----------страницы по старому
+if p(v461) 
+then
+  '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi),&unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,v215^a, 
+else 
+  if v920='ZK'or v920='zk'
+  then 
+    if s(v225^v)<>''
+    then
+      '!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),^a, 
+    else 
+      if p(v200^a) 
+      then
+        '!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+        v215^a,
+      fi 
+    fi 
+  else 
+    if v920:'ojk'then'!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591,if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi) 
+    else 
+      if v920:'PAZK'or v920:'PVK'then'!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a fi,
+    fi,
+  fi,
+fi

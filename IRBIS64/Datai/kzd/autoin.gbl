@@ -1,0 +1,91 @@
+0
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if a(v903) then if p(v972^v) then v972^v fi,'-'&unifor('R') fi
+XXXXXXXXXXXXXXXXXXX
+REP
+488^A
+F
+(if p(v488) then v488^a,if v488^Z:'NJ' then ' // ',&uf('D'v488^9,if a(v488^9) then 'IBIS' fi,',!I='&uf('G2-'v488^z),'!,@brief') fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+488^z
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') and v907^c = &unifor('IPRIVATE,ETR,') then '1;'else'0;'fi fi))> 0 then else'^C',&unifor('IPRIVATE,ETR,'),'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi 
+XXXXXXXXXXXXXXXXXXX
+IF
+if v320^0<>'' then '1' else '0' fi 
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+110
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then else v320 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+111
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then v320^0 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+(if p(v111) then &uf('+7W2#'v111),&uf('7'&uf('IPRIVATE,EKP,ibis'),',!A='v111|!,'^A'&unifor('6brief'),if v920:'NJ' then '^8'(if p(v922) then if s(v922^f,v922^2,v922^3,v922^w):&uf('G0,'&uf('Ag2#1')) then v922^f,if p(v922^2) then ', 'v922^2 fi,if p(v922^3) then', 'v922^3 fi,if p(v922^w) then', 'v922^w fi,' 'v922^c fi fi) fi,if p(v330) then '^8'(if p(v330) then if s(v330^f,v330^2,v330^3,v330^w):&uf('G0,'&uf('Ag2#1')) then ' - см.  ' v330^f,if p(v330^2) then ', 'v330^2 fi,if p(v330^3) then', 'v330^3 fi,if p(v330^w) then', 'v330^w fi,' 'v330^c fi fi) fi,'^W'v903,'^9'&uf('+D')/|) fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v111<>'' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+320
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+320
+XXXXXXXXXXXXXXXXXXX
+(v110/)/(v112/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+320
+*
+'^0'
+''
+DEL
+320
+F
+&uf('+7W2#'),(if p(v320) then if &uf('Ag2#1'):s(v320^w,v320^8,|+|d320^w) then '1' else '0',&uf('+7W2#'&uf('Ag2#1'),v320^w,v320^8,|+|d320^w) fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+110
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

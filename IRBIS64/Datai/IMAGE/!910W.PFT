@@ -1,0 +1,29 @@
+if p(v910) then                                                                 
+   (if p(v910)then                                                              
+       if v910:'^a'then/'0'else/'1 Ошибка: отсутствует статус экз-ра   'v910^b,
+|   |v910^c,fi/                                                                 
+       if v910:'^a6'then 
+          if p(v910^v) or &unifor('IPRIVATE,KS2,')<>''then/'0'else/'1 Ошибка: отсутствует номер записи КСУ выбытия 'v910^b,|   |v910^c,
+       fi fi/                                      
+       if v910:'^v'then if '6 C U':v910^a then/'0'else/'1 Ошибка: отсутствует 
+статус выбытия экз. 'v910^v fi fi/                                             
+       if v910:'^v'and 'C U':v910^a then if v910:'^x'then/'0'else/'1 Ошибка: 
+отсутствует число выбывших экз. для ЦБС или БИУ 'v910^v fi fi/                  
+       if v910:'^v'and v910^a:'6'then if a(v910^x)then/'0'else/'1 Ошибка: Число выбывших экз. вводится только для ЦБС или БИУ 'v910^v fi fi/                
+       if v910:'^w'and v910^a:'6'then if a(v910^z)then/'0'else/'1 Ошибка: Число пeреданных экз. вводится только для ЦБС или БИУ 'v910^v fi fi/               
+       if v910:'^w'then if v910:'^v'or &unifor('IPRIVATE,KS2,')<>''then/'0'else/'1 Ошибка:  отсутствует номер КСУ выбытия экз. 'v910^w fi fi/                             
+       if v910:'^w'then if v910:'^m'then/'0'else/'1 Ошибка: отсутствует новое место хранения 'v910^b,|   |v910^v fi fi/                                     
+       if p(v910^m) then 
+          if p(v910^w) or &unifor('IPRIVATE,PKS2,')<>''then/'0'else/'1 Ошибка: отсутствует номер записи Акта передачи 'v910^b,|   |v910^c,
+       fi fi/                                      
+       if v910:'^m'then if v910:'^w'or &unifor('IPRIVATE,PKS2,')<>''then/'0'else/'1 Ошибка:  отсутствует номер Акта передачи в 'v910^m fi fi/                              
+       if v910:'^a0'then if v910:'^b'or v910:'^h'then/'0'else/'1 Ошибка: отсутствует инв.номер и штрих-код экз-ра   'v910^c fi/                            
+       fi,                                                                      
+       if p(v910^h)then 
+          if l(|IN=|v910^h)<=0 or val(ref(l(|IN=|v910^h),mfn)) = val(mfn) 
+          then/'0'else/'1Дублетный Штрих-код: 'v910^h,
+                 ref(l(|IN=|v910^h),' (см.N ',mfn,')') fi 
+       else/'0'fi 
+   else/'0' fi/) 
+else/'2 Отсутствуют сведения об экземплярах'fi
+

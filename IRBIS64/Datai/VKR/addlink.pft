@@ -1,0 +1,65 @@
+(if p(v691) 
+ then 
+   v691, 
+   if a(v691^0) and a(v691^9) 
+   then 
+     if &unifor('Ksemo.mnu|'v691^f)<>'' 
+     then 
+       '^0',  
+       if v691^i:':' 
+       then 
+         if &unifor('Kjzko.mnu|'&unifor('G2:'v691^i))<>'' 
+         then 
+           if p(v691^u) 
+           then '-' 
+           else |*|d691^w 
+           fi,
+           &unifor('Kjzko.mnu|'&unifor('G2:'v691^i)) 
+         fi 
+       fi,
+       v691^a,
+       if p(v691^C) 
+       then v691^c 
+       else 
+         if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F'!,v68^C')<>'' 
+         then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^C') 
+         else 
+           if p(v691^n) 
+           then v691^n 
+           else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^n') 
+           fi 
+         fi 
+       fi,
+       v691^v,v691^o,|-S|v691^f 
+     fi 
+     if &unifor('Ksemv.mnu|'v691^f)<>'' 
+     then 
+       '^9',  
+       if v691^i:':' 
+       then 
+         if &unifor('Kjzko.mnu|'&unifor('G2:'v691^i))<>'' 
+         then 
+           if p(v691^u) 
+           then '-' 
+           else |*|d691^w 
+           fi,
+           &unifor('Kjzko.mnu|'&unifor('G2:'v691^i)) 
+         fi 
+       fi,
+       v691^a,
+       if p(v691^C) 
+       then v691^c 
+       else 
+         if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F'!,v68^C')<>'' 
+         then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^C') 
+         else 
+           if p(v691^n) 
+           then v691^n 
+           else &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v68^n') 
+           fi 
+         fi 
+       fi,
+       v691^v,v691^o,|-S|v691^f 
+     fi 
+   fi 
+ fi/)

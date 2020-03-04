@@ -1,0 +1,17 @@
+v19^b" "v200^a,
+(if p(v923) then
+       if &unifor('Av920#1'):'SPEC' then ", "| ; |+d923,v923^h else ". "| ; |+d923,v923^h fi, 
+       if p(v923^h)then|. |d923^i fi,v923^i, 
+       if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+       if p(v923^k)then|. |d923^l fi,v923^l 
+    fi) 
+if p(v951) then '<br>' fi,
+(if p(v951^I) then | , |+d951,if p(v951^T) then v951^T else v951^I fi fi), 
+(if p(v951^A) then 
+    if p(v951^i) then 
+       if  v951^i:v951^a then else | , |d951 fi 
+    else | , |+d951,
+       if p(v951^T) then v951^T else v951^A fi,
+ fi fi), 
+
+&unifor('!'),

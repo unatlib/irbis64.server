@@ -1,0 +1,10 @@
+'\pard \li108 \ri108 ','\qc \b \fs24 \par наеяоевеммнярэ свеамни кхрепюрспни \ МЮ ',v991^A,,,
+' ЦНД ',,if v991^A='' then '(мЕ ГЮДЮМШ ЦНДШ НАСВЕМХЪ!)' fi,,
+if v991^B<>'' 
+then 
+  ' (',&unifor('Kovs.mnu|',v991^B),')' 
+else 
+  &uf('+7W5#',if val(&uf('31'))<9 then 'V' else 'O' fi),
+  ' (',&unifor('Kovs.mnu|',G5),')',
+fi,
+'\par \fs18 ',v992,'\par '

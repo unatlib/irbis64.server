@@ -1,0 +1,30 @@
+if p(v230)then (if v115^x:'1'then| (|d115^b,f(val(v115^b),0,0),| мин.)|d115^b,fi)else(if v115^x:'1'then| (|d115^b,f(val(v115^b),0,0),| мин.)|d115^b,| : |v115^c*3,|, |v115^d*3,| ; |v115^e*3,|, |v115^f*3,
+|, |v115^h*3,|, \b |v115^j*3|\b0 |,|, |v115^k*3,|, |v115^l*2 fi),fi,
+(if v915^x:'1'then| (|v915^b,f(val(v915^b),0,0),
+    if v915^g.1:'k'then' дп.'else 
+       if v915^g.1:'l'then' трансп.'else' кадр.'fi fi,
+    |)|d915^b,| : |v915^c*3,|, |v915^f*3,|, \b |v915^g*3|\b0 |,|, |v915^p*3,|, |v915^q*3 fi),
+if p(v230)then (if v916^x:'1'then| (|d916^b,f(val(v916^b),0,0)| мин.) |d916^bfi)else(if v916^x:'1'then| (|d916^b,f(val(v916^b),0,0)| мин.)|d916^b,| : |v916^1| кадр/с.|,v916^c*3,|, |v916^d*3,
+|, |v916^e*3,|, |v916^2| м|,|, |v916^f*3,|, \b |v916^g*3|\b0 |,| ; |v916^h*3,|, |v916^i*3,|, |v916^m*3,|, |v916^n*2 fi)fi,
+if a(v230) then
+   (if v135^x:'1'then| : \b |v135^a*3|\b0 |,|, |v135^b,|, |v135^c,|, |v135^d fi) 
+fi,
+(if v130^x:'1'then|\b | v130^a*3|\b0 |,|, |v130^b*3,| (|v130^c*3|)|,|, |v130^d*3,|, |v130^e,|, |v130^f*3,
+|, |v130^g*3,|, |v130^h*3,|, |v130^i*3 fi),
+(if v125^x:'1'then| (|d125^a,
+    if v125^a.2:'00'then else 
+       if v125^a.1:'0'then v125^a*1.1| час.|else v125^a.2| час.|
+    fi fi,
+    if v125^a*2.2:'00'then else 
+       if v125^a*2.1:'0'then v125^a*3.1| мин.| else v125^a*2.2| мин.| 
+    fi fi,
+    if v125^a*4.2:'00'then else 
+       if v125^a*4.1:'0'then v125^a*5.1| сек.|else v125^a*4.2| сек.|
+    fi fi,
+    |) |d125^a,if p(v125^a)then if v125^b*3<>''then ', 'fi,v125^b*3 fi,if s(v125^a,v125^b*3)<>''then if v125^c*3<>''then ', 'fi,fi,v125^c*3,| |v125^d*2,if s(v125^a,v125^b*3,v125^c*3,v125^d*2)<>''then if v125^e*5<>''then ', 'fi,fi,v125^e*5,if s(v125^a,v125^b*3,v125^c*3,v125^d*2,v125^e*5)<>''then if v125^1*2<>''then', 'fi,fi,v125^1*2,
+    | |v125^2,if s(v125^a,v125^b*3,v125^c*3,v125^d*2,v125^e*5,v125^1*2)<>''then if v125^3*2<>''then', 'fi,fi,v125^3*2,| |v125^4 
+fi),
+if v125^x:'1'and v126^x:'1'then if p(v126^a) then else ', ' fi fi,
+(if v126^x:'1'then|\b |v126^a*3|\b0 |,| : |d126^a,v126^b*3,| (|d126^1,f(val(v126^1),0,0),| мин.)|d126^1,
+|, |v126^c*3,|, |v126^d*3,|, |v126^e*3,|, |v126^f*3,|, |v126^g*3,|, |v126^h*3,|, |v126^i*3,|, |v126^j*3 fi),
+(if v123^x:'1'then|: \b |v123^a*3|\b0 |,|, |v123^b*3 fi),

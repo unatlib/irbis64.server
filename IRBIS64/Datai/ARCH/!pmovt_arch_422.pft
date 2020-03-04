@@ -1,0 +1,63 @@
+mhl,
+if ('***'='200') or ('***'='461') or ('***'='4611') or ('***'='923') or ('***'='510') or ('***'='541') 
+then mpl,
+      v200^a,(|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l)," : "v200^e," / "v200^f,
+      if ('***'='510') then | = |v510^d fi,
+      if ('***'='541') then |. - Пер.загл. : |v541 fi,
+      '^V',if &unifor("Knosnt.mnu|"v215^1)<>''then &unifor('G2='v215^1) fi,
+      '^Y'v19^b,'^G'v210^d,'^D',&unifor('Av210^4#1'),
+      '^H',&unifor('Av210^c#1'),
+      '^4'v215^a,
+      if &unifor("Knosnt.mnu|"v215^1)<>''then' '&unifor('G2='v215^1) fi,
+      if p(v215^a) and a(v215^1) then 
+         if v215^a:'c'or v215^a:'s'or v215^a:'p'or v215^a:'с' then else &unifor('Korg.mnu|4')'.' fi 
+      fi,
+      '^W'v903,if p(v14) then '+' fi 
+else 
+   if ('***'='225') or ('***'='488') or ('***'='541')  
+   then 
+      (if p(v***) then 'Неправильно выбрано заглавие документа'
+          if '***'='225' then ' (Завод-заказчик)'else 
+             if '***'='541' then ' (Перевод)' else 
+                if '***'='488' then ' (Связанное издание)' else 
+          fi fi fi'^A^V^Y^G^D^H^4^W'
+       fi/)   
+   else 
+      if ('***'='330') then 
+         (if p(v***) then v***^c,|: |v***^e,| / |v***^g,
+             &unifor('Av200^a#1'),
+             if &unifor('Av200^e#1')<>''then': '&unifor('Av200^e#1') fi,
+             if &unifor('Av923^h#1')<>''then'. '&unifor('Av923^h#1') fi,
+             if &unifor('Av923^i#1')<>''then'. '&unifor('Av923^i#1') fi,
+             if &unifor('Av923^k#1')<>''then'. '&unifor('Av923^k#1') fi,
+             if &unifor('Av923^l#1')<>''then'. '&unifor('Av923^l#1') fi,
+             if &unifor('Av210^a#1')=''and &unifor('Av210^c#1')=''then 
+                if &unifor('Av210^a#1')<>''then'. - '&unifor('Av210^a#1') fi,
+                if &unifor('Av210^x#1')<>''then'; '&unifor('Av210^x#1') fi,
+                if &unifor('Av210^y#1')<>''then'; '&unifor('Av210^y#1') fi,
+                if &unifor('Av210^c#1')<>''then': '&unifor('Av210^c#1') fi,
+             fi,
+             if &unifor('Av215#1')<>''then'. - '&unifor('Av215^a#1'),
+                if &unifor('Av215^1#1')<>''then' '&unifor('G2='&unifor('Av215^1#1')) fi,
+                if &unifor('Av215^1#1')=''then 
+                   if &unifor('Av215^a#1'):'s'or &unifor('Av215^a#1'):'p'or 
+                      &unifor('Av215^a#1'):'с'or &unifor('Av215^a#1'):'c'
+                   then else 
+                      if &unifor('Av215^a#1')<>''then 
+                         if &unifor('Av215^a#1')<>''then &unifor('Korg.mnu|4') 
+                fi fi fi fi,
+                if &unifor('Av215^a#1')<>''then 
+                   if &unifor('Av215^c#1')<>''then': 'fi 
+                fi,
+                if &unifor('Av215^c*1.1#1')='-'then &unifor('Av215^c*2#1') 
+                else &unifor('Av215^c#1') fi,
+                if &unifor('Av215^0#1')<>''then', '&unifor('Av215^0*2#1') fi,
+                if &unifor('Av215^7#1')<>''then', '&unifor('Av215^7*2#1') fi,
+                if &unifor('Av215^8#1')<>''then', '&unifor('Av215^8*2#1') fi,
+             fi,'^W',&unifor('Av903#1'),
+             '^V',
+             if &unifor('Knosnt.mnu|'&unifor('Av215^1#1'))<>''then ' '&unifor('G2=' &unifor('Av215^1#1')) fi,
+          fi/),
+          if p(v14) then (if p(v14) then |+|v14,'^Z'&uf('Av19^b#1') fi/) else '+^Z'&uf('Av19^b#1') fi 
+fi fi fi,
+mpl

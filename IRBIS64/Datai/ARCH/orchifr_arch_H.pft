@@ -1,0 +1,9 @@
+if v920:'ARCH' then '<b>'
+   if p(v910) then 
+      &uf('+7W2#'(v910^a/)),&uf('+7W3#'(if v910^a='a' then v910^a fi/)),
+      if s(g2|+|)=s(g3|+|) then 'ÀÍÍÓËÈĞÎÂÀÍ ',v503^a,(|<br>|v910^b|   |,v910^d)
+      else v503^a,
+         (if p(v910) then '<br>',v910^b|   |,v910^d,if v910^a='a' then '  ÀÍÍÓËÈĞÎÂÀÍ ' fi fi),
+      fi,(|<br> èçì. |v9005^n,| (ğàçğ.  |v9005^m|)|),
+fi '</b>',fi,
+

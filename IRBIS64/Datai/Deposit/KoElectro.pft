@@ -1,0 +1,29 @@
+/* условия ЭУ
+if p(v691) then 
+   if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'j02' or 
+      rsum((if p(v951) then if v951^k<>'' and val(v951^C)>val(&uf('3')) or v951^K<>'' and v951^C='' then '1,' fi fi ))>0  or 
+      v955^A<>'' or 
+      v900^t:'L' and p(v230) and v910='' 
+   then '1' 
+   else 
+/* проверка - нет ли аналога=ЭУ   
+     if &uf('IPRIVATE,AnalogElRes,0')='1' 
+     then 
+       (if p(v699) 
+        then 
+           if val(v699^U)=1 
+           then 
+              if ref(l('I=',v699^W),
+              if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'j02' or 
+                 rsum((if p(v951) then if v951^k<>'' and val(v951^C)>val(&uf('3')) or v951^K<>'' and v951^C='' then '1,' fi fi ))>0  or 
+                 v955^A<>'' or 
+                 v900^t:'L' and p(v230) and v910='' 
+                 then '1' fi,,
+              )='1' then '2',break fi,,,
+           fi,,
+       fi/)/
+     fi,,,,  
+   fi,,
+fi,,/   
+
+

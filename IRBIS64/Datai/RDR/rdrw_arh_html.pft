@@ -1,0 +1,21 @@
+'</>'mpl,
+&uf('+7W1#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),/*ОБРАЩЕНИЕ К АРХИВНЫМ СВЕДЕНИЯМ
+if g1<>'' then '<br><br><b>АРХИВНЫЕ СВЕДЕНИЯ О ВЫДАЧАХ/ВОЗВРАТАХ:</b>',
+'<table border=1 cellspacing=0>' ,
+   '<tr>',
+   '<td><b>Возврат</td><td><b>Издание</td><td><b>Экземпляр</td><td><b>Выдача</td><td><b>Место выдачи</td><td><b>Предполагаемый       возврат</td><td><b>БД</td><td><b>Отв. лицо</td>',
+   '</tr>',
+   (if g1<>'' then 
+       '<tr>',
+       '<td>',if g1^f.1='*' then '<b>ДОЛГ' else g1^f*6.2|.|,g1^f*4.2|.|,g1^f.4,fi,' &nbsp','</td>',
+       '<td>',g1^a|, |,g1^c,if g1^c='' then &uf('D'g1^g',?I='g1^a'?,@brief') fi,' &nbsp','</td>',
+       '<td>',if g1^b='!' then 'эл.ресурс' else g1^b fi,| (|g1^h|)|,| - |g1^k,' &nbsp','</td>',
+       '<td>',g1^d*6.2|.|,g1^d*4.2|.|,g1^d.4,' &nbsp','</td>',
+       '<td>',g1^v,' &nbsp','</td>',
+       '<td>',g1^e*6.2|.|,g1^e*4.2|.|,g1^e.4,' &nbsp','</td>',
+       '<td>',g1^g,' &nbsp','</td>',
+       '<td>',g1^i,' &nbsp','</td>',
+       '</tr>',
+   fi)
+'</table>' ,
+fi 

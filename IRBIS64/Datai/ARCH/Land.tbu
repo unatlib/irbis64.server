@@ -1,0 +1,30 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+v999
+#
+'\trowd \trqc\trgaph108\trleft-108 \cellx
+8748
+\pard \qc\widctlpar\intbl {\b '
+"Общее кол-во выдач: "v1
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+{\b \fs24 \qc 
+Спрашиваемость литературы\par 
+\par }
+[Header]
+\trowd \trqc\trgaph108\trleft-108\trkeep \trhdr
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx648
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4968
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7128
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8748
+\pard \qc\widctlpar\intbl {\b N\cell }
+\pard \qc\widctlpar\intbl {\b Краткое описание\cell }
+\pard \qc\widctlpar\intbl {\b Шифр\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во выдач\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar
+\par }

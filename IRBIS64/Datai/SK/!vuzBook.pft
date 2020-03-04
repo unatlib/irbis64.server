@@ -1,0 +1,21 @@
+&uf('+7W13#',v700^A,if p(v700^A) then ". "d200 fi,v461^C", ",v461^F", ",v200^A,,,,' (',,f(val(mfn),0,0),,')'  ),,
+&uf('+7W14#'),,,
+&uf('+7U14#',
+(if p(v691) 
+ then 
+   if &uf('AG12^A#1')='' or &uf('+97',v691^A)=&uf('AG12^A#1') 
+   then 
+     if &uf('AG12^N#1')='' or &uf('+97',v691^N)=&uf('AG12^N#1') 
+     then 
+       if &uf('AG12^C#1')='' or &uf('+97',v691^C)=&uf('AG12^C#1') 
+       then 
+         if &uf('AG12^O#1')='' or &uf('+97',v691^O)=&uf('AG12^O#1') 
+         then 
+           if &uf('AG12^V#1')='' or &uf('+97',v691^V)=&uf('AG12^V#1') 
+           then 
+             if &uf('AG12^F#1')='' or &uf('+97',v691^F)=&uf('AG12^F#1') 
+             then 
+               &uf('AG13#1'),,
+   fi fi fi fi fi fi,,,,,,,,,
+ fi/) ),,,,,,,,,
+&uf('+7G14'),,,(G14/)

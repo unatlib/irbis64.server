@@ -1,0 +1,10 @@
+'\pard \qc\li108 \ri108 ','\par \qc \fs20 В ',if a(v991^a)or v991^a:'РП'then'отд
+ел Роспечати 'fi,if a(v991^e)then '\par \fs24 \qc О б щ и й  с п и с о к'else ref(l("skk="v991^a),v97^b),'\par \fs24 \qc ','З а я в к а','
+\par \par \fs20 \ql \tab \tab  От:  ',ref(l("z="v991^e),v7^d,'\par \ql\tab \tab 
+',| Куда: |v7^a,|, |v7^b,'\par \tab \tab ',v7^c),fi,'\par \par \qc Просим принять п
+одписку на указанные ниже ',if &unifor("Krksvs.mnu|"v991^b)<>''then  &unifor("Krksvs.mnu|"v991^b) else 'газеты и журналы' fi'\par \qc ',
+if v33*5.1<>'P' then
+&unifor('Krkint6.mnu|'v33*4),' 'v33.4' года ',
+&unifor('Krkint7.mnu|'v33*4),'\par ' else 'c ',&unifor('Krko.mnu|'v33*7.1),
+if '3 8':v33*7.1 then'а'else'я'fi,' по ',&unifor('Krko.mnu|'&unifor('G2-'v33)),
+if '3 8':s(&unifor('G2-'v33)) then else if s(&unifor('G2-'v33))='5'then'й'else'ь'fi fi,' 'v33.4' года 'fi

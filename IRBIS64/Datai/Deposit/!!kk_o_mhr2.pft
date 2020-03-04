@@ -1,0 +1,9 @@
+      &uf('+7G3',&uf('+7W3#'(v910^d/))),&uf('+7W4#'),
+      &uf('+7W4#'f(rsum((if p(g3) then '1;' fi)),0,0)),
+      &uf('+7W21#'
+          if &unifor('G0^'v905)<>'' then 
+             &unifor('G0/'&unifor('G0^'v905)) else 
+             f(val(g4) + rsum((if p(g3) then 
+                                  if &uf('KMhr_TirajO.mnu\'&uf('G0 'g3))<>'' then &uf('KMhr_TirajO.mnu\'&uf('G0 'g3))';'fi fi)),0,0) 
+          fi),
+      (if val(&uf('Ag21#1'))>0 then mfn,'^A1-'&uf('Ag21#1'),&uf('+7W21#'f(val(&uf('Ag21#1'))-1,0,0)) fi/) 

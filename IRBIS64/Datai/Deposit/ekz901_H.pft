@@ -1,0 +1,61 @@
+/*&uf('+7W10#^Q2014/1^E1=415.00;2=415.00;3=415.00;4=415.00;5=415.00;6=415.00;')/
+/*&uf('+7W5#'),&uf('+7W5#1')
+/*&uf('+7W10#^Q19901-1^E121.00'),
+&uf('+7W2#'g10),&uf('S0'),
+if p(v901) and p(v936) then 
+'<table border=1 cellspacing=0>',
+ '<tr>',
+   '<td> <font size="2"> _Период_ </td>',
+   '<td> <font size="2"> _№ экз-ра_ </td>',
+   '<td> <font size="2"> __МХР__</td>',
+   '<td> <font size="2"> _Цена_</td>',
+   '<td> <font size="2"> _Источник_ </td>',
+   '<td> <font size="2"> _ТП1_</td>',
+   '<td> <font size="2"> _ТП2_</td>',
+   '<td> <font size="2"> _ТП3_</td>',
+   '<td> <font size="2"> _ТП4_</td>',
+   '<td> <font size="2"> _ТП5_</td>',
+ '</tr>',
+   if v901^q:g10^q then 
+      (if p(v901) then 
+          if v901^Q=&uf(|Ag10^q#1|d901^q) 
+          then 
+            '<tr>'
+               '<td> <font size="2">'&uf('Ag10^q#1'),
+               '</td><td> <font size="2">'&uf('Ag5#1'),
+               &uf('+7W5#'f(val(&uf('Ag5#1'))+1,0,0)/),
+               '</td><td> <font size="2">'v901^D,|-|n901^d, 
+               &uf('+7W4#'&uf('G2=',&uf('Ag2^e#1'))),
+               &uf('+7W3#',&uf('G0;',&uf('Ag4#1'))), 
+               &uf('+7W2#','^Q'&uf('Ag10^q#1'),'^e'&uf('G2;',&uf('Ag2^e#1'))),,
+               '</td><td> <font size="2">'v901^E,if v901^e=''then &uf('Ag3#1')fi,
+               '</td><td> <font size="2">'v901^F,|-|n901^f,
+               '</td><td> <font size="2">'v901^1,|-|n901^1, 
+               '</td><td> <font size="2">'v901^2,|-|n901^2, 
+               '</td><td> <font size="2">'v901^3,|-|n901^3, 
+               '</td><td> <font size="2">'v901^4,|-|n901^4, 
+               '</td><td> <font size="2">'v901^5,|-|n901^5, 
+       '</td></tr>'
+       fi fi) 
+   else 
+      (if p(v901) then  
+          if &uf(|Ag10^q#1|d901^q):v901^q.4 
+             then 
+                '<tr>'
+                  '<td> <font size="2">'&uf('Ag10^q#1'),
+                  '</td><td> <font size="2">'&uf('S1A'), 
+                  '</td><td> <font size="2">'v901^D,|-|n901^d, 
+                  &uf('+7W4#',&uf('G2=',&uf('Ag2^e#1'))),
+                  &uf('+7W3#',&uf('G0;',&uf('Ag4#1'))), 
+                  &uf('+7W2#','^Q'&uf('Ag10^q#1'),'^e'&uf('G2;',&uf('Ag2^e#1'))),
+                  '</td><td> <font size="2">'v901^E,if v901^e=''then &uf('Ag3#1')fi,
+                  '</td><td> <font size="2">'v901^F,|-|n901^f,
+                  '</td><td> <font size="2">'v901^1,|-|n901^1,
+                  '</td><td> <font size="2">'v901^2,|-|n901^2, 
+                  '</td><td> <font size="2">'v901^3,|-|n901^3, 
+                  '</td><td> <font size="2">'v901^4,|-|n901^4, 
+                  '</td><td> <font size="2">'v901^5,|-|n901^5, 
+             '</td></tr>' 
+       fi fi)
+   fi '</table >' 
+fi 

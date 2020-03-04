@@ -1,0 +1,212 @@
+'{',,,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^W<>'' 
+then 
+/*-----------------------------------------строка-------------------------------
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4077 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4870 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5663 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6456 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7249 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8042 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8835 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9628 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10421 
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+&uf('+7W994#',,f(val(g994)+1,0,0) ),,
+/*g994,,,,
+&uf('+7W55#',,,f(val(g55)+1,0,0) ),,,,,g55,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-------------наименование
+v1^W,' (',,V1^X,,')',,,,
+if val(v1^:)=1 then '\par ',,'g991='g991,,,' v1='v1 fi,, 
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------------цикл
+v1^5,,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------------уровень к
+v1^7,,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------------кафедра
+v1^6,,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------------------------------------кол-во книг
+&uf('+7W10#'),,&uf('+7W11#'),,&uf('+7W12#'),,&uf('+7W21#'),,&uf('+7W22#'),,
+/* для формат KoDiscPolyNumEkz, участвует g995 и g992
+&uf('+7W995#','^I',v1^X,,),,
+&uf('+7W992#',,,,
+'^O',if v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
+'^V',if v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
+'^A',if v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
+'^N',if v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
+'^C',if v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
+'^F',if v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
+'^B',if v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
+'^S',if v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
+'^=',v1^=,,
+'^:',v1^:,,,
+),,,,,
+if val(v1^:)=1 
+then 
+/*----отладка
+   (g30/),,'\par ',,
+   g992,,'\par ',,
+   (if p(g30)  then  &uf('+7W50#',g30),,,&uf('7',,g30,,',?IDD=',,,&uf('+97',&uf('Av1^X#1') ),,,,'?,@KoDiscPolyNumEkz') fi)/,,,
+   (if p(g21) then g21,'-',g22,,,'\par ' fi/)/,,'Всего \par ',,
+else 
+   (if p(g30)  then  &uf('+7W50#',g30),,,&uf('7',,g30,,',?IDD=',,,&uf('+97',&uf('Av1^X#1') ),,,,'?,@KoDiscPolyNumEkz') fi)/,,,
+fi,,,,,,,,,,
+&uf('+7W13#',,f(rsum((if p(g10) then '1,' fi)),0,0) ),,,,,,
+g13,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-------------------экземпляров
+if val(v1^:)=1 
+then 
+/*----отладка
+   (if p(g22) then g22,,,'\par ' fi/),,/,,'Всего \par ',,
+fi,,,
+,,,f(rsum((if p(g11) then g11,',' fi)),0,0),,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-------------------студентов
+/* 'V1=',v1^X,,,
+/* в для форматов KoNumbRdr и KoElectroPolyF
+&uf('+7W991#',,,,
+'^I',v1^X,,
+'^O',if v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
+'^V',if v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
+'^A',if v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
+'^N',if v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
+'^C',if v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
+'^F',if v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
+'^B',if v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
+'^S',if v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
+'^=',v1^=,,
+'^:',v1^:,,,
+),,,,
+if &uf('IMAIN,AccessRdr,1')='1' then &uf('+7W60#',,f(rsum(&uf('7RDR,!IDD=',v1^X,'!,@KoNumbRDR')),0,0)   ) else
+                                     &uf('+7W60#',,f(rsum(&uf('7VUZ,!IDV=',v1^X,'!,@lncRDRVuz')),0,0)  ) fi,,,
+G60,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*-----------------Средний ККО
+/*----отладка
+if val(v1^:)=1 then (if p(g21) then 'KKO=',g21,,,'\par ' fi/)/,,,,'\par ' fi,,,,,,,,,,,,,,,
+&uf('+7W14#',,f(rsum((if p(g12) then g12,',' fi)),0,2) ),,,
+if val(v1^:)=1 then g14,,' / ',,g13,,'  = \par ',,fi,,,,,,,,,,,,,,,,,,
+if val(v1^^)=1 
+then
+   &uf('+7W71#',if val(g13)>0 then f( (val(g14) / val(g13)),0,2) else '-' fi ),,,
+   if val(g71)>1 then '1' else g71 fi,,,,
+else 
+   if val(g13)>0 then f( (val(g14) / val(g13)),0,2) else '-' fi,,
+fi,,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*---------------Кол-во ЭУ, в g11 запасаю признак, что ЭУ
+&uf('+7W11#'),,&uf('+7W12#'),,
+/* в формате участвует g991 - уже задан в студентах
+if val(v1^:)=1 then 
+/*----отладка
+   (if p(g30)  then  &uf('+7W50#',g30),,&uf('+7U11#',,&uf('7',,g30,,',?IDD=',,,&uf('+97',&uf('Av1^X#1') ),,,,'?,@KoElectroPolyF'/) ) fi)/,,,
+   (if p(g12) then g12,,,'\par ' fi/)/,,' Всего \par ',,
+else 
+   (if p(g30)  then  &uf('+7U11#',,&uf('7',,g30,,',?IDD=',,,&uf('+97',&uf('Av1^X#1') ),,,,'?,@KoElectroPolyF'/) ) fi)/,,,
+fi,,,
+f(rsum((if p(g11) then '1,' fi)),0,0),,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,,,,,
+else
+/*-----------------------------------------------заголовки-------------- 
+  &uf('+7W54#'),,,,,,,,
+  '\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrt\brdrs\brdrw30
+\clcbpat16 
+\cellx10421 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+/*---g55 - порядковый номер внутри заголовка
+     &uf('+7W55#'),
+      if v1^G<>'' and v1^G<>' ' 
+      then 
+         '\cb11 \cf9 ',,
+         '          Специальность: ',v1^G,,'\cb \cf ',,'\par ' 
+/* счетчик для ЭУ
+         &uf('+7W50#1'),,,&uf('+7W51#'),,,,&uf('+7W52#'),,,&uf('+7W53#'),,,
+      else 
+        if v1^F<>'' and v1^F<>' ' 
+        then 
+          ,'\cb11 \cf9 ','          Направление: ',v1^F,,'\cb \cf ',,'\par ' 
+        else 
+          if v1^E<>'' and v1^E<>' ' 
+          then 
+            ,'\cb11 \cf9 ','        Цикл: ',if &uf('Kcikld.mnu!',v1^E)<>'' then &uf('Kcikld.mnu!',v1^E) else V1^E fi,,'\cb \cf ',,'\par ' ,
+          else 
+            if v1^D<>'' and v1^D<>' '           
+            then 
+              ,'\cb11 \cf9 ','      Кафедра: ',V1^D,,'\cb \cf ',,'\par ' ,            
+            else 
+              if v1^C<>'' and v1^C<>' '           
+              then 
+                '\cb11 \cf9 ','    Факультет: ',if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else V1^C fi,,'\cb \cf ','\par ' ,                          else           
+                if v1^B<>'' and v1^B<>' '           
+                then 
+                  ,'\cb11 \cf9 ','  Вид обучения: ',if &uf('Kvo.mnu!',v1^B)<>'' then &uf('Kvo.mnu!',v1^B) else V1^B fi,,'\cb \cf ',,'\par '                         else           
+                  if v1^A<>'' and v1^A<>' ' 
+                  then 
+                    ,'\cb11 \cf9 ','Форма обучения: ',if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else V1^A fi,,'\cb \cf ',,'\par ' 
+fi fi fi fi fi fi fi 
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,,,,,,,,,,,,,,,, 
+'}'

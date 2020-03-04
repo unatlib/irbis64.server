@@ -1,0 +1,51 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[SumPage]
+20
+25
+f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then v39^c|;| fi fi)),0,0)
+f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then f((val(v39^c)*val(&unifor('Av34#1'))),0,2)';' fi fi)),0,2)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx4966
+\pard \qr\widctlpar\intbl {  Итого по листу : ',v1" компл.", if val(v2)>0 then ' на сумму ',f(val(v2),0,2)' '&unifor('Korg.mnu|3')fi,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Sum]
+f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then v39^c|;| fi fi)),0,0)
+f(rsum((if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b)or &unifor('Av991^e#1')='' then f(val(v39^c)*val(&unifor('Av34#1')),0,2)';'fi fi)),0,2)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx4966
+\pard \qr\widctlpar\intbl {  ИТОГО : ',v1" компл.", if val(v2)>0 then ' на сумму ',f(val(v2),0,2)' '&unifor('Korg.mnu|3')fi,'\par \ql\tab Стоимость подписки будет оплачена по получении извещения\par \par \qc Директор\tab \tab \tab ',ref(L('VD=POLZV'),"/"v14^b"/",'\par \par Гл.бухгалтер\tab \tab \tab ',"/"v14^c"/"),
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1571\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4966\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15
+\cellx5819\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7086\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8353
+\pard \qc \fs20 \widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Индекс издания\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Наименование издания\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Кол. компл\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Цена 1-го комплекта\cell }
+\pard \qc \fs20 \widctlpar\intbl {\b Сумма\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

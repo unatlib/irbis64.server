@@ -1,0 +1,50 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3793 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4927 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7195 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9746 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10596 
+\pard \widctlpar\intbl {\qc \fs16 '&uf('S1A')
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 'v200^a,| = |v510^d,|: |v200^e,|. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l," ISSN "v11^a.4," - "v11^a*4," (комп "v903")"
+'
+\cell }
+\pard \widctlpar\intbl {\qc \fs16 'v110^X
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '(if p(v909)then if v909:&unifor('Av991^a.4#1')then v909^q| г.|,| Т.|v909^f,|, №№:|v909^h| |'\par 'fi fi)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '&uf('+7W2#'),&uf('+7W5#'),&uf('+7W6#'(if p(v938)then if v938^q=&uf('Av991^a#1')then |^A|v938^a,|^B|v938^b, BREAK, fi,fi)),if g6=''then &uf('+7W6#'(if p(v901)then if v901^q=&uf('Av991^a.4#1')then v901^j, BREAK, fi,fi))fi,&uf('+7W1#'if v991^a*5='0'then'^A1^B'v110^x fi,if v991^a*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v991^a*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v991^a*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v991^a*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v991^a*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v991^a*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v991^a*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av991^a*5#1'))),'^B',&unifor('G2-'&unifor('Av991^a*5#1'))fi ),if g6<>''then &uf('+7W1#^a'f(val(g1^a)+val(g6)-1,0,0),'^B',f(val(g1^B)+val(g6)-1,0,0))fi,&uf('+7W4#'g1^a),&uf('+7W1#'g1^b),(if  val(&uf('Ag4#1'))> val(&uf('Ag1#1'))then BREAK else &uf('+7U2#'&uf('Ag4#1')), &uf('+7W4#'f(val(&uf('Ag4#1'))+1,0,0))fi/),&uf('+7W3#'v903,|/|v991^a.4,(if v909^q=&uf(|Av991^a.4#1|d909) then |/|v909^f,BREAK,fi)),(if p(g2)then if val(&uf('J,I='&uf('Ag3#1'),|/|g2))<1 then g2+|,| else  &uf(|D,!I=|d909,&uf('Ag3#1'),|/|g2,|!,(if p(v910)then if v910^c=''then &uf('Av936#1')' комп.'v910^b,'('v910^d'),',fi fi),|d909)fi fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs16 'f(rsum((if p(g2)then &uf('6938e'),&uf('Ag5#1')';'fi)),0,2)
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

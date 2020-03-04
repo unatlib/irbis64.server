@@ -1,0 +1,56 @@
+mhl,
+if s(v451v452)<>''then'<br><b> Параллельные издания:  </b>'fi,
+if p(v451) and p(v452) or &unifor('Av451#2')<>''or &unifor('Av452#2')<>''then &unifor('S0') fi,
+(if p(v451)then 
+    if &unifor('Av451#2')<>''or &unifor('Av452#1')<>''then 
+       if p(v451)then'<br><b>'&unifor('S1A')'. </b>'
+    fi fi,|<b>|v451^p| : </b>|,
+    if s(v451^c,v451^h)<>''then v451^x| |,v451^c,| : |v451^e,| / |v451^f,|. - |v451^d,| : |v451^g,
+       if s(v451^d,v451^g)<>''then|, |v451^h else|. - |v451^h fi,|. - |v451^4,
+          | : |v451^0,|. - ISBN |v451^i,|. - ISBN |v451^1|(ошибочный)|,|. - ISSN |v451^j,|. - |v451^y 
+    else ref(l(|I=|v451^w),v461^x| |,v461^c,| : |v461^e,|/ |v461^f,|. - |v461^4,if v461^4=''then|. - |v461^dfi,
+          | : |v461^g,| [|v461^6|]|,| |v700^a,| |v701^d,| |v700^b,| |v200^v,
+               if p(v200^v)then" : "v200^a else" "v200^a fi,
+                  " : "v200^e," / "v200^f,". - "v210^4,if v210^4=''then". - "v210^afi," : "v210^c," ["v210^6"]",
+               if s(v461^d,v461^g,v461^4,v210^4,v210^a,v210^c)<>''then', 'else'. - 'fi,
+               if s(v210^d,v461^h)<>''then v210^5" ",v210^d,
+                  if a(v210^d)then v461^5| |,v461^h fi,else'Б.г.'
+               fi,|. - |v215^a,| |d215^1,&unifor('G2='v215^1),
+               if a(v215^1)then 
+                  if v215^a:'с'or v215^a:'c'or v215^a:'p'or v215^a:'S'then 
+                  else &unifor('Korg.mnu|4')fi,| : |d215^c 
+               fi,
+               if v215^c*1.1='-'then v215^c*2 else v215^c fi,|. - ISBN |v10^a,|. - ISBN |v10^z|(ошибочный)|,
+                  |. - ISSN |v461^j,
+               if a(v461^j)then v11^a fi)  
+    fi,| // |v451^5,
+    if p(v451^w)then' (Шифр '
+       if p(v451^z) then &unifor('G0-'v451^w) else v451^w fi,')' 
+ fi fi),
+(if p(v452)then 
+    if &unifor('Av452#2')<>''or &unifor('Av451#1')<>''then 
+       if p(v452)then'<br><b>'&unifor('S1A')'. </b>'
+    fi fi,|<b>|v452^p| : </b>|,
+    if s(v452^c,v452^h)<>''then v452^x| |,v452^c,| : |v452^e,| / |v452^f,|. - |v452^d,
+          | : |v452^g,
+       if s(v452^d,v452^g)<>''then|, |v452^h else|. - |v452^h 
+       fi,|. - |v452^4,|: |v452^0,|. - ISBN |v452^i,|. - ISBN |v452^1|(ошибочный)|,|. - ISSN |v452^j 
+    else 
+       if p(v452^w) then ref(l(|I=|v452^w),v461^x| |,v461^c,| : |v461^e,| / |v461^f,
+                              |. - |v461^4,if v461^4=''then|. - |v461^dfi,| : |v461^g,| [|v461^6|]|,| |v700^a,| |v701^d,
+                               | |v700^b,| |v200^v,
+                               if p(v200^v)then" : "v200^a else" "v200^a fi,
+                               " : "v200^e," / "v200^f,". - "v210^4,if v210^4=''then". - "v210^afi," : "v210^c,| [|v210^6|]|,
+                               if s(v461^d,v461^g,v461^4,v210^4,v210^a,v210^c)<>''then', 'else'. 'fi, 
+                               if s(v210^d,v461^h)<>''then v210^5" ",v210^d,
+                                  if a(v210^d)then v461^5| |,v461^h fi 
+                               else'Б.г.'
+                               fi,|. - |v215^a,| |d215^1,&unifor('G2='v215^1),
+                               if a(v215^1)then &unifor('Korg.mnu|4') fi,| : |d215^c,
+                               if v215^c*1.1='-'then v215^c*2 else v215^c fi,
+                               |. - ISBN |v10^a,|. - ISBN |v10^z|(ошибочный)|,|. - ISSN |v461^j,
+                               if a(v461^j)then v11^a fi) 
+    fi fi,| // |v452^5,
+    if p(v452^w)then' (Шифр ',
+       if p(v452^z) then &unifor('G0-'v452^w) else v452^w fi,')'
+ fi fi),

@@ -1,0 +1,103 @@
+if v920='J' or v920='NJ' then else 
+&uf('+7W1910#',s((|!|v910^T|!|))),&uf('+7W5#'),,,
+(if p(v691)
+ then 
+   if &uf('Av991^D#1')<>'' and &uf('Av907^A#1')<>'' and &uf('Av907^A#1')>=&uf('Av991^D#1') or 
+      &uf('Av991^D#1')=''  
+   then 
+     if &uf('Av991^S#1')<>'' and v691^S<>'' and &uf('+97',v691^S)=&uf('+97',&uf('Av991^S#1')) or 
+        &uf('Av991^S#1')='' 
+     then 
+     if &uf('Av991^F#1')<>'' and v691^F<>'' and         val(v691^F)=val(&uf('Av991^F#1')) or 
+        &uf('Av991^F#1')='' 
+     then 
+     if &uf('Av991^B#1')<>'' and v691^B<>'' and &uf('+97',v691^B)=&uf('+97',&uf('Av991^B#1')) or 
+        &uf('Av991^B#1')='' 
+     then 
+       if &uf('Av991^L#1')<>'' and v691^L<>'' and &uf('+97',v691^L)=&uf('+97',&uf('Av991^L#1')) or 
+          &uf('Av991^L#1')='' 
+       then 
+         if &uf('Av991^A#1')<>'' and v691^A<>'' and &uf('+97',v691^A)=&uf('+97',&uf('Av991^A#1')) or 
+            &uf('Av991^A#1')='' 
+         then 
+           if &uf('Av991^O#1')<>'' and v691^O<>'' and &uf('+97',v691^O)=&uf('+97',&uf('Av991^O#1')) or 
+              &uf('Av991^O#1')='' 
+           then 
+             if &uf('Av991^G#1')<>'' and v691^G<>'' and &uf('+97',v691^G)=&uf('+97',&uf('Av991^G#1')) or 
+                &uf('Av991^G#1')='' 
+             then  
+               if &uf('Av991^T#1')<>'' and &uf('AG1910#1'): &uf('Av991^T#1') or 
+                  &uf('Av991^T#1')=''   
+               then 
+                 if &uf('Av991^5#1')<>'' or &uf('Av991^5#1')='' and 
+                    &uf('Av991^2#1')='' and &uf('Av991^1#1')='' and 
+                    &uf('Av991^3#1')=''and &uf('Av991^4#1')='' 
+                 then  
+                   '^P',&uf('6BriefkoNew'),'^M',mfn,,&uf('+97',&uf('Av991#1')),
+                   if &uf('Av991^K#1')<>'' then '^K',&uf('Av991^K#1') fi
+                 else 
+                   if &uf('Av991^1#1')<>'' and &uf('Av991^2#1')=''  
+                   then
+                     &uf('+7U5#',,'^E',v691^D,
+                         if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi),,,,
+                     &uf('+7U5#',,'^E',v691^D,
+                         if a(v691^D) then 
+                         if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi,
+                         '^M',MFN,,&uf('+97',&uf('Av991#1')),
+                         if &uf('Av991^K#1')<>'' then '^K',&uf('Av991^K#1') fi
+                        ),,,,
+                   else,
+                     if &uf('Av991^1#1')='' and &uf('Av991^2#1')<>''  
+                     then
+                       &uf('+7U5#',,'^E',v691^D,
+                           if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi),,,,
+                       &uf('+7U5#',,'^E',v691^D,
+                           if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi,,,
+                           '^Q',if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi,'^U—пециальность ',),,,,,
+                           /* дл€ самой записи повтор€ю строку и добавл€ю MFN
+                       &uf('+7U5#',,'^E',v691^D,
+                           if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi,,,
+                           '^Q',if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi,'^U—пециальность ', 
+                           '^M',mfn,,&uf('+97',&uf('Av991#1')),
+                           if &uf('Av991^K#1')<>'' then '^K',&uf('Av991^K#1') fi
+                          ),,,,,
+                     else,
+                       if &uf('Av991^3#1')<>'' and &uf('Av991^4#1')=''  
+                       then
+                         &uf('+7U5#',,'^E',
+                         if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi),,,,,
+                         &uf('+7U5#',,'^E',
+                         if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi,,,,,
+                         '^M',MFN,,&uf('+97',&uf('Av991#1')),
+                         if &uf('Av991^K#1')<>'' then '^K',&uf('Av991^K#1') fi
+                             ),,,,
+
+                       else,
+                         if &uf('Av991^3#1')='' and &uf('Av991^4#1')<>''  
+                         then
+                           &uf('+7U5#',,'^E',
+                           if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi),,,,,
+                           &uf('+7U5#',,'^E',
+                           if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi,,,,,
+                           '^Q',v691^D,if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi,'^Uƒисциплина ',),,,
+                           /* дл€ самой записи повтор€ю строку и добавл€ю MFN
+                           &uf('+7U5#',,'^E',
+                           if p(v691^C) then v691^C else if p(v691^N) then v691^N else ' ' fi fi,,,,,
+                           '^Q',v691^D,if a(v691^D) then if v691^I<>'' then &uf('DVUZ,?IDD=',v691^I,'?,',v3^A) else ' ' fi fi,,'^Uƒисциплина ', 
+                           '^M',mfn,,&uf('+97',&uf('Av991#1')),
+                           if &uf('Av991^K#1')<>'' then '^K',&uf('Av991^K#1') fi
+                              ),,,,,
+                         fi,
+                       fi, 
+                     fi,
+                   fi,
+                 fi,,
+               fi,,
+             fi 
+           fi 
+         fi 
+       fi 
+     fi fi fi 
+   fi 
+ fi /),,(if p(G5) then G5 fi/),,,,,,,,
+fi

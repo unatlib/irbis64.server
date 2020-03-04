@@ -1,0 +1,6 @@
+mhl,
+(if '***'='200'then v200^a,|^E|v200^e,|^F|v200^f,|^S|v225^a,|^V|v225^v, 
+   |^J|v11^a,|^H|v903 else 
+   if '423 541 430':'***'then v***^a,'^E^F^S^V^J^H^P' else
+     if '***'='923'then v923^i," . "v923^l," . "v923^n,'^E^F^S^V^J^H^P' fi fi fi/)
+

@@ -1,0 +1,29 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v910^v:v991 or v940^v:v991 then f(rsum((if s(v910^v)<>''then if &unifor('Av991#1'):v910^v then if a(v910^w)then'1;'else'0;'fi else'0;'fi fi/)) + rsum((if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^w)then f(val(v940^x,' 0')-val(v940^z,' 0'),1,0),';'else f(val(v940^x|;|,' 0'),1,0)fi else'0;'fi fi/)),1,0) fi
+if v910^v:v991 or v940^v:v991 then if &unifor('DCMPL,"KS2=',v991,'",v888^F')<>'' then f((rsum((if p(v910) then if p(v910^v) then if &unifor('Av991#1'):v910^v then if a(v910^w)then'1;'else'0;'fi else'0;'fi else '0;'fi fi/)) + rsum((if p(v940) then if v940^A='6' then else if &unifor('Av991#1'):v940^v then if p(v940^w)then f(val(v940^x,' 0')-val(v940^z,' 0'),0,0),';'else f(val(v940^x|;|,' 0'),0,0)fi else'0;'fi fi fi/)))*val(&unifor('DCMPL,"KS2=',v991,'",v888^F')),0,2) else f(rsum((if p(v910)then if v910^v:&unifor('Av991#1')then if p(v910^w)then else if p(v910^e)then if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>'' then f(val(v910^e|;|)*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)'\par 'else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(v910^e|;|)*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)'\par 'else f(val(v910^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2)'\par 'fi fi else f(val(v910^e|;|),0,2)'\par 'fi else if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)';','\par 'else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)';','\par 'else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2)';','\par 'fi fi else f(val(&unifor('Av10^d#1'),' 0'),0,2)';','\par 'fi fi fi fi fi/)) + rsum((if p(v940)then if v940^v:&unifor('Av991#1')then if v940^a:'6'then else if p(v940^e)then if p(v940^c)then if &unifor('Kizc.mnu|'v940^c.6)<>''then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'else if &unifor('Kizc.mnu|'v940^c.4)<>''then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'else f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980'))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'fi fi else f(val(v940^e|;|)*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'fi else if p(v940^c) then if &unifor('Kizc.mnu|'v940^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',else if &unifor('Kizc.mnu|'v940^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980'))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',fi fi else f(val(&unifor('Av10^d#1'),' 0')*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',fi fi fi fi fi/)),0,2)fi fi
+#
+'\b \ql \fs20 \tab \tab \tab 'f(val(v1),0,0)' экз.  на сумму  ',f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi,'\tab По причине \fs24 ',&unifor('DCMPL,"KS2=',v991,'",v888^p*2'),'\par \par \fs20 \ql \tab \tab \tab Список выбывших изданий на _______ листах прилагаетс\b0 \par \par '
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\widctlpar \f0\fs22\lang1049 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\widctlpar\tqc\tx4153\tqr\tx8306 \f0\fs20\lang1049 \sbasedon0\snext15 header;}{\*\cs16 \additive\sbasedon10 page number;}}{\info
+{\title          \'cb\'e8\'f1\'f2 \'e8\'ed\'e2\'e5\'ed\'f2\'e0\'f0\'ed\'ee\'e9 \'ea\'ed\'e8\'e3\'e8 \'e4\'eb\'ff \'ef\'ee\'e4\'f0\'e0\'e7\'e4\'e5\'eb\'e5\'ed\'e8\'ff \'d5\'d0}{\author Alexandre Katalov}{\operator Alexandre Katalov}
+{\creatim\yr1999\mo4\dy8\hr10\min14}{\revtim\yr1999\mo4\dy8\hr10\min17}{\version2}{\edmins3}{\nofpages1}{\nofwords37}{\nofchars212}{\*\company Elcom Ltd}{\vern57443}}\paperw11907\paperh16727\margl567\margr567\margt567\margb1134
+\widowctrl\ftnbj\aenddoc\hyphhotz60\hyphauto1\formshade \fet0\sectd \linex0\headery709\footery709\colsx709\endnhere {\header \pard\plain \s15\widctlpar\tqc\tx4153\tqr\tx8306\pvpara\phmrg\posxc\posy0 \f0\fs20\lang1049 {\field{\*\fldinst {\cs16 PAGE  }
+}{\fldrslt {\cs16\lang1024 1}}}{\cs16
+\par }\pard \s15\widctlpar\tqc\tx4153\tqr\tx8306
+\par }{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \widctlpar \f0\fs20\lang1049 {\b\fs24
+\par }\pard \qc\widctlpar 
+{}
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

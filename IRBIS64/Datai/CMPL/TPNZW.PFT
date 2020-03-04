@@ -1,0 +1,57 @@
+'
+\page \par  
+\trowd \trql\trgaph108\trleft-108
+\cellx7200
+\pard \fs20 \ql\widctlpar\intbl {'
+if v30^b=v991^b*1 
+then | N |v30^b,| |v30^c*6'.'v30^c*4.2'.'v30^c.4' г. \par ',ref(l('Vd=POLZV'),v12),
+'\par просит Вас выслать в ее адрес (выкуп наложенного платежа гарантируется) 
+следующее издание:\par \b ',
+"   "v700^a," "v700^b,", "v970^a," "v970^b,(|, |v701^a,| |v701^b),|. |d700,v200^a,|: |v200^e,|, |v923^h,|: |v923^i, |, |v923^k,|: |v923^l,|/ |v200^f,|; |v200^g,|. -|v205^a,if p(v205^a)then|/ |v205^c else|. -|v205^c fi,|. -|v210^a,|: |v210^c,|. |v210^d,|-|v210^e,|. |v215^c,|. -|v200^v,|.-ISBN |v10^a,|.-ISSN |v11^a,
+|, |v30^d| экз.|'\b0 \par ',
+' В случае невыполнения заказа просьба возвращать карточку с указанием причины отказа.      Копии просим не высылать\par ','\qr '
+ref(l('Vd=POLZV'),if v13:'^' then 
+"\tab \tab \tab \tab "v13^a,"\par \par \tab \tab \tab \tab ("v13^b")\par " else 
+(if v13.1:'('then'\par 'fi,|\tab \tab \tab \tab |v13|\par |)fi)'\par '
+'\ql  '
+if s(v31^b,v32^b)=v991^b*1 then'\PAGE \par \par 'fi,
+fi,
+if v31^b=v991^b*1 then | N |v31^b,| |v31^c*6'.'v31^c*4.2'.'v31^c.4' г. \par ',re
+f(l('Vd=POLZV'),v12),'\par просит Вас выслать в ее адрес (выкуп наложенного плат
+ежа гарантируется) следующее издание:\par \b ',"   "v700^a," "v700^b,", "v970^a," "v970^b,(|
+, |v701^a,| |v701^b),|. |d700,v200^a,|: |v200^e,|, |v923^h,|: |v923^i, |, |v923^
+k,|: |v923^l,|/ |v200^f,|; |v200^g,|. -|v205^a,if p(v205^a)then|/ |v205^c else|.
+ -|v205^c fi,|. -|v210^a,|: |v210^c,|. |v210^d,|-|v210^e,|. |v215^c,|. -|v200^v,
+|.-ISBN |v10^a,|.-ISSN |v11^a,|, |v31^d| экз.|'\b0 \par ',' В случае невыполнени
+я заказа просьба возвращать карточку с указанием причины отказа.      Копии прос
+им не высылать\par ',ref(l('Vd=POLZV'),if v13:'^' then "\qr \tab \tab \tab \tab 
+"v13^a,"\qr \par \par \tab \tab \tab \tab ("v13^b")\par  " else 
+(if v13.1:'('then'\par 'fi,|\tab \tab \tab \tab \qr |v13|\par |)fi)'\par ','\ql  '
+if v32^b=v991^b*1 then'\PAGE \par \par 'fi,
+fi,
+if v32^b=v991^b*1 then | N |v32^b,| |v32^c*6'.'v32^c*4.2'.'v32^c.4' г. \par ',re
+f(l('Vd=POLZV'),v12),'\par просит Вас выслать в ее адрес (выкуп наложенного плат
+ежа гарантируется) следующее издание:\par \b ',"   "v700^a," "v700^b,", "v970^a," "v970^b,(|
+, |v701^a,| |v701^b),|. |d700,v200^a,|: |v200^e,|, |v923^h,|: |v923^i, |, |v923^
+k,|: |v923^l,|/ |v200^f,|; |v200^g,|. -|v205^a,if p(v205^a)then|/ |v205^c else|.
+ -|v205^c fi,|. -|v210^a,|: |v210^c,|. |v210^d,|-|v210^e,|. |v215^c,|. -|v200^v,
+|.-ISBN |v10^a,|.-ISSN |v11^a,|, |v32^d| экз.|'\b0 \par ',' В случае невыполнени
+я заказа просьба возвращать карточку с указанием причины отказа.      Копии прос
+им не высылать\par ',ref(l('Vd=POLZV'),if v13:'^' then "\qr \tab \tab \tab \tab 
+"v13^a,"\qr \par \par \tab \tab \tab \tab ("v13^b")\par " else 
+(if v13.1:'('then'\par 'fi,|\tab \tab \tab \tab \qr |v13|\par |)fi)'\par ','\ql  '
+fi,
+if v62^b=v991^b*1 then | N |v62^b,| |v62^c*6'.'v62^c*4.2'.'v62^c.4' г. \par ',re
+f(l('Vd=POLZV'),v12),'\par просит Вас выслать в ее адрес (выкуп наложенного плат
+ежа гарантируется) следующее издание:\par \b ',"   "v700^a," "v700^b,", "v970^a," "v970^b,(|
+, |v701^a,| |v701^b),|. |d700,v200^a,|: |v200^e,|, |v923^h,|: |v923^i, |, |v923^
+k,|: |v923^l,|/ |v200^f,|; |v200^g,|. -|v205^a,if p(v205^a)then|/ |v205^c else|.
+ -|v205^c fi,|. -|v210^a,|: |v210^c,|. |v210^d,|-|v210^e,|. |v215^c,|. -|v200^v,
+|.-ISBN |v10^a,|.-ISSN |v11^a,|, |v62^d| экз.|'\b0 \par ',' В случае невыполнени
+я заказа просьба возвращать карточку с указанием причины отказа.      Копии прос
+им не высылать\par ',ref(l('Vd=POLZV'),if v13:'^' then "\qr \tab \tab \tab \tab 
+"v13^a,"\qr \par \par \tab \tab \tab \tab ("v13^b")\par " else 
+(if v13.1:'('then'\par 'fi,|\tab \tab \tab \tab \qr |v13|\par |)fi)'\par ','\ql  '
+fi
+'\cell }
+\pard \widctlpar\intbl {\b \row }\pard \ql\widctlpar'

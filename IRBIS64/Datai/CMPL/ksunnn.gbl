@@ -1,0 +1,26 @@
+0
+ADD
+145
+
+if a(v145) then "^A"v45^.,"^D"v45^:,"^G"v45^4,"^H"v45^5,"^I"v45^6,"^K"v45^A,"^U"v45^B,"^V"v45^C fi/
+XXXXXXXXXXXXXXXXXXX
+ADD
+146
+
+if a(v146) then "^M"v45^E fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+147
+ 
+if a(v147) then "^A"v45^D,"^C"v45^G,,"^I"v45^F,"^Z"v45^X fi/
+XXXXXXXXXXXXXXXXXXX
+ADD
+149
+
+if a(v149) then "^S"v45^1,"^U"v45^2,"^V"v45^3 fi/
+XXXXXXXXXXXXXXXXXXX
+ADD
+151
+
+if a(v151) then if p(v47) then v47 else if p(v48) then v48 else if p(v49) then v49 fi fi fi fi/
+XXXXXXXXXXXXXXXXXXX

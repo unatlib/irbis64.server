@@ -1,0 +1,37 @@
+'\pard \li108 \ri108 ', 
+'\par \qr \fs20 ',
+if v30:'^u'then else 
+   if v991^A=v30^k then ref(l("KOR="v991^A),if p (v81^a)then v81^a," ("v89^a")"else v89^a fi,
+   '\par 'v83^a". ",v83^b," "v83^c,", " v83^d,",д."v83^e,". "v83^f)'\par ',,
+fi fi, 
+'\par \qr \fs20 ',
+if v31:'^u'then else 
+   if v991^A=v31^k then ref(l("KOR="v991^A),if p (v81^a)then v81^a," ("v89^a")"else v89^a fi,
+   '\par 'v83^a". ",v83^b," "v83^c,", " v83^d,", д."v83^e,". "v83^f)'\par ' 
+fi fi, 
+'\par \qr \fs20 ',
+if v32:'^u'then else 
+   if v991^A=v32^k then ref(l("KOR="v991^A),if p (v81^a)then v81^a," ("v89^a")"else v89^a fi,
+   '\par 'v83^a". ",v83^b," "v83^c,", " v83^d,", д."v83^e,". "v83^f)'\par '  
+fi fi, 
+'\par \qr \fs20 ',&uf('+7W1#'),&uf('+7W2#'),,
+if s(v30,v31,v32)='' then 
+(if p(v62) 
+ then 
+    if v62:'^u' then 
+    else 
+       if &unifor('Av991^A#1')=&uf('+97',v62^k) 
+       then 
+          &uf('+7U1#',,     
+          ref(l('KOR='&unifor('Av991^A#1')),,,,if p (v81^a)then v81^a," ("v89^a")"else v89^a fi,if v83<>'' then '\par 'v83^a". ",v83^b," "v83^c,", " v83^d,", д."v83^e,". "v83^f fi),,),,
+       fi,,,,
+       if &unifor('Av991^B#1')=&uf('+97',v62^b) 
+       then 
+          &uf('+7U2#',,,,'«аказ ',,v62^b),,,,
+       fi,, 
+    fi,,
+ fi/), 
+ &uf('+7G1'),,&uf('+7G2'),,'\fs20 \qr ',,,g1 / if g2<>'' then '\par ',g2 fi,,,
+fi   
+'\par \qc ѕросим прин€ть за€вку и выставить счет-фактуру на следующие издани€',' 
+\par ' 

@@ -1,0 +1,5 @@
+'\pard \qc\li108 \ri108 ','\par \qc \fs20 В ',if a(v991^a)or v991^a:'РП'then'отд
+ел Роспечати'else ref(l("skk="v991^a),v97^b)fi,'\par \fs24 \qc ','З а я в к а','
+\par \par \fs20 \ql \tab \tab  От:  ',ref(l("z="v991^e),v7^d,'\par \ql\tab \tab 
+',| Куда: |v7^a,|, |v7^b,'\par \tab \tab ',v7^c),'\par \par \qc Просим принять п
+одписку на указанные ниже ',if &unifor("Krksvs.mnu|"v991^b)<>''then &unifor("Krksvs.mnu|"v991^b) else 'газеты и журналы' fi,'\par \qc на 'v33.4,' год \par '

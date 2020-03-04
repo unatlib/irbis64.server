@@ -1,0 +1,23 @@
+   (if v509^2:'1' then 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| 
+          fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi fi),'\b0 ', 
+   if s(v700v710,v981,v503,v961^z)='' and &unifor('Av509^2#1')<>'1' then'\tab \b '&unifor('E3'v200^a),'\b0 ', 
+      if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
+   else "\par \tab "v200^a 
+   fi," ["v200^b"]", 
+   if a(v200^b) then &unifor('+1W1#'''), 
+      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1')))else &unifor('+1W1#0')  fi, 
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then 
+            if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+         else 
+            if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
+               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+         fi fi 
+      else 
+         if v900^t='a' and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [', 
+            if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,']',          
+   fi fi fi, &unifor('+1W1#'),

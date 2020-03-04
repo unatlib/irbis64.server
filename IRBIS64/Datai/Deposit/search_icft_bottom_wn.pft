@@ -1,0 +1,334 @@
+/* v1000 - имя БД
+/* v1002 - число найденных
+/* v1006 - порция
+/* v1008^A - стартовый номер
+/* 10 - число видимых ссылок
+/* v1007 - поисковое выражение
+/* v1010 - запрос на естественном языке
+/*v1009 - слова для раскраски
+/*v1012 - имя формата показа
+/*v1104 - FREEPAR4 определяет выводить ли ссылку СЛЕД.ПО ПОРЯДКУ
+'<body bgcolor="#ffffcc">'
+'<!>',
+'<script language="JavaScript">',
+'	function DropDownParams(it)',
+'	{',
+'		el1 = document.getElementById(it);',
+'		if(el1.style.display=="none")',
+'		{',
+'			el1.style.display="block";',
+'		}',
+'		else',
+'		{',
+'			el1.style.display="none";',
+'		}',
+'	}',
+' </script>',
+
+'<style type="text/css">'/
+'	#anchor{'/
+'	border:0;'/
+'	background-color:#ffffcc;'/
+'	text-decoration:underline;'/
+'	cursor:hand;'/
+'	color:blue;'/
+'	}'/
+'</style>'/
+
+
+
+'</table>',
+'<table width="100%" bgcolor="#ffffcc">',
+'<tr> <td colspan="10">',
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+/*"Число найденных v1002="v1002"<br>",
+/*"Номер последнего в списке v1005^A="v1005^A"<br>",
+/*"Стартовый номер v1008^A="d1008,F(val(v1008^A),0,0),
+/*"Поисковое выражение: "v1007"<br>",&uf('+3E',&uf('Av1007#1')),"<br>",
+&uf('+7W1#',&uf('+98|"',mpu,v1001," ("v1007")",mpl)),
+&uf('+7W1#',g1.100,if g1*100<>'' then '...' fi),
+
+
+'<title>',if s(v1001,v1007)<>'' then 'Результат поиска (БД ',v1000,' Запрос: ',g1,')',
+                      else 'Просмотр документов (БД ',v1000,')' fi," с "v1008^A"...",
+'</title>',
+'<b>',
+"База данных: "v1000"<br>",
+'Запрос - ',if g1.1='@' then 'Похожие на: <br>',&uf('D,',g1, ',@ic0_wn'),
+                        else "</!>"g1"<!>" fi,'<br>',
+if s(v1001,v1007)<>'' then 'Найдено документов: ' else 'Всего документов: ' fi,v1002"<br>",
+'</td>',
+'</tr>',
+'<tr>',
+'<td colspan="10">',
+if val(v1002)>val(v1006) then 'Документы: ' fi,
+'</b>',
+'</td>',
+'</tr>',
+'<tr>',
+'<td>',
+
+'<table cellpading=0 cellspacing=0>',
+'<tr>'
+'<td valign=top>',
+if val(v1002)>2*val(v1006) 
+  then
+        &uf('+1W1#',F((val(v1008^A))/val(v1006)+6,0,0)),
+        if val(&uf('+1R1'))>(val(v1002)/val(v1006)) then &uf('+1W1#',&unifor('+3T',v1002,','v1006)) fi  
+        &uf('+1W2#',F(val(v1002)-val(&uf('+1R1'))*val(v1006),0,0)),
+        &uf('+1W3#',v1006),
+        &uf('+1W4#',F((val(v1008^A))/val(v1006)-10/2,0,0)),
+        if val(&uf('+1R4'))<1 then &uf('+1W4#1')fi,
+        if (val(v1008^A)=1) then else 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21STR=',&unifor('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=1','&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21P03=KT=">', 
+        '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+        '<input type="hidden" name="C21COM" value="10">',
+        '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+        '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+        '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+        '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+        '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+        '<input type="hidden" name="S21STN" value="1">',
+        '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+        '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+        '<input type="hidden" name="S21P03" value="KT=">',
+        '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+        '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+        '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+        '<input type="hidden" name="FREEPAR4" value="1">',
+        ' <input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+        '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+        '<input type="submit"  value="',
+        fi,
+        '1',
+        if val(v1006)<>1 then
+                '-',F(val(&uf('+1R4'))*val(&uf('+1R3')),0,0),
+        fi        
+        if (val(v1008^A)=1) then else 
+/*'</a>', 
+        '" id="anchor">',
+        '</form>',        
+        fi/,
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'</td>',
+,
+        ('<td valign=top>'if val(&uf('+1R1'))>val(&uf('+1R4')) 
+              then 
+                      if (val(&unifor('Av1008^A#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1) then else 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),'&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21STR=',&uf('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21P02=1&S21P03=KT=">' 
+                      '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+                      '<input type="hidden" name="C21COM" value="10">',
+                      '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+                      '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+                      '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+                      '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+                      '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+                      '<input type="hidden" name="S21STN" value="',F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),'">',
+                      '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+                      '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+                      '<input type="hidden" name="S21P03" value="KT=">',
+                      '<input type="hidden" name="S21P02" value="1">',
+                      '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+                      '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+                      '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+                      '<input type="hidden" name="FREEPAR4" value="1">',
+                      ' <input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+                      '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+                      '<input type="submit"  value="',
+                      fi,
+                      F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),
+                      if ((val(&uf('+1R4'))*val(&uf('+1R3'))+1)<>(val(&uf('+1R4'))+1)*val(&uf('+1R3'))) then
+                              '-',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0),
+                      fi
+                      &uf('+1W5#',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0)),&uf('+1W4#',F(val(&uf('+1R4'))+1,0,0)),                      
+                      if (val(&unifor('Av1008^A#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1-val(&uf('+1R3'))) then else 
+/*'</a>' 
+                      '" id="anchor">',
+                      '</form>',        
+                      fi,      
+              else &uf('+1W1#'),&uf('+1W4#') 
+        fi/'</td>'),
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        '<td valign=top>',
+        if (1+val(v1006)*val(&unifor('+3T',v1002,','v1006))<=val(v1002)) then
+                if (val(v1008^A)=val(v1006)*val(&unifor('+3T',v1002,','v1006))+1) then else 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21STR=',&unifor('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1006)*val(&unifor('+3T',v1002,','v1006))+1,0,0),'&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21P02=1&S21P03=KT=">'
+                '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+                '<input type="hidden" name="C21COM" value="10">',
+                '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+                '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+                '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="S21STN" value="',F(val(v1006)*val(&unifor('+3T',v1002,','v1006))+1,0,0),'">',
+                '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="S21P03" value="KT=">',
+                '<input type="hidden" name="S21P02" value="1">',
+                '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="FREEPAR4" value="1">',
+                '<input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+                '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+                '<input type="submit"  value="',
+                fi,
+                F(val(v1006)*val(&unifor('+3T',v1002,','v1006))+1,0,0),
+                if (val(v1006)*val(&unifor('+3T',v1002,','v1006))+1<val(v1002)) then
+                        '-',v1002
+                fi        
+                        if (val(v1008^A)=val(v1006)*val(&unifor('+3T',v1002,','v1006))+1) then else 
+/*'</a>'
+                       '" id="anchor">',
+                       '</form>',
+                        fi,
+       '</td>',            
+                        
+                        
+        else if val(&uf('+1R5'))<val(v1002) then 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21STR=',&unifor('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1002)-val(v1006)+1,0,0),'&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21P02=1&S21P03=KT=">',
+             '<td valign=top>',
+             '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+             '<input type="hidden" name="C21COM" value="10">',
+             '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+             '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+             '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+             '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+             '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+             '<input type="hidden" name="S21STN" value="',F(val(v1002)-val(v1006)+1,0,0),'">',
+             '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+             '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+             '<input type="hidden" name="S21P03" value="KT=">',
+             '<input type="hidden" name="S21P02" value="1">',
+             '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+             '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+             '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+             '<input type="hidden" name="FREEPAR4" value="1">',
+             '<input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+             '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+             '<input type="submit"  value="',
+             F(val(&uf('+1R5'))+1,0,0),'-',v1002,
+/*'</a>'
+             '" id="anchor">',
+             '</form>',        
+             '</td>',            
+             fi
+        fi        
+  else
+        if val(v1002)>val(v1006)    then
+                if (val(v1008^A)=1) then else 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21STR=',&unifor('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=1&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21P02=1&S21P03=KT=">'
+                '<td valign=top>',
+                '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+                '<input type="hidden" name="C21COM" value="10">',
+                '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+                '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+                '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="S21STN" value="1">',
+                '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="S21P03" value="KT=">',
+                '<input type="hidden" name="S21P02" value="1">',
+                '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="FREEPAR4" value="1">',
+                '<input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+                '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+                '<input type="submit"  value="',
+                fi,
+                '1',
+                if val(v1006)>1 then
+                        '-',v1006,
+                fi
+                if (val(v1008^A)=1)  then else 
+/*'</a>'
+                '" id="anchor">',
+                '</form>',        
+             
+               '</td>',            
+                fi/,
+                '<td valign=top>',
+                if (val(v1008^A)-1=val(v1006)) then else 
+/*'<a href="IRBIS:?I21DBN=',&unifor('Av1000#1'),'&C21COM=10','&PFTNAME=',&uf('Av1012#1'),'&S21STR=',&unifor('+3E',&unifor('Av1001#1')),'&S21ALL=',&unifor('+3E',&unifor('Av1007#1')),'&S21CNR=',&unifor('Av1006#1'),'&S21STN=',F(val(v1006)+1,0,0),'&BOTTOMPFTNAME=search_ICFT_bottom_wn&TOPPFTNAME=search_ICFT_bottom_wn&S21P02=1&S21P03=KT=">'
+                '<form name="REF" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+                '<input type="hidden" name="C21COM" value="10">',
+                '<input type="hidden" name="I21DBN" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="PFTNAME" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="S21STR" value="',&uf('+98"|',&unifor('Av1001#1')),'">',
+                '<input type="hidden" name="S21ALL" value="',&uf('+98"|',&unifor('Av1007#1')),'">',
+                '<input type="hidden" name="S21CNR" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="S21STN" value="',F(val(v1006)+1,0,0),'">',
+                '<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+                '<input type="hidden" name="S21P03" value="KT=">',
+                '<input type="hidden" name="S21P02" value="1">',
+                '<input type="hidden" name="FREEPAR0" value="',&unifor('Av1012#1'),'">',
+                '<input type="hidden" name="FREEPAR2" value="',&unifor('Av1000#1'),'">',
+                '<input type="hidden" name="FREEPAR3" value="',&unifor('Av1006#1'),'">',
+                '<input type="hidden" name="FREEPAR4" value="1">',
+                '<input type="hidden" name="FREEPAR5" value="',&uf('Av1105#1'),'">',
+                '<input type="hidden" name="CHECKPFT" value="similar_IC_wn">', /* для поиска по сходству
+                '<input type="submit"  value="',
+                fi,
+                F(val(v1006)+1,0,0),
+                if (val(v1006)+1<val(v1002))then
+                        '-',v1002
+                fi        
+                        if (val(v1008^A)-1=val(v1006)) then else
+/*'</a>'
+                       '" id="anchor">',
+                       '</form>',        
+                        fi/,               
+                '</td>',            
+        fi        
+fi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'</tr>',
+'</table>',
+'</td>',
+'</tr>',
+
+if s(v1001,v1007)<>'' then '<tr><td></td></tr>',
+     if (v1001.1<>'@') and (val(v1002)>val(v1006)) then 
+/*     if val(v1002)>1 then 
+     '<tr><td colspan="10"><form action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+     '<input type="submit" class="sub1" name="nnnn" value="Уточнение найденного">',
+     '<input type="hidden" name="C21COM" value="1">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="PFTNAME" value="search_IC_wn">',
+     '<input type="hidden" name="S21CNR" value="',v1006,'">',
+     '<input type="hidden" name="S21ALL" value="',&uf('+98"|',v1007" ",v1001),'">',     
+/*     '<input type="hidden" name="QUERY" value="',if v1010<>'' then v1010 else v1007 fi,'">',     
+/*     '<input type="hidden" name="S21ALLTRM" value="',v1009,'">',     
+/*     '<input type="hidden" name="S21P02" value="1">',     
+/*     '<input type="hidden" name="S21P03" value="KT=">',     
+     '<input type="hidden" name="FREEPAR0" value="',v1012,'">',
+     '<input type="hidden" name="FREEPAR2" value="',v1000,'">',
+     '<input type="hidden" name="FREEPAR3" value="',v1006,'">',
+     '<input type="hidden" name="FREEPAR5" value="',v1105,'">',
+     '</form></td></tr>',
+     fi,
+fi,
+'<tr><td colspan="10">',
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=search_IC_wn&S21CNR=',v1006,'&I21DBN=',v1000,'&FREEPAR0=',v1012,'&FREEPAR5=',v1105,'">Вернуться к основной поисковой форме</A>',
+'</td></tr>',
+     '<tr><td colspan="10">',
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="FREEPAR0" value="',v1012,'">',
+     '<input type="hidden" name="FREEPAR2" value="',v1000,'">',
+     '<input type="hidden" name="FREEPAR3" value="',v1006,'">',
+     '<input type="hidden" name="FREEPAR5" value="',v1105,'">',
+     '<input type="hidden" name="PFTNAME" value="select_IC_mfn_wn">',
+     '</form></td></tr>',
+     '<tr><td colspan="20"><hr></td></tr>'
+'</table>',
+'<table width="100%" bgcolor="#ffffcc">'
+'</!>',
+
+

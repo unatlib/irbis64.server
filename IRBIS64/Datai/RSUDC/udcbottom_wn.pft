@@ -1,0 +1,79 @@
+'<script language="JavaScript">',
+
+'function IfEmpty()',
+'{',
+'if (SEARCH.S21STR.value == "") return false;',
+'return true;',
+'}',
+
+'</script>',
+
+&unifor('6ref1_wn'),
+if p(v12)then '<div>' fi,
+'<br>'
+'<hr>'
+
+'<TABLE>',
+'<TR><TD>',
+'Выделение фрагмента Классификатора по ключевым словам',
+'</TR></TD>',
+'<TR><TD>',
+
+'<form action="IRBIS:" name="SEARCH" enctype="Multipart/form-data" method="GET">',
+
+'<input type="hidden" NAME="C21COM" value="2">',
+/*'<input type="hidden" NAME=I21DBN value="RSUDC">',
+'<input type="hidden" name="PFTNAME" value="ref0_wn">',
+'<input type="hidden" name="TOPPFTNAME" value="udctop_wn">',
+'<input type="hidden" name="S21P02" value="1">',
+'<input type="hidden" name="S21P03" value="K=">',
+'<input type="text" name="S21STR" size="50" onkeydown="if ((this.value.length!=0) &&  (event.keyCode==13)) SEARCH.submit()">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="S21CNR" value="100">',
+
+'</TD>',
+
+'<TD>',
+'<input type="submit" name="1111" value="Поиск" onclick="return IfEmpty()">',
+'</TD>',
+
+'</TR>',
+
+
+'<tr>',
+'<td>Логика : ',
+'<select name="S21LOG">',
+'<option value="0">ИЛИ    </option>',
+'<option value="1" selected="">И    </option>',
+'<option value="2">ФРАЗА ЦЕЛИКОМ  </option>',
+'</select>',
+'</td>',
+'</tr>',
+
+'<tr>',
+'<td>Окончания слов : ',
+'<input type="radio" name="S21P01" value="3" checked="checked">',
+'не учитывать /   <input type="radio" name="S21P01" value="1">учитывать',
+'</td>',
+'</tr>',
+'</form>',
+'</TABLE>',
+
+'<br>'
+'<hr>'
+
+'<TABLE BORDER=0>',
+'<TR>',
+
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" NAME="C21COM" value="5">',
+/*'<input type="hidden" NAME=I21DBN value="RSUDC">',
+'<input type="hidden" name="PFTNAME" value="udcselect_wn">',
+'<TD>',
+'<input type="submit" name="1111" value="Отобранные">',
+'</TD></TR>',
+'</form>',
+'</TABLE>',
+
+
+

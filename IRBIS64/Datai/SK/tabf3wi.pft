@@ -1,0 +1,74 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx845 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2092 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4643 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5351 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6485 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7193 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8468 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9460 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10423 
+\pard \widctlpar\intbl {\qr \fs16 '(if p(v910)then     if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and &unifor('Av991^b#1')=v910^u  then        if '6 2 7':v910^a then else &unifor('S1A'),          if p(v910^1)then              if v910^1='1' then else '-',      f(val(&unifor('S1A'))+val(v910^1)-2,0,0),&unifor('S'f(val(v910^1)-2,0,0))          fi fi'\par ' fi fi fi),
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '(if p(v910)then     if &unifor('Av991^a#1')<>''and &uf('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and &unifor('Av991^b#1')=v910^U     then        if '6 2 7':v910^a then else         if p(v910^b)then v910^b,             if 'C U':v910^a then| (|d910^b,v910^1,|1|n910^1'ύκη',|)|d910^b fi           else              if p(v910^h)then v910^h,                if 'C U':v910^a then| (|d910^h,v910^1,|1|n910^1'ύκη',|)|d910^h           fi fi fi,          if a(v910^b) and a(v910^h)then v910^1,|1|n910^1' ύκη.'fi'\par ' fi fi fi),
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 'if v920:'NJ'then ref(l(|I=|v933), v200^a,". "v923^h,". "v923^k)," - "v934"γ."," γ."v935,",Ή "v936 else v461^x| |,v461^c," ; "v200^v,   if p(v200^v) then" : "d200^a fi,v700^a," "v700^b," "d700,v200^a,   if p(v215^a) then". - "v215^a,v215^1,      if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 'v210^d
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs16 '(if p(v910)then     if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and &unifor('Av991^b#1')=v910^u     then        if '6 2 7':v910^a then else if p(v910^e)then f(val(v910^e,' 0'),0,2)else f(val(&unifor('Av10^d#1'),' 0'),0,2) fi'\par ' fi fi fi),
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs16 'f(rsum((if p(v910)then if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and &unifor('Av991^b#1')=v910^u     then        if '6 2 7':v910^a then else v910^1|;|,|1;|n910^1 fi fi fi),' 0'),0,0),
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs16 'f(rsum((if p(v910)then     if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and &unifor('Av991^b#1')=v910^u     then        if v910^a:'6'then else if a(v910^e) then v910^1|;|,|1;|n910^1  fi fi fi fi,' 0')) * val(&unifor('Av10^d#1'),'; 0') + rsum((if p(v910)then     if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1')    or &unifor('Av991^a#1')=''and  &unifor('Av991^b#1')=v910^u     then        if v910^a:'6'then else  if p(v910^e)then f(val(v910^1|;|,|1;|n910^1) * val(v910^e),0,2)           else'0' fi fi fi fi,' 0')),0,2),
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '(if p(v910)then if &unifor('Av991^a#1')<>''and &unifor('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u:&uf('Av991^a.2#1') or &unifor('Av991^a#1')=''and  &unifor('Av991^b#1')=v910^u then if v910^a:'6'then else v910^d'\par' fi fi fi),
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs16 '
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

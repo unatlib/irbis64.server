@@ -1,0 +1,20 @@
+'</>'
+if s(v40,v200)<>'' then '<b>СВЕДЕНИЯ О ВЫДАЧАХ/ВОЗВРАТАХ:</b>',
+'<table border=1 cellspacing=0>'
+   '<tr>',
+   '<td><b>Возврат</td><td><b>Издание</td><td><b>Экземпляр</td><td><b>Выдача</td><td><b>Место выдачи</td><td><b>Предполагаемый возврат</td><td><b>БД</td><td><b>Отв. лицо</td>',
+   '</tr>',
+   (if p(v40) then 
+      '<tr>',
+      '<td>',if v40^f.1='*' then ,,,if &uf('3')>=v40^e then '<font style="color: #FF0000">' fi,,,,'ДОЛГ' else v40^f*6.2|.|,v40^f*4.2|.|,v40^f.4,fi,' &nbsp','</td>',
+      '<td>',v40^a,|, |v40^c,if v40^c='' then &uf('D'v40^g',?I='v40^a'?,@brief') fi,' &nbsp','</td>',
+      '<td>',v40^b,| (|v40^h|)|,| - |v40^k,' &nbsp','</td>',
+      '<td>',v40^d*6.2|.|,v40^d*4.2|.|,v40^d.4,' &nbsp','</td>',
+      '<td>',v40^v,' &nbsp','</td>',
+      '<td>',v40^e*6.2|.|,v40^e*4.2|.|,v40^e.4,' &nbsp','</td>',
+      '<td>',v40^g,' &nbsp','</td>',
+      '<td>',v40^i,' &nbsp','</td>',
+      '</tr>' 
+   fi) 
+'</table>' ,
+fi

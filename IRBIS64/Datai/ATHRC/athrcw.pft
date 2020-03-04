@@ -1,0 +1,59 @@
+'{',if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на КОЛЛ
+ЕКТИВ/ МЕРОПРИЯТИЕ/ИЗДАТЕЛЬСТВО\b0 ',if p(v210) then '\par ' fi,
+
+if p(v210) then '\par ',v210^a,   
+if s(v210^n,v210^c,v210^S)<>''then' ('v210^n,if v210^N<>'' and v210^C<>'' then " ; ",v210^c else v210^c fi,
+ if v210^S<>'' and (v210^C<>'' or v210^N<>'') then " ; "v210^S else v210^S fi,')' fi,
+". "v210^b,if v210:'^d' or v210:'^f' or v210:'^e' then ' (',v210^d,
+if v210:'^d' and v210:'^f' then ";"v210^f  else v210^f fi,if v210:'^e' and (v210:'^f' or v
+210:'^d') then ";"v210^e," / "v210^H, " / "v210^I else v210^e," / "v210^H, " / "v210^I fi,if s(v210^N,v210^C,v210^[)<>''then ';',&uf("Kstr.mnu|"v210^S) else &uf("Kstr.mnu|"v210^S) fi')' fi,if v210:'^X' or v210:'^y' or v210:'^z' then ' (',v210^X,if v210:'^
+X' and v210:'^Y' then ";"v210^Y  fi,if v210:'^X' and v210:'^Y' AND V210:'^Z' then ";"v210^z fi,')' fi fi,
+if p(v710) then '\par \tab \b см.также на параллельном языке:\b0 ' fi,&unifor('S0')if p(v710) then if v710:&unifor('Av710#2') then (if p(v710) then '\par ' 
+&unifor('S1A')'.',mhl,v710^a,if s(v710^n,v710^c,v710^S)<>''then' ('v710^n,if v710^N<>'' and v710^C<>'' then | ; |,v710^c else v710^c fi,
+ if v710^S<>'' and (v710^C<>'' or v710^N<>'') then | ; |v710^S else v710^S fi,')' fi,|.|v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then |;|v710^f else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then |;|v710^e,| / |v710^H, | / |v710^I else v710^e,| / |v710^H, | / |v710^I fi, ')' fi,,|(|v710^X|)|,if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi/) else '\par 'v710^a,if s(v710^n,v710^c,v710^S)<>''then' ('v710^n,if v710^N<>'' and v710^C<>'' then | ; |,v710^c else v710^c fi,
+ if v710^S<>'' and (v710^C<>'' or v710^N<>'') then | ; |v710^S else v710^S fi,')' fi,"."v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then ";"v710^f  else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then ";"v710^e," / "v710^H, " / "v710^I else v710^e," / "v710^H, " / "v710^I fi,')', fi," ("v710^c")"," ("v710^X")", if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi fi,
+if v510:&unifor('Av510#2')then else if p(v510^5) and 
+a(v305^b) and (not(v510^5*1:'0')) then if v510^5:'a' then '\par \tab \b см.также
+ под прежним наименованием:\b0 ' else if v510^5:'b' then '\par \tab \b см.также 
+под последующим наименованием:\b0 ' else if v510^5:'d' then '\par \tab \b см.так
+же под сокращенным наименованием:\b0 ' else if v510^5:'z' then '\par \tab \b см.
+также:\b0 'fi fi fi fi fi fi,if p(v510) then if v510:&unifor(
+'Av510#2')or a(v510^5)  then '\par \tab \b см.также:\
+b0 ' else if p(v305^b) and v510^5:'0' then ("\par \b "v305^a"\b0 ",v305^b,|,|v30
+5^c,|,|v305^d,|,|v305^e/) else if p(v510^0) then ("\par \b "v510^0"\b0 ") fi fi 
+fi fi,&unifor('S0')if p(v510) and a(v305^b) and (not(v510^5*1:'0')) then if &unifor('Av510#2')<>'' then (if p(v510) then '\par '&unifor('S1A')'.',mhl,v510^a,if s(v510^n,v510^c,v510^S)<>''then' ('v510^n,if v510^N<>'' and v510^C<>'' then | ; |v510^c else v510^c fi,
+ if v510^S<>'' and (v510^C<>'' or v510^N<>'') then | ; |v510^S else v510^S fi,')' fi,
+|. |v510^b,if p(v510^d) or p(v510^f) or p(v510^e) then ' (',v510^d,if p(v510^d) and p(v
+510^f) then |;|v510^f else v510^f fi,if p(v510^e) and (p(v510^f) or p(v510^d)) then |;|v510^e,| / |v510^H, | / |v510^I else v510^e,| / |v510^H, | / |v510^I fi,')' fi,|(|v510^X|)|, if p(v510^5)then ' - ',&unifor('Kkod.mnu|'v510^5), ' - ' fi fi/) else '\par 'v510^a,if s(v510^n,v510^c,v510^S)<>''then' ('v510^n,if v510^N<>'' and v510^C<>'' then | ; |v510^c else v510^c fi,
+ if v510^S<>'' and (v510^C<>'' or v510^N<>'') then | ; |v510^S else v510^S fi,')' fi,|. |v510^b,if p(v510^d) or p(v510^f) or p(v510^e) then ' (',v510^d,if p(v510^d) and p(v51
+0^f) then |;|v510^f  else v510^f fi,if p(v510^e) and (p(v510^f) or p(v510^d)) then |;|v510^e,| / |v510^H, | / |v510^I else v510^e,| / |v510^H, | / |v510^I fi, ')', fi,| (|v510^X|)|, fi fi, 
+if v410:&unifor('Av410#2')then else if p(v410^5) and 
+(not(v410^5*1:'0')) then if v410^5:'a' then '\par \tab \b см.
+ под прежним наименованием:\b0 ' else if v410^5:'b' then '\par \tab \b см. 
+под последующим наименованием:\b0 ' else if v410^5:'d' then '\par \tab \b см.
+ под сокращенным наименованием:\b0 ' else if v410^5:'z' then '\par \tab \b см. (непринятая форма наименования КА)
+:\b0 'fi fi fi fi fi fi,if p(v410) then if v410:&unifor('Av410#2')or a(v410^5)  then '\par \tab \b см. (непринятая форма наименования КА): \b0'else  if p(v410^0) then ("\par \b "v410^0"\b0 ") fi 
+fi fi,&unifor('S0')if p(v410) and (not(v410^5*1:'0')) then if &unifor('Av410#2')<>'' then (if p(v410) then '\par '&unifor('S1A')'.',mhl,v410^a,if s(v410^n,v410^c,v410^S)<>''then' ('v410^n,if v410^N<>'' and v410^C<>'' then | ; |,v410^c else v410^c fi,
+ if v410^S<>'' and (v410^C<>'' or v410^N<>'') then | ; |v410^S else v410^S fi,')' fi,
+|. |v410^b,if p(v410^d) or p(v410^f) or p(v410^e) then ' (',v410^d,if p(v410^d) and p(v
+410^f) then |;|v410^f else v410^f fi,if p(v410^e) and (p(v410^f) or p(v410^d)) t
+hen |;|v410^e,| / |v410^H, | / |v410^I else v410^e,| / |v410^H, | / |v410^I fi,')' fi,|(|v410^X|)|,if v410^5<>''then ' -- ', &unifor('Kkod.mnu|'v410^5) fi fi/) else '\par 'v410^a,if s(v410^n,v410^c,v410^S)<>''then' ('v410^n,if v410^N<>'' and v410^C<>'' then | ; |,v410^c else v410^c fi,
+ if v410^S<>'' and (v410^C<>'' or v410^N<>'') then | ; |v410^S else v410^S fi,')' fi,|. |v410^b,if p(v410^d) or p(v410^f) or p(v410^e) then ' (',v410^d,if p(v410^d) and p(v410^f) then |;|v410^f  else v410^f fi,if p(v410^e) and (p(v410^f) or p(v410^d)) th
+en |;|v410^e,| / |v410^H, | / |v410^I else v410^e,| / |v410^H, | / |v410^I fi,')', fi,| (|v410^X|)|, fi fi fi,   
+ if p(v210) and p(v310) then '\tab \b Ссылочная запись на К
+ОЛЛЕКТИВ/МЕРОПРИЯТИЕ\b0 ','\par ',v210^a,if s(v210^n,v210^c,v210^S)<>''then' ('v210^n,if v210^N<>'' and v210^C<>'' then " ; ",v210^c else v210^c fi,
+ if v210^S<>'' and (v210^C<>'' or v210^N<>'') then " ; "v210^S else v210^S fi,')' fi,("\par \b "v310^a"\b0 ",| |v310^b,|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p
+(v210) and p(v320) then '\tab \b Общая пояснительная запись на К
+ОЛЛЕКТИВ/МЕРОПРИЯТИЕ\b0 ','\par ',v210^a,if s(v210^n,v210^c,v210^S)<>''then' ('v210^n,if v210^N<>'' and v210^C<>'' then " ; ",v210^c else v210^c fi,
+ if v210^S<>'' and (v210^C<>'' or v210^N<>'') then " ; "v210^S else v210^S fi,')' fi,'\par ',
+v320^a fi,if p(v300) then '\par \tab \bПримечание:  \b0 'fi,('\par \tab ',v300^a
+/),if p(v951) then '\par ' fi,if p(v951) and (&uf('IMAIN,FULLTEXTABLE,1')='1') then'\par См. ссылк',
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у 'fi,
+   (if p(v951) then |,  |+d951,
+/*       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^a) then &unifor('+I$3,10,,'v951^a'$',v951^t,| ФАЙЛ|n951^t) fi 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi) 
+fi,
+'\par -------------}'
+   
+ 

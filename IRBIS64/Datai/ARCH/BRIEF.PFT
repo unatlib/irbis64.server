@@ -1,0 +1,43 @@
+IF v920='SZPRF' then 'Служебная запись - Проверка фонда' else 
+mhl,v19^b". ",v461^x,
+   if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,
+      (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi, 
+      |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),| [|v461^2|]|,  
+   if p(v461) then 
+      if a(v461^2) then &unifor('+1W1'''), 
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
+         if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPRIVATE,FPS,'),v905^s)<>'' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+      fi fi fi fi,| : |v461^e, 
+      if p(v461^x) then else| / |v461^f fi, 
+      (if s(v46^a,v46^v)<>'' then". - ("| (|+v46^a,| ; |v46^v')'fi),". "d461,v200^v, 
+      if p(v200^v) then" : "v200^a else v200^a fi, 
+      if s(v200^v,v200^a)='' then (|. |+v925^v,if p(v925^v) then | : |v925^a else v925^a fi) fi, 
+   fi, 
+   v200^a," ["v200^b"]",| : |v200^e, 
+   (if p(v923) then
+       if &unifor('Av920#1'):'SPEC' then ", "| ; |+d923,v923^h else ". "| ; |+d923,v923^h fi, 
+       if p(v923^h)then|. |d923^i fi,v923^i, 
+       if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+       if p(v923^k)then|. |d923^l fi,v923^l 
+    fi) 
+   " (Введено оглавление)"d330, 
+   if v920.1:'A' then 
+      ".- "v963^1,if a(v963^1)then" // "d463 fi, 
+      (| ; |+v463^7,if a(v463^7) then| ; |+v463^c fi,| : |v963^e,| / |v963^f,|. - |v463^d,| : |v463^g, 
+      if p(v463^c)then 
+         if s(v463^d,v463^g)<>''then|, |v463^j else |. - |v463^j fi,|. - |v463^v else 
+            ". - "|. ; |+v463^v fi, 
+      if p(v463^v)then| : |v463^a else|. |v463^a fi, 
+      if p(v463^v)then| |v463^h else". - "|.; |+v463^h fi, 
+      if p(v463^h)then| : |v463^i else|. |v463^i fi,|, |v463^k, 
+      if p(v463^k)then| : |v463^l else|. |v463^l fi,|. - |v963^p,|.- Ст.|v463^N,|.- |v463^1, 
+      if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) 
+   fi 
+FI, 
+&unifor('!'),&unifor('+F'),  

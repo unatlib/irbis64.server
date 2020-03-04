@@ -1,0 +1,35 @@
+". - "d215,mpl, 
+if &unifor('Av215#2')<>'' and  
+   (&unifor('Av215#2')=s('^A'&unifor('Av215^a#2')'^1'&unifor('Av215^1#2')) or 
+    &unifor('Av215#2')=s('^A'&unifor('Av215^a#2'))) 
+then 
+(|, |+v215^a,| |d215^1,&unifor('G2='v215^1), 
+   if a(v215^1)then 
+      if v215^a:'с'or v215^a:'л'or v215^a:'c'or v215^a:'p'or v215^a:'S'or val(v215^a,'a0')=0 then 
+      else 
+         if p(v215^a) then 
+            if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
+            else &unifor('Korg.mnu|4') fi,'.' 
+   fi fi fi,   
+   if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>'' and v215^1<>''then' : '&unifor('G2='v230^b), 
+      if &unifor('G2='v230^c)<>''then 
+         if &unifor('G2='v230^b)<>''then', ' 
+         fi,&unifor('G2='v230^c) 
+   fi fi),| : |d215^c, 
+   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and v215^d:'см'then | ; |v215^d else | ; |v215^d| см.| fi, 
+else 
+   (| ; |+v215^a,| |d215^1,&unifor('G2='v215^1), 
+   if a(v215^1)then 
+      if v215^a:'с'or v215^a:'c'or v215^a:'p'or v215^a:'S'or val(v215^a,'a0')=0 then 
+      else 
+         if p(v215^a) then 
+            if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
+            else &unifor('Korg.mnu|4') fi,'.' 
+   fi fi fi, 
+      if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>'' and v215^1<>''then' : '&unifor('G2='v230^b), 
+      if &unifor('G2='v230^c)<>''then 
+         if &unifor('G2='v230^b)<>''then', ' 
+         fi,&unifor('G2='v230^c) 
+   fi fi,if v920.1='A'then else| : |d215^c fi, 
+   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and v215^d:'см'then | ; |v215^d else | ; |v215^d| см.| fi,) 
+fi, 

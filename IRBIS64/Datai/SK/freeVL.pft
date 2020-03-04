@@ -1,0 +1,5 @@
+&uf('+7W16#'),&uf('+7W17#'),
+&uf('+7U16#'if &uf('+Omhrkv.mnu\'g8)<>'' then &uf('+Omhrkv.mnu\'g8) else g8 fi),
+if g10<>'' then &uf('+7M16#10') else if g2<>'' then &uf('+7S16#2') fi fi,
+&uf('+7W17#'|, |+g16) 
+&uf('+7U18#'(g16/)) 

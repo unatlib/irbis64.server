@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head language="JavaScript">
+       
+  <script language="JavaScript">
+
+function PasteLogic_OR()
+{
+if (OPAK.S21STR_1.value == "") return false;
+if (document.OPAK.S21STR.value == "")
+    { 
+        document.OPAK.S21STR.value = "(" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }else
+    {
+        document.OPAK.S21STR.value = document.OPAK.S21STR.value + " OR (" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }
+
+
+OPAK.S21STR_1.value = "";
+return false;
+}
+
+function PasteLogic_OR()
+{
+if (OPAK.S21STR_1.value == "") return false;
+if (document.OPAK.S21STR.value == "")
+    { 
+        document.OPAK.S21STR.value = "(" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }else
+    {
+        document.OPAK.S21STR.value = document.OPAK.S21STR.value + " OR (" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }
+
+
+OPAK.S21STR_1.value = "";
+return false;
+}
+
+function PasteLogic_AND()
+{
+if (OPAK.S21STR_1.value == "") return false;
+if (document.OPAK.S21STR.value == "")
+    { 
+        document.OPAK.S21STR.value = "(" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }else
+    {
+        document.OPAK.S21STR.value = document.OPAK.S21STR.value + " AND (" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }
+
+
+OPAK.S21STR_1.value = "";
+return false;
+}
+
+function PasteLogic_NOT()
+{
+if (OPAK.S21STR_1.value == "") return false;
+if (document.OPAK.S21STR.value == "")
+    { 
+        document.OPAK.S21STR.value = "(" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }else
+    {
+        document.OPAK.S21STR.value = document.OPAK.S21STR.value + " NOT (" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }
+
+
+OPAK.S21STR_1.value = "";
+return false;
+}
+
+
+function PasteLogic()
+{
+if (OPAK.S21STR_1.value == "") return true;
+if (document.OPAK.S21STR.value == "")
+    { 
+        document.OPAK.S21STR.value = "(" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }else
+    {
+        document.OPAK.S21STR.value = "(" + document.OPAK.S21STR.value + ")" + " OR (" + document.OPAK.PREFIX.value + " " + OPAK.S21STR_1.value + ")"
+    }
+
+OPAK.S21STR_1.value = "";
+return true;
+}
+
+
+</script>                                                              
+                                                                        
+                             
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+  <title>OPAK - Global</title>
+</head>
+ <body>
+     
+<div align="Right"><b><font color="#cc9933">  OPAC - Global </font></b><b><br>
+   </b><b><font color="#cc9933">NILC of Russia </font></b><b><br>
+   </b><br>
+   </div>
+       
+<form name="OPAK" action="IRBIS:" enctype="Multipart/form-data" method="Post">
+           
+  <table cellpadding="2" cellspacing="2" border="0" width="100%">
+       <tbody>
+         <tr>
+           <td valign="Top" width="30%">                           
+        <div align="Right"><font color="#3333ff"><b>Выбор базы данных</b></font></div>
+           </td>
+           <td valign="Top">                           
+        <select name="I21DBN" style="width: 100%; ">
+        </select>
+           </td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b>                    
+Формат представления</b></font></div>
+           </td>
+        <td valign="Top">                           
+        <select name="S21FMT" style="width: 100%; ">
+        <option value="BIBCARD" selected=""> Биб. карточка </option>
+        </select>
+           <br>
+        </td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b>                    Область
+                    поиска</b></font></div>
+           </td>
+           <td valign="Top">                           
+        <select name="PREFIX" style="width: 100%; ">
+        <option value="FT"> Все поля </option>
+        <option value="AU"> Автор </option>
+        <option value="AU"> Индивид. автор, редактор, составитель и др. </option>
+        <option value="TI">  Заглавие </option>
+        <option value="SO">  Заглавие источника </option>
+        <option value="CA"> Коллективный автор </option>
+        <option value="FA"> Родовое имя </option>
+        <option value="TU"> Унифицированное заглавие </option>
+        <option value="SE"> Серия </option>
+        <option value="BC"> ББК </option>
+        <option value="SH"> Предметные рубрики </option>
+        <option value="PS"> Имя лица (SH) </option>
+        <option value="CS"> Организация (SH) </option>
+        <option value="FS"> Родовое имя (SH) </option>
+        <option value="AT"> Имя+Заглавие (SH) </option>
+        <option value="TS"> Заглавие (SH) </option>
+        <option value="SU"> Тема </option>
+        <option value="GH"> География </option>
+        <option value="SU"> MeSH </option>
+        <option value="TG"> CheckTags </option>
+        <option value="KW"> Ключевые слова </option>
+        <option value="SN"> ISSN </option>
+        <option value="SB"> ISBN </option>
+        <option value="PU"> Издательство </option>
+        <option value="PP"> Место издания </option>
+        <option value="BL"> Тип записи </option>
+        <option value="SP"> Коды специальностей </option>
+        <option value="DN"> Шифр хранения </option>
+        <option value="IN"> Инвертарный номер/Баркод </option>
+        <option value="NP"> Выпуск серии, номер журнала и т.д. </option>
+        <option value="SR"> Источник записи </option>
+        <option value="PF"> Местонахождение </option>
+        <option value="GC"> ГАСНТИ код </option>
+        <option value="PY"> Год публикации </option>
+        <option value="LA"> Язык публикации </option>
+        <option value="LG"> НГР </option>
+        <option value="VD"> Вид документа </option>
+        <option value="RT"> Тип документа </option>
+        <option value="ID"> Идентификатор записи </option>
+        <option value="DT"> Дата ввода записи </option>
+        </select>
+           </td>
+
+         </tr>
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b>                    Поисковый
+              запрос</b></font></div>
+           </td>
+           <td valign="Top"><input name="S21STR_1" type="text" style="width: 100%; "></td>
+         </tr>
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b>Операторы присоединения</b></font><br>
+           </div>
+           </td>
+           <td valign="Top">                           
+        <table cellpadding="2" cellspacing="2" border="0" width="150">
+             <tbody>
+               <tr>
+                 <td valign="Top" width="34%"><input type="submit" name="C21COM" value="И" onclick="return PasteLogic_AND()" style="width: 100%; "><br>
+                 </td>
+                 <td valign="Top" width="33%"><input type="submit" name="C21COM_OR" value="ИЛИ" onclick="return PasteLogic_OR()" style="width: 100%; "><br>
+                 </td>
+                 <td valign="Top" width="33%"><input type="submit" name="C21COM" value="НЕТ" onclick="return PasteLogic_NOT()" style="width: 100%; "></td>
+               </tr>
+                                   
+          </tbody>                           
+        </table>
+           </td>
+         </tr>
+         <tr>
+           <td valign="Top" rowspan="1" colspan="2">                    
+      
+        <div align="Center"><font color="#3333ff"><b>  Комплексный поисковый
+              запрос</b></font></div>
+            <textarea name="S21STR" wrap="" virtual="" style="width: 100%; "></textarea></td>
+         </tr>
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><br>
+           <input type="submit" onclick="return PasteLogic()" name="C21COM" value="Искать"></div>
+           </td>
+           <td valign="Top" width="70%"><br>
+           <input type="reset" value="Очистить"></td>
+         </tr>
+                 
+    </tbody>         
+  </table>
+   </form>
+     
+</body>
+</html>

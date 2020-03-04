@@ -1,0 +1,15 @@
+"<b>Читатель:</b> "d1,&uf('DRDR',',!RI=',v1,'!,@brief'),
+if v2<>'' then 
+'<div><b>Постоянные запросы:</b></div>',
+'<table border=1>',
+'<tr>',
+'<td><b>Запрос</td><td><b>Полнотекстовая часть</td><td><b>Библиографическая часть</td><td><b>Дата</td>',
+'</tr>',
+(if v2<>'' then 
+'<tr>',
+'<td>',v2^A,'&nbsp;</td><td>',V2^B,'&nbsp;</td>','<td>',v2^C,'&nbsp;</td><td>',V2^D,'&nbsp;</td>',
+'</tr>',
+fi),
+'</table>',
+fi,
+

@@ -1,0 +1,635 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^k)then v44^k|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^a)then v44^a|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^b)then v44^b|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^c)then v44^c|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^d)then v44^d|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if s(v44^e,v44^f,v44^g,v44^x)>'0'then v44^e|;|,v44^f|;|,v44^g|;|,v44^x|;| fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then if p(v44^1)then v44^1|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^2)then v44^2|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^3)then v44^3|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^4)then v44^4|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^5)then v44^5|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^6)then v44^6|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^7)then v44^7|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^8)then v44^8|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^9)then v44^9|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if s(v44^t,v44^u,v44^v,v44^w,v44^y,v44^z,v44^0)>'0'then v44^t|;|,v44^u|;|,v44^v|;|,v44^w|;|,v44^z|;|,v44^0|;| fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^q)then v44^q|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^r)then v44^r|;| else'0;'fi fi)),0,0)fi,
+if v88^d=v991^b then f(rsum((if v44<>''then  if p(v44^s)then v44^s|;| else'0;'fi fi)),0,0)fi,
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4927 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\qr ИТОГО:\tab  'v1
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5494 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v2
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6061 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v3
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6628 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v4
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7195 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v5
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7762 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v6
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8329 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v7
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8896 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v8
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9463 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v9
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10030 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v10
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10597 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v11
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11164 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v12
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11731 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v13
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12298 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v14
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12865 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v15
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13432 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v16
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13999 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v17
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14566 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v18
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15133 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\ql 'v19
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1100 
+\pard \widctlpar\intbl {\qc \fs16 Дата записи
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 Номер в КСУ
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3084 
+\pard \widctlpar\intbl {\qc \fs16 Источник пост.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3792 
+\pard \widctlpar\intbl {\qc \fs16 № сопр док
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15132 
+\pard \widctlpar\intbl {\qc \fs16 \par \fs24 Поступило
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1100 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3084 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3792 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4926 
+\pard \widctlpar\intbl {\qc \fs16 Всего
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15132 
+\pard \widctlpar\intbl {\qc \fs16 В том числе (количество экземпляров)
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1100 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3084 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3792 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4359 
+\pard \widctlpar\intbl {\qc \fs16 Наз
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4926 
+\pard \widctlpar\intbl {\qc \fs16 Экз
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7761 
+\pard \widctlpar\intbl {\qc \fs16 По видам
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13431 
+\pard \widctlpar\intbl {\qc \fs16 По содержанию
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15132 
+\pard \widctlpar\intbl {\qc \fs16 По языкам
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1100 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3084 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3792 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4359 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4926 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5493 
+\pard \widctlpar\intbl {\qc \fs16 Книги
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6060 
+\pard \widctlpar\intbl {\qc \fs16 Бр
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6627 
+\pard \widctlpar\intbl {\qc \fs16 Ж
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7194 
+\pard \widctlpar\intbl {\qc \fs16 АВ
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7761 
+\pard \widctlpar\intbl {\qc \fs16 Др
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8328 
+\pard \widctlpar\intbl {\qc \fs16 1
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8895 
+\pard \widctlpar\intbl {\qc \fs16 2
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9462 
+\pard \widctlpar\intbl {\qc \fs16 3
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10029 
+\pard \widctlpar\intbl {\qc \fs16 4
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10596 
+\pard \widctlpar\intbl {\qc \fs16 5
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11163 
+\pard \widctlpar\intbl {\qc \fs16 6
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11730 
+\pard \widctlpar\intbl {\qc \fs16 7
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12297 
+\pard \widctlpar\intbl {\qc \fs16 8
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12864 
+\pard \widctlpar\intbl {\qc \fs16 9
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13431 
+\pard \widctlpar\intbl {\qc \fs16 Др
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13998 
+\pard \widctlpar\intbl {\qc \fs16 рус
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14565 
+\pard \widctlpar\intbl {\qc \fs16 нац
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15132 
+\pard \widctlpar\intbl {\qc \fs16 Др
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1100 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3084 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3792 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4359 
+\pard \widctlpar\intbl {\qc \fs16 1
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4926 
+\pard \widctlpar\intbl {\qc \fs16 2
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5493 
+\pard \widctlpar\intbl {\qc \fs16 3
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6060 
+\pard \widctlpar\intbl {\qc \fs16 4
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6627 
+\pard \widctlpar\intbl {\qc \fs16 5
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7194 
+\pard \widctlpar\intbl {\qc \fs16 6
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7761 
+\pard \widctlpar\intbl {\qc \fs16 7
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8328 
+\pard \widctlpar\intbl {\qc \fs16 8
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8895 
+\pard \widctlpar\intbl {\qc \fs16 9
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9462 
+\pard \widctlpar\intbl {\qc \fs16 10
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10029 
+\pard \widctlpar\intbl {\qc \fs16 11
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10596 
+\pard \widctlpar\intbl {\qc \fs16 12
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11163 
+\pard \widctlpar\intbl {\qc \fs16 13
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11730 
+\pard \widctlpar\intbl {\qc \fs16 14
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12297 
+\pard \widctlpar\intbl {\qc \fs16 15
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12864 
+\pard \widctlpar\intbl {\qc \fs16 16
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13431 
+\pard \widctlpar\intbl {\qc \fs16 17
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13998 
+\pard \widctlpar\intbl {\qc \fs16 18
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14565 
+\pard \widctlpar\intbl {\qc \fs16 19
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15132 
+\pard \widctlpar\intbl {\qc \fs16 20
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

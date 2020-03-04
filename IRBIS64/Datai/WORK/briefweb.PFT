@@ -1,0 +1,44 @@
+'<tr><td width=10% align="center" valign="top"><b><--MFNCOUNT-->.</b>
+</td>',
+'<td width=10% align="center" valign="top"></td>',
+'<td width=90% colspan="3">',
+v503^a". ",
+v461^x,if s(v461^x)<>''then'. 'fi,mhl,v461^c,mpl,
+if p(v461) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then
+" [Ёлектр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,|: |v461^e,
+if p(v461^x) then else|/ |v461^f fi,|. -|v461^p,(". -"|; |+v461^d,|: |v461^g),
+|. -|v461^h,". "d461,v200^v,if p(v200^v) and p(v200^a) then': 'fi,
+if p(v200^a) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,
+"."d700^g," "d700^a,
+fi,mhl,v200^a,mpl,
+if a(v461)and p(v200^a)then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then
+" [Ёлектр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,
+if p(v922) then &unifor('D,@',mfn,',@ibis922') fi,
+|: |v200^e,|. |v923^h,|: |v923^i,|. |v923^k,|:|v923^l,
+if s(v922^g)<>''and &unifor('Av922^g#*')<>''then|; |v200^f else |/ |v200^f fi,
+if v920='J'then'. - '&unifor('K110b.mnu|'v110^b)," выходит с "v210^d"г."else
+". - "v210^d fi,(". - "|; |+v215^a,| |d215^1,&unifor('G2='v215^1),if a(v215^1)
+then if v215^a:'с'or v215^a:'c'or v215^a:'p'or v215^a:'S'then else if p(v215^a)
+ then &unifor('Korg.mnu|4')'.' fi fi fi),
+if v920:'NJ'then ref(l(|I=|v933),mhl,v200^a,mpl,
+if &unifor('Kjzk.mnu|'v101.3)<>''then" [Ёлектр.ресурс]"d230 else" [Electr.resource]"d230 fi'.-'&unifor('K110b.mnu|'v110^b),|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l,|. |v923^m,|. |v923^n),
+,", "v934"г.",if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi,
+if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi,),v936 fi," ("v931^c")","  (¬ведено оглавление)"d922 fi,
+if v920:'NJ'then else" (¬ведено оглавление)"d330,
+".-"v963^1,if a(v963^1)then" //"d463 fi,mhl,
+(|; |+v463^7,if a(v463^7) then|; |+v463^c fi,mpl,|: |v963^e,|/ |v963^f,|.-|v463^d,|: |v463^g,
+if p(v463^c)then 
+   if s(v463^d,v463^g)<>''then|, |v463^j else |. -|v463^j fi,|. -|v463^v else 
+      ". -"|.; |+v463^v fi,
+   if p(v463^v)then|: |v463^a else|. |v463^a fi,
+   if p(v463^v)then| |v463^h else". -"|.; |+v463^h fi,
+   if p(v463^h)then|: |v463^i else|. |v463^i fi,|, |v463^k,
+   if p(v463^k)then|: |v463^l else|. |v463^l fi,|.-|v963^p,|.-—т.|v463^N,|.-|v463^1,
+   if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) 
+fi,
+if s(v910^c)<>''then'<br> Ёкз-ры: всего:'
+   f(rsum((if v910:'^c'then if 'C U':v910^a then v910^1|;|,|1;|n910^1 else 
+                               if '6 2 7':v910^a then else'1;'fi 
+           fi fi)),0,0),' - ',&unifor('O'),
+fi,
+'<br><hr noshade size="1"></td></tr>'

@@ -1,0 +1,3 @@
+if L("RI="v24)<1 or l("RI="v24)=val(mfn) then '0
+' else '1Дублетный штрих-код читателя:       ',v24,ref(L("RI="v24),' (см. N 
+',f(val(mfn),0,0),')') fi 

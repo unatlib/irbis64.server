@@ -1,0 +1,18 @@
+'{',
+if a(v991) or &uf('Av991^z.1#1'):' ' then '\par \b \fs24 Обеспеченность литературой по дисциплинам  ', 
+' ('&uf('32')'.'&uf('31'),'.',&uf('30'),if v991^d<>'' then ' - ' ,&uf('Av991^d#1') ' - 'fi,
+   if p(v991^d) then &uf('+7W1991#'&uf('Av991^d#1')),
+   &unifor('D'&uf('IPrivate,DBN,IBIS'),if &uf('IPrivate,DBN,IBIS')='' then 'IBIS' fi,',@'mfn',&uf(|Kdisc_forma.mnu\|g1991)') fi,')' 
+   if v991^o<>'' then
+    '\par \qc Для формы обучения "',&uf('Av991^O#1'),'"' else  '\par Для всех форм обучения ' 
+   fi,'\par ' 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      (&unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9) 
+   then 
+      if &uf('Av991^S#1')='' then' (студенты и ККО для весенних семестров)'  else '(Весенние семестры)' fi 
+   else 
+      if &uf('Av991^S#1')='' then' (студенты и ККО для осенних семестров)'  else '(Осенние семестры)' fi 
+   fi 
+else &uf('Av991^z#1') 
+fi,'\b0 \fs20 \par \par '
+'}'

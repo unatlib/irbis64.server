@@ -1,0 +1,66 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+if ref(mfn,(if p(v691) then if p(v691^l) then else if v691^a:&unifor('Av991^a#1') or &unifor('Av991^a#1')='' then if v691^b:&unifor('Av991^b#1') or &unifor('Av991^b#1')='' then if v691^d:&unifor('Av991^c#1') or &unifor('Av991^c#1')='' then '1;'fi fi fi fi fi)) :'1'then if p(v910)then f(rsum((if p(v910^c) then if 'C 2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0) fi fi,
+if ref(mfn,(if p(v691) then if p(v691^l) then else if v691^a:&unifor('Av991^a#1') or &unifor('Av991^a#1')='' then if v691^b:&unifor('Av991^b#1') or &unifor('Av991^b#1')='' then if v691^d:&unifor('Av991^c#1') or &unifor('Av991^c#1')='' then '1;'fi fi fi fi fi)) :'1'then if p(v910)then f(rsum((if p(v910^c) then if 'C 2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')) / val(v991^d),0,2) fi fi,
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9144
+\pard \ql\widctlpar\intbl {  Общее кол-во учебников 'f(val(v1),5,0)' экз. \par   Книгообеспеченность 'f(val(v2),3,2),
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033
+{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\widctlpar \f0\fs20\lang1049 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\widctlpar\tqc\tx4153\tqr\tx8306 \f0\fs20\lang1049 \sbasedon0\snext15 header;}{\*\cs16 \additive\sbasedon10 page number;}}{\info
+{\title \'d3\'f2\'e2\'e5\'f0\'e6\'e4\'e0\'fe:}{\author Alexandre Katalov}{\operator Alexandre Katalov}{\creatim\yr1999\mo3\dy22\hr16\min13}{\revtim\yr1999\mo3\dy22\hr16\min15}{\version2}{\edmins2}{\nofpages1}{\nofwords42}{\nofchars241}
+{\*\company Elcom Ltd}{\vern57443}}\paperw11907\paperh16727\margl1134\margr1134\margt567\margb1134 \widowctrl\ftnbj\aenddoc\hyphhotz60\hyphauto1\formshade \fet0\sectd \linex0\headery709\footery709\colsx709\endnhere {\header \pard\plain
+\s15\widctlpar\tqc\tx4153\tqr\tx8306\pvpara\phmrg\posxc\posy0 \f0\fs20\lang1049 {\field{\*\fldinst {\cs16 PAGE  }}{\fldrslt {\cs16\lang1024 1}}}{\cs16
+\par }\pard \s15\widctlpar\tqc\tx4153\tqr\tx8306\par }{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}
+{}
+{\b\fs20 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx459
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4562
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6696
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9114
+\pard \qc\widctlpar\intbl {\b N n/n\cell }
+\pard \qc\widctlpar\intbl {\b Заглавие учебника\cell }
+\pard \qc\widctlpar\intbl {\b Осн/Доп\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во экз-ров\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

@@ -1,0 +1,144 @@
+/*------------------------ инв/шк
+if v940^v: v991 
+then 
+   (if p(v940) 
+    then 
+       if s(v940^v)<>'' 
+       then 
+          if &unifor('Av991#1'):v940^v 
+          then 
+             if p(v940^b) then v940^b else v940^h  fi 
+          fi 
+       fi 
+    fi/)
+fi,
+/*...................................................
+if v940^v: v991 then (if p(v940) then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^b)then v940^b else v940^h  fi fi fi fi/)fi,
+
+/*------------------------ кол-во выбывших
+if v940^v:v991 then (if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then f(val(v940^x,' 0'),0,0),fi fi)fi
+
+/*------------------ место хранения
+if v940^v:v991 
+then 
+   (if p(v940) 
+    then 
+       if s(v940^v)<>'' 
+       then 
+          if &unifor('Av991#1'):v940^v then v940^d,fi 
+       fi 
+   fi/) 
+fi
+/*..........................................
+if v940^v:v991 then (if p(v940)then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then v940^d,fi fi fi/) fi
+
+/*-----------------автор....
+'if v920:'NJ'then ref(l(|I=|v933),mhl,v200^a,mpl)," - "v934
+" г."," т."v935,", N "v936 else mhl,v461^x|. |,if p(v461)then v461^c,' ; 'v200^v,if p(v
+200^v)then" : "v200^a else v200^a fi,| / |v700^a," "v700^b,", "v210^d else v700^a,
+" "v700^b," "v200^a,(|. |v922^c,| / |v922^f),| = |v510^d,| : |v200^e,|, |v923^h,| : |
+v923^i,|, |v923^k,| : |v923^l,| / |v200^f,| ; |v200^g,". - "v205^a,if p(v205^a)then"
+ "v205^c else". - "v205^c fi,(|. - |v210^a,| : |v210^c),", "v210^d fi,", "v210^e,"
+. -"v215^a,if p(v215^1) then if v215^1:'=' then ' '&uf('G2='v215^1) else ' 'v215^1 fi fi,
+" : "d215^c,if p(v215^c) then if v215^c:'-' then ' '&uf('G2-'v215^c) else v215^c fi fi,mpl,fi
+
+/*-----------------------Всего выбыло
+if v940^v:v991 
+then 
+   f(rsum(
+       (if p(v940)
+        then 
+            if s(v940^v)<>'' 
+            then 
+               if &unifor('Av991#1'):v940^v 
+               then 
+                  if p(v940^x) then f(val(v940^x|;|,' 0'),0,0) else '1;' fi 
+               fi 
+            fi fi/)),0,0)fi,
+/*.........................................
+
+/*-----------------------На сумму
+&uf('6TabSpisS1')
+/*-----------------------Всего передано
+if v940^v:v991 
+then 
+   f(rsum(
+    (if p(v940) 
+     then 
+        if s(v940^v)<>'' 
+        then 
+           if &unifor('Av991#1'):v940^v 
+           then 
+              if p(v940^w) 
+              then 
+                 if p(v940^z) then f(val(v940^z|;|,' 0'),0,0) else '1;'fi 
+              fi fi fi fi/)),0,0)fi
+/*..................................
+if v940^v:v991 then f(rsum((if p(v940) then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^w)then if p(v940^z) then f(val(v940^z|;|,' 0'),0,0) else '1;'fi fi fi fi fi/)),0,0)fi
+/*----------------------передано на сумму
+&uf('6TabSpisS2')
+/*-------------------Новое место хранения
+if v940^v:v991 
+then 
+   f(rsum(
+    (if p(v940) 
+     then 
+        if s(v940^v)<>'' 
+        then 
+           if &unifor('Av991#1'):v940^v 
+           then 
+              if p(v940^w) 
+              then 
+                 v940^M 
+              fi fi fi fi/)),0,0)fi
+/*----------------------Всего исключено
+if v940^v:v991 
+then 
+   f(rsum(
+      (if p(v940) 
+       then 
+          if s(v940^v)<>'' 
+          then 
+             if &unifor('Av991#1'):v940^v 
+             then 
+                if p(v940^w) 
+                then 
+                   f(val(v940^x,' 0')-val(v940^z,' 0'),0,0),';' 
+                else 
+                    if v940^a:'6' 
+                    then '1;' 
+                    else 
+                       f(val(v940^x|;|,' 0'),0,0) 
+                    fi 
+                fi 
+             fi 
+          fi 
+       fi/)),0,0) 
+fi,
+/*................................
+if v940^v:v991 then f(rsum((if p(v940)then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^w)then f(val(v940^x,' 0')-val(v940^z,' 0'),0,0),';'else if v940^a:'6'then '1;' else f(val(v940^x|;|,' 0'),0,0)fi fi fi fi fi/)),0,0)fi,
+/*--------------------Всего исключено на сумму
+&uf('6TabSpisS3')
+/*-----------------------Всего осталось
+if s(v910^v,v940^v):v991 then if rsum((if 'C U':v910^a and p(v910^1)then f(val(v910^1|;|,' 0'),0,0)fi,if '0 1 2 3 4 5 8':v910^a then '1;' fi/))>0 then f(rsum((if 'C U':v910^a and p(v910^1)then f(val(v910^1|;|,' 0'),0,0)fi,if '0 1 2 3 4 5 8':v910^a then '1;' fi/)),0,0)else'0' fi fi
+/*...........................................
+if s(v910^v,v940^v):v991 
+then 
+   if rsum(
+      (if 'C U':v910^a and p(v910^1) 
+       then 
+          f(val(v910^1|;|,' 0'),0,0) 
+       fi,
+       if '0 1 2 3 4 5 8':v910^a 
+       then '1;' 
+       fi/))>0 
+   then 
+      f(rsum(
+          (if 'C U':v910^a and p(v910^1) 
+           then f(val(v910^1|;|,' 0'),0,0) 
+           fi,
+           if '0 1 2 3 4 5 8':v910^a then '1;' 
+           fi/)),0,0) 
+   else '0' 
+   fi 
+fi

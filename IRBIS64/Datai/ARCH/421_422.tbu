@@ -1,0 +1,66 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+\pard \qc\widctlpar {
+\fs16 Контроль взаимного соответствия ссылок в полях 421 и 422
+\par }
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\pard \widctlpar\intbl {\qc \fs16 N
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2376 
+\pard \widctlpar\intbl {\qc \fs16 № записи в БД
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4077 
+\pard \widctlpar\intbl {\qc \fs16 Ид-р 19^b
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5778 
+\pard \widctlpar\intbl {\qc \fs16 421^y - №зап
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6912 
+\pard \widctlpar\intbl {\qc \fs16 Нет обратной ссылки
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs16 422^y - №зап
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9747 
+\pard \widctlpar\intbl {\qc \fs16 Нет обратной ссылки
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

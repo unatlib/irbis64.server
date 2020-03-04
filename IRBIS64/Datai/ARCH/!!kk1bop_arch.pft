@@ -1,0 +1,10 @@
+if p(v421) then '. - ѕриложени' 
+   if &uf('Av421#2')<>'' then '€' else 'е' fi,':',&uf('S0'),
+   (if p(v421) then if &uf('Av421#2')<>''then | |d421,&uf('S1A'),'. ' fi,
+       v421^y|. |v421^a fi) 
+fi ,
+if p(v422) then '. - явл€етс€ приложением к '
+   if &uf('Av422#2')<>'' then ':' fi,&uf('S0'),
+   (if p(v422) then if &uf('Av422#2')<>''then | |d422,&uf('S1A'),'. ' fi,
+    v422^y|. |,v422^a fi) 
+fi 

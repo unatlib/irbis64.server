@@ -1,0 +1,7 @@
+'\pard \li108 \ri108 ','\par \qc \fs28 Лист инвентарной книги для ', 
+'\par  \fs24 ',"  подразделения "d991^b,
+&unifor('G0?'v991^b),if p(v991^a) and p(v991^b) then ' и ' fi,
+" КСУ N  "d991^a,&unifor('G0!'v991^a),if p(v991^a)then ' (', 
+ref(L('KSU='&unifor('G0!'v991^a)),v88^b*6.2|.|,v88^b*4.2|.|,v88^b.4),') ' fi,
+'\par '
+

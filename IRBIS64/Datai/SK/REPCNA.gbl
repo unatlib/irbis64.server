@@ -1,0 +1,466 @@
+1
+RepCNA.wss
+  ВВЕДИТЕ значение для изменения
+
+// 10.1 корректировка записей каталога ПО отмеченным
+// в 991^A что заменить, 991^B на что 
+//12 PUTLOG  
+IF
+if v991: '^C' then '1' fi
+//-----------------------------СПЕЦИАЛЬНОСТЬ
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=0 then '1' fi
+// случай неполного переноса
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/)
+
+DEL
+691
+*
+
+
+ADD
+691
+
+(|^I|v1691^I/)
+
+FI
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=1 then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^C/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+REP
+691^C
+F
+(if p(v691) then if v691^C<>'' then if &uf('+97',v691^C)=&uf('+97',&uf('Av991^C#1')) then if &uf('Av991^3#1')<>'' then &uf('Av991^3#1') else # fi else v691^C fi else # fi fi/)
+
+IF
+if v111<>v691^C then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991: '^N' then '1' fi
+//---------------------------------НАПРАВЛЕНИЕ
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=0 then '1' fi
+// случай непоного переноса
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/)
+
+DEL
+691
+*
+
+
+ADD
+691
+
+(|^I|v1691^I/)
+
+FI
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=1 then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^N/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+REP
+691^N
+F
+(if p(v691) then if v691^N<>'' then if &uf('+97',v691^N)=&uf('+97',&uf('Av991^N#1')) then if &uf('Av991^2#1')<>'' then &uf('Av991^2#1') else # fi else v691^N fi else # fi fi/)
+
+IF
+if v111<>v691^N then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991: '^A' then '1' fi
+//---------------------------------------ФАКУЛЬТЕТ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^A/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+REP
+691^A
+F
+(if p(v691) then if v691^A<>'' then if &uf('+97',v691^A)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^1#1')<>'' then &uf('Av991^1#1') else # fi else v691^A fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^A) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^O' then '1' fi
+//--------------------------------------ФОРМА ОБУЧЕНИЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^O/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+REP
+691^O
+F
+(if p(v691) then if v691^O<>'' then if &uf('+97',v691^O)=&uf('+97',&uf('Av991^O#1')) then if &uf('Av991^5#1')<>'' then &uf('Av991^5#1') else # fi else v691^O fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^O) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^V' then '1' fi
+//---------------------------------------ВИД ОБУЧЕНИЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^V/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+REP
+691^V
+F
+(if p(v691) then if v691^V<>'' then if &uf('+97',v691^V)=&uf('+97',&uf('Av991^V#1')) then if &uf('Av991^4#1')<>'' then &uf('Av991^4#1') else # fi else v691^V fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^V) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^F' then '1' fi
+//----------------------------------------------СЕМЕСТР
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^F/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: s('-S',&unifor('Av991^A#1')) then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: s('-S',&unifor('Av991^A#1')) then '1' else '0' fi fi/)
+
+REP
+691^F
+F
+(if p(v691) then if v691^F<>'' then if val(v691^F)=val(&uf('Av991^F#1')) then if &uf('Av991^8#1')<>'' then &uf('Av991^8#1') else # fi else v691^F fi else # fi fi/)
+
+IF
+if v111<>v691^F then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^K' then '1' fi
+//-----------------------------КАФЕДРА ЧИТАЮЩАЯ
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=0 then '1' fi
+// случай непоного переноса
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/)
+
+DEL
+691
+*
+
+
+ADD
+691
+
+(|^I|v1691^I/)
+
+FI
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=1 then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^B/)
+
+REP
+691^B
+F
+(if p(v691) then if v691^B<>'' then if &uf('+97',v691^B)=&uf('+97',&uf('Av991^k#1')) then if &uf('Av991^7#1')<>'' then &uf('Av991^7#1') else # fi else v691^B fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^B) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^D' then '1' fi
+//---------------------------ДИСЦИПЛИНА
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=0 then '1' fi
+// случай непоного переноса
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/)
+
+DEL
+691
+*
+
+
+ADD
+691
+
+(|^I|v1691^I/)
+
+FI
+IF
+if val(&uf('IMAIN,MOVECATFULL,1'))=1 then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^D/)
+
+REP
+691^D
+F
+(if p(v691) then if v691^D<>'' then if &uf('+97',v691^D)=&uf('+97',&uf('Av991^D#1')) then if &uf('Av991^8#1')<>'' then &uf('Av991^8#1') else # fi else v691^D fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^D) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+IF
+if v991: '^I' then '1' fi
+//--------------------------ИДЕНТИФИКАТОР
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^I/)
+
+REP
+691^I
+F
+(if p(v691) then if v691^I<>'' then if &uf('+97',v691^I)=&uf('+97',&uf('Av991^I#1')) then if &uf('Av991^9#1')<>'' then &uf('Av991^9#1') else # fi else v691^I fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^I) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991: '^S' then '1' fi
+//------------------------Цикл
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^S/)
+
+REP
+691^S
+F
+(if p(v691) then if v691^S<>'' then if &uf('+97',v691^S)=&uf('+97',&uf('Av991^S#1')) then if &uf('Av991^0#1')<>'' then &uf('Av991^0#1') else # fi else v691^S fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^S) then '1' fi
+PUTLOG
+'Заменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+DEL
+991
+*
+
+

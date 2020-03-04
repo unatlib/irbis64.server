@@ -1,0 +1,227 @@
+/*------------------------------------ KKO книги
+/* !!!!!!!!!!!!!!!!!!  g46 кол-во экземпляров !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/* g991^T - выделенный фонд, поиск этого значения вместе с разделителем из NaznCatDelim.mnu
+/* g991^= - отключение семестра
+/* g991^E - задан семестр в форме Check
+/* g152 - признак использования в сумматоре, в LecenDisc
+
+&uf('+7W4#'),&uf('+7W5#'),&uf('+7W7#'),,&uf('+7W55#'), 
+if g991^=='0' 
+then 
+/* G5 ----------------- студенты без учета семестра + кол-во экземпляров в G46
+   if val(&unifor('IMAIN,ACCESSRDR,1'))=1 
+   then 
+        &unifor('+7W55#',,,,,
+        (if p(v691) 
+         then 
+           if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  ) 
+           then 
+               if p(v691^L) then else 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S1',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S2',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S3',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S4',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S5',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S6',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S7',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S8',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S9',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S10',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S11',,,,,,'!,mfn/')/ 
+               &unifor('7RDR,!?',,,,,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S12',,,,,,'!,mfn/')/                                                 fi,
+           fi fi/)   ),
+           &uf('+7G55'),
+           &uf('+7W5#',,,,f(rsum((if p(g55) then '1;'fi/)) ,0,0)   ) 
+   else 
+        &uf('+7W5#',,,f(rsum(
+        (if p(v691) 
+         then 
+             if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  )  
+             then 
+                 if p(v691^L) then else 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S1',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S2',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S3',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S4',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S5',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S6',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S7',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S8',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S9',,,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S10',,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S11',,'",v68^Z'),';' 
+                 &uf('DVUZ,"!',,,v691^a,if p(v691^c) then v691^c, else v691^n fi,,v691^v,v691^o,'-S12',,'",v68^Z'),';'  
+                 fi 
+             fi fi)),0,0)  ), 
+   fi,,
+else 
+/*-------------------с учетом полугодия
+   if val(g152)>0 
+   then 
+/*-------- для тадлицы LicenDisc
+      &uf('+7W41#'),
+      &uf('+7W41#',,,,
+           f(rsum((if p(v691) 
+                   then 
+                      if  ( &uf('AG991^X#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG991^X#1'))) then 
+                      if  ( &uf('AG991^A#1')='' or s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!') ) then 
+                      if  ( &uf('AG991^O#1')='' or s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') ) then 
+                      if  ( &uf('AG991^V#1')='' or s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!') ) then 
+                      if  ( &uf('AG991^B#1')='' or s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!') ) then 
+                      if  ( &uf('AG991^C#1')='' or s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!') ) then 
+                      if  ( &uf('AG991^N#1')='' or s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!') ) then 
+                      if  ( &uf('AG991^S#1')='' or s('!',&uf('Ag991^S#1'),'!'): s('!',v691^S,'!') ) then 
+                      if  ( &uf('AG991^F#1')='' or s('!',&uf('Ag991^F#1'),'!'): s('!',v691^F,'!') )
+                      then 
+/* проверка текущего семестра
+                         if &uf('Ag40#1')='O' and s(',0,1,3,5,7,9,11,13,'): s(|,|v691^F|,|) or 
+                            &uf('Ag40#1')='V' and s(',2,4,6,8,10,12,14,'):  s(|,|v691^F|,|) or
+                            v691^F=''  or 
+                            val(&uf('AG46#1'))=0 
+                         then  
+                           if  (    &uf('AG991^g#1')=''  or 
+                                    &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g:'осн' or  
+                                    &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g='' or  
+                                    &uf('AG991^g#1')<>'' and &uf('AG991^g#1'): v691^g   
+                               ) 
+                           then '1;'else'0;' 
+                           fi 
+                         fi 
+                      fi fi fi fi fi fi fi fi fi  
+                   fi)),0,0)),
+      if val(g41)>0  
+      then 
+         if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' and val(G43)=2 OR 
+            s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') )<>'21' and val(G43)=1
+         then &uf('+7W41#1') 
+         else &uf('+7W41#') 
+         fi,,,
+      fi,,,
+   else &uf('+7W41#1') 
+   fi,,,,,,,,,,
+   if val(g41)>0 
+   then 
+/*--------------------кладу-------------------G4 текущее ККО из поля 693 с учетом среднего, аналогов, выд.ф
+&unifor('+7W4#',,,
+              if a(G991^T) 
+              then 
+                (if p(v693) 
+                 then 
+                     if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+                     then 
+                        if v693^S<>''  then v693^S break else if v693^P<>'' then v693^P break else 
+                        if v693^N<>''  then v693^N,,break else 
+                        if v693^F<>'' then v693^F,,break fi fi fi fi,,   
+                     fi,,
+                 fi/) 
+              else 
+/* для заданного выделенного фонда 
+                (if p(v693) 
+                 then 
+                   if v693^L='' and v693^A=&uf('AG991^T#1') 
+                   then 
+                        if v693^S<>''  then v693^S break else if v693^P<>'' then v693^P break else if v693^F<>'' 
+                        then v693^F,,break fi fi fi,,   
+                   fi,,
+                 fi/) 
+              fi,,, 
+),,,,,,,,,,,,,,,,,,,,,,,,, 
+/*--------------------кладу---в---G7 студентов из 693 для формы KoPlanNew
+&unifor('+7W7#',,,
+              if a(G991^T) 
+              then 
+                (if p(v693) 
+                 then 
+                     if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+                     then  v693^E  fi,,
+                 fi/) 
+              else 
+/* для заданного выделенного фонда 
+                (if p(v693) 
+                 then 
+                   if v693^L='' and v693^A=&uf('AG991^T#1') 
+                   then v693^E  fi,,
+                 fi/) 
+              fi,,, 
+),,,,,,,,,,,,,,,,,,,,,,,,, 
+       if g991^E<>'' and g991^E: 'O' or 
+          &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+          &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) >8 
+       then 
+/*--------------------текущий осенний семестр либо по календарю, либо задан в 991^E для формы Check
+/*--------------------в G5 студенты осенние-------------------------------
+          if val(&unifor('IMAIN,ACCESSRDR,1'))=1 
+          then 
+              &unifor('+7W55#',,,,,
+              (if p(v691) 
+               then 
+                   if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  ) 
+                   then 
+                       if p(v691^0) then  if p(v691^L) then else 
+                              &unifor('7RDR,!?',,,,,,,,,v691^0,,,,,,,,,,,'!,mfn/')/ 
+                              &unifor('7RDR,!',&unifor('G2*',,,v691^0,,,,,),'!,mfn/')/                              
+                       fi fi fi fi/)   ),
+             &uf('+7G55'),
+             &uf('+7W5#',,,,f(rsum((if p(g55) then '1;'fi/)) ,0,0)   ) 
+          else 
+/*-------------------без БД студентов-------------------------------
+             &uf('+7W5#',,,
+             f(rsum(
+             (if p(v691) 
+              then 
+                  if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  )  
+                  then 
+                     if p(v691^0) then if p(v691^L) then else &unifor('DVUZ,"!',v691^0,'",v68^Z')';' 
+                  fi fi fi fi)),0,0)  ), 
+          fi, 
+       else  
+         if g991^E<>'' and g991^E: 'V' or 
+            &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+            &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34')) < 9 
+         then  
+/*-------------------------текущий весенний семестр, либо задан в 991^E для формы Check
+/*--------------------в G5 студенты весенние-------------------------------
+            if val(&unifor('IMAIN,ACCESSRDR,1'))=1  
+            then 
+                &unifor('+7W55#',,,,,
+                (if p(v691) 
+                 then 
+                     if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  )  
+                     then 
+                        if p(v691^9) then  if p(v691^L) then else 
+                            &unifor('7RDR,!?',v691^9,'!,mfn/')/ 
+                            &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/')/ 
+                        fi fi fi fi/)   ),
+               &uf('+7G55'),
+               &uf('+7W5#',,,,f(rsum((if p(g55) then '1;'fi/)),0,0)   ) 
+            else 
+/*-------------------без БД студентов-------------------------------
+               &uf('+7W5#',,,
+               f(rsum(
+                (if p(v691) 
+                 then 
+                     if &uf('Ag991^T#1')='' or v691: s('^',,&uf('KNaznCatDelim.mnu|',&uf('Ag991^T#1')),,&uf('Ag991^T#1')  )  
+                     then 
+                        if p(v691^9) then if p(v691^L) then else &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                 fi fi fi fi)),0,0)  ), 
+            fi,
+         fi,,   
+       fi,
+   fi,,,
+fi,,,,
+/*---------------------G46 кол-во экземпляров
+/*--------------------G4 ККО из поля 693
+/*---------------------G5 студенты 
+if g991^=='0' 
+then 
+/* без учета семестра
+     if G46<>'' 
+     then 
+         if val(G5)>0 then f( val(G46)/val(G5),0,2) else '0' fi,,,,
+     else '0' 
+     fi ,,
+else 
+   G4,,,,,,,,
+   if G4='' then if G5<>'' then f( val(G46)/val(G5),0,2) else  '0' fi fi,,     
+fi,,,,,
+if val(g152)>0 then ',,' fi

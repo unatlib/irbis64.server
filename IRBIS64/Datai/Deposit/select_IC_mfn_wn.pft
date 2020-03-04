@@ -1,0 +1,41 @@
+/*v1000 - имя БД
+/*v1004^A повторения элементов списка, в данном случае MFN
+/* v1100 - формат показа
+'<script language="JavaScript">',
+'	function DropDownParams(it)',
+'	{',
+'		el1 = document.getElementById(it);',
+'		if(el1.style.display=="none")',
+'		{',
+'			el1.style.display="block";',
+'		}',
+'		else',
+'		{',
+'			el1.style.display="none";',
+'		}',
+'	}',
+' </script>',
+
+'<title>Отмеченные документы (БД ',v1000,')</title>'
+'<body bgcolor="#ffffcc">'
+'<table width="100%" bgcolor="#ffffcc">',
+'<tr>',
+'<td>',
+'<b>',
+"База данных: "v1000"<br>",
+if p(v1004) then 'Отмеченные документы' else 'Нет отмеченных документов' fi,
+'</b>',
+'</tr>',
+'</td>',
+'<tr>',
+'<td>',
+'<hr>'
+'</tr>',
+'</td>',
+'</table>',
+&uf('+7W1105#',v1105),
+'<table width="100%" bgcolor="#ffffcc">',
+(if p(v1004) then &uf('D',&uf('Av1000#1'),',@',v1004^A,',@',&uf('Av1100#1')) fi),
+'</table>',
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=search_IC_wn&S21CNR=',v1103,'&I21DBN=',v1000,'&FREEPAR0=',v1100,'&FREEPAR5=',v1105,'">Вернуться к основной поисковой форме</A>',
+

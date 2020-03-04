@@ -1,0 +1,10 @@
+'<BR><b>Кол-во книговыдач: </b>',if (v999='') or (val(v999)=0) then '0' else f(val(v999),1,0) fi,
+if val(v955^N)>0 then 
+     '<BR><b>Рейтинг издания: </b>',&uf('+7W7#',f(RSUM(&uf('7LICH,!TXT=',&uf('+D'),"/"v955^a,'!,if p(v7) then "1 "d7 fi')),0,0)),
+     if val(g7)>0 then 
+     f(RSUM(&uf('7LICH,!TXT=',&uf('+D'),"/"v955^a,'!,if p(v7) then v7" " fi'))/val(g7),3,2)," (всего оценок - "g7")",
+     else '(нет оценок)'
+     fi,
+     &uf('+7W7#',&uf('JLICH,COL=',&uf('+D'),"/"v955^a)),
+     '<BR><b>Кол-во обращений к полному тексту: </b>',if g7='' then '0' else g7 fi,
+fi,

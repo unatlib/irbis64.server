@@ -1,0 +1,57 @@
+mhl, 
+(if p(v488)then 
+    if p(v488^8) then 
+    else '\par \b '
+       if p(v488^t) then 
+          if val(&uf('J'v488^#',I='v488^T))>0 then 
+             &unifor('+I?2,,'v488^#',,I='v488^T'?'v488^1,if v488^#=&uf('+D') then else | (в БД |v488^#|) |fi ),
+             if s(v488^z,v488^c)='' then &uf('D'v488^#',?I='v488^T,'?,@brief') fi
+          fi 
+       else v488^1,
+       fi,'\b0 ' 
+       if p(v488^9) then 
+          if v488^9='1' then v488^x 
+          else &unifor('E'v488^9,v488^x), 
+             if p(v488^?)then |, |v488^? else 
+                if &unifor('F'v488^9,v488^x)<>'' then ', '&unifor('F'v488^9,v488^x) fi fi,'.' 
+          fi 
+       else 
+          if v488^x:',' then v488^x|.| else 
+             if v488^x:' ' then &unifor('G0 'v488^x),|, |v488^?|.| 
+                if a(v488^?) then 
+                   if v488^x:'.' then ', ' 
+                      if v488^x:'. ' 
+                      then &unifor('G2 'v488^x) else &unifor('G0.'&unifor('G2 'v488^x)),'. ' &unifor('G2.'v488^x) 
+                      fi 
+                   else ', '&unifor('G2 'v488^x)'.' 
+                fi fi 
+             else v488^x,|, |v488^?,|.|d488^x, 
+       fi fi fi,| |d488^x,v488^z,|. |v488^v,
+       if p(v488^v) then | : |v488^c else v488^c fi,| : |v488^e, 
+       if s(&unifor('Av488^r#1'),&unifor('Av488^s#1'))<>''then', 'fi,v488^r, 
+       if p(v488^s) then if p(v488^r) then' : 'fi,v488^s fi, 
+       if s(v488^k,v488^l)<>''then', 'fi,v488^k, 
+       if p(v488^l) then if p(v488^k) then' : 'fi,v488^l fi, 
+       if p(v488^f) or p(v488^x) and &unifor('Av905^1#1')='' then' / ',o488f, fi, 
+       |. -|v488^n,|. - |v488^d, 
+       if p(v488^j) then | // |v488^j else 
+          if s(v488^d,v488^g)=''then 
+             if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>'' or &unifor('Av101#1')='' then
+             '. - [Б. м. : б. и.]'else'. - [S. l. : s. n.]'fi 
+          else 
+             if a(v488^d) then 
+                if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>'' or &unifor('Av101#1')=''then'. - [Б. м.]'else'. - [S. l.]'fi 
+             fi,| : |v488^g, 
+          fi,|, |v488^h, 
+       fi,|. - |v488^4, 
+       if p(v488^4)then if v488^4:'с' or v488^4:'c' or v488^4:'p' or v488^4:'s' then else &unifor('Korg.mnu|4')'.'fi fi, 
+       if a(v488^4) and p(v488^$) then |. - |v488^$ fi,
+       | : |v488^0*2,|. - (|v488^q,| ; |v488^m,|)|d488^q,|. - |v488^p,|. - ISBN |v488^i, 
+       if s(v905^f,&unifor('IPRIVATE,FPK,'))='1'then else". Кл.слова: "d488^5, 
+          if s(v905^f,&unifor('IPRIVATE,FPK,'))='2'then mpu,v488^5,|, |v488^6,|, |v488^7,mhl else 
+             if s(v905^f,&unifor('IPRIVATE,FPK,'))='3'then &unifor('Q'v488^5, 
+                |, |v488^6,|, |v488^7) else v488^5,|, |v488^6,|, |v488^7 
+       fi fi fi, 
+       |. Другие авторы: |v488^w    
+fi fi), 
+mpl,

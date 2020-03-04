@@ -1,0 +1,20 @@
+mhl,if v920:'NJ'then (if p(v922)then v922^c,if v922^c=''then # fi fi/) 
+    else 
+       if 'ASP AUNTD':V920 then v200^a else 
+          if p(v330) then (if p(v330)then v330^C,"  "n330^c fi/) else 
+             if p(v327) then 
+                (if p(v327) then 
+                    if v327^L*2.1:'.' then '   ' fi,
+                    if v327^L*5.1:'.' then '   ''   'fi,
+                    if v327^L*8.1:'.' then '   ''   ''   'fi,
+                    if v327^L*11.1:'.'then '   ''   ''   ''   'fi,
+                    if v327^L*14.1:'.'then '   ''   ''   ''   ''   'fi,
+                    if v327^L*17.1:'.'then '   ''   ''   ''   ''   ''   'fi,
+                    if v327^L*20.1:'.'then '   ''   ''   ''   ''   ''   ''   'fi,
+                    v327^L,|_|v327^m 
+                 fi/) 
+             else 
+                if p(v392) then (if p(v392)then v392^C,"  "n392^c fi/) else
+                   if val(&uf('J,II='v903))>0 then &uf('7,!II='v903'!,v200^a/')
+                   else # 
+    fi fi fi fi fi fi,

@@ -1,0 +1,84 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+v1^7
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10030 
+\pard \ql\widctlpar\intbl {\qc \fs20 'v1^5,'\b \par Председатель комиссии:   _________________      __________________   __________________ \b0 ','\par\fs12\b                                           (должность)                            (подпись)                      (расшифровка подписи) \b0 \par','\par \b \qj\fs20  Члены комиссии:          _________________      __________________   __________________ \b0 ','\par\fs12\b                                                          (должность)                                (подпись)                          (расшифровка подписи) \b0 \par', '\par \b \qj\fs20                              _________________      __________________   __________________ \b0 ','\par\fs12\b                                                          (должность)                                (подпись)                          (расшифровка подписи) \b0 \par','\par \b \qj\fs20                              _________________      __________________   __________________ \b0 ','\par\fs12\b                                                          (должность)                                (подпись)                          (расшифровка подписи) \b0 \par'
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}{\stylesheet{\widctlpar \f0\fs20\lang1049 \snext0 Normal;}{\s1\sb240\sa60\keepn\widctlpar \b\f0\fs28\lang1049\kerning28 \sbasedon0\snext0 heading 1;}{\s2\sb240\sa60\keepn\widctlpar \b\i\f0\lang1049 \sbasedon0\snext0 heading 2;}{\*\cs10 \additiveDefault Paragraph Font;}}\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+\pard \qc\widctlpar {
+\fs20 
+\par }
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx958 
+\pard \widctlpar\intbl {\qc \fs20 \b № п/п
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2092 
+\pard \widctlpar\intbl {\qc \fs20 \b Инвентарный номер
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4076 
+\pard \widctlpar\intbl {\qc \fs20 \b Наименование документа и его основные хар-ки
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5210 
+\pard \widctlpar\intbl {\qc \fs20 \b Наименование единицы измерения
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6060 
+\pard \widctlpar\intbl {\qc \fs20 \b Количество
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7477 
+\pard \widctlpar\intbl {\qc \fs20 \b Цена, руб.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8894 
+\pard \widctlpar\intbl {\qc \fs20 \b Коэффициент переоценки
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10028 
+\pard \widctlpar\intbl {\qc \fs20 \b Сумма, руб.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

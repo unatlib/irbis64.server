@@ -1,0 +1,16 @@
+&uf('+7W7#'),&uf('+7W8#'),
+&uf('+7W1#'(if p(v910)then if &unifor('Av991^a#1')<>''and &uf('G0-'&uf('G2-'&unifor('Av991^a#1')))=v910^y and v910^u*2.2=&uf('G0-'&uf('Av991^a#1'))or &uf('Av991^a#1')=''and &uf('Av991^b#1')<>'' and &uf('Av991^b#1')=v910^u then |^A|v910^u,|^Y|v910^y,|^D|v910^f BREAK fi fi)),
+&uf('+7W8#'&uf('7,!NKSU='g1^a'!,"^a"d920,f(rsum((if p(v910)then if &unifor(|Ag1^y#1|d910)=v910^y and &uf(|Ag1^a#1|d910)=v910^u then f(val(v910^e,if a(v910^e)then &uf(|Av10^d#1|d910)fi,| 0|d910)*val(v910^1,|1|n910^1),0,2) |;|d910fi fi)),0,2),"^b"d920,f(rsum((if p(v910)then if &unifor(|Ag1^y#1|d910)=v910^y and &uf(|Ag1^a#1|d910)=v910^u then v910^1|;|,|1;|n910^1fi fi)),0,0),"^c"d920,f(rmin((if p(v910)then if &unifor(|Ag1^y#1|d910)=v910^y and &uf(|Ag1^a#1|d910)=v910^u then v910^c|;|fi fi)),0,0)/')),
+
+,'\pard \li108 \ri108 ','\par \qr \fs20 Дата ',f(rmin(g8^c|;|),0,0),
+
+'\pard \li6000 \ri100 ','\par Источник: ','\pard \li6000 \ri100 ','\par ',g1^d,
+,
+'\par ','\pard \li108 \ri108 ','\par \qc \fs25 ',' АКТ N ',g1^y,
+      
+'\par ','\par  \ql \fs20 Номер записи в КСУ поступлений: ',g1^a,
+'\par  Поступило всего 'f(rsum(g8^b|;|),0,0),
+' экз.\par  На общую сумму ',f(rsum(g8^a|;|),0,2)
+
+&unifor('Korg.mnu|3')
+'\par \par \par '

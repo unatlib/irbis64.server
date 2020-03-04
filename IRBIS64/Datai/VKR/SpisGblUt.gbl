@@ -1,0 +1,374 @@
+0
+// Списание утерянных
+// На входе записи номеров журналов, для которых отмечены поля 910
+// v991^A - номер КСУ списания 
+// 992^B – штрих-код
+// v992^D - место хранения 
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTFLD
+'На корректировку запись ',f(val(mfn),0,0)
+ADD
+1992
+
+(v992/),,
+
+REPEAT
+
+
+
+ADD
+9992
+
+&uf('Av1992#1'),&uf('S0')
+
+IF
+if rsum((if p(v910)then if 'U C':v910^a then'1;'else'0;'fi fi/))>0 then '1'fi,
+
+
+
+ADD
+1910
+
+&uf('+7W1910#'),&uf('+7W7#'),(if p(v910) then if v910^a='4'then if &uf('Av9992^B#1')<>''and (&uf('Av9992^b#1')=v910^h or &uf('Av9992^b#1')=v910^b)or &uf('Av9992^B#1')='' then if &uf('Av9992^d#1')<>''and &uf('Av9992^d#1')=&uf('+97'v910^d) or &uf('Av9992^d#1')=''then v910,&uf(|+7U1910#|v910),fi fi fi fi/),
+
+//В g1910(повторяющееся) все утерянные для списания; 
+REPEAT
+
+
+
+
+REP
+910^X
+F
+(if p(v910)then if p(v910^x) then if 'U C':v910^a and (v910^b<>''and v910^b=&uf('Av1910^b#1')or v910^h<>''and v910^h=&uf('Av1910^h#1')or s(v910^b,v910^h,&uf('Av1910^b#1'),&uf('Av1910^h#1'))='') and &uf('+97'v910^d)=&uf('Av1910^d#1')and v910^v=''and v910^2<>'' then f(val(v910^x,' 0')+1,0,0),&uf('+7W7#1'),BREAK, else v910^x fi else # fi fi/)
+
+ADD
+910^X
+F
+(if p(v910)then if (v910^b<>''and v910^b=&uf('Av1910^b#1')or v910^h<>''and v910^h=&uf('Av1910^h#1')or s(v910^b,v910^h,&uf('Av1910^b#1'),&uf('Av1910^h#1'))='') and &uf('+97'v910^d)=&uf('Av1910^d#1')and v910^v='' then if 'U C':v910^a and v910^2<>'' then if a(v910^x)then '1',&uf('+7W7#1'),BREAK, else # fi else # fi else # fi fi/),
+
+DEL
+910^2
+F
+(if p(v910)then if (v910^b<>''and v910^b=&uf('Av1910^b#1')or v910^h<>''and v910^h=&uf('Av1910^h#1')or s(v910^b,v910^h,&uf('Av1910^b#1'),&uf('Av1910^h#1'))='') and &uf('+97'v910^d)=&uf('Av1910^d#1')and v910^v='' then if 'U C':v910^a and v910^2='0' then '1' else '0' fi else '0' fi fi/),
+
+DEL
+910
+F
+(if p(v910)then if v910=&uf('Av1910#1')and val(&uf('Ag7#1'))=1 then '1'else'0'fi fi,/),&uf('+7W7#'),
+
+DEL
+1910
+1
+
+
+UNTIL
+if v1910<>''then'1'else'0'fi
+
+
+
+ADD
+910^V
+F
+(if p(v910)then if v910^v=''and 'C U':v910^a and v910^x<>'' then &uf('Av991^A#1') else # fi fi/)
+
+FI
+
+
+
+
+REP
+910^A
+F
+&uf('+7W910#'),(if p(v910) then if v910^a='4'then if &uf('Av9992^d#1')<>''then if &uf('Av9992^d#1')=&uf('+97'v910^d) then '6'else v910^a fi else '6'fi else v910^a fi fi/)
+
+ADD
+910^V
+F
+(if p(v910)then if v910^a='6'and v910^v=''and (v910^b<>''and v910^b=&uf('Av9992^b#1')or v910^h<>''and v910^h=&uf('Av9992^h#1')or s(&uf('Av9992^b#1'),&uf('Av9992^h#1'))='') and v910^d=&uf('Av9992^d#1')then &uf('Av991^A#1'),&uf('+7U910#'v910) else # fi fi/),&uf('+7W3910#'(g910^b| |g910^d|,|))
+
+//В g3910(строка мест хранения) все утерянные 
+
+ADD
+940
+
+&uf('+7W940#'),&uf('+7W940#'(v940|; |)),(if p(v910)then if v910^v=&uf('Av991^A#1')then if &uf('Ag940#1'):v910 then else v910 fi fi fi/)
+
+DEL
+910
+F
+(if p(v910)then if 'C U':v910^a then if v910^v=&uf('Av991^A#1') and v910^1=v910^x and a(v910^w)then'1'else'0'fi else'0' fi fi/)
+
+DEL
+910^X
+F
+(if p(v910) then if p(v910^x)then if v910^v=&uf('Av991^A#1')then '1'else '0'fi else # fi fi/)
+
+DEL
+910^V
+F
+(if p(v910) then if p(v910^V)and 'C U':v910^a then if v910^v=&uf('Av991^A#1')then '1'else '0'fi else # fi fi/)
+
+ADD
+5555
+XXXXXXXXXXXXXXXXXXX
+if p(v910)then f(rsum((if p(v910)then if v910^a='6'or 'U C':v910^a and val(v910^1)=0 then '0;' else '1;'fi fi/)),0,0)else if p(v940)then '0'else'1'fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if val(v5555)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+5555
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if l("II="v903)>0 then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+'*'
+(v910/)
+"II="v903
+
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v1001:'^A7'then'^A7'fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// начало списания номера из 909 полей
+
+IF
+if v920:'NJ'then'1'else'0'fi
+
+CORREC
+'*'
+"^Q"v934,"^F"v935,"^H"v936,"^D"v9992^d,if v910^a:'7'then '^!7'fi,"^A"v991^a,"^G"g3910
+"I="v933
+
+ADD
+9909
+
+if v1001^d<>''then (if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then  if v909^d<>''then if v909^d=&uf('Av1001^d#1')then v909 fi else if &uf('Av1001^!#1')='7'then v909fi fi fi else if &uf('Av1001^f#1')<>''then else if v909^d<>''then if v909^d=&uf('Av1001^d#1')then v909 fi else if &uf('Av1001^!#1')='7'then v909fi fi fi fi fi fi/)else (if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|) then v909 fi else if &uf('Av1001^!#1')='7'then v909fi fi fi else if &uf('Av1001^f#1')<>''then else if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|) then v909 fi else if &uf('Av1001^!#1')='7'then v909fi fi fi fi fi fi/)fi
+
+ADD
+1909
+
+if a(v1909)then if v1001^d<>''then (if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then  if v909^d<>''then if v909^d=&uf('Av1001^d#1')then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1') fi else if &uf('Av1001^!#1')='7'then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1')fi fi fi else if &uf('Av1001^f#1')<>''then else if v909^d<>''then if v909^d=&uf('Av1001^d#1')then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1') fi else if &uf('Av1001^!#1')='7'then v909,'^V'&uf('Av1001^a#1'),','&uf('Av1001^h#1')fi fi fi fi fi fi/)else (if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|) then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1') fi else if &uf('Av1001^!#1')='7'then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1')fi fi fi else if &uf('Av1001^f#1')<>''then else if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|) then v909,'^V'&uf('Av1001^a#1')','&uf('Av1001^h#1') fi else if &uf('Av1001^!#1')='7'then v909,'^V'&uf('Av1001^a#1'),','&uf('Av1001^h#1')fi fi fi fi fi fi/)fi fi
+
+DEL
+909
+F
+if v1001^d<>''then(if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then  if v909^d<>''then if v909^d=&uf('Av1001^d#1')then '1'else '0' fi else if &uf('Av1001^!#1')='7'then '1'else'0'fi fi else'0' fi else if &uf('Av1001^f#1')<>''then '0' else if v909^d<>''then if v909^d=&uf('Av1001^d#1')then '1'else'0' fi else if &uf('Av1001^!#1')='7'then '1'else'0'fi fi fi fi else '0' fi fi/)else (if p(v909)then if v909^q=&uf('Av1001^q#1')then if v909^f<>''then if v909^f=&uf('Av1001^f#1')then  if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|)then '1'else '0' fi else if &uf('Av1001^!#1')='7'then '1'else'0'fi fi else'0' fi else if &uf('Av1001^f#1')<>''then '0' else if v909^d<>''then if s(','&uf('Av1001^g#1')','):s(|,|v909^k| |v909^d|,|)then '1'else'0' fi else if &uf('Av1001^!#1')='7'then '1'else'0'fi fi fi fi else '0' fi fi/)fi
+
+REP
+9909^H
+F
+(if p(v9909)then ',',&uf(|V|v9909^h)','fi/)
+
+CHA
+9909^H
+*
+","v1001^h","
+','
+
+REP
+9909^H
+F
+(if p(v9909)then &uf(|U|v9909^h)fi/)
+
+DEL
+9909
+F
+(if p(v9909)then if v9909^h=''or v9909^h=','then'1'else'0'fi fi/)
+
+ADD
+909
+
+(v9909/)
+
+DEL
+9909
+
+
+
+DEL
+1001
+*
+
+
+END
+
+
+
+//Конец списания 909
+//Если экземпляр входит в подшивку
+IF
+if s((if p(v940)then if v940^h=&uf('Av9992^h#1') then v940^p fi fi))<>''then '1'else'0'fi
+
+
+
+CORREC
+'*'
+"^Q"v934,"^F"v935,"^H"v936,"^D"v9992^d,if v910^a:'7'then '^!7'fi,"W"v933
+(if p(v940)then if v940^h=&uf('Av9992^h#1') then |I=|v940^p fi fi)
+
+ 
+
+IF
+if v933=v1001^w and v934=v1001^q then'1'else'0'fi
+
+
+
+ADD
+9931
+
+if p(v931^c)then ',',&uf(|V|v931^c),','fi
+
+CHA
+9931
+1
+","v1001^h","
+','
+
+REP
+931^c
+1
+&uf("U"v9931)
+
+DEL
+9931
+
+
+
+FI
+
+
+
+
+IF
+if v933=v1001^w and v934=v1001^q then'0'else'1'fi
+
+
+
+ADD
+9481
+
+if v933=v1001^w then (if p(v481)then if (v481^w=''or v481^W=&uf('Av933#1'))and v481^q=&uf('Av1001^q#1')then v481^h fi fi)else (if p(v481)then if v481^w=&uf('Av1001^W#1')and v481^q=&uf('Av1001^q#1')then v481^h fi fi)
+
+CHA
+9481
+1
+","v1001^h","
+','
+
+REP
+9481
+1
+&uf("U"v9481)
+
+REP
+481^H
+F
+if v933=v1001^w then (if p(v481)then if (v481^w=''or v481^W=&uf('Av933#1'))and v481^q=&uf('Av1001^q#1')then &uf('Av9481#1') else v481^hfi fi)else (if p(v481)then if v481^w=&uf('Av1001^W#1')and v481^q=&uf('Av1001^q#1')then &uf('Av9481#1') else v481^h fi fi)
+
+
+DEL
+9481
+
+
+
+DEL
+481
+F
+(if p(v481)then if v481^h=''then'1'else'0'fi/)
+
+ADD
+910
+
+if v481=''and v931^c=''then '^A7'fi
+
+FI
+
+
+
+
+DEL
+1001
+*
+
+
+END
+
+
+
+
+FI
+
+
+
+
+FI
+
+
+
+
+//конец корректировки подшивки
+
+DEL
+1992
+1
+
+
+DEL
+9992
+1
+
+
+UNTIL
+if p(v1992)then'1'else'0'fi
+
+
+
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+GETFLD
+4000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

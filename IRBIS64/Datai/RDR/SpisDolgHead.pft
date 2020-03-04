@@ -1,0 +1,80 @@
+'{',,
+(if p(v1) 
+ then 
+   if v1^C='' and v1^a<>'' 
+   then 
+/*---заголовок
+/*------- сначала итоги из 
+     if val(g201)>0 or val(g202)>0 
+     then 
+        '\trowd\trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat15 
+\cellx12015 \pard \widctlpar\intbl {\ql \fs24 ',,'\b ',,
+        '»“ќ√ќ по категории: читателей - ',g201,,'; книг - ',,g202,
+        '\cell }',,
+        '\pard \widctlpar\intbl {\row }\pard \widctlpar ',,
+     fi,,,,,,,,,,,
+/*----g200 - глобальный счетчик читателей
+/*----g201 - счетчик читателей в пределах категории
+/*----g203 - глобальный счетчик экземпл€ров
+/*----g202 - глобальный счетчик экземпл€ров в пределах категории
+     &uf('+7W100#'),,&uf('+7W101#'),,&uf('+7W102#'),,&uf('+7W201#'),,&uf('+7W202#'),,
+     '\trowd\trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\clcbpat16 \brdrs\brdrw15\cellx12015 \pard \widctlpar\intbl {\qc \fs24 ',,'\b ',,
+      if v1^A.3='€€€' then v1^a*3 else v1^A fi,,,&uf('+7W105#'),'\b0 ',,
+      '\cell }',,
+   else 
+     '\trowd\trqc\trgaph108\trleft-108 ',,
+      if g105=s(v1^C,v1^E) 
+      then   
+/*--- дл€ вывод один раз
+        '\clbrdrt\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4077 ',,,
+        '\pard \widctlpar\intbl {\ql \fs20 ',,
+        '\cell }',,,
+      else 
+         '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx600 \pard \widctlpar\intbl {\ql \fs20 ',,
+/*-----номер
+         &uf('+7W100#',f(val(G100)+1,0,0)),,,g100,,&uf('+7W101#'),,
+/*----глобальный счетчик читателей
+         &uf('+7W200#',f(val(G200)+1,0,0)),,,
+/*----счетчик читателей в пределах категории
+         &uf('+7W201#',f(val(G201)+1,0,0)),,,
+         '\cell }',,,
+/*-----‘»ќ
+         '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2943 \pard \widctlpar\intbl {\ql \fs20 ',,
+          v1^C,,,,,,,,
+          '\cell }',,,
+/*-----идентификато
+          '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4077 \pard \widctlpar\intbl {\ql \fs20 ',,
+          v1^E,,,,,,,,
+          '\cell }',,,
+      fi,,
+/*------бриф
+      '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8613 \pard \widctlpar\intbl {\ql \fs20 ',,
+      if p(v1^i) then '\b ',,&uf('+7W101#',f(val(G101)+1,0,0)),,g101,,,'. \b0 ',,
+      &uf('D'v1^g',?I='v1^i'?,@brief') fi,,,,,,,,,
+      '\cell }',,,
+/*----инв.номер
+      '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9747 \pard \widctlpar\intbl {\ql \fs20 ',,
+      v1^F,,,,,,,,
+      '\cell }',,,
+/*-----Ў 
+      '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx10881 \pard \widctlpar\intbl {\ql \fs20 ',,
+      v1^H,,,,,,,,
+      '\cell }',,,
+/*----
+      if g105=s(v1^C,v1^E) 
+      then
+        '\clbrdrt\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx12015 ',,,
+        '\pard \widctlpar\intbl {\ql \fs20 ',,
+        '\cell }',,,
+      else   
+         '\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx12015 \pard \widctlpar\intbl {\ql \fs20 ',,
+/*-------глобальный счетчик экземпл€ров g202,g203
+         if val(v1^S)>0 then &uf('+7W202#',,f(val(g202)+val(v1^S),0,0) ),,,&uf('+7W203#',,f(val(g203)+val(v1^S),0,0) ) fi,,,
+         v1^S,,,,,,,,
+         &uf('+7W105#',,v1^C,v1^E ),,
+         '\cell }',,,
+      fi,,
+  fi,,,,,,,,,,,,,,, 
+ '\pard \widctlpar\intbl {\row }\pard \widctlpar ',,
+fi/),
+'}',

@@ -1,0 +1,28 @@
+/*&uf('+7W14#'&uf('G0!'&uf('Av14#1'))),
+&uf('+7W2'),&uf('+7W3#'),
+&uf('+7W2#',(if &uf('1*L^?@',&uf('Ag14#1'))<>'' then &uf('1*L^?@',&uf('Ag14#1')) else break fi/)),
+&uf('S0'),
+if p(g2) then &uf('+7W3#'(if p(g2) then '^T'&uf('S1A'),'^'g2 fi/)) fi/
+/*(|g3: |g3/),
+/*&uf('+7w400#'),&uf('+7w500#'),
+   (if p(g3) then 
+       if &uf('J,B='g3^b)<>'' then 
+         '<table><tr>'
+           '<td valign=top>',&uf('Kdd.mnu\'g3^t),
+           if &uf('Ag500#1'):s('+'&uf('D,!B='g3^b'!,mfn')'+') then 'xx' '</td>' else 
+              '<input type="checkbox" name="CHECKINDEX"  value="',&uf('D,!B='g3^b'!,mfn'),'">','</td>',
+              &uf('+7U400#'&uf('D,!B='g3^b'!,mfn')),&uf('+7W500#'&uf('Ag500#1'),|+|g400|+|) 
+           fi,
+           '<td valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">',&uf('+7U200#'&uf('D,!B='g3^b'!,mfn'))
+           '</td>',
+           '<td>',
+           '<A HREF="IRBIS:2,,,derevo_ARCH_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=B=',
+           &uf('+3E'g3^b),'">'
+           &uf('D,!B=',g3^b,'!,@brief_derevo'),
+           '</A>','</td>'
+         '</tr></table>'
+        fi 
+    else break 
+    fi/),
+
+

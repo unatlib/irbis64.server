@@ -1,0 +1,3595 @@
+0
+// НАЧАЛО SPKN. ВЫБЫТИЕ КНИГ.
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800^D')<>'' then '0' else if &unifor('DCMPL,"KS2=',v991^a,'",v888^E')<>'' then '0' else if v920:'J'then '0' else '1' fi fi fi
+IF
+if val(&uf('J,T='&uf('G0!'v991^b*1)))>0 then '0'else'1'fi
+ADD
+5
+XXXXXXXXXXXXXXXXXXX
+(if p(v910)then if '1 9 2 6 C U':v910^a then else |^a|v910^a,|^d|v910^d,|^h!|v910^h|!|,|^b!|v910^b|!|,|^?!|d910^b,if f(val(v910^b),0,0)=v910^b then f(val(v910^b),10,0) else if val(v910^b)=0 then v910^b else if v910^b.1='0'or val(v910^b.1)>0 then if v910^b:'-'and &unifor('G1-'v910^b)<>''then f(val(&unifor('G0-'v910^b)),10,0),&unifor('G1-'v910^b) else if &unifor('G1$'v910^b)<>''then f(val(&unifor('G0$'v910^b)),10,0),&unifor('G1$'v910^b) fi fi else if &unifor('G1#'v910^b)<>''then &unifor('G0#'v910^b),f(val(&unifor('G1#'v910^b)),10,0),if f(val(&unifor('G1#'v910^b)),0,0)=&unifor('G1#'v910^b) then else if v910^b:'-'then &unifor('G1-',&unifor('G1#'v910^b)) fi fi fi fi fi fi,|!|d910^b,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910)then if '1 9 2 6 C U':v910^a then '0'else'1'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+5
+F
+(if p(v5)then if &unifor('Av991^b#1'):v5^h or &unifor('Av991^b#1'):v5^b or &unifor('Av991^b#1'):v5^? then '^a6','^V',&unifor('Av991^a#1'),|^d|v5^d,|^b|v5^b,|^h|v5^h,|^e|v5^e,|^u|v5^u,|^y|v5^y,|^c|v5^c,|^f|v5^f else v5 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(if p(v5)then |^a|v5^a,|^v|v5^v,|^d|v5^d,if p(v5^h)then'^h'&unifor('G0!'v5^h*1)fi,if p(v5^b)then'^b'&unifor('G0!'v5^b*1)fi,|^e|v5^e,|^u|v5^u,|^y|v5^y,|^c|v5^c,|^f|v5^f fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if val(&uf('J,T='&uf('G0!'v991^b*1)))>0 then '1'else'0'fi
+ADD
+4
+XXXXXXXXXXXXXXXXXXX
+&unifor('DCMPL,"KS2=',v991^a,'",v888^D')
+XXXXXXXXXXXXXXXXXXX
+ADD
+5
+XXXXXXXXXXXXXXXXXXX
+(if p(v910)then if '1 9 2 6 C U':v910^a then else if &uf('Av4#1')<>''then if v910^d=&uf('Av4#1')then v910 fi else v910 fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910)then if '1 9 2 6 C U':v910^a then '0'else if &uf('Av4#1')<>''then if v910^d=&uf('Av4#1')then '1'else'0' fi else '1' fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+5
+F
+(if p(v5)then '^a6','^V',&unifor('Av991^a#1'),|^d|v5^d,|^b|v5^b,|^h|v5^h,|^e|v5^e,|^u|v5^u,|^y|v5^y,|^c|v5^c,|^f|v5^f fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(v5/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+// КОНЕЦ. ВЫБЫТИЕ КНИГ.
+FI
+// НАЧАЛО SPPOD. ВЫБЫТИЕ ПОДШИВОК журналов/газет 
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800^D')<>'' then '0' else if &unifor('DCMPL,"KS2=',v991^a,'",v888^E')<>'' then '0' else if v920:'J'then '1' else '0' fi fi fi
+// Корректировка v991 - ввод ^d из записи КСУ
+IF
+if v991^d<>'' then '0' else '1' fi
+REP
+991
+F
+if &unifor('DCMPL,"KS2=',v991^a,'",v888^D')<>'' then v991,'^d',&unifor('DCMPL,"KS2=',v991^a,'",v888^D') else v991 fi
+
+FI
+// Данные v910^b в !
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |!|v910^b|!| fi/)
+// Данные v910^h в !
+CHA
+910^H
+*
+(if p(v910)then v910^h fi/)
+(if p(v910)then |!|v910^h|!| fi/)
+// Ввод статуса (6) в соответствующее отбору * v910
+REP
+910^A
+F
+(if p(v910)then if v910^a='2' then v910^A else if &unifor('Av991^d#1')<>'' then if &unifor('Av991^d#1')=v910^d then if &unifor('Av991^b#1'):v910^h or &unifor('Av991^b#1'):v910^b then '6' else v910^A fi else v910^A fi else if &unifor('Av991^b#1'):v910^h or &unifor('Av991^b#1'):v910^b then '6' else v910^A fi fi fi fi/)
+
+// Исключение ! из v910^b
+CHA
+910^B
+*
+'!'
+''
+// Исключение ! из v910^h
+CHA
+910^H
+*
+'!'
+''
+// Корректировка записей NJ, вошедших в подшивку
+CORREC
+if v920='NJK'then '*'fi
+v991,'^P',&unifor('Av903#1')
+"II="v903
+XXXXXXXXXXXXXXXXXXX
+CHA
+910^B
+*
+(if p(v910)then v910^i fi/)
+(if p(v910)then |!|v910^i|!| fi/)
+// Данные v910^i в !
+REP
+910^A
+F
+if v1001^D<>'' then (if p(v910) then if v910^d=&unifor(|Av1001^d#1|d910) then if v910^p=&unifor(|Av1001^p#1|d910) then if &unifor('Av1001^b#1'):v910^i then '6' else v910^A fi else v910^A fi else v910^A fi fi/) else (if p(v910) then if v910^p=&unifor(|Av1001^p#1|d910) then if &unifor('Av1001^b#1'):v910^i then '6' else v910^A fi else v910^A fi fi/) fi
+
+// Удаление 463^W, если списаны все экз.
+IF
+if rsum((if p(v910) then if v910^p=&unifor('Av1001^P#1') then if v910^A='p' then '1;' else'0;' fi else '0;' fi fi/))>0 then '0' else '1' fi
+// Удаление 463^W по условию
+DEL
+463^W
+F
+(if p(v463) then if v463^w=&unifor(|Av1001^p#1|d463) then '1' else'0' fi fi/)
+
+FI
+CHA
+910^i
+*
+'!'
+''
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// Определить,содержат ли ^D, ^K * v909, соответствующие NJK ?
+// Читаем v909 из записи J, соответствующей NJK
+ADD
+909
+
+REF(L("I="v933),(v909/))
+
+// Есть ли ^D и ^K в * v909, соответствующих NJK
+ADD
+1111
+
+if rsum((if p(v909) then if v909^Q=&unifor('Av934#1') then if v909^H=&unifor('Av936#1') then if p(v909^K) OR p(v909^D) then '1;' else '0;' fi else'0;'fi else '0;' fi fi/))>0 then '1' else '0' fi
+
+// НАЧАЛО 1. Корректировка 909-х полей записи J, в которых ЕСТЬ ^D и ^K
+// Исключение NN NJ, вошедших в подшивку, из * v909
+IF
+if v1111='1' then '1' else '0' fi
+ADD
+1934
+
+"^Q"v934,"^H"v931^c,"^F"v935
+
+ADD
+1934
+
+(if p(v481)then v481,if v481^W=''then '^W',&uf('Av933#1')fi fi/)
+
+REPEAT
+
+
+
+
+ADD
+2934
+
+&uf('Av1934#1')
+
+CORREC
+if v920='NJK'then '*'fi
+v991,"^G"v2934^q,"^T"v2934^f,"^N"v936,"^C"v2934^h
+"I="v2934^w
+
+// Заключение инвентарного номера подшивки в ! - |^K!|v909^K|!| 
+CHA
+909^K
+F
+(if p(v909)then if v909^H=&unifor('Av1001^N#1') then v909^k fi fi/)
+(if p(v909)then if v909^H=&unifor('Av1001^N#1') then |!|v909^k|!| fi fi/)
+// Ввод в архивное поле * v909 и N KS2, соответствующего регистрации подшивки
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then v909,'^W',&unifor('Av1001^A#1') fi fi fi else if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then v909,'^W',&unifor('Av1001^A#1') fi fi fi fi fi/)
+
+// Удаление * v909, соответствующего регистрации подшивки
+DEL
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then '1' else '0' fi else '0' fi else '0' fi else if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then '1' else '0' fi else '0' fi fi else '0' fi fi/)
+
+// Исключение ! из данных v909^K
+CHA
+909^K
+*
+'!'
+''
+// Исключение ! из данных v1909^K
+CHA
+1909^K
+*
+'!'
+''
+// Предварительное создание * v1909 дл NN NJ, вошедших в подшивку
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then v909 fi else v909 fi fi fi/)
+
+// Ввод в 111 v931^C
+ADD
+111
+
+v1001^c
+
+// Декумулировать
+REP
+111
+F
+&unifor("V"v111)
+
+// Каждый номер NJ в отдельное подполе ^A 
+REP
+111
+F
+'^A',v111
+
+CHA
+111
+1
+','
+'^A'
+REPEAT
+// Один N из интервала NN в v888
+ADD
+888
+
+if p(v111) then &unifor('G0^'v111*2) fi
+
+// Остаток в 111
+ADD
+777
+
+if p(v111) then &unifor('G1^'v111*2) fi
+
+DEL
+111
+*
+
+
+ADD
+111
+
+v777
+
+DEL
+777
+*
+
+
+// Читаем v910 из записи NJP - нужно определить N экз. одного номера NJ
+ADD
+1910
+
+ref(l("I="v903,'/',&unifor('Av1001^G#1'),if &unifor('Av1001^T#1')<>'' then '/',&unifor('Av1001^T#1') fi,"/"v888),(v910/))
+
+// Заключаем инв. N подшивки в !
+CHA
+1910^I
+*
+(if p(v1910) then v1910^I fi/)
+(if p(v1910) then |!|v1910^I|!| fi/)
+// Запоминаем в ^K - N экз., в ^N - номер журнала из подшивки
+ADD
+222
+
+if v1001^D<>'' then (if p(v1910) then if &unifor('Av1001^D#1')=v1910^d then if &unifor('Av1001^B#1'):v1910^i then |^K|v1910^b,'^N',&unifor('Av888#1') fi fi fi/) else (if p(v1910) then if &unifor('Av1001^B#1'):v1910^i then |^K|v1910^b,'^N',&unifor('Av888#1') fi fi/) fi
+
+DEL
+888
+*
+
+
+DEL
+1910
+*
+
+
+UNTIL
+if p(v111) then '1' else '0' fi
+// Цикл на число NN NJ в интервале v931^C
+REPEAT
+// Один номер NJ и соответствующий ему номер экз. из v222 в v1910
+ADD
+1910
+
+&unifor('Av222#1')
+
+// Удалить 1-ое * 222 (все NN NJ из 931^C) 
+DEL
+222
+1
+
+
+// В v555 записать v909^H
+ADD
+555
+
+if v1001^D<>'' then (if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if v909^D=&unifor('Av1001^D#1') then if v909^K=&unifor('Av1910^K#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi fi fi/) else (if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if v909^K=&unifor('Av1910^K#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi fi/) fi
+
+DEL
+909
+F
+if v1001^D<>'' then (if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if v909^D=&unifor('Av1001^D#1') then if v909^K=&unifor('Av1910^K#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then '1' fi else '1' fi else '0' fi else '0' fi else '0' fi fi/) else (if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if v909^K=&unifor('Av1910^K#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then '1' fi else '1' fi else '0' fi else '0' fi fi/) fi
+
+// Декумулировать
+REP
+555
+F
+&unifor("V"v555)
+
+// Каждый номер NJ в отдельное подполе ^A
+REP
+555
+F
+'^A',v555
+
+CHA
+555
+1
+','
+'^A'
+// Декумулировать !
+REP
+1910^N
+F
+&unifor("V"v1910^N)
+
+// Исключение одного номера NJ из интервала 931^C
+CHA
+555
+1
+"^A"v1910^N
+''
+// Замена ^A на ,
+CHA
+555
+1
+'^A'
+','
+// Кумулировать
+REP
+555
+1
+&unifor("U"v555",")
+
+// Новое * v909; в подполе ^H все NN NJ, кроме исключенного
+ADD
+909
+
+if v555<>'' then "^Q"v1001^G,"^D"v1001^D,"^F"v1001^T,"^K"v1910^K,"^H"v555 fi
+
+// Ввод в соответствующее * v1909 в ^W исключенного N NJ и N KS2 
+REP
+1909
+F
+if v1001^D<>'' then (if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then if v1909^D=&unifor('Av1001^D#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then if v1909^K=&unifor('Av1910^K#1') then v1909,if p(v1909^W)then `',',&unifor('Av1910^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910^N#1') fi else v1909 fi else v1909 fi else if v1909^K=&unifor('Av1910^K#1') then v1909,if p(v1909^W)then ',',&unifor('Av1910^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910^N#1') fi else v1909 fi fi else v1909 fi else v1909 fi fi/) else (if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then if v1909^K=&unifor('Av1910^K#1') then v1909,if p(v1909^W)then ',',&unifor('Av1910^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910^N#1') fi else v1909 fi else v1909 fi else if v1909^K=&unifor('Av1910^K#1') then v1909,if p(v1909^W)then ',',&unifor('Av1910^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910^N#1') fi else v1909 fi fi else v1909 fi fi/) fi
+
+DEL
+555
+*
+
+
+DEL
+1910
+*
+
+
+UNTIL
+if v222<>'' then '1' else '0' fi
+DEL
+222
+*
+
+
+DEL
+111
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2934
+*
+
+
+DEL
+1934
+1
+
+
+UNTIL
+if v1934<>''then'1'else'0'fi
+
+
+
+// КОНЕЦ 1. Корректировка 909-х полей записи J, в которых ЕСТЬ ^D и ^K 
+FI
+// Все ли экз. в записи NJK списаны ?
+ADD
+3333
+
+if rsum((if p(v910) then if '6 7':v910^a then '0;' else '1;' fi fi/))>0 then '0' else '1' fi
+
+/ НАЧАЛО 2. Корректировка 909-х полей записи J, в которых НЕТ ^D и ^K
+// Условие, что в 909-х нет ^K и ^D И в записи NJK все экз. списаны
+IF
+if v1111='0' then if v3333='1' then '1' else '0' fi else '0' fi
+// Корректировка * 909-х полей записи J (нет ^D и ^K)
+ADD
+1934
+
+"^Q"v934,"^H"v931^c,"^F"v935,"^W"v933
+
+ADD
+1934
+
+(if p(v481)then v481,if v481^W=''then '^W',&uf('Av933#1')fi fi/)
+
+REPEAT
+
+
+
+
+ADD
+2934
+
+&uf('Av1934#1')
+
+CORREC
+if v920='NJK'then '*'fi
+v991,"^G"v2934^q,"^T"v2934^f,"^N"v936,"^C"v2934^h,"^W"v2934^w
+"I="v2934^w
+
+// Заключение инвентарного номера подшивки в ! - |^K!|v909^K|!| 
+CHA
+909^K
+F
+(if p(v909)then if v909^H=&unifor('Av1001^N#1') then v909^k fi fi/)
+(if p(v909)then if v909^H=&unifor('Av1001^N#1') then |!|v909^k|!| fi fi/)
+// Ввод в архивное поле * v909 и N KS2, соответствующего регистрации подшивки
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then v909,'^W',&unifor('Av1001^A#1') fi fi fi else if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then v909,'^W',&unifor('Av1001^A#1') fi fi fi fi fi/)
+
+// Удаление * v909, соответствующего регистрации подшивки
+DEL
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then '1' else '0' fi else '0' fi else '0' fi else if v909^H=&unifor('Av1001^N#1') then if &unifor('Av1001^B#1'):v909^k then '1' else '0' fi else '0' fi fi else '0' fi fi/)
+
+// Исключение ! из данных v909^K
+CHA
+909^K
+*
+'!'
+''
+// Исключение ! из данных v1909^K
+CHA
+1909^K
+*
+'!'
+''
+// Исключение NN, вошедших в подшивку, из * v909
+// Предварительное создание v1909 дл NN NJ, вошедших в подшивку
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^f) then if v909^F=&unifor('Av1001^T#1') then v909 fi else v909 fi fi fi/)
+
+// В 111 - интервал NN из v931^C
+ADD
+111
+
+v1001^c
+
+// Декумулировать
+REP
+111
+F
+&unifor("V"v111)
+
+// Каждый N из интервала записать в подполе ^A
+REP
+111
+F
+'^A',v111
+
+CHA
+111
+1
+','
+'^A'
+REPEAT
+// Один N из интервала NN
+ADD
+888
+
+if p(v111) then &unifor('G0^'v111*2) fi
+
+// Остаток
+ADD
+777
+
+if p(v111) then &unifor('G1^'v111*2) fi
+
+DEL
+111
+*
+
+
+ADD
+111
+
+v777
+
+DEL
+777
+*
+
+
+// Определить все ли экз. одного номера NJP из подшивки списаны?
+// Чтение * v910 из записи NJ с номером v888
+ADD
+1910
+
+ref(l("I="v903,'/',&unifor('Av1001^G#1'),if &unifor('Av1001^T#1')<>'' then '/',&unifor('Av1001^T#1') fi,"/"v888),(v910/))
+
+// Заключаем инв. N подшивки в !
+CHA
+1910^I
+*
+(if p(v1910) then v1910^I fi/)
+(if p(v1910) then |!|v1910^I|!| fi/)
+// Формируем признак, что все экз. N журнала (v888) из подшивки списан
+ADD
+1
+
+if rsum((if p(v1910) then if &unifor('Av1001^B#1'):v1910^i then '0;' else if v1910^A='6' then '0;' else '1;' fi fi fi/))>0 then '0' else '1' fi
+
+ADD
+222
+
+if v1='1' then v888 fi
+
+DEL
+888
+*
+
+
+DEL
+1
+*
+
+
+DEL
+1910
+*
+
+
+UNTIL
+if p(v111) then '1' else '0' fi
+// Цикл на число NN, исключаемых из v909^H (все инв. NN подшивки списаны) 
+REPEAT
+// 1910 - Один номер из v931^C
+ADD
+1910
+
+&unifor('Av222#1')
+
+DEL
+222
+1
+
+
+// Все NN из 909^H
+ADD
+555
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi/)
+
+// Удаление 909-го, из которого сформировано поле 555 
+DEL
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then '1' else '0' fi else '1' fi else '0' fi fi/)
+
+// Декумулировать NN NJ из v909^H
+REP
+555
+F
+&unifor("V"v555)
+
+// Ввод каждого номера в подполе ^A
+REP
+555
+F
+'^A',v555
+
+CHA
+555
+1
+','
+'^A'
+// Декумулировать !
+REP
+1910
+F
+&unifor("V"v1910)
+
+// Исключение одного номера NJ из подшивки
+CHA
+555
+1
+"^A"v1910
+''
+// Замена ^A на , 
+CHA
+555
+1
+'^A'
+','
+// Кумулировать
+REP
+555
+1
+&unifor("U"v555",")
+
+// Формирование * v909, в котором в ^H нет номера NJ из подшивки 
+ADD
+909
+
+if v555<>'' then "^Q"v1001^G,"^F"v1001^T,"^H"v555 fi
+
+// Ввод в v1909 в ^W номера исключенного NJ и номера KS2 
+REP
+1909
+F
+(if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then if v1909^H=&unifor('Av1001^N#1') then v1909 else v1909,if p(v1909^W) then if v1909^W:&unifor('Av1001^A#1') then ',',&unifor('Av1910#1') else ',(',&unifor('Av1001^A#1'),'),',&unifor('Av1910#1') fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910#1') fi fi else v1909 fi else if v1909^H=&unifor('Av1001^N#1') then v1909 else v1909,if p(v1909^W) then if v1909^W:&unifor('Av1001^A#1') then ',',&unifor('Av1910#1') else ',(',&unifor('Av1001^A#1'),'),',&unifor('Av1910#1') fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1910#1') fi fi fi else v1909 fi fi/)
+
+DEL
+555
+*
+
+
+DEL
+1910
+*
+
+
+UNTIL
+if v222<>'' then '1' else '0' fi
+DEL
+222
+*
+
+
+DEL
+111
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2934
+*
+
+
+DEL
+1934
+1
+
+
+UNTIL
+if v1934<>''then'1'else'0'fi
+
+
+
+FI
+// КОНЕЦ 2. Корректировка * v909 записи J, в которых НЕТ подполей ^D и ^K 
+DEL
+909
+*
+
+
+DEL
+1111
+*
+
+
+DEL
+3333
+*
+
+
+// КОНЕЦ. ВЫБЫТИЕ подшивок.
+FI
+// НАЧАЛО SPNJ. ВЫБЫТИЕ отдельных номеров журналов
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800')<>'' then '0' else if &unifor('DCMPL,"KS2=',v991^a,'",v888^E')='1' then '1' else '0' fi fi
+// Если к отбору задан шифр хр., то выбывают экз., соответствующие заданным в КСУ месту хр. и количеству выбывающих экз.
+// Если к отбору задан шифр хр., то выбывают ВСЕ экз., если в КСУ НЕ заданы место хран. и количество выбывших экз.)
+// Если к отбору NJ задан штрих-код, то выбывает столько экз., сколько задано в записи КС2
+// Корректировка v991
+IF
+if v991^d<>'' then '0' else '1' fi
+REP
+991
+F
+if &unifor('DCMPL,"KS2=',v991^a,'",v888^D')<>'' then v991,'^d',&unifor('DCMPL,"KS2=',v991^a,'",v888^D'),if &unifor('DCMPL,"KS2=',v991^a,'",v888^K')<>'' then '^K',&unifor('DCMPL,"KS2=',v991^a,'",","v888^K","') else '' fi,if &unifor('DCMPL,"KS2=',v991^a,'",v888^X')<>'' then '^X',&unifor('DCMPL,"KS2=',v991^a,'",v888^X') else '' fi,else '' fi
+
+FI
+// Шифр отобранного NJ в !
+ADD
+1
+
+"!"v903"!"
+
+// Данные v910^h в !
+CHA
+910^H
+*
+(if p(v910)then v910^h fi/)
+(if p(v910)then |!|v910^h|!| fi/)
+// НАЧАЛО Обработка * v910 со статусом C/U
+IF
+if rsum((if p(v910) then if 'C U':v910^A AND a(v910^V)and p(v910^c) then if &unifor('Av991^D#1')<>'' then if v910^d=&unifor('Av991^D#1') then '1;' else '0;' fi else '1;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Записать в * v1940 все * v910 со статусом C/U
+ADD
+1940
+
+if v991^B:v1 then (if p(v910) then if 'C U':v910^a AND a(v910^v)and p(v910^c) then if &unifor('Av991^d#1')<>'' then if v910^D=&unifor('Av991^d#1') then v910,'^V',&unifor('Av991^A#1') fi else v910,'^V',&unifor('Av991^A#1') fi fi fi/) else (if p(v910) then if 'C U':v910^a AND a(v910^v)and p(v910^c) then if &unifor('Av991^B#1'):v910^h then if &unifor('Av991^D#1')<>'' then if v910^D=&unifor('Av991^d#1') then v910,'^V',&unifor('Av991^A#1') fi else v910,'^V',&unifor('Av991^A#1') fi fi fi fi/) fi
+
+// Удалить все * v910, перенесенные в * v1940
+DEL
+910
+F
+if v991^B:v1 then (if p(v910) then if 'C U':v910^a AND a(v910^v)and p(v910^c) then if &unifor('Av991^d#1')<>'' then if v910^D=&unifor('Av991^d#1') then '1' else '0' fi else '1' fi else '0' fi fi/) else (if p(v910) then if 'C U':v910^a AND a(V910^v)and p(v910^c) then if &unifor('Av991^B#1'):v910^h then if &unifor('Av991^d#1')<>'' then if v910^D=&unifor('Av991^d#1') then '1' else '0' fi else '1' fi else '0' fi else '0' fi fi/) fi
+
+// Признак обработки со статусом C/U
+// Запомнить статус (C или U)
+ADD
+7777
+
+&unifor('Av1940^A#1')
+
+// Запомнить суммарное количество экз. (из * v1940^1)
+ADD
+8888
+
+f(rsum((if p(v1940) then if v1940^v=&unifor('Av991^A#1') then if &unifor('Av991^d#1')<>'' then if v1940^D=&unifor('Av991^d#1') then v1940^1|;|fi else v1940^1|;|fi fi fi/)),0,0)
+
+// Запомнить номер учетной карточки (^B)
+ADD
+9999
+
+&unifor('Av1940^B#1')
+
+// Сформировать новое * v910, в котором зафиксирован факт выбыти 
+ADD
+910
+
+'^A',&unifor('Av1940^a#1'),'^B',&unifor('Av1940^B#1'),if p(v1940^H) then '^H',&unifor('Av1940^H#1') fi,'^C',&unifor('Av1940^c#1'),'^D',&unifor('Av1940^d#1'),if p(v1940^E) then '^E',&unifor('Av1940^e#1') fi,"^1"v8888,if p(v991^X) then "^X"v991^X else "^X"v8888 fi,"^V"v991^a
+
+// КОНЕЦ Обработка * v910 со статусом C/U
+FI
+// НАЧАЛО Обработка * v910 со статусом '0'и 'P'
+IF
+if rsum((if p(v910) then if '0 P 4':v910^a AND a(v910^V) then if &unifor('Av991^D#1')<>'' then if v910^d=&unifor('Av991^D#1') then '1;' else '0;' fi else '1;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Данные v910^b в ,
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |,|v910^b|,| fi/)
+IF
+if v991^d<>'' then '1' else '0' fi
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код, место хр.)
+REP
+910
+F
+if v991^B:v1 then (if p(v910) then if v910^A='2' then v910 else if p(v910^V) then v910 else if v910^d=&unifor('Av991^D#1') then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v910^b then '^A6','^V',&unifor('Av991^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi else '^A6','^V',&unifor('Av991^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi else v910 fi fi fi fi/) else (if p(v910) then if v910^A='2' then v910 else if p(v910^V) then v910 else if v910^d=&unifor('Av991^D#1') AND &unifor('Av991^B#1'):v910^h then '^a6','^V',&unifor('Av991^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi fi fi fi/) fi
+
+FI
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код)
+IF
+if v991^d<>'' then '0' else '1' fi
+REP
+910
+F
+if v991^B:v1 then (if p(v910)then if v910^A='2' then v910 else if p(v910^v) then v910 else '^a6','^V',&unifor('Av991^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi fi fi/) else (if p(v910)then if v910^A='2' then v910 else if &unifor('Av991^B#1'):v910^h then '^a6','^V',&unifor('Av991^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi fi fi/) fi
+
+FI
+// Исключение , из v910^B
+CHA
+910^B
+*
+','
+''
+// КОНЕЦ Обработка * v910 со статусом '0' и 'P'
+FI
+// Исключение ! из v910^H
+CHA
+910^H
+*
+'!'
+''
+// Когда списываемый N журнала включает номер другого журнала
+IF
+if rsum((if p(v910) then if v910^a:'6' OR v910^1=v910^X then '0;' else '1;' fi fi/))>0 then else if p(v423) then '1' else '0' fi fi
+ADD
+2222
+
+if p(v423) then v934"/",v423^N,"("v936")" fi
+
+FI
+// Читаем v909 из записи J, соответствующей номеру журнала
+ADD
+909
+
+REF(L("I="v933),(v909/))
+
+// Есть ли ^D и ^K в * v909, соответствующем NJ?
+ADD
+1111
+
+if rsum((if p(v909) then if v909^Q=&unifor('Av934#1') then if p(v909^F) then if v909^F=&unifor('Av935#1') then if v909^K<>'' AND v909^D<>'' then '1;' else '0;' fi fi else if v909^K<>'' AND v909^D<>'' then '1;' else '0;' fi fi fi fi/))>0 then '1' else '0' fi
+
+DEL
+909
+*
+
+
+// Все ли экз. в записи NJ списаны ?
+ADD
+3333
+
+if rsum((if p(v910) then if '2 6 7':v910^a then '0;' else '1;' fi fi/))>0 then '0' else '1' fi
+
+// НАЧАЛО Корректировка * v909 записи J, содержащих ^D и ^K
+IF
+if v1111='1' then '1' else '0' fi
+// Признак корректировки v909 дл статуса '6'
+// Ввод всех NN экз. заданных NJ и места хр. в поле 111 (*)
+ADD
+111
+
+if v991^d<>'' then if v991^K<>'' then else (if p(v910) then if v910^d=&unifor('Av991^d#1') then if v910^A='6' then if v910^v=&unifor('Av991^a#1') then |,|v910^B fi fi fi fi/) fi else (if p(v910) then if v910^v=&unifor('Av991^a#1') then if v910^A='6' then |,|v910^B fi fi fi/) fi
+
+CORREC
+if v920:'NJ'then'*'fi
+v991,"^G"v934,"^T"v935,"^N"v936,"^K"v111|,|,"^L"v2222,if p(v991^X) then else "^X"v8888 fi,"^U"v9999,"^S"v7777
+"I="v933
+XXXXXXXXXXXXXXXXXXX
+// Предварительный ввод данных 909-х полей заданного года в архив
+IF
+if a(v1909) then '1' else if rsum((if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then '1;' else  '0;' fi fi/))>0 then '0' else '1' fi fi
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then v909 fi fi/)
+
+FI
+// НАЧАЛО Работа с v909 дл статуса C/U.
+// Исключение номера NJ из * v909 (если списываютс все экз.) ИЛИ 
+// Уменьшение количества экз. на число списанных дл номера NJ
+IF
+if v1001^S<>'' then '1' else '0' fi
+// Декумулировать номер журнала !
+REP
+1001^N
+F
+&unifor("V"v1001^N)
+
+// Ввод в v1111 * v909, соответствующего заданным году, тому И NUK(^U)
+ADD
+1111
+
+(if p(v909) then if v909^K=&unifor('Av1001^U#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then if v909^H:'(' then v909 fi fi else if v909^H:'(' then v909 fi fi fi fi fi/)
+
+DEL
+909
+F
+(if p(v909) then if v909^K=&unifor('Av1001^U#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then if v909^H:'(' then '1' else '0' fi else '0' fi else if v909^H:'(' then '1' else '0' fi fi else '0' fi else '0' fi fi/)
+
+// v111 - только NN NJ из v1111^H
+ADD
+111
+
+v1111^H
+
+// Декумулци v111
+REP
+111
+F
+&unifor("V"v111)
+
+// Последний символ в v111 - ,
+REP
+111
+
+v111","
+
+// Каждое * v1981 содержит номер NJ из v909^H
+ADD
+1981
+
+&unifor('G0,'v111)
+
+ADD
+222
+F
+&unifor('G2,'v111)
+
+REPEAT
+ADD
+1981
+
+&unifor('G0,'v222)
+
+ADD
+444
+
+&unifor('G2,'v222)
+
+DEL
+222
+*
+
+
+ADD
+222
+
+v444
+
+DEL
+444
+*
+
+
+UNTIL
+if v222<>'' then '1' else '0' fi
+DEL
+111
+*
+
+
+DEL
+222
+*
+
+
+DEL
+444
+*
+
+
+// В каждом * v1981 в ^A - номер NJ, в ^B - число экз.
+REP
+1981
+F
+(if p(v1981) then '^A',&unifor('G0('v1981),'^B',&unifor('G2('v1981) fi/)
+
+// Дл заданного номера NJ уменьшаем число экз. на число выбывших
+REP
+1981
+F
+(if p(v1981) then if v1981^A=&unifor('Av1001^N#1') then |^A|v1981^A,'^B',f((val(v1981^B)-val(&unifor('Av1001^X#1'))),0,0),'экз.',&unifor('Av1001^S#1'),')' else v1981 fi fi/)
+
+// Удалить * v1981 с заданным номером NJ - все экз. списаны
+DEL
+1981
+F
+(if p(v1981) then if v1981^A=&unifor('Av1001^N#1') then if val(v1981^B)=0 then '1' else '0' fi else '0' fi fi/)
+
+// Преобразуем v1981 из * в одиночное 
+REP
+1981
+F
+(if p(v1981) then |^A|v1981^A,|(|v1981^B fi/)
+
+CHA
+1981
+*
+'^A'
+','
+ADD
+9009
+
+v1981
+
+REP
+9009
+F
+&unifor("U"v9009)
+
+// Восстанавливаем * v909
+ADD
+909
+
+"^Q"v1111^Q,"^F"v1111^F,"^D"v1111^D,"^K"v1111^K,"^H"v9009,"^V"v1111^V
+
+REP
+1909
+F
+(if p(v1909) then if v1909^H:'(' then if v1909^K=&unifor('Av1001^U#1') then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then v1909,if p(v1909^W) then ',',&unifor('Av1001^N#1'),'(',&unifor('Av1001^X#1'),'экз.',&unifor('Av1001^S#1'),')',if &unifor('G0,'v1909^W)=&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1'),'(',&unifor('Av1001^X#1'),'экз.',&unifor('Av1001^S#1'),')' fi else v1909 fi else v1909,if p(v1909^W) then ',',&unifor('Av1001^N#1'),'(',&unifor('Av1001^X#1'),'экз.',&unifor('Av1001^S#1'),')',if &unifor('G0,'v1909^W)=&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1'),'(',&unifor('Av1001^X#1'),'экз.',&unifor('Av1001^S#1'),')' fi fi else v1909 fi else v1909 fi else v1909 fi fi/)
+
+DEL
+1111
+*
+
+
+DEL
+1981
+*
+
+
+DEL
+9009
+*
+
+
+DEL
+111
+*
+
+
+DEL
+222
+*
+
+
+DEL
+444
+*
+
+
+// КОНЕЦ Работа с v909 дл статуса C/U.
+FI
+// НАЧАЛО Работа с v909 дл статуса 6
+IF
+if v1001^K<>'' then '1' else '0' fi
+// Декумулировать номер журнала !
+REP
+1001^N
+F
+&unifor("V"v1001^N)
+
+// Ввод NN экз.(через ',') заданных N журнала и места хр. в v555
+ADD
+555
+
+v1001^K*1
+
+// НАЧАЛО цикла на все NN экз. заданного номера журнала
+REPEAT
+// Создание v444, содержащего очередной N экз. заданного номера журнала
+ADD
+444
+
+&unifor('G0,'v555)
+
+// Ввод в поле 111 всех NN журналов, соответвующих заданным году, тому и N экз.
+DEL
+111
+*
+
+
+ADD
+111
+
+if v1001^d='' then (if p(v909) then if v909^K=&unifor('Av444#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi fi/) else (if p(v909) then if v909^D=&unifor('Av1001^D#1') then if v909^K=&unifor('Av444#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi fi fi/) fi
+
+// Декумулировать NN журналов в поле 111 (v909^H)
+REP
+111
+1
+','&unifor("V"v111)','
+
+CHA
+111
+
+","v1001^N","
+','
+// Кумулировать NN журналов в поле 111
+REP
+111
+1
+&unifor("U"v111)
+
+// Замена v909 (в 909^H нет списанного NJ)
+REP
+909
+F
+if v1001^d='' then (if p(v909) then if v909^K=&unifor('Av444#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then |^Q|v909^Q,|^K|v909^K,|^D|v909^D,|^F|v909^F,if &unifor('Av111#1')<>'' then '^H',&unifor('Av111#1')fi,|^V|v909^V else v909 fi else |^Q|v909^Q,|^K|v909^K,|^D|v909^D,|^F|v909^F,'^H',&unifor('Av111#1'),|^V|v909^V fi else v909 fi else v909 fi fi/) else (if p(v909) then if v909^D=&unifor('Av1001^D#1') AND v909^K=&unifor('Av444#1') then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then |^Q|v909^Q,|^K|v909^K,|^D|v909^D,|^F|v909^F,'^H',&unifor('Av111#1'),|^V|v909^V else v909 fi else |^Q|v909^Q,|^K|v909^K,|^D|v909^D,|^F|v909^F,'^H',&unifor('Av111#1'),|^V|v909^V fi else v909 fi else v909 fi fi/) fi
+
+// Создание v9 из * v1909, соответствующего заданным NN журнала и экз.
+ADD
+9
+
+if v1001^d='' then (if p(v1909) then if v1909^K=&unifor('Av444#1') then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then v1909,if p(v1909^W) then ',',&unifor('Av1001^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi fi else v1909,if p(v1909^W) then ','&unifor('Av1001^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi fi fi fi fi/) else (if p(v1909) then if v1909^D=&unifor('Av1001^D#1') AND v1909^K=&unifor('Av444#1') then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then v1909,if p(v1909^W) then ',',&unifor('Av1001^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi fi else v1909,if p(v1909^W) then ','&unifor('Av1001^N#1'),if v1909^W:&unifor('Av1001^A#1') then else '(',&unifor('Av1001^A#1'),')' fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi fi fi fi fi/) fi
+
+// Удаление v1909, соответствующего заданным NN журнала и экз.
+DEL
+1909
+F
+if v1001^d='' then (if p(v1909) then if v1909^K=&unifor('Av444#1') then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then '1' else '0' fi else '1' fi else '0' fi else '0' fi fi/) else (if p(v1909) then if v1909^D=&unifor('Av1001^D#1') AND v1909^K=&unifor('Av444#1') then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then '1' else '0' fi else '1' fi else '0' fi else '0' fi fi/) fi
+
+ADD
+1909
+
+v9
+
+DEL
+9
+*
+
+
+// Создание v555 c NN экз. без 1-го; Подготовка к * цикла на очередной N экз.
+ADD
+777
+
+if p(v555) then &unifor("G2,"v555) fi
+
+DEL
+555
+*
+
+
+ADD
+555
+
+if p(v777) then v777 fi
+
+DEL
+777
+*
+
+
+DEL
+444
+*
+
+
+// ВЫХОД из цикла на число NN экз. заданных N журнала и места хр.
+UNTIL
+if v555<>'' then '1' else '0' fi
+DEL
+111
+*
+
+
+DEL
+444
+*
+
+
+DEL
+555
+*
+
+
+DEL
+777
+*
+
+
+DEL
+9
+1
+
+
+//  НАЧАЛО Когда списываемый N журнала включает номер другого журнала
+IF
+if v1001:'^L' then '1' else '0' fi
+ADD
+1333
+
+v1001^L
+
+ADD
+111
+
+v423^1
+
+CHA
+111
+1
+v1333
+''
+CHA
+111
+1
+,,
+,
+REP
+111
+F
+if v111.1=',' then v111*1 else v111 fi
+
+REP
+111
+F
+v111"!"
+
+REP
+111
+F
+if v111:',!' then v111 else &unifor('G0!'v111) fi
+
+CHA
+111
+1
+',!'
+''
+REP
+423
+F
+"^A"v423^A,if p(v111) then "^1"v111 fi
+
+DEL
+111
+*
+
+
+DEL
+1333
+*
+
+
+// КОНЕЦ Когда списываемый N журнала включает N другого журнала
+FI
+// КОНЕЦ Работа с v909 дл статуса 6
+FI
+DEL
+1001
+1
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+// КОНЕЦ Корректировка * v909 записи J, содержащих ^D и ^K
+FI
+// НАЧАЛО Корректировка * v909 записи J, НЕ содержащих ^D и ^K
+// Условие, что в 909-х нет ^K и ^D И в записи NJ все экз. списаны
+IF
+if v1111='0' then if v3333='1' then '1' else '0' fi else '0' fi
+// Исключение N журнала из соответствующего * v909
+CORREC
+if v920:'NJ'then'*'fi
+v991,"^G"v934,"^T"v935,"^N"v936,"^L"v2222
+"I="v933
+XXXXXXXXXXXXXXXXXXX
+// Предварительный ввод данных 909-х полей заданного года в архив
+IF
+if a(v1909) then '1' else if rsum((if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then '1;' else  '0;' fi fi/))>0 then '0' else '1' fi fi
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then v909 fi fi/)
+
+FI
+// Декумулировать номер журнала
+REP
+1001^N
+F
+&unifor("V"v1001^N)
+
+// Формирование 111, содержащего * v909^H, соответствующего номеру NJ
+ADD
+111
+
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then v909^H fi else v909^H fi fi fi/)
+
+// Удаление v909, содержащего NN журналов заданного года, тома и N NJ
+DEL
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then '1' else '0' fi else '1' fi else '0' fi fi/)
+
+// Декумулировать NN журналов в поле 111
+REP
+111
+1
+','&unifor("V"v111)','
+
+// Исключение заданного номера журнала из v111
+CHA
+111
+1
+","v1001^N","
+','
+// Кумулировать NN журналов в поле 111
+REP
+111
+1
+&unifor("U"v111)
+
+// Ввод v909 из 111 с перечнем NN журналов, среди которых нет списанного
+ADD
+909
+
+if p(v111) then "^Q"v1001^G,"^F"v1001^T,"^H"v111 fi
+
+// Ввод в v1909 в ^W номера исключенного NJ и номера KS2
+REP
+1909
+F
+(if p(v1909) then if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then v1909,if p(v1909^W) then if v1909^W:&unifor('Av1001^A#1')then ',',&unifor('Av1001^N#1') else '(',&unifor('Av1001^A#1'),')' ',',&unifor('Av1001^N#1') fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi else v1909 fi else v1909,if p(v1909^W) then if v1909^W:&unifor('Av1001^A#1')then ',',&unifor('Av1001^N#1') else '(',&unifor('Av1001^A#1'),')' ',',&unifor('Av1001^N#1') fi else '^W',&unifor('Av1001^A#1'),',',&unifor('Av1001^N#1') fi fi else v1909 fi fi/)
+
+DEL
+111
+*
+
+
+// НАЧАЛО Когда списываемый N журнала включает номер другого журнала
+IF
+if v1001:'^L' then '1' else '0' fi
+ADD
+1333
+
+v1001^L
+
+ADD
+111
+
+v423^1
+
+CHA
+111
+1
+v1333
+''
+CHA
+111
+1
+,,
+,
+REP
+111
+F
+if v111.1=',' then v111*1 else v111 fi
+
+REP
+111
+F
+v111"!"
+
+REP
+111
+F
+if v111:',!' then v111 else &unifor('G0!'v111) fi
+
+CHA
+111
+1
+',!'
+''
+REP
+423
+F
+"^A"v423^A,if p(v111) then "^1"v111 fi
+
+DEL
+111
+*
+
+
+DEL
+1333
+*
+
+
+// КОНЕЦ Когда списываемый N журнала включает N другого журнала КОНЕЦ
+FI
+DEL
+1001
+1
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ Корректировка * v909 записи J, НЕ содержащих ^D и ^K
+FI
+// НАЧАЛО Условие проверки: не входит ли заданный N журнала в подшивку?
+IF
+if s(v910^p)<>'' then '1' else '0' fi
+// В поле 777 запомнили шифры подшивок, в которые входит заданный N журнала
+ADD
+777
+
+if v991^d<>'' then (if p(v910) then if p(v910^p) then if v910^d=&unifor('Av991^d#1') then v910^p fi fi fi/) else (if p(v910) then if p(v910^p) then v910^p fi fi/) fi
+
+ADD
+9463
+
+if v991^d<>'' then (if p(v910) then if p(v910^p) then if v910^d=&unifor('Av991^d#1') then v910^p|;| fi fi fi) else (if p(v910) then if p(v910^p) then v910^p|;| fi fi) fi
+
+DEL
+463
+F
+(if p(v463)then if &unifor('Av9463#1'):v463^w then'1'else'0'fi fi/)
+
+DEL
+9463
+*
+
+
+// НАЧАЛО ЦИКЛА Исключение N журнала из списка NN в поле 931^C подшивки
+REPEAT
+// В поле 888 запомнили очередной шифр подшивки
+ADD
+888
+
+if p(v777) then &unifor('Av777#1') fi
+
+// Условие проверки: не входит ли заданный N журнала в одну и ту же подшивку
+IF
+if v888=v666 then '0' else '1' fi
+// Корректировка записи подшивки НАЧАЛО
+CORREC
+if v920:'NJ'then'*'fi
+"^Q"v934,"^F"v935,"^N"v936,"^A"v888,"^B"v666,"^W"v933
+"I="v888
+XXXXXXXXXXXXXXXXXXX
+// Запомнили список NN журналов в подшивке
+ADD
+111
+
+if v933=v1001^w then if v934=v1001^q then v931^C else (if p(v481)then if v481^q=&uf('Av1001^q#1')then if &uf('Av1001^f#1')<>''then if &uf('Av1001^f#1')=v481^f then v481^h fi else v481^h fi fi fi/)fi else (if p(v481)then if v481^w=&uf('Av1001^w#1')then if v481^q=&uf('Av1001^q#1')then if &uf('Av1001^f#1')<>''then if &uf('Av1001^f#1')=v481^f then v481^h fi else v481^h fi fi fi fi/) fi
+
+// Запомнили v931^B
+// Декумулировать номер журнала !
+REP
+1001^N
+F
+','&unifor("V"v1001^N)','
+
+// Декумулировать NN журналов
+REP
+111
+1
+','&unifor("V"v111)','
+
+
+// Удалить заданный номером журнала
+ADD
+2000
+
+"^?"v1001,"^!"v111
+
+CHA
+111
+1
+v1001^N
+','
+
+// Кумулировать v111
+REP
+111
+1
+&unifor("U"v111",")
+
+// Добавление v111 в v931^C
+REP
+931^C
+1
+if v933=v1001^w then if v934=v1001^q then v111 else v931^c fi else v931^c fi
+
+REP
+481^H
+F
+if v933=v1001^w then if v934=v1001^q then (v481^h/) else (if p(v481)then if v481^q=&uf('Av1001^q#1')then &uf('Av111#1') else v481^h fi fi/)fi else (if p(v481)then  if v481^w=&uf('Av1001^w#1')then if v481^q=&uf('Av1001^q#1')then &uf('Av111#1') else v481^h fi else v481^h fi fi/) fi 
+
+DEL
+111
+*
+
+
+DEL
+1001
+1
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ проверки: не входит ли заданный N журнала в одну и ту же подшивку
+FI
+DEL
+666
+*
+
+
+// Шифр подшивки в поле 666
+ADD
+666
+
+v888
+
+DEL
+888
+1
+
+
+DEL
+777
+1
+
+
+// КОНЕЦ ЦИКЛА на число * v910 (шифров подшивок)
+UNTIL
+if v777<>'' then '1' else '0' fi
+DEL
+666
+*
+
+
+// КОНЕЦ проверки: не входит ли заданный N журнала в подшивку?
+FI
+DEL
+1
+*
+
+
+DEL
+1111
+*
+
+
+DEL
+2222
+*
+
+
+DEL
+3333
+*
+
+
+DEL
+7777
+*
+
+
+DEL
+8888
+*
+
+
+DEL
+9999
+*
+
+
+DEL
+111
+*
+
+
+// КОНЕЦ SPNJ. ВЫБЫТИЕ отдельных номеров журналов
+FI
+// НАЧАЛО SPGOD. Списание NN журналов заданного ГОДа
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800')<>'' then '0' else if &unifor('DCMPL,"KS2=',v991^a,'",v888^E.1')='2' then '1' else '0' fi fi
+// Корректировка v991
+IF
+if v991^C<>'' then '0' else '1' fi
+REP
+991
+F
+v991,'^C',if &unifor('DCMPL,"KS2=',v991^a,'",v888^E*2.4')<>'' then &unifor('DCMPL,"KS2=',v991^a,'",v888^E*2') else &unifor('G0!'v991^b*1) fi,if &unifor('DCMPL,"KS2=',v991^a,'",v888^D')<>'' then '^D',&unifor('DCMPL,"KS2=',v991^a,'",v888^D'),if &unifor('DCMPL,"KS2=',v991^a,'",v888^K')<>'' then '^K',&unifor('DCMPL,"KS2=',v991^a,'",","v888^K","') else '' fi,if &unifor('DCMPL,"KS2=',v991^a,'",v888^X')<>'' then '^X',&unifor('DCMPL,"KS2=',v991^a,'",","v888^X","') else '' fi else '' fi
+
+FI
+// Предварительный ввод * v909 заданного года в архивные v1909
+ADD
+1992
+
+v991^c
+
+REPEAT
+
+
+
+
+ADD
+1991
+
+if v1992:','then &unifor('G0,'v1992)else v1992fi
+
+IF
+if a(v1909) then '1' else if rsum((if p(v1909) then if v1909^Q=&unifor('Av1991#1')and v1909^w:&unifor('IPRIVATE,KS2,') then '1;' else  '0;' fi fi/))>0 then '0' else '1' fi fi
+
+
+
+ADD
+1909
+
+(if p(v909) then if v909^Q=&unifor('Av1991#1') then v909 fi fi/)
+
+FI
+// Определить ЕСТЬ ли ^D и ^K в * v909, соответствующих ГОДу ?
+ADD
+1111
+
+if rsum((if p(v909) then if v909^Q=&unifor('Av1991#1') then if v909^K<>'' AND v909^D<>'' then '1;' else '0;' fi fi fi/))>0 then '1' else '0' fi
+
+// НАЧАЛО 1. Списание NN журналов ГОДа, когда в * v909 ЕСТЬ ^K и ^D
+IF
+if v1111='1' then '1' else '0' fi
+// Данные v1909^K заключить в ,
+CHA
+1909^K
+*
+(if p(v1909)then v1909^K fi/)
+(if p(v1909)then |,|v1909^K|,| fi/)
+// Ввод в соответствующее * v1909 номера КС2
+REP
+1909
+F
+(if p(v1909) then if &unifor('Av1991#1')=v1909^Q then if &unifor('Av991^D#1')<>'' then if &unifor('Av991^D#1')=v1909^D then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v1909^K then if a(v1909^W) then v1909,'^W',&unifor('Av991^A#1') else v1909 fi else v1909 fi else if a(v1909^W) then v1909,'^W',&unifor('Av991^A#1') else v1909 fi fi else v1909 fi else if a(v1909^W) then v1909,'^W',&unifor('Av991^A#1') else v1909 fi fi else v1909 fi fi/)
+
+// Исключение , из v1909^K
+CHA
+1909^K
+*
+','
+''
+// Данные v909^K заключить в ,
+CHA
+909^K
+*
+(if p(v909)then v909^K fi/)
+(if p(v909)then |,|v909^K|,| fi/)
+// Удалить * v909, соответствующих ГОДу, месту хр., NN компл.(экз.)
+DEL
+909
+F
+(if p(v909) then if &unifor('Av1991#1')=v909^Q then if &unifor('Av991^D#1')<>'' then if &unifor('Av991^D#1')=v909^D then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v909^K then '1' else '0' fi else '1' fi else '0' fi else '1' fi else '0' fi fi/)
+
+// Исключить , из v909^K
+CHA
+909^K
+*
+','
+''
+DEL
+1111
+1
+
+
+// Корректировка записей NJ заданного года (в т.ч. и подшивок)
+CORREC
+if v920:'J' then '*' fi
+v991
+"I="v903"/",v1991$
+XXXXXXXXXXXXXXXXXXX
+// Данные v910^b заключить в ,
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |,|v910^b|,| fi/)
+// НАЧАЛО Обработка * v910 со статусом C/U
+IF
+if rsum((if p(v910) then if 'C U':v910^A AND a(v910^V) then if &unifor('Av1001^D#1')<>'' then if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi else '1;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Записать в * v1940 все * v910 со статусом C/U
+ADD
+1940
+
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if &unifor('Av1001^d#1')<>'' then if v910^D=&unifor('Av1001^d#1') then v910,'^V',&unifor('Av1001^A#1') fi else v910,'^V',&unifor('Av1001^A#1') fi fi fi/)
+
+// Удалить все * v910, перенесенные в * v1940
+DEL
+910
+F
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if &unifor('Av1001^d#1')<>'' then if v910^D=&unifor('Av1001^d#1') then '1' else '0' fi else '1' fi else '0' fi fi/)
+
+// Запомнить суммарное количество экз. (из * v1940^1)
+ADD
+8888
+
+f(rsum((if p(v1940) then if v1940^v=&unifor('Av1001^A#1') then v1940^1|;| fi fi/)),0,0)
+
+// Сформировать новое * v910, в котором зафиксирован факт выбыти
+ADD
+910
+
+'^A',&unifor('Av1940^a#1'),'^B',&unifor('Av1940^B#1'),if p(v1940^H) then '^H',&unifor('Av1940^H#1') fi,'^C',&unifor('Av1940^c#1'),'^D',&unifor('Av1940^d#1'),if p(v1940^E) then '^E',&unifor('Av1940^e#1') fi,"^1"v8888,"^X"v8888,"^V"v1001^a
+
+// КОНЕЦ Обработка * v910 со статусом C/U
+FI
+// НАЧАЛО Обработка * v910 со статусом '0'
+IF
+if rsum((if p(v910) then if v910^A='2' then '0;' else if 'C U':v910^A then '0;' else if p(v910^V) then '0;' else if &unifor('Av1001^D#1')<>'' then if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi else '1;' fi fi fi fi fi/))>0 then '1' else '0' fi
+IF
+if v1001^d<>'' then '1' else '0' fi
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код, место хр.)
+REP
+910
+F
+(if p(v910) then if v910^A='2' then v910 else if p(v910^V) then v910 else if v910^d=&unifor('Av1001^D#1') then if &unifor('Av1001^K#1')<>'' then if &unifor('Av1001^K#1'):v910^b then '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi else '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi else v910 fi fi fi fi/)
+
+FI
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код)
+IF
+if v1001^d<>'' then '0' else '1' fi
+REP
+910
+F
+(if p(v910)then if v910^A='2' then v910 else if p(v910^v) then v910 else '^a6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi fi fi/)
+
+FI
+// КОНЕЦ Обработка * v910 со статусом '0'
+FI
+// Исключить , из v910^B
+CHA
+910^B
+*
+','
+''
+DEL
+8888
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ 1. Списание NN журналов ГОДа, когда в * v909 ЕСТЬ ^K и ^D
+FI
+// НАЧАЛО 2. Cписание NN журналов ГОДа, когда в 909-х НЕТ ^K и ^D
+IF
+if v1111='0' then '1' else '0' fi
+// В 111 * 909^F,H,V, соответствующие ГОДу
+ADD
+111
+
+(if p(v909) then if v909^Q=&unifor('Av1991#1') then |^F|v909^F,|^H|v909^H,|^V|v909^V fi fi/)
+
+// Удаление 909-х, соответствующих ГОДу
+DEL
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1991#1') then '1' else '0' fi fi/)
+
+// v222^F,H,V (одно * 111)
+ADD
+222
+
+&unifor('Av111#1')
+
+// ЦИКЛ 1 (число * 909-го ГОДа - несколько томов) НАЧАЛО
+REPEAT
+// Все номера из v909^H (кумулированные)
+ADD
+555
+
+v222^H
+
+// Декумулировать
+REP
+555
+F
+&unifor("V"v555)
+
+// Каждый номер из v909^H в отдельном подполе ^A
+ADD
+777
+
+","v555","
+
+// В перечне NN NJ последний символ - ,
+ADD
+444
+
+v555","
+
+// 1-ый номер NJ из v909^H
+ADD
+1333
+
+&unifor('G0,'v444)
+
+// ЦИКЛ 2 на число NN в 909^H. НАЧАЛО
+REPEAT
+// Корректировка записи NJ с номером=v1333
+CORREC
+if v920='J'then '*' fi
+v991
+"I="v903,"/"v1991,if v222^F<>'' then "/"v222^F fi,"/"v1333
+XXXXXXXXXXXXXXXXXXX
+// Данные v910^b заключить в ,
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |,|v910^b|,| fi/)
+// Корректировка * v910 - ввод статуса 6
+REP
+910^A
+F
+if v1001^D<>'' then if v1001^K<>'' then (if p(v910) then if v910^A='2' then v910^A else if &unifor('Av1001^D#1')=v910^d then if &unifor('Av1001^K#1'):v910^b then '6' else v910^A fi else v910^A fi fi fi/) else (if p(v910) then if v910^A='2' then v910^A else if &unifor('Av1001^D#1')=v910^d then '6' else v910^A fi fi fi/) fi else (if p(v910) then if '2':v910^a then v910^a else '6' fi fi/) fi
+
+// Исключение , из v910^B
+CHA
+910^B
+*
+','
+''
+DEL
+1001
+*
+
+
+ADD
+888
+
+&uf('+7W8#'),&uf('+7W8#'if rsum((if p(v910)then if 'C U':v910^a and v910^x=v910^1 or v910^a:'6' then '0'else '1'fi fi))=0 then '1' else '0'fi)
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// Все экз. списаны
+IF
+if g8='1' then '1' else '0' fi
+// Декумулировать v1333
+REP
+1333
+F
+&unifor("V"v1333)
+
+// Исключить номер NJ (1333) из v909^H
+CHA
+777
+1
+","v1333","
+','
+// Запомнить списанный номер в поле 2
+ADD
+2
+
+v1333
+
+FI
+DEL
+888
+*
+
+
+DEL
+1333
+*
+
+
+DEL
+1910
+*
+
+
+// Подготовка к повторению цикла 2
+ADD
+888
+
+&unifor('G2,'v444)
+
+DEL
+444
+*
+
+
+ADD
+444
+
+if v888<>'' then v888 fi
+
+DEL
+888
+*
+
+
+ADD
+1333
+
+if v444<>'' then &unifor('G0,'v444) fi
+
+// ЦИКЛ 2 на число NN в 909^H. КОНЕЦ
+UNTIL
+if v1333<>'' then '1' else '0' fi
+// Если не все NN из v909^H списаны, то несписанные NN остались в 777(в * ^A)
+IF
+if v777<>'' then '1' else '0' fi
+// Заменить ^A на ,
+CHA
+777
+1
+'^A'
+','
+REP
+777
+1
+&unifor("U"v777",")
+
+// Восстановить удаленное v909 с NN NJ (несписанными)
+ADD
+909
+
+if v777<>'' then "^Q"v1991,"^F"v222^F,'^H',if v777.1:',' then v777*1 else v777 fi,"^V"v222^V fi
+
+DEL
+777
+*
+
+
+DEL
+555
+*
+
+
+DEL
+444
+*
+
+
+DEL
+1333
+*
+
+
+FI
+// Если списаны ВСЕ экз., то списанные NN ввести в * v1909
+IF
+if v2<>'' then '1' else '0' fi
+// Все списанные NN одного тома
+ADD
+1
+
+v2+|,|
+
+REP
+1
+F
+&unifor("U"v1",")
+
+// Ввод в архивные * v1909 N KS2 и выбывшие NN NJ
+REP
+1909
+F
+(if p(v1909) then if v1909^Q=&unifor('Av1991#1') then if p(v1909^F) then if v1909^F=&unifor('Av222^F#1') then v1909,if p(v1909^W) then if v1909^W:&unifor('Av991^A#1') then ',',&unifor('Av1#1') else '(',&unifor('Av991^A#1'),')',',',&unifor('Av1#1') fi else '^W',&unifor('Av991^A#1'),',',&unifor('Av1#1') fi else v1909 fi else v1909,if p(v1909^W) then if v1909^W:&unifor('Av991^A#1') then ',',&unifor('Av1#1') else '(',&unifor('Av991^A#1'),')',',',&unifor('Av1#1') fi else '^W',&unifor('Av991^A#1'),',',&unifor('Av1#1') fi fi else v1909 fi fi/)
+
+FI
+DEL
+1
+*
+
+
+DEL
+222
+*
+
+
+DEL
+111
+1
+
+
+DEL
+888
+*
+
+
+ADD
+222
+
+if v111<>'' then &unifor('Av111#1') fi
+
+// ЦИКЛ 1. КОНЕЦ
+UNTIL
+if v222<>'' then '1' else '0' fi
+DEL
+111
+*
+
+
+DEL
+222
+*
+
+
+DEL
+1333
+*
+
+
+DEL
+444
+*
+
+
+DEL
+1111
+1
+
+
+// КОНЕЦ 2. Списание NN журналов ГОДа, когда в * v909 НЕТ ^K и ^D
+FI
+// НАЧАЛО 3. Когда в номер журнала ГОДа входит номер другого журнала
+IF
+if p(v423) then if rsum((if p(v909) then if &unifor('Av1991#1')=v909^Q then '1;' else '0;' fi fi/))>0 then '1' else '0' fi else '0'fi
+// В * v111 формируем все NN журналов, в которые входит N другого журнала
+ADD
+111
+
+&unifor('G0,'v423^1)
+
+ADD
+222
+
+&unifor('G2,'v423^1)
+
+REPEAT
+ADD
+1333
+
+if &unifor('G0,'v222)<>'' then &unifor('G0,'v222) fi
+
+ADD
+111
+
+if v1333<>'' then v1333 fi
+
+DEL
+1333
+*
+
+
+REP
+222
+1
+if v222:',' then &unifor('G2,'v222) else # fi
+
+UNTIL
+if v222<>'' then '1' else '0' fi
+// В поле 5 перенести только NN журналов НЕ заданного года
+ADD
+5
+
+(if p(v111) then if &unifor('Av1991#1')=v111.4 then else v111 fi fi/)
+
+// В поле 444 ввести оставшиес NN журналов(через ,)
+ADD
+444
+
+v5+|,|
+
+// Изменение v423
+REP
+423
+F
+"^A"v423^A,"^1"v444
+
+DEL
+111
+*
+
+
+DEL
+222
+*
+
+
+DEL
+5
+*
+
+
+DEL
+444
+*
+
+
+DEL
+1333
+*
+
+
+// КОНЕЦ 3. Когда в N журнала ГОДа входит N другого журнала
+FI
+DEL
+555
+*
+
+
+DEL
+2
+*
+
+
+REP
+1992
+F
+if v1992:','then &unifor('G2,'v1992)else # fi
+
+DEL
+1991
+
+
+
+UNTIL
+if v1992<>''then'1'else '0'fi 
+
+
+
+// КОНЕЦ SPGOD. Списание NN журналов заданного ГОДа
+FI
+// НАЧАЛО SPZGL. Списание журналов по заглавим
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800^D')<>'' then '0' else if &unifor('DCMPL,"KS2=',v991^a,'",v888^E')='3' then '1' else '0' fi fi
+// Корректировка v991
+IF
+if v991^d<>'' then '0' else '1' fi
+REP
+991
+F
+if &unifor('DCMPL,"KS2=',v991^a,'",v888^D')<>'' then v991,'^D',&unifor('DCMPL,"KS2=',v991^a,'",v888^D') ,if &unifor('DCMPL,"KS2=',v991^a,'",v888^K')<>'' then '^K',&unifor('DCMPL,"KS2=',v991^a,'",","v888^K","') else '' fi else v991 fi
+
+FI
+// НАЧАЛО 1. Списание по заглавию, если НЕ задано место хр.
+IF
+if v991^D='' then '1' else '0' fi
+// Создание архивных полей
+ADD
+1909
+
+(if p(v909) then v909,'^W',&unifor('Av991^a#1') fi/)
+
+DEL
+909
+*
+
+
+// Списание NJ (все экз.)
+CORREC
+if v920:'J'then'*'fi
+v991
+"I="v903"/"$
+XXXXXXXXXXXXXXXXXXX
+// НАЧАЛО Обработка * v910 со статусом C/U
+IF
+if rsum((if p(v910) then if 'C U':v910^A AND a(v910^V) then '1;' else '0;' fi fi/))>0 then '1' else '0' fi
+// Записать в * v1940 все * v910 со статусом C/U
+ADD
+1940
+
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then v910,'^V',&unifor('Av1001^A#1') else v910 fi fi/)
+
+// Удалить все * v910, перенесенные в * v1940
+DEL
+910
+F
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then '1' else '0' fi fi/)
+
+// Запомнить суммарное количество экз. (из * v1940^1)
+ADD
+8888
+
+f(rsum((if p(v1940) then if v1940^v=&unifor('Av1001^A#1') then v1940^1|;| fi fi/)),0,0)
+
+// Сформировать новое * v910, в котором зафиксирован факт выбыти 
+ADD
+910
+
+'^A',&unifor('Av1940^a#1'),'^B',&unifor('Av1940^B#1'),if p(v1940^H) then '^H',&unifor('Av1940^H#1') fi,'^C',&unifor('Av1940^c#1'),'^D',&unifor('Av1940^d#1'),if p(v1940^E) then '^E',&unifor('Av1940^e#1') fi,"^1"v8888,"^X"v8888,"^V"v1001^a
+
+// КОНЕЦ Обработка * v910 со статусом C/U
+FI
+// НАЧАЛО Обработка * v910 со статусом '0'
+IF
+if rsum((if p(v910) then if v910^A='2' then '0;' else if 'C U':v910^A then '0;' else if p(v910^V) then '0;' else '1' fi fi fi fi/))>0 then '1' else '0' fi
+REP
+910^A
+F
+(if p(v910) then if v910^A='2' then v910^A else if 'C U':v910^A then v910^a else if p(v910^v) then v910^A else '6' fi fi fi fi/)
+
+FI
+DEL
+8888
+*
+
+
+DEL
+1001
+*
+
+
+DEL
+463^w
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ 1. Списание по заглавию, если НЕ задано место хр. - a(v991^D)
+FI
+// НАЧАЛО 2. ПОДГОТОВКА к списанию по заглавию, если p(v991^D), p(v991^K)
+IF
+if v991^D<>'' then '1' else '0' fi
+// Формирование v2909 из * v909, в которых a(v909^D) и a(v909^K)
+ADD
+2909
+
+(if p(v909) then if p(v909^D) then else v909 fi fi/)
+
+// Формирование v3909 из v909, в которых p(v909^D) и p(v909^K)
+// v909^D = &unifor('Av991^D#1') И &unifor('Av991^K#1'):v909^K
+// Данные v909^K заключить в , (безусловно)
+CHA
+909^K
+*
+(if p(v909)then v909^K fi/)
+(if p(v909)then |,|v909^K|,| fi/)
+ADD
+3909
+
+(if p(v909) then if p(v909^D) then if v909^D=&unifor('Av991^D#1') then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v909^K then v909 fi else v909 fi fi fi fi/)
+
+// Исключение , из v3909^K
+CHA
+3909^K
+*
+','
+''
+// КОНЕЦ 2. ПОДГОТОВКА к списанию по заглавию, если p(v991^D), p(v991^K)
+FI
+// НАЧАЛО 3. СПИСАНИЕ, если ЕСТЬ v991^D(^K) И v909^D(^K) - p(v3909)
+IF
+if p(v3909) then '1' else '0' fi
+// Cоздание архивных полей
+ADD
+1909
+
+(v3909/)
+
+REP
+1909
+F
+(if p(v1909) then if p(v1909^W) then v1909 else v1909,'^W',&unifor('Av991^A#1') fi fi/)
+
+// Удалить v909 (условно)
+DEL
+909
+F
+(if p(v909) then if v909^D=&unifor('Av991^D#1') then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v909^K then '1' else '0' fi else '1' fi else '0' fi fi/)
+
+// Исключить , из v909^K (безусловно)
+CHA
+909^K
+*
+','
+''
+// Все * v3909 в v1333
+ADD
+1333
+
+(v3909/)
+
+// Oдно * v909
+ADD
+111
+
+&unifor('Av1333#1')
+
+// Удаление 1-го * v3909
+DEL
+1333
+1
+
+
+// ЦИКЛ 1. На число * 3909
+REPEAT
+CORREC
+if v920:'J'then'*'fi
+v991
+"I="v903,"/"v111^Q,if p(v111^F) then "/"v111^F fi$
+XXXXXXXXXXXXXXXXXX
+// Данные v910^b заключить в ,
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |,|v910^b|,| fi/)
+// НАЧАЛО Обработка * v910 со статусом C/U
+IF
+if rsum((if p(v910) then if 'C U':v910^A AND a(v910^V) then if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Записать в * v1940 все * v910 со статусом C/U
+ADD
+1940
+
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if v910^D=&unifor('Av1001^d#1') then v910,'^V',&unifor('Av1001^A#1') fi fi fi/)
+
+// Удалить все * v910, перенесенные в * v1940
+DEL
+910
+F
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if v910^D=&unifor('Av1001^d#1') then '1' else '0' fi else '0' fi fi/)
+
+// Запомнить суммарное количество экз. (из * v1940^1)
+ADD
+8888
+
+f(rsum((if p(v1940) then if v1940^v=&unifor('Av1001^A#1') then v1940^1|;| fi fi/)),0,0)
+
+// Исключить , из v1940^B
+CHA
+1940^B
+*
+','
+''
+// Сформировать новое * v910, в котором зафиксирован факт выбыти 
+ADD
+910
+
+'^A',&unifor('Av1940^a#1'),'^B',&unifor('Av1940^B#1'),if p(v1940^H) then '^H',&unifor('Av1940^H#1') fi,'^C',&unifor('Av1940^c#1'),'^D',&unifor('Av1940^d#1'),if p(v1940^E) then '^E',&unifor('Av1940^e#1') fi,"^1"v8888,"^X"v8888,"^V"v1001^a
+
+// КОНЕЦ Обработка * v910 со статусом C/U
+FI
+// НАЧАЛО Обработка * v910 со статусом '0'и'P'
+IF
+if rsum((if p(v910) then if v910^A='2' then '0;' else if 'C U':v910^A then '0;' else if p(v910^V) then '0;' else if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi fi fi fi fi/))>0 then '1' else '0' fi
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код, место хр.)
+REP
+910
+F
+(if p(v910) then if v910^A='2' then v910 else if p(v910^V) then v910 else if v910^d=&unifor('Av1001^D#1') then if &unifor('Av1001^K#1')<>'' then if &unifor('Av1001^K#1'):v910^b then '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi else '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi else v910 fi fi fi fi/)
+
+ADD
+9463
+
+(if p(v910) then if v910^A='2' then else if p(v910^V) then else if v910^d=&unifor('Av1001^D#1') then if &unifor('Av1001^K#1')<>'' then if &unifor('Av1001^K#1'):v910^b then v910^p|;| fi fi fi fi fi fi)
+
+DEL
+463
+F
+(if p(v463)then if &unifor('Av9463#1'):v463^w then '1'else'0'fi fi/)
+
+DEL
+9463
+*
+
+
+FI
+// Исключить , из v910^B
+CHA
+910^B
+*
+','
+''
+DEL
+8888
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+1
+
+
+// Новое * v909
+ADD
+111
+
+&unifor('Av1333#1')
+
+DEL
+1333
+1
+
+
+UNTIL
+if v111<>'' then '1' else '0' fi
+DEL
+111
+*
+
+
+DEL
+1333
+*
+
+
+DEL
+3909
+*
+
+
+// КОНЕЦ 3. СПИСАНИЕ, если ЕСТЬ v991^D(^K) И v909^D(^K) - p(v3909)
+FI
+// НАЧАЛО 4. СПИСАНИЕ, если ЕСТЬ v991^D(^K) И НЕТ v909^D(^K) - p(2909)
+IF
+if p(v2909) then '1' else '0' fi
+// Все * v2909 в 111
+ADD
+111
+
+(v2909/)
+
+// 1-ое * v2909 в 222
+ADD
+222
+
+&unifor('Av111#1')
+
+// Удаление 1-го * v2909
+DEL
+111
+1
+
+
+// Предварительное создание архивных полей
+ADD
+1909
+
+(v2909/)
+
+// Удаление * v909
+DEL
+909
+F
+(if p(v909) then if p(v909^D) then '0' else '1' fi fi/)
+
+DEL
+2909
+*
+
+
+// ЦИКЛ 1 (Число * v909 - 111); 1-222
+REPEAT
+// Все номера из v909^H (кумулированные)
+ADD
+555
+
+&unifor('G0('v222^H)
+
+// Декумулировать
+REP
+555
+F
+&unifor("V"v555)
+
+// Каждый номер из v909^H в отдельном подполе ^A
+ADD
+777
+
+'^A',v555
+
+CHA
+777
+1
+','
+'^A'
+// В перечне NN NJ последний символ - ,
+ADD
+444
+
+v555","
+
+// ?????????????????????
+DEL
+555
+*
+
+
+// 1-ый номер NJ из v909^H
+ADD
+1333
+
+&unifor('G0,'v444)
+
+// ЦИКЛ 2
+REPEAT
+// Корректировка записи NJ c номером = v1333
+CORREC
+if v920:'J'then'*'fi
+v991
+"I="v903,"/"v222^Q,if p(v222^F) then "/"v222^F fi,"/"v1333
+XXXXXXXXXXXXXXXXXXX
+// Данные v910^b заключить в ,
+CHA
+910^B
+*
+(if p(v910)then v910^b fi/)
+(if p(v910)then |,|v910^b|,| fi/)
+// НАЧАЛО Обработка * v910 со статусом C/U
+IF
+if rsum((if p(v910) then if 'C U':v910^A AND a(v910^V) then if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Записать в * v1940 все * v910 со статусом C/U
+ADD
+1940
+
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if v910^D=&unifor('Av1001^d#1') then v910,'^V',&unifor('Av1001^A#1') fi fi fi/)
+
+// Удалить все * v910, перенесенные в * v1940
+DEL
+910
+F
+(if p(v910) then if 'C U':v910^a AND a(v910^v) then if v910^D=&unifor('Av1001^d#1') then '1' else '0' fi else '0' fi fi/)
+
+// Запомнить суммарное количество экз. (из * v1940^1)
+ADD
+8888
+
+f(rsum((if p(v1940) then if v1940^v=&unifor('Av1001^A#1') then v1940^1|;| fi fi/)),0,0)
+
+// Исключить , из v1940^B
+CHA
+1940^B
+*
+','
+''
+// Сформировать новое * v910, в котором зафиксирован факт выбыти 
+ADD
+910
+
+'^A',&unifor('Av1940^a#1'),'^B',&unifor('Av1940^B#1'),if p(v1940^H) then '^H',&unifor('Av1940^H#1') fi,'^C',&unifor('Av1940^c#1'),'^D',&unifor('Av1940^d#1'),if p(v1940^E) then '^E',&unifor('Av1940^e#1') fi,"^1"v8888,"^X"v8888,"^V"v1001^a
+
+// КОНЕЦ Обработка * v910 со статусом C/U
+FI
+// НАЧАЛО Обработка * v910 со статусом '0'
+IF
+if rsum((if p(v910) then if v910^A='2' then '0;' else if 'C U':v910^A then '0;' else if p(v910^V) then '0;' else if v910^d=&unifor('Av1001^D#1') then '1;' else '0;' fi fi fi fi fi/))>0 then '1' else '0' fi
+// Ввод статуса и N КС2 в * v910 (Шифр NJ или штрих-код, место хр.)
+REP
+910
+F
+(if p(v910) then if v910^A='2' then v910 else if p(v910^V) then v910 else if v910^d=&unifor('Av1001^D#1') then if &unifor('Av1001^K#1')<>'' then if &unifor('Av1001^K#1'):v910^b then '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i else v910 fi else '^A6','^V',&unifor('Av1001^a#1'),|^d|v910^d,|^b|v910^b,|^h|v910^h,|^e|v910^e,|^u|v910^u,|^y|v910^y,|^c|v910^c,|^f|v910^f,|^p|v910^p,|^i|v910^i fi else v910 fi fi fi fi/)
+
+FI
+// Исключить , из v910^B
+CHA
+910^B
+*
+','
+''
+DEL
+8888
+*
+
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// Чтение * v910 из записи NJ с номером v1333
+ADD
+1910
+
+ref(l("I="v903,"/"v222^Q,if v222^F<>'' then "/"v222^F fi,"/"v1333),(v910/))
+
+// Данные v1910^b заключить в ,
+CHA
+1910^B
+*
+(if p(v910)then v1910^b fi/)
+(if p(v910)then |,|v1910^b|,| fi/)
+// Определить - все ли экз. списаны ?
+ADD
+888
+
+if rsum((if p(v1910) then if v1910^v<>'' then '0;' else if &unifor('Av991^D#1')=v1910^d then if &unifor('Av991^K#1')<>'' then if &unifor('Av991^K#1'):v1910^B then '0;' else '1;' fi else '0;' fi else '1;' fi fi fi/))>0 then '0' else '1' fi
+
+// v888='1' - Все экз. списаны
+IF
+if v888='1' then '1' else '0' fi
+// Декумулировать v1333
+REP
+1333
+F
+&unifor("V"v1333)
+
+// Если списаны все экз., то исключить v1333 из v909^H
+CHA
+777
+1
+"^A"v1333
+''
+// Запомнить списанный номер в поле 2
+ADD
+2
+
+v1333
+
+// v888='1' - Все экз. списаны
+FI
+// Удалить v888 (признак удалени номера NJ из v909^H - списаны все экз.)
+DEL
+888
+*
+
+
+// Удалить v1333 (номер NJ)
+DEL
+1333
+*
+
+
+// Удалить все 1910-ые одного номера NJ
+DEL
+1910
+*
+
+
+// Подготовка к повторению цикла 2
+ADD
+1999
+
+&unifor('G2,'v444)
+
+DEL
+444
+*
+
+
+ADD
+444
+
+if v1999<>'' then v1999 fi
+
+DEL
+1999
+*
+
+
+ADD
+1333
+
+if v444<>'' then &unifor('G0,'v444) fi
+
+// ЦИКЛ 2 на число NN в 909^H. КОНЕЦ
+UNTIL
+if v1333<>'' then '1' else '0' fi
+// Если не все NN из v909^H списаны, то несписанные NN в v777^A
+IF
+if v777<>'' then '1' else '0' fi
+// Исключить ^A. Оставшиес NN записать через , или - 
+CHA
+777
+1
+'^A'
+','
+REP
+777
+1
+&unifor("U"v777",")
+
+// Восстановить удаленное v909 с несписанными NN NJ
+ADD
+909
+
+if v777<>'' then "^Q"v222^Q,"^F"v222^F,"^H"v777,"^V"v222^V fi
+
+// Если не все NN из v909^H списаны, то несписанные NN в v777^A
+FI
+DEL
+777
+*
+
+
+DEL
+555
+*
+
+
+DEL
+444
+*
+
+
+DEL
+1333
+*
+
+
+// Все списанные NN одного тома
+ADD
+1
+
+v2+|,|
+
+REP
+1
+F
+&unifor("U"v1",")
+
+// Ввод в архивные v1909 N KS2 и списка выбывших NN
+REP
+1909
+F
+if v1<>'' then (if p(v1909) then if v1909^Q=&unifor('Av222^Q#1') then if p(v1909^F) then if v1909^F=&unifor('Av222^F#1') then v1909,if p(v1909^W) then if v1909^W:&unifor('Av991^A#1') then ',',&unifor('Av1#1') else '(',&unifor('Av991^A#1'),')',',',&unifor('Av1#1') fi else '^W',&unifor('Av991^A#1'),',',&unifor('Av1#1') fi else v1909 fi else v1909,if p(v1909^W) then if v1909^W:&unifor('Av991^A#1') then ',',&unifor('Av1#1') else '(',&unifor('Av991^A#1'),')',',',&unifor('Av1#1') fi else '^W',&unifor('Av991^A#1'),',',&unifor('Av1#1') fi fi else v1909 fi fi/) else v1909 fi
+
+DEL
+1
+*
+
+
+DEL
+2
+*
+
+
+DEL
+222
+*
+
+
+ADD
+222
+
+if v111<>'' then &unifor('Av111#1') fi
+
+DEL
+111
+1
+
+
+DEL
+888
+*
+
+
+// ЦИКЛ 1. КОНЕЦ
+UNTIL
+if v222<>'' then '1' else '0' fi
+DEL
+111
+*
+
+
+DEL
+222
+*
+
+
+DEL
+1333
+*
+
+
+DEL
+1999
+*
+
+
+DEL
+444
+*
+
+
+DEL
+555
+*
+
+
+DEL
+2
+*
+
+
+DEL
+1
+*
+
+
+DEL
+888
+*
+
+
+DEL
+1909
+F
+(if p(v1909) then if p(v1909^W) then '0' else '1' fi fi/)
+
+// КОНЕЦ 4. СПИСАНИЕ, если ЕСТЬ v991^D(^K) И НЕТ v909^D(^K) - наличие v2909
+FI
+// КОНЕЦ SPZGL. Списание журналов по заглавим
+FI
+// НАЧАЛО PSNJ. Передача списанных номеров NJ в другое место хранени
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v800^E')='1' then '1' else '0' fi
+// Ввод в v991 значений старого, нового мест хран., числа передаваемых экз.
+IF
+if v991^M<>'' OR v991^D<>'' then '0' else '1' fi
+REP
+991
+F
+v991,'^D',if &unifor('DCMPL,"KS2=',v991^a,'",v800^D')<>'' then &unifor('DCMPL,"KS2=',v991^a,'",v800^D') else &unifor('DCMPL,"KS2=',v991^a,'",v888^D') fi,if &unifor('DCMPL,"KS2=',v991^a,'",v800^K')<>'' then '^K',&unifor('DCMPL,"KS2=',v991^a,'",v800^K') fi,'^M',&unifor('DCMPL,"KS2=',v991^a,'",v800^M'),'^P',&unifor('DCMPL,"KS2=',v991^a,'",v800^A'),if &unifor('DCMPL,"KS2=',v991^a,'",v800^Z')<>'' then '^Z',&unifor('DCMPL,"KS2=',v991^a,'",v800^Z') fi
+
+FI
+// Шифр отобранного NJ в !
+ADD
+1
+F
+"!"v903"!"
+
+// Данные v910^H в !
+CHA
+910^H
+*
+(if p(v910)then v910^h fi/)
+(if p(v910)then |!|v910^h|!| fi/)
+// Ввод в * v910 с заданным (старым) MHR в ^M нового MHR, в ^W N акта передачи
+REP
+910
+F
+if v991^B:v1 then (if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v910^d=&unifor('Av991^D#1') then if &unifor('Av991^K#1')<>'' AND v910^b=&unifor('Av991^K#1') then v910,'^M',&unifor('Av991^M#1'),'^W',&unifor('Av991^p#1') else v910 fi else v910 fi else v910 fi fi/) else (if p(v910) then if &unifor('Av991^B#1'):v910^h then v910,'^M',&unifor('Av991^M#1'),'^W',&unifor('Av991^p#1') else v910 fi fi/) fi
+
+// Данные v940^H в !
+CHA
+940^H
+*
+(if p(v940)then v940^h fi/)
+(if p(v940)then |!|v940^h|!| fi/)
+// Ввод в * v940 с заданным (старым) MHR в ^M-нового MHR, в ^W-N акта передачи и в ^Z-числа передаваемых экз.
+REP
+940
+F
+if v991^B:v1 then (if p(v940) then if 'C U':v940^A then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v940^d=&unifor('Av991^D#1') then if &unifor('Av991^K#1')<>'' AND v940^b=&unifor('Av991^K#1')or &unifor('Av991^K#1')='' then v940,'^M',&unifor('Av991^M#1'),'^W',&unifor('Av991^p#1'),'^Z',if &unifor('Av991^Z#1')<>'' then &unifor('Av991^Z#1') else v940^X fi else v940 fi else v940 fi else v940 fi else v940 fi fi/) else (if p(v940) then if 'C U':v940^A then if &unifor('Av991^B#1'):v940^h then v940,'^M',&unifor('Av991^M#1'),'^Z',if &unifor('Av991^Z#1')<>'' then &unifor('Av991^Z#1') else v940^X fi,'^W',&unifor('Av991^p#1') else v940 fi else v940 fi fi/) fi
+
+// Читать * v1909 из записи J, соответствующей номеру журнала
+ADD
+1909
+F
+REF(L("I="v933),(v1909/))
+
+// Определить, есть ли ^D и ^K в * v1909, соответствующем NJ
+ADD
+1111
+F
+if rsum((if p(v1909) then if v1909^Q=&unifor('Av934#1') then if p(v1909^F) then if v1909^F=&unifor('Av935#1') then if v1909^K='' AND v1909^D='' then '1;' else '0;' fi fi else if v1909^K='' AND v1909^D='' then '1;' else '0;' fi fi fi fi/))>0 then '1' else '0' fi
+
+// Удалить * v1909
+DEL
+1909
+*
+
+
+// НАЧАЛО 1. Условие, что в 1909-х НЕТ ^K И ^D дл заданного NJ
+IF
+if v1111='1' then '1' else '0' fi
+// Работа с * v910 (статус 6) 
+IF
+if rsum((if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if v910^W=&unifor('DCMPL,"KS2=',v910^v,'",v800^A') then if v910^M<>'' then '1;' else '0;' fi else '0;' fi else '0;' fi fi))>0 then '1' else '0' fi
+// Формирование нового * v910 с новым местом хранени из * v910
+ADD
+2222
+F
+if v991^B:v1 then (if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v910^d=&unifor('Av991^D#1') then if &unifor('Av991^M#1')<>'' AND v910^m=&unifor('Av991^m#1') then '^A0',|^H|v910^H,if p(v910^C) then |^C|v910^C else '^C',&unifor('3') fi,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi fi fi/) else (if p(v910) then if &unifor('Av991^B#1'):v910^h then '^A0',|^H|v910^H,|^C|v910^C,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi/) fi
+
+// Исключить ! из v2222^H
+CHA
+2222^H
+*
+'!'
+''
+// Определить номер экз. (среди 910-х есть * с новым MHR, но он списан)
+ADD
+3
+F
+(if p(v910) then if v910^D=&unifor('Av991^M#1') then if v910^A='6' then v910^B fi fi fi/)
+
+// Определить номер экз. (среди 910-х нет списанного * с новым MHR)
+ADD
+4
+F
+if a(v3) then &unifor('S0'),(if p(v910) then &unifor('S1') fi/),&unifor('S1A') fi
+
+ADD
+910
+F
+(if p(v2222) then v2222,|^B|v3,|^B|v4 fi/)
+
+DEL
+3
+*
+
+
+DEL
+4
+*
+
+
+DEL
+2222
+*
+
+
+FI
+// Работа с * v940 (статус C или U)
+IF
+if rsum((if p(v940) then if 'C U':v940^A then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('IPRIVATE,PKS2,')<>'' AND v940^w=&unifor('IPRIVATE,PKS2,') then if v940^M<>'' then '1;' else '0;' fi else '0;' fi else '0;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Формирование нового * v910 с новым местом хранени из * v940
+ADD
+2222
+F
+if v991^B:v1 then (if p(v940) then if 'C U':v940^a then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v940^d=&unifor('Av991^D#1') then if &unifor('Av991^M#1')<>'' AND v940^m=&unifor('Av991^m#1') then |^A|v940^A,|^B|v940^b,|^H|v940^H,if p(v940^C) then |^C|v940^C else '^C',&unifor('3') fi,|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^Z fi fi fi fi fi/) else (if p(v940) then if 'C U':v940^A then if &unifor('Av991^B#1'):v910^h then |^A|v940^A,|^H|v940^H,|^C|v940^C,|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^Z fi fi fi/) fi
+
+// Исключить ! из v2222^H
+CHA
+2222^H
+*
+'!'
+''
+// Определить номер экз. (среди 940-х есть * с новым MHR, но он списан)
+ADD
+3
+F
+(if p(v910) then if v910^D=&unifor('Av991^M#1') then if v910^A='6' then v910^B fi fi fi/)
+
+// Определить номер экз. (среди 910-х нет списанного * с новым MHR)
+ADD
+4
+F
+if a(v3) then &unifor('S0'),(if p(v910) then &unifor('S1') fi/),&unifor('S1A') fi
+
+DEL
+2222^b
+F
+if s(',',&uf('Pv910^b'),','):s(','v2222^b',')then '1' else '0' fi
+
+ADD
+910
+
+(if p(v2222) then v2222,if v2222^b<>''then else |^B|v3,|^B|v4 fi fi/)
+
+DEL
+3
+*
+
+
+DEL
+4
+*
+
+
+DEL
+2222
+*
+
+
+FI
+// Читаем * v909
+ADD
+909
+F
+REF(L("I="v933),(v909/))
+
+// Формирование признака необходимости работы с записью J, соответствующей NJ
+// Отсутствие * v909, соответствующего NJ
+ADD
+4444
+F
+if rsum((if p(v909) then if v909^Q=&unifor('Av934#1') then if p(v909^F) then if v909^F=&unifor('Av935#1') then '1;' else '0;' fi else '1;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+
+// Формирование признака необходимости работы с записью J, соответствующей NJ
+// Присутствие * 909-го, соответствующего NJ, но номера NJ не содержащего
+ADD
+2
+F
+(if p(v909) then if v909^Q=&unifor('Av934#1') then if p(v909^F) then if v909^F=&unifor('Av935#1') then v909^H fi else v909^H fi fi fi/)
+
+// Декумулировать NN журналов в v2
+REP
+2
+F
+&unifor("V"v2)
+
+// Заключить v2 в ,
+REP
+2
+F
+","V2","
+
+// Номер NJ (v936) в v1001
+ADD
+1001
+
+v936
+
+// Преобразовать v1001 !
+REP
+1001
+F
+&unifor("V"v1001)
+
+// Номер NJ заключить в ,
+REP
+1001
+F
+","v1001","
+
+// Номер NJ есть в 909^H ?
+ADD
+3333
+F
+if v2:v1001 then '1' else '0' fi
+
+// Удаление 909-х полей
+DEL
+909
+*
+
+// Удаление v1001
+DEL
+1001
+1
+
+
+// Условие корректировки J (* v909 НЕ содержат ^D и ^K)
+IF
+if v4444='0' or v3333='0' then '1' else '0' fi
+CORREC
+if v920:'NJ'then'*'fi
+v991,"^G"v934,"^T"v935,"^N"v936,"^L"v4444,"^S"v3333
+"I="v933
+XXXXXXXXXXXXXXXXXXX
+IF
+if v1001^L='0' then '1' else '0' fi
+ADD
+909
+F
+"^Q"v1001^G,"^F"v1001^T,"^H"v1001^N
+
+FI
+// Добавление v1001^N в соответствующее * v909, если он в нем отсутствует
+IF
+if v1001^L='1' AND v1001^S='0' then '1' else '0' fi
+ADD
+2
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av935#1') then v909^H fi else v909^H fi fi fi/)
+
+// Декумулировать NN журналов в поле 2
+REP
+2
+F
+&unifor("V"v2)
+
+// Декумулировать номер NJ (v1001^N)
+REP
+1001^N
+F
+&unifor("V"v1001^N)
+
+// Приписка номера NJ
+REP
+2
+F
+v2,","v1001^N
+
+// Кумулировать NN журналов в поле 2
+REP
+2
+F
+&unifor("U"v2",")
+
+// Замена * v909 (в 909^H нет номера переданного NJ)
+REP
+909
+F
+(if p(v909) then if v909^Q=&unifor('Av1001^G#1') then if p(v909^F) then if v909^F=&unifor('Av1001^T#1') then |^Q|v909^Q,|^F|v909^F,'^H',&unifor('Av2#1'),|^V|v909^V else v909 fi else |^Q|v909^Q,|^F|v909^F,'^H',&unifor('Av2#1'),|^V|v909^V fi else v909 fi fi/)
+
+FI
+// Ввод ^P (номер акта передачи) в v1909, соответствующие v1001^N
+REP
+1909
+F
+(if p(v1909) then if v1909:'^D' then else if v1909^Q=&unifor('Av1001^G#1') then if p(v1909^F) then if v1909^F=&unifor('Av1001^T#1') then if &unifor('G0,'v1909^W)=&unifor('IPRIVATE,KS2,') then if a(v1909^P) then v1909,'^P',&unifor('Av1001^P#1') else ',(',&unifor('Av1001^P#1'),')' fi else v1909 fi else v1909 fi else if &unifor('G0,'v1909^W)=&unifor('IPRIVATE,KS2,') then if a(v1909^P) then v1909,'^P',&unifor('Av1001^P#1') else ',(',&unifor('Av1001^P#1'),')' fi else v1909 fi fi else v1909 fi fi fi/)
+
+DEL
+1001
+1
+
+
+DEL
+2
+*
+
+
+// ВЫХОД из корректировки J дл заданного N журнала (909-ые НЕ содержат ^D и ^K)
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+
+
+DEL
+2222
+1
+
+
+DEL
+3333
+1
+
+
+DEL
+4444
+1
+
+
+DEL
+2
+1
+
+
+DEL
+3
+1
+
+
+DEL
+4
+1
+
+
+// КОНЕЦ 1. Условие, что в * v909 НЕТ ^K И ^D
+FI
+// НАЧАЛО 2. Условие, что в * v909 ЕСТЬ ^K и ^D
+IF
+if v1111='0' then '1' else '0' fi
+// Работа с * v910 (статус 6) 
+IF
+if rsum((if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if &unifor('IPRIVATE,PKS2,')<>'' AND v910^W=&unifor('DCMPL,"KS2=',v910^v,'",v800^A')  then if v910^M<>'' then '1;' else '0;' fi else '0;' fi else '0;' fi fi))>0 then '1' else '0' fi
+// Формирование нового * v910 с новым местом хран.
+ADD
+2222
+
+if v991^B:v1 then (if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v910^d=&unifor('Av991^D#1') then if &unifor('Av991^M#1')<>'' AND v910^m=&unifor('Av991^M#1') then '^A0',|^H|v910^H,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi fi fi/) else (if p(v910) then if &unifor('Av991^B#1'):v910^h then '^A0',|^H|v910^H,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi/) fi
+
+// Исключение ! из v2222^H
+CHA
+2222^H
+*
+'!'
+''
+// Определить номер экз. (среди * v910 есть * с новым MHR, но он списан)
+ADD
+3
+
+(if p(v910) then if v910^D=&unifor('Av991^M') then if v910^A='6' then v910^B fi fi fi/)
+
+// Определить номер экз. (среди * v910 нет списанного * с новым MHR)
+ADD
+4
+
+if a(v3) then &unifor('S0'),(if p(v910) then &unifor('S1') fi/),&unifor('S1A') fi
+
+ADD
+910
+
+(v2222,if p(v3) then |^B|v3 else |^B|v4 fi/)
+
+DEL
+3
+*
+
+
+DEL
+4
+*
+
+
+DEL
+2222
+*
+
+
+FI
+// Работа с * v940 (статус C или U)
+IF
+if rsum((if p(v940) then if 'C U':v940^A then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('IPRIVATE,PKS2,')<>'' AND v940^w=&unifor('IPRIVATE,PKS2,') then if v940^M<>'' then '1;' else '0;' fi else '0;' fi else '0;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+// Формирование нового * v910 с новым местом хранени из * v940
+ADD
+2222
+F
+if v991^B:v1 then (if p(v940) then if 'C U':v940^a then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av991^D#1')<>'' AND v940^d=&unifor('Av991^D#1') then if &unifor('Av991^M#1')<>'' AND v940^m=&unifor('Av991^m#1') then  |^A|v940^A,|^H|v940^H,|^C|v940^C,'^?',&unifor('3'),|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^z,if v940^1=v940^x then |^B|v940^b fi fi fi fi fi fi/) else (if p(v940) then if 'C U':v940^A then if &unifor('Av991^B#1'):v940^h then |^A|v940^A,|^H|v940^H,'^?',&unifor('3'),|^C|v940^c,|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^Z,|^B|v940^b fi fi fi/) fi
+
+// Исключить ! из v2222^H
+CHA
+2222^H
+*
+'!'
+''
+IF
+if v2222:'^B' then '0' else '1' fi
+// Определить номер экз. (среди 910-х есть * с новым MHR, но он списан)
+ADD
+3
+F
+(if p(v910) then if v910^D=&unifor('Av991^M#1') then if v910^A='6' then v910^B fi fi fi/)
+
+// Определить номер экз. (среди 910-х нет списанного * с новым MHR)
+ADD
+4
+F
+if a(v3) then &unifor('S0'),(if p(v910) then &unifor('S1') fi/),&unifor('S1A') fi
+
+ADD
+910
+
+(if p(v2222) then v2222,|^B|v3,|^B|v4 fi/)
+
+FI
+IF
+if v2222:'^B' then '1' else '0' fi
+ADD
+910
+
+(v2222/)
+
+FI
+DEL
+3
+*
+
+
+
+DEL
+4
+*
+
+
+
+DEL
+2222
+*
+
+
+
+FI
+DEL
+2
+*
+
+
+DEL
+3333
+*
+
+
+DEL
+4444
+*
+
+
+// КОНЕЦ 2. Условие, что в 909-х ЕСТЬ ^K И ^D
+// Работу с записью J (* v909) проводит AUTOIN
+CORREC
+&unifor('S0'),if v920='NJ'then(if p(v910)then if v910^C=''and '0 8':v910^a then if val(&unifor('S1A'))<0then fi fi fi),if &unifor('S1A')='1'then else'*'fi fi 
+if v920='NJ'then(if p(v910)then if v910^C=''and '0 8':v910^a then|^K |v910^b,|^D|v910^d,'^Q'&unifor(|Av934#1|d910),'^F'&unifor('Av935#1'),'^H',&unifor(|Av936#1|d910),if &unifor(|Av931^a#1|d910)<>''then'^V',&unifor(|Av931^a#1|d910)fi fi fi/)fi
+"I="v933
+XXXXXXXXXXXXXXXXXXX
+ADD
+49
+XXXXXXXXXXXXXXXXXXX
+(v1001^k| |)
+XXXXXXXXXXXXXXXXXXX
+CHA
+909^k
+F
+(if p(v909^k)then v909^k else |^^^|d909fi/)
+(if p(v909^k)then | |v909^k else |^^^|d909fi/)
+CHA
+909^H
+F
+(if v909^Q=&unifor(|Av1001^Q#1|d909)and &unifor(|Av49#1|d909):v909^k| | and v909^F=&unifor(|Av1001^F#1|d909)then v909^H else|^^|d909fi/)
+(if v909^Q=&unifor(|Av1001^Q#1|d909)and &unifor(|Av49#1|d909):v909^k| | and v909^F=&unifor(|Av1001^F#1|d909)then &unifor(|U|v909^H|,|,&unifor(|Av1001^h#1|d909)) else|^^|d909 fi/)
+ADD
+57
+XXXXXXXXXXXXXXXXXXX
+(if p(v909)then if v909^Q=&unifor(|Av1001^Q#1|d909)and &unifor(|Av49#1|d909):v909^k| | and v909^F=&unifor(|Av1001^F#1|d909)then v909^k| |fi fi)
+XXXXXXXXXXXXXXXXXXX
+ADD
+909
+XXXXXXXXXXXXXXXXXXX
+(if p(v1001)then if &unifor(|Av57#1|d1001):v1001^k| | then else |^Q|v1001^q,|^F|v1001^f,|^K|v1001^k,|^D|v1001^d,|^H|v1001^h,|^V|v1001^v, fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+909^k
+*
+' '
+''
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+57
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+49
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+909
+F
+if v920='J'then (if p(v909)then if v909^H=''then '1'else'0'fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(if p(v910)then v910,if v910^A='0'and v910^C=''then '^C',&unifor('3')fi fi/)
+
+FI
+DEL
+1111
+*
+
+
+// Исключение ! из v910^H
+CHA
+910^H
+*
+'!'
+''
+// Исключение ! из v940^H
+CHA
+940^H
+*
+'!'
+''
+DEL
+1
+*
+
+
+// КОНЕЦ PSNJ. Передача списанных номеров NJ в другие подразделени 
+FI
+// НАЧАЛО PSGOD. Передача годовых комплектов в другое подразделение 
+IF
+if &unifor('DCMPL,"KS2=',v991^a,'",v888^E.1')='2' then if &unifor('DCMPL,"KS2=',v991^a,'",v800^E')='2' then '1' else '0' fi fi
+// Корректировка v991
+IF
+if v991^C<>'' then '0' else '1' fi
+REP
+991
+F
+v991,'^C',if &unifor('DCMPL,"KS2=',v991^a,'",v800^E')<>'' then if &unifor('DCMPL,"KS2=',v991^a,'",v888^E*2.4')<>'' then &unifor('DCMPL,"KS2=',v991^a,'",v888^E*2.4') else &unifor('G0!'v991^b*1) fi fi,'^D',if &unifor('DCMPL,"KS2=',v991^a,'",v800^D')<>'' then &unifor('DCMPL,"KS2=',v991^a,'",v800^D') else &unifor('DCMPL,"KS2=',v991^a,'",v888^D') fi,if &unifor('DCMPL,"KS2=',v991^a,'",v800^K')<>'' then '^K',&unifor('DCMPL,"KS2=',v991^a,'",v800^K') fi,'^M',&unifor('DCMPL,"KS2=',v991^a,'",v800^M'),'^Z',&unifor('DCMPL,"KS2=',v991^a,'",v800^Z')
+
+
+FI
+// Есть ли ^D и ^K в * v1909, соответствующих заданному ГОДу ?
+ADD
+1111
+
+if rsum((if p(v1909) then if v1909^Q=&unifor('Av991^C#1') then if v1909^W:&unifor('IPRIVATE,KS2,') then if v1909^K<>'' AND v1909^D<>'' then '1;' else '0;' fi else '0;' fi else '0;' fi fi/))>0 then '1' else '0' fi
+
+// Условие, что в v909 или v1909 нет ^K и ^D
+IF
+if v1111='0' then '1' else '0' fi
+// НАЧАЛО 1. Передача списанных NN NJ ГОДа, если a(v1909^D), a(v1909^K)
+// Формирование * v909, соответствующих заданному ГОДу
+ADD
+909
+
+(if p(v1909) then if &unifor('IPRIVATE,KS2,')<>'' AND v1909^W:&unifor('IPRIVATE,KS2,') then if v1909^Q=&unifor('Av991^C#1') then |^Q|v1909^Q,|^F|v1909^F,|^H|v1909^H,|^V|v1909^V fi fi fi/)
+
+// Ввод ^P (номер акта передачи) в v1909, соответствующиx ГОДу
+ADD
+1909^P
+F
+(if p(v1909) then if &unifor('IPRIVATE,KS2,')<>'' AND v1909^W:&unifor('IPRIVATE,KS2,') then if v1909^Q=&unifor('Av991^C#1') then &unifor('IPRIVATE,PKS2,') else # fi else # fi fi/)
+
+// Корректировка записей NJ ГОДа
+CORREC
+if v920:'J' then '*' fi
+v991
+"I="v903"/",v991^C$
+XXXXXXXXXXXXXXXXXXX
+// Корректировка * v910 записи NJ - ввод нового места хр.
+REP
+910
+F
+(if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND &unifor('IPRIVATE,KS2,')=v910^v then if &unifor('Av1001^D#1')=v910^d then if &unifor('Av1001^K#1')<>'' then if &unifor('Av1001^K#1')=v910^b then v910,'^M',&unifor('Av1001^M#1') else v910 fi else v910,'^M',&unifor('Av1001^M#1') fi else v910 fi else v910 fi fi/)
+
+// Ввод в * v940 с заданным (старым) MHR в ^M-нового MHR, в ^W-N акта передачи и в ^Z-числа передаваемых экз.
+REP
+940
+F
+if v1001^B:v1 then (if p(v940) then if 'C U':v940^A then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av1001^D#1')<>'' AND v940^d=&unifor('Av1001^D#1') then if &unifor('Av1001^K#1')<>'' AND v940^b=&unifor('Av1001^K#1')or &unifor('Av1001^K#1')=''then v940,'^M',&unifor('Av1001^M#1'),'^Z',if &unifor('Av1001^Z#1')<>'' then &unifor('Av1001^Z#1') else v940^X fi else v940 fi else v940 fi else v940 fi else v940 fi fi/) else (if p(v940) then if 'C U':v940^A then if &unifor('Av1001^B#1'):v940^h then v940,'^M',&unifor('Av1001^M#1'),'^Z',if &unifor('Av1001^Z#1')<>'' then &unifor('Av1001^Z#1') else v940^X fi, else v940 fi else v940 fi fi/) fi
+
+// Формирование нового * v910 с новым местом хр. из v910
+ADD
+910
+
+(if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if v910^d=&unifor('Av1001^D#1') then if v910^b=&unifor('Av1001^K#1') then '^A0',|^B|v910^B,|^H|v910^H,|^C|V910^C,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi fi fi/)
+
+// Формирование нового * v910 с новым местом хр. из v940
+ADD
+910
+
+(if p(v940) then if 'C U':v940^a then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av1001^D#1')<>'' AND v940^d=&unifor('Av1001^D#1') then if &unifor('Av1001^M#1')<>'' AND v940^m=&unifor('Av1001^m#1') then |^A|v940^A,|^B|v940^b,|^H|v940^H,|^C|v940^C,|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^Z fi fi fi fi fi/)
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ 1. Передача списанных NN NJ ГОДа, если a(v1909^D), a(v1909^K)   
+FI
+// Условие, что в v1909 еcть ^K и ^D
+IF
+if v1111='1' then '1' else '0' fi
+// НАЧАЛО 2. Передача списанных NN NJ ГОДа, если p(v1909^D), p(v1909^K)
+// Формирование * v909, соответствующих ГОДу
+ADD
+909
+
+(if p(v1909) then if &unifor('IPRIVATE,KS2,')<>'' AND v1909^W=&unifor('IPRIVATE,KS2,') then if v1909^K=&unifor('Av991^K#1') then if v1909^D=&unifor('Av991^D#1') then |^Q|v1909^Q,|^K|v1909^K,'^D',&unifor('Av991^M#1'),|^F|v1909^F,|^H|v1909^H,|^V|v1909^V fi fi fi fi/)
+
+// Ввод ^P (номер акта передачи) в v1909, соответствующиx ГОДу
+REP
+1909
+F
+(if p(v1909) then if &unifor('IPRIVATE,KS2,')<>'' AND v1909^W=&unifor('IPRIVATE,KS2,') then if v1909^K=&unifor('Av991^K#1') then if v1909^D=&unifor('Av991^D#1') then v1909,'^P',&unifor('IPRIVATE,PKS2,') else v1909 fi else v1909 fi else v1909 fi fi/)
+
+// Корректировка записей NJ ГОДа
+CORREC
+if v920:'J' then '*' fi
+v991
+"I="v903"/",v991^C$
+XXXXXXXXXXXXXXXXXXX
+// Корректировка * v910 записи NJ - ввод нового места хр.
+REP
+910
+F
+(if p(v910) then if &unifor('IPRIVATE,KS2,')<>'' AND v910^V=&unifor('IPRIVATE,KS2,') then if &unifor('Av1001^D#1')=v910^d then if &unifor('Av1001^K#1')=v910^b then v910,'^M',&unifor('Av1001^M#1') else v910 fi else v910 fi else v910 fi fi/)
+
+// Корректировка * v940 записи NJ - ввод нового места хр.
+REP
+940
+F
+(if p(v940) then if &unifor('IPRIVATE,KS2,')<>'' AND v940^V=&unifor('IPRIVATE,KS2,') then if &unifor('Av1001^D#1')=v940^d then if &unifor('Av1001^K#1')=v940^b then v940,'^M',&unifor('Av1001^M#1'),'^Z',if &unifor('Av1001^Z#1')<>'' then &unifor('Av1001^Z#1') else v940^X fi else v940 fi else v940 fi else v940 fi fi/)
+
+// Формирование нового * v910 с новым местом хр. из v910
+ADD
+910
+
+(if p(v910) then if v910^A='6' then if &unifor('IPRIVATE,KS2,')<>'' AND v910^v=&unifor('IPRIVATE,KS2,') then if v910^D=&unifor('Av1001^D#1') then if v910^B=&unifor('Av1001^K#1') then '^A0',|^B|v910^B,|^H|v910^H,|^C|v910^c,|^D|v910^M,|^E|v910^E,|^F|v910^F fi fi fi fi fi/)
+
+// Формирование нового * v910 с новым местом хр. из v940
+ADD
+910
+
+(if p(v940) then if 'C U':v940^a then if &unifor('IPRIVATE,KS2,')<>'' AND v940^v=&unifor('IPRIVATE,KS2,') then if &unifor('Av1001^D#1')<>'' AND v940^d=&unifor('Av1001^D#1') then if &unifor('Av1001^M#1')<>'' AND v940^m=&unifor('Av1001^m#1') then |^A|v940^A,|^B|v940^b,|^H|v940^H,if p(v940^C) then |^C|v940^C else '^C',&unifor('3') fi,|^D|v940^M,|^E|v940^E,|^F|v940^F,|^1|v940^Z fi fi fi fi fi/)
+
+DEL
+1001
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// КОНЕЦ 2. Передача списанных NN NJ ГОДа, если a(v1909^D), a(v1909^K)
+FI
+DEL
+1111
+*
+
+
+// КОНЕЦ PSGOD. Передача годовых комплектов в другое подразделение 
+FI
+DEL
+991
+*
+
+
+

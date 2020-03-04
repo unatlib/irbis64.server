@@ -1,0 +1,16 @@
+if v953<>''and v953^p:'2'then 
+'<div>',
+
+(if p(v953)then if v953^p='2'then       
+       '<br>','<A HREF="IRBIS:3,12,,',mfn,',','1','">',
+       '<IMG style="width:100px;margin-right:10px;position:relative;float:left;left:0px;" SRC="IRBIS:12,,',mfn,',','1','"></A>'BREAK,fi,
+ fi) 
+'</div>',else if v951^h:'02a'and v951^a<>'' then 
+'<div>',
+(if p(v951)then if v951^h:'02a'and v951^a<>''then 
+'<A HREF="IRBIS:3?PATH=11&FILENAME=',v951^a,'">',
+'<IMG style="width:100px;margin-right:10px;position:relative;float:left;left:0px;" SRC="IRBIS:11,,',v951^a,'"></A>'BREAK,fi,
+ fi) 
+'</div>',
+
+ fi, fi

@@ -1,0 +1,27 @@
+[ROWQRY]
+'RI=$'
+'VS=$'
+'VS=$'
+'RI=$'
+'KAT=$'
+'RB=$'
+'RB=$'
+[FLDTEXT]
+'Всего читателей',,&uf('+7W1001#')
+'Посещений за период'
+'Кол-во обслуженных читателей (выдача)'
+'Кол-во записавшихся'
+'Кол-во выбывших'
+'Держатели книг',
+'Должники на ',&uf('Ag991^B#1')
+[FLDMODE1001]
+'1'
+'2'
+'3'
+'4'
+'5'
+'6'
+'7'
+[FLDSUM]
+if val(G1001)=1 then if p(v40) then '1' fi else if val(G1001)=2 then &uf('+7W10#',(if p(v40)  then if v40^A<>'' then if &uf('Ag991^A#1')<>'' or &uf('Ag991^B#1')<>''  then if &uf('Ag991^A#1')='' or v40^D<>'' and val(v40^D)>=val(&uf('Ag991^A#1')) then if &uf('Ag991^B#1')='' or  v40^D<>'' and val(v40^D)<=val(&uf('Ag991^B#1')) then v40^D,v40^F,v40^L  fi,,fi,,if &uf('Ag991^A#1')='' or v40^F.1<>'*' and val(v40^F)>=val(&uf('Ag991^A#1')) or v40^L<>'' and val(v40^L)>=val(&uf('Ag991^A#1')) then if &uf('Ag991^B#1')='' or val(v40^F)<=val(&uf('Ag991^B#1')) or  val(v40^L)<=val(&uf('Ag991^B#1')) then  v40^D,v40^F,v40^L  fi,,fi,,else  v40^D,v40^F,v40^L   fi,,else  if &uf('Ag991^A#1')<>'' or &uf('Ag991^B#1')<>''  then if &uf('Ag991^A#1')='' or  val(v40^D)>=val(&uf('Ag991^A#1'))  then if &uf('Ag991^B#1')='' or val(v40^D)<=val(&uf('Ag991^B#1'))  then v40^D fi,,fi,,else v40^D  fi,,fi  fi/) ),,,,&uf('+7G10'),,f( rsum(  (if p(g10) then '1,' fi) ),0,0)  else if val(G1001)=3 then  (if p(v40) then if &uf('Ag991^A#1')<>'' or &uf('Ag991^B#1')<>'' then if &uf('Ag991^A#1')='' or val(v40^D)>=val(&uf('Ag991^A#1')) then if &uf('Ag991^B#1')='' or  val(v40^D)<=val(&uf('Ag991^B#1')) then  '1'  break fi fi,,else if v40^D<>'' then '1' break fi,,fi,,fi)  else if val(G1001)=4 then  if v51<>''  then if &uf('Ag991^A#1')<>'' or &uf('Ag991^B#1')<>'' then if &uf('Ag991^A#1')='' or val(&uf('Av51.8#1'))>=val(&uf('Ag991^A#1')) then if &uf('Ag991^B#1')='' or val(&uf('Av51.8#1'))<=val(&uf('Ag991^B#1')) then  '1',break  fi,,fi,,else  '1',,break,,fi,,fi,,else if val(G1001)=5 then if &uf('Ag991^A#1')<>'' or &uf('Ag991^B#1')<>'' then if &uf('Av55.8#1')<>''  then if &uf('Ag991^A#1')='' or &uf('Ag991^A#1')<>''  and val(&uf('Av55.8#1'))>=val(&uf('Ag991^A#1')) then if &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and val(&uf('Av55.8#1'))<=val(&uf('Ag991^B#1'))  then '1',,break  fi fi fi else if &uf('Av55.8#1')<>'' then '1',,break fi,,,fi else if val(G1001)=6 then (if p(v40) then if v40^F.1='*' then  '1' break fi fi) else if val(G1001)=7 then  (if p(v40) then if v40^F.1='*' then if &uf('Ag991^B#1')<>'' then if  v40^E<>'' and val(v40^E)<=val(&uf('Ag991^B#1')) then  '1' break fi  else if v40^E<>'' and val(v40^F) < val(&uf('3')) then '1' break fi,,fi,,fi   fi)  fi fi fi fi fi fi fi 
+'1'

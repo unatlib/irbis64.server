@@ -1,0 +1,36 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=12
+TAB_IRBIS64=1
+TAB_TABITOGI=1
+CELL_TAB_COL_COUNT=3
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=10
+CELL_TAB2_2=Экземпляров -  Всего
+CELL_TAB2_3=&uf('+7W991#'v991^b,if v991^b='' then &uf('3') fi),if v991^a:'1' then f(rsum((if p(v40) then if v40^f:'***'then '1;'fi fi)),0,0)) else if v991^a:'2' then f(rsum((if p(v40) then if v40^f:'***'then if val(v40^e)<val(&uf('Ag991#1')) then '1;'fi fi fi)),0,0))  fi fi
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=v1
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=0
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=Sumex
+HDR_PFT=SumexH
+HDR_PARAMS_COUNT=0

@@ -1,0 +1,81 @@
+8
+A
+Фак-т
+0
+0
+1
+691a.mnu\\2
+
+
+
+(if p(v691) and a(v691^U) then if p(v691^A) then v691^A else ' ' fi fi/)
+C
+Спец.
+0
+0
+1
+691c.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^C) then v691^C else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^c')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^c') else ' ' fi fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^F) then v691^F else ' ' fi fi/)
+O
+Форм.обуч.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^O) then v691^O else ' ' fi fi/)
+V
+Вид обуч.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^V) then v691^V else ' ' fi fi/)
+N
+Напр.
+0
+0
+1
+691c.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^N) then v691^N else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^n')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^n') else ' ' fi fi fi/)
+L
+Филиал
+0
+0
+0
+fili.mnu
+
+
+
+(if p(v691) and a(v691^U) then if p(v691^L) then v691^L else ' ' fi fi/)
+1
+NN
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U) then if p(v691^A) or p(v691^L) or p(v691^N) or p(v691^C) or p(v691^V) or p(v691^O) or p(v691^F) then &uf('+90') else ' ' fi fi/)

@@ -1,0 +1,12 @@
+mhl,
+(if '***'='710'and v920:'PVK'or'***'='972'or'***'='601'or'***'='981'or'***'='962' 
+ then v***^a,'^R' else 
+    if '***'='710' or '***'='711' then 
+       v***^a,'^R'v***^r, 
+    else 
+       if '***'='7101'then v710^b '^R' else 
+          if '***'='7111'then v711^b '^R'else 
+             if '***'='9621'then v962^b '^R' 
+             else v***^b,'^R' 
+ fi fi fi fi fi/),
+mpl,

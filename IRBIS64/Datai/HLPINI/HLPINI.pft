@@ -1,0 +1,7 @@
+'{','\tab \tab \tab \tab \tab \tab ',G1,'/',G2
+'\b \par Параметр:    \tab  ',v3,
+'\b \par Секция:      \tab \b0 ',v2+|, |,
+'\b \par Файл INI:    \tab \b0 ',v1+|, |,
+'\b \par Назначение:  \tab \b0 ',v4,
+"\b \par Доп.описание:\tab  \b0 "v5,
+'}',

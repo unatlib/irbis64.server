@@ -1,0 +1,33 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+f(rsum(if v991^A=v30^k then if a(v30^u) then v30^d fi fi,' 0',if v991^A=v31^k then if a(v31^u) then v31^d fi fi,' 0',if v991^A=v32^k then if v32^u) then v32^d,' 0' fi fi,,',',(if p(v62)  then if &uf('Av991^A#1')='' and &uf('Av991^B#1')='' or &uf('Av991^B#1')='' and &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^K) or &uf('Av991^A#1')='' and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b)  or  &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^k) and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b) then if a(v62^u) then v62^d|;| fi fi fi) ),0,0)/
+f(rsum(if v991^A=v30^k then if a(v30^u) then f(val(v30^d)*val(v10^d,' 0'),0,2),';'fi fi) + rsum(if v991^A=v31^k then if a(v31^u) then f(val(v31^d)*val(v10^d,' 0'),0,2)';'fi fi) + rsum(if v991^A=v32^k then if a(v32^u) then f(val(v32^d)*val(v10^d,' 0'),0,2)';' fi fi)+rsum( (if p(v62) then if &uf('Av991^A#1')='' and &uf('Av991^B#1')='' or &uf('Av991^B#1')='' and &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^K) or &uf('Av991^A#1')='' and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b)  or  &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v62^k) and &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v62^b) then if a(v62^u) then f(val(v62^d)*val(&unifor('Av10^d#1'),' 0'),0,2) ',' fi fi fi) ),0,2)/
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx9353
+\pard \widctlpar\intbl {\fs20\par \qr ИТОГО : 'f(val(v1),0,0)' экз. на сумму  ',f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi,'\par \ql Наши реквизиты:',ref(L('VD=POLZV')," р/с "v84^a," Кор. счет "v84^b,'\par ',"Банк: "v84^c," МФО: "v84^d,"; ИНН: "v84^e,'\par '," БИК: "v84^f,"; Код по ОКОНХ: "v84^g,'\par '," Код по ОКПО: "v84^h,"\par Директор\tab \tab \tab "v14^b,"\par Гл.бухгалтер\tab \tab \tab "v14^c),
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6759\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8056\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9353
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Наименование издания\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во экз\cell }
+\pard \qc\widctlpar\intbl {\b Сумма\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

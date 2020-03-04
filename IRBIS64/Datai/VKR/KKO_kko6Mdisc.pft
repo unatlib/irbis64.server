@@ -1,0 +1,10 @@
+mhu,'^F1^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F2^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F3^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F4^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F5^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F6^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F7^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F8^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F9^I',G1003 ,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/
+mhu,'^F10^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi,if &uf('Ag101#1')<>'' then '^P'&uf('Ag101#1') fi/

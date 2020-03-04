@@ -1,0 +1,179 @@
+0
+// Списание книг целиком
+// На входе отмеченные записи книг
+// v991^A - номер КСУ списания v991^B - номер акта передачи
+// v992^D - место хранения, v992^M - новое место хранения 
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+mpu,(v992/)
+XXXXXXXXXXXXXXXXXXX
+REP
+991
+F
+mpu,(v991/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1003
+XXXXXXXXXXXXXXXXXXX
+&uf('Av1002#1')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+if a(v1002^d) then (if p(v910)then if '7 2':v910^a or p(v910^v)then v910 else v910,'^V',&unifor('Av991^a#1'),if &unifor('Av1003#1'):'^M' then '^M',&unifor('Av1003^M#1') fi,if &unifor('Av991#1'):'^B'then '^W',&unifor('Av991^b#1'),|^Z|v910^1 fi,|^X|v910^1 fi fi/) else (if p(v910)then if '7 2':v910^a or p(v910^v)then v910 else v910,if &uf('+97',v910^D)=&unifor('Av1003^d#1')then '^V',&unifor('Av991^a#1'),if &unifor('Av1003#1'):'^M' then '^M',&unifor('Av1003^M#1') fi,if &unifor('Av991#1'):'^B'then '^W',&unifor('Av991^b#1'),|^Z|v910^1 fi,|^X|v910^1 fi fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+REP
+910^A
+F
+(if p(v910)then if &uf('+97',v910^v)=&unifor('Av991^a#1') and (v910^a:'0'or v910^a:'5'or v910^a:'1'or v910^a:'4' )then '6' else v910^a fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+940
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W940#'),&uf('+7U940#'(v940|; |)),(if p(v910)then if &uf('+97',v910^v)=&unifor('Av991^A#1')then if &unifor('Ag940#1'):v910 then else v910 fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(if p(v910) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'C U':v910^A then |^A|v910^a,|^D|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^B|v910^b,|^H|v910^h,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^C|v910^c,|^F|v910^f,|^2|v910^2 else v910 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if 'C U':v910^a then if v910^1=''then'1'else'0'fi else '0' fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910
+F
+(if p(v910) then if &uf('+97',v910^v)=&uf('Av991^A#1')and p(v910^w) and &uf('+97',v910^w)=&uf('Av991^B#1') then if v910^a:'6' then '^A0' else |^A|v910^a fi,|^1|v910^z,|^D|v910^m,|^B|v910^b,|^H|v910^h,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^C|v910^c,|^F|v910^f,|^2|v910^2  else v910 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+1004
+XXXXXXXXXXXXXXXXXXX
+(if p(v940) then if &uf('+97',v940^v)=&uf('Av991^A#1') and p(v940^w) and &uf('+97',v940^w)=&uf('Av991^B#1')then if 'U C':v940^a then |^A|v940^a,|^1|v940^z,|^D|v940^m,|^B|v940^b,|^H|v940^h,|^K|v910^k,|^E|v940^e,|^U|v940^u,|^Y|v940^y,|^C|v940^c,|^F|v940^f,|^2|v940^2 fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v910:&unifor('Av1004#1') then else &unifor('Av1004#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1004
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1004) then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1005
+XXXXXXXXXXXXXXXXXXX
+if p(v910)then f(rsum((if p(v910)then if v910^a<>'6'then '1;' else '0;'fi fi/)),0,0)else if p(v940)then '0'else'1'fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if val(v1005)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1005
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if l("II="v903)>0 then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+'*'
+(v910/)
+"II="v903
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v1001:'^A7'then'^A7'fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+463^w
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1003
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1002) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//в протокол
+IF
+if v910: '^A7' then '1' fi
+PUTFLD
+'Списаны все экземпляры в записи MFN=',f(val(mfn),0,0)
+FI
+IF
+if v910: '^A7' then '0' else '1' fi
+IF
+if v910: '^A6' then '1' fi
+PUTFLD
+'Списаны экземпляры по месту хранения в записи MFN=',f(val(mfn),0,0)," - "d992,(if p(v992) then if v992: &uf('Av903#1') then v992^D|, | fi fi)
+FI
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+GETFLD
+4000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

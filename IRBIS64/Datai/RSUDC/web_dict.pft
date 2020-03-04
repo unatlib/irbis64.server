@@ -1,0 +1,8 @@
+'    <tr>      <td valign="CENTER" width="50%" ALIGN=RIGHT>',v1004,
+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!br>      </td>      <td valign="Top"><input type="checkbox" name="T21CHK" value="',v1003,
+'"> <a href="/cgi-bin/irbis64r/cgiirbis_64.exe?I21DBN=IBIS',
+'&Z21ID=',v5,
+'&S21FMT=',v1009,'&C21COM=S&S21CNR=50&2_S21P02=1&2_S21P03=',v8,
+'&2_S21STR=',&unifor('+3E',v1003),'">',v1003,
+
+'</a><br>      </td>    </tr>'

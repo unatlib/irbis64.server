@@ -1,0 +1,62 @@
+mpl,
+   if p(v996)then 'MeSH-главная: ',&unifor('S0'), fi,
+   (if p(v996)then ' '&unifor('S1A')'.',&uf('DMESH,!R=',v996^K,'!,v2,| -- |v1'),if v996^m<>'' then ' (',&uf('+7W1#',v996^m),&uf('6meshmod'),')' fi,fi),
+   if p(v995)then 'MeSH-неглавная: ',&unifor('S0'), fi,
+   (if p(v995)then ' '&unifor('S1A')'.',&uf('DMESH,!R=',v995^K,'!,v2,| -- |v1'),if v995^m<>'' then ' (',&uf('+7W1#',v995^m),&uf('6meshmod'),')' fi,fi),
+if s(v905^r):'1'or &unifor('IPRIVATE,KKR,'):'1'then else 
+   &uf('+7W606#'),
+   &uf('+7U606#'
+   mhl,
+   (if p(v600) then 
+       if a(v600^b) then 
+          if p(v600^9)then 
+             if v600^9:'1' then v600^a else  &unifor('E'v600^9,&unifor('G0,'v600^a)),|, |v600^g 
+                if a(v600^g) then if &unifor('F'v600^9,v600^a)<>'' then ', '&unifor('F'v600^9,v600^a) fi fi  
+             fi, 
+          else 
+             if v600^a:' 'then 
+                if v600^a:','then v600^a else &unifor('G0 'v600^a)', 'v600^g, 
+                   if a(v600^g) then &unifor('G2 'v600^a) fi fi 
+             else v600^a,|, |v600^g fi, 
+          fi,| |v600^d, 
+          if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c, 
+             if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')' 
+          fi,
+          if p(v600^a) then |. |d600^z fi,
+          v600^z,| [|v600^:|]|,| : |v600^;,| : |v600^,,| : |v600^<,| (|v600^6|)|,|. |v600^2,|. |v600^5,|, |v600^+,
+          if s(v600^k,v600^m,v600^8,v600^q,v600^t,v600^o,v600^j,v600^0)<>'' then 
+          | -- |v600^k,| -- |v600^m,| -- |v600^8,| -- |v600^q,| -- |v600^t,| -- |v600^o,| -- |v600^j,| -- |v600^0  
+          fi/ 
+   fi fi),
+   (if p(v601) then 
+       if a(v601^b) then v601^a,
+          if a(v601^a) then v601^p, 
+             if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l, 
+             if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f, 
+                if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' 
+          fi fi,
+          if s(v601^a,v601^p)<>'' then |. |d601^z fi,
+          v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,| (|v601^6|)|,|. |v601^2,|. |v601^5,|, |v601^+,
+          | -- |v601^k,| -- |v601^m,| -- |v601^8,| -- |v601^q,| -- |v601^t,| -- |v601^o,| -- |v601^j,| -- |v601^0)/ 
+    fi fi/),
+   (if p(v606)then v606^a,| -- |v606^b,| -- |v606^c,| -- |v606^d,| -- |v606^g,| -- |v606^e,
+   | -- |v606^o, |, |v606^h,| -- |v606^9 fi/),
+   (if p(v607)then v607^a,| -- |v607^b,| -- |v607^c,| -- |v607^d,| -- |v607^g,| -- |v607^e,
+   | -- |v607^o, |, |v607^h,| -- |v607^9 fi/)),
+   if s(v606v607)<>'' or 
+      rsum((if p(v600) then if p(v600^b) then '0' else '1' fi fi))>0 or 
+      rsum((if p(v601) then if p(v601^b) then '0' else '1' fi fi))>0 
+   then ,&unifor('S0'),fi,
+   if &uf('Ag606#2')<>'' then '<br>'fi,
+   (if p(g606) then' ' &uf('S1A'),'. 'if g606.4:'--' then g606*4 else if g606.2:', 'then g606*2 else g606 fi fi fi),'<br>'
+fi,
+mpl,
+if s(v905^e,&unifor('IPRIVATE,KKK,')):'1'then else 
+   if s(v910^a):'U' and s(v330^5,v330^6,v330^7,v922^5,v922^6,v922^7):'; ' then else 
+      if s(v905^e,&unifor('IPRIVATE,KKK,')):'2'then mhl,"<b>Кл.слова: </b>"v610+| -- |"<br>" mpl,else 
+         if s(v905^e,&unifor('IPRIVATE,KKK,')):'3' 
+         then mhl,"<b>Кл.слова: </b>"d610,&unifor('Q'v610+| -- |"<br>"),mpl,else 
+            if &unifor('Av610#6')<>''then else mhl,"<b>Кл.слова: "d610,&unifor('Q'v610+| -- |"<br>"),mpl, '</b>'
+fi fi fi fi fi, 
+if s(v905^e)<>''or &unifor('IPRIVATE,KKK,')<>''then else 
+   if &unifor('Av965#6')<>''then else"<br> Дескрипторы: "d965,v965+| -- |"<br>" fi fi, 

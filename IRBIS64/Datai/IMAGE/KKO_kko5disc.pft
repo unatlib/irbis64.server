@@ -1,0 +1,10 @@
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=1','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=2','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=3','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=4','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=5','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=6','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=7','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=8','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=9','" * "IDD=',G1003,,'"' fi/
+if val(&uf('J,IDD=',G1003))>0 then '"','Sem=10','" * "IDD=',G1003,,'"' fi/

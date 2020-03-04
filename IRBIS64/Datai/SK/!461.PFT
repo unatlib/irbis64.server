@@ -1,0 +1,6 @@
+(if p(v461^i) then if &unifor('C'v461^i)='0'then/'0'else/'2     Ошибка в ISBN:
+ 'v461^i fi else'0' fi/),
+(if p(v461^j) then if &unifor('C'v461^j)='0'then/'0'else/'2     Ошибка в ISSN:
+ 'v461^j fi else/'0' fi/),
+if p(v461^x) then if v461^x:'  'then/'1 Ошибка: В ЭД "Автор" введены подряд два пробела'else
+/'0' fi fi/

@@ -1,0 +1,9 @@
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+      (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',
+          if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+      (if v951^N<>'' then 
+          if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  
+          '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',
+             if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi fi),
+fi 
+(if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 

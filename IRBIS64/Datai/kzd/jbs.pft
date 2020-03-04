@@ -1,0 +1,6 @@
+ 
+   If p(v200) then '\b'v200^a,'\par \d   ' fi   
+  If p(V600^A) THEN '\par  'v600^a ' 'v600^C fi',' 
+  If p(v600^F) then ' ('v600^f ')'  else fi if p(v309^e)  then '\par \b Дата события: ',v309^e.4,'г.' fi  
+ 
+    

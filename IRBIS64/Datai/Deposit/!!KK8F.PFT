@@ -1,0 +1,105 @@
+if p(v900^z) then if v905^v<>'' or &unifor('IPRIVATE,VZV=,')<>'' then else 
+'\fi2500 \fs24 \b 'mhu,v900^Z,'\b0 'mpl'\par \fi0 \fs20 'fi fi,
+mhl, 
+if v920:'nj'then &uf('+7W905#'),&uf('+7W905#'if v905^v<>'' or &unifor('IPRIVATE,VZV=,')<>'' then'' else'1' fi),
+   ref(l("I="v933),v200^a,|. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l,|. |v923^m,|: |v923^n,". - "d110^d, 
+   if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d)else"Периодичность "v110^d fi,
+   if g905='' then else "\tab \tab \tab \tab \b \"v110^z"\b0" fi) 
+   "\par    \b "v934"г.", 
+   if p(v935) then 
+      if val(v935.1)=0 and (not(v935.1='0')) then' 'else ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi)fi,v935 fi , 
+   if p(v936) then 
+      if val(v936.1)=0 and (not(v936.1='0'))then' ' else ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi)fi,v936 fi, 
+   " ("v931^c")","\b0 "d934, 
+else 
+if v900^c:'34'then'\b Препринт\b0 \par 'fi, 
+if p(v903) then 
+   if v903:v906.15 then"\b "v906"\b0 ", 
+      "\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b, 
+      if v906:v908 then else"\par \fi0\b "v908"\b0 "fi 
+   else 
+      if v903:&unifor('Av686.15#1') or 
+         v903:&unifor('G0^'&unifor('Av675.15#1')) or 
+         v903:&unifor('Av621.15#1')then'\b ', 
+         if v903:&unifor('Av686.15#1') then &unifor('Av686#1') 
+         else 
+            if v903:&unifor('G0^'&unifor('Av675.15#1')) then 
+                          &unifor('G0^'&unifor('Av675#1')) else 
+               if v903:&unifor('Av621.15#1') then &unifor('Av621#1') 
+         fi fi fi'\b0 ',"\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b, 
+         "\par \fi0\b "v908"\b0 " 
+      else 
+         if v903.1='-'or v920:'ASP'then else"\b "v903"\b0 ", 
+               "\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b, 
+            if p(v906) then"\b "v906"\b0 ", 
+               if v906:v908 then else"\par \fi0\b "v908"\b0 " 
+   fi fi fi fi fi,
+else 
+   if p(v982^0) and p(v982^9) then'\b 'v982^0' 'v982^9'\b0 ', 
+      "\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b 
+   else 
+      if s(v906,v686,v675,v621)<>''then 
+         if p(v906) then"\b "v906"\b0 ", 
+            "\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b, 
+            if v906:v908 then else"\par \fi0\b "v908"\b0 " fi 
+         else'\b '&unifor('Av686#1'), 
+            if a(v686) then &unifor('G0^'&unifor('Av675#1')), 
+               if a(v675) then &unifor('Av621#1') 
+            fi fi'\b0 ', 
+            "\tab "d106,&unifor('K106.mnu|'v106^a)," "v106^b, 
+         "\par \fi0\b "v908"\b0 " 
+fi fi fi, fi, 
+if s(v982^s,v982^k)<>'' then' '&unifor("kstr.mnu|"v982^s),", "d982^k, 
+   &unifor('Av982^k#1')," "d982^i,&unifor('Av982^i#1'),"."d982^k, 
+   "\tab "d106,&unifor("K106.mnu|"v106^a)," "v106^b 
+fi, ,(if p(v910) then 
+    if p(v910^r) and &unifor('Av908#1')<>''then 
+      |\par \b |v910^r'/'&unifor('Av908#1')'-'v910^d,|\b0 |d910^r 
+fi fi)
+'\b ',"\par "v503^a". ","\par "|. |+v981^a". ", 
+if p(v461) then '\par 'v461^x, 
+   if v461^x:','then'.'fi,|\par |v461^b|. |,'\b0 ', 
+   if s(v503,v981,v461^x,v461^b)='' then |\par \b |v461^c|\b0 | else |\par |v461^c fi,| [|v461^2|]|, 
+   if a(v461^2) then " ["d900^t,&unifor("Koomr.mnu|"v900^t),"]"d900^t, 
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then ' [Электронный ресурс] '  
+         else 
+            if s(&unifor('IPRIVATE,KKS,'),v905^t)<>'' then else ' [Текст]' 
+   fi fi fi fi,
+   if &uf('Av905^5#1')='' then 
+   if p(v461^e) and &uf('Av905^t#1')='' then ' : ', 
+      if s(&uf('Av982^0#1'),&uf('Av982^9#1'))<>'' or &uf('Av905^2#1'):'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 
+      or &unifor('Kjznv.mnu\'&unifor("Av101#1"d903))<>'' 
+      then v461^e 
+      else &unifor('Q'v461^e.1),v461^e*1 fi 
+   fi fi,
+   if a(v210^d)then". - "v461^h, 
+      if p(v461^h) then 
+         if p(v461^z) and v461^h=v461^z then else ' - 'v461^z fi,"    "n461^z 
+   fi fi, 
+   "\par \b "d200,if p(v200^v)then v200^v"\b0 "," : "v200^a else v200^a"\b0 " fi, 
+   if s(v700,v701)<>'' then' / ',Osoa,fi 
+fi, 
+if a(v461) then '\par ',ozboz, 
+   if p(v922) then ibis922fi,
+   if &uf('Av905^5#1')='' then " : "d200^e, 
+      if s(v982^0,v982^9)<>'' then v200^e, 
+      else 
+         if v905^2:'1' or &unifor('Q'v200^e*1.1)<>v200^e*1.1 
+         then v200^e else &unifor('Q'v200^e.1),v200^e*1 fi, 
+   fi fi, 
+   (if p(v923) then", "| ; |+d923,v923^h, 
+       if p(v923^h)then|. |d923^i fi,v923^i, 
+       if s(v923^k,v923^l)<>''then'. 'fi,v923^k, 
+       if p(v923^k)then|. |d923^l fi,v923^l 
+   fi) 
+fi,ibis925K, 
+if a(v461) then,ospec,fi,oizd,ofizxar, 
+". - "d210^a,&unifor('Av210^a#1'), 
+if a(v210^a)then|. - |v461^d fi, 
+if p(v461)then if p(v210^a)then", "v210^d else". - "v210^d fi 
+else 
+   if a(v463) then", б.г."n210^d fi,", "v210^d 
+fi,"-"v210^e,if v920='J'then "-    "n210^e fi, 
+fi, 
+&unifor('!'), 

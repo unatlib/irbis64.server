@@ -1,0 +1,672 @@
+if v920:'ojk'then 
+   if p(v110^b) then '0' else '1 Ошибка: отсутствует код вида издания' fi, 
+   if p(v33)then 
+      if p(v34) then/'0' else /'2 Ошибка: отсутствует цена подписки' 
+   fi fi, 
+   if a(v200^a) and a(v591)then /'1 Ошибка: отсутствует заглавие' else /'0'fi, 
+   if v905^0:'1' then else 
+      if L('!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591, 
+         if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k, 
+            if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi 
+         fi)) <=0 or 
+         val(ref(L('!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591, 
+         if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k, 
+            if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi 
+         fi)),mfn))=val(mfn) 
+      then/'0' else/'2Дублетное описание:       ', 
+        '!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591, 
+         if a(v591)then v200^a, 
+            if v920='OJK'then" "v923^h, 
+               if a(v923^h) then" "v923^i fi," "v923^k, 
+               if a(v923^k) then" "v923^l fi," "v923^m, 
+               if a(v923^m) then" "v923^n fi 
+         fi fi), 
+         ref(L('!'v86,v210^d*2.2,&unifor('B'v711^a" ",v972^a" ",v591, 
+         if a(v591)then v200^a," "v923^h,if a(v923^h) then" "v923^i fi," "v923^k, 
+            if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi 
+         fi)),' (см. N ',f(val(mfn),0,0),')') 
+  fi fi,if v903:'!'then/'2 Проверьте ШИФР !!! ' fi 
+fi/
+/*--------очагова 
+if v920: 'KS2' and &uf('IMAIN,CheckIZCFile,')<>'' 
+then 
+/*---проверка файла пересчета цен
+   &uf('+7W111#'(&uf('+5T','izc.mnu')/)),
+   &uf('+7W112#'(g111.4/)),&uf('+7G112'),
+   &uf('+7W211#'&uf('V1980-'v888^b.4)/),
+   &uf('+7W212#'(&uf('1*R,?g211#1')/)),
+   &uf('+7S212#112'),
+   if g212<>'' then /'2 Файл пересчета цен IZC.MNU не полный. Отсутствуют годы: 'g212+|, | fi/
+fi,,,,,,,,,,,,,,,,,
+if v920: 'ksu' and v88^A='' then /'1 В записи KSU не задан номер - поле 88^A' fi/
+if v920: 'SZ' 
+then 
+    (if p(v62) then if val(&uf('J,SORZ=',v62^K,|!|v62^6))>1 then /'1 Ошибка: уже есть организация-заказ ',,,v62^K,|-|v62^6 
+     ' MFN=',,&uf('D,?SORZ=',v62^K,|!|v62^6,'?,f(val(mfn),0,0)') break fi fi/) 
+fi,,
+if v920: 'SZ' then else (if p(v62) then if p(v62^G) and val(v62^G)=0 then /'1 Неверное количество поступивших экземпляров в поле 62' break fi fi/) fi/
+/*------------
+if v920='ZK' or v920='zk' 
+then 
+/*=========================для записей ZK=====================
+   if p(v30^a)and a(v30^k) then/'2 Ошибка: отсутствует код организации 'v30^a fi, 
+   if p(v31^a)and a(v31^k) then/'2 Ошибка: отсутствует код организации 'v31^a fi, 
+   if p(v32^a)and a(v32^k) then/'2 Ошибка: отсутствует код организации 'v32^a fi/
+   if a(v461^c) and a(v200^a)then /'1 Ошибка: Отсутствует заглавие' fi/
+   if v905^0:'1' 
+   then 
+   else 
+      if p(v210) and a(v461) 
+      then 
+/*--------------ZK без поля 461
+         if p(v210^a) or p(v210^d) 
+         then 
+            if s(v225^v)<>''
+            then 
+/*---------------проверка серии
+               if L('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                  &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,)<=0 
+               or val(ref(l('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                  &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,),
+                  mfn))= val(mfn) 
+               then 
+                  if &unifor('IMAIN,DBEK1,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK1,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,,'",f(val(mfn),0,0)'),
+                  fi fi,
+/*------проверка записи ZK СЕРИИ по БД каталога
+                  if &unifor('IMAIN,DBEK2,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK2,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,,'",f(val(mfn),0,0)'),
+                  fi fi,
+                  if &unifor('IMAIN,DBEK3,')<>''then 
+                     if val(&unifor('J',&unifor('IMAIN,DBEK3,')',',
+                        '!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,))<=0
+                     then/'0'
+                     else/'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),' см. N  ',
+                         &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                         &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,'",f(val(mfn),0,0)'),
+                  fi fi 
+               else /'1Дублетное описание:    ','!'v210^d*2,v10^a,
+                    &unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,
+                    ref(l('!'v210^d*2,v10^a,&unifor('B',&unifor('Av225^a#1')),
+                    &unifor('G1#'&unifor('Av225^v#1')),,,f(rsum(v215^a),0,0),,,,),' (см. N ',f(val(mfn),0,0),')')
+               fi,
+            else 
+/*------------проверка НЕ серии
+               if p(v200^a) 
+               then 
+                  if L('!'v210^d*2.2,v700^a.9,
+                     &unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,)<=0 
+                  or val(ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,),mfn))= val(mfn) 
+                  then 
+/*----------нет дублетной по БД CMPL
+/*-----------проверка по краткому варианту c проверкой - не удалена ли запись
+                     if val(&uf('+60'))=1 
+                     then 
+                        if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+                        then 
+                        if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )=0 or 
+                           val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                        then 
+                           if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                           then 
+                              /'4',,,,'Проверьте похожие записи: ',,,
+                              &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                           fi,,,,   
+                        else 
+                           if val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn))>0  
+                           then 
+                              /'4',,,'Проверьте похожие записи: ',,,
+                              &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                           fi,,,
+                        fi fi,,,,,,,,,,,,,,,,
+                     fi,,,
+/*-------проверка записи ZK НЕ СЕРИИ по БД каталога                     
+                     if &unifor('IMAIN,DBEK1,')<>'' 
+                     then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK1,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK2,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK2,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK3,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK3,')',','!'v210^d*2.2 
+                           if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                           else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                              if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                              else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                                if a(v200^v) then v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a) 
+                                else &unifor('B'v200^a,if v200^u:'1'then" "v700^a.9 fi),&unifor('G1#'v200^v) fi,
+                                if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                  else 
+/*-------------есть дубль ZK НЕ серия
+/*-------------проверка по ISBN или по полю Единица измерения 
+                     if ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,),v10^a)<>v10^a 
+                     then 
+/*------------ нет дублетной с учетом ISBN
+/*------OK-----------------
+                            /'0'
+/*-----------проверка по краткому варианту
+                          if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+                         then 
+                            if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )<=0 or 
+                               val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                            then 
+                               if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                               then 
+                                   /'4',,,,'Проверьте похожие записи: ',,,
+                                 &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                                 &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                               fi,,,,   
+                            else 
+                               /'4',,,,'Проверьте похожие записи: ',,,
+                               &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                            fi 
+                         fi,,,,,,,,,,,,,
+                     else
+                          /'1Дублетное описание:       ',
+                          '!'v210^d*2.2,v700^a.9,  &unifor('B'v711^a" ",v972^a" ",v200^a),&unifor('G1#'v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                          ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v711^a" ",v972^a" ",v200^a)
+                          &unifor('G1#'v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,),
+                          ' (см. N',f(val(mfn),0,0),| ISBN |v10^a' ',
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi')')      
+                     fi 
+                  fi 
+               fi  
+            fi  
+         fi 
+      else 
+/* НЕ p(v210) and a(v461)  
+/*---------------------с полем 461
+         if p(v461) 
+         then 
+            if l('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,
+               if v461^u:'1'then" "v461^x fi,if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,)<=0 
+            or val(ref(l('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+               &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+               if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,),mfn))=val(mfn) 
+            then 
+/*--------не дубль
+/*-----------проверка по краткому варианту
+               if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+               then 
+                  if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )<=0 or 
+                     val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                  then 
+                     if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                     then 
+                          /'4',,,,'Проверьте похожие записи: ',,,
+                          &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                          &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                     fi,,,,   
+                  else 
+                     /'4',,,,'Проверьте похожие записи: ',,,
+                     &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                     &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                  fi 
+               fi,,,,,,,,,,,,,,,,            
+/*------ проверка 
+               if &unifor('IMAIN,DBEK1,')<>''
+               then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK1,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK1,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK1,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,,'",f(val(mfn),0,0)'), 
+               fi fi fi,
+               if &unifor('IMAIN,DBEK2,')<>''then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK2,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,,))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK2,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK2,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,,,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,,,,'",f(val(mfn),0,0)'), 
+               fi fi fi, 
+               if &unifor('IMAIN,DBEK3,')<>''then 
+                  if val(&unifor('J',&unifor('IMAIN,DBEK3,')',',
+                     '!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                     if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,,,))>0
+                  then 
+                     if &unifor('D',&unifor('IMAIN,DBEK3,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),
+                        &unifor("G1#"v200^v),if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,,,'",v10^a')<>v10^a 
+                     or &unifor('D',&unifor('IMAIN,DBEK3,'),',"',
+                        '!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                        if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,,,'",v215^1')<>v215^1 
+                     then /'0'
+                     else /'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),' см. N ',
+                          &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                          &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                          if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,,,,,'",f(val(mfn),0,0)'), 
+               fi fi fi, 
+            else 
+/*-------- дубль ZK и поле 461
+               if ref(l('!'v210^d*2.2,if a(v210^d)then v461^h fi,&unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                  if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                  if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                  if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,,,,),v10^a)<>v10^a 
+               then 
+/*-----------проверка по краткому варианту
+                  if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+                  then 
+                     if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )<=0 or 
+                         val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                     then 
+                        if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                        then 
+                           /'4',,,,'Проверьте похожие записи: ',,,
+                           &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                           &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                        fi,,,,   
+                     else 
+                        /'4',,,,'Проверьте похожие записи: ',,,
+                        &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                        &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                     fi 
+                  fi,,,,,,,,,,,,,,,,                           
+                  /'0'
+               else /'1Дублетное описание:       ','!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                    &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                    if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                    if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                    if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,,,,
+                    if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                    ref(l('!',v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                    &unifor('B'v461^c,if v461^u:'1'then" "v461^x fi,
+                    if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                    if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                    if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,,),| ISBN |v10^a,' '
+                    if v215^1.2:'='then v215^1*2 else v215^1 fi,' (см. N',f(val(mfn),0,0)')') 
+               fi 
+            fi 
+         fi 
+      fi  
+   fi  
+fi/   
+/*====================================================
+               if v920:'PAZK'or v920:'PVK' 
+               then 
+                  if L('!'v210^d*2.2,v700^a.9,
+                     &unifor('B'v710^a" ",v200^a),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,)<=0 
+                  or val(ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                     if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                     if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,),mfn))= val(mfn) 
+                  then 
+/*----------нет дублетной по БД CMPL
+/*-----------проверка по краткому варианту c проверкой - не удалена ли запись
+                     if val(&uf('+60'))=1 
+                     then 
+                        if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+                        then 
+                        if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )=0 or 
+                           val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                        then 
+                           if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                           then 
+                              /'4',,,,'Проверьте похожие записи: ',,,
+                              &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                           fi,,,,   
+                        else 
+                           if val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn))>0  
+                           then 
+                              /'4',,,'Проверьте похожие записи: ',,,
+                              &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                           fi,,,
+                        fi fi,,,,,,,,,,,,,,,,
+                     fi,,,
+                     if &unifor('IMAIN,DBEK1,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK1,')',','!'v210^d*2.2 
+                            v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                             if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                               v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                               v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK1,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK1,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK1,'),',"','!'v210^d*2.2,
+                                 v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK2,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK2,')',','!'v210^d*2.2 
+                           v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                              v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                              if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK2,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK2,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK2,'),',"','!'v210^d*2.2,
+                                 v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                     if &unifor('IMAIN,DBEK3,')<>''then 
+                        if val(&unifor('J',&unifor('IMAIN,DBEK3,')',','!'v210^d*2.2 
+                            v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                           if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                           if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,))>0 
+                        then 
+                           if &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                               v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,,f(rsum(v215^a),0,0),,,,'",v10^a')<>v10^a 
+                           or &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                               v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                              if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,'",v215^1')<>v215^1 
+                           then /'0'
+                           else /'3'&unifor('IMAIN,DBEK3,'),' Дублетное описание в БД ',&unifor('IMAIN,DBEK3,'),
+                           ' см. N ' 
+                                &unifor('D',&unifor('IMAIN,DBEK3,'),',"','!'v210^d*2.2,
+                                 v700^a.9,&unifor('B'v710^a" ",v200^a) 
+                                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,,
+                                '",f(val(mfn),0,0),| ISBN |v10^a,'),
+                     fi fi fi, 
+                  else 
+/*-------------есть дубль
+/*-------------проверка по ISBN или по полю Единица измерения 
+                     if ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,),v10^a)<>v10^a 
+                     then 
+/*------------ нет дублетной с учетом ISBN
+/*------OK-----------------
+                            /'0'
+/*-----------проверка по краткому варианту
+                            if v210^d<>'' and v700^a<>'' and v200^a<>'' 
+                            then 
+                            if L('!',,v210^d,v700^a.15,&unifor("B"v200^a) )<=0 or 
+                               val(ref(l('!',,v210^d,v700^a.15,&unifor("B"v200^a) ),mfn) )=val(mfn) 
+                            then 
+                               if val(&uf('J,!',,v210^d,v700^a.15,&unifor("B"v200^a) ))>1 
+                               then 
+                                   /'4',,,,'Проверьте похожие записи: ',,,
+                                 &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                                 &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,                        
+                               fi,,,,   
+                            else 
+                               /'4',,,,'Проверьте похожие записи: ',,,
+                               &uf('+7W1#',,&uf('7,?!',,v210^d,v700^a.15,&unifor("B"v200^a),,'?,mfn/') ),,,
+                              &uf('+7G1'),,,(if p(g1) then if val(g1)<>val(mfn) then f(val(g1),0,0),', ' fi fi),,,
+                            fi fi,,,,,,,,,,,,,
+                     else
+                          /'1Дублетное описание:       ',
+                          '!'v210^d*2.2,v700^a.9,  &unifor('B'v710^a" ",v200^a),
+                          if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,,f(rsum(v215^a),0,0),,,,,
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                          ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a)
+                          ,if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,,,f(rsum(v215^a),0,0),,,,,),
+                          ' (см. N',f(val(mfn),0,0),| ISBN |v10^a' ',
+                          if v215^1.2:'='then v215^1*2 else v215^1 fi')') 
+                     fi 
+                  fi 
+               fi/ 
+/*==============================================
+if v920:'zk'
+then 
+   if p(v910) 
+   then 
+      IF v905^3='1' or &uf('IPRIVATE,3,')='1' 
+      then 
+      else 
+         IF s(v905^3,&uf('IPRIVATE,3,')):'22'or s(v905^3,&uf('IPRIVATE,3,')):'32' then else 
+            (if p(v910) then 
+                if p(v910^b)then 
+                   if &unifor('Av920#1')='NJ'or &unifor('Av920#1')='NJP'or v910^a='R'or &unifor('Av215^y#1')<>'' 
+                   then /'0' else 
+                      if l(|IN=|v910^b)<=0 or val(ref(l(|IN=|v910^b),mfn))=val(mfn)then/'0' 
+                      else/'2Дублетный инв.номер: 'v910^b,ref(l(|IN=|v910^b),' (см.N ',mfn,')') 
+             fi fi fi fi/)
+         FI,
+         IF s(v905^3,&uf('IPRIVATE,3,')):'21' or s(v905^3,&uf('IPRIVATE,3,')):'31' then else 
+            (if p(v910) then 
+                if p(v910^h)then 
+                   if l(|IN=|v910^h)<=0 or val(ref(l(|IN=|v910^h),mfn))=val(mfn)then/'0' 
+                   else/'2Дублетный Штрих-код: 'v910^h,ref(l(|IN=|v910^h),' (см.N ',mfn,')') 
+                   fi 
+                else/'0' 
+             fi fi)   
+         FI, 
+         IF s(v905^3,&uf('IPRIVATE,3,')):'3' or s(v905^3,&uf('IPRIVATE,3,'))='' then 
+            &unifor('+7W11#'),&unifor('+7W10#'),&unifor('+7W21#'),&unifor('+7W20#'), 
+            &unifor('+7W31#'),&unifor('+7W30#'),&unifor('+7W41#'),&unifor('+7W40#'), 
+            IF s(v905^3,&uf('IPRIVATE,3,')):'32' then else 
+               &unifor('+7W11#'(if 'U C 6':v910^a then else if v910^a:'R' then ' ' &uf('G2/'v910^b) else | |v910^b fi fi/)), 
+               &uf('+7W10#'),&uf('+7W10#'f(rsum((if p(g11) then g10,';1;' fi)),0,0)),
+               &uf('+7W21#'(g11/)),&uf('+7G21'),
+               &uf('+7W20#'),&uf('+7W20#'f(rsum((if p(g21) then g20,';1;' fi)),0,0)),
+               if val(g10)=val(g20) then else /'2 В документе есть дублетные инв. номера: ' fi, 
+               IF s(v905^3,&uf('IPRIVATE,3,'))='' then 
+               &uf('+7S11#21'),(g11/), 
+               FI 
+            FI,
+            IF s(v905^3,&uf('IPRIVATE,3,')):'31' then else 
+               &unifor('+7W31#'(| |v910^h/)), 
+               &uf('+7W30#'),&uf('+7W30#'f(rsum((if p(g31) then g30,';1;' fi)),0,0)),
+               &uf('+7W41#'(g31/)),&uf('+7G41'),
+               &uf('+7W40#'),&uf('+7W40#'f(rsum((if p(g41) then g40,';1;' fi)),0,0)),
+               if val(g40)=val(g30) then else /'2 В документе есть дублетные штрих-коды: ' fi, 
+               IF s(v905^3,&uf('IPRIVATE,3,'))='' then 
+                  &uf('+7S31#41'),(g31/), 
+               FI 
+            FI 
+         FI 
+      FI 
+      IF v910^a:'R' then else 
+         (IF p(v910)then 
+             IF v910:'^a'then/'0' else/'1 Ошибка: отсутствует статус экз-ра   'v910^b,|   |v910^c FI, 
+          FI/) 
+      FI,   
+      (if p(v910) then 
+          if '2 R C U 7':v910^a then else 
+             if s(v910^b,v910^h)<>''then/'0' 
+             else/'1 Ошибка : Отсутствует инв.номер и штрих-код экз-ра   ' v910^c 
+          fi fi/ 
+          if 'C U':v910^a then 
+             if p(v910^1)then/'0'else  
+                /'1Ошибка : Отсутствует число полученных экз-ров(статус"' v910^a|")|,| |v910^c,| |v910^d 
+      fi fi fi/) 
+   else 
+      IF v905^3='1' or &uf('IPRIVATE,3,')='1' then else 
+      if p(v951) then else/'2 Ошибка : отсутствуют сведения об экземплярах' fi 
+      fi 
+   fi 
+  /if a(v66) 
+   then 
+      if ((l("I="v903))<=0) or (val(ref(l("I="v903),mfn))=val(mfn)) 
+      then 
+         if &unifor('IMAIN,DBEK1,')<>''
+         then 
+            if val(&unifor('J',&unifor('IMAIN,DBEK1,')',',"I="v903))<=0
+            then '0' 
+            else 
+               /'3'&unifor('IMAIN,DBEK1,'),' Дублетный шифр в БД ',&unifor('IMAIN,DBEK1,'),' см. N  ',
+               &unifor('D',&unifor('IMAIN,DBEK1,'),',"','I='v903'",f(val(mfn),0,0)'), 
+            fi 
+         fi, 
+         if &unifor('IMAIN,DBEK2,')<>''
+         then 
+            if val(&unifor('J',&unifor('IMAIN,DBEK2,')',',"I="v903))<=0
+            then '0' 
+            else 
+               /'3'&unifor('IMAIN,DBEK2,'),' Дублетный шифр в БД ',&unifor('IMAIN,DBEK2,'),' см. N  ',
+               &unifor('D',&unifor('IMAIN,DBEK2,'),',"','I='v903'",f(val(mfn),0,0)'), 
+            fi 
+         fi, 
+         if &unifor('IMAIN,DBEK3,')<>'' 
+         then 
+            if val(&unifor('J',&unifor('IMAIN,DBEK3,')',',"I="v903))<=0
+            then '0' 
+            else 
+               /'3'&unifor('IMAIN,DBEK3,'),' Дублетный шифр в БД ',&unifor('IMAIN,DBEK3,'),' см. N  ',
+               &unifor('D',&unifor('IMAIN,DBEK3,'),',"','I='v903'",f(val(mfn),0,0)'), 
+            fi 
+         fi,
+      else
+         '1Дублетный Шифр 'v903,,ref(l("I="v903,),' (см. N ',f(val(mfn),0,0)')') 
+      fi 
+   fi 
+fi   
+

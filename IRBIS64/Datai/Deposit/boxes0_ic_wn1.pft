@@ -1,0 +1,48 @@
+/* вариант BOXES0_IC_WN для представления словаря имен каталожных ящиков Отечественной Книги
+
+/* v1000 - имя БД
+/*v1004 - список элементов (терминов)
+/*v1011 - префикс терминов
+/*v1006 - порция терминов
+'<body bgcolor="#ffffcc">',
+
+'<title>Поиск по каталожным ящикам - Верхний уровень. База данных - ',v1000,'</title>',
+
+'<b>База данных: ',v1000,'<br>',
+'Каталожные ящики: <br></b>',
+'<table>',
+(if val(v1004^B)>0 then 
+'<tr>',
+'<td>',
+'<img src="IRBIS:10,,textfolder.gif">',
+'</td>',
+'<td>',
+'<A HREF="IRBIS:?C21COM=2&DBNAME_DEFAULT=',&uf('Av1000#1'),'&PFTNAME=',&uf('Av1100#1'),'&S21P01=0&S21P02=0&S21P03=',
+&uf('+3E','BX='),/* используется ЖЕСТКИЙ префикс !!!
+'&S21CNR=',&uf('Av1103#1'),
+'&S21P05=',&uf('+3EСодержание каталожного ящика'),'&TOPPFTNAME=search_IC_bottom_wn&BOTTOMPFTNAME=search_IC_bottom_wn&S21STR=',&uf('+3E',v1004^A),
+'&FREEPAR0=',&uf('Av1100#1'),'&FREEPAR2=',&uf('Av1102#1'),'&FREEPAR3=',&uf('Av1103#1'),'&FREEPAR5=',&uf('Av1105#1'),
+'&CHECKNAME=CHECKMFN">',
+v1004^a,
+'</A>'
+'</td>',
+'</tr>',
+fi),
+'</table>',
+
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input name="T21TRM" value="',if v1006=&uf('+N1004') then &uf('AV1004^A#',&uf('+N1004')) else '...(конец словаря)' fi,'" onkeydown="if ((this.value.length>1) && (event.keyCode==13)) submit()">',
+'<input type="submit" name="" value="Продолжить">',
+'<input type="hidden" name="C21COM" value="4">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="PFTNAME" value="boxes0_ic_wn1">',
+'<input type="hidden" name="T21PRF" value="',v1011,'">',
+'<input type="hidden" name="T21PREV" value="1">',
+'<input type="hidden" name="T21CNR" value="',v1006,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'<input type="hidden" name="FREEPAR2" value="',v1102,'">',
+'<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+'<input type="hidden" name="FREEPAR5" value="',v1105,'">',
+'</form>'
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=search_IC_wn&S21CNR=',v1103,'&I21DBN=',v1000,'&FREEPAR0=',v1100,'&FREEPAR5=',v1105,'">Вернуться к основной поисковой форме</A><br>',

@@ -1,0 +1,37 @@
+6
+
+Старый УДК(1)
+
+Новый УДК (1)
+
+Старый УДК(2)
+
+Новый УДК (2)
+
+Старый УДК(3)
+
+Новый УДК (3)
+IF
+if  v920:'J' or v910^a:'1' or v910^2<>''or (v982^0<>'' and v982^9<>'')or p(v906)or p(v686)then '0'else '1'fi
+
+
+REP
+675
+F
+(if p(v675) then if v675='%1' then '%2',if '%2'='' then # fi else if v675='%3' then '%4',if '%4'='' then # fi else if v675='%5' then '%6',if '%6'='' then # fi else v675 fi fi fi fi/)
+
+DEL
+903
+*
+
+
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if a(v903) then if v982^0<>'' and v982^9<>'' then (if p(v982^0) and p(v982^9) then |, |+v982^0,| |v982^9,'!-'&unifor('R') fi) else if v920='J' then v200^a.1,&unifor('R') else if p(v906)or p(v686)or p(v675)or p(v621)then if p(v906) and v906:v908 then v906.17,'-',&unifor('R') else v906.17,if a(v906) then &unifor('Av686.17#1'),if a(v686)then &unifor('G0^'&unifor('Av675.17#1')),if a(v675)then &unifor('Av621.17#1') fi fi fi,"/"v908,'-',&unifor('R') fi else '-'&unifor('R') fi fi fi fi/
+
+FI
+
+
+
+

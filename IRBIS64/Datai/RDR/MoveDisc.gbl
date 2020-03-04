@@ -1,0 +1,59 @@
+0
+//12 PUTLOG
+// 9.1 Для ИРБИС-64
+// перенос контингента из записи студентов  в запись DISC как новое повторение 83
+// 991 - это переносимое поле 
+// проверка вида записи
+IF
+if v920: 'DISC' then '0' else '1' fi
+PUTLOG
+'Записи для переноса должны быть типа DISC'
+FI
+IF
+if v991='' then '1' else '0' fi
+PUTLOG
+'Нет данных для переноса '
+FI
+REP
+991
+F
+(mpu,v991/)
+
+IF
+mhu,if v991<>'' and v920='DISC' then '1' else '0' fi
+//цикл по полям 991
+REPEAT
+// проверка на повторения поля 83
+IF
+if rsum((if p(v83) then if &uf('+97',v83^A)=&uf('Av991^A#1') and &uf('+97',v83^C)=&uf('Av991^C#1') and &uf('+97',v83^N)=&uf('Av991^N#1') and &uf('+97',v83^O)=&uf('Av991^O#1') and &uf('+97',v83^V)=&uf('Av991^V#1') and &uf('+97',v83^E)=&uf('Av991^E#1') then '1,' fi fi))>0 then '0' else '1' fi
+// добавляю сначала в 84, чтобы сработал autoink
+ADD
+84
+
+&uf('Av991#1')
+
+PUTLOG
+'Дописана запись дисциплины. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// запись признака - запустить задание VADD83
+PUTLOG
+'LINKCORRTASK=VADD83%MFN=',,,f(val(mfn),0,0),'%'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+FI
+DEL
+991
+*
+
+

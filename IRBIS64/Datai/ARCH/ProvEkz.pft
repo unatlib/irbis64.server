@@ -1,0 +1,11 @@
+'MFN=',f(val(mfn),0,0),,,' Ўифр: ',v903,,' Ёкземпл€ры:'/
+(if p(v910)then if v910^a:'6' and a(v910^w) or '2 7':v910^a 
+ then 
+   if v910^a: '6 2 4 7' then if p(v910^s) then '  ',v910^H,if v910^H<>'' and v910^B<>'' then '-' fi,v910^B,| (|v910^D|)|,' - неверный статус',
+   fi fi,
+ else 
+   if a(v910^s) and &uf('AG5#1')='' then '  ',v910^H,if v910^H<>'' and v910^B<>'' then '-' fi,v910^B,| (|v910^D|)|,,,,&uf('AG5#1'),,'! - не проверен ' fi/
+   if p(v910^s) and p(v910^!) then '  ',v910^H,if v910^H<>'' and v910^B<>'' then '-' fi,v910^B,| (|v910^D|)|,' - проверен ',v910^s*6.2|.|,v910^s*4.2|.|,v910^s.4,,', не на месте ('v910^!')'fi/
+   if p(v910^s) and a(v910^!) then '  ',v910^H,if v910^H<>'' and v910^B<>'' then '-' fi,v910^B,| (|v910^D|)|,,' - проверен ',v910^s*6.2|.|,v910^s*4.2|.|,v910^s.4,
+   fi 
+ fi fi,/)

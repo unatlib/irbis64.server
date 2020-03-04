@@ -1,0 +1,29 @@
+/* В глобальной переменной 1 - переключатель: пусто - показывать СМОТРИ СМОТРИ ТАКЖЕ; не пусто - не показывать
+/* В глобальной переменной 2 - переключатель: пусто - не показывать ВЫШЕСТОЯЩИЙ; не пусто - показывать
+/* В глобальной переменной 3 - переключатель: пусто - показывать ТЕРМИН как ссылку; не пусто - не показывать
+'<table>', 
+'<tr>', 
+'<td width=20>', 
+        '<input type="checkbox" name="CHECKINDEX"  value="',v1,'">', 
+'</td>', 
+'<td>', 
+'<img src=','"','IRBIS:10,,', 
+   if v2='0' then 'text.gif' else if l("U="v1)>0 then 'textfolder.gif' else 'folder.gif' fi fi, 
+,'">', 
+'</td>', 
+'<td>', 
+    if g3='' then '<A HREF="IRBIS:1,,,tez_wn?BOTTOMPFTNAME=tez_bottom_wn&KEY=T=',&uf('+3E',v1),'">',fi,
+    v1,'</A>',
+    if g1='' then 
+         if v2='0' then ' <A HREF="IRBIS:1,,,tez_wn?BOTTOMPFTNAME=tez_bottom_wn&KEY=T=',if p(v6) then &uf('+3E',v6),'">(Смотри: ',v6')</A>'else &uf('+3E',v1)'">(Смотри...)</A>' fi, fi,
+         if p(v5) then ' <A HREF="IRBIS:1,,,tez_wn?BOTTOMPFTNAME=tez_bottom_wn&KEY=T=',&uf('+3E',v1),'">(Смотри также...)</A>' fi 
+    fi,
+    if (g2<>'') and p(v4) then 
+         ' <A HREF="IRBIS:1,,,tez_wn?BOTTOMPFTNAME=tez_bottom_wn&KEY=T=',&uf('+3E',v4),'">(Вышестоящий: ',v4,')</A>',
+    fi,
+'</td>' 
+'</tr>', 
+'</table>',
+
+
+

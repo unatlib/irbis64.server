@@ -1,0 +1,79 @@
+/* для мастера списания - формирование поля 1909
+/* в G5 параметры списания
+/* G5^Q - год
+/* G5^D - место хранени
+/* G5^W - КСУ списания
+/* G5^P - номер акта передачи
+/* G5^H - номер
+/* G5^F - том
+/* G5^K - комплект
+/* G5^M - новое место хранения при передачи
+/* форматирование на записи номера, номер уже списан
+
+if v920: 'NJ' or  s(v936,v934)<>''
+then 
+  if G5^Q='' or G5^Q: v934 
+  then 
+    if G5^F='' or G5^F: v935 
+    then 
+      if G5^H='' or G5^H: v936 
+      then     
+        (if p(v910) 
+         then 
+           if &uf('AG5^P#1')='' and v910^A: '6' or 
+              &uf('AG5^P#1')<>'' and s('0 3 4 5 p 8'): v910^A   
+           then 
+             if &uf('AG5^D#1')='' or 
+                &uf('AG5^D#1')<>'' and &uf('AG5^P#1')='' and v910^D=&uf('AG5^D#1') or 
+                &uf('AG5^D#1')<>'' and &uf('AG5^P#1')<>'' and v910^D=&uf('AG5^M#1') 
+             then 
+               if &uf('AG5^K#1')='' or 
+                  val(v910^B)=val(&uf('AG5^k#1')) 
+               then  
+                 '^Q',&uf('AG5^Q#1'),'^W',&uf('AG5^W#1'),
+                 if &uf('AG5^P#1')<>'' then '^P',&uf('AG5^P#1') fi,
+                 if &uf('AG5^D#1')<>'' then '^D',&uf('AG5^D#1') fi,
+                 |^K|v910^B,
+                 if &uf('Av935#1')<>'' then '^F',&uf('Av935#1') fi,
+                 if &uf('Av936#1')<>'' then '^H',&uf('Av936#1') fi,
+                 if &uf('AG5^M#1')<>'' then '^M',,&uf('AG5^M#1') fi,
+               fi,,
+             fi,,
+           fi,,
+         fi/)
+      fi, 
+    fi,
+  fi,else 
+  if v920: 'SPEC' and  s(v936,v934)=''
+then &uf('+7W6#'if &uf('G2#'v200^v):' 'then &UF('G2 '&uf('G2 'v200^v))else &uf('G2 'v200^v) fi),&uf('+7W7#'if &uf('G2#'v200^v):' 'then &UF('G0 '&uf('G1#'v200^v))fi),
+  if G5^Q='' or G5^Q: &uf('G0/'v903) 
+  then 
+    if G5^F='' or G5^F: g2 
+    then 
+      if G5^H='' or G5^H: g1
+      then     
+        (if p(v910) 
+         then 
+           if &uf('AG5^P#1')='' and v910^A: '6' or 
+              &uf('AG5^P#1')<>'' and s('0 3 4 5 p 8'): v910^A   
+           then 
+             if &uf('AG5^D#1')='' or 
+                &uf('AG5^D#1')<>'' and &uf('AG5^P#1')='' and v910^D=&uf('AG5^D#1') or 
+                &uf('AG5^D#1')<>'' and &uf('AG5^P#1')<>'' and v910^D=&uf('AG5^M#1') 
+             then 
+               if &uf('AG5^K#1')='' or 
+                  val(v910^B)=val(&uf('AG5^k#1')) 
+               then  
+                 '^Q',&uf('AG5^Q#1'),'^W',&uf('AG5^W#1'),
+                 if &uf('AG5^P#1')<>'' then '^P',&uf('AG5^P#1') fi,
+                 if &uf('AG5^D#1')<>'' then '^D',&uf('AG5^D#1') fi,
+                 |^K|v910^B,
+                 if &uf('Ag7#1')<>'' then '^F',&uf('Ag7#1') fi,
+                 if &uf('Ag6#1')<>'' then '^H',&uf('Ag6#1') fi,
+                 if &uf('AG5^M#1')<>'' then '^M',,&uf('AG5^M#1') fi,
+               fi,,
+             fi,,
+           fi,,
+         fi/)
+      fi,fi,fi,fi,
+fi

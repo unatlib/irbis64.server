@@ -1,0 +1,144 @@
+'</>',
+/* ФООРМАТ ДЛЯ ПОКАЗА ГРУППОВОЙ ССЫЛКИ в 951 поле
+/* g1101 - номер повторения
+&uf('+7W1#'),
+/*(if v951^N<>'' then &uf('+7W1#',v951) fi),
+&uf('+7W1#',&uf('Av951#',g1101)),
+if &uf('+93',if g1^A<>'' then g1^A else g1^I fi):'.PDF' and g1^M='' then &uf('+7W2#','.PDF') else &uf('+7W2#',&uf('G2.',g1^M,)) fi, 
+if (g2 : 'GIF') or (g2 : 'JPG') or (g2 : 'JPEG') or (g2 : 'PNG') or (g2 : 'PDF') then 
+
+'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">',/
+'<html>',/
+'<head>',/
+'<script language="JavaScript" type="text/javascript">',/
+/*'<!--',/,
+      if g2='.PDF' then 
+'                  var imgPrefix1="IRBIS:',,if g1^A<>'' then '11' else '13' fi,,'/";',/
+'                  var imgPrefix2=",,',&uf('+\0',if g1^A<>'' then g1^A else g1^I fi),'";',/
+'                  var numCount=',g1^N,';',/
+'                  var title="',g1^T,if g1^T='' then &uf('+\0',if g1^A<>'' then g1^A else g1^I fi) fi,'";',/
+'                  var imageCount = 0;',/
+'                  var imageArray=Array();',/
+'                  for (var i=1;i<=numCount;i++)',/
+'                  {',/
+'                  var ll=i.toString();',/
+'                    imageArray[imageArray.length]=imgPrefix1+ll+imgPrefix2;',/
+'                  }',/
+                   else
+'                  var imgPrefix="',if g1^a<>'' then ,'IRBIS:11,,',&uf('+\0',g1^a),&uf('G0#',g1^M) else &uf('+\0',g1^I),,&uf('G0#',g1^M),fi,'";',/
+'                  var numLength=',&uf('+95',&uf('G0.',&uf('G1#',g1^M))),';',/
+'                  var numCount=',g1^N,';',/
+'                  var imgExtension="',g2,'";',/
+'                  var title="',g1^T,if g1^T='' then '(Групповая ссылка без названия)' fi,'";',/
+'                  var imageCount = 0;',/
+'                  var imageArray=Array();',/
+'                  for (var i=1;i<=numCount;i++)',/
+'                  {',/
+'                  var ll=i.toString();',/
+'                    while (ll.length<numLength) ll="0"+ll;',/
+'                    imageArray[imageArray.length]=imgPrefix+ll+"."+imgExtension;',/
+'                  }',/
+      fi,     
+'       function goto(page)',/
+'       {',/
+'             if (page<1) page=1;',/
+'             if (page>imageArray.length) page=imageArray.length;',/
+'             imageCount = page-1;',/
+'             document.images["photo"].src=imageArray[imageCount];',/
+'             input1.value=page;',/
+'             input2.value=page;'/
+'             }',/
+'       function first() {goto(1);}',/
+'       function last() {goto(imageArray.length);}',/
+'       function next() {',/
+'             if (imageCount!=imageArray.length-1) imageCount++',/
+'               else imageCount = 0;',/
+'               goto(imageCount+1);',/
+'              }',/
+'        function previous() {',/
+'             if (imageCount!=0) imageCount-- ',/
+'               else imageCount = imageArray.length-1;',/
+'               goto(imageCount+1);',/
+'               }',/
+'        var defaultZoom = 100;',/
+'        var currentZoom = defaultZoom;',/
+'        function upZoom() {',/
+'             currentZoom += 10;',/
+'             setZoom();',/
+'               }',/
+'        function downZoom() {',/
+'             if (currentZoom <= 10) return;',/
+'             currentZoom -= 10;',/
+'             setZoom();',/
+'               }',/
+'        function setZoom() {',/
+'             document.getElementById("currZoom1").value = currentZoom;',/
+'             document.getElementById("currZoom2").value = currentZoom;',/
+'             document.getElementById("photo").style.width = currentZoom + "%";',/
+'               }',/
+'        document.write("<title>"+title+"</title>");',/
+/*'//-->',/
+'</script>',/
+'<style>',/
+/*'<!--',/
+'p{text-align:center}',/
+'td{text-align:center;vertical-align:middle}',/
+/*'-->',/
+'</style>',/
+'<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">',/
+'</head>',/
+'<body STYLE="color: #500000" bgcolor="#ffffcc">',/ 
+'<table width="100%" border="1">',/
+'<tr><td>',/
+'<table width="100%" border="0"><tr><td style="text-align:left">',/
+'<script language="JavaScript" type="text/javascript">document.write(title)</script>',/
+'</td><td style="text-align:right">',/
+'<script language="JavaScript" type="text/javascript">document.write("Всего страниц: "+imageArray.length)</script>',/
+'</td></tr></table>',/
+'</td></tr><tr><td>',/
+'<a href="#" onClick="first();">&lt;&lt;&nbsp;Первая</a> |',/
+'<a href="#" onClick="previous();">&lt;&nbsp;Предыдущая</a>  |',/
+'<input type="text" name="input1" value ="1" size=5></input>',/
+'<a href="#"  type=button onClick="goto(input1.value);">Перейти</a> |',/
+'<a href="#" onClick="next();">Следующая &nbsp;&gt;</a> |',/
+'<a href="#" onClick="last();">Последняя &nbsp;&gt;&gt;</a> |',/
+'Масштаб',/
+'<input type="button" value="-" language="JavaScript" onClick="downZoom(); return false;">',/
+'<input type="button" value="+" language="JavaScript" onClick="upZoom(); return false;">',/
+'<input type="text" value="" id="currZoom1" size="4" readonly="readonly">',/
+'</td></tr>',/
+'</table>',/
+'<img src="" id="photo" align="center" hspace="0">',/
+'<table width="100%" border="1">',/
+'<tr><td>',/
+'<a href="#" onClick="first();">&lt;&lt;&nbsp;Первая</a> |',/
+'<a href="#" onClick="previous();">&lt;&nbsp;Предыдущая</a>  |',/
+'<input type="text" name="input2" value ="1" size=5></input>',/
+'<a href="#" onClick="goto(input2.value);">Перейти</a> |',/
+'<a href="#" onClick="next();">Следующая &nbsp;&gt;</a> |',/
+'<a href="#" onClick="last();">Последняя &nbsp;&gt;&gt;</a> |',/
+'Масштаб',/
+'<input type="button" value="-" language="JavaScript" onClick="downZoom(); return false;">',/
+'<input type="button" value="+" language="JavaScript" onClick="upZoom(); return false;">',/
+'<input type="text" value="" id="currZoom2" size="4" readonly="readonly">',/
+'</td></tr>',/
+'</table>',/
+'<script language="JavaScript" type="text/javascript">',/
+'first();',/
+'setZoom();',/
+'</script>',/
+'</body>',/
+'</html>',/
+else 
+     if g1<>'' then 
+/*ДЛЯ ГРУППОВОЙ ССЫЛКИ НА ФАЙЛЫ ОТЛИЧНЫЕ ОТ GIF  JPG  PNG
+               g1^T,if g1^T='' then '(Групповая ссылка без названия)' fi,'<br>'/
+               &uf('+7W3#',if g1^a<>''  then ,'IRBIS:11,,',&uf('+\0',g1^a),&uf('G0#',g1^M) else &uf('+\0',g1^I),,&uf('G0#',g1^M),fi),/ /* G3 - Префикс 
+               /* G2 = расширение
+               &uf('+7W4#',&uf('+95',&uf('G0.',&uf('G1#',g1^M)))),//*G4 - длина цифровой части имени
+               &uf('+7W5#',g1^N),//* g5 - счетчик
+               &uf('+7W6#1'),/
+               (if val(&uf('Ag5#1'))>=val(&uf('Ag6#1')) then '<A href="',&uf('Ag3#1'),&uf('+98 0',f(val(&uf('Ag6#1')),val(&uf('Ag4#1')),0)),'.',&uf('Ag2#1'),'">Файл №',f(val(&uf('Ag6#1')),0,0),'</A><br>',/&uf('+7W6#',f(val(&uf('Ag6#1'))+1,0,0)) else break fi),/
+               else 'Нет групповой ссылки' 
+     fi 
+fi

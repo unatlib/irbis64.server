@@ -1,0 +1,87 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10500 
+\pard \widctlpar\intbl {\qc \b \fs22 ''Итого: поступило экземпляров ',,,g13,,,'; на сумму ',,g11,,if val(g12)>0 then '; не на баланс ',g12 fi,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx500 
+\pard \widctlpar\intbl {\qc \fs18 № п/п
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1900 
+\pard \widctlpar\intbl {\qc \fs18 Инвент.ном. / Штрих-код
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2400 
+\pard \widctlpar\intbl {\qc \fs18 Кол-во
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3500 
+\pard \widctlpar\intbl {\qc \fs18 Место хранения
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4000 
+\pard \widctlpar\intbl {\qc \fs18 Отм. о пров.
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7800 
+\pard \widctlpar\intbl {\qc \fs18 Автор, заглавие...
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8700 
+\pard \widctlpar\intbl {\qc \fs18 Год издания
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9800 
+\pard \widctlpar\intbl {\qc \fs18 Цена
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10500 
+\pard \widctlpar\intbl {\qc \fs18 № акта выб.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

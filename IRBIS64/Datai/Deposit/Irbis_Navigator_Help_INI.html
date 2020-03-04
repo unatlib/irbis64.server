@@ -1,0 +1,632 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>Описание ИРБИС-Навигатора - Параметры INI-файла</title>
+<style><!--
+.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" class="Normal" lang=RU>
+<div class=Section1> 
+  <p align=center style='text-align:center'><b><span
+style='font-size:18.0pt;'>Параметры </span></b><b><span
+lang=EN-US style='font-size:18.0pt;'>INI</span></b><b><span style='font-size:18.0pt;'>-файла 
+    ИРБИС-Навигатора</span></b></p>
+  <table border=1 cellspacing=0 cellpadding=0>
+    <thead>
+      <tr> 
+        <td width=256 valign=top class="Normal"> <p><b>Параметр</b></p></td>
+        <td width=154 valign=top class="Normal"> <p><b>Сегмент/Раздел</b></p></td>
+        <td width=370 valign=top class="Normal"> <p><b>Назначение</b></p></td>
+        <td width=169 valign=top class="Normal"> <p><b>Значение по умолчанию</b></p></td>
+      </tr>
+    </thead>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>INITURL</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Начальный (стартовый) адрес/ссылка. 
+          Может быть как ИРБИС-ссылкой, так и реальным <span lang=EN-US>URL</span></p></td>
+      <td width=169 valign=top class="Normal"> <p> -</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>HELPURL</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Адрес/ссылка для режима ПОМОЩЬ. 
+          Может быть как ИРБИС-ссылкой, так и реальным <span lang=EN-US>URL</span><span
+  lang=EN-US> </span></p></td>
+      <td width=169 valign=top class="Normal"> <p> -</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FILEOPEN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность режима ФАЙЛ-ОТКРЫТЬ. 
+          Принимает два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FILESAVEAS</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность режима ФАЙЛ-СОХРАНИТЬ 
+          КАК. Принимает два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FILEPRINT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность режима ФАЙЛ-ПЕЧАТЬ. 
+          Принимает два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FAVORITESADD</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность режима ИЗБРАННОЕ-ДОБАВИТЬ. 
+          Принимает два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FAVORITESHISTORY</span><span lang=EN-US>DELETE</span></p>
+        </td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность кнопки удаления 
+          элементов списка ИСТОРИЯ и ИЗБРАННОЕ. Принимает два значения: 0 – не 
+          доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>SERVISTOOLBARS</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность режима СЕРВИС-ПАНЕЛЬ 
+          ИНСТРУМЕНТОВ. Принимает два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>URLCOOLBAR</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Доступность панели АДРЕС. Принимает 
+          два значения: 0 – не доступен; 1 - доступен</p></td>
+      <td width=169 valign=top class="Normal"> <p>1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>RBUTTONDOWN</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> Доступность всплывающего меню 
+          над окном Навигатора.
+        <br>0 – не доступно; 1 - доступно</td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FAVORITESLIST</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Только для ИРБИС<span lang=EN-US>64. 
+          </span>Определяет, где хранится список ИЗБРАННОЕ: 0 – в серверном <span lang=EN-US>INI</span>; 
+          1 – в клиентском <span lang=EN-US>INI</span></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SERVERIP</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Только для ИРБИС64. Определяет 
+          имя для параметра ИРБИС-ссылки <b><span lang=EN-US>IP</span>-адрес сервера 
+          БД ИРБИС</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>SERVERIP</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SERVERPORT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Только для ИРБИС64. Определяет 
+          имя для параметра ИРБИС-ссылки <b>Порт сервера БД ИРБИС</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>SERVERPORT</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_DBNAME_DEFAULT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя БД, используемое по умолчанию</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>DBNAME_DEFAULT</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_CHECKNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Значение параметра </b><b><span lang=EN-US>NAME</span><span
+  lang=EN-US> </span>для тэга &lt;</b><b><span lang=EN-US>input</span><span lang=EN-US> 
+          </span></b><b><span lang=EN-US>type</span>=”</b><b><span lang=EN-US>checkbox</span>” 
+          </b><b><span lang=EN-US>name</span>=…&gt;, на основании которого ведется 
+          список отмеченных (отобранных) элементов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>CHECKNAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_PFTNAME_DEFAULT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя формата, используемое по умолчанию</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>PFTNAME_DEFAULT</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TOPPFTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя формата для формирования  верхнего колон-титула 
+          результирующей страницы</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>TOPPFTNAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_BOTTOMPFTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя формата для формирования  нижнего колон-титула результирующей 
+          страницы</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>BOTTOMPFTNAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_RELOAD</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Правило обновления результирующей страницы при переходах</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>RELOAD</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_COMMAND</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Идентификатор команды</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>C21COM</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_DBNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя БД</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>I21DBN</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_PFTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя формата для формирования основной части результирующей 
+          страницы</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>PFTNAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_KEY</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Ключ для доступа к документу</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>KEY</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_ENTRY_MFN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b><span
+  lang=EN-US>MFN</span><span lang=EN-US> </span>документа</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>ENTRY_MFN</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SEARCH</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Текст с терминами поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21STR</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TRMRULE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Правило извлечения терминов поиска из текста</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21P01</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TRUNCATE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Применение аппарата правого усечения терминов поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21P02</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_PREFIX</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Префикс для терминов поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21P03</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_CVALIF</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Квалификатор для терминов поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21P04</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SEARCHNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Название поиска на естественном языке</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21P05</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_LOGIC</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Логика связи терминов поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21LOG</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SEARCHFROM</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Порядковый номер первого документа в выдаваемой порции</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21STN</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SEARCHPORTION</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Размер порции выдаваемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21CNR</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_SEXP</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Поисковое выражение на языке запросов ИРБИС</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21ALL</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_QUERY</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Формулировка запроса на естественном языке</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>QUERY</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_MARKWORDS</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Термины для разметки выходной страницы</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>S21ALLTRM</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_PATH</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Относительный путь в системе ИРБИС</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>PATH</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_FILENAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя файлового ресурса</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>FILENAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TERMIN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Начальный термин порции словаря</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>T21TRM</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TRMPREFIX</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Префикс терминов словаря</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>T21PRF</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_TRMPORTION</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Размер порции терминов словаря</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>T21CNR</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_LISTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя списка/справочника</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>LISTNAME</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_ENTRY_FIELD</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Значение поля</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>R21STR</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_ENTRY_MODE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Режим редактирования</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>R21UPD</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_ENTRY_DBNFLC</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя формата для ФЛК записи в целом</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>ENTRY_DBNFLC</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_ENTRY_ACTUAL</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Необходимость актуализации записи</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>R21IFP</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_EXPORT_FROMMFN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Начальный </b><b><span
+  lang=EN-US>MFN</span><span lang=EN-US> </span>экспортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>EXPORT_FROMMFN</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_EXPORT_TOMFN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Конечный </b><b><span
+  lang=EN-US>MFN</span><span lang=EN-US> </span>экспортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>EXPORT_TOMFN</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_EXPORT_FMT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Форма представления экспортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>EXP21FMT</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_EXPORT_CODE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Кодировка представления экспортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>EXP21CODE</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_EXPORT_FST</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя ТВП переформатирования для экспорта</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>EXP21FST</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_IMPORT_FMT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Форма представления импортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>IMP21FMT</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_IMPORT_CODE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Кодировка представления импортируемых документов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>IMP21CODE</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_IMPORT_FST</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки <b>Имя ТВП переформатирования для импорта</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>IMP21FST</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>PARNAME_FREEPAR</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Определяет имя для параметра 
+          ИРБИС-ссылки</p>
+        <p><b>Имя-префикс произвольных параметров</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>FREEPAR</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_DBNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Имя 
+          БД</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1000</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_PFTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Имя 
+          формата для формирования основной части результирующей страницы </b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1012</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_SEARCH</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля<b> Текст 
+          с терминами поиска</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1001</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_SEARCHRESULT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Результат 
+          поиска (кол-во документов)</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1002</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_SELECTEDRESULT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Кол-во 
+          отмеченных элементов</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1003</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_LIST</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Элементы 
+          списка</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1004</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_COUNT_BEGIN</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Первый 
+          элемент списка</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1008</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_COUNT_END</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Последний 
+          элемент списка</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1005</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_PORTION</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля<b> Размер 
+          порции</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1006</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_SEXP</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Поисковое 
+          выражение</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1007</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_QUERY</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Формулировка 
+          запроса на естественном языке</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1010</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_MARKWORDS</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Термины 
+          для разметки</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1009</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_TRMPREFIX</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка модельного поля <b>Префикс 
+          терминов словаря</b></p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>1011</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>MODTAG_ FREEPAR</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Метка первого произвольного 
+          модельного поля </p></td>
+      <td width=169 valign=top class="Normal"> <p>1100</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>NUMBFREEPAR</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Количество произвольных модельных 
+          полей</p></td>
+      <td width=169 valign=top class="Normal"> <p>20</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>SEARCHPORTION</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Размер порции выдаваемых док-ов 
+          по умолчанию</p></td>
+      <td width=169 valign=top class="Normal"> <p>20</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>TRMPORTION</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Размер порции терминов словаря 
+          по умолчанию</p></td>
+      <td width=169 valign=top class="Normal"> <p>100</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>MAXHISTORYTITLELENGTH</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Максимальная длина названия 
+          в списках ИЗБРАННОЕ и ИСТОРИЯ</p></td>
+      <td width=169 valign=top class="Normal"> <p>80</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>BARCODEHEIGHT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Высота штрих-кода в пикселях 
+          (при отображении штрих-кодов через ИРБИС-ссылку)</p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>40</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>BARCODETYPE</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>NAVIGATOR</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Тип штрих<span
+  lang=EN-US>-</span>кода</p></td>
+      <td width=169 valign=top class="Normal"> <p>0</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>SERVERIP</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Только для ИРБИС64. <span lang=EN-US>IP</span>-адрес 
+          сервера БД ИРБИС для первоначального соединения</p></td>
+      <td width=169 valign=top class="Normal"> <p>127.0.0.1</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>SERVERPORT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Только для ИРБИС64. Порт сервера 
+          БД ИРБИС для первоначального соединения</p></td>
+      <td width=169 valign=top class="Normal"> <p>6666</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>APPLIDENT</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Идентификатор АРМа ИРБИС</p></td>
+      <td width=169 valign=top class="Normal"> <p>С  (АРМ Каталогизатор)</p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>FONTNAME</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Имя основного фонта</p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>Arial</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>IRBISMSG</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Имя файла сообщений</p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>IrbisMsg</span>.<span
+  lang=EN-US>txt</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p><span lang=EN-US>WORKDIR</span></p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>MAIN</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Директория для временных файлов</p></td>
+      <td width=169 valign=top class="Normal"> <p><span lang=EN-US>C:\IRBISWRK</span></p></td>
+    </tr>
+    <tr> 
+      <td width=256 valign=top class="Normal"> <p>(любой)</p></td>
+      <td width=154 valign=top class="Normal"> <p><span lang=EN-US>DESKTOP</span></p></td>
+      <td width=370 valign=top class="Normal"> <p>Все параметры секции <span lang=EN-US>DESKTOP</span><span lang=EN-US> 
+          </span>содержат пользовательскую конфигурацию интерфейса и сохраняются 
+          автоматически</p></td>
+      <td width=169 valign=top class="Normal">&nbsp; </td>
+    </tr>
+  </table>
+  <p><b><span style='font-size:14.0pt;'>Пояснения:</span></b></p>
+  <p style='text-align:justify'>ИРБИС-Навигатор для ИРБИС64 работает как клиентское 
+    приложение, поэтому, как и другие АРМы ИРБИС64, использует два <span lang=EN-US>INI</span>-файла: 
+    клиентский и серверный. При этом параметры секции <span lang=EN-US>NAVIGATOR</span><span lang=EN-US> 
+    </span>должны находиться в серверном <span lang=EN-US>INI</span>, а параметры 
+    секции <span lang=EN-US>MAIN</span><span
+lang=EN-US> </span>и <span lang=EN-US>DESKTOP</span><span
+lang=EN-US> </span>– в клиентском. Имя клиенского <span lang=EN-US>INI</span>-файла 
+    (с расширением) может задаваться в качестве первого параметра командной строки 
+    – по умолчанию используется <span lang=EN-US>Irbis</span>_<span
+lang=EN-US>Navigator</span>.<span lang=EN-US>ini</span>. Имя серверного <span lang=EN-US>INI</span>-файла 
+    определяется сервером на основании имени/пароля пользователя и идентификатора 
+    АРМа (<span lang=EN-US>APPLIDENT</span>).</p>
+  <p style='text-align:justify'>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+(if '***'='600'then 
+    if p(v600^g) then &unifor(|G0 |v600^a), 
+    if &unifor(|G2 |v600^a):' 'then' '&unifor('G0 '&unifor(|G2 |v600^a)) fi,|, |v600^g 
+    else 
+       if v600^a:' 'then &unifor('G0 'v600^a), 
+          if &unifor(|G2 |v600^a):' 'then' '&unifor('G0 '&unifor(|G2 |v600^a)) fi 
+           ', '&unifor('G2 '&unifor(|G2 |v600^a)) 
+       else v600^a 
+    fi fi, 
+    if s(v600^1,v600^c,v600^f)<>''then' (',v600^1, 
+       if s(v600^1)<>''then|; |d600^c fi,v600^c, 
+       if s(v600^1,v600^c)<>''then|; |d600^f fi,v600^f,')',  
+    fi,| \|v600^b|\|/ 
+ fi) 
+    
+    
+    

@@ -1,0 +1,34 @@
+0
+//12 PUTLOG
+//замена кода кафедры читающей
+//в 991^A что заменить, 991^B на что 
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^B/)
+
+REP
+691^B
+F
+(if p(v691) then if p(v691^B) then if &uf('+97',v691^B)=&uf('+97',&uf('Av991^A#1')) then &uf('Av991^B#1') else v691^B fi else # fi fi/)
+
+IF
+if v111<>v691^B then '1' fi
+PUTLOG
+'«аменено в записи каталога. MFN=',f(val(mfn),0,0)
+FI
+DEL
+991
+*
+
+
+DEL
+111
+*
+
+

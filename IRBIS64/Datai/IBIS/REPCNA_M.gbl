@@ -1,0 +1,452 @@
+0
+//12 PUTLOG, испоользуется в RepMark1
+// 7.1 корректировка записей каталога для отмеченных
+// в 991^A что заменить, 991^B на что 
+// в 992 условия отбора
+//15 условия замены в 991
+// ! факультет / специальность | направление + ФО = ВО
+DEL
+1991
+*
+
+
+ADD
+1991
+
+(v991/)
+
+REPEAT
+DEL
+991
+*
+
+
+ADD
+991
+
+&uf('Av1991#1')
+
+DEL
+992
+*
+
+
+ADD
+992
+
+if v991^X<>'' then '^',v991^X,v991^Y fi
+
+// в 992 подполе со значением для уточнения замены
+IF
+if v991: '^CC' then '1' fi
+//-------------------------------------------------СПЕЦИАЛЬНОСТЬ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^C/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^C
+F
+(if p(v691) then if v691^C<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^C)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^C fi,else v691^C fi,else v691^C fi,else v691^C fi,else v691^C fi,else v691^C fi else v691^C fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^C) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',,&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^C='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^C',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^C) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CN' then '1' fi
+//---------------------------------------------------------------НАПРАВЛЕНИЕ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^N/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^N
+F
+(if p(v691) then if v691^N<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^N)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^N fi,else v691^N fi,else v691^N fi,else v691^N fi,else v691^N fi,else v691^N fi else v691^N fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^N) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',,&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^N='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^N',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^N) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CA' then '1' fi
+//------------------------------------------------------ФАКУЛЬТЕТ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^A/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^A
+F
+(if p(v691) then if v691^A<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^A)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^A fi,else v691^A fi,else v691^A fi,else v691^A fi,else v691^A fi,else v691^A fi else v691^A fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^A) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^A='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^A',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^A) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CO' then '1' fi
+//------------------------------------------------------------ФОРМА ОБУЧЕНИЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^O/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^O
+F
+(if p(v691) then if v691^O<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^O)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^O fi,else v691^O fi,else v691^O fi,else v691^O fi,else v691^O fi,else v691^O fi else v691^O fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^O) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) 
+then v691,,,,,if v691^O='' then  if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A)  then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^O',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^O) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CV' then '1' fi
+//-----------------------------------------------------------ВИД ОБУЧЕНИЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^V/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: &unifor('Av991^A#1') then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^V
+F
+(if p(v691) then if v691^V<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^V)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^V fi,else v691^V fi,else v691^V fi,else v691^V fi,else v691^V fi,else v691^V fi else v691^V fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^V) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^V='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^B#1')<>'' then '^V',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^V) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CF' then '1' fi
+//---------------------------------------------------------------------СЕМЕСТР
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^F/)
+
+// удаление подполей 0 и 9
+DEL
+691^0
+F
+(if p(v691) then if v691^0: s('-S',&unifor('Av991^A#1')) then '1' else '0' fi fi/)
+
+DEL
+691^9
+F
+(if p(v691) then if v691^9: s('-S',&unifor('Av991^A#1')) then '1' else '0' fi fi/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^F
+F
+(if p(v691) then if v691^F<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') then if val(v691^F)=val(&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^F fi else v691^F fi else v691^F fi else v691^F fi else v691^F fi else v691^F fi else v691^F fi else # fi fi/)
+
+IF
+if v111<>v691^F then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^F='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1')  then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then if &uf('Av991^B#1')<>'' then '^F',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if v111<>v691^F then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v991: '^CH' then '1' fi
+//--------------------------------------------------КАФЕДРА ЧИТАЮЩАЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^B/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^B
+F
+(if p(v691) then if v691^B<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^B)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^B fi,else v691^B fi,else v691^B fi,else v691^B fi,else v691^B fi,else v691^B fi else v691^B fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^B) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^B='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  '^B',,&uf('Av991^B#1')  fi,fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^B) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
+DEL
+1991
+1
+
+
+UNTIL
+if p(v1991) then '1' fi
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+

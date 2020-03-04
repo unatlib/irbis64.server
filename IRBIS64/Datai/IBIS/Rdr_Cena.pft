@@ -1,0 +1,3 @@
+(if p(v910) then if &uf('Ag1001#1')<>'' and v910^B:&uf('Ag1001#1') or &uf('Ag1002#1')<>'' and v910^H:&uf('Ag1002#1') then 
+'. - ',v910^e,if a(v910^e)then &uf('Av10^d#1') fi,if val(v910^e)>0 or val(&uf('Av10^d#1'))>0 then &uf('Korg.mnu\3') fi fi fi),
+

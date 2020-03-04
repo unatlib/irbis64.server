@@ -1,0 +1,55 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+if v940^v:v991 then f(rsum((if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then f(val(v940^x|;|,|1|n940^x,' 0'),0,0)else '0;' fi fi/)),0,0)fi
+@sumww
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx12467
+\pard \qr\widctlpar\intbl {  ИТОГО: 'f(val(v1),2,0)' экз. на сумму  ',f(val(v2),2,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+\paperw16727\paperh11907\margl567\margr567\margt567\margb1134
+{\b\fs24  
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1479
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx2445
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx3411
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6673
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7639
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8787
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx10199
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx11049
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx12467
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Инвентарный номер\cell }
+\pard \qc\widctlpar\intbl {\b Количество экз.\par (ЦБС или БИУ)\cell }
+\pard \qc\widctlpar\intbl {\b Место хранения\cell }
+\pard \qc\widctlpar\intbl {\b Авторы, заглавие,\par  выходные данные\cell }
+\pard \qc\widctlpar\intbl {\b Дата поступления\cell }
+\pard \qc\widctlpar\intbl {\b Цена экз. при поступлении\cell }
+\pard \qc\widctlpar\intbl {\b Стоимость экз. при выбытии\cell }
+\pard \qc\widctlpar\intbl {\b Всего выбыло экз.\cell }
+\pard \qc\widctlpar\intbl {\b На сумму\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

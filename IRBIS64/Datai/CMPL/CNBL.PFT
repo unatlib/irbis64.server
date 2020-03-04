@@ -1,0 +1,10 @@
+(if p(v910) then 
+    if '2 6 7':v910^a then else 
+       if v910^u=&uf('Ag1002#1') and v910^d=&uf('Ag1003#1') then 
+          if s(&uf('Av215^y#1'),v910^4)<>'' then else 
+             if s(v910^e)<>''then f(val(v910^e,' 0'),0,2),if v910^1='1' or a(v910^1) then else '/ύκη' fi 
+             else 
+                if val(&unifor('Av10^d#1'))>0 then f(val(&unifor('Av10^d#1'),' 0'),0,2),if v910^1='1' or a(v910^1) then else '/ύκη' fi 
+                else &unifor('Av10^d#1') 
+             fi fi'\par '
+ fi fi fi fi/)

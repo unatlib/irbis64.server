@@ -1,0 +1,25 @@
+      if p(v421) then  
+         (if p(v421) then 
+             if &uf(|J,B=|v421^y)<>'' then 
+               '<dd><dd>'
+               '<table><tr><td valign=top>','<input type="checkbox" name="CHECKINDEX"  value="',
+               &uf(|D,!B=|v421^y|!,mfn|),'">','</td>', 
+               '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>',
+               '<td>' 
+               '<A HREF="IRBIS:2,,,derevo_ARCH_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=B=',
+               &uf('+3E',v421^y),'">',&uf('D,!B=',v421^y'!,v19^b'),'</A>',&uf('D,!B=',v421^y|!,'__'&uf('6brief_arch')|)
+               '</td></tr></table>',
+               &uf(|D,!B=|v421^y|!,'<dd><dd>',&uf('6ur_dn421'),'.'|),
+             else 
+                if &uf(|J,I=|v421^w)<>'' then 
+                   '<dd><dd>'
+                   '<table><tr><td valign=top>','<input type="checkbox" name="CHECKINDEX"  value="',
+                   &uf(|D,!I=|v421^w|!,mfn|),'">','</td>', 
+                   '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>',
+                   '<td>' 
+                   '<A HREF="IRBIS:2,,,derevo_ARCH_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=I=',
+                   &uf('+3E',v421^w),'">',&uf('D,!I=',v421^w'!,v19^b'),'</A>',&uf('D,!I=',v421^w|!,'__'&uf('6brief_arch')|)
+                   '</td></tr></table>', 
+                   &uf(|D,!I=|v421^w|!,'<dd><dd>',&uf('6ur_dn421'),'.'|),
+         fi fi fi),
+      fi,   

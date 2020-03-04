@@ -1,0 +1,16 @@
+if v903:'???'then /'2 Ошибка: Откорректируйте Шифр (замените ???)'  else 
+   if ((l("I="v903))<=0) or (val(ref(l("I="v903),mfn))=val(mfn))  then '0'
+   else '1 Ошибка: Дублетный Шифр 'v903,ref(l("I="v903),' (см. N ',f(val(mfn),0,0)')') 
+fi fi/ 
+if v920:'fond' then 
+   if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIopis='&uf('Av903#1')))>0 OR
+      val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIguar='&uf('Av903#1')))>0 OR 
+      val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIdelo='&uf('Av903#1')))>0 
+   then/'1 Есть ссылки на данный фонд - корректировать шифр нельзя' else /'0'
+   fi 
+else 
+   if v920:'opis' then 
+      if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIguar='&uf('Av903#1')))>0 OR
+         val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIdelo='&uf('Av903#1')))>0 
+      then/'1 Есть ссылки на данную опись - корректировать шифр нельзя' else /'0'
+fi fi fi 

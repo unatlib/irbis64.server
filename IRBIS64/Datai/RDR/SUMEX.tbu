@@ -1,0 +1,31 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+&uf('+7W991#'v991^b,if v991^b='' then &uf('3') fi),if v991^a:'1' then f(rsum((if p(v40) then if v40^f:'***'then '1;'fi fi)),0,0)) else if v991^a:'2' then f(rsum((if p(v40) then if v40^f:'***'then if val(v40^e)<val(&uf('Ag991#1')) then '1;'fi fi fi)),0,0))  fi fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5778 
+\pard \widctlpar\intbl {\qc \fs24 'v1'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5778 
+\pard \widctlpar\intbl {\qc \fs24 Экземпляров -  Всего
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

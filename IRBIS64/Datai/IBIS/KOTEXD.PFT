@@ -1,0 +1,40 @@
+"Экземпляры для 991^a(ВК) "d10000, 
+&unifor('+1W1#'''), 
+if p(v991^a) then 
+   &unifor('+1W1#',f(rsum((if p(v910^c) then 
+                              if &unifor('Av991^a#1')<>'' and p(v910^t) and v910^t:&unifor('Av991^a#1') 
+                              then 
+                                 if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                    if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                           fi fi fi fi)),0,0)), 
+fi, 
+"Экземпляры ДОП. для 991^a"d10000, 
+&unifor('+1W2#'''), 
+if p(v991^a) then 
+   if v910^t<>'' then 
+      if rsum((if p(v910) then if &unifor('Pv910^T')<>'' then '1;'fi fi))> 1 then  
+&unifor('+1W2#',f(rsum((if p(v910^c) then 
+                           if a(v910^t) then 
+                              if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                 if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                        fi fi fi fi)),0,0)) 
+fi fi fi, 
+&unifor('+1W3#'''), 
+"Экземпляры всего "d10000, 
+if a(v991^a) then 
+   &unifor('+1W3#',if s(v910^t)<>'' 
+                   then f(rsum((if p(v910^c) then 
+                                   if a(v910^t) then 
+                                      if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                         if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                fi fi fi fi)),0,0) 
+                   else f(rsum((if p(v910^c) then 
+                                   if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                      if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                                fi fi fi)),0,0) fi) 
+fi, 
+|'R1: '&unifor('+1R1')/'R2: '&unifor('+1R2')/'R3: '&unifor('+1R3')/|d10000, 
+
+if a(v910) and p(v951) then'\b Эл.уч.\b0 'else 
+   if &unifor('+1R1')<>''then &unifor('+1R2') else &unifor('+1R3')fi 
+fi, 

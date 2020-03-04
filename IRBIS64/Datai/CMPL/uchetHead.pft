@@ -1,0 +1,52 @@
+/* v1^A - ИН/ШК утерянный
+/* v1^D - ИН/ШК заменяющий
+/* v1^К - место хранения заменяющего
+/* v1^E - БД каталога 
+/* v1^G - ФИО читателя
+(if p(v1) 
+then 
+   '\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1800 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2600\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5500 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6200 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7400 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9100 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx12300 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13200 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 \pard \widctlpar\intbl {\ql \fs20 ',,,,
+/*---------Инв.ном
+v1^a,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----БД каталога
+v1^E,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------Автор.... утерян
+&uf(|D|d1^E,v1^E,,,|,!EXU=|v1^a|!,@bo|),,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*---------Место хранения
+v1^k,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*---------Цена
+&uf('+7W1#'),&uf('+7W2#'),&uf('+7W1#'v1^a),
+&uf(|D|d1^E,v1^E,,|,!EXU=|v1^a|!,
+              &uf('+7W2#',,
+                        (if p(v910) then if &uf('+97'v910^b)=&uf('+97'&uf('Ag1#1')) or 
+                                            v910^h=&uf('Ag1#1') then v910^e, BREAK  fi fi)
+                    ),
+              &uf('Ag2#1'),
+              if &uf('Ag2#1')='' then  &uf('Av10^d#1') fi,
+              if val(&uf('Av10^d#1'))<>0 or val(&uf('Ag2#1'))<>0 
+              then ,
+                 &uf('Korg.mnu\3')
+              fi|   
+     ),,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----------Инв.ном
+v1^d,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*----------Автор... - замена
+&uf(|D|d1^E,v1^E,,,|,!IN=|v1^d|!,@bo|),,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------Цена
+&uf('+7W3#'), &uf('+7W3#'v1^d),
+if ref(L(|IN=|v1^d),mfn)='' 
+then 
+   &uf(|D|d1^d,,,,v1^E,,|,!IN=|v1^d|!,(if p(v910)then if &uf('+97'v910^b)=&uf('+97'&uf('Ag3#1'))or v910^h=&uf('Ag3#1') then v910^e,if v910^e=''then &uf('Av10^d#1')fi,if val(&uf('Av10^d#1'))<>0 or val(v910^e)<>0 then &uf('Korg.mnu\3')fi, BREAK  fi fi)|)else  ref(L(|IN=|v1^d),(if p(v910)then if &uf('+97'v910^b)=&uf('+97'&uf('Ag3#1'))or v910^h=&uf('Ag3#1') then v910^e,if v910^e=''then &uf('Av10^d#1')fi,if val(&uf('Av10^d#1'))<>0 or val(v910^e)<>0 then &uf('Korg.mnu\3')fi, BREAK  fi fi)) 
+fi,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*---------Читатель
+v1^g,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi/)

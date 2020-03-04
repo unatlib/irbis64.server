@@ -1,0 +1,40 @@
+/* 991^A=1 проверенные 991^A=0 непроверенные
+/* 991^B=NNN задано место хранения
+if v991<>'' then &uf('+7W991#',v991) fi,,,,,,,
+f(rsum(
+(if p(v910) 
+          then  
+            if '2 6 7':v910^a 
+            then 
+            else 
+              if val(&uf('Ag991^A#1'))=1 
+              then
+/* проверенные 
+                if v910^s<>'' and &uf('Ag991^B#1')='' or 
+                   v910^s<>'' and &uf('Ag991^B#1')<>'' and &uf('+97',v910^!)<>'' and &uf('Ag991^B#1')=&uf('+97',v910^!)  or 
+                   v910^s<>'' and &uf('Ag991^B#1')<>'' and &uf('+97',v910^!)='' and &uf('Ag991^B#1')=&uf('+97',v910^D) 
+                then 
+/* есть дата проверки
+                   if v910^0<>'' then v910^0|,| else '1,' fi 
+                fi,,
+              else if val(&uf('Ag991^A#1'))=0 then  
+/* непроверенные
+                 if v910^s='' and v910^0='' and &uf('Ag991^B#1')=''  or 
+                    v910^s='' and v910^0='' and &uf('Ag991^B#1')<>'' and &uf('Ag991^B#1')=&uf('+97',v910^D) 
+                 then 
+                    v910^1|, |,,,,|1,|n910^1,fi,,,, 
+                 else 
+                   if v910^s<>'' and val(v910^1)<>val(v910^0) and &uf('Ag991^B#1')=''  or 
+                      v910^s<>'' and val(v910^1)<>val(v910^0) and &uf('Ag991^B#1')<>'' and &uf('+97',v910^!)<>'' and &uf('Ag991^B#1')=&uf('+97',v910^!) or 
+                      v910^s<>'' and val(v910^1)<>val(v910^0) and &uf('Ag991^B#1')<>'' and &uf('+97',v910^!)='' and &uf('Ag991^B#1')=&uf('+97',v910^D)    
+                   then 
+/* проверка была не полностью                   
+                     f(val(v910^1)-val(v910^0),0,0),,,,
+                   fi,,
+                 fi,,
+              fi,,,
+            fi,, 
+          fi/)/
+),0,0)
+
+

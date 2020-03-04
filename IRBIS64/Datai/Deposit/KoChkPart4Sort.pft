@@ -1,0 +1,83 @@
+/*-V3---кол-во наименований по ЭБС основной - ЭУ
+(if p(v691) then 
+if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then     
+if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then   
+if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then     
+'^22 ',,/
+'^22 ',,'^A',&uf('+7W100#осн'),,&uf('6KoPart4Sum'),,'^B',f(val(mfn),0,0),,'^C',|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| |,,, break 
+fi fi,,fi,,fi,,fi fi/)/
+
+/*-V4---кол-во наименований по ЭБС дополнительной - ЭУ
+(if p(v691) then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then     
+if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then   
+if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then       
+'^33 '/
+'^33 ',,'^A',&uf('+7W100#доп'),,&uf('6KoPart4Sum'),,,,'^B',f(val(mfn),0,0),,'^C',|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| |,,, break 
+fi fi,,fi,,fi,,fi fi/),
+
+/*-V5---кол-во ЭКЗемпляров по каталогу, ОСНОВНОЙ, по рабочей программе
+&uf('+7W10#'),,,
+if p(v910) and p(v691) then 
+if rsum( (if p(v691) then if v691^G='' or v691^G: 'осн'  then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+                          if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+                          if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then    
+                          if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then   
+                          if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and v691^5<>'' then    
+                          if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then    
+                          '1,',,&uf('+7U10#',,,|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| | ),,,
+                          fi fi fi fi fi fi fi fi))>0 
+then 
+'^44 '/
+'^44 ',,'^A',&uf('6KoKMIEkz'),,'^B',f(val(mfn),0,0),,,'^C',,g10+|;  |,,
+fi fi/
+
+/*-V6---кол-во наименований по каталогу, ОСНОВНОЙ, по рабочей про
+&uf('+7W10#'),,,
+if p(v910) and p(v691) then 
+if rsum( (if p(v691) then if v691^G='' or v691^G: 'осн' then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+                          if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+                          if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then    
+                          if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then    
+                          if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and v691^5<>'' then    
+                          if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then    
+                          '1,',,&uf('+7U10#',,,|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| | ),,,
+                          fi fi fi fi fi fi fi fi))>0 
+then 
+'^55 '/
+'^55 ',,'^A','1 ',,'^B',f(val(mfn),0,0),,,'^C',g10+|;  |,,
+fi fi/
+
+/*-V7---кол-во ЭКЗемпляров по каталогу, ДОПОЛНИТЕЛЬНОЙ, по рабочей программе
+&uf('+7W10#'),,,
+if p(v910) and p(v691) then 
+if rsum( (if p(v691) then if v691^G: 'доп' then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+                          if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+                          if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then    
+                          if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then    
+                          if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and v691^5<>'' then    
+                          if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then    
+                          '1,',,&uf('+7U10#',,,|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| | ),,,
+                          fi fi fi fi fi fi fi fi) )>0 
+then 
+'^66 '/
+'^66 ',,'^A',&uf('6KoKMIEkz'),,'^B',f(val(mfn),0,0),,,'^C',,,g10+|;  |,,
+fi fi/
+/*-V8---кол-во наименований по каталогу, ДОПОЛНИТЕЛЬНОЙ, по рабочей программе
+&uf('+7W10#'),,,
+if p(v910) and p(v691) then 
+if rsum( (if p(v691) then if v691^G: 'доп' then if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then 
+                          if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then 
+                          if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) then     
+                          if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then   
+                          if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and v691^5<>'' then   
+                          if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then    
+                          '1,',,&uf('+7U10#',,,|O-|v691^O| |,,|A-|v691^A| |,,|N-|v691^N| |,,|C-|v691^C| |,,|5-|v691^5| | ),,,
+                          fi fi  fi fi fi fi fi fi))>0 
+then 
+'^77 '/
+'^77 ',,'^A','1',,'^B',f(val(mfn),0,0),,,'^C',g10+|;  |,,
+fi fi

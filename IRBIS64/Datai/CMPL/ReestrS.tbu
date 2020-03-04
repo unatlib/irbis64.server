@@ -1,0 +1,182 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+(if p(v62) then if &uf('+97'v62^B)=&uf('+97'&uf('Av991^B#1')) then v62^d fi fi/)
+&uf('+7W10#'),&uf('+7W11#'),&uf('+7W10#'if rsum((if p(v910) then if v910^a:'7' and v910^9=&uf('Av991^B#1') and p(v910^e) then '1;' fi fi))>0 then (if p(v910) then if v910^a:'7' and v910^9=&uf('Av991^B#1') and p(v910^e) then v910^e fi fi) else f(val(v10^d),0,2) fi ),&uf('+7W11#'if p(v991^i) and &uf('+97'v991^i)=&uf('+97'v40^i) then f(val(g10)*val(&uf('Kkurs_val.mnu\'&uf('+97'v40^i))),0,2) else g10 fi),f(val(g11)*val((if p(v62) then if  &uf('+97'v62^B)=&uf('+97'&uf('Av991^B#1')) then v62^d fi fi/)),0,2),
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10314 
+\pard \ql\widctlpar\intbl {\ql \fs20 ''\qr ИТОГО:'
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11164 
+\pard \ql\widctlpar\intbl {\ql \fs20 ''\qr 'v1
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12298 
+\pard \ql\widctlpar\intbl {\ql \fs20 '''
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13999 
+\pard \ql\widctlpar\intbl {\ql \fs20 ''\qr 'f(val(v2),0,2)
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14849 
+\pard \ql\widctlpar\intbl {\ql \fs20 '''
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14850 
+\pard \ql\widctlpar\intbl {\ql \fs20 ''\ql \par \par Ориентировочная стоимость заявки  'f(val(v2),0,2),&uf('KOrg.mnu\3'),'\par \par Место поставки (почтовый адрес) ',if p(v991^a) then &uf(|DCMPL,?Z=|v991^a|?,v7^A,v7^B,v7^D,if a(v7) then v6^A,v6^B,v6^D fi|) else &uf('DCMPL,?vd=Polzv?,v15^A,|, |v15^c,|, |v15^d,|, |v15^e') fi,'\par '&uf('6reestr_up'),'\par Контактное лицо ' &uf('DCMPL,?vd=Polzv?,v14^F'),'\par тел. ' &uf('DCMPL,?vd=Polzv?,v14^E'),'\par \par \tab Руководитель структурного подразделения:   _______________________ /'&uf('DCMPL,?vd=Polzv?,v14^G'),'/\par \tab \tab "_______" _______________ '&uf('30')' г.','\par \par \tab СОГЛАСОВАНО:\par \par \tab Юридический отдел:\tab __________  / ____________ /\par \par \tab 	Планово-финансовый отдел:\par \par \tab ППП _______________________________________________\par \par Источники финансирования контракта:\par \par \tab 	Наименование бюджета _______________________________________\par \tab ФКР ________________________________________________________\par \tab КЦСР _______________________________________________________	\par \tab КВР ________________________________________________________\par \tab ЭКР ________________________________________________________\par \par Вид внебюджетных средств __________________________________________\par \par ЭКР ______________________________________________________________\par Сроки и условия оплаты _____________________________________________\par \par \tab ___________________________ / ________________ /\par \tab \tab \tab "______" ___________________ '&uf('30')' г.\par \par \par Проректор:   _________________________ / __________________ /\par \tab \tab \tab "______" ___________________ '&uf('30')' г.\par \par Коды продукции по ОКП и ОКЕИ проставлены\par Отдел снабжения материально-технического снабжения\par \tab \tab \tab ___________________________ / ________________ /\par \tab \tab \tab 	"______" ___________________ '&uf('30')' г.\par \par '
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx675 
+\pard \widctlpar\intbl {\ql \fs20 №№ п/п
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\pard \widctlpar\intbl {\ql \fs20 Наименование товаров, работ, услуг
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9463 
+\pard \widctlpar\intbl {\ql \fs20 Код продукции по ОКП
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10313 
+\pard \widctlpar\intbl {\ql \fs20 Ед.измерения по ОКЕИ (усл. обозн)
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11163 
+\pard \widctlpar\intbl {\ql \fs20 Кол-во
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12297 
+\pard \widctlpar\intbl {\ql \fs20 Цена за единицу
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13998 
+\pard \widctlpar\intbl {\ql \fs20 Сумма
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14848 
+\pard \widctlpar\intbl {\ql \fs20 Примечание
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx675 
+\pard \widctlpar\intbl {\ql \fs20 1
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\pard \widctlpar\intbl {\ql \fs20 2
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9463 
+\pard \widctlpar\intbl {\ql \fs20 3
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10313 
+\pard \widctlpar\intbl {\ql \fs20 4
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11163 
+\pard \widctlpar\intbl {\ql \fs20 5
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12297 
+\pard \widctlpar\intbl {\ql \fs20 6
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13998 
+\pard \widctlpar\intbl {\ql \fs20 7
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14848 
+\pard \widctlpar\intbl {\ql \fs20 8
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

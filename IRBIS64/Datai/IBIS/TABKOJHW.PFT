@@ -1,0 +1,10 @@
+'\pard \qr \fs28 Факультет 'v991^a'\par '
+"\pard \qr \fs28 Кафедра "v991^b"\par "
+"\pard \qr \fs28 Специальность "v991^c"\par "
+"\pard \qr \fs28 Семестр "v991^e"\par "
+'\pard \qr \fs28 Число студентов ',
+if rmax('0;',&unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e))>0 
+then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)  
+else '0' fi,'\par \pard \qc \fs28 Книгообеспеченность ',
+"дисциплины "v991^d'\par '
+

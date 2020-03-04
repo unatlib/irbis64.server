@@ -1,0 +1,16 @@
+0
+IF
+if v920='J'then '0'else if 'V= MARC':v2 and val(&uf('J,II='v903))<1 then'1'else'0'fi fi
+
+
+
+DELR
+
+
+
+
+FI
+
+
+
+

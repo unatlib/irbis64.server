@@ -1,0 +1,74 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx500 
+\pard \widctlpar\intbl {\qc \fs20 \b № п/п\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2147 
+\pard \widctlpar\intbl {\qc \fs20 \b Штрих-код \par Инв.номер\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2927 
+\pard \widctlpar\intbl {\qc \fs20 \b Место хр.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3990 
+\pard \widctlpar\intbl {\qc \fs20 \b Дата\par послед.\par пров-ки
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4394 
+\pard \widctlpar\intbl {\qc \fs14 \b Статус
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5841 
+\pard \widctlpar\intbl {\qc \fs20 \b Дата \par поступл. \par № КСУ\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8392 
+\pard \widctlpar\intbl {\qc \fs20 \b Автор и заглавие\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9242 
+\pard \widctlpar\intbl {\qc \fs20 \b Год изд.\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10376 
+\pard \widctlpar\intbl {\qc \fs20 \b Цена\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

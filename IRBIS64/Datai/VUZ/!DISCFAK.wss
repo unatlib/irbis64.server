@@ -1,0 +1,91 @@
+9
+1
+______Наименование______
+0
+0
+0
+
+
+
+G1^1='' or v3^A: G1^1
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then &unifor('Av3^A#1') fi fi fi/)
+2
+Цикл
+0
+0
+1
+cikld.mnu
+
+DiscCKL=
+G1^2='' or s("!"v4"!"): s("!"G1^2"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then &unifor('Av4#1') fi fi fi/)
+3
+Уров.комп.
+0
+0
+1
+komp.mnu
+
+DISCUK=
+G1^3='' or s("!"v6"!"): s("!"G1^3"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then &unifor('Av6#1') fi fi fi/)
+4
+Кафедра читающая
+0
+0
+1
+kafch.mnu\\2
+
+DISCKH=
+G1^4='' or s("!"v5"!"): s("!"G1^4"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then &unifor('Av5#1') fi fi fi/)
+C
+Специальность/Профиль
+0
+0
+0
+
+
+DISCS=
+G1^C='' or s((if p(v83) then |!|v83^C|!|fi)): s("!"G1^C"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then v83^C fi fi fi/)
+N
+Напр.
+0
+0
+1
+napr.mnu\\2
+
+DISCNPR=
+G1^N='' or s((if p(v83) then |!|v83^N|!|fi)): s("!"G1^N"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then v83^N fi fi fi/)
+O
+Форма обучения
+0
+0
+1
+FO.mnu
+
+DISCFO=
+G1^O='' or s((if p(v83) then |!|v83^O|!|fi)): s("!"G1^O"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then v83^O fi fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+
+G1^F='' or s((if p(v83) then |!|v83^F|!|fi)): s("!"G1^F"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then v83^F fi fi fi/)
+L
+Филиал
+0
+0
+1
+fili.mnu
+
+DFIL=
+G1^L='' or s((if p(v83) then |!|v83^L|!|fi)): s("!"G1^L"!")
+(if p(v83) then if s(|!|v83^A|!|): s('!'&unifor('Av991#1'),'!') then if &unifor('AG1#1')='' or ( &unifor('AG1^1#1')='' or &unifor('AG1^1#1')<>'' and s(&unifor('Av3^A#1')): s(&unifor('AG1^1#1'))  ) and ( &unifor('AG1^2#1')='' or &unifor('AG1^2#1')<>'' and s('!',&unifor('AG1^2#1'),'!'): s('!',&unifor('Av4#1'),'!') ) and ( &unifor('AG1^3#1')='' or &unifor('AG1^3#1')<>'' and s('!',&unifor('AG1^3#1'),'!'): s('!',&unifor('Av6#1'),'!') ) and ( &unifor('AG1^4#1')='' or &unifor('AG1^4#1')<>'' and s('!',&unifor('AG1^4#1'),'!'): s('!',&unifor('Av5#1'),'!') ) and ( &unifor('AG1^C#1')='' or &unifor('AG1^C#1')<>'' and &unifor('AG1^C#1')=v83^C ) and ( &unifor('AG1^N#1')='' or &unifor('AG1^N#1')<>'' and &unifor('AG1^N#1')=v83^N ) and ( &unifor('AG1^F#1')='' or &unifor('AG1^F#1')<>'' and &unifor('AG1^F#1')=v83^F ) and ( &uf('AG1^L#1')='' or &uf('AG1^L#1')<>'' and &uf('+97',&uf('AG1^L#1'))=&uf('+97',v83^L) ) and ( &uf('AG1^O#1')='' or &uf('AG1^O#1')<>'' and &uf('+97',&uf('AG1^O#1'))=&uf('+97',v83^O) ) then v83^L fi fi fi/)

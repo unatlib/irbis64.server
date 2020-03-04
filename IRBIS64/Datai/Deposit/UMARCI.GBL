@@ -1,0 +1,81 @@
+0
+DEL
+922
+F
+(if p(v922)then'1'else'xxx'fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+461
+*
+(if p(v461)then if v461^1=''then v461 else ref(l("ID="v461^1),"^C"v200^a,"^E"v200^e,"^F"v200^f,";"v200^g,if v210^a:'S.l'or v210^a:'Б.м'then else"^D"v210^a fi,if v210^c:'S.n.'then else"^G"v210^c fi,"^H"v210^d,"^X"v700^a," "v700^b)fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+991
+F
+(if p(v991)then if v991.1:'^'then v991 else &unifor(|G1^|v991)fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+(if p(v991)then if p(v991^a)then'^C'&umarci('3991#2#^a')if val(&umarci('2991#^a'))>1then'^Uда/'if v991^6:'200'then &umarci('2991#^a')else'N'fi|^Y|v991^yfi/if val(&umarci('2991#^a'))>1then'^C'&umarci('3991#3#^a')if val(&umarci('2991#^a'))>2then'^Uда/',if v991^6:'200'then &umarci('2991#^a')else'N'fi|^Y|v991^yFI fi/if val(&umarci('2991#^a'))>2then'^C'&umarci('1991#a#3')fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+(if p(v991)then if val(&umarci('2991#^c'))>1then'^C'&umarci('3991#2#^c'),'^Uда/N'|^Y|v991^yfi/if val(&umarci('2991#^c'))>1then'^C'&umarci('3991#3#^c')if val(&umarci('2991#^a'))>2then'^Uда/N'|^Y|v991^yFI fi/if val(&umarci('2991#^c'))>2then'^C'&umarci('1991#a#3')fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+F
+(if p(v991)then if p(v991^a)or v991*2=v991^Ythen'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+991
+*
+'^f'
+'^G'
+CHA
+991
+*
+'^F'
+'^G'
+CHA
+991^u
+*
+'N'
+if p(v991)then &unifor('S0')fi(if p(v991)then if &unifor('S1A')=''then fi,if v991^u:'N'then f(val(&unifor('S1A'))-1+val(&umarci('2991#'v991^Y)),0,0)fi fi/)
+DEL
+991^y
+F
+(if p(v991)then if p(v991^u)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+991
+*
+'^Y'
+'^F'
+REP
+991
+F
+(if p(v991)then if v991:'^'then|^C|v991^c,|^E|v991^e,if val(&umarci('2991#^e'))>1then':'&umarci('1991#e#2')fi,|^F|v991^f,|^2|v991^2,|^3|v991^3,|^G|v991^g,if val(&umarci('2991#^g'))>1then';'&umarci('1991#g#2')fi,if val(&umarci('2991#^g'))>2then';'&umarci('1991#g#3')fi,|^H|v991^h,|^I|v991^i,if val(&umarci('2991#^h'))>1then'^K'&umarci('1991#h#2')fi,if val(&umarci('2991#^i'))>1then'^L'&umarci('1991#i#2')fi,|^D|v991^d,|^U|v991^u else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+210
+F
+(if p(v210)then if v210^a:'S.l'or v210^a:'Б.м'then if s(v210^c,v210^d)=''then#fi else|^A|v210^a,if val(&umarci('2210#^a'))>1 then'^X'&umarci('1210#a#2')fi,if val(&umarci('2210#^a'))>2 then'^Y'&umarci('1210#a#3')fi fi,if v210^c:'S.n.'then else|^C|v210^c fi,|^D|v210^d,|^1|v210^e fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991^6
+F
+(if p(v991)then if p(v991^6)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+922
+XXXXXXXXXXXXXXXXXXX
+(v991/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+F
+(if p(v991)then'1'else'xxx'fi/)
+XXXXXXXXXXXXXXXXXXX

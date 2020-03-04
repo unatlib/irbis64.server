@@ -1,0 +1,17 @@
+'</>''<title> Список дел/документов описи 'v852^a' 'v903'</title>'
+   '<table border=1  cellspacing=0>','<td valign="Top" align=center>'
+   '<tr>',
+   '<td> № п/п </td>','<td valign="Top" align=center> Шифр </td>','<td valign="Top" align=center> Заголовок </td>','<td valign="Top" align=center> Крайние даты </td>','<td valign="Top" align=center> Файл </td>',
+   '</tr>',
+/*   '<tr><td>'g100'</td><td>'v903'</td><td>'v200^a'</td><td>'v200^j,if a(v200^J) then (if p(v122) then if v122:'['then v122^a,|-|v122^b else|; |+d122,v122^a*6|.|,v122^a*4.2|.|,v122^a.4,| - |d122^b,v122^b*6|.|,v122^b*4.2|.|,v122^b.4, fi fi)," г.г."d122 fi'</td></tr>',
+&uf('+7W100#1'),
+if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIdelo='&uf('Av903#1')))>0 then 
+   &uf('7,?IIdelo='v903|?,'<tr><td>'g100'</td><td>'v903'</td><td>'if p(v953) then if v953^p='2'then '<A HREF="IRBIS:3,12,,',mfn,',','1','">','<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',','1','"></A>'fi fi ' ' v200^a,&uf('6gua_Pers_vl'),&uf('6gua_Podrob_vl'),'</td><td> 'v200^j,if a(v200^J) then &uf('6122_vl') fi'</td><td>'if v951='' then'&nbsp &nbsp -'else &uf('6951_vl') fi,'</td></tr>'&uf('+7W100#'f(val(g100)+1,0,0))|),
+fi,
+if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+   &uf('7,?IIguar='v903|?,'<tr><td>'g100'</td><td>'v903'</td><td>'if p(v953) then if v953^p='2'then '<A HREF="IRBIS:3,12,,',mfn,',','1','">','<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',','1','"></A>'fi fi ' ' v200^a,&uf('6gua_Pers_vl'),&uf('6gua_podrob_vL'),'</td><td> 'v200^j,if a(v200^J) then &uf('6122_vl') fi'</td><td>'if v951='' then'&nbsp &nbsp -'else &uf('6951_vl') fi,'</td></tr>'&uf('+7W100#'f(val(g100)+1,0,0))|),
+fi,
+   '</table> '
+
+/*'</td>',
+/*'<td>',

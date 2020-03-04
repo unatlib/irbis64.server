@@ -1,0 +1,81 @@
+0
+ADD
+1005
+XXXXXXXXXXXXXXXXXXX
+&unifor('+7W14#'(v710/v711/v972/v962/|^A|v210^c,|^X|v210^A,|^Y|v210^X,|^Z|v210^Y/|^A|v461^G,|^X|v461^D/|^1|v971^B,|^V|v971^v,|^D|v971^D,|^F|v971^F,|^E|v971^E,|^H|v971^H,|^I|v971^I,|^7|v971^7/)),&uf('+7G14'),(g14/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1005#1'):'^A'then if &unifor('JATHRC,',if &unifor('Av1005^E#1')='' and &unifor('Av1005^D#1')='' and &unifor('Av1005^F#1')='' and (&unifor('Av1005#1')='^N' or &unifor('Av1005#1'):'^C' or &unifor('Av1005#1'):'^X' or &unifor('Av1005#1'):'^A')then '!',&unifor('Av1005^c#1'),&unifor('Av1005^X#1'),if &unifor('Av1005^a*6.1#1')<>''then &unifor('B',&unifor('Av1005^a#1')) else &unifor('Av1005^A#1') fi,if &unifor('Av1005^b*6.1#1')<>''then &unifor('B'&unifor('Av1005^b#1')) else &unifor('Av1005^b#1') fi, else if &unifor('Av1005#1'):'^D' or &unifor('Av1005#1'):'^E' or &unifor('Av1005#1'):'^F' then '!',&unifor('Av1005^D#1'),&unifor('Av1005^F#1'),&unifor('Av1005^E#1'),if &unifor('Av1005^a*6.1#1')<>''then &unifor('B'&unifor('Av1005^a#1'))else &unifor('Av1005^a#1') fi fi fi,)=''then 'ATHRC' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^A'then '^A'&unifor('Av1005^A#1') fi,if &unifor('Av1005#1'):'^7'then '^6',&unifor('Av1005^7#1') fi,if &unifor('Av1005#1'):'^S'then '^S',&unifor('Av1005^S#1') fi,if &unifor('Av1005#1'):'^B'then '^B',&unifor('Av1005^B#1') fi,if &unifor('Av1005#1'):'^N'then '^N',&unifor('Av1005^N#1') fi,if &unifor('Av1005#1'):'^C'then '^C',&unifor('Av1005^C#1')fi,if (&unifor('Av1005#1'):'^N' or &unifor('Av1005#1'):'^C' or &unifor('Av1005#1'):'^A') and (&unifor('Av1005^E#1')='' and &unifor('Av1005^D#1')='' and &unifor('Av1005^F#1')=''and &unifor('Av1005^X#1')='')then '^90' fi,if &unifor('Av1005#1'):'^X'then '^X',&unifor('Av1005^X#1')fi,if &unifor('Av1005#1'):'^Y'then '^Y',&unifor('Av1005^Y#1')fi,if &unifor('Av1005#1'):'^Z'then '^Z',&unifor('Av1005^Z#1')fi,if &unifor('Av1005#1'):'^D'then '^D'&unifor('Av1005^D#1') fi,if &unifor('Av1005#1'):'^E'then '^E'&unifor('Av1005^E#1') fi,if &unifor('Av1005#1'):'^F'then '^F'&unifor('Av1005^F#1') fi,if &unifor('Av1005#1'):'^D' or &unifor('Av1005#1'):'^E' or &unifor('Av1005#1'):'^F' then '^91'fi,if &unifor('Av1005#1'):'^X' then '^92' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+410
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^R' and &unifor('Av1005^V#1')='' then '^A'&unifor('Av1005^R#1') else if &unifor('Av1005#1'):'^V' and &unifor('Av1005^R#1')='' then '^A',&unifor('Av1005^V#1')fi fi,if &unifor('Av1005#1'):'^R'then '^90' fi,if &unifor('Av1005#1'):'^V'then '^91' fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRC'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1005#1'):'^1'then if &unifor('JATHRC,','!',&unifor('Av1005^d#1'),&unifor('Av1005^f#1'),&unifor('Av1005^e#1'),if &unifor('Av1005^1*6.1#1')<>''then &unifor('B'&unifor('Av1005^1#1'))else &unifor('Av1005^b#1') fi)=''then 'ATHRC' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^1'then '^A'&unifor('Av1005^1#1') fi,if &unifor('Av1005#1'):'^7'then '^6',&unifor('Av1005^7#1') fi,if &unifor('Av1005#1'):'^D'then '^D'&unifor('Av1005^D#1') fi,if &unifor('Av1005#1'):'^E'then '^E'&unifor('Av1005^E#1') fi,if &unifor('Av1005#1'):'^F'then '^F'&unifor('Av1005^F#1') fi,if v1005:&unifor('Av1005^1#1')then '^91'fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+410
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1005#1'):'^V'then '^A'&unifor('Av1005^V#1')fi,if &unifor('Av1005#1'):'^V'then '^91' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRC'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1005
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1005) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

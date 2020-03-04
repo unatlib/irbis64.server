@@ -1,0 +1,10 @@
+'{|————————————————————————————————|\par \par \b 
+\fs24 \tab \tab \tab      ÃÏÍÒÁ Ğîññèè    
+\par \tab \tab \tab \fs20 ×èòàòåëüñêèé áèëåò   
+\par \tab \tab \tab ¹  \fs24 'v24,if a(v24) then v30 fi' 
+\par \par \tab \tab \tab \fs32'v10'
+\par \tab \tab \tab 'v11'
+\par \tab \tab \tab 'v12'
+\par \tab \fs24 !!'v30'!!    \b0 \fs16 Äàòà âûäà÷è '
+&unifor('Av51*6.2#1')'-'&unifor('Av51*4.2#1')'-'&unifor('Av51.4#1'),
+'\par \par \b |—————————————————————————————————|\b0 }'

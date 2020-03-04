@@ -1,0 +1,46 @@
+'<title>',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,': Отсылка СМОТРИ ТАКЖЕ от ',v3" - ",mhl,v4,mpl,'</title>', 
+'Ссылка СМОТРИ ТАКЖЕ от:<br>'
+'<table border=0 cellpadding=1 cellspacing=1>
+
+<tr>',
+
+if &unifor('Av3#1')<>'.' then
+   '<td align=center width=20>',
+   '<input type=','"','checkbox','"',' name="CHECKINDEX" value=','"',&unifor('Av3#1'),'">',
+   '</td>'
+fi,   
+
+'<td width=16>',
+'<img src=','"','IRBIS:10,,',
+if p(v12) then 'folder.gif' else 'text.gif' fi,
+,'"',' width=16 height=16 hspace=0 vspace=0 border=0>'
+'</td>',
+
+
+'<td>',
+if p(v12) then '<a href=','"','IRBIS:1,,,udc_wn,U=',v3,'"','>',fi 
+,mhl,v3" - ",&unifor('Av4#1'),mpl,
+if p(v12) then '</a> ' fi,
+if (p(v1111) and &unifor('Av3#1')<>'.') then
+'<a href=','"','IRBIS:1,,,udc_wn,U=',v1111,'"','>',
+        if &unifor('Av3#1')<>'.' then ' (Вышестоящий индекс: ',
+        mhl,&unifor(|D,!U=|v1111|!,v3" - ",&unifor('Av4#1')|),mpl,
+        ')</a> ' 
+        fi,
+fi, 
+
+
+if p(v10) then 
+'  <a href=','"','IRBIS:1,,,udcsee_wn,U=',v3,'"','>',
+'(Смотри:)',
+' </a>' fi,
+
+'</td>',
+
+'</table>'
+
+
+if p(v11) then '<div id=products style=','"','margin-left: 2em;','"','>' fi,
+(if p(v11) then &unifor(|D,!U=|v11^b|!,@ref0_wn|) fi)
+if p(v11) then '</div>' fi,
+'<br>'

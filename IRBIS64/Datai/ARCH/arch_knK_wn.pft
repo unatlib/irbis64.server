@@ -1,0 +1,15 @@
+'</>',
+       '<table>', 
+       '<tr>', 
+          '<td valign=top width=20>', 
+           '<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">', 
+          '</td>', 
+          '<td valign=top >', 
+           '<img src=','"','IRBIS:10,,folder.gif">', 
+           '</td>', 
+           '<td>', 
+           ,brief_arch," (Øטפנ "v19^b")",
+           '</td>' 
+       '</tr>', 
+       '</table>',
+'<br> ',&unifor('!'), 

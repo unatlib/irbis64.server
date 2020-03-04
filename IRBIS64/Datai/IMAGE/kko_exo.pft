@@ -1,0 +1,23 @@
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+then 
+   (if p(v692) then 
+       if v692^c:'O' AND (&unifor('Ag991^u#1')<>''and p(v692^b) and v692^b=&unifor('Ag991^u#1') or 
+                          &unifor('Ag991^u#1')=''and v692^b:s(f(val(&unifor('30'))-1,0,0),'/')) 
+       then f(val(v692^d),0,0) 
+    fi fi), 
+else 
+   &uf('+7W111#'),&uf('+7W111#',
+   f(rsum((if p(v910) then 
+              if &unifor('Ag991^t#1')<>'' and p(v910^t) and v910^t:&unifor('Ag991^t#1') then 
+                 if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                    if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                 fi fi 
+              else 
+                 if a(v910^t) then 
+                    if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                       if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                 fi fi fi 
+           fi fi)),0,0)),
+   if val(g111)>0 then g111 else '0' fi 
+fi

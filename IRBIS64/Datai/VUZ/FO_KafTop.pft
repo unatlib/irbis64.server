@@ -1,0 +1,5 @@
+'<body bgcolor="#C0C0C0">',
+'<p><font color="black" size=+1>',
+'<b>Факультет ',&unifor('KFAK.mnu|',v1100),,,'<br>Форма обучения ',if v1101='' then ' ВСЕ' else &unifor('KFO.mnu|',v1101) fi,,,'</b>',,,,,
+'<p><font color="white" size=+1>',
+'</body>',

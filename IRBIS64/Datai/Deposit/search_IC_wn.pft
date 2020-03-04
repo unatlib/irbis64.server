@@ -1,0 +1,253 @@
+/* вариант SEARCH_IC_WN с алфавитным входом по имени каталожных ящиков
+/* при этом используется инверсия с помощью функции MYUNIFOR.DLL IMAGEUNIFOR1
+
+/* v1000 - имя БД
+/* v1002 - число найденных
+/* v1007 - поисковое выражение
+/* v1010 - запрос на естественном языке
+/*v1009 - слова для раскраски
+/*v1006 - порция выдаваемых документов
+/*v1100 - свободный параметр FREEPAR0, через который передается имя формата
+/*v1101 - свободный параметр FREEPAR1<>1 (FREEPAR1=1 в случае применения Навигатора НЕ ДЛЯ ПОИСКА)
+/*v1102 - свободный параметр FREEPAR2, через который передается имя БД для поиска
+/*v1103 - свободный параметр FREEPAR3, через который передается порция док-ов при поиске
+/*v1104 - свободный параметр FREEPAR4, который определяет выводить ли ссылку СЛЕД.ПО ПОРЯДКУ
+/* - свободный параметр FREEPAR5, который определяет работу ИРБИС-Навигатора для АРМа Книговыдача
+
+'<script language="JavaScript">',
+
+'function TransferParam()',
+'{',
+'if (SEARCH.DBNAME_DEFAULT.value == "") return false;',
+'SEARCH.FREEPAR0.value = SEARCH.PFTNAME.value;',
+'SEARCH.FREEPAR2.value = SEARCH.DBNAME_DEFAULT.value;',
+'SEARCH.FREEPAR3.value = SEARCH.S21CNR.value;',
+if v1007='' then 
+'DISPLAY.DBNAME_DEFAULT.value = SEARCH.DBNAME_DEFAULT.value;',
+/*'DISPLAY.S21CNR.value = SEARCH.S21CNR.value;',
+/*'DISPLAY.PFTNAME.value = SEARCH.PFTNAME.value;',
+'DISPLAY.FREEPAR0.value = SEARCH.PFTNAME.value;',
+'DISPLAY.FREEPAR2.value = SEARCH.DBNAME_DEFAULT.value;',
+'DISPLAY.FREEPAR3.value = SEARCH.S21CNR.value;',
+'NAVIGATOR.FREEPAR0.value = SEARCH.PFTNAME.value;',
+'NAVIGATOR.FREEPAR2.value = SEARCH.DBNAME_DEFAULT.value;',
+'NAVIGATOR.FREEPAR3.value = SEARCH.S21CNR.value;',
+/*'BOXES.DBNAME_DEFAULT.value = SEARCH.DBNAME_DEFAULT.value;',
+/*'BOXES.FREEPAR0.value = SEARCH.PFTNAME.value;',
+/*'BOXES.FREEPAR2.value = SEARCH.DBNAME_DEFAULT.value;',
+/*'BOXES.FREEPAR3.value = SEARCH.S21CNR.value;',
+'if (DISPLAY.DBNAME_DEFAULT.value == "")  return false;',
+fi,
+'return true;',
+'}',
+
+'</script>',
+
+
+'<body STYLE="BACKGROUND-IMAGE: URL(c:\irbiswrk\book.jpg); color: #500000" bgcolor="#ffffcc" onLoad="document.getElementById(',&uf('+9F39'),'id1',&uf('+9F39'),').focus()">'
+'<title>',if v1007='' then 'Основная форма: ПОИСК в ИМИДЖ-КАТАЛОГЕ' else 'Уточнение запроса (',&uf('+98|"',mhu,if v1010<>'' then v1010 else v1007.100,if v1007*100<>'' then '...' fi fi,mhl),') ' fi,if p(v1000) then " (БД "v1000")" fi,'</title>'
+
+'<form name="SEARCH" action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+'<input type="hidden" name="C21COM" value="10">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+'<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+'<input type="hidden" name="PFTNAME_DEFAULT" value="IC_wn">',
+'<input type="hidden" name="FREEPAR0" value="">',
+'<input type="hidden" name="FREEPAR2" value="">',
+'<input type="hidden" name="FREEPAR3" value="">',
+'<input type="hidden" name="FREEPAR4" value="1">',
+'<input type="hidden" name="FREEPAR5" value="',if g1105='' then v1105 else g1105 fi,'">',
+
+
+/*'v1007=',v1007,
+
+if v1007='' then
+'<input type="hidden" name="CHECKNAME" value="CHECKMFN">', /* для обнуления отмеченных 
+ 
+'    ',
+'<table width="100%" !bgcolor="#ffffcc">',
+' <tbody>',
+'    <tr>',
+'         <td colspan="2" align="Center"><IMG SRC=IRBIS:10,,banner_irbis.gif><IMG SRC=IRBIS:10,,abbyy1.gif><br><br>',
+'         </td>',
+'    </tr>',
+
+'    <tr>',
+'         <td colspan="2" align="Center"><b>ПОИСК в ИМИДЖ-КАТАЛОГЕ</b><br><br>',
+'         </td>',
+'    </tr>',
+
+'  <tr >',
+'  <td>База данных:',
+' </td>',
+' <td width="75%">         ',
+'            <select name="DBNAME_DEFAULT" style="width: 100%;">',
+(if &uf('+5Tdbname_IC_wn.mnu')<>'' then '<option value="',&uf('+5Tdbname_IC_wn.mnu'),'" ',if &uf('+5Tdbname_IC_wn.mnu')=&uf('Av1000#1') then 'selected' fi,'>',&uf('+5Tdbname_IC_wn.mnu'),' - ',&uf('+5Fdbname_IC_wn.mnu'),'</option>' fi),
+'            </select>',
+' </td>',
+' </tr>',
+'  <tr>',
+else 
+'<table !bgcolor="#ffffcc" width="100%">',
+' <tbody>',
+'  <tr>',
+'<td colspan="2">',
+'<b>',
+"База данных: "v1000,
+'</b>'
+'</td>',
+'  </tr>',
+'  <tr>',
+'<td colspan="2">',
+'<b>',
+"Уточнение запроса: "d1007,&uf('+98|"',mhu,if v1010<>'' then v1010 else v1007.100,if v1007*100<>'' then '...' fi fi,mhl),
+'</b>',
+'</td>',
+'  </tr>',
+'<input type="hidden" name="DBNAME_DEFAULT" value="',v1000,'">',
+'<input type="hidden" name="S21ALL" value="',v1007,'">',
+'<input type="hidden" name="QUERY" value="',v1010,'">',
+'<input type="hidden" name="S21ALLTRM" value="',v1009,'">',
+'  <tr>',
+fi,
+'         <td><b>Я ищу</b> (ключевые слова):</td>',
+'         <td  width="75%">',
+/*        '<input type="hidden" name="S21P02" value="1">',
+              '<input type="hidden" name="S21P03" value="KT=">',
+/*              '<input type="hidden" name="S21P05" value="Ключевые слова">',
+              '<input id="id1" name="S21STR" style="width:100%" onkeydown="if ((this.value.length>1) && (event.keyCode==13)) {TransferParam(); SEARCH.submit()}">',
+'<div style="font-size:10px">Чтобы слово было найдено в точности в том виде, как указано, заключите его в двойные кавычки. Например:"Соколов"<br>Не следует вводить предлоги и инициалы</div>',
+           '</td>',
+'       </tr>',
+
+/*'       <tr>',
+/*'         <td align="Right"><font size="-1">логика : </font></td>',
+/*'         <td align="Left">',
+/*'            <select class="inp1" name="S21LOG">',
+/*'            <option value="0" selected="">ИЛИ    </option>',
+/*'            <option value="1">И    </option>',
+/*'            </select>',
+/*'         </td>',
+/*'       </tr>',
+/*'       <tr>',
+/*'         <td align="Right"><font size="-1">окончания слов : </font></td>',
+/*'         <td ><input type="radio" name="S21P01" value="3" checked="checked">',
+/*'       не учитывать /   <input type="radio" name="S21P01" value="1">учитывать ',
+/*'         </td>',
+
+'       <tr>',
+'         <td colspan="2" align="Center"><font size="-1"><input type="submit"  onclick="return TransferParam()"  class="sub1"  name="nnnn" value="Поиск"><input type="reset" value="Сброс"></font><br>',
+'            </td>',
+'       </tr>',
+'<tr> ',
+'<td  colspan="2">'
+'<hr noshade=""  size="1">',
+'</td>'
+'</tr> ',
+'</table>',
+/*'<table border="0" cellpadding="0" cellspacing="2" !bgcolor="#ffffff" width="100%">',
+'<table !bgcolor="#ffffcc" width="100%">',
+'  <tbody>',
+'  <tr>',
+' <td align="Right"> <font size="-1">Порция выдаваемых документов</font> </td>',
+' <td align="Left">',
+'            <select class="inp1" name="S21CNR">',
+'            <option value="2" ',if v1006='2' then 'selected=""' fi,'>2   </option>',
+'            <option value="5" ',if (v1006='') or (v1006='5') or (v1006='0') then 'selected=""' fi,'>5   </option>',
+'            <option value="10" ',if v1006='10' then 'selected=""' fi,'>10   </option>',
+'            <option value="20" ',if v1006='20' then 'selected=""' fi,'>20   </option>',
+'            </select>',
+' </td>',
+'    <td align="Right"> <font size="-1">Формат показа<br>',
+'результатов поиска</font> </td>',
+' <td align="Left">         ',
+'            <select class="inp1" name="PFTNAME">',
+(if &uf('+5Tpftw_IC_wn.mnu')<>'' then '<option value="',&uf('+5Tpftw_IC_wn.mnu'),'" ',if &uf('+5Tpftw_IC_wn.mnu')=&uf('Av1100#1') then 'selected' fi,'>',&uf('+5Tpftw_IC_wn.mnu'),' - ',&uf('+5Fpftw_IC_wn.mnu'),'</option>' fi)
+'            </select>',
+' </td>',
+' </tr>',
+'<tr> ',
+'<td  colspan="4">'
+'<hr noshade=""  size="1">',
+'</td>'
+'</tr> ',
+'        </tbody>',
+'      </table>',
+'</form>',
+
+if v1007='' then 
+'<form name="DISPLAY" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<table width="100%" !bgcolor="#ffffcc">',
+'<tbody>',
+'<input type="hidden" name="C21COM" value="4">',
+'<input type="hidden" name="PFTNAME" value="boxes0_IC_wn1">',
+'<input type="hidden" name="DBNAME_DEFAULT" value="">',
+/* !!! ниже используется ЖЕСТКИЙ префикс =0ОК для ящиков Отечественной Книги !!!
+'<input type="hidden" name="T21PRF" value="BX=">',
+'<input type="hidden" name="T21CNR" value="15">',
+'<input type="hidden" name="T21PREV" value="1">',
+
+
+/*'<input type="hidden" name="BOTTOMPFTNAME" value="search_IC_bottom_wn">',
+'<input type="hidden" name="FREEPAR0" value="">',
+'<input type="hidden" name="FREEPAR2" value="">',
+'<input type="hidden" name="FREEPAR3" value="">',
+'<input type="hidden" name="FREEPAR5" value="',if g1105='' then v1105 else g1105 fi,'">',
+'        <tr>',
+'         <td colspan="3">         ',
+'              <div align="Center"><font size="+1">Алфавитный вход в ИМИДЖ-КАТАЛОГ</font><br>',
+'         </div>',
+'         </td>',
+'       </tr>',
+'           <tr>',
+'         <td>Ключ: </td>',
+'          <td width="85%">         ',
+         '<input name="T21TRM" style="width:100%" onkeydown="if ((this.value.length>0) && (event.keyCode==13)) {TransferParam(); DISPLAY.submit();}">',
+'         </td>',
+'          <td valign="Top">    <small><font size="-1"><input type="submit" onclick="return TransferParam()" class="sub1" name="nnnn" value="Вход"></font><br>',
+'         </small></td>',
+'       </tr>',
+'</tbody>',
+'</table>',
+' </form>',
+fi,
+
+if v1007<>'' then 
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=search_IC_wn&S21CNR=',v1006,'&I21DBN=',v1000,'&FREEPAR0=',v1100,'&FREEPAR5=',if g1105='' then v1105 else g1105 fi,'">Вернуться к основной поисковой форме</A>',
+             else 
+/*'<A HREF="irbis:2,,,urub0_wn,U=?CHECKNAME=CHECKINDEX&FREEPAR0=0&S21CNR=100">Поиск по Тематическому навигатору</A>',
+'<hr noshade=""  size="1">',
+
+'<form name="NAVIGATOR" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" name="C21COM" value="2">',
+'<input type="hidden" name="KEY" value="U=">',
+'<input type="hidden" name="PFTNAME" value="urub0_wn">',
+'<input type="hidden" name="I21DBN" value="URUB">',
+'<input type="hidden" name="S21CNR" value="100">',
+'<input type="hidden" name="TOPPFTNAME" value="urub_top_wn">',
+'<input type="hidden" name="BOTTOMPFTNAME" value="urub_bottom_wn">',
+'<input type="hidden" name="CHECKNAME" value="CHECKINDEX">',
+'<input type="hidden" name="FREEPAR0" value="">',
+'<input type="hidden" name="FREEPAR2" value="">',
+'<input type="hidden" name="FREEPAR3" value="">',
+'<input type="hidden" name="FREEPAR5" value="',if g1105='' then v1105 else g1105 fi,'">',
+'<input type="submit" onclick="return TransferParam()" class="sub1" name="nnnn" value="Поиск по Тематическому навигатору">'
+'</form>'
+
+/*'<form name="BOXES" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+/*'<input type="hidden" name="C21COM" value="4">',
+/*'<input type="hidden" name="PFTNAME" value="boxes0_IC_wn">',
+/*'<input type="hidden" name="DBNAME_DEFAULT" value="">',
+/*'<input type="hidden" name="T21TRM" value="">',
+/*'<input type="hidden" name="T21PRF" value="=0">',
+/*'<input type="hidden" name="T21CNR" value="1000">',
+
+/*'<input type="hidden" name="FREEPAR0" value="">',
+/*'<input type="hidden" name="FREEPAR2" value="">',
+/*'<input type="hidden" name="FREEPAR3" value="">',
+/*'<input type="submit" onclick="return TransferParam()" class="sub1" name="nnnn" value="Поиск по каталожным ящикам">'
+/*'</form>'
+
+
+fi

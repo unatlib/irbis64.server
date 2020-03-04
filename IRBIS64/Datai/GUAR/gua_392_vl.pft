@@ -1,0 +1,38 @@
+'</>'
+   &uf('S0'),
+   if p(v392) then '<br><b>''<font size="2">''Отдельные листы:</b>''</font>' 
+ '<table width="100%" border=+1  cellspacing=0>','<td valign="Top" align=center>'
+/* '<font style="font-size: 10">'
+   '<tr>',
+   '<td> № п/п </td>',
+   '<td valign="Top" align=center> <font size="2">Архивный шифр</font></td>',
+   '<td valign="Top" align=center> <font size="2">Заголовок</font></td>',
+   '<td valign="Top" align=center> <font size="2">Способ воспроизв.</font></td>',
+   '<td valign="Top" align=center> <font size="2">Крайние даты</font></td>',
+   '<td valign="Top" align=center> <font size="2">Число листов</font></td>',
+   '<td valign="Top" align=center> <font size="2">№№ листов</font></td>',
+   '<td valign="Top" align=center> <font size="2">Персона</font></td>',
+   '<td valign="Top" align=center> <font size="2">Файл</font></td>',
+   '</tr>'
+/*'</font>'   ,&uf('S0'),     
+      (if p(v392) then 
+   '<tr>'
+      '<td><font size="2">'&uf('S1A')'</font></td>'
+      '<td><font size="2">'v392^d'</font></td>'
+      '<td><font size="2">'v392^c'</font></td>'
+      '<td><font size="2">'v392^e'</font></td>'
+      '<td><font size="2">'v392^a,"-"v392^b'</font></td>'
+      '<td><font size="2">'v392^1'</font></td>'
+      '<td><font size="2">'v392^4'</font></td>'
+      '<td><font size="2">'v392^f,if v392^f:' 'then else | |v392^? fi,|(|v392^Q*4|)|,
+        |, |v392^2,if v392^2:' 'then else | |v392^, fi,|(|v392^s*4|)|,
+        |, |v392^3,if v392^3:' 'then else | |v392^; fi,|(|v392^t*4|)|,|, |v392^w'</font></td>'
+      '<td><font size="2">'
+         if v392^]<>'' then 
+            if v392^[='1'then '<A HREF="',&uf('+\1',v392^]),'">''см. URL''</A>' else 
+               if v392^[='0'then '<A HREF="IRBIS:3,10,,',v392^],'">''см. текст','</A>'
+         fi fi fi,|&nbsp &nbsp -|n392^]
+      '</font>''</td></tr>'
+      fi)
+ '</table> '
+   fi,mpl,

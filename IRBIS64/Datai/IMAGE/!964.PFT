@@ -1,0 +1,14 @@
+if p(v964) then                                                                 
+  (if p(v964) then                                                              
+    if val(v964*0.1) > 0 or v964*0.1:'0' then                                   
+     if not(val(v964*1.1) > 0 or v964*1.1:'0') then /'1  Ошибка в индексе: ',|"|
+v964|"| else                                                                    
+     if val(v964*3.1) > 0 or v964*3.1:'0' or v964*3.1=''and v964*2.1<>'' then   
+      if not(v964*2.1:'.' and (val(v964*4.1) > 0 or v964*4.1:'0')) then /'1  Оши
+бка в индексе: ',|"|v964|"| else                                                
+      if val(v964*6.1) > 0 or v964*6.1:'0' or v964*6.1=''and v964*5.1<>'' then  
+       if not(v964*5.1:'.' and (val(v964*7.1) > 0 or v964*7.1:'0')) then /'1  Ош
+ибка в индексе: ',|"|v964|"| else                                               
+       if val(v964*9.1) > 0 or v964*9.1:'0' or v964*9.1=''and v964*8.1<>'' then 
+        if not(v964*8.1:'.'and (val(v964*10.1)> 0 or v964*10.1:'0')) then /'1  О
+шибка в индексе: ',|"|v964|"| fi fi fi fi fi fi fi fi else/'0' fi/)fi

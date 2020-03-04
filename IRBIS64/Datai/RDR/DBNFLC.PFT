@@ -1,0 +1,17 @@
+if v920:'VUZ' then else 
+   if L("RI="v30)<=0 or val(ref(l("RI="v30),mfn))=val(mfn) then/'0' else/'1Дублетны
+й идентификатор читателя:       ',v30,ref(L("RI="v30),' (см. N ',f(val(mfn),0,0)
+,')')fi/                                                                        
+   if L('!'v21,v10,v11.6,v12.6)<=0 or val(ref(l('!'v21,v10,v11.6,v12.6),mfn))=val(m
+fn) then/'0' else if p(v30)then/'2Дублетный читатель: 'else/'1Идентификатор не в
+веден.Дублетный читатель: 'fi,v21,v10,v11.6,v12.6,ref(L('!'v21,v10,v11.6,v12.6),
+' (см. N ',f(val(mfn),0,0),')')fi/                                                
+   if p(v30)or p(v10)then/'0'else if a(v30)and a(v10)then/'1Ошибка: Отсутствуют Иде
+нтификатор и Фамилия читателя' fi 
+fi/
+if a(v31) and &unifor('IPRIVATE,FIO,')='' then/'1 Не введено и не установлено ФИО регистратора' fi/
+fi,
+if p(v200) then 
+   if &unifor('IPRIVATE,FIO,')='' and a(v200^l) then
+    /'1 Не установлено ФИО ответственного лица' fi 
+fi/

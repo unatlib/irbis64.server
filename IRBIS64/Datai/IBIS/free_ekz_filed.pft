@@ -1,0 +1,15 @@
+&uf('+7W10#'),&uf('+7W10#'&uf('IREQUEST,MaskStore,*')),
+&uf('+7W11#'),&uf('+7W11#'&uf('IREQUEST,MaskInv,*')),
+&uf('+7W12#'),&uf('+7W12#'&uf('IREQUEST,MaskBar,*')),
+&uf('+7W910#'),
+&uf('+7U910#'
+   (if p(v910) then 
+       if v910^c<>'' then 
+          if  (p(v910^d) and &uf('Kmhrvn.mnu\'v910^d)='' and (&uf('=!',&uf('Ag10#1'),'!'v910^d)='1' or &uf('Ag10#1')='*') or v910^d='')
+          and (p(v910^b) and &uf('=!',&uf('Ag11#1'),'!'v910^b)='1' or &uf('Ag11#1')='*')
+          and (p(v910^h) and &uf('=!',&uf('Ag12#1'),'!'v910^h)='1' or &uf('Ag12#1')='*')
+          then 
+             if v910^a:'p' then 
+                if &uf('D,!I='v910^p'!,v910^a'):'0' then v910^p 
+    fi fi fi fi fi/)),
+&uf('+7G910'),(g910/)

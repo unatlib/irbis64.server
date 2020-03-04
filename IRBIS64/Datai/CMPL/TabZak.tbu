@@ -1,0 +1,91 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14450 
+\pard \ql\widctlpar\intbl {\qc \fs18 \b ',,'\par \qr Итого получено:  ',G21,,' экз.;  на  сумму   ',,G22,,'    \par '
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs18\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx500 
+\pard \widctlpar\intbl {\qc \fs18 N
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1800 
+\pard \widctlpar\intbl {\qc \fs18 Источник заказа
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4000 
+\pard \widctlpar\intbl {\qc \fs18 Место, дата размещения
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6900 
+\pard \widctlpar\intbl {\qc \fs18 Автор, заглавие, место издания, издательство
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs18 Заказано - экз.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10300 
+\pard \widctlpar\intbl {\qc \fs18 Получено по заказу- экз.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11200 
+\pard \widctlpar\intbl {\qc \fs18 Всего получено экз.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12800 
+\pard \widctlpar\intbl {\qc \fs18 Стоимость заказа
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14450 
+\pard \widctlpar\intbl {\qc \fs18 Всего на сумму
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

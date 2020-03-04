@@ -1,0 +1,128 @@
+0
+//12 PUTLOG
+// 10.1 проверка записи FAK на дубль
+// контрользаписей FAK - проверка на удаление кафедр
+IF
+if v920: 'FAK' then '1' else '0' fi
+DEL
+1004
+*
+
+
+DEL
+1005
+*
+
+
+ADD
+1005
+
+(v5/)
+
+//-------- цикл по кафедрам
+REPEAT
+ADD
+1004
+
+'0'
+
+IF
+if val(&uf('JVUZ,DISCKH=',&uf('Av1005#1')))<=0 then '1' fi
+// нет ни одной дисциплины DISC по этой кафедре
+REP
+1004
+L
+'1'
+
+FI
+// провер€ю наличие дисциплин по кафедре по зап€с€м VUZ
+IF
+if val(&uf('JVUZ,VKAF=',&uf('Av1005#1')))<=0 then '1' fi
+// нет записей VUZ
+REP
+1004
+L
+'1'
+
+FI
+DEL
+1005
+1
+
+
+UNTIL
+if p(v1005) then '1' fi
+// удаление кафедры по полю 1004
+IF
+if v1004: '1' then '1' fi
+PUTLOG
+'”далена в записи FAK кафедра ',(if p(v1004) then if v1004='1' then v5| | fi fi),,,,' MFN=',f(val(mfn),0,0)
+DEL
+5
+F
+(v1004/)
+
+FI
+DEL
+1004
+*
+
+
+DEL
+1005
+*
+
+
+FI
+// ------------проверка записи FAK на дубль
+IF
+if val(&uf('JVUZ,FFO=',v93,v91,v92,"-"v98),)>1 then '1' fi
+//  сначала из всех записей беру в G5 пол€ 5
+ADD
+1005
+
+&uf('+7W5#',&uf('7VUZ,!FFO=',v93,v91,v92,"-"v98,'!,(v5/)')),,,&uf('+7G5')
+
+// в первую запись пишу все кафедры
+IF
+if val(&uf('DVUZ,!FFO=',v93,v91,v92,"-"v98,'!,mfn'))=val(mfn) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+5
+XXXXXXXXXXXXXXXXXXX
+(G5/)
+XXXXXXXXXXXXXXXXXXX
+FI
+// остальные записи удал€ю
+IF
+if val(&uf('DVUZ,!FFO=',v93,v91,v92,"-"v98,'!,mfn'))<>val(mfn) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'”далена дублетна€ запись FAK. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

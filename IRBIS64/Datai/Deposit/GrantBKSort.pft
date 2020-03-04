@@ -1,0 +1,18 @@
+(if p(v910) 
+ then 
+    if &uf('Av991^K#1')='' or &uf('+97',&uf('Av991^K#1'))=&uf('+97',v910^U) 
+    then 
+       if &uf('Av991^O#1')='' or &uf('+97',&uf('Av991^O#1'))=&uf('+97',v910^F) 
+       then 
+          if &uf('Av991^3#1')='' or &uf('+97',&uf('Av991^3#1'))=&uf('+97',v910^Q) 
+          then 
+             if ( &uf('Av991^1#1')='' or val(&uf('Av991^1#1'))<=val(v910^C) ) and 
+                ( &uf('Av991^2#1')='' or val(&uf('Av991^2#1'))>=val(v910^C) ) 
+             then 
+                &uf('6brief'),,
+             fi,,
+          fi,,
+       fi,,
+    fi,,
+ fi/),
+     

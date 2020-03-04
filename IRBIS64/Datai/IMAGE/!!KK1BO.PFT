@@ -1,0 +1,76 @@
+if v920:'nj'then ,oprimK, 
+else mhl, 
+   '\b ',"\par \fi0"v503^a". ","\par \fi0"|. |+v981^a". ",|\par \fi0|d461^x, 
+   if p(v461^x) then 
+      if p(v461^9) or v461^x:','then v461^x 
+      else 
+         if v461^x:' 'then &unifor('G0 'v461^x),
+            if v461^x:'.' then ', ' 
+               if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) 
+               else &unifor('G0.'&unifor('G2 'v461^x)),'. '&unifor('G2.'&unifor('G2 'v461^x))
+                  if &unifor('G2.'v461^x):'.' then '.'fi fi,
+            else '.'
+            fi 
+         else v461^x'.'   
+   fi fi fi,
+   if p(v461^b) then '\par 'v461^b,if v461^b|!|:'.!' then else '.'fi fi, 
+   if p(v461) then 
+      (if v509^2:'1' then '\par \fi0' 
+          if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+             if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+             else |. |v509^b,| (|v509^f|)| fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+      fi  fi),|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi, 
+   fi,'\b0 ', 
+   '\par \pard \fi300 ', 
+   if p(v461^c)then 
+      if s(v461^x,v461^b)<>''or v509^2:'1' then v461^c 
+      else'  '&unifor('E3'v461^c),'\b0 ', 
+         if &unifor('F3'v461^c)<>''then' '&unifor('F3'v461^c) fi,mpl, 
+      fi, 
+      (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi, 
+       |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi), 
+      | [|v461^2|]|, 
+      if a(v461^2) then &unifor('+1W1'''), 
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi, 
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+            fi fi
+         else 
+            if v900^t='a' and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [', 
+               if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,']',          
+      fi fi fi, 
+      | = |v46^l,
+      (if p(v461) then | : |d461^e, 
+          if s(v982^0,v982^9)<>'' or v905^2:'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 then v461^e 
+             else &unifor('Q'v461^e.1),v461^e*1 
+       fi fi),| : |v982^1,| / |v461^f,|. - |v461^p,". - "d230^a, 
+      (if p(v230^a) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| и |+v230^a else ""| and |+v230^a 
+      fi fi), 
+      ,ovixdm,if a(v215^d) then |. - |v461^r fi,
+      (". - ("| (|+v46^a,| : |v46^e,| / |v46^f,|, ISSN |v46^j,| ; |v46^v,if s(v46^a,v46^v)<>''then|)|d46 fi, 
+      |. - |v46^t*4,| : |v46^r,|. - |v46^p, 
+      if p(v46^c) then'. - ',|До |v46^g,'  Издание см. под заглавием: 'v46^c,| / |v46^d,|. - ISSN |v46^x,'. 'fi), 
+      if s(v454^u)<>'' then,origs454, fi ,|. - \b Пер.загл.:\b0  |v461^a, 
+      if s(v337v230^d)<>''then'\par ', 
+         (if p(v230) then if v230^x<='0'then"Систем. требования: "|. |+v230^d,| (|v230^e|)| fi fi), 
+         (|. - Режим доступа: |v951^i,| (|v951^t|)|,|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,v337^a), 
+      fi,|. - |v461^t| экз.|, 
+      if v10^a:v461^i or s(v10^a)=''then else 
+      (|. - ISBN |v461^i,| (|v461^v|)|,|. - ISBN |v461^1|(ошибочный )|) fi, 
+      |. - ISSN |v461^j,"."d461,'\par ',
+      if s(v200,v925)<>'' then'\tab 'fi,"\b "v200^v"\b0 ", 
+      if p(v200^v) then" : "v200^a else v200^a fi, 
+   fi, 
+   if a(v461) then ,ozboz, fi, 
+   if p(v925) then &uf('6ibis925') fi,Otitkn,oizd, 
+   if a(v461) then ,ospec,fi,
+   if v920.1:'A' then &uf('6oistaspK') else '. - ',ovixd,'. - ',ofizxar,'. - ',oser,'. - ',oprimK,'. - ',oISBNcnK, 
+      if s(v905^l)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"\par  "|. |+v300,mpl fi 
+   fi, 
+   "\par \b   Перевод заглавия: \b0  "v541, 
+fi, 

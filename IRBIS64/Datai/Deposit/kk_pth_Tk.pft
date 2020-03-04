@@ -1,0 +1,22 @@
+'</>',
+&uf('+7W14#'),
+&uf('+7W14#'
+(if p(v910) then 
+    if &uf('IPRIVATE,KKF,')<>''and v910^u=&uf('IPRIVATE,KKF,') or 
+       &uf('Av905^n#1')<>'' and v910^u= &uf('Av905^n#1') or 
+       s(&uf('IPRIVATE,KKF,'),&uf('Av905^n#1'))='' 
+    then 
+       if p(v910^b) then | - |v910^b,| (|v910^1|ύκη.)|,| - |v910^d,'  -  'v910^e,
+          if val(v910^e)>0 then 
+             if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3'),| /ύκη.|d910^1 fi 
+          fi,
+          if a(v910^e) then &unifor('Av10^d#1'),
+             if val(&unifor('Av10^d#1'))>0 then 
+                if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3'),| /ύκη.|d910^1 
+             fi fi,
+             if &unifor('Av10^d#1')='' then 'Α.φ.'
+ fi fi fi fi fi/)),
+(if p(g14) then
+'<table width="400" height="275" border="0" style="border:solid 1 black"><tr><td valign=top>'
+|<b><dd>|g14|</b><br>|,&unifor('6!!kk0shk_H'),
+       &unifor('6!!kk1boK_H'),'</td></tr></table><br>' fi),&unifor('!')

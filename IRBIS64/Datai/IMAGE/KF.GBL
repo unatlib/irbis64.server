@@ -1,0 +1,21 @@
+0
+ADD
+230
+XXXXXXXXXXXXXXXXXXX
+(if p(v135) then if p(v135^a) then'^A',if &unifor('K135a8.mnu|'v135^a)<>'' then &unifor('K135a8.mnu|'v135^a) else v135^a*3 fi fi,if s(v135^b,v135^c,v135^d)<>'' then'^D',v135^b,if p(v135^b) then|; |v135^c fi, if s(v135^b,v135^c)<>''then|; |v135^d fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+135^b
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+135^c
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+135^d
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,1042 @@
+0
+// задание REPMARK1 запускается из REPMARK
+//16 - добавила корректирвку в доп. БД каталога
+// использую g100
+// 2017 - 991^[ - признак подключить доп БД
+// 2017 - 991^] - список доп.БД
+//15 убрала условие неполного переноса
+//12 PUTLOG
+// изменение в отмеченных запсиях DISC из задания RepMark
+// 991^A - старое значение, 991^B - новое значени
+// 991^W - изменять в записях RDR
+// третье подполе ^C задает что менять
+// при изменении факультета или кафедры проверка на добаваление 
+// и удаление из записи FAK
+// в подполях 991^X и 991^Y заданы дополнительные условия, которое форм-ся в поле 992
+// поле 992 для передачи условия отбора - если есть, то отмечалась не дисцц., а ее параметр - фак-спец-напр....
+// отбор=кафедра - частный случай ^X: B
+// при отборе по дисциплинам - частный случай идентиф.дисц. в поле 993
+//15 условия замены
+// ! факультет / специальность | направление + ФО = ВО
+DEL
+992
+*
+
+
+// условие корректировки по подполю I отбрасываю - оно для записей каталога
+// в 992^X - идент.подполя, в котором надо менять
+// в 992^y - значение = условие замены
+IF
+if v991: '^XI' then '0' else '1' fi
+ADD
+992
+
+if v991^X<>'' then '^',v991^X,v991^Y fi
+
+FI
+IF
+if v920: 'DISC' then '0' else '1' fi
+PUTLOG
+'Отмеченные записи должны быть типа DISC!'
+FI
+//----имя БД в G100
+IF
+if v920:'DISC' then '1' else '0' fi,,,,,,&uf('+7W100#',,,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//.................. Новое в 2017, в G100 имена всех БД
+IF
+if val(v991^[)=1 and v991^]<>'' then '1' fi
+REP
+991^]
+1
+v991^] ,,,if v991^]: '.' then  else '.mnu' fi
+
+ADD
+991
+
+(if  &uf('+5T',,&uf('Av991^]#1'),,)<>'' then &uf('+7U100#',&uf('+5T',,&uf('Av991^]#1'),,) ) else break fi/),,&uf('+7G100'),,,&uf('+7G100')
+
+FI
+IF
+if v991: '^CC' then '1' fi,,,&uf('+7W11#')
+//--------------------------------------------------------------------специальность
+REP
+83^C
+F
+(if p(v83) then if v83^C<>'' then if &uf('Av992#1')='' or &uf('Av992#1'): '^B' or &uf('Av992#1')<>'' and v83: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and  v83^F: &uf('Av992^F#1') then if &uf('+97',v83^C)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v83^O) then  if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v83^V) then if &uf('Av991^B#1')<>'' then &uf('Av991^B#1'),,,&uf('+7W11#1') else # fi else v83^C fi,else v83^C fi,else v83^C fi,else v83^C fi,else v83^C fi,else v83^C fi else v83^C fi  else # fi fi/)
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменена специальность в дисциплине ',,v3^0,,'. MFN=',f(val(mfn),0,0),,
+FI
+//................ для записей VUZ - из старых VUZ убираю дисциплину в 69, создаю новые VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^C) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="SPEC=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="SPEC=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - специальность
+//имена БД каталога кладу из G100 в v994
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'), ,,'%QUERY="SPEC=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CN' then '1' fi,,&uf('+7W11#')
+//-------------------------------------------------направление
+REP
+83^N
+F
+(if p(v83) then if v83^N<>'' then if &uf('Av992#1')='' or &uf('Av992#1'): '^B' or &uf('Av992#1')<>'' and v83: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v83^F: &uf('Av992^F#1') then if &uf('+97',v83^N)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v83^V)  then if &uf('Av991^B#1')<>'' then &uf('Av991^B#1'),,&uf('+7W11#1') else # fi else v83^N fi,else v83^N fi,else v83^N fi,else v83^N fi,else v83^N fi,else v83^N fi else v83^N fi else  if  &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi,,  fi fi/)
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменено направление в дисциплине ',,v3^0,,'. MFN=',f(val(mfn),0,0),,
+FI
+DEL
+1083
+*
+
+
+//................ для записей VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^N) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="NAPR=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="NAPR=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - направление
+//имена БД каталога кладу из G100 в v994
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="NAPR=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CA' then '1' fi,,&uf('+7W11#')
+//-----------------------------------------------------------------ФАКУЛЬТЕТ
+REP
+83^A
+F
+(if p(v83) then if v83^A<>'' then if &uf('Av992#1')='' or &uf('Av992#1'): '^B' or &uf('Av992#1')<>'' and v83: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v83^F: &uf('Av992^F#1') then if &uf('+97',v83^A)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v83^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1'),,&uf('+7W11#1') else # fi else v83^A fi,else v83^A fi,else v83^A fi,else v83^A fi,else v83^A fi,else v83^A fi else v83^A fi else # fi fi/)
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменен факультет в дисциплине ',v3^0,,'. MFN=',f(val(mfn),0,0)
+FI
+//................ для записей VUZ - из старых VUZ убираю дисциплину в 69, создаю новые VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^A) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="FAK=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="FAK=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - факультет
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,,,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="FAK=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CO' then '1' fi,,&uf('+7W11#')
+//--------------------------------------------------------------------Форма обучения
+REP
+83^O
+F
+(if p(v83) then if v83^O<>'' then if &uf('Av992#1')='' or &uf('Av992#1'): '^B' or &uf('Av992#1')<>'' and v83: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v83^F: &uf('Av992^F#1') then if &uf('+97',v83^O)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v83^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1'),,&uf('+7W11#1') else # fi else v83^O fi,else v83^O fi,else v83^O fi,else v83^O fi,else v83^O fi,else v83^O fi else v83^O fi else # fi fi/)
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменена ФО в дисциплине ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+//................ для записей VUZ - из старых VUZ убираю дисциплину в 69, создаю новые VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^O) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="FO=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="FO=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - фо
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="FO=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CV' then '1' fi,,&uf('+7W11#')
+//-----------------------------------------------------------------------Вид обучения
+REP
+83^V
+F
+(if p(v83) then if v83^V<>'' then if &uf('Av992#1')='' or &uf('Av992#1'): '^B' or &uf('Av992#1')<>'' and v83: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v83^F: &uf('Av992^F#1') then if &uf('+97',v83^V)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v83^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1'),,&uf('+7W11#1') else # fi else v83^V fi,else v83^V fi,else v83^V fi,else v83^V fi,else v83^V fi,else v83^V fi else v83^V fi else # fi fi/)
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменен ВО в дисциплине ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+//................ для записей VUZ - из старых VUZ убираю дисциплину в 69, создаю новые VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^V) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="VO=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="VO=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - во
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="VO=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CF' then '1' fi
+//------------------------------------------------------------Семестр
+DEL
+1084
+*
+
+
+ADD
+1084
+
+(v83^F/)
+
+//------временная замена
+CHA
+83^F
+*
+'10'
+'A'
+CHA
+83^F
+*
+'11'
+'B'
+CHA
+83^F
+*
+'12'
+'C'
+CHA
+83^F
+*
+'13'
+'D'
+CHA
+83^F
+*
+'14'
+'E'
+REP
+991^A
+1
+if v991^A='10' then 'A' else if v991^A='11' then 'B' else if v991^A='12' then 'C' else if v991^A='13' then 'D' else if v991^A='14' then 'E' else v991^A fi fi fi fi fi
+
+REP
+991^B
+1
+if v991^B='10' then 'A' else if v991^B='11' then 'B' else if v991^B='12' then 'C' else if v991^B='13' then 'D' else if v991^B='14' then 'E' else v991^B fi fi fi fi fi
+
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v83/)
+
+DEL
+83
+*
+
+
+//--------------цикл по повторением поля 83
+REPEAT
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('Av1083#1')
+
+//-----замена семестра при условии заданных условий
+IF
+if v991^!='' or v991^!=&uf('+97',v111^A) then if v991^/='' or v991^/=&uf('+97',v111^C) then if v991^|='' or v991^|=&uf('+97',v111^N) then if v991^+='' or v991^+=&uf('+97',v111^O) then if v991^=='' or v991^==&uf('+97',v111^V)  then  '1' fi fi fi fi fi
+CHA
+111^F
+1
+v991^A
+if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v111^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v111^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v111^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v111^O) then  if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v111^V) then if v992='' or &uf('Av992#1'): '^B' or v992<>'' and v111: v992 then v991^B else v991^A fi else v991^A fi,,else v991^A fi,,else v991^A fi,,else v991^A fi,,else v991^A fi,,
+FI
+ADD
+83
+
+v111
+
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+DEL
+111
+*
+
+
+//-----------возврат
+CHA
+83^F
+*
+'A'
+'10'
+CHA
+83^F
+*
+'B'
+'11'
+CHA
+83^F
+*
+'C'
+'12'
+CHA
+83^F
+*
+'D'
+'13'
+CHA
+83^F
+*
+'E'
+'14'
+REP
+991^A
+1
+if v991^A='A' then '10' else if v991^A='B' then '11' else if v991^A='C' then '12' else if v991^A='D' then '13' else if v991^A='E' then '14' else v991^A fi fi fi fi fi
+
+REP
+991^B
+1
+if v991^B='A' then '10' else if v991^B='B' then '11' else if v991^B='C' then '12' else if v991^B='D' then '13' else if v991^B='E' then '14' else v991^B fi fi fi fi fi
+
+IF
+if v1084<>v83^F then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+1084
+*
+
+
+//................ для записей VUZ - из старых VUZ убираю дисциплину в 69, создаю новые VUZ
+//.................удаление в записях VUZ с проверкой по заданным параметрам
+CORREC
+'*'
+mpu,v991
+"IDV="v3^0
+
+IF
+if v1001^!='' or v1001^!=&uf('+97',v68^A) then if v1001^/='' or v1001^/=&uf('+97',v68^C) then if v1001^|='' or v1001^|=&uf('+97',v68^N) then if v1001^+='' or v1001^+=&uf('+97',v68^O) then if v1001^=='' or v1001^==&uf('+97',v68^V)  then  '1' fi fi fi fi fi
+IF
+if v1001^A=&uf('+97',v68^F) then '1' fi,,,,&uf('+7W10#')
+DEL
+69
+F
+(if p(v69) then if p(v69^D) then if &uf('Av1001^Y#1')=&uf('+97',v69^D) then '1',,&uf('+7W10#1') else '0' fi  else '0' fi fi/)
+
+IF
+if g10<>'' then '1' fi
+PUTLOG
+'Удалено из записи VUZ. MFN=',f(val(mfn),0,0),,,': ',,&uf('Av1001^Y#1')
+FI
+FI
+FI
+DEL
+1001
+*
+
+
+END
+// заново связать дисциплину
+PUTLOG
+'LINKCORRTASK=LINKDISCNORDR%DBN=VUZ%QUERY="IDD=',,v3^0,,,'"%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="SEM=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="SEM=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - семестр
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="SEM=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CH' then '1' fi
+//------------------------------------------------------------------кафедра ЧИТАЮЩАЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+v5
+
+REP
+5
+1
+if p(v5) and &uf('+97',v5)=&uf('+97',v991^A) then v991^B else v5 fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v5) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+//................ для записей VUZ
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=VUZ%QUERY="IDV=',,v3^0,,,'"%V991=',,v991,'%'
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if p(v992) then '1' fi
+// если задано условие отбора
+//................ для записей RDR
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="KCH=',,v991^A,,,'"%V991=',,v991,'%'
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="KCH=',,v991^B,,,'"%V991=',,v991,'%'
+FI
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+FI
+FI
+//................ для записей IBIS - кафедра
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+IF
+if a(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'^I',v3^0,,'%'
+FI
+IF
+if p(v992) then '1' fi
+PUTLOG
+'LINKCORRTASK=REPCNA_M%DBN=',,&uf('Av994#1'),,'%QUERY="KAFCH=',,v991^A,,,'"%V991=',,v991,'^I',v3^0,'%'
+FI
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CD' then '1' fi,,&uf('+7W11#')
+//---------------------------------------------------------------имя дисциплины
+REP
+3^A
+1
+if p(v3^A) and &uf('+97',v3^A)=&uf('+97',v991^A) then v991^B,,&uf('+7W11#1') else v3^A fi
+
+IF
+if val(g11)=1 then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+//................ для записей IBIS
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+PUTLOG
+'LINKCORRTASK=REPDISC%DBN=',,,&uf('Av994#1'),,,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,,,,'^I',v3^0,,'%'
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CI' then '1' fi
+//--------------------------------------------------идентификатор дисциплины
+//................ для записей IBIS
+PUTLOG
+'LINKCORRTASK=REPDISC%DBN=',,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi   ,,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'%'
+DEL
+111
+*
+
+
+ADD
+111
+
+v3^0
+
+REP
+3^0
+1
+if p(v3^0) and &uf('+97',v3^0)=&uf('+97',v991^A) then v991^B else v3^0 fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v3^0) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+//.................замена в записях VUZ
+CORREC
+'*'
+v991
+"IDV="v991^A
+
+REP
+69
+F
+(if p(v69) then |^B|v69^B,,,,,if p(v69^D) then '^D',if &uf('Av1001^A#1')=&uf('+97',v69^D) then &uf('Av1001^B#1') else v69^D fi fi fi/)
+
+DEL
+1001
+*
+
+
+END
+//................ для записей RDR после изменения в VUZ
+IF
+if v991^W<>'' then '1' fi
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+IF
+if a(v992) then '1' fi
+// если изменения на отдельных дисциплинах
+PUTLOG
+'LINKCORRTASK=REPCNA%DBN=RDR%QUERY="IDD=',,v991^A,,,'"%V991=',,v991,'%'
+FI
+FI
+FI
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991: '^CS' then '1' fi
+//--------------------------------------------------цикл дисциплины
+//................ для записей IBIS
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+REPEAT
+PUTLOG
+'LINKCORRTASK=REPDISC%DBN=',,&uf('Av994#1'),,'%QUERY="IDD=',,v3^0,,,'"%V991=',,v991,'^I',v3^0,,,,,,,'%'
+DEL
+111
+*
+
+
+ADD
+111
+
+v4
+
+REP
+4
+1
+v991^B
+
+IF
+if &uf('+97',v111)<>&uf('+97',v3^0) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^0,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+

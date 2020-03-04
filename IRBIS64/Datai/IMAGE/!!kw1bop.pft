@@ -1,0 +1,16 @@
+if p(v481) then'<br>  Приплет.:',&unifor('S0'),
+   (if p(v481)then 
+       if &unifor('Av481#2')<>''then if p(v481)then' '&unifor('S1A')'.'fi fi,
+       if p(v481^z) then &unifor('Av461^x#1')' '&unifor('Av461^c#1'),
+          |. |v481^v,| : |v481^c,| : |v481^e, else 
+          if p(v481^?) then &unifor('G0 'v481^x),|, |v481^? else v481^x fi,|. |d481^x
+          v481^c,| : |v481^e,|. |v481^v 
+       fi,|/ |v481^f,|. - |v481^d,| : |v481^g,
+       if s(v481^d,v481^g)<>''then|, |v481^h else|. - |v481^h fi,|. - |v481^4,
+       if p(v481^4)then &unifor('Korg.mnu|4')'.'fi,| : |v481^0*2,
+       |. - (|v481^q,| ; |v481^m,|)|d481^q,|. - |v481^p,
+          |. - ISBN |v481^i,
+    fi) 
+fi,
+". - ISSN "v11^a,". - Сериальное приложение: "v421^a,", ISSN "v421^x,
+"<br><b>Издание является приложением к документу:</b><br> "v422^a,", ISSN "v422^x'<br>'

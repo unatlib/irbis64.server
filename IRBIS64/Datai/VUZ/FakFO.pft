@@ -1,0 +1,13 @@
+/* отображение форм обучения для записи факультета 
+/* с уходом в страницу по кафедрам
+'<A 
+HREF="IRBIS:?C21COM=1&
+I21DBN=',&uf('+3EVUZ'),'&
+CHECKNAME=CHECKMFN&
+PFTNAME=FO_KAF&
+TOPPFTNAME=FO_KafTop&
+ENTRY_MFN=',mfn,'&
+FREEPAR0=',,&uf('+3E',v93),,'&
+FREEPAR1=',,&uf('+3E',v98),,'&
+">',
+if &uf('KFO.mnu|',v98)='' then 'Все' else &uf('KFO.mnu|',v98) fi,,'<br>'

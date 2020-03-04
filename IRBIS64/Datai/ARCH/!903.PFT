@@ -1,0 +1,10 @@
+if ((l("I="v903))<=0) or (val(ref(l("I="v903),mfn))=val(mfn)) then '0'else 
+   if v920:'asp'then 
+   else '1 Ошибка: Дублетный Шифр 'v903,ref(l("I="v903),' (см. N ',f(val(mfn),0,0)')') 
+fi fi/ 
+if s(v910^a):'1' OR 
+   rsum((if p(v910) then 
+            if '2 6 7':v910^a or (p(v910^2) and val(v910^1)=val(v910^2) or a(v910^2))then '0;' else 
+               if p(v910^c) and &unifor(|Kmhrvn.mnu\|v910^d)='' then'1;'else|0;|d910 fi fi fi))>0 
+   and s(v910^2)<>'' and rsum((v910^2|;|)) <> 0 then/'1 Выдано читателю - корректировать шифр нельзя' 
+fi, 

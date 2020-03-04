@@ -1,0 +1,30 @@
+/* условия ЭУ
+&uf('+7W10#'),,,
+if val(&uf('6KoElectro'))=1 or 
+   (val(&uf('6KoElectro'))=2) and (val(&uf('IPRIVATE,AnalogElRes,0'))=1) 
+then &uf('+7W10#1') fi,,,
+/* фильтр по параметрам опроса\
+(if p(v691) 
+ then 
+   if  ( &uf('AG991^I#1')='' or &uf('AG991^I#1')=' ' or &uf('+97',v691^I)=&uf('+97',&uf('AG991^I#1'))) then 
+   if  ( &uf('AG991^A#1')='' or &uf('AG991^A#1')=' ' or &uf('+97',v691^A)=&uf('+97',&uf('AG991^A#1'))  ) then 
+   if  ( &uf('AG991^O#1')='' or &uf('AG991^O#1')=' ' or &uf('+97',v691^O)=&uf('+97',&uf('AG991^O)#1')))  then 
+   if  ( &uf('AG991^V#1')='' or &uf('AG991^V#1')=' ' or &uf('+97',v691^V)=&uf('+97',&uf('AG991^V)#1')))  then 
+   if  ( &uf('AG991^B#1')='' or &uf('AG991^B#1')=' ' or &uf('+97',v691^B)=&uf('+97',&uf('AG991^B#1')) ) then 
+   if  ( &uf('AG991^C#1')='' or &uf('AG991^C#1')=' ' or &uf('+97',v691^C)=&uf('+97',&uf('AG991^C#1')) ) then 
+   if  ( &uf('AG991^N#1')='' or &uf('AG991^N#1')=' ' or &uf('+97',v691^N)=&uf('+97',&uf('AG991^N#1')) ) then 
+   if  ( &uf('AG991^S#1')='' or &uf('AG991^S#1')=' ' or &uf('+97',v691^S)=&uf('+97',&uf('AG991^S#1')) ) then 
+   if  ( &uf('AG991^F#1')='' or &uf('AG991^F#1')=' ' or val(v691^F)=val(&uf('AG991^F#1'))) 
+   then 
+      &uf('Ag10#1'),,
+/* отладка
+      if val(&uf('Ag991^:#1'))=1  
+      then 
+         &uf('+7U12#',,,if val(&uf('Ag10#1'))>0 then f(val(mfn),0,0) fi ) 
+      fi,,,
+      break 
+   fi,,
+   fi,fi,fi,fi,fi,fi,fi,fi,fi/)
+
+
+

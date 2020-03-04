@@ -1,0 +1,39 @@
+'{ \par \qc',,,'Дисциплины',,
+if p(v991^F) or p(v991^!) or p(v991^A) or p(v991^O) or p(v991^V) or p(v991^N) or p(v991^C) or p(v991^8) or p(v991^G) then ' для' fi,,,,,
+if p(v991^F) then '\par \ql \tab \tab \tab семестра - ',&uf('+98! ',v991^F) fi,,,,,
+if p(v991^!) then '\par \ql \tab \tab \tab кафедры (чит.) - ',&uf('+98! ',v991^!) fi,,,,,
+if p(v991^A) then '\par \ql \tab \tab \tab факультета - ',&uf('+98! ',v991^A) fi,,,,,
+if p(v991^O) then '\par \ql \tab \tab \tab формы обучения - ',&uf('+98! ',v991^O) fi,,,,,
+if p(v991^V) then '\par \ql \tab \tab \tab вида обучения - ',&uf('+98! ',v991^V) fi,,,,,
+if p(v991^N) then '\par \ql \tab \tab \tab направления - ',&uf('+98! ',v991^N) fi,,,,,
+if p(v991^C) then '\par \ql \tab \tab \tab специальности - ',&uf('+98! ',v991^C) fi,,,,,
+if p(v991^8) then '\par \ql \tab \tab \tab цикла - ',&uf('+98! ',v991^8) fi,,,,,
+if p(v991^G) then '\par \ql \tab \tab \tab типа литературы - ',if v991^G: 'осн' then 'основная' else if v991^G: 'доп' then 'дополнительная' else &uf('+98! ',v991^G) fi fi fi,,,,,
+if p(v991^X) then '\par \ql \tab \tab \fs16 Отобраны дисциплины с ККО больше чем ',v991^X fi,,,,,
+if p(v991^Y) then '\par \ql \tab \tab \fs16 Отобраны дисциплины с ККО меньше чем ',v991^Y fi,,,,,
+if p(v991^W) then '\par \ql \tab \tab \fs16 Отобраны дисциплины, для которых нет учебников с годом издания больше ',v991^W fi,,,,,
+if val(v991^0)>0 then '\par \ql \tab \tab \fs16 Считать КЭИ только для дисциплин, имеющих более ЭУ чем ',v991^0 fi,,,,,
+if p(v991^&) then '\par \gl \tab \tab \tab \tab Данные по запросу ',v991^& fi,,,,,,,,,,,,,,
+if v991^K<>'' or v991^M<>'' or v991^P<>'' or v991^R<>'' or v991^1<>'' or v991^2<>'' or v991^4<>'' then 
+'\par \qc ',,,
+'Заданы заголовки: ',
+"форма обучения, "d991^K,
+"вид обучения, "d991^4,
+"факультет, "d991^M,,
+"кафедра, "d991^2,
+"цикл, "d991^P,,
+"направление, "d991^1,,
+"специальность  "d991^R,,
+, fi,,,,,,,,,,,,,,,,,,,
+if val(v991^Q)=1 then '\par \ql \tab \tab \tab \fs16 (Только дисциплины, имеющие учебники)' fi,,,,,
+'\par \ql \tab \tab \tab \fs16 (данные',,
+if v991^=='' or v991^=='1' then  ' для текущего' else ' без учета' fi,,' полугодия, с аналогами)'
+'\par \ql \tab \tab \tab \fs16 (считаются учебники, имеющие экземпляры или ЭУ)',,
+if val(v991^^)>0 then '\par \ql \tab \tab \tab \fs16 (приведенные значения ККО)' fi,,,
+if v991^+<>'' 
+then &uf('+7W20#',v991^+) 
+else 
+      if &uf('IPRIVATE,DBN,')<>'' then &uf('+7W20#',,,&uf('IPRIVATE,DBN,') ) else &uf('+7W20#') fi 
+fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        if G20<>'' then '\par \ql \tab \tab \tab \fs16 (По базе данных учебников ',,G20,,')'  fi,,,
+'\par ',,,'}'

@@ -1,0 +1,110 @@
+mhl,
+   if p(v922) then 
+      if &unifor('Av905^1#1')<>'' then v922^g else 
+         if p(v922^g) and &unifor('Av903#1')<>'' then v922^g 
+         else 
+            if p(v922^q) then 
+               if v922^q*4.1='*'then v922^q*5 else &unifor('Q'v922^q*4) fi' ' fi
+            if p(v922^x) then 
+               if v922^x:'1' then v922^f 
+               else 
+                  if &unifor('F'v922^x,v922^f)<>'' then 
+                     if &unifor('F'v922^x,v922^f):'. ' then &unifor('F'v922^x,v922^f) else 
+                        if &unifor('F'v922^x,v922^f):'.' then &unifor('G0.'&unifor('F'v922^x,v922^f)),'.' 
+                           if &unifor('G2.'&unifor('F'v922^x,v922^f)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v922^x,v922^f)), 
+                        else &unifor('F'v922^x,v922^f) fi 
+                     fi 
+                  else v922^? 
+                  fi,' '&unifor('G0,'&unifor('E'v922^x,v922^f)) 
+               fi 
+            else 
+               if v922^f:', ' then &unifor('G2 'v922^f)' '&unifor('G0,'v922^f)  
+               else 
+                  if v922^f:' 'then 
+                     if &unifor('G2 'v922^f):'.'then 
+                        if &unifor('G2 'v922^f):'. ' then &unifor('G2 'v922^f) 
+                        else &unifor('G0.'&unifor('G2 'v922^f)),'.' 
+                           if &unifor('G2.'&unifor('G2 'v922^f)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v922^f)) 
+                        fi 
+                     else &unifor('G2 'v922^f)' ' 
+                     fi,' '&unifor('G0,'&unifor('G0 'v922^f)) 
+                  else v922^?| |,v922^f    
+            fi fi fi 
+            if p(v922^w) and s(v922^q,v922^s,v922^t)='' then 
+               if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]' fi fi 
+            if p(v922^2) then 
+               if p(v922^s) then 
+                  if p(v922^q) then ', ' else ' ; ' fi 
+               else 
+                  if p(v922^w) then else ', '  
+               fi fi
+               if p(v922^s) then 
+                  if v922^s=v922^q then else 
+                     if v922^s*4.1='*'then v922^s*5 else &unifor('Q'v922^s*4) fi' ' 
+               fi fi
+               if p(v922^w) and a(v922^s) then else
+                  if p(v922^<) then 
+                     if v922^<:'1' then v922^2 
+                     else 
+                        if &unifor('F'v922^<,v922^2)<>'' then 
+                           if &unifor('F'v922^<,v922^2):'. ' then &unifor('F'v922^<,v922^2) else 
+                              if &unifor('F'v922^<,v922^2):'.' then &unifor('G0.'&unifor('F'v922^<,v922^2)),'.' 
+                                 if &unifor('G2.'&unifor('F'v922^<,v922^2)):'.' then ' 'fi, 
+                                    &unifor('G2.'&unifor('F'v922^<,v922^2)) 
+                              else &unifor('F'v922^<,v922^2) fi 
+                           fi 
+                        else v922^, 
+                        fi,' '&unifor('G0,'&unifor('E'v922^<,v922^2)) 
+                     fi 
+                  else 
+                     if v922^2:', ' then &unifor('G2 'v922^2)' '&unifor('G0,'v922^2)  
+                     else 
+                        if v922^2:' 'then 
+                           if &unifor('G2 'v922^2):'.'then 
+                              if &unifor('G2 'v922^2):'. ' then &unifor('G2 'v922^2)  
+                              else &unifor('G0.'&unifor('G2 'v922^2)),'.' 
+                                 if &unifor('G2.'&unifor('G2 'v922^2)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v922^2)) 
+                              fi 
+                           else &unifor('G2 'v922^2) ' ' 
+                           fi,' '&unifor('G0,'&unifor('G0 'v922^2)) 
+                        else v922^,| |,v922^2    
+               fi fi fi fi 
+               if p(v922^3) then 
+                  if p(v922^t) then 
+                     if p(v922^s) then ', ' else ' ; 'fi 
+                  else 
+                     if p(v922^w) then else ', '  
+                  fi fi
+                  if p(v922^t) then 
+                     if v922^t=v922^s then else 
+                        if v922^t*4.1='*'then v922^t*5 else &unifor('Q'v922^t*4) fi' ' 
+                  fi fi
+                  if p(v922^w) and a(v922^t) then else 
+                     if p(v922^>) then 
+                        if v922^>:'1' then v922^3 
+                        else  
+                           if &unifor('F'v922^>,v922^3)<>'' then 
+                              if &unifor('F'v922^>,v922^3):'. ' then &unifor('F'v922^>,v922^3) else 
+                                 if &unifor('F'v922^>,v922^3):'.' then &unifor('G0.'&unifor('F'v922^>,v922^3)),'.' 
+                                    if &unifor('G2.'&unifor('F'v922^>,v922^3)):'.' then ' 'fi, 
+                                       &unifor('G2.'&unifor('F'v922^>,v922^3)) 
+                                 else &unifor('F'v922^>,v922^3) fi 
+                              fi 
+                           else v922^; 
+                           fi,' '&unifor('G0,'&unifor('E'v922^>,v922^3)) 
+                        fi 
+                     else 
+                        if v922^3:', ' then &unifor('G2 'v922^3)' '&unifor('G0,'v922^3)  
+                        else 
+                           if v922^3:' 'then 
+                              if &unifor('G2 'v922^3):'.'then 
+                                 if &unifor('G2 'v922^3):'. ' then &unifor('G2 'v922^3) 
+                                 else &unifor('G0.'&unifor('G2 'v922^3)),'.' 
+                                 if &unifor('G2.'&unifor('G2 'v922^3)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v922^3)) 
+                                 fi 
+                              else &unifor('G2 'v922^3) ' ' 
+                              fi,' '&unifor('G0,'&unifor('G0 'v922^3)) 
+                           else v922^;| |,v922^3 
+            fi fi fi fi fi fi,| ; |v922^g  
+   fi fi fi 
+mpl,
