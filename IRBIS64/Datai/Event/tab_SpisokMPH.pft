@@ -1,9 +1,10 @@
 '\b Список мероприятий'
 if v991^f='1' then ', начавшихся в ' else 
-   if v991^f='2' then ', начавшихся и завершившихся в ' else 
-      if v991^f:'3'  then ', завершившихся в ' else 
-         if v991^f:'4' or v991^f='' then ', проходивших в '
-fi fi fi fi,&uf('KmscR.mnu\'&uf('G0-'v991^b)),
+   if v991^f='2' then ', начавшихся и завершающихся в ' else 
+      if v991^f:'3'  then ', завершающихся в ' else 
+         if v991^f:'5'  then ', уже завершившихся в ' else 
+            if v991^f:'4' or v991^f='' then ', проходивших в '
+fi fi fi fi fi,&uf('KmscR.mnu\'&uf('G0-'v991^b)),
 if v991^b:'-' then 
    if &uf('KmscR.mnu\'&uf('G2-'v991^b))<>'' then '-'&uf('KmscR.mnu\'&uf('G2-'v991^b)) fi fi,' 'v991^a'г.''\b0 '
 '\par \par '

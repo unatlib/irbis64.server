@@ -1,8 +1,0 @@
-if p(v699) then '<br>'
-   if v699^u:'0'  then '<A HREF="IRBIS:2,,,,I='v699^w,'">явл€етс€ аналогом : ',&uf('D,?I='v699^w'?,@brief'),'</A>',
-   else 
-      '≈сть аналог',
-      if &uf('Av699#2')<>'' then 'и:<br>' else ' : ' fi,
-      (if p(v699) then 
-          if v699^u:'1' then '<A HREF="IRBIS:2,,,,I='v699^w,'">',&uf('D,?I='v699^w'?,@brief'),'</A>','<br>' fi fi)
-fi fi, 

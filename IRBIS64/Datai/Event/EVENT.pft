@@ -39,8 +39,30 @@ if v920:'event' then
    
    "<br><b>Степень доступности: "d900^p,'</b>'&uf('K900pSd.mnu\'v900^p),
    if &uf('K900pSd.mnu\'v900^p)='' then v900^p fi,
-   
-   "<br><b> Место проведения: </b> "d210^e,v210^e,", "v210^g,"<br>Адрес: "v210^H,"<br>Телефон: "v210^T,
+
+   if s(v210,v211)<>'' then '<br><b> Место проведения: </b> ',  
+      if v210:'^' then 
+         (if p(v210) then |<br><b>|v210^e|</b>|,|, |v211^g,|<br>Адрес: |v211^H,|<br>Телефон: |v211^T fi)
+      else       
+         &uf('+7W210#'if v210:'; ' then (&uf('1*R; ?v210#1')/) else v210 fi/),
+         &uf('+7W2101#'
+                (if g210<>'' then 
+                    if &uf(|Kmp_otd.mnu\|g210)<>'' then &uf(|Kmp_otd.mnu\|g210) else g210 fi fi/))
+         if v211<>'' then '<br>',|; |+g2101 else " "|; |+g2101 fi,
+         (if p(v211) then '<br>'
+             if v211=s('^K'v211^k) then 
+                if &uf(|Kmp_so.mnu\|v211^k)<>'' then '<b>'&uf(|Kmp_so.mnu\|v211^k)'</b>' else 
+                   if &uf(|Kotd_vse.mnu\|v211^k)<>'' then '<b>'&uf(|Kotd_vse.mnu\|v211^k)'</b>' 
+                   else '<b>'v211^k '</b>'
+                fi fi 
+             else '<b>'v211^e '</b>',
+                if v211^e='' then 
+                   if &uf(|Kotd_vse.mnu\|v211^k)<>'' then '<b>'&uf(|Kotd_vse.mnu\|v211^k)'</b>' 
+                   else '<b>'v211^k '</b>'
+                fi fi,
+                |, |v211^g,|<br>Адрес: |v211^H,|<br>Телефон: |v211^T 
+          fi fi)
+   fi fi
    if v30<>'' then 
       if v30^b='' 
       then 
@@ -95,10 +117,10 @@ if v920:'event' then
             if v30^a >= &uf('3') then 
                if val(v30^a) = val(&uf('3'))then '<br> <b>Мероприятие состоится СЕГОДНЯ - </b>' fi 
             else 
-               IF v30^a.4=v30^b.4 and v30^b<>'' or v30^b='' and v900^c<>'P'  THEN 
-                  if val(v30^b)< val(&uf('3')) or v30^b='' and v30^a < &uf('3') 
-                  then '<br>Мероприятие ЗАКОНЧЕНО'
-                  fi
+               if (not(v900^c:'P')) and 
+                  (v30^b='' and v30^a<>'' and v30^a < &uf('3') or 
+                   v30^b<>'' and v30^b < &uf('3')) 
+               then '<br>Мероприятие ЗАКОНЧЕНО'
                else 
                   if val(v30^a) = val(&uf('3')) then '<br><b>Открытие сегодня</b>' fi 
                   if val(v30^b*4.2) = val(&uf('31')) then 

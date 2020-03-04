@@ -52,7 +52,7 @@ XXXXXXXXXXXXXXXXXXX
 //
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
- в 932 вводим первое из полей 933. Есди есть ^M (число требуемых МП), пишем в g99 число уже имеющихся ссылок (введенных МП) на этот № раздела (933^0), и если это число МЕНЬШЕ числа, заданного в 933^M, вводим 932^R с числом недостающих ссыылок, а g99 увеличиваем на 1 
+ в 932 вводим первое из полей 933. Есди есть ^M (число требуемых МП), пишем в g99 число уже имеющихся ссылок (введенных МП) на этот № раздела (933^0), и если это число МЕНЬШЕ числа, заданного в 933^M, вводим 932^R с числом недостающих ссыылок, а g99 увеличиваем на 1
 
 ADD
 932
@@ -67,7 +67,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 972
 XXXXXXXXXXXXXXXXXXX
-"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi  
+"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 33
@@ -101,12 +101,12 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 211
 XXXXXXXXXXXXXXXXXXX
-(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/) 
+(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/)
 XXXXXXXXXXXXXXXXXXX
 REP
 211
 F
-(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/) 
+(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
 ADD
 304
@@ -139,11 +139,11 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 IF
-if v932^m<>'' then '1' else '0' fi 
+if v932^m<>'' then '1' else '0' fi
 //
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
- Повторяем создание ТОЙ ЖЕ новой записи, если в 932^M введено число 
+ Повторяем создание ТОЙ ЖЕ новой записи, если в 932^M введено число
 
 REPEAT
 XXXXXXXXXXXXXXXXXXX
@@ -151,7 +151,7 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 IF
-if v932^m<>'' then if val(v932^!) < val(v932^m) then '1' else '0' fi else '0' fi 
+if v932^m<>'' then if val(v932^!) < val(v932^m) then '1' else '0' fi else '0' fi
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
@@ -173,7 +173,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 972
 XXXXXXXXXXXXXXXXXXX
-"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi  
+"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 33
@@ -207,12 +207,12 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 211
 XXXXXXXXXXXXXXXXXXX
-(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/) 
+(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/)
 XXXXXXXXXXXXXXXXXXX
 REP
 211
 F
-(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/) 
+(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
 ADD
 304

@@ -42,7 +42,7 @@
 \pard \widctlpar\intbl {\ql \fs20 '&uf('S1A')
 '
 \cell }
-\pard \widctlpar\intbl {\ql \fs20 'v30^a*6'.'v30^a*4.2,| |n30^a,if v30^b<>'' then if v30^a.4=v30^b.4 then | - |v30^b*6|.|,v30^b*4.2,' 'v30^a.4 else ' 'v30^a.4,| - |^b*6|.|,v30^b*4.2,' 'v30^b.4 fi else '.'v30^a.4,if v900^C:'P' then ' - ' fi fi
+\pard \widctlpar\intbl {\ql \fs20 'v30^a*6'.'v30^a*4.2,| |n30^a,if v30^b<>'' then if v30^a.4=v30^b.4 then | - |v30^b*6|.|,v30^b*4.2,' 'v30^a.4 else ' 'v30^a.4,| - |v39^b*6|.|,v30^b*4.2,' 'v30^b.4 fi else '.'v30^a.4,if v900^C:'P' then ' - ' fi fi
 '
 \cell }
 \pard \widctlpar\intbl {\ql \fs20 'v972^a,"("v972^b")"

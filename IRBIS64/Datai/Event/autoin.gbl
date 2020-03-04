@@ -1,4 +1,3 @@
-
 0
 //
 XXXXXXXXXXXXXXXXXXX
@@ -73,7 +72,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 997
 XXXXXXXXXXXXXXXXXXX
-if v972^a:'?' then else  if a(v997) then if v900^c<>'P' and (v30^b='' and v30^a < &uf('3') or v30^b<>'' and v30^b < &uf('3')) then'^AZ' fi fi fi 
+if v972^a:'?' then else  if a(v997) then if (not(v900^c:'P')) and (v30^b='' and v30^a<>'' and v30^a < &uf('3') or v30^b<>'' and v30^b < &uf('3')) then'^AZ' fi fi fi 
 XXXXXXXXXXXXXXXXXXX
 FI
 XXXXXXXXXXXXXXXXXXX

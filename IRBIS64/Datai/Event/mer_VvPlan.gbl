@@ -56,7 +56,7 @@ XXXXXXXXXXXXXXXXXXX
 REP
 330
 F
-&uf('+7W972#'),&uf('S0'),if V330^0<>'' then &uf('S'f(rmax((v330^0/)),0,0)) fi,(if p(v330) then if v330^0='' then &uf('+7W972#'&uf('S1A')),'^0'&uf('Ag972#1') fi,v330 fi/) 
+&uf('+7W972#'),&uf('S0'),if V330^0<>'' then &uf('S'f(rmax((v330^0/)),0,0)) fi,(if p(v330) then if v330^0='' then &uf('+7W972#'&uf('S1A')),'^0'&uf('Ag972#1') fi,v330 fi/)
 XXXXXXXXXXXXXXXXXXX
 PUTLOG
 'Запись МП включена в План. (№п/п 'g972')',
@@ -75,7 +75,7 @@ ADD
 XXXXXXXXXXXXXXXXXXX
 '^12',"^W"v991^a,&uf('D,?I='v991^a,'?,"^A"v200^a'),
 PUTLOG
-'Поле связи введено в запись МП. MFN=',f(val(mfn),0,0) 
+'Поле связи введено в запись МП. MFN=',f(val(mfn),0,0)
 XXXXXXXXXXXXXXXXXXX
 ADD
 972^0

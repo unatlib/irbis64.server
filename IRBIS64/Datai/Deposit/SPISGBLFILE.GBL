@@ -135,7 +135,7 @@ XXXXXXXXXXXXXXXXXXX
 DEL
 910
 F
-(if p(v910)then if 'C U':v910^a then if v910^v=&uf('Av991^A#1') and (v910^1=v910^x or v910^1='0') and a(v910^w)then'1'else'0'fi else'0' fi fi/)
+(if p(v910)then if 'C U':v910^a then if v910^v=&uf('Av991^A#1') and (v910^1=v910^x or v910^1='0' or v910^1:'-') and a(v910^w)then'1'else'0'fi else'0' fi fi/)
 XXXXXXXXXXXXXXXXXXX
 DEL
 910

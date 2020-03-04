@@ -127,6 +127,33 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 IF
 if p(v1002) then '1' fi
+//---исходное состояние в 1083
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v83/)
+
+// запомню повторения, где не было семестров в 1085, из 83 их удаляю
+DEL
+1085
+*
+
+
+ADD
+1085
+
+(if p(v83) and v83^F='' then v83 fi/)
+
+DEL
+83
+F
+(if p(v83) then if v83^F='' then '1' else '0' fi fi/)
+
 //******************************************** цикл по удаляемым повторениям, поле 1002
 REPEAT
 XXXXXXXXXXXXXXXXXXX
@@ -339,29 +366,21 @@ XXXXXXXXXXXXXXXXXXX
 IF
 if val(G5)=1 then '1' fi
 IF
-if &uf('Av1002^A#1')<>'' then '1' fi
+if &uf('Av1002#1')<>'' then '1' fi
+IF
+if &uf('Av1002^F#1')='' then '1' fi
+//----------удаление БЕЗ повторени семестром
+DEL
+1085
+F
+(if p(v1085) then if &uf('+97',v1085^A)=&unifor('Av1002^A#1')  and &uf('+97',v1085^n)=&unifor('Av1002^n#1') and &uf('+97',v1085^c)=&unifor('Av1002^c#1')  and &uf('+97',v1085^v)=&unifor('Av1002^v#1')  and &uf('+97',v1085^o)=&unifor('Av1002^o#1')   then '1' else '0' fi  fi/)
+
+FI
+IF
+if &uf('Av1002^F#1')<>'' then '1' fi
+//----------удаление с повторени семестром
+//
 // Удаление семестра из 83^f
-// запомню повторения, где не было семестров в 1084
-DEL
-1084
-*
-
-
-ADD
-1084
-
-(if p(v83) and v83^F='' then v83 fi/)
-
-DEL
-1083
-*
-
-
-ADD
-1083
-
-(v83/)
-
 CHA
 1002^F
 1
@@ -434,36 +453,19 @@ DEL
 F
 (if p(v83) then if val(&uf('IMAIN,LINKGROUP,o'))=1 then if &unifor('Av1002^E#1')<>''and &uf('+97',v83^E)=&unifor('Av1002^E#1') then '1' else '0' fi  else if &uf('+97',v83^A)=&unifor('Av1002^A#1') and &uf('+97',v83^n)=&unifor('Av1002^n#1') and &uf('+97',v83^c)=&unifor('Av1002^c#1')  and &uf('+97',v83^v)=&unifor('Av1002^v#1')  and &uf('+97',v83^o)=&unifor('Av1002^o#1') and ( &unifor('Av1002^f#1')<>''and v83^f:&unifor('Av1002^f#1')  or  &uf('Av1002^f#1')='' and v83^f='' ) then '1' else '0' fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
-// может удалялись повторения без семестра ?
-IF
-if &unifor('Av1002^f#1')='' then '1' fi
-DEL
-83
-F
-(if p(v83) then if &uf('+97',v83^A)=&unifor('Av1002^A#1')  and &uf('+97',v83^n)=&unifor('Av1002^n#1') and &uf('+97',v83^c)=&unifor('Av1002^c#1')  and &uf('+97',v83^v)=&unifor('Av1002^v#1')  and &uf('+97',v83^o)=&unifor('Av1002^o#1')   then '1' else '0' fi  fi/)
-
-FI
-// восстанавливаю повторения без семестра
-ADD
-83
-
-(v1084/)
-
-IF
-if v83<>v1083 then '1' fi
-PUTLOG
-'vDel83: Откорректирована дисциплина ',v3^A,' (',v3^0,')'
-FI
-DEL
-1083
-*
-
-
+//---конец корректировки с семестром
 FI
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
+//---конец &uf('Av1002#1')<>''
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+
 FI
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
@@ -565,6 +567,21 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
+ADD
+83
+
+(v1085/)
+
+IF
+if v83<>v1083 then '1' fi
+PUTLOG
+'vDel83: Откорректирована дисциплина ',v3^A,' (',v3^0,')'
+FI
+DEL
+1083
+*
+
+
 //PUTLOG
 //'Отладка v991=',v991,,' v992=',v992,' v993=',v993,' g100=',g100,' g993=',g993,
 DEL
@@ -623,7 +640,7 @@ DEL
 
 
 DEL
-1084
+1085
 *
 
 

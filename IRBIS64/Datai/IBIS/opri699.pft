@@ -1,7 +1,0 @@
-if p(v699) then '\par '
-   if v699^u:'0' then &uf('+I?2,,,,I='v699^w,'? явл€етс€ аналогом '),&uf('D,?I='v699^w'?,@brief'),  
-   else 
-      '≈сть аналог',
-      if &uf('Av699#2')<>'' then 'и:\par ' else ' : ' fi,
-      (if p(v699) then if v699^u:'1' then &uf('+I?2,,,,I='v699^w'?'&uf(|D,?I=|v699^w|?,@brief|)) '\par ' fi fi)
-fi fi, 
