@@ -4,7 +4,7 @@
 if p(v1) then ,KoDiscFullHead, fi
 *****
 [KeyOptions]
-500
+100
 1
 ,KoDiscFullSort,
 *****

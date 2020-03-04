@@ -4,6 +4,52 @@
 [FormatCode]
 WIN
 *****
+[Sum]
+v881^I
+v881^E
+f(val(v881^G),0,2)
+#
+'\trowd \trqc\trgaph108\trleft-108\trhdr 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10100 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+'Итого:',,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10900 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+v1,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12100 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+v2,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13500 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+f(val(v3),0,2),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14850 
+\pard \qr\widctlpar\intbl {',,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
 [Tab]
 \paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
 {\b\fs\fs24\qc 

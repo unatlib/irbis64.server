@@ -1,64 +1,69 @@
 /*9 method must be first!!
-955 9 if p(v955) then v955^a else 'FILE NOT EXIST' fi
-955 0 if (v955^a<>'') and (val(v955^N) >0) then 'TXT=',v955^a fi
-955 0 if (v955^a<>'') and (val(v955^N)>0) then 'V=FT' fi
+955 9 if &unifor('IFULLTEXT,FULLTEXTACTUAL,1')='1'then if p(v955) then v955^a else 'FILE NOT EXIST' fi fi
+955 0 if (v955^a<>'') and ((v955^N = '') or (val(v955^N) >0)) then 'TXT=',v955^a fi
+955 0 if (v955^a<>'') and ((v955^N = '') or (val(v955^N) >0)) then 'V=FT' fi
 1001 0 MHL,if &uf('+*') <> '' then 'GUID=',&uf('+*') fi
+/*IBIS_BIB_CARD
+1112 5 MHL,'/KT=/',&uf('++08,10,101,102,215,300,907,951,955,621,675,691,692,693,910,941,900,920,903,919,908,964,985,999'),/&uf('6ZAGNJ')
 /*IBIS_KL_TIT
 1200 8 MHL,'/K=/'(v200^a,|%|d200/) 
-12251 8 MHL,'/K=/'(v225^a,|%|d225/) 
-12252 8 MHL,'/K=/'(v225^i,|%|d225/) 
-12253 8 MHL,'/K=/'(v225^l,|%|d225/) 
-1330 8 MHL,'/K=/'(v330^c,|%|d330/) 
-13307 8 MHL,'/K=/'(v330^d,|%|d330/) 
-1430 8 MHL,'/K=/'(v430^a,|%|d430/) 
-1451 8 MHL,'/K=/'(v451^c,|%|d451/) 
-1452 8 MHL,'/K=/'(v452^c,|%|d452/) 
-1454 8 MHL,'/K=/'(v454^a,|%|d454/) 
-1461 8 MHL,'/K=/'(v46^l,|%|d46/) 
-1462 8 MHL,'/K=/'(v46^a,|%|d46/) 
-1463 8 MHL,'/K=/'(v46^c,|%|d46/) 
-1464 8 MHL,'/K=/'(v46^i,|%|d46/) 
-1465 8 MHL,'/K=/'(v46^m,|%|d46/) 
-14611 8 MHL,'/K=/'(v461^a,|%|d461/) 
-14612 8 MHL,'/K=/'(v461^c,|%|d461/) 
-14631 8 MHL,'/K=/'(v463^c,|%|d463/) 
-1470 8 MHL,'/K=/'(v470^c,|%|d470/) 
-1481 8 MHL,'/K=/'(v481^c,|%|d481/) 
-1488 8 MHL,'/K=/'(v488^c,|%|d488/)
-1510 8 MHL,'/K=/'(v510^d,|%|d510/) 
-1517 8 MHL,'/K=/'(v517^a,|%|d517/) 
-1541 8 MHL,'/K=/'(v541,|%|d541/)
-1600 8 MHL,'/K=/'(v600^z|%|/)
-1601 8 MHL,'/K=/'(v601^z|%|/)
-1922 8 MHL,'/K=/'(v922^c,|%|d922/) 
-19227 8 MHL,'/K=/'(v922^d,|%|d922/) 
-19228 8 MHL,if v920:'J'then else'/K=/'(v922^p,|%|d922/)fi 
-19229 8 MHL,'/K=/'(v922^r,|%|d922/) 
-192210 8 MHL,'/K=/'(v922^i,|%|d922/)
-192211 8 MHL,'/K=/'(v922^L,|%|d922/)
-19231 8 MHL,'/K=/'(v923^i,|%|d923/) 
-19232 8 MHL,'/K=/'(v923^l,|%|d923/) 
-19233 8 MHL,'/K=/'(v923^n,|%|d923/) 
-1924 8 MHL,'/K=/'(v924,|%|d924/) 
-19251 8 MHL,'/K=/'(v925^a,|%|d925/) 
-19252 8 MHL,'/K=/'(v925^b,|%|d925/) 
-19253 8 MHL,'/K=/'(v925^c,|%|d925/) 
+1200 8 MHL,'/K=/'(v225^a,|%|d225/) 
+1200 8 MHL,'/K=/'(v225^i,|%|d225/) 
+1200 8 MHL,'/K=/'(v225^l,|%|d225/)
+1200 8 MHL,'/K=/'(v225^d,|%|d225/)
+1200 8 MHL,'/K=/'(v330^c,|%|d330/) 
+1200 8 MHL,'/K=/'(v330^d,|%|d330/) 
+1200 8 MHL,'/K=/'(v430^a,|%|d430/) 
+1200 8 MHL,'/K=/'(v451^c,|%|d451/) 
+1200 8 MHL,'/K=/'(v452^c,|%|d452/) 
+1200 8 MHL,'/K=/'(v454^a,|%|d454/) 
+1200 8 MHL,'/K=/'(v46^l,|%|d46/) 
+1200 8 MHL,'/K=/'(v46^a,|%|d46/) 
+1200 8 MHL,'/K=/'(v46^c,|%|d46/) 
+1200 8 MHL,'/K=/'(v46^i,|%|d46/) 
+1200 8 MHL,'/K=/'(v46^m,|%|d46/) 
+1200 8 MHL,'/K=/'(v46^r,|%|d46/) 
+1200 8 MHL,'/K=/'(v461^a,|%|d461/) 
+1200 8 MHL,'/K=/'(v461^c,|%|d461/) 
+1200 8 MHL,'/K=/'(v463^c,|%|d463/) 
+1200 8 MHL,'/K=/'(v470^c,|%|d470/) 
+1200 8 MHL,'/K=/'(v481^c,|%|d481/) 
+1200 8 MHL,'/K=/'(v488^c,|%|d488/)
+1200 8 MHL,'/K=/'(v510^d,|%|d510/) 
+1200 8 MHL,'/K=/'(v517^a,|%|d517/) 
+1200 8 MHL,'/K=/'(v541,|%|d541/)
+1200 8 MHL,'/K=/'(v600^z|%|/)
+1200 8 MHL,'/K=/'(v601^z|%|/)
+1200 8 MHL,'/K=/'(v922^c,|%|d922/) 
+1200 8 MHL,'/K=/'(&uf(|G0(|v922^d),|%|d922/) 
+1200 8 MHL,if v920:'J'then else'/K=/'(&uf(|G0(|v922^p),|%|d922/)fi 
+1200 8 MHL,'/K=/'(&uf(|G0(|v922^r),|%|d922/) 
+1200 8 MHL,'/K=/'(v922^i,|%|d922/)
+1200 8 MHL,'/K=/'(v922^L,|%|d922/)
+1200 8 MHL,'/K=/'(v923^i,|%|d923/) 
+1200 8 MHL,'/K=/'(v923^l,|%|d923/) 
+1200 8 MHL,'/K=/'(v923^n,|%|d923/) 
+1200 8 MHL,'/K=/'(v924,|%|d924/) 
+1200 8 MHL,'/K=/'(v925^a,|%|d925/) 
+1200 8 MHL,'/K=/'(v925^b,|%|d925/) 
+1200 8 MHL,'/K=/'(v925^c,|%|d925/) 
 /*IBIS_DUBL
-999 0 if p(v200^a)and a(v981)and a(v463)and (not(v920:'spec'))then'!'v110^b,v11^a,if v210^d.1='['then else v210^d*2.2fi,v700^a.9,&unifor('B'v710^a" ",v200^a),if v920='J'then" "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi,if v920='J'then else (if p(v925) then &unifor(|G1#|v925^v) fi),(if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi) fi,v215^a fi 
+999 0 if p(v200^a)and a(v981)and a(v463)and (not(v920:'spec'))then'!'v110^b,v11^a,if v210^d.1='['then else v210^d*2.2fi,v700^a.9,&unifor('B'v710^a" ",v200^a),if v920='J'then" "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi,if v920='J'then else (if p(v925) then &unifor(|G1#|v925^v) fi),(if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi) fi,f(rsum(v215^a),0,0) fi 
 999 0 if p(v200^a)and p(v981)then(if p(v981^a) then'!'v981^d*2.2,v981^n,&unifor('B'v981^a' '&unifor('Av200^a#1')) fi/)fi 
-999 0 if p(v200^a)and a(v981)and p(v463)then (if p(v463^c)then'!'v463^j*2.2,&unifor('Av700^a.9#1'),&unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,&unifor('Av200^a#1'),' 'v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi fi/) fi 
-999 0 if v920:'spec'then'!'if v210^d.1='['then else v210^d*2.2 fi,if a(v210^d) then if v461^h.1='['then else v461^h*2.2 fi fi,&unifor('B'v461^c,if v461^u:'1'then' 'if v961^z<>'' then (if p(v961^z) then v961^a.9 fi) else v461^x.9 fi fi,if s(v200^v,v925)='' then" "v200^a fi),&unifor("G1#"v200^v),(if p(v925) then &unifor(|G1#|v925^v) fi),(if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi),v215^a fi 
-999 0 if p(v225^v) then '!'if v210^d.1='['then else v210^d*2.2fi,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),v215^a fi 
+999 0 if p(v200^a)and a(v981)and p(v463)then (if p(v463^c)then'!'v463^j*2.2,&unifor('Av700^a.9#1'),&unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,&unifor('Av200^a#1'),' 'v463^c),v463^v,v463^h,v463^k,v463^s fi/) fi 
+999 0 if v920:'spec'then'!'if v210^d.1='['then else v210^d*2.2 fi,if a(v210^d) then if v461^h.1='['then else v461^h*2.2 fi fi,&unifor('B'v461^c,if v461^u:'1'then' 'if v961^z<>'' then (if p(v961^z) then v961^a.9 fi) else v461^x.9 fi fi,if s(v200^v,v925)='' then" "v200^a fi),&unifor("G1#"v200^v),(if p(v925) then &unifor(|G1#|v925^v) fi),(if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi),f(rsum(v215^a),0,0) fi 
+999 0 if p(v225^v) then '!'if v210^d.1='['then else v210^d*2.2fi,v10^a,&unifor('B',&unifor('Av225^a#1')),&unifor('G1#'&unifor('Av225^v#1')),f(rsum(v215^a),0,0) fi 
 /*IBIS_TIT
 200 0 MHL,if p(v461) and v200^u:'1'then else if p(v200^a) then'T=',&unifor("9"v200^a,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l,|. |v923^m,|.|v923^n)) fi,if v200^u:'1' then "/"v200^f fi fi 
 200 0 MHL,if s(v982^0,v982^9)<>'' then if v200^a:&unifor('Av982^9#1') or v200^u:'1'then else 'T=',&unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 &unifor("9"v200^a,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l,|. |v923^m,|.|v923^n)) fi fi / 
 200 0 MHL,if v920='J'then if p(v200^a) then'TJ=',&unifor("9"v200^a,". "v923^h,"."v923^i,". "v923^k,"."v923^l,". "v923^m,"."v923^n) fi fi  
 200 0 MHL,if v920='J'then if p(v200^l) then 'TJ=',&unifor("9"v200^l,". "v923^h,"."v923^i,". "v923^k,"."v923^l,". "v923^m,"."v923^n) fi fi 
+6200 0 &uf('+7W10#',&unifor('9'if p(v461) then v461^c "/"v461^x,";"v200^v else v200^a,if p(v200^u) then"/"v700^a," "v700^b,if a(v700) then "/"v461^x fi fi,";"v200^v fi)),,if s(v62^A,v62^K,v62^B)='' and v62^1<>''  then 'V=DOK' / 'PLANZK=',,G10/ fi,,if  v694^1<>'' then 'V=DOK' / 'PLANZK=',,G10/ fi
 510 0 MHL,(if p(v510) then if v920='J'then |TJ=|d510^d else|T=|d510^d fi,&unifor(|9|v510^d) fi,|%|d510/) 
 922 0 MHL,(if p(v922) then if p(v922^u)and f(val(v922^u),0,0)=v922^u then else |T=|d922^c,&unifor(|9|v922^c) fi,fi,|%|d922/) 
-9227 0 MHL,(if p(v922) then |T=|d922^d,&unifor(|9|v922^d) fi,|%|d922/) 
-9228 0 MHL,if v920:'J'then else(if p(v922) then |T=|d922^p,&unifor(|9|v922^p) fi,|%|d922/)fi 
-9229 0 MHL,(if p(v922) then |T=|d922^r,&unifor(|9|v922^r) fi,|%|d922/) 
+9227 0 MHL,(if p(v922) then |T=|d922^d,&unifor(|9|d922^d,&uf(|G0(|v922^d)) fi,|%|d922/) 
+9228 0 MHL,if v920:'J'then else(if p(v922) then |T=|d922^p,&unifor(|9|d922^p,&uf(|G0(|v922^p)) fi,|%|d922/)fi 
+9229 0 MHL,(if p(v922) then |T=|d922^r,&unifor(|9|d922^r,&uf(|G0(|v922^r)) fi,|%|d922/) 
 92210 0 MHL,(if p(v922) then |T=|d922^i,&unifor(|9|v922^i) fi,|%|d922/) 
 92211 0 MHL,(if p(v922) then |T=|d922^L,&unifor(|9|v922^L) fi,|%|d922/) 
 9251 0 MHL,if v925^a<>'' then &uf('+7W46#'),&uf('+7W46#'(|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,|. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi)),(if p(v925^a) then if v925^u:'1'and &unifor('Av461^c#1')<>''then'T=',&uf('9'&unifor('Av461^c#1'),&uf('Ag46#1'),if &uf('Av461^u#1'):'1'then if s(&uf('Av461^x#1'),&uf('Av461^b#1'))<>''then'/'&uf('Av461^x#1'),&uf('Av461^b#1') fi fi,|;|v925^v,|:|v925^a) else /'T='&uf('9'v925^a) fi fi,|%|d925/)/fi 
@@ -78,7 +83,8 @@
 423 0 mhl,if v920='J'then (if p(v423^s) then |T=|d423^s,&unifor(|9|v423^s) fi,|%|d423/)fi 
 423 0 mhl,if v920='J'then (|TS=|d423^s,&unifor(|9|v423^s),|%|d423/)fi 
 330 0 MHL,(if p(v330) then if p(v330^u) and f(val(v330^u),0,0)=v330^u then else |T=|d330^c,&unifor(|9|v330^c) fi fi,|%|d330/) 
-3307 0 MHL,(if p(v330) then|T=|d330^d,&unifor(|9|v330^d) fi,|%|d330/) 
+330 0 MHL,(if p(v330) then if p(v330^u) and f(val(v330^u),0,0)=v330^u then else if p(v330^() then if v330^c:v330^( and v330^c:v330^) then else |T=|d330^c,v330^(| |,v330^)| |,&unifor(|9|v330^c) fi fi fi fi,|%|d330/) 
+3307 0 MHL,(if p(v330) then|T=|d330^d,&unifor(|9|d330^d,&uf(|G0(|v330^d)) fi,|%|d330/) 
 430 0 MHL,(if p(v430) then|T=|d430^a,&unifor(|9|v430^a) fi,|%|d430/) 
 430 0 MHL,if v920='J'then(|TJ=|d430^a,&unifor(|9|v430^a),|%|d430/)fi 
 454 0 MHL,(if p(v454) then|T=|d454^a,&unifor(|9|v454^a,|/|v454^b) fi,|%|d454) 
@@ -89,47 +95,50 @@
 541 0 MHL,if v920='J'then"TJ="d541,&unifor("9"v541)fi 
 517 0 MHL,(if p(v517) then|T=|d517^a,&unifor(|9|v517^a) fi,|%|d517/) 
 225 0 MHL,(if p(v225^a) then'T=',&unifor(|9|v225^a,|/|v225^f) fi,|%|d225/) 
-225 0 MHL,(if p(v225^a) then'TS=',&unifor(|9|v225^a,|/|v225^f) fi,|%|d225/) 
+225 0 MHL,(if p(v225^a) then'TS=',&unifor(|9|v225^a,|/|v225^f) fi,|%|d225/)
+225 0 MHL,(if p(v225^d) then'T=',&unifor(|9|v225^d,fi,|%|d225/) 
+225 0 MHL,(if p(v225^d) then'TS=',&unifor(|9|v225^d,fi,|%|d225/) 
 963 0 MHL,(if p(v963^a) then'TS=',&unifor(|9|v963^a,|/|v963^o) fi,|%|d963/) 
 4601 0 MHL,(if p(v46^a) then|T=|d46^a,&unifor(|9|v46^a,|/|v46^f) fi,|%|d46/)/ 
 4602 0 MHL,(if p(v46^l) then|T=|d46^l,&unifor(|9|v46^l) fi,|%|d46/) 
 4603 0 MHL,(if p(v46^c) then|T=|d46^c,&unifor(|9|v46^c) fi,|%|d46/) 
+4604 0 MHL,(if p(v46^r) then|T=|d46^r,&unifor(|9|v46^r) fi,|%|d46/) 
 46 0 MHL,(if p(v46^a) then|TS=|d46^a,&unifor(|9|v46^a,|/|v46^f) fi,|%|d46/)/ 
-200 0 &uf('+960.100#',if v920='J' then else if s(v200^A,v461^C)<>'' then 'TV=',v461^c,". "d461,v200^v,if p(v200^v) then" : "v200^a else v200^a fi fi fi),' - ',v903
+200 0 &uf('+960.100#',if v920='J' then else if s(v200^A,v461^C)<>'' then 'TV=',v461^c,". "d461,v200^v,if p(v200^v) then" : "v200^a else v200^a fi fi fi),if v920:'J' then else ' - ',v903 fi
 /*IBIS_AUT
-7001 0 MHL,"A="v700^a," "v700^d,", "v700^g,if a(v700^g) then|, |d700^b,if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) fi fi,if &uf('Korg.mnu\A')='1' then &uf('+7W700#1') else if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,if s(v700^1)<>''then"; "d700^c fi,v700^c,if s(v700^1,v700^c)<>''then"; "d700^f fi,v700^f,')' fi,"\"v700^4*4,", "v700^5*4,", "v700^6*4,"("v700^7")","\"d700^4 fi
+7001 0 MHL,&uf('+7W700#'&uf('Korg.mnu\A')),"A="v700^a," "v700^d,", "v700^g,if a(v700^g) then|, |d700^b,if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) fi fi,if s(v700^1,v700^c,v700^f)<>''then if g700='1' then else ' (',v700^1,if s(v700^1)<>''then" ; "d700^c fi,v700^c,if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')' fi,"\"v700^4*4,", "v700^5*4,", "v700^6*4,"("v700^7")","\"d700^4 fi
 7002 0 MHL,if p(v700^r) then 'A='if v700^r:', ' then v700^r else if v700^r:' 'then &unifor('G0 'v700^r),if &unifor('G2 'v700^r)<>'' then ', 'if &unifor('G2 'v700^r):'.'then if &unifor('G2 'v700^r):'. ' then &unifor('G2 'v700^r) else &unifor('G0.'&unifor('G2 'v700^r)),'. '&unifor('G2.'&unifor('G2 'v700^r)) fi else &unifor('G2 'v700^r) fi fi else v700^r fi fi fi 
 7003 0 MHL,"MR="v700^p 
-700 0 MHL,if p(v700^y)then"W="v700^a," "v700^d,", "v700^g,if a(v700^g) then|, |d700^b,if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) fi fi,,if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,if s(v700^1)<>''then"; "d700^c fi,v700^c,if s(v700^1,v700^c)<>''then"; "d700^f fi,v700^f,')' fi,"\"v700^4*4,", "v700^5*4,", "v700^6*4,"("v700^7")","\"d700^4/|W=|v700^r fi/ 
+700 0 MHL,if p(v700^y)then"W="v700^a," "v700^d,", "v700^g,if a(v700^g) then|, |d700^b,if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) fi fi,,if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,if s(v700^1)<>''then" ; "d700^c fi,v700^c,if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')' fi,"\"v700^4*4,", "v700^5*4,", "v700^6*4,"("v700^7")","\"d700^4/|W=|v700^r fi/ 
 970 0 mhl,if p(v970^y)then"W="v970^a,| |v970^b/|W=|v970^rfi 
 9701 0 MHL,"A="v970^a," "v970^b,"("v970^1")" 
 9702 0 MHL,"A="v970^r 
-7011 0 MHL,(if p(v701) then |A=|v701^a,| |v701^d,|, |v701^g,if a(v701^g) then |, |d701^b,if v701^b:'. 'or (not(v701^b:'.')) then v701^b else &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) fi fi,if &uf('Ag700#1')='1' then else if s(v701^1,v701^c,v701^f)<>''then' (',v701^1,if s(v701^1)<>''then|; |d701^c fi,v701^c,if s(v701^1,v701^c)<>''then|; |d701^f fi,v701^f,')' fi,|\|v701^4*4,|, |v701^5*4,|, |v701^6*4,|(|v701^7|)|,|\|d701^4 fi fi,|%|d701/) 
+7011 0 MHL,(if p(v701) then |A=|v701^a,| |v701^d,|, |v701^g,if a(v701^g) then |, |d701^b,if v701^b:'. 'or (not(v701^b:'.')) then v701^b else &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) fi fi,if &uf('Ag700#1')='1' then else if s(v701^1,v701^c,v701^f)<>''then' (',v701^1,if s(v701^1)<>''then| ; |d701^c fi,v701^c,if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f,')' fi,|\|v701^4*4,|, |v701^5*4,|, |v701^6*4,|(|v701^7|)|,|\|d701^4 fi fi,|%|d701/) 
 7012 0 MHL,(if p(v701) then if p(v701^r) then 'A='if v701^r:', ' then v701^r else if v701^r:' 'then &unifor('G0 'v701^r),if &unifor('G2 'v701^r)<>'' then ', 'if &unifor('G2 'v701^r):'.'then if &unifor('G2 'v701^r):'. ' then &unifor('G2 'v701^r) else &unifor('G0.'&unifor('G2 'v701^r)),'. '&unifor('G2.'&unifor('G2 'v701^r)) fi else &unifor('G2 'v701^r) fi fi else v701^r fi fi fi fi,|%|d701/) 
 7013 0 MHL,(|MR=|v701^p,|%|d701/) 
-701 0 MHL,(if p(v701) then if p(v701^y)then|W=|v701^a,| |v701^d,|, |v701^g,if a(v701^g) then |, |d701^b,if v701^b:'. 'or (not(v701^b:'.')) then v701^b else &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) fi fi,if s(v701^1,v701^c,v701^f)<>''then' (',v701^1,if s(v701^1)<>''then|; |d701^c fi,v701^c,if s(v701^1,v701^c)<>''then|; |d701^f fi,v701^f,')' fi,|\|v701^4*4,|, |v701^5*4,|, |v701^6*4,|(|v701^7|)|,|\|d701^4,/|W=|v701^r fi fi,|%|d701/) 
+701 0 MHL,(if p(v701) then if p(v701^y)then|W=|v701^a,| |v701^d,|, |v701^g,if a(v701^g) then |, |d701^b,if v701^b:'. 'or (not(v701^b:'.')) then v701^b else &unifor('G0.'v701^b),'. '&unifor('G2.'v701^b) fi fi,if s(v701^1,v701^c,v701^f)<>''then' (',v701^1,if s(v701^1)<>''then| ; |d701^c fi,v701^c,if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f,')' fi,|\|v701^4*4,|, |v701^5*4,|, |v701^6*4,|(|v701^7|)|,|\|d701^4,/|W=|v701^r fi fi,|%|d701/) 
 9611 0 MHL,(if p(v961) then if p(v961^x) then |A=|d961^x,if v961^x:', 'then v961^x else if v961^x:' 'then &unifor('G0 'v961^x),', 'if &unifor('G2 'v961^x):'. ' then &unifor('G2 'v961^x) else if &unifor('G2 'v961^x):'.'then &unifor('G0.'&unifor('G2 'v961^x))'. '&unifor('G2.'&unifor('G2 'v961^x))else &unifor('G2 'v961^x)fi fi else v961^x fi fi fi fi,|%|d961/)/ 
-9611 0 MHL,(if p(v961) then if p(v961^a) then |A=|v961^a,| |v961^d,|, |v961^g,if a(v961^g) and p(v961^a) then |, |d961^b,if v961^b:'. 'or (not(v961^b:'.')) then v961^b else &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi fi,if &uf('Ag700#1')='1' then else if s(v961^1,v961^c,v961^f)<>''then' (',v961^1,if s(v961^1)<>''then|; |d961^c fi,v961^c,if s(v961^1,v961^c)<>''then|; |d961^f fi,v961^f,')' fi,|\|v961^4*4,|, |v961^5*4,|, |v961^6*4,|(|v961^7|)|,|\|d961^4,fi fi fi,|%|d961/) 
+9611 0 MHL,(if p(v961) then if p(v961^a) then |A=|v961^a,| |v961^d,|, |v961^g,if a(v961^g) and p(v961^a) then |, |d961^b,if v961^b:'. 'or (not(v961^b:'.')) then v961^b else &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi fi,if &uf('Ag700#1')='1' then else if s(v961^1,v961^c,v961^f)<>''then' (',v961^1,if s(v961^1)<>''then| ; |d961^c fi,v961^c,if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')' fi,|\|v961^4*4,|, |v961^5*4,|, |v961^6*4,|(|v961^7|)|,|\|d961^4,fi fi fi,|%|d961/) 
 9612 0 MHL,(if p(v961) then if p(v961^r) then 'A='if v961^r:', ' then v961^r else if v961^r:' 'then &unifor('G0 'v961^r),if &unifor('G2 'v961^r)<>'' then ', 'if &unifor('G2 'v961^r):'.'then if &unifor('G2 'v961^r):'. ' then &unifor('G2 'v961^r) else &unifor('G0.'&unifor('G2 'v961^r)),'. '&unifor('G2.'&unifor('G2 'v961^r)) fi else &unifor('G2 'v961^r) fi fi else v961^r fi fi fi fi,|%|d961/) 
 9613 0 MHL,(|MR=|v961^p,|%|d961/) 
-961 0 MHL,(if p(v961) then if p(v961^y) then if p(v961^a) then |W=|v961^a,| |v961^d,|, |v961^g,if a(v961^g) and p(v961^a) then |, |d961^b,if v961^b:'. 'or (not(v961^b:'.')) then v961^b else &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi fi,if s(v961^1,v961^c,v961^f)<>''then' (',v961^1,if s(v961^1)<>''then|; |d961^c fi,v961^c,if s(v961^1,v961^c)<>''then|; |d961^f fi,v961^f,')' fi,|\|v961^4*4,|, |v961^5*4,|, |v961^6*4,|(|v961^7|)|,|\|d961^4 fi/|W=|v961^r fi fi,|%|d961/) 
-7021 0 MHL,(if p(v702) then |A=|v702^a,| |v702^d,|, |v702^g,if a(v702^g) then |, |d702^b,if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) fi fi,if &uf('Ag700#1')='1' then else if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,if s(v702^1)<>''then|; |d702^c fi,v702^c,if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' fi,|\|v702^4*4,|, |v702^5*4,|, |v702^6*4,|(|v702^7|)|,|\|d702^4 fi fi,|%|d702/) 
+961 0 MHL,(if p(v961) then if p(v961^y) then if p(v961^a) then |W=|v961^a,| |v961^d,|, |v961^g,if a(v961^g) and p(v961^a) then |, |d961^b,if v961^b:'. 'or (not(v961^b:'.')) then v961^b else &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) fi fi,if s(v961^1,v961^c,v961^f)<>''then' (',v961^1,if s(v961^1)<>''then| ; |d961^c fi,v961^c,if s(v961^1,v961^c)<>''then| ; |d961^f fi,v961^f,')' fi,|\|v961^4*4,|, |v961^5*4,|, |v961^6*4,|(|v961^7|)|,|\|d961^4 fi/|W=|v961^r fi fi,|%|d961/) 
+7021 0 MHL,(if p(v702) then |A=|v702^a,| |v702^d,|, |v702^g,if a(v702^g) then |, |d702^b,if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) fi fi,if &uf('Ag700#1')='1' then else if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,if s(v702^1)<>''then| ; |d702^c fi,v702^c,if s(v702^1,v702^c)<>''then| ; |d702^f fi,v702^f,')' fi,|\|v702^4*4,|, |v702^5*4,|, |v702^6*4,|(|v702^7|)|,|\|d702^4 fi fi,|%|d702/) 
 7022 0 MHL,(if p(v702) then if p(v702^r) then 'A='if v702^r:', ' then v702^r else if v702^r:' 'then &unifor('G0 'v702^r),if &unifor('G2 'v702^r)<>'' then ', 'if &unifor('G2 'v702^r):'.'then if &unifor('G2 'v702^r):'. ' then &unifor('G2 'v702^r) else &unifor('G0.'&unifor('G2 'v702^r)),'. '&unifor('G2.'&unifor('G2 'v702^r)) fi else &unifor('G2 'v702^r) fi fi else v702^r fi fi fi fi,|%|d702/) 
 7023 0 MHL,(|MR=|v702^p,|%|d702/) 
-702 0 MHL,(if p(v702) then if p(v702^y)then|W=|v702^a,| |v702^d,|, |v702^g,if a(v702^g) then |, |d702^b,if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) fi fi,if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,if s(v702^1)<>''then|; |d702^c fi,v702^c,if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' fi,|\|v702^4*4,|, |v702^5*4,|, |v702^6*4,|(|v702^7|)|,|\|d702^4/|W=|v702^r fi fi,|%|d702/) 
-9261 0 MHL,(if p(v926) then |A=|v926^a,| |v926^d,|, |v926^g,if a(v926^g) then |, |d926^b,if v926^b:'. 'or (not(v926^b:'.')) then v926^b else &unifor('G0.'v926^b),'. '&unifor('G2.'v926^b) fi fi,if &uf('Ag700#1')='1' then else if s(v926^1,v926^c,v926^f)<>''then' (',v926^1,if s(v926^1)<>''then|; |d926^c fi,v926^c,if s(v926^1,v926^c)<>''then|; |d926^f fi,v926^f,')' fi,|\|v926^4*4|\| fi fi,|%|d926/) 
+702 0 MHL,(if p(v702) then if p(v702^y)then|W=|v702^a,| |v702^d,|, |v702^g,if a(v702^g) then |, |d702^b,if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) fi fi,if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,if s(v702^1)<>''then| ; |d702^c fi,v702^c,if s(v702^1,v702^c)<>''then| ; |d702^f fi,v702^f,')' fi,|\|v702^4*4,|, |v702^5*4,|, |v702^6*4,|(|v702^7|)|,|\|d702^4/|W=|v702^r fi fi,|%|d702/) 
+9261 0 MHL,(if p(v926) then |A=|v926^a,| |v926^d,|, |v926^g,if a(v926^g) then |, |d926^b,if v926^b:'. 'or (not(v926^b:'.')) then v926^b else &unifor('G0.'v926^b),'. '&unifor('G2.'v926^b) fi fi,if &uf('Ag700#1')='1' then else if s(v926^1,v926^c,v926^f)<>''then' (',v926^1,if s(v926^1)<>''then| ; |d926^c fi,v926^c,if s(v926^1,v926^c)<>''then| ; |d926^f fi,v926^f,')' fi,|\|v926^4*4|\| fi fi,|%|d926/) 
 9262 0 MHL,(if p(v926) then if p(v926^r) then 'A='if v926^r:', ' then v926^r else if v926^r:' 'then &unifor('G0 'v926^r),if &unifor('G2 'v926^r)<>'' then ', 'if &unifor('G2 'v926^r):'.'then if &unifor('G2 'v926^r):'. ' then &unifor('G2 'v926^r) else &unifor('G0.'&unifor('G2 'v926^r)),'. '&unifor('G2.'&unifor('G2 'v926^r)) fi else &unifor('G2 'v926^r) fi fi else v926^r fi fi fi fi,|%|d926/) 
 9263 0 MHL,(|MR=|v926^p,|%|d926/) 
-926 0 MHL,(if p(v926) then if p(v926^y)then|W=|v926^a,| |v926^d,|, |v926^g,if a(v926^g) then |, |d926^b,if v926^b:'. 'or (not(v926^b:'.')) then v926^b else &unifor('G0.'v926^b),'. '&unifor('G2.'v926^b) fi fi,if s(v926^1,v926^c,v926^f)<>''then' (',v926^1,if s(v926^1)<>''then|; |d926^c fi,v926^c,if s(v926^1,v926^c)<>''then|; |d926^f fi,v926^f,')' fi,|\|v926^4*4|\|/|W=|v926^r fi fi,|%|d926/) 
+926 0 MHL,(if p(v926) then if p(v926^y)then|W=|v926^a,| |v926^d,|, |v926^g,if a(v926^g) then |, |d926^b,if v926^b:'. 'or (not(v926^b:'.')) then v926^b else &unifor('G0.'v926^b),'. '&unifor('G2.'v926^b) fi fi,if s(v926^1,v926^c,v926^f)<>''then' (',v926^1,if s(v926^1)<>''then| ; |d926^c fi,v926^c,if s(v926^1,v926^c)<>''then| ; |d926^f fi,v926^f,')' fi,|\|v926^4*4|\|/|W=|v926^r fi fi,|%|d926/) 
 4541 0 MHL,if p(v454^d) then 'A='if p(v454^x) then if v454^x:'1' then v454^d else &unifor('E'v454^x,&unifor('G0,'v454^d)),if &unifor('F'v454^x,v454^d)<>'' then ', 'if &unifor('F'v454^x,v454^d):'. ' then &unifor('F'v454^x,v454^d) else if &unifor('F'v454^x,v454^d):'.'then &unifor('G0.'&unifor('F'v454^x,v454^d)),'. '&unifor('G2.'&unifor('F'v454^x,v454^d)) else &unifor('F'v454^x,v454^d) fi fi fi fi else if v454^d:', ' then v454^d else if v454^d:' 'then &unifor('G0 'v454^d),if &unifor('G2 'v454^d)<>'' then ', 'if &unifor('G2 'v454^d):'.'then if &unifor('G2 'v454^d):'. ' then &unifor('G2 'v454^d) else &unifor('G0.'&unifor('G2 'v454^d)),'. '&unifor('G2.'&unifor('G2 'v454^d)) fi else &unifor('G2 'v454^d) fi fi else v454^d fi fi fi fi 
 4542 0 MHL,if p(v454^e) then 'A='if p(v454^<) then if v454^<:'1' then v454^e else &unifor('E'v454^<,&unifor('G0,'v454^e)),if &unifor('F'v454^<,v454^e)<>'' then ', 'if &unifor('F'v454^<,v454^e):'. ' then &unifor('F'v454^<,v454^e) else if &unifor('F'v454^<,v454^e):'.'then &unifor('G0.'&unifor('F'v454^<,v454^e)),'. '&unifor('G2.'&unifor('F'v454^<,v454^e)) else &unifor('F'v454^<,v454^e) fi fi fi fi else if v454^e:', ' then v454^e else if v454^e:' 'then &unifor('G0 'v454^e),if &unifor('G2 'v454^e)<>'' then ', 'if &unifor('G2 'v454^e):'.'then if &unifor('G2 'v454^e):'. ' then &unifor('G2 'v454^e) else &unifor('G0.'&unifor('G2 'v454^e)),'. '&unifor('G2.'&unifor('G2 'v454^e)) fi else &unifor('G2 'v454^e) fi fi else v454^e fi fi fi fi / 
 4543 0 MHL,if p(v454^f) then 'A='if p(v454^>) then if v454^>:'1' then v454^f else &unifor('E'v454^>,&unifor('G0,'v454^f)),if &unifor('F'v454^>,v454^f)<>'' then ', 'if &unifor('F'v454^>,v454^f):'. ' then &unifor('F'v454^>,v454^f) else if &unifor('F'v454^>,v454^f):'.'then &unifor('G0.'&unifor('F'v454^>,v454^f)),'. '&unifor('G2.'&unifor('F'v454^>,v454^f)) else &unifor('F'v454^>,v454^f) fi fi fi fi else if v454^f:', ' then v454^f else if v454^f:' 'then &unifor('G0 'v454^f),if &unifor('G2 'v454^f)<>'' then ', 'if &unifor('G2 'v454^f):'.'then if &unifor('G2 'v454^f):'. ' then &unifor('G2 'v454^f) else &unifor('G0.'&unifor('G2 'v454^f)),'. '&unifor('G2.'&unifor('G2 'v454^f)) fi else &unifor('G2 'v454^f) fi fi else v454^f fi fi fi fi 
 4611 0 MHL,if s(v961^z)<>''then else (if p(v461) then |A=|d461^x,if v461^x:', 'then v461^x else if v461^x:' 'then &unifor('G0 'v461^x),', 'if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) else if &unifor('G2 'v461^x):'.'then &unifor('G0.'&unifor('G2 'v461^x))'. '&unifor('G2.'&unifor('G2 'v461^x))else &unifor('G2 'v461^x)fi fi else v461^x fi fi fi,|%|d461/) fi 
 4612 0 MHL,(if ' и др. et al. ':v461^y then else|A=|v461^y,|%|d461fi/) 
-470 0 MHL,(if p(v470) then |A=|d470^a,if v470^a:', 'then v470^a else if v470^a:' 'then &unifor('G0 'v470^a),', '&unifor('G2 'v470^a) else v470^a fi fi,if &uf('Korg.mnu\A'):'1' then else |\реценз.док.\|d470^a fi fi,|%|d470/) 
-3911 0 MHL,(if p(v391) then |A=|v391^a,| |v391^d,|, |v391^g,if a(v391^g) then |, |v391^b fi,if &uf('Ag700#1')='1' then else if s(v391^1,v391^c,v391^f)<>''then' (',v391^1,if s(v391^1)<>''then|; |d391^c fi,v391^c,if s(v391^1,v391^c)<>''then|; |d391^f fi,v391^f fi,|\автогр\|d391^a fi fi,|%|d391/) 
-391 0 MHL,(|F=|v391^a,| |v391^d,|, |v391^g,if a(v391^g) then |, |v391^b fi,if s(v391^1,v391^c,v391^f)<>''then' (',v391^1,if s(v391^1)<>''then|; |d391^c fi,v391^c,if s(v391^1,v391^c)<>''then|; |d391^f fi,v391^f fi,|%|d391/) 
-6001 0 MHL,(if p(v600) then if p(v600^a) then 'A=',if p(v600^9) then if v600^9:'1' then v600^a else &unifor('E'v600^9,v600^a),|, |v600^g if a(v600^g) then if &unifor('F'v600^9,v600^a)<>'' then ', '&unifor('F'v600^9,v600^a) fi fi fi else if v600^a:' 'then if v600^a:','then v600^a else &unifor('G0 'v600^a)', 'v600^g,if a(v600^g) then &unifor('G2 'v600^a) fi fi else v600^a,|, |v600^g fi,fi,| |v600^d,if &uf('Ag700#1')='1' then else if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c,if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')'fi,|\|v600^b|\| fi fi fi,|%|d600/)/ 
+470 0 mhl,(if p(v470)then if p(v470^A) then 'A='if p(v470^9) then if v470^9:'1' then v470^A else &unifor('E'v470^9,&unifor('G0,'v470^A)),if &unifor('F'v470^9,v470^A)<>'' then ', 'if &unifor('F'v470^9,v470^A):'. ' then &unifor('F'v470^9,v470^A) else if &unifor('F'v470^9,v470^A):'.'then &unifor('G0.'&unifor('F'v470^9,v470^A)),'. '&unifor('G2.'&unifor('F'v470^9,v470^A)) else &unifor('F'v470^9,v470^A) fi fi fi fi else if v470^A:', ' then v470^A else if v470^A:' 'then &unifor('G0 'v470^A),if &unifor('G2 'v470^A)<>'' then ', 'if &unifor('G2 'v470^A):'.'then if &unifor('G2 'v470^A):'. ' then &unifor('G2 'v470^A) else &unifor('G0.'&unifor('G2 'v470^A)),'. '&unifor('G2.'&unifor('G2 'v470^A)) fi else &unifor('G2 'v470^A) fi fi else v470^A fi fi fi fi,if &uf('Korg.mnu\A'):'1' then else |\реценз.док.\|d470^a fi fi|%|d470/)
+3911 0 MHL,(if p(v391) then |A=|v391^a,| |v391^d,|, |v391^g,if a(v391^g) then |, |v391^b fi,if &uf('Ag700#1')='1' then else if s(v391^1,v391^c,v391^f)<>''then' (',v391^1,if s(v391^1)<>''then| ; |d391^c fi,v391^c,if s(v391^1,v391^c)<>''then| ; |d391^f fi,v391^f fi,|\автогр\|d391^a fi fi,|%|d391/) 
+391 0 MHL,(|F=|v391^a,| |v391^d,|, |v391^g,if a(v391^g) then |, |v391^b fi,if s(v391^1,v391^c,v391^f)<>''then' (',v391^1,if s(v391^1)<>''then| ; |d391^c fi,v391^c,if s(v391^1,v391^c)<>''then| ; |d391^f fi,v391^f fi,|%|d391/) 
+6001 0 mhl,(if p(v600) then if p(v600^A) then|A=|d600^A,if p(v600^9) then if v600^9:'1' then v600^A else &unifor('E'v600^9,v600^A),|, |v600^G,if a(v600^G) then if &unifor('F'v600^9,v600^A)<>'' then ', 'if &unifor('F'v600^9,v600^A):'. ' then &unifor('F'v600^9,v600^A) else if &unifor('F'v600^9,v600^A):'.'then &unifor('G0.'&unifor('F'v600^9,v600^A)),'. '&unifor('G2.'&unifor('F'v600^9,v600^A)) else &unifor('F'v600^9,v600^A) fi fi fi fi fi else if v600^A:',' then &unifor('G0,'v600^A),else &unifor('G0 'v600^A) fi,|, |v600^G,if a(v600^G) then if &unifor('G2 'v600^A):'. ' then ', '&unifor('G2 'v600^A) else  if &unifor('G2 'v600^A):'.'then ', ' &unifor('G0.'&unifor('G2 'v600^A)),'. '&unifor('G2.'&unifor('G2 'v600^A)) fi fi fi fi,| |v600^d,if &uf('Ag700#1')='1' then else if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c,if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')'fi,|\|v600^b|\| fi fi fi,|%|d600/)
 6002 0 MHL,(if p(v600) then if p(v600^r) then 'A='if v600^r:', ' then v600^r else if v600^r:' 'then &unifor('G0 'v600^r),if &unifor('G2 'v600^r)<>'' then ', 'if &unifor('G2 'v600^r):'.'then if &unifor('G2 'v600^r):'. ' then &unifor('G2 'v600^r) else &unifor('G0.'&unifor('G2 'v600^r)),'. '&unifor('G2.'&unifor('G2 'v600^r)) fi else &unifor('G2 'v600^r) fi fi else v600^r fi fi,|\|v600^b|\|fi fi,|%|d600/) 
 6003 0 MHL,(if p(v600) then if p(v600^r) then 'P='if v600^r:', ' then v600^r else if v600^r:' 'then &unifor('G0 'v600^r),if &unifor('G2 'v600^r)<>'' then ', 'if &unifor('G2 'v600^r):'.'then if &unifor('G2 'v600^r):'. ' then &unifor('G2 'v600^r) else &unifor('G0.'&unifor('G2 'v600^r)),'. '&unifor('G2.'&unifor('G2 'v600^r)) fi else &unifor('G2 'v600^r) fi fi else v600^r fi fi,|\|v600^b|\| fi fi,|%|d600/) 
 600 0 MHL,(if p(v600) then if p(v600^b) or a(v600^b) and a(v600^)) then 'P='if p(v600^a) then if p(v600^9)then if v600^9:'1' then v600^a else &unifor('E'v600^9,&unifor('G0,'v600^a)),|, |v600^g if a(v600^g) then if &unifor('F'v600^9,v600^a)<>'' then ', '&unifor('F'v600^9,v600^a) fi fi fi,else if v600^a:' 'then if v600^a:','then v600^a else &unifor('G0 'v600^a)', 'v600^g,if a(v600^g) then &unifor('G2 'v600^a) fi fi else v600^a,|, |v600^g fi,fi,| |v600^d,if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c, if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')' fi,|. |d600^z fi,v600^z,| [|v600^:|]|,| : |v600^;,| : |v600^,,| : |v600^<,|. |v600^2,|. |v600^5,|, |v600^+,if a(v600^z) and p(v600^w) then &uf('D,?I='v600^w'?,@brief') fi,if s(v600^k,v600^m,v600^8,v600^q,v600^t,v600^o,v600^j,v600^0)<>'' then | -- |v600^k,| -- |v600^m,| -- |v600^8,| -- |v600^q,| -- |v600^t,| -- |v600^o,| -- |v600^j,| -- |v600^0 fi fi fi,|%|d600/)
@@ -165,7 +174,8 @@
 4882 0 MHL,(if p(v488) then if p(v488^c) then if p(v488^2) then|A=|d488^2,if p(v488^<) then if v488^<:'1' then v488^2 else &unifor('E'v488^<,v488^2),|, |v488^,,if a(v488^,) then if &unifor('F'v488^<,v488^2)<>'' then ', 'if &unifor('F'v488^<,v488^2):'. ' then &unifor('F'v488^<,v488^2) else if &unifor('F'v488^<,v488^2):'.'then &unifor('G0.'&unifor('F'v488^<,v488^2)),'. '&unifor('G2.'&unifor('F'v488^<,v488^2)) else &unifor('F'v488^<,v488^2) fi fi fi fi fi else if v488^2:',' then &unifor('G0,'v488^2),else &unifor('G0 'v488^2) fi,|, |v488^,,if a(v488^,) then if &unifor('G2 'v488^2):'. ' then ', '&unifor('G2 'v488^2) else if &unifor('G2 'v488^2):'.'then ', ' &unifor('G0.'&unifor('G2 'v488^2)),'. '&unifor('G2.'&unifor('G2 'v488^2)) fi fi fi fi fi fi fi,|%|d488/) 
 4883 0 MHL,(if p(v488) then if p(v488^c) then if p(v488^3) then|A=|d488^3,if p(v488^>) then if v488^>:'1' then v488^3 else &unifor('E'v488^>,v488^3),|, |v488^;,if a(v488^;) then if &unifor('F'v488^>,v488^3)<>'' then ', 'if &unifor('F'v488^>,v488^3):'. ' then &unifor('F'v488^>,v488^3) else if &unifor('F'v488^>,v488^3):'.'then &unifor('G0.'&unifor('F'v488^>,v488^3)),'. '&unifor('G2.'&unifor('F'v488^>,v488^3)) else &unifor('F'v488^>,v488^3) fi fi fi fi fi else if v488^3:',' then &unifor('G0,'v488^3),else &unifor('G0 'v488^3) fi,|, |v488^;,if a(v488^;) then if &unifor('G2 'v488^3):'. ' then ', '&unifor('G2 'v488^3) else if &unifor('G2 'v488^3):'.'then ', ' &unifor('G0.'&unifor('G2 'v488^3)),'. '&unifor('G2.'&unifor('G2 'v488^3)) fi fi fi fi fi fi fi,|%|d488/) 
 /*IBIS_KL_COL
-3710 8 MHL,'/K=/'(v710|%|/) 
+3710 8 MHL,'/K=/'(v710|%|/)
+3740 8 MHL,'/K=/'(v740|%|/) 
 3971 8 MHL,'/K=/'(v971|%|/) 
 3461 8 MHL,'/K=/'(if a(v962) then v461^b fi,|%|d461/) 
 3961 8 MHL,'/K=/'(if a(v962) then if p(v961^b) and a(v961^a) then v961^b fi fi,|%|d961/) 
@@ -188,10 +198,13 @@
 962 0 MHL,(if p(v962^a)then'M=',&unifor(|9|v962^a,if s(v962^n,v962^c)<>''then' ('v962^n| ; |,v962^c')'fi,|. |v962^b,if s(v962^d,v962^f,v962^e)<>''then' ('v962^d| ; |,v962^f,if p(v962^f)then| ; |v962^e else v962^e fi,|/ |v962^h,|/ |v962^i,')'fi) fi,|%|d962/) 
 9621 0 MHL,(if p(v962^b) and p(v962^x) then'M=',&unifor('9'v962^b) fi,|%|d962/) 
 601 0 MHL,(if p(v601) then 'M=',if p(v601^a) then &unifor(|9|v601^a) else if p(v601^p) then &unifor(|9|v601^p,if s(v601^n,v601^c)<>''then' ('v601^n| ; |,v601^c')'fi,|. |v601^l,if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f,if p(v601^f)then| ; |v601^e else v601^e fi,|/ |v601^h,|/ |v601^i,')'fi) fi,|\|v601^b|\| fi,if a(v601^b) then|\о нем\|d601^a fi fi,|%|d601/) 
-601 0 MHL,(if p(v601) then if p(v601^b) then 'P='v601^a,if a(v601^a) then v601^p,if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l,if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f,if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' fi fi,if s(v601^a,v601^p)<>'' then |. |d601^z fi,v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,|. |v601^2,|. |v601^5,|, |v601^+,if a(v601^z) and p(v601^w) then '\Заглавие-шифр'v601^w'\' fi,|\|v601^b|\| else if p(v601^a) and a(v601^b) then |P=|v601^a|\о нем\| fi fi fi,|%|d601/)
+601 0 MHL,(if p(v601) then if p(v601^b) then 'P='&unifor('9'v601^a,if a(v601^a) then v601^p,if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l,if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f,if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' fi fi,if s(v601^a,v601^p)<>'' then |. |d601^z fi,v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,|. |v601^2,|. |v601^5,|, |v601^+,if a(v601^z) and p(v601^w) then '\Заглавие-шифр'v601^w'\' fi,if s(v601^k,v601^m,v601^8,v601^q,v601^t,v601^o,v601^j,v601^0)<>'' then | -- |v601^k,| -- |v601^m,| -- |v601^8,| -- |v601^q,| -- |v601^t,| -- |v601^o,| -- |v601^j,| -- |v601^0 else |\|v601^b|\|fi ) else if p(v601^a) and a(v601^b) then 'P='&unifor('9'v601^a|\о нем\|) fi fi fi,|%|d601/)
 6011 0 MHL,(if p(v601^L) and p(v601^x) then'M=',&unifor('9'v601^L) fi,|%|d601/) 
 330 0 (if p(v330) then |M=|v330^8 fi,|%|d330/)
 922 0 (if p(v922) then |M=|v922^8 fi,|%|d922/)
+740 0 MHL,(if p(v740)then 'ZA='v740^a|. |,v740^b|. |,|(|v740^c|). |,v740^t,if s(v740^i,v740^f)=''then '. ' else |. |v740^i,| (|v740^f|)|,'. 'fi,v470^n|.| fi,|%|d740/)
+7401 0 MHL,(if p(v740)then 'URD='v740^a,|. |v740^b fi,|%|d740/)
+7402 0 MHL,(if p(v740)then 'VZA='v740^t,if s(v740^i,v740^f)=''then '. ' else |. |v740^i,| (|v740^f|)|fi fi,|%|d740/)
 /*IBIS_INDEX
 629 0 MHL,"KRV="d629^b,&unifor("9"v629^b)/"KRV=всего"d629
 328 0 MHL,"KNS="v328^n/"KNS="v328^0/"KNS="v328^9 
@@ -230,7 +243,7 @@
 6006 0 MHL,(|GS=|v600^t,|%|d600/) 
 6007 0 MHL,(|GS=|v600^o,|%|d600/) 
 6008 0 MHL,(|HS=|v600^j,|%|d600/) 
-601 0 MHL,(if p(v601) then if a(v601^b) then 'S='v601^a,if a(v601^a) then v601^p,if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l,if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f,if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' fi fi,if s(v601^a,v601^p)<>'' then |. |d601^z fi,v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,|. |v601^2,|. |v601^5,|, |v601^+,if a(v601^z) and p(v601^w) then &uf('D,?I='v601^w'?,@brief') fi,if s(v601^k,v601^m,v601^8,v601^q,v601^t,v601^o,v601^j,v601^0)<>'' then | -- |v601^k,| -- |v601^m,| -- |v601^8,| -- |v601^q,| -- |v601^t,| -- |v601^o,| -- |v601^j,| -- |v601^0 fi fi fi,|%|d601/)
+601 0 MHL,(if p(v601) then if a(v601^b) then 'S='&uf('9'v601^a,if a(v601^a) then v601^p,if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l,if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f,if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' fi fi,if s(v601^a,v601^p)<>'' then |. |d601^z fi,v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,|. |v601^2,|. |v601^5,|, |v601^+,if a(v601^z) and p(v601^w) then &uf('D,?I='v601^w'?,@brief') fi,if s(v601^k,v601^m,v601^8,v601^q,v601^t,v601^o,v601^j,v601^0)<>'' then | -- |v601^k,| -- |v601^m,| -- |v601^8,| -- |v601^q,| -- |v601^t,| -- |v601^o,| -- |v601^j,| -- |v601^0 fi) fi fi,|%|d601/)
 6012 0 MHL,(|PS=|v601^k,|%|d601/) 
 6013 0 MHL,(|PS=|v601^m,|%|d601/) 
 6014 0 MHL,(|PS=|v601^8,|%|d601/) 
@@ -257,7 +270,7 @@
 6330 6 '/K=/'(v330^7|%|/) 
 6922 6 '/K=/'(v922^5|%|/) 
 6922 6 '/K=/'(v922^6|%|/) 
-6922 6 '/K=/'(v330^7|%|/) 
+6922 6 '/K=/'(v922^7|%|/) 
 6606 8 MHL,'/K=/'(v606|%|/) 
 6607 8 MHL,'/K=/'(v607|%|/) 
 6610 8 MHL,'/K=/'(v610|%|/) 
@@ -281,14 +294,14 @@
 19 0 (|B=|d19,v19^a*2| |,v19^b,|%|d19/) 
 903 0 MHU,"I="v903/(|II=|v463^w,|%|d463/)/(|I470=|v470^i,|%|d470/)/if v920:'NJ' then(if p(v423^h)then|I=|v423^H,|/|d423,&unifor(|Av934#1|d423),|/|v423^n fi/),/if v936:'/' then 'I='v933,"/"v934,"/"v935,'/'&unifor('G0/'v936)fi fi/ 
 903 0 mhu,(if v600^w:'VS' then else |I600=|v600^W fi,|%|d600/)/
-933 0 MHU,if p(v933) then if v920:'NJ' then"I933="v933"/"/(|I933=|v423^H,|%|d423/) else "I933="v903 fi fi 
+933 0 MHU,if p(v933) then if v920:'NJ' or v920:'SPEC'then"I933="v933"/"/(|I933=|v423^H,|%|d423/) else "I933="v903 fi fi 
 931 0 mhl,if v920:'NJ'then(|I=|v931^2/),(|I=|v931^3/),(|I=|v931^4/),(|I=|v904^a/),(|I=|v931^a/) fi 
 930 0 mhl,if v920:'NJ'then (|I=|v930^a/),(if p(v930)then if p(v930^a)then if v930^2<>''then 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^2,fi else 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^1,/if v930^2<>''then 'I='&unifor('Av933#1'),|/|v930^0,|/|v930^t,|/|v930^2,fi fi fi/)fi  
 1 0 "ID="v1/v2
 /*IBIS_KOD
 903 0 "vrl="v920/(|c=|v102|%|/)/(/|j=|v101|%|)/
-900 0 if 'ASP AUNTD':v920 then'V=AS'fi/if v920:'AUNTD' then'V=UD'fi/if v920:'spec' and p(v933) then 'V=NJ_SPEC'v900^b.2 else "V="v900^b.2 fi/if a(v900)then if 'ab 04':v110^b then'V=02'fi/if v110^b:'c'then'V=01'fi/if v920:'nj' then"V="v920/"V=11"d922 fi/if v920='SZPRF'then'V='v920 fi fi/if v920:'musp' then 'V='v920 fi/
-900 0 if '0305':v900^b.2 or '0407':v900^b.2 and a(v933) then if 'a1 b': v900^t or a(v900^t) then'V=KN'fi fi 
+900 0 if 'ASP AUNTD':v920 then'V=AS'fi/if v920:'AUNTD' then'V=UD'fi/if v920:'spec' and p(v933) then 'V=NJ_SPEC'v900^b.2 else "V="v900^b.2 fi/if a(v900)then if 'ab 04':v110^b then'V=02'fi/if v110^b:'c'then'V=01'fi/if v920:'nj' then"V="v920/"V=11"d922 fi fi/if v920:'musp' then 'V='v920 fi/
+900 0 if '0305':v900^b.2 or '0407':v900^b.2 and a(v933) then if 'a1 2 3 4 5 b': v900^t or a(v900^t) then'V=KN'fi fi 
 900 0 &unifor("K900i.mnu|"v900^t)
 110 0 &unifor("K900i.mnu|"v110^t) 
 900 0 "hd="v900^c/"hd="v900^2/"hd="v900^3/"hd="v900^4/"hd="v900^5/"hd="v900^6
@@ -307,8 +320,8 @@
 904 0 (if p(v904^c) then if &unifor('Knosfst.mnu|'v904^c)<>''then'N='&unifor('Knosfst.mnu|'v904^c) fi fi/) 
 993 0 (if p(v993) then if &unifor('Knosfst.mnu|'v993^a)<>''then'N='&unifor('Knosfst.mnu|'v993^a) fi fi/) 
 910 0 if v910:'^a7'then'V=DEL',if v910:'^k'then'K'else if 'ASP AUNTD':v920 then 'A' fi fi fi,if p(v1909)and a(v909)and v920='J'then 'V=DELJ'fi
-951 0 (|V=EXT%|d951/) 
-1251 0 (|MPR=|v125^e/),(|MPR=|v125^1/),(|MPR=|v125^3/)
+951 0 (|V=EXT%|d951/)/(|TEKV=|v951^h/)
+1251 0 (|MPR=|v125^e/),(|MPR=|v125^0/),(|MPR=|v125^9/),(|MPR=|v125^?/),(|MPR=|v125^1/),(|MPR=|v125^3/)
 230 0 if v900^t:'L' then else "V=ZL"d230 fi/
 /*IBIS_EX
 481 0 MHL,(if p(v481^j) then |IN=|v481^J,if p(v481) then/|INK=|d481^J,if f(val(v481^J),0,0)=v481^J then f(val(v481^J),10,0) else if val(v481^J)=0 then v481^J else if v481^J.1='0'or val(v481^J.1)>0 then if v481^J:'-'and &unifor('G1-'v481^J)<>''then f(val(&unifor('G0-'v481^J)),10,0),&unifor('G1-'v481^J) else if v481^J:'/'and &unifor('G1/'v481^J)<>''then f(val(&unifor('G0/'v481^J)),10,0),&unifor('G1/'v481^J) else if &unifor('G1$'v481^J)<>''then f(val(&unifor('G0$'v481^J)),10,0),&unifor('G1$'v481^J) fi fi fi else if &unifor('G1#'v481^J)<>''then &unifor('G0#'v481^J),f(val(&unifor('G1#'v481^J)),10,0),if f(val(&unifor('G1#'v481^J)),0,0)=&unifor('G1#'v481^J) then else if v481^J:'-'then &unifor('G1-',&unifor('G1#'v481^J)) fi fi fi fi fi fi fi,|%|d481 fi/) 
@@ -316,31 +329,32 @@
 910 0 MHL,(if p(v910) then if v910^a:'4'then else if v910^a:'6' and a(v910^w) then |INS=|v910^h else |IN=|v910^h fi fi fi,|%|d910/)
 910 0 MHL,if v920='J'or v920='NJ'or v920='NJP'then else (if p(v910) then if v910^a:'4'then else if v910^a:'6' and a(v910^w) then |INS=|v910^b else |IN=|v910^b fi fi fi,|%|d910/) fi/
 910 0 if v920='J'or v920='NJ'or v920='NJP'then else (if p(v910) then if v910^a:'6' and a(v910^w) then |INSK=|d910^b else |INK=|d910^b fi,if f(val(v910^b),0,0)=v910^b then f(val(v910^b),10,0) else if v910^b.1='0' then v910^b else if val(v910^b.1)>0 then if v910^b:'-' then f(val(&uf('G0-'v910^b)),10,0),'-',&uf('G2-'&uf('G2-'v910^b)) else if v910^b:'/' then f(val(&uf('G0/'v910^b)),10,0),'/',&uf('G2/'&uf('G2/'v910^b)) else if f(val(&uf('G1#'v910^b)),0,0) <> s(&uf('G1#'v910^b)) then f(val(&uf('G0$'v910^b)),10,0),&uf('G1$'&uf('G1#'v910^b)) fi fi fi else if val(v910^b.1)=0 and (not(v910^b.1='0')) then &uf('G0#'v910^b),if v910^b:'-' then if &uf('G0#'v910^b):'-' then f(val(&uf('G2-'v910^b)),10,0) else f(val(&uf('G2$'&uf('G0-'v910^b))),10,0),&uf('G1-'v910^b) fi else if v910^b:'/' then if &uf('G0#'v910^b):'/' then f(val(&uf('G2/'v910^b)),10,0) else f(val(&uf('G2$'&uf('G0/'v910^b))),10,0),&uf('G1/'v910^b) fi else f(val(&uf('G1#'v910^b)),10,0),if f(val(&uf('G1#'v910^b)),0,0) <> s(&uf('G1#'v910^b)) then if val(&uf('G1#'v910^b))>0 then &uf('G1$'&uf('G1#'v910^b)) fi fi fi fi fi fi fi fi fi,|%|d910/) fi/
-910 0 mhl,(|NKSU=|v910^u/|NA=|v910^y/if p(v910^y)then |NAS=|v910^u*2.2|-|,v910^y|-| fi/|Coll=|v910^q/|NKS2=|v910^v/|NAP=|v910^w,|%|d910/)
+910 0 mhl,&uf('+7W2#'),(|NKSU=|v910^u/|NA=|v910^y/if p(v910^y)then |NAS=|v910^u*2.2|-|,v910^y|-| fi/|NKS2=|v910^v/|NAP=|v910^w/if v910^q:', 'then &uf('+7W1#'v910^q), &uf('6col'),else |Coll=|v910^q fi,|%|d910/),(g2/)
 910 0 MHL,(if p(v910) then if '2 6 ':v910^a then else |MHR=|v910^d/|KP=|v910^f fi,|%|d910 fi/)
 910 0 (if p(v910)then if v910^A:'4' then |EXU=|v910^H,if &uf('Av920#1'):'NJ' then if v910^h=''then 'EXU='d933,ref(L('I='&uf('Av933#1')),v200^a,". "v923^h,"."v923^i,". "v923^k,"."v923^l,". "v923^m,"."v923^n)fi else/|EXU=|v910^b,if s(v910^h,v910^b)=''then 'EXU=',&uf('Av200^a#1'),if &uf('Av200^a#1')=''then &uf('Av461^c#1')fi fi, fi,fi,fi,|%|d910/)
 940 0 MHL,(if p(v940) then if 'C U ':v940^a or v940^a:'6' and p(v940^w) then |NKS2=|v940^v/|NAP=|v940^w fi fi,|%|d940/)
 940 0 (if p(v940) then if 'C U ':v940^a then |INS=|v940^b fi fi,|%|d940/)
 940 0 (if p(v940) then if 'C U ':v940^a then |INSK=|d940^b,if f(val(v940^b),0,0)=v940^b then f(val(v940^b),10,0) else if v940^b.1='0' then v940^b else if val(v940^b.1)>0 then if v940^b:'-' then f(val(&uf('G0-'v940^b)),10,0),'-',&uf('G2-'&uf('G2-'v940^b)) else if v940^b:'/' then f(val(&uf('G0/'v940^b)),10,0),'/',&uf('G2/'&uf('G2/'v940^b)) else f(val(&uf('G0$'v940^b)),10,0) if f(val(&uf('G1#'v940^b)),0,0) <> s(&uf('G1#'v940^b)) then &uf('G1$'&uf('G1#'v940^b)) fi fi fi else if val(v940^b.1)=0 and (not(v940^b.1='0')) then &uf('G0#'v940^b),if v940^b:'-' then if &uf('G0#'v940^b):'-' then f(val(&uf('G2-'v940^b)),10,0) else f(val(&uf('G2$'&uf('G0-'v940^b))),10,0),&uf('G1-'v940^b) fi else if v940^b:'/' then if &uf('G0#'v940^b):'/' then f(val(&uf('G2/'v940^b)),10,0) else f(val(&uf('G2$'&uf('G0/'v940^b))),10,0),&uf('G1/'v940^b) fi else f(val(&uf('G1#'v940^b)),10,0),if f(val(&uf('G1#'v940^b)),0,0) <> s(&uf('G1#'v940^b)) then if val(&uf('G1#'v940^b))>0 then &uf('G1$'&uf('G1#'v940^b)) fi fi fi fi fi fi fi fi fi fi,|%|d940/)/
 /*IBIS_KO
-6911 0 MHL,(if p(v691) then if p(v691^w) and a(v691^u) then if s(v691^d,v691^i)<>''then'VUZD=',v691^d,if a(v691^d) then v691^i fi,' - 'v691^g,| ОСН |n691^g fi fi,|%|d691/) 
-691 0 MHL,(if p(v691) then |NUPL=|v691^u/|NDUN=|v691^w/|FAK=|v691^a/|FIL=|v691^L/|KAFV=|v691^h/|NAPR=|v691^N/|SPEC=|v691^C/|KAFCH=|v691^B/|DISC=|v691^D,if a(v691^D) then |DISC=|v691^i fi/|CIKLD=|v691^s/|KOMP=|v691^k/|VO=|v691^v/|TL=|v691^g/|FO=|v691^o fi,|%|d691/)
-691 0 MHL,(if p(v691) then |SEM=|v691^f/if s(v691^U,v691^w)<>''then if a(v691^u) then|NDUNS=|v691^w fi,'-S'v691^f/,if a(v691^u) then|NDUNSS=|v691^w fi,'-S'f(val(v691^f),2,0)/if &unifor('Kkurs.mnu|'v691^f)<>''then'KURS='&unifor('Kkurs.mnu|'v691^f)/,if a(v691^u)then|NDUNK=|v691^w fi,'-K',&unifor('Kkurs.mnu|'v691^f) fi fi fi,|%|d691/) 
+691 0 MHL,(if p(v691) then |FAK=|v691^a/|FIL=|v691^L/|KAFV=|v691^h/|NAPR=|v691^N/|SPEC=|v691^C/|KAFCH=|v691^B/|DISC=|v691^D,if a(v691^D) then |DISC=|v691^i fi/|CIKLD=|v691^s/|KOMP=|v691^k/|VO=|v691^v/,,,if v691^5<>'0' and v691^5<>'' then |WP=|v691^5/'WP=1' fi/,,|TL=|v691^g/|FO=|v691^o fi,|%|d691/)/
+691 0 MHL,(if p(v691) then |SEM=|v691^f/|TH=|v691^4/if &unifor('Kkurs.mnu|'v691^f)<>''then'KURS='&unifor('Kkurs.mnu|'v691^f)/,fi fi,|%|d691/)
 691 0 MHL,(|IDD=|v691^i,|%|d691^I/)/(|GR=|v691^R,|%|d691^R/)
-691 0 MHL,(if p(v691) then 'DF='v691^I,'-S'v691^f fi/)/(if p(v691) then 'DFS='v691^I,'-S'v691^f,if &uf('KsemV.mnu|'v691^f)<>'' then '-VS' else '-OS' fi fi/)
+691 0 (if p(v691) then if &uf('Ksemo.mnu|'v691^f)<>'' then '!0=',,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S'v691^f fi fi/)/(if p(v691) then if &uf('Ksemv.mnu|'v691^f)<>'' then '!9=',,,v691^a,v691^n,v691^c,v691^v,v691^o,'-S'v691^f fi fi/)/(if p(v691) then '!I=',,,v691^I,v691^a,v691^n,v691^c,v691^v,v691^o,'-S'v691^f fi /)
 61 0 MHL,(|TL=Pot. |v61/) /(|PL=|v61/)  
 692 0 (if p(v692) then if p(v692^B) then 'SVKO=',v692^B,|-|v692^C fi fi/) 
-691 0 MHL,(if p(v691) then 'AF='v691^a,'-S'v691^f/'CF='v691^c,'-S'v691^f fi/)
-230 0 (|V=ZU|d951^K/)/if s(v900^C' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'j02' then 'V=ZU' fi
+230 0 if p(v691) then (|V=ZU|d951^K/)/(|V=ZU|d955^A/)/if s(v900^C' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'j02' then 'V=ZU' fi fi
+62 0 (|AZ=|v62^9,,|%|d62^9/)/(|AZ=|v694^9,,|%|d694^9/)/(|NumbZk=|v694^1,,|%|d694^1/)
 /*IBIS_VIXD
 7 0 MHL,if v920='J'then else"g="v934,/(if v210^d.1='['then 'g=',&unifor('G0]'&unifor(|G1#|v210^d)),' []',&unifor('G0#'&unifor(|G2[|v210^d)),else |g=|v210^d fi,| |v210^5/),if v210^h<>''then (if p(v210^h)then if v210^h.1='['then 'g=',&unifor('G0]'&unifor(|G1#|v210^h)),' []',&unifor('G0#'&unifor(|G2[|v210^h)),else |g=|v210^h fi,|\печ.\|d210^h,fi/)fi,if a(v210^d)then(if v461^h.1='['then 'g=',&unifor('G0]'&unifor(|G1#|v461^h)),' []',&unifor('G0#'&unifor(|G2[|v461^h)),else |g=|v461^hfi,| |v461^5/)fi,(if v463^j.1='['then 'g=',&unifor('G0]'&unifor(|G1#|v463^j*1)),' []',&unifor('G0#'&unifor(|G2[|v463^j)),else |g=|v463^jfi/)fi 
-210 0 MHL,&uf('+7W7#'),&uf('+7W8#'),(if p(v210^c) then'O=',&unifor(|9|v210^c,|(|v210^a,| ; |v210^x,| ; |v210^y,|)|d210^a,|\|v210^6|\|)fi,|%|d210/),(|MI=|d210^a,if v210^a.1='['then &unifor(|G0]|v210^a*1),' []',else v210^a fi/|MI=|d210^x,if v210^x.1='['then &unifor(|G0]|v210^x*1),' []',else v210^x fi/if v210^y:';' then else |MI=|d210^y,if v210^y.1='['then &unifor(|G0]|v210^y*1),' []',else v210^y fi fi/)/if v210^y:';' then &uf('+7W7#'),&uf('+7W8#'),if v210^y:' ; ' then &uf('+7W7#'(if v210^y:' ; 'then v210^y| ; | fi)),&uf('+7W8#'(&uf('1*R ; ?g7#1')/)) else if v210^y:'; ' then &uf('+7W7#'(if v210^y:'; 'then v210^y| ; | fi)),&uf('+7W8#'(&uf('1*R; ?g7#1')/)) fi fi,if &uf('Ag8.1#1')='[' then (if p(g8) then 'MI='if g8.1='[' then g8*1' []' else &uf('G0]'g8),' []' fi fi/) else (|MI=|g8/) fi fi,
+210 0 MHL,&uf('+7W7#'),&uf('+7W8#'),(if p(v210^c) then'O=',&unifor(|9|v210^c,|(|v210^a,| ; |v210^x,| ; |v210^y,|)|d210^a,|\|v210^6|\|)fi,|%|d210/),&uf('+7W7#'(v210^a/v210^x,if v210^y:';' then else /v210^y fi/)),(if p(g7) then 'MI=',if g7.1='['then &unifor(|G0]|g7*1),' []' else g7 fi fi/),if v210^y:';' then &uf('+7W8#'v210^y|;|),&uf('+7W8#'(if &uf('1*R;?g8#1')<>'' then &uf('1*R;?g8#1') fi/)),&uf('+7W8#'(if p(g8) then if &uf('+961*0.1#'g8):' ' then &uf('Ag8.',f(val(&uf('+95'g8))-1,0,0),'#'&uf('+90'g8)) else g8 fi fi/)),(if p(g8) then 'MI='if g9:'[' then &uf('G0]'&uf('G2['g8))' []' else if g8.1:' ' then g8*1 else g8 fi fi fi/) fi
 211 0 MHL,(if p(v210^g) then'OT=',&unifor(|9|v210^g,|(|v210^1,|)|d210^1,)fi/|MI=|d210^1,if v210^1.1='['then &unifor(|G0]|v210^1*1),' []',else v210^1fi/|%|d210/) 
 461 0 MHL,(if p(v461^g) then'O=',&unifor(|9|v461^g,|(|v461^d|)|,|\|v461^6|\|)fi,|%|d461/),
-461 0 MHL,if v461^d<>'' then &uf('+7W6#'),&uf('+7U6#'(if p(v461) then &uf('G0;'v461^d)/if v461^d:';' then if &uf('G2;'v461^d):';' then &uf('G0;'&uf('G2;'v461^d))/&uf('G0;'&uf('G2;'&uf('G2;'v461^d))) else &uf('G2;'v461^d) fi fi fi/)),(if g6.2:' [' then 'MI='&uf('G0]'g6*2),' []' else if g6.1='['then 'MI='&uf('G0]'g6*1),' []' else if g6.1=' 'then 'MI='&uf('G0]'g6*1) else |MI=|g6 fi fi fi/) fi
+461 0 MHL,&uf('+7W8#'),if p(v461) then if v461^d:';' then &uf('+7W8#'v461^d|;|),&uf('+7W8#'(if &uf('1*R;?g8#1')<>'' then &uf('1*R;?g8#1') fi/)),&uf('+7W8#'(if p(g8) then if &uf('+961*0.1#'g8):' ' then &uf('Ag8.',f(val(&uf('+95'g8))-1,0,0),'#'&uf('+90'g8)) else g8 fi fi/)),(if p(g8) then 'MI='if g8:'[' then &uf('G0]'&uf('G2['g8))' []' else if g8.1:' ' then g8*1 else g8 fi fi fi/) else (|MI=|v461^d/) fi fi/
 463 0 mhl,(if p(v463^g) then'O=',&unifor(|9|v463^g,|(|v463^d|)|)fi/&uf('+7W463#'if v463^d.1='['then'1'fi),if v463^d:';'then'MI=', if v463^d.1='['then &uf('G0 '&uf('G0;'v463^d*1)),' []',else &uf('G0 '&uf('G0;'v463^d)) fi'%'/'MI=', if &uf('G2;'v463^d):';' then &uf('G0 '&uf('G0;'&uf('G2 '&uf('G2;'v463^d)))),if g463='1'then' []'fi'%'/'MI=',&unifor('G2 '&uf('G2;'&uf('G2;'&uf('G0]'v463^d)))),if g463='1'then' []'fi'%' else &uf('G2 '&uf('G2;'&uf('G0]'v463^d))),if g463='1'then' []'fi'%'/ fi else |MI=|d463^d,if v463^d.1='['then &uf('G0]'v463^d*1),' []', else v463^d fi,fi/)
 481 0 MHL,(if p(v481^g) then'O=',&unifor(|9|v481^g,|(|v481^d|)|) fi,|%|d481/)
-488 0 MHL,(if p(v488^g) then'O=',&unifor(|9|v488^g,|(|v488^d|)|) fi,|%|d488/) 
+488 0 MHL,if v488^g:':' then else (|MI=|v488^d,|%|d488/)/(if p(v488^g) then 'O=',&unifor(|9|v488^g,|(|v488^d|)|) fi,|%|d488/) fi/
+4889 0 if v488^G:':' then &uf('+7W3#'),&uf('+7W4#'),&uf('+7W10#'),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W15#'),&uf('+7W20#'),&uf('+7W21#'),&uf('+7W3#'(if p(v488) then | ; |v488^d,|;---|n488^d,| : |v488^G fi)),&uf('+7W3#'&uf('+9I!: !?:?'g3)),&uf('+7W3#'&uf('+9I! :!?:?',g3)),&uf('+7W3#'&uf('+9I!; !?;?'g3)),&uf('+7W3#'&uf('+9I! ;!?;?'g3)),if g3:':' then &uf('+7W4#'(if &uf('1*R:?g3#1')<>''then &unifor('1*R:?g3#1') fi/)) fi,&uf('+7W10#'(if p(g4) then if g4:';'then &uf(|G2;|g4) else '---' fi fi/)),&uf('+7W15#'(if p(g10) then if g10:';' then &uf('+9I!;!? ; ?',g10) else g10 fi fi/)/),&uf('+7W11#'(if g4:';'then &uf(|G0;|g4) else g4 fi/)),(if p(g11) then 'O='g11,if g15='---' or g15:'S. l.' or g15:'Б. м.'then else|(|g15|)| fi fi/),if g10:';' then &uf('+7W12#'(if p(g10) then if g10='---' or g10:'S. l.' or g10:'Б. м.' then else g10+|;| fi fi)),&uf('+7W13#'(if &uf('1*R;?g12#1')<>''then &unifor('1*R;?g12#1') fi/)) else &uf('+7W13#'(if g10='---' or g10:'S. l.' or g10:'Б. м.'then else g10 fi/)) fi/(|MI=|g13/) fi
+454 0 MHL,(if p(v454^c) then'O=',&unifor(|9|v454^c,|(|v454^g|)|)/|MI=|v454^g fi,|%|d454/)
 /*IBIS_OTHER
 101 0 (if p(v101)then 'jaz=',&uf(|Kjz.mnu\|v101)fi/)
 102 0 (if p(v102)then 'cna=',&uf(|Kstr.mnu\|v102)fi/)
@@ -352,9 +366,8 @@
 239 0 (|ST=|v239|%|/)
 230 0 if p(v230) then if a(v239) then (if &unifor('1*R; ?v230^d#1')<>''then/'ST='&unifor('1*R; ?v230^d#1') fi,|%|d230)/(if &unifor('1*R; ?v230^d#2')<>''then/'ST='&unifor('1*R; ?v230^d#2') fi,|%|d230)/(if &unifor('1*R; ?v230^d#3')<>''then/'ST='&unifor('1*R; ?v230^d#3') fi,|%|d230) fi fi
 39 0 MHL,"RD=EX"d398/"RD=PA"d395/"RD=PV"d396/"RD=SH"d399/"RD=TI"d397/"RD=AF"d391/"RD=PI"d481/"RD=OK"d316/"RD=PK"d317/"RD=DK"d318 
-907 0 if v920='J' then else if &unifor('Korg.mnu|8'):'1'then (if v907^b<>''then|TH=|v907^b,if v907^c:'штр'then|-|v907^c fi,|-|v907^a fi/if v907^a<>''then|TH=|v907^a,|-|v907^b fi,|%|d907/) fi fi 
-910 0 if &unifor('Korg.mnu|7'):'1'or &unifor('IPRIVATE,PROVFOND,')='1'or &unifor('IMAIN,PROVFOND,')='1'then (if p(v910)then if v910^a:'6' and a(v910^w) or '2 7':v910^a then else if &unifor('Av920#1')='NJ'or &unifor('Av920#1')='NJP'then |INP=|v910^h,if p(v910^h) then|П|d910^s,|(|v910^0,if p(v910^s)then| из |v910^1 fi,|)|d910^0,if 'C U':v910^a and p(v910^s) and val(v910^1)>val(v910^0)then /|INP=|v910^h|(|,f(val(v910^1)-val(v910^0),0,0),if p(v910^s)then| из |v910^1fi,|)|d910^h fi fi else |INP=|v910^b,if p(v910^b) then|П|d910^s,|(|v910^0,if p(v910^s)then| из |v910^1fi,|)|d910^0if 'C U':v910^a and p(v910^s) and val(v910^1)>val(v910^0)then /|INP=|v910^b|(|,f(val(v910^1)-val(v910^0),0,0),if p(v910^s)then| из |v910^1fi,|)|d910^b fi fi/|INP=|v910^h,if p(v910^h) then|П|d910^s,|(|v910^0|)|,if 'C U':v910^a and p(v910^s) and val(v910^1)>val(v910^0)then /|INP=|v910^h|(|,f(val(v910^1)-val(v910^0),0,0),if p(v910^s)then| из |v910^1fi,|)|d910^h fi fi fi/if a(v910^s) then'INP=не проверены 'v910^d fi/if p(v910^!) then'INP=не на месте ('v910^!')'fi/|INP=проверены |d910^s,v910^s*6.2|.|,v910^s*4.2|.|,v910^s.4,fi fi,|%|d910/)fi
-910 0 (if p(v910) then if '1 4 6 2 7':v910^a then else if p(v910^s) then if p(v910^h) then |INPR=|v910^h, if 'C U':v910^a then  '('v910^0| из |, v910^1,')'  fi,fi/ if &uf('Av920#1')='NJ'or &uf('Av920#1')='NJP' then else if p(v910^b) then |INPR=|v910^b ,if 'C U':v910^a   then '('v910^0| из |, v910^1,')'fi,fi/ fi, 'INPF=', v910^!,,,,if a(v910^!)  then v910^d fi/,,,,,|INPD=|v910^s/,,,,,if p(v910^!) then |INPN=|v910^h| |,,,,if p(v910^h) then '('v910^!')' fi/ if &uf('Av920#1')='NJ'or &uf('Av920#1')='NJP' then else |INPN=|v910^b| |,,,if p(v910^b) then '('v910^!')' fi fi / fi fi fi fi|%|d910/)
+907 0 if v920='J' then else (if v907^b<>''then|TH=|v907^b,if v907^c:'штр'then|-|v907^c fi,|-|v907^a fi/if v907^a<>''then|TH=|v907^a,|-|v907^c,|-|v907^b/|TH=|v907^a,|-|v907^b fi,|%|d907/) / (if p(v694) then |TH=|v694^4 |%|d694 fi/)  fi 
+910 0 (if p(v910) then if '2 6 7':v910^a then else  if p(v910^s) then if p(v910^h) then |INPR=|v910^h, if 'C U':v910^a then  '('v910^0| из |, v910^1,')'  fi,fi/ if &uf('Av920#1')='NJ'or &uf('Av920#1')='NJP' then else if p(v910^b) then |INPR=|v910^b ,if 'C U':v910^a   then '('v910^0| из |, v910^1,')'fi,fi/ fi, 'INPF=', v910^!,,,,if a(v910^!)  then v910^d fi/,,,,,|INPD=|v910^s/,,,,,if p(v910^!) then |INPN=|v910^h| |,,,,if p(v910^h) then '('v910^!')' fi/ if &uf('Av920#1')='NJ'or &uf('Av920#1')='NJP' then else |INPN=|v910^b| |,,,if p(v910^b) then '('v910^!')' fi fi / fi fi, if v910^D<>'' or v910^!<>'' then 'INKF=', v910^!,,,,if a(v910^!)  then v910^d fi fi fi fi|%|d910/)
 80 0 if &unifor('IMAIN,ATHRSAK,')='1'then (if p(v606) then '?',if v606:'^a' and v606^b='' and v606^G='' and v606^H='' and v606^9='' and v606^a*27=''then v606^a else v606^a.10, &unifor(|+B|v606^a*10)fi,if v606^d='' and v606^b*10='' and v606^b<>''then v606^b else v606^b.1,&unifor(|+B|v606^B*1) fi,&unifor(|+B|v606^c),&unifor(|+B|v606^d),&unifor(|+B|v606^G),&unifor(|+B|v606^E),&unifor(|+B|v606^O),&unifor(|B|v606^H),&unifor(|+B|v606^9) fi/) fi 
 80 0 if &unifor('IMAIN,ATHRSAK,')='1'then (if p(v607) then '?',if v607:'^a' and v607^b='' and v607^G='' and v607^H='' and v607^9='' and v607^a*27=''then v607^a else v607^a.10, &unifor(|+B|v607^a*10)fi,if v607^d='' and v607^b*10='' and v607^b<>''then v607^b else v607^b.1,&unifor(|+B|v607^B*1) fi,&unifor(|+B|v607^c),&unifor(|+B|v607^d),&unifor(|+B|v607^G),&unifor(|+B|v607^E),&unifor(|+B|v607^O),&unifor(|B|v607^H),&unifor(|+B|v607^9) fi/) fi 
 907 0 if v920='J' then &uf('+7W1#'f(rmin((v907^a.6|;|/)),0,0)/),&uf('+7W2#'g1.4),&uf('+7W3#'g1*4.2)/"DNJ="g1/if val(g3)<4 then /'DNJ='g2'1/3'/'DNJ='g2'1-4/1'/'DNJ='g2'1/1'/'DNJ='g2'1/0' fi,if 3< val(g3) and val(g3)<7  then /'DNJ='g2'1-4/2'/'DNJ='g2'1/1'/'DNJ='g2'1/0'/'DNJ='g2'1/3' fi,if 6< val(g3) and val(g3)<10 then /'DNJ='g2'1-4/3'/'DNJ='g2'1/2'/'DNJ='g2'1/0'/'DNJ='g2'1/3' fi,if 9< val(g3) then /'DNJ='g2'1-4/4'/'DNJ='g2'1/2'/'DNJ='g2'1/0' fi fi
@@ -366,8 +379,6 @@
 1111 0 (|IA=|v963^I/)
 390 0 MHL,(if p(v390) then if p(v390^x) then|TSIT=|d390^x,if p(v390^9) then if v390^9:'1' then v390^x else &unifor('E'v390^9,v390^x),|, |v390^?,if a(v390^?) then if &unifor('F'v390^9,v390^x)<>'' then ', 'if &unifor('F'v390^9,v390^x):'. ' then &unifor('F'v390^9,v390^x) else if &unifor('F'v390^9,v390^x):'.'then &unifor('G0.'&unifor('F'v390^9,v390^x)),'. '&unifor('G2.'&unifor('F'v390^9,v390^x)) else &unifor('F'v390^9,v390^x) fi fi fi fi fi else if v390^x:',' then &unifor('G0,'v390^x),else &unifor('G0 'v390^x) fi,|, |v390^?,if a(v390^?) then if &unifor('G2 'v390^x):'. ' then ', '&unifor('G2 'v390^x) else if &unifor('G2 'v390^x):'.'then ', ' &unifor('G0.'&unifor('G2 'v390^x)),'. '&unifor('G2.'&unifor('G2 'v390^x)) fi fi fi fi fi ,if p(v390^2) then/|TSIT=|d390^2,if p(v390^<) then if v390^<:'1' then v390^2 else &unifor('E'v390^<,v390^2),|, |v390^,,if a(v390^,) then if &unifor('F'v390^<,v390^2)<>'' then ', 'if &unifor('F'v390^<,v390^2):'. ' then &unifor('F'v390^<,v390^2) else if &unifor('F'v390^<,v390^2):'.'then &unifor('G0.'&unifor('F'v390^<,v390^2)),'. '&unifor('G2.'&unifor('F'v390^<,v390^2)) else &unifor('F'v390^<,v390^2) fi fi fi fi fi else if v390^2:',' then &unifor('G0,'v390^2),else &unifor('G0 'v390^2) fi,|, |v390^,,if a(v390^,) then if &unifor('G2 'v390^2):'. ' then ', '&unifor('G2 'v390^2) else if &unifor('G2 'v390^2):'.'then ', ' &unifor('G0.'&unifor('G2 'v390^2)),'. '&unifor('G2.'&unifor('G2 'v390^2)) fi fi fi fi fi ,if p(v390^3) then/|TSIT=|d390^3,if p(v390^>) then if v390^>:'1' then v390^3 else &unifor('E'v390^>,v390^3),|, |v390^;,if a(v390^;) then if &unifor('F'v390^>,v390^3)<>'' then ', 'if &unifor('F'v390^>,v390^3):'. ' then &unifor('F'v390^>,v390^3) else if &unifor('F'v390^>,v390^3):'.'then &unifor('G0.'&unifor('F'v390^>,v390^3)),'. '&unifor('G2.'&unifor('F'v390^>,v390^3)) else &unifor('F'v390^>,v390^3) fi fi fi fi fi else if v390^3:',' then &unifor('G0,'v390^3),else &unifor('G0 'v390^3) fi,|, |v390^;,if a(v390^;) then if &unifor('G2 'v390^3):'. ' then ', '&unifor('G2 'v390^3) else if &unifor('G2 'v390^3):'.'then ', ' &unifor('G0.'&unifor('G2 'v390^3)),'. '&unifor('G2.'&unifor('G2 'v390^3)) fi fi fi fi fi ,fi,|%|d390/)
 901 0 if p(v901^q)or p(v938^q) then &uf('+7W1#'(|PP=|v901^q/|PP=|v938^q/)),&uf('+1G1'),fi 
-/*IBIS_DEB
-1111 8 MHL,'/',&uf('IMAIN,DebilPrefix,DS='),'/',if &unifor('IMAIN,DBSCH,')='1'then &unifor('++0'),/mhl,&unifor("K900t.mnu|"v900^t),/&unifor("Kvd.mnu|"v900^B.2),/if '03040507':v900^b.2 and a(v982) then if 'a1 b':v900^t or a(v900^t) then'книга'fi fi,/&unifor("K110b.mnu|"v110^B.2),/"Юридический директивный документ"d981,/&unifor("Khd.mnu\"v900^C),/&unifor("Khd.mnu\"v900^2),/&unifor("Khd.mnu\"v900^3),/&unifor("Khd.mnu\"v900^4),/&unifor("Khd.mnu\"v900^5),/&unifor("Khd.mnu\"v900^6),/&unifor("Kstr.mnu\"v102),(/&unifor(|Kjz.mnu\|v101)),if v900^b:'o'or p(v102) and &unifor('Korg.mnu|1')=v102 then'отечественный'fi,/if v900^b:'z'or p(v102) and &unifor('Korg.mnu|1')<>v102 then 'иностранный зарубежный'fi fi/ 
 /*IBIS_MESH
 995 8 '/K=/',(if v995^A<>'' then v995^A else &uf('DMESH,!R=',v995^K,'!,v2') fi,/)
 995 8 '/K=/',(if v995^B<>'' then v995^B else &uf('DMESH,!R=',v995^K,'!,v1') fi,/)
@@ -377,18 +388,22 @@
 995 0 (if p(v995) then 'S=',if v995^B<>'' then v995^B else &uf('DMESH,!R=',v995^K,'!,v1') fi,/ fi)
 996 0 (if p(v996) then 'S=',if v996^A<>'' then v996^A else &uf('DMESH,!R=',v996^K,'!,v2') fi,/ fi)
 996 0 (if p(v996) then 'S=',if v996^B<>'' then v996^B else &uf('DMESH,!R=',v996^K,'!,v1') fi,/ fi)
+995 0 (if p(v995) then 'MS=',if v995^A<>'' then v995^A else &uf('DMESH,!R=',v995^K,'!,v2') fi, fi, |%|d995/)
+995 0 (if p(v995) then 'MS=',if v995^B<>'' then v995^B else &uf('DMESH,!R=',v995^K,'!,v1') fi, fi,|%|d995/)
+996 0 (if p(v996) then 'MS=',if v996^A<>'' then v996^A else &uf('DMESH,!R=',v996^K,'!,v2') fi, fi,|%|d996/)
+996 0 (if p(v996) then 'MS=',if v996^B<>'' then v996^B else &uf('DMESH,!R=',v996^K,'!,v1') fi, fi,|%|d996/)
 996 6 '/MM=/',(v996^m,|%|d996/)
 995 6 '/MM=/',(v995^m,|%|d995/)
 996 0 (|MK=|v996^k|%|/)
 995 0 (|MK=|v995^k|%|/)
 /*IBIS_TITP
-200 0 MHL,if v200^u:'1'then else if p(v200^a) then'TP=',&unifor("9"v200^a,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l,|. |v923^m,|.|v923^n)) fi,if v920='J'then ' \журн.\' else if p(v463)then ' \Аналит.описание\' else "/"v200^f,"; "v200^g,","v210^d,if a(v210^d) then|, |v461^h fi,".-"|; |+v215^a,v215^1,if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi fi fi fi
+200 0 MHL,if v200^u:'1'then else if p(v200^a) then'TP=',&unifor("9"v200^a,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l,|. |v923^m,|.|v923^n)),if v920='J'then ' \журн.\' else if p(v463)then ' \Аналит.описание\' else "/"v200^f,"; "v200^g,","v210^d,if a(v210^d) then|, |v461^h fi fi,".-"|; |+v215^a,v215^1,if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi fi fi fi
 200 0 MHL,if p(v982) then if v200^a:&unifor('Av982^9#1') or v200^u:'1'then else 'TP=',&unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 &unifor("9"v200^a,(|. |v923^h,|.|v923^i,|. |v923^k,|.|v923^l,|. |v923^m,|.|v923^n)) fi fi / 
 510 0 MHL,(if p(v510) then |TP=|d510^d,&unifor(|9|v510^d),' \Паралл. загл.',if &unifor('Av920#1')='J'then ' - Журн.\' else if &unifor('Av463#1')<>''then ' - Аналит. описание\' else'\' fi fi fi,|%|d510/)
 922 0 MHL,(if p(v922) then |TP=|d922^c,&unifor(|9|v922^c),' \Ст. из ',if &unifor('Av920#1'):'NJ'then'огл. журн.\'else'сборника\'fi fi,|%|d922/)
-9227 0 MHL,(if p(v922) then |TP=|d922^d,&unifor(|9|v922^d),| \Паралл. загл.\|d922^d fi,|%|d922/) 
-9228 0 MHL,if v920:'J'then else(if p(v922) then |TP=|d922^p,&unifor(|9|v922^p),| \Паралл. загл.\|d922^p fi,|%|d922/) fi 
-9229 0 MHL,(if p(v922) then |TP=|d922^r,&unifor(|9|v922^r),| \Паралл. загл.\|d922^r fi,|%|d922/) 
+9227 0 MHL,(if p(v922) then |TP=|d922^d,&unifor(|9|d922^d,&uf(|G0(|v922^d)),| \Паралл. загл.\|d922^d fi,|%|d922/) 
+9228 0 MHL,if v920:'J'then else(if p(v922) then |TP=|d922^p,&unifor(|9|d922^p,&uf(|G0(|v922^p)),| \Паралл. загл.\|d922^p fi,|%|d922/) fi 
+9229 0 MHL,(if p(v922) then |TP=|d922^r,&unifor(|9|d922^r,&uf(|G0(|v922^r)),| \Паралл. загл.\|d922^r fi,|%|d922/) 
 92210 0 MHL,(if p(v922) then |TP=|d922^i,&unifor(|9|v922^i),|\Ст. из сборника - выпуск/часть\ |d922^p fi,|%|d922/) 
 92211 0 MHL,(if p(v922) then |TP=|d922^L,&unifor(|9|v922^L),|\Ст. из сборника - выпуск/часть\ |d922^p fi,|%|d922/) 
 9251 0 MHL,(if p(v925^a) then if v925^u:'1'and &unifor('Av461^c#1')<>''then'TP=',&unifor('9'&unifor('Av461^c#1'),if &unifor('Av461^f#1')<>''then' / '&unifor('Av461^f#1') fi,|;|v925^v,|:|v925^a) else /'TP='&unifor('9'v925^a) fi,' \другой том в общей книге\' fi,|%|d925/)/
@@ -403,7 +418,8 @@
 423 0 MHL,if v920='J'then (if p(v423) then|TP=|d423^a,&unifor(|9|v423^a),|. |d423^s,v423^v| |,&unifor(|9|v423^s),' \Журнал в журнале\' fi,|%|d423/)fi
 423 0 mhl,if v920='J'then (if p(v423^s then |TP=|d423^s,&unifor(|9|v423^s),' \Журнал в журнале - серия\'fi,|%|d423/)fi
 330 0 MHL,(if p(v330) then|TP=|d330^c,&unifor(|9|v330^c),' \Ст. из содерж.сборника\'fi,|%|d330/)
-3307 0 MHL,(if p(v330) then|TP=|d330^d,&unifor(|9|v330^d),' \Паралл. загл.' fi,|%|d330/) 
+330 0 MHL,(if p(v330) then if p(v330^u) and f(val(v330^u),0,0)=v330^u then else if p(v330^() then if v330^c:v330^( and v330^c:v330^) then else |TP=|d330^c,v330^(| |,v330^)| |,&unifor(|9|v330^c),' \Ст. из содерж.сборника\' fi fi fi fi,|%|d330/) 
+3307 0 MHL,(if p(v330) then|TP=|d330^d,&unifor(|9|d330^d,&uf(|G0(|v330^d)),' \Паралл. загл.' fi,|%|d330/) 
 430 0 MHL,(if p(v430) then|TP=|d430^a,&unifor(|9|v430^a),' \Старое загл. журн.\'fi,|%|d430/)
 454 0 MHL,(if p(v454) then|TP=|d454^a,&unifor(|9|v454^a,|/|v454^b),' \Оригинал переводн. изд.',if p(v454^u) then ' - МН\' else'\'fi fi,|%|d454)
 481 0 MHL,(if p(v481^c) then if v481^u:'1'then else |TP=|d481^c,&unifor(|9|v481^c),if a(v481^z) then |;|v481^v fi,' \Приплетенное изд.\'fi fi,|%|d481/),
@@ -417,6 +433,7 @@
 4601 0 MHL,(if p(v46^a) then|TP=|d46^a,&unifor(|9|v46^a),' \Серия - МН\'fi,|%|d46/)/
 4602 0 MHL,(if p(v46^l) then|TP=|d46^l,&unifor(|9|v46^l),' \Паралл. загл. -  МН\'fi,|%|d46/)
 4603 0 MHL,(if p(v46^c) then|TP=|d46^c,&unifor(|9|v46^c),' \Предыдущее загл. -  МН\'fi,|%|d46/)
+4604 0 MHL,(if p(v46^r) then|TP=|d46^r,&unifor(|9|v46^r),' \Разночтение -  МН\'fi,|%|d46/)
 /*IBIS_KL_ALL
 1999 8 MHL,'/K=/'(v200^b/v200^e/v200^f/v200^g,|%|d200/)
 1999 8 MHL,'/K=/'(v922^f/v922^q/v922^=/v922^2/v922^s/v922^+/v922^3/v922^t/v922^-/v922^w/v922^e/v922^g/,|%|d922/)
@@ -427,3 +444,11 @@
 1999 8 MHL,'/K=/'(v481^f/v481^x/v481^=/v481^2/v481^d/v481^+/v481^3/v481^n/v481^-/v481^w/v481^e/v481^g/,|%|d481/)
 1999 8 MHL,'/K=/'(v488^f/v488^x/v488^=/v488^2/v488^d/v488^+/v488^3/v488^n/v488^-/v488^w/v488^e/v488^g/,|%|d488/)
 1999 8 MHL,'/K=/'(v390^f/v390^x/v390^=/v390^2/v390^d/v390^+/v390^3/v390^n/v390^-/v390^w/v390^e/v390^g/,|%|d390/)
+/*IBIS_USER
+910 0 (if v910<>'' then |IN=|v910^:,'%' fi)
+/*for WEB 30.04.2018
+700 8 mhl,'/K=/',v700,(/v701),(/v702),(/v926),(/v970),(/v961),(/v454^D,| |v454^E,| |v454^F),(/v461^F,| |v461^X),(/v470^A),(/v391),(/v600^A,| |v600^G,| |v600^R),(/v925^F,| |v925^?,| |v925^2,| |v925^,,| |v925^3,| |v925^;),(/v922^F,| |v922^?,| |v922^2,| |v922^,,| |v922^3,| |v922^;,| |v922^W),(/v330^F,| |v330^?,| |v330^2,| |v330^,,| |v330^3,| |v330^;,| |v330^W),(/v481^X,| |v481^?,| |v481^2,| |v481^,,| |v481^3,| |v481^;,| |v481^W),(/v488^X,| |v488^?,| |v488^2,| |v488^,,| |v488^3,| |v488^;,| |v488^W)
+331 8 mhl,'/K=/',(v331/)
+1 8 mhl,'/K=/',&unifor("K900t.mnu|"v900^t),/&unifor("Kvd.mnu|"v900^B.2),/if '03040507':v900^b.2 and a(v982) then if 'a1 b':v900^t or a(v900^t) then'книга'fi fi,/&unifor("K110b.mnu|"v110^B.2),/"Юридический директивный документ"d981,/&unifor("Khd.mnu\"v900^C),/&unifor("Khd.mnu\"v900^2),/&unifor("Khd.mnu\"v900^3),/&unifor("Khd.mnu\"v900^4),/&unifor("Khd.mnu\"v900^5),/&unifor("Khd.mnu\"v900^6),/&unifor("Kstr.mnu\"v102),(/&unifor(|Kjz.mnu\|v101)),if v900^b:'o'or p(v102) and &unifor('Korg.mnu|1')=v102 then'отечественный'fi,/if v900^b:'z'or p(v102) and &unifor('Korg.mnu|1')<>v102 then 'иностранный зарубежный' fi
+
+

@@ -4,7 +4,7 @@
 if p(v1) then ,KoDiscPolyHead, fi
 *****
 [KeyOptions]
-200
+100
 1
  ,KoDiscPolySort, 
 *****

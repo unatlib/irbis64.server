@@ -6,6 +6,7 @@
 // С УЧЕТОМ ОТЧИСЛЕНИЯ С ОДНОГО ИЗ...
 // проверка непустого идентификатора 
 //18 991 условия замены в - ! факультет / специальность | направление + ФО = ВО
+//18 -замена кафедры выпускающей v991^C: 'P'
 IF
 if a(v30) and a(v24) then '1' else '0' fi
 PUTLOG
@@ -35,51 +36,60 @@ mpu,(v90/)
 
 IF
 if v991^C: 'C' then '1' fi
-// замена специальности
+//------------------------------------ замена специальности
 REP
 90^C
 F
-(if p(v90) then if v90^C<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v90^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then  if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then  if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^C) then &uf('Av991^B#1') else v90^C fi else v90^C fi else v90^C fi else v90^C fi else v90^C fi else v90^C fi else # fi fi/)
+(if p(v90)  then if v90^C<>'' then  if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then  if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then  if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^C)   then &uf('Av991^B#1') else v90^C fi else v90^C fi else v90^C fi else v90^C fi else v90^C fi else v90^C fi else # fi fi/)
 
 FI
 IF
 if v991^C: 'N' then '1' fi
-// замена направления
+//------------------------------- замена направления
 REP
 90^N
 F
-(if p(v90) then if v90^N<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v90^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^N) then &uf('Av991^B#1') else v90^N fi else v90^N fi else v90^N fi else v90^N fi else v90^N fi else v90^N fi else # fi fi/)
+(if p(v90) then if v90^N<>'' then if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then  if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then  if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^N) then &uf('Av991^B#1') else v90^N fi else v90^N fi else v90^N fi else v90^N fi else v90^N fi else v90^N fi else # fi fi/)   
 
 FI
 IF
 if v991^C: 'A' then '1' fi
-// замена факультета
+//------------------------ замена факультета
 REP
 90^A
 F
-(if p(v90) then if v90^A<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v90^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^A) then &uf('Av991^B#1') else v90^A fi else v90^A fi else v90^A fi else v90^A fi else v90^A fi else v90^A fi else # fi fi/)
+(if p(v90) then if v90^A<>'' then if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^A) then &uf('Av991^B#1') else v90^A fi else v90^A fi else v90^A fi else v90^A fi else v90^A fi else v90^A fi else # fi fi/)
 
 FI
 IF
 if v991^C: 'V' then '1' fi
-// замена вида
+//------------------------ замена вида
 REP
 90^V
 F
-(if p(v90) then if v90^V<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v90^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then  if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^V) then &uf('Av991^B#1') else v90^V fi else v90^V fi else v90^V fi else v90^V fi else v90^V fi else v90^V fi else # fi fi/)
+(if p(v90) then if v90^V<>'' then if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^V) then &uf('Av991^B#1') else v90^V fi else v90^V fi else v90^V fi else v90^V fi else v90^V fi else v90^V fi else # fi fi/)
 
 FI
 IF
 if v991^C: 'O' then '1' fi
-// замена формы
+//-------------------------- замена формы
 REP
 90^O
 F
-(if p(v90) then if v90^O<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v90^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^O) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then  if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^O) then &uf('Av991^B#1') else v90^O fi else v90^O fi else v90^O fi else v90^O fi else v90^O fi else v90^O fi else # fi fi/)
+(if p(v90) then if v90^O<>'' then if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^O) then &uf('Av991^B#1') else v90^O fi else v90^O fi else v90^O fi else v90^O fi else v90^O fi else v90^O fi else # fi fi/)
 
 FI
 IF
-if &uf('+97',v90^A)=v1090^A and &uf('+97',v90^C)=v1090^C and &uf('+97',v90^N)=v1090^N and &uf('+97',v90^V)=v1090^V and &uf('+97',v90^O)=v1090^O and v90^F=v1090^F then else '1' fi
+if v991^C: 'P' then '1' fi
+//------------------------замена кафедры выпускающей
+REP
+90^D
+F
+(if p(v90) then if v90^D<>'' then if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v90^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v90^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v90^N) then  if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v90^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v90^V) then if &uf('+97',&uf('Av991^A#1'))=&uf('+97',v90^D) then &uf('Av991^B#1') else v90^D fi else v90^D fi else v90^D fi else v90^D fi else v90^D fi else v90^D fi else # fi fi/)
+
+FI
+IF
+if &uf('+97',v90^A)=v1090^A and &uf('+97',v90^C)=v1090^C and &uf('+97',v90^N)=v1090^N and &uf('+97',v90^V)=v1090^V and &uf('+97',v90^O)=v1090^O and &uf('+97',v90^D)=v1090^D and v90^F=v1090^F then else '1' fi
 PUTLOG
 'Откорректирована запись студента ',v30,' MFN=',f(val(mfn),0,0)
 FI

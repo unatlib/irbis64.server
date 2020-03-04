@@ -77,7 +77,7 @@ then
               then 
                  if g991^Y: ',' then 
                  if val(G13)>0 then if (val(G14)/val(G13)) < val(&uf('+98,.',&uf('Ag991^Y#1') ) ) then else &uf('+7W1#') fi fi else 
-                 if val(G13)>0 then if (val(G14)/val(G13)) < val(&uf('Ag991^Y#1')) then else &uf('+7W1#') fi fi,,
+                 if val(G13)>0 then if (val(G14)/val(G13)) < val(&uf('Ag991^Y#1')) then else &uf('+7W1#') fi fi fi,,
               fi,,
            fi,,
 /* отбор повторения по больше-меньше ККО и по есть наименования

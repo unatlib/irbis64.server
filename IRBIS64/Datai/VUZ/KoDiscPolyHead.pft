@@ -62,23 +62,24 @@ then
 &uf('+7W55#',,,f(val(g55)+1,0,0) ),,,,,g55,,
 '\cell }
 \pard \widctlpar\intbl {\ql \fs20 ',,,
-/*-------------наименование
-v1^W,' (',,V1^X,,')',,,,
+/*-------------наименование из записи дисц.
+/*v1^W,,,,,
+ref(val(v1^Y),v3^A),,,,' (',,V1^X,,')',,,,
 if val(v1^:)=1 then '\par ',,'g991='g991,,,' v1='v1 fi,, 
 '\cell }
 \pard \widctlpar\intbl {\ql \fs20 ',,,
 /*--------------цикл
-v1^5,,,
+ref(val(v1^Y),v4),,,
 '
 \cell }
 \pard \widctlpar\intbl {\ql \fs20 ',,,
 /*--------------уровень к
-v1^7,,,
+ref(val(v1^Y),v6),,,,,
 '
 \cell }
 \pard \widctlpar\intbl {\ql \fs20 ',,,
 /*--------------кафедра
-v1^6,,,
+ref(val(v1^Y),v5),,,,,
 '
 \cell }
 \pard \widctlpar\intbl {\ql \fs20 ',,,
@@ -87,14 +88,14 @@ v1^6,,,
 /* для формат KoDiscPolyNumEkz, участвует g995 и g992
 &uf('+7W995#','^I',v1^X,,),,
 &uf('+7W992#',,,,
-'^O',if v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
-'^V',if v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
-'^A',if v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
-'^N',if v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
-'^C',if v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
-'^F',if v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
-'^B',if v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
-'^S',if v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
+'^O',if v1^A<>' ' and v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
+'^V',if v1^B<>' ' and v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
+'^A',if v1^C<>' ' and v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
+'^N',if v1^F<>' ' and v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
+'^C',if v1^G<>' ' and v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
+'^F',if v1^I<>' ' and v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
+'^B',if v1^D<>' ' and v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
+'^S',if v1^E<>' ' and v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
 '^=',v1^=,,
 '^:',v1^:,,,
 ),,,,,
@@ -126,14 +127,14 @@ fi,,,
 /* в для форматов KoNumbRdr и KoElectroPolyF
 &uf('+7W991#',,,,
 '^I',v1^X,,
-'^O',if v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
-'^V',if v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
-'^A',if v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
-'^N',if v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
-'^C',if v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
-'^F',if v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
-'^B',if v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
-'^S',if v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
+'^O',if v1^A<>' ' and v1^A<>' ' and v1^A<>'' then v1^A else v1^O fi,,
+'^V',if v1^B<>' ' and v1^B<>' ' and v1^B<>'' then v1^B else v1^V fi,,
+'^A',if v1^C<>' ' and v1^C<>' ' and v1^C<>'' then v1^C else v1^1 fi,,
+'^N',if v1^F<>' ' and v1^F<>' ' and v1^F<>'' then v1^F else v1^2 fi,,
+'^C',if v1^G<>' ' and v1^G<>' ' and v1^G<>'' then v1^G else v1^3 fi,,
+'^F',if v1^I<>' ' and v1^I<>' ' and v1^I<>'' then v1^I else v1^4 fi,,
+'^B',if v1^D<>' ' and v1^D<>' ' and v1^D<>'' then v1^D else v1^9 fi,,
+'^S',if v1^E<>' ' and v1^E<>' ' and v1^E<>'' then v1^E else v1^S fi,,
 '^=',v1^=,,
 '^:',v1^:,,,
 ),,,,

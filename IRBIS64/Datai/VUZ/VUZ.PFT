@@ -3,12 +3,12 @@ if val(&uf('IMAIN,LinkGroup,0'))=1 and v68^E<>''
 then
   '\b ЗАПИСЬ группы ',v68^E,,,
   '\par ',v68^a" - ",v68^n" - ",
-   v68^c" - ",v68^v" - ",v68^o" - ",v68^f,'\b0 \par (Фак-Напр-Спец-ВО-ФО-Семестр)',,,,,,
+   v68^c" - ",v68^v" - ",v68^o" - ",v68^f,'\b0 \par (Фак-Напр-Спец-ВО-ФО-Семестр-Вып.кафедра)',,,,,,
 else 
    '\b ЗАПИСЬ типа ',
    if v920:'vuz' 
    then 
-      'Контингент \par  ',v68^a" - ",v68^n" - ",v68^c" - ",v68^v" - ",v68^o" - ",v68^f,'\b0 '',,,\par  (Фак-Напр-Спец-ВО-ФО-Семестр)' 
+      'Контингент \par  ',v68^a" - ",v68^n" - ",v68^c" - ",v68^v" - ",v68^o" - ",v68^f,," - "v68^H,,'\b0 '',,,\par  (Фак-Напр-Спец-ВО-ФО-Семестр-Вып.каф.)' 
       if &uf('KFAK.mnu!',v68^A)<>'' then '\par \b Факультет: \b0 ',,&uf('KFAK.mnu!',v68^A)  fi,,,
       if &uf('KVO.mnu!',v68^V)<>'' then '\par \b Вид обучения: \b0 ',,&uf('KVO.mnu!',v68^V)  fi,,,
       if &uf('KFO.mnu!',v68^O)<>'' then '\par \b Форма обучения: \b0 ',,&uf('KFO.mnu!',v68^O)  fi,,,            
@@ -18,7 +18,7 @@ fi,
 ,if v920:'vuz' 
  then,
    "\b  Чит.кафедра - Дисц - Идентификатор\b0 "d69,
-   (if p(v69) then'\par 'v69^b' - ',&uf('D,?IDD='v69^d,'?,v3^a'),' - ',,,&uf('D,?IDD='v69^d,'?,v3^0') fi) 
+   (if p(v69) then'\par 'v69^b' - ',if &uf('D,?IDD='v69^d,'?,v3^a')='' then v69^d else &uf('D,?IDD='v69^d,'?,v3^a') fi,' - ',,,if &uf('D,?IDD='v69^d,'?,v3^0')='' then v69^d else &uf('D,?IDD='v69^d,'?,v3^0') fi fi) 
    ,,,,,,,,,,,,,
    '\b \par   Студентов:  ',,,,,
    if val(&uf('IMAIN,ACCESSRDR,1'))=0 then v68^z, else 

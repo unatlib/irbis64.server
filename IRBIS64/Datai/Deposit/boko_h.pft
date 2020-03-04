@@ -140,6 +140,17 @@ then
       (if p(v694) then v694^D,,| - |v694^A,,| - |v694^N,,| - |v694^C,,| - |v694^V,,| - |v694^O,,| - |v694^1| экз.|,,|; автор заявки: |v694^9,,|<br>|d694  fi /),,,,
 fi,,/* сведения о всех экземплярах
  ,Oex910_H_full,
+
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     if g140 : 'IRI' 
+         then if p(v955^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?LNG=&I21DBN=',&uf('+D'),'_FULLTEXT&P21DBN=',&uf('+D'),if v991='' then '&Z21ID=GUEST' else '&Z21ID=',&uf('+3E',v991^A),'&Z21FAMILY=',&uf('+3E',v991^B) fi,
+                 '&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=I=&USES21ALL=1&S21STR=',
+                 &uf('+3E',v903),'">',if p(v955^T) then v955^T else 'Полный текст' fi,'</A>', fi, 
+         else     
+         if p(v955^A) then '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group955&FREEPAR1=1&KEY=@',mfn,'">',if p(v955^T) then v955^T else 'Постраничный просмотр полного текста' fi,'</A>', fi,
+     fi,
+fi,
+
 if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
      (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
      if g140 : 'IRI' 

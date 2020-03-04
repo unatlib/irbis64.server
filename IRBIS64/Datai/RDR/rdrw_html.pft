@@ -101,4 +101,12 @@ else
        fi)
    '</table>' ,
    fi 
-fi 
+fi,
+if val(&uf('JEVENT,R='v30))>0 or val(&uf('JEVENT,R='v10," "v11," "v12))>0 or val(&uf('JEVENT,R='v24))>0 
+then '<br>Посещал мероприятия: <br>',
+   if val(&uf('JEVENT,R='v30))>0 then &uf('+7W1#'v30) else 
+      if val(&uf('JEVENT,R='v10," "v11," "v12))>0 then &uf('+7W1#'v10," "v11," "v12)  else 
+         if val(&uf('JEVENT,R='v24))>0 then &uf('+7W1#'v24) 
+   fi fi fi,
+&uf('7EVENT,!R='g1"!,v972^a,(if p(v90) then if v90^h:&uf('Ag1#1') then | - |d90^a,v90^a*6'.',v90^a*4.2'.'v90^a.4 fi fi/)") 
+fi,

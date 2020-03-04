@@ -5,6 +5,8 @@
 // в 992 условия отбора
 //15 условия замены в 991
 // ! факультет / специальность | направление + ФО = ВО
+//18 добавила уровень компонента - v991: '^CK'
+//18 добавила кафедра выпускающая - v991: '^CP'
 DEL
 1991
 *
@@ -433,6 +435,53 @@ DEL
 
 
 FI
+IF
+if v991: '^CK' then '1' fi
+//--------------------------------------------------УРОВЕНЬ КОМПОНЕНТА
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^K/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^K
+F
+(if p(v691) then if v691^K<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^K)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^K fi,else v691^K fi,else v691^K fi,else v691^K fi,else v691^K fi,else v691^K fi else v691^K fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^K) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691) then v691,,,,,if v691^K='' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  '^B',,&uf('Av991^B#1')  fi,fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^K) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
 DEL
 1991
 1
@@ -440,6 +489,53 @@ DEL
 
 UNTIL
 if p(v1991) then '1' fi
+IF
+if v991: '^CP' then '1' fi
+//------------------------------------------------------КАФЕДРА ВЫПУСКАЮЩАЯ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v691^H/)
+
+IF
+if v991^A<>'' then '1' fi
+//-----------замена
+REP
+691^H
+F
+(if p(v691) then if v691^H<>'' then if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('+97',v691^H)=&uf('+97',&uf('Av991^A#1')) then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A) then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then &uf('Av991^B#1') else # fi else v691^H fi,else v691^H fi,else v691^H fi,else v691^H fi,else v691^H fi,else v691^H fi else v691^H fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^H) then '1' fi
+PUTLOG
+'Заменено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if v991^A='' and v991^B<>'' then '1' fi
+//-------------добавление
+REP
+691
+F
+(if p(v691)  then  v691,,,,,if v691^H='' then  if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^+#1')='' or &uf('Av991^+#1')=&uf('+97',v691^O) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^H',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v691^H) then '1' fi
+PUTLOG
+'Добавлено в записи каталога ',&uf('+D'),,'. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+FI
 DEL
 991
 *
