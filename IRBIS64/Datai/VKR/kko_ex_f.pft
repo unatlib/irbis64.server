@@ -1,0 +1,52 @@
+/*&uf('+7W1001#^F2^AÀÃ^PV')
+&uf('+7W103#'),&uf('+7W103#'&uf('6kko_103')),
+if val(g103)>0 then 
+   if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'O' or  &uf('KsemV.mnu\'g1001^f)<>''then 
+      if g1001^o<>'' then 
+         if v693^a<>'' then 
+            if s(v693^a|+|) : &uf('Ag1001^o#1') then 
+               (if p(v693) then 
+                   if v693^a:&uf('Ag1001^o#1') then f(val(v693^k),0,0),
+                      if a(v693^k) then f(val(v693^d),0,0),if v693^d='' then '0' fi fi fi fi) 
+            else 
+               (if p(v693) then 
+                   if v693^x:'!COM' then f(val(v693^k),0,0),
+                      if a(v693^k) then f(val(v693^d),0,0),if v693^d='' then '0' fi fi fi fi) 
+            fi 
+         else 
+            (if p(v693) then 
+                if v693^x:'NOFOND' then f(val(v693^k),0,0),
+                   if a(v693^k) then f(val(v693^d),0,0),if v693^d='' then '0' fi fi fi fi) 
+         fi       
+      else 
+         (if p(v693) then 
+             if s(v693^a,v693^l,v693^x)='' or v693^x:'!NOFOND' then v693^k,
+                if a(v693^k) then v693^d,if v693^d='' then '0' fi fi fi fi) 
+      fi 
+   else   
+      if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'V' then 
+         &uf('+7W692#'(if p(v692) then if v692^b=&uf('Av693^b#1') and v692^C:'O' then v692 fi fi/)),
+         if g1001^o<>'' then 
+            if g692^a<>'' then 
+               if s(g692^a|+|) : &uf('Ag1001^o#1') then 
+                  (if p(g692) then 
+                      if g692^a:&uf('Ag1001^o#1') then f(val(g692^k),0,0),
+                         if a(g692^k) then f(val(g692^d),0,0),if g692^d='' then '0' fi fi fi fi) 
+               else 
+                  (if p(g692) then 
+                      if g692^x:'!COM' then f(val(g692^k),0,0),
+                         if a(g692^k) then f(val(g692^d),0,0),if g692^d='' then '0' fi fi fi fi) 
+               fi 
+            else 
+               (if p(g692) then 
+                   if g692^a:'!NOFOND' then f(val(g692^k),0,0),
+                      if a(g692^k) then f(val(g692^d),0,0),if g692^d='' then '0' fi fi fi fi) 
+            fi
+         else
+            (if p(g692) then 
+                if s(g692^a,g692^l,g692^x)='' or g692^x:'!NOFOND' then f(val(g692^k),0,0),
+                   if a(g692^k) then f(val(g692^d),0,0),if g692^d='' then '0' fi fi fi fi) 
+         fi  
+      else '0' 
+   fi fi 
+else '0' fi 

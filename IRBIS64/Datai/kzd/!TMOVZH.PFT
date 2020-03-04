@@ -1,0 +1,15 @@
+mhl,
+(if '***'='481'then if v***^u:'1'then else v481^c,| |n481^c fi else 
+    if '***'='510' then v***^d else 
+       if ('***'='923') then v923^i,|. |v923^l,if s(v923^i,v23^l)=''then' 'fi 
+       else 
+          if '***'='461' or '***'='463' or '***'='330' or '***'='922' or 
+             '***'='470' then v***^c,| |n***^c else 
+             if '***'='9251'then v925^a else 
+                if '***'='9252'then v925^b,| |n925^b else 
+                   if '***'='9253'then v925^c,| |n925^c else 
+                      if '***'='4611'then v461^a,| |n461^a else 
+                         if '***'='541'then v*** else v***^a,| |n***^a
+    fi fi fi fi fi fi fi fi,'^U'
+    if p(v***^u) then if v***^u:'1'then'1'fi fi 
+ fi/)

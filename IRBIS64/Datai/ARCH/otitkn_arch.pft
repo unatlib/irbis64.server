@@ -1,0 +1,59 @@
+   if s(v510^e)<>''then
+      if a(v905^q) then " : "d200^e, 
+         if v905^2:'1' or &unifor('Q'v200^e*1.1)<>v200^e*1.1 then v200^e else &unifor('Q'v200^e.1),v200^e*1 
+      fi fi, 
+      (if p(v923) then
+          if &unifor('Av920#1'):'SPEC' then ", "| ; |+d923,v923^h 
+             if p(v923^h)then| : |d923^i fi,v923^i, 
+             if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+             if p(v923^k)then| : |d923^l fi,v923^l 
+          else ". "| ; |+d923,v923^h 
+             if p(v923^h)then|. |d923^i fi,v923^i, 
+             if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+             if p(v923^k)then|. |d923^l fi,v923^l 
+      fi fi) 
+   fi, 
+   if s(v510^f)<>''then| / |v200^f,| ; |v200^g fi, 
+   (| = |v510^d,| : |v510^e,| / |v510^f,| ; |v510^g),(| = |v921^a,| (|v921^b|) |),| : |v924, 
+   if s(v510^e)=''then 
+      if a(v922) then 
+         if a(v200^e) and a(v461) and a(v905^q) then  
+            if s(v905^2,&unifor('IPRIVATE,EEE,')):'1' or s(v905^2,&unifor('IPRIVATE,EEE,')):'2' and v920.1:'A' then else 
+               if p(v200^a) and (s(v905^2,&unifor('IPRIVATE,EEE,'))='' or s(v905^2,&unifor('IPRIVATE,EEE,')):'3') and 
+                  p(v900^c) and &unifor('K200ehd.mnu|'v900^c)<>'' or p(v982^u) or s(v125^e,v125^6,v125^3,v125^h,v125^7)<>''
+               then ' : ',o200e, 
+         fi fi fi, 
+         if p(v200^e) then 
+            if a(v905^q) then ' : ' 
+               if s(v982^0,v982^9)<>'' or &unifor('Kjznv.mnu\'&unifor("Av101#1"d903))<>'' then mhl,v200^e,mpl, 
+               else 
+                  if s(v905^2,&unifor('IPRIVATE,EEE,')):'1' or v200^e.1='<'and &unifor('Q'v200^e*2.1)<>v200^e*2.1 or 
+                     v200^e.1<>'<'and &unifor('Q'v200^e*1.1)<> v200^e*1.1 then mhl,v200^e,mpl,
+                  else 
+                     if v200^e.1='<' then mhl,&unifor('Q'v200^e*1.1),v200^e*2 mpl, 
+                     else mhl,&unifor('Q'v200^e.1),v200^e*1 mpl, 
+         fi fi fi fi fi,  
+         if a(v461) then| : |v982^1 fi,| : |v982^2,| : |v982^3, 
+      fi, 
+      (if p(v923) then
+          if &unifor('Av461#1')<>'' then ", "| ; |+d923,v923^h 
+             if p(v923^h)then| : |d923^i fi,v923^i, 
+             if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+             if p(v923^k)then| : |d923^l fi,v923^l 
+          else ". "| ; |+d923,v923^h 
+             if p(v923^h)then|. |d923^i fi,v923^i, 
+             if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+             if p(v923^k)then|. |d923^l fi,v923^l 
+      fi fi) 
+   fi, 
+   if s(v510^f)=''then 
+      if s(v921v924)<>''or (p(v510)and v510^e=''or a(v510)) and s(v923v200^e) <>''then| / |d200^f 
+      else | / |d200^f 
+      fi,o200fz," ; "v200^g, 
+      if p(v200) and a(v200^f) then &unifor('+1W1#0'),&unifor('+1W1#',o200f),
+                                    &unifor('+1W2#0'),&unifor('+1W2#',o200g), 
+         if &unifor('+1R1')<>'' or &unifor('+1R2')<>'' then' / ' 
+            if s(v700v701)<>''then &unifor('+1R1'),if &unifor('+1R2')<>''then' ; '&unifor('+1R2') fi 
+            else &unifor('+1R2'), 
+               if &unifor('+1R1')<>''then if &unifor('+1R2')<>''then' ; 'fi,&unifor('+1R1') 
+   fi fi fi fi fi, 

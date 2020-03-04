@@ -1,0 +1,23 @@
+if p(v3) then 
+&uf('+1W101#',&uf('+H',&uf('Av3#1'))),
+'<SCRIPT language=JavaScript>',
+'function DropDown',&uf('+1R101'),'(id){',
+'div = document.getElementById(id);',
+'if(div.style.display=="none") ',
+'{div.style.display="block"; form',&uf('+1R101'),'.CHECKINDEX.checked=true;}',
+'else {div.style.display="none"; form',&uf('+1R101'),'.CHECKINDEX.checked=false; for(i=0; i<form',&uf('+1R101'),'.CHECKINDEX_.length;i++) form',&uf('+1R101'),'.CHECKINDEX_[i].checked=false;}',
+'}',
+'function DropUp',&uf('+1R101'),'(id){',
+'div=document.getElementById(id); if(div.style.display=="none") {div.style.display="block";}',
+'else {div.style.display="none";}',
+'}',
+'</SCRIPT>',
+'<FORM name=form',&uf('+1R101'),'>',
+'<input type="checkbox" ',if p(v13) then 'onclick="javascript:DropDown',&uf('+1R101'),|('id|d3,&uf('+1R101'),|');"|d3,fi,' name="CHECKINDEX" value="^K',&uf('Av3#1'),'">',v2
+'<DIV id=id',&uf('+1R101'),' style="DISPLAY: none; MARGIN-LEFT: 20px">',
+(if p(v13) then
+'<INPUT type=checkbox name=CHECKINDEX_ value="^K',&uf('Av3#1'),'^M',v13,'">',v13,'<BR>',fi),
+'<a style="cursor:hand; text-decoration:underline;color:blue" onClick="javascript:DropUp',&uf('+1R101'),|('id|d3,&uf('+1R101'),|');">закрыть</a>|d3,
+'</DIV>',
+'</FORM>',
+fi

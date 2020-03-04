@@ -1,0 +1,102 @@
+1
+
+
+ADD
+37
+XXXXXXXXXXXXXXXXXXX
+if p(v33) then "^A"v33,"^B"v86,"^C"v110^d,"^X"v110^x,"^D"v34,"^J"v24,"^E"v35,"^F"v59^a,"^G"v36^a,'^H',f(val(v34,' 0')/val(if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,2) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi,' 1'),0,2),'^N',if v33*5='0'then v110^x fi,if v33*5='1'or v33*5='2'then f((val(v110^x,' 0')/2),0,0) fi,if v33*5.2='1-'then f((val(v110^x,' 0')/4),0,0) fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+38
+XXXXXXXXXXXXXXXXXXX
+if p(v33) then (if p(v39) then if v39^a:'*'then else |^Z|v39^b,|^Y|v39^c,if a(v39^a)then'^A',&unifor('Av33#1'),'^E',&unifor('Av34#1'),|^B|v39^b,|^C|v39^c,|^D|v39^u else'^A',&unifor('Av33#1'),'^E',&unifor('Av34#1'),|^B|v39^a,|^C|v39^d,|^D|v39^u fi fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+33
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+33
+XXXXXXXXXXXXXXXXXXX
+'%1'
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'OJK'and v33<>''then '1'else'0'fi
+
+
+
+DEL
+938
+
+
+
+ADD
+1000
+
+(if p(v39)then |^C|v39^c,|^E|v39^efi/)
+
+REPEAT
+
+
+
+
+ADD
+1001
+
+&unifor('Av1000#1')
+
+REPEAT
+
+
+
+
+ADD
+1002
+
+'^E',f(rsum(v34";",v1001^e";",if v1001^e=''then v24";"fi),0,0)
+
+REP
+1001^c
+F
+if p(v1001^c)then if v1001^c='1'then'0'else f(val(v1001^c)-1,0,0)fi fi
+
+UNTIL
+if v1001^c<>''and v1001^c<>'0'then'1'else'0'fi
+
+
+
+DEL
+1000
+1
+
+
+DEL
+1001
+*
+
+
+UNTIL
+if v1000<>''then'1'else'0'fi
+
+
+
+ADD
+938
+
+if a(v938)then "^V"v35,"^Q"v33,"^Y"v34,"^D"v110^d,"^X"v110^x,&unifor('S0'),"^E"d1002,(if p(v1002)then &unifor('S1A'),'=',f(val(v1002^e)/val(if &unifor('Av110^x#1')<>''then if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f((val(&unifor('Av110^x#1'),' 0')/2),0,2) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi fi,' 1'),0,2),|;|d1002,fi)'^N' if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f(val(&unifor('Av110^x#1'),' 0')/2,0,0) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0)fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi,if v33*5='0'then'^A1^B'v110^x fi,if v33*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v33*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v33*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v33*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v33*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v33*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v33*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av33*5#1'))),'^B',&unifor('G2-'&unifor('Av33*5#1'))fi fi
+
+REP
+938
+F
+if p(v938)then "^V"v35,"^Q"v33,"^Y"v34,"^D"v110^d,"^X"v110^x,&unifor('S0'),"^E"d1002,(if p(v1002)then &unifor('S1A'),'=',f(val(v1002^e)/val(if &unifor('Av110^x#1')<>''then if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f((val(&unifor('Av110^x#1'),' 0')/2),0,2) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0) fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi fi,' 1'),0,2),|;|d1002,fi)'^N' if &unifor('Av33*5#1')='0'then &unifor('Av110^x#1')fi,if &unifor('Av33*5#1')='1'or &unifor('Av33*5#1')='2'then f(val(&unifor('Av110^x#1'),' 0')/2,0,0) fi,if &unifor('Av33*5.2#1')='1-'then f((val(&unifor('Av110^x#1'),' 0')/4),0,0)fi,if &unifor('Av33*5.1#1')='P'then f((val(&unifor('G2-'&unifor('Av33*5#1')),'a0')-val(&unifor('G0-'&unifor('G2P'&unifor('Av33*5#1'))),'a0'))+1,0,0)fi,if v33*5='0'then'^A1^B'v110^x fi,if v33*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v33*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v33*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v33*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v33*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v33*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v33*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av33*5#1'))),'^B',&unifor('G2-'&unifor('Av33*5#1'))fi fi
+
+DEL
+1002
+*
+
+
+FI
+
+
+

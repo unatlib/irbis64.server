@@ -1,0 +1,5 @@
+'{',,
+'\qc \fs24 ',,'Список учебников по параллелям и предметам \par ',,
+if v991^B<>'' then 'Уровень - ',if &uf('KSK_uroven.mnu!',v991^B)<>'' then &uf('KSK_uroven.mnu!',v991^B) else v991^B fi fi,,,
+if v991^C<>'' then '\par Параллель - ',v991^C,,fi,,
+'\par }'

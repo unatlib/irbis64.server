@@ -1,0 +1,62 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=1.5
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=10
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=6
+CELL_TAB1_1=1
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=4
+CELL_TAB2_2=Пользователь
+CELL_TAB2_3=&uf('6brief')
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=9
+CELL_TAB3_2=Профиль
+CELL_TAB3_3=if val(&uf('+N140'))>1 then (if p(v140) then v140^B| - |,v140^C.35,'\par ' fi) else v140^B| - |,v140^C fi,
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=Кол-во рассылок
+CELL_TAB4_3=&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_1')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,'\par ' fi)
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Да
+CELL_TAB5_1=2
+CELL_TAB5_2=Кол-во документов
+CELL_TAB5_3=&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_2')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,'\par ' fi)
+CELL_TAB5_4=По правому краю
+CELL_TAB5_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8046 \pard \ql\widctlpar\intbl {\qr \fs20 ''\b Итого: ''\cell }\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9180 \pard \ql\widctlpar\intbl {\qr \fs20 ''\b ',v1'\cell }\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx10314 \pard \ql\widctlpar\intbl {\qr \fs20 ''\b ',v2'\cell }\pard \widctlpar\intbl {\row }\pard \qr\widctlpar '
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=3
+CELL_SUM111=14
+CELL_SUM112='\b Итого: '
+CELL_SUM121=2
+CELL_SUM122='\b ',v1
+CELL_SUM131=2
+CELL_SUM132='\b ',v2
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=50
+CELL_SORT4=0
+CELL_SORT5=v10,' ',v11,' ',v12
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=999.wss
+HDR_PFT=iri_stat1_zagl.pft
+HDR_PARAMS_COUNT=0

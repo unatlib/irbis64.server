@@ -1,0 +1,26 @@
+'<SCRIPT language=JavaScript>',
+'	function UnCheck(obj){',
+'	if (obj.checked==false)',
+'	for(i=0; i<CHECKINDEX.length;i++) CHECKINDEX[i].checked=false;',
+'	}',
+'	function Check(obj){',
+'	if (obj.checked==true)',
+'	CHECKINDEX[0].checked=true;',
+'	}',
+'</SCRIPT>',
+'<A HREF="IRBIS:9?ACTION=2">вернуться назад...</A><br>'
+if p(v3) then
+'<title>Отметить дескриптор - ' ,v2,'</title>',
+'<b>Отметить дескриптор и его подрубрики (модификаторы):<br>',
+'<input type="checkbox" onclick="javascript:UnCheck(this);" name="CHECKINDEX" value="',&uf('Av3#1'),'">',v2,'</b>'
+' (Вышестоящий: ',(if p(v3) then ' - <A HREF="IRBIS:1,,,mesh_wn,R=',if &uf('+R',v3)='' then '0' else &uf('+R',v3) fi,'">',,,ref(l('R=',if &uf('+R',v3)='' then '0' else &uf('+R',v3) fi),v2),'</A>',fi),')'
+'<DIV style="DISPLAY: block; MARGIN-LEFT: 20px">',
+(if p(v13) then
+'<INPUT type=checkbox onclick="javascript:Check(this); "name="CHECKINDEX" value="',&uf('Av3#1'),'<',v13,'>">',v13,' - ',&uf('LM=',v13,'-'),'<BR>',
+fi),
+'</DIV>',
+"<b>Аннотация:</b> "v20|<br>|,
+"<b>Английский эквивалент:</b> "v1"<br>",
+"<b>Коды:</b> "v3+|;  |"<br>",
+
+fi,

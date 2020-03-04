@@ -1,0 +1,7 @@
+&uf('+7W1#'),&uf('+7W2#'),&uf('+7W3#'),&uf('+7W5#'),
+&uf('+7W1#',(&uf('Pv961^4')/)), 
+&uf('+7W2#',(if p(g1) then g1'=',if g1*4.1='*'then g1*5 else &unifor('Q'g1*4) fi fi/)), 
+&uf('+7W5#'), 
+(if p(g2) then &uf('+7W3#'),&uf('+7W3#',g2),&uf('6961vlk'),fi), 
+| ; |+g5, 
+

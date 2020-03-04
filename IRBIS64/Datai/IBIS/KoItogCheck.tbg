@@ -1,0 +1,95 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=15
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=5
+CELL_TAB2_2=Заголовок
+CELL_TAB2_3=v503^a". ",v461^x,if s(v461^x)<>'' then if v461^x:'.' then' ' else'. 'fi fi,v461^c,if p(v461) then ". "d461,v200^v,if p(v200^v) then" : "v200^a else v200^a fi,if s(v200^v,v200^a)='' then (|. |+v925^v,if p(v925^v) then | : |v925^a else v925^a fi)fi fi,if a(v461) then if p(v700) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,"."d700^g," "d700^a, fi,,,,,,,,,fi
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=1
+CELL_TAB3_2=1
+CELL_TAB3_3=&uf('+7W41#'),&uf('+7W41#',,f(rsum((if p(v691) then if v691^s: &uf('AG1001^A#1') AND ( &uf('Av991^O#1')='' or v691^O='' or &uf('Av991^O#1')<>'' and &uf('Av991^O#1')=&uf('+97',v691^O) )  AND ( &uf('Av991^A#1')='' or v691^A='' or &uf('Av991^A#1')<>'' and &uf('Av991^A#1')=&uf('+97',v691^A) )  AND ( &uf('Av991^C#1')='' or v691^C='' or &uf('Av991^C#1')<>'' and &uf('Av991^C#1')=&uf('+97',v691^C) )  AND ( &uf('Av991^N#1')='' or v691^N='' or &uf('Av991^N#1')<>'' and &uf('Av991^N#1')=&uf('+97',v691^N) )  AND ( &uf('Av991^B#1')='' or v691^B='' or &uf('Av991^B#1')<>'' and &uf('Av991^B#1')=&uf('+97',v691^B) )  AND ( &uf('Av991^F#1')='' or v691^F='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v691^F) )  AND ( &uf('Av991^=#1')='0' or &uf('Ag1001^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag1001^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' )  AND (  &uf('Av991^g#1')='' OR ( &uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'???' and (v691^g:'???' or a(v691^g)) ) OR ( &uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'???' and v691^g:'???' )  ) then '1;'else'0;' fi fi)),0,0)),if val(g41)>0 then if s( &unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then else if p(v699) and v699^u:'0' then else if &unifor('6kitexO')<>''then '1' fi fi fi fi/
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=1
+CELL_TAB4_2=2
+CELL_TAB4_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then '0' else &uf('6kitexO') fi fi/
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=1
+CELL_TAB5_2=3
+CELL_TAB5_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then if p(v699) and v699^u:'0' then else if &unifor('6kitexO')<>'' then '1' else '0' fi fi fi fi/
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Нет
+CELL_TAB6_1=1
+CELL_TAB6_2=4
+CELL_TAB6_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then &uf('6kitexO') else '0' fi fi/
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_TAB7_1=1
+CELL_TAB7_2=5
+CELL_TAB7_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then else &unifor('6kitsrO') fi fi/
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_TAB8_1=1
+CELL_TAB8_2=6
+CELL_TAB8_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then &unifor('6kitsrO') fi fi/
+CELL_TAB8_4=По левому краю
+CELL_TAB8_5=Нет
+CELL_TAB9_1=1
+CELL_TAB9_2=7
+CELL_TAB9_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then else if a(v991^5) then f(val(if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then &unifor('6kitexO') fi),0,0) else '1' fi fi fi/
+CELL_TAB9_4=По левому краю
+CELL_TAB9_5=Нет
+CELL_TAB10_1=1
+CELL_TAB10_2=8
+CELL_TAB10_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then if a(v991^5) then &unifor('6kitexO') else '1' fi fi fi fi/
+CELL_TAB10_4=По левому краю
+CELL_TAB10_5=Нет
+CELL_TAB11_1=1
+CELL_TAB11_2=9
+CELL_TAB11_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then &uf('6kitexO') else '1' fi fi fi fi/
+CELL_TAB11_4=По левому краю
+CELL_TAB11_5=Нет
+CELL_TAB12_1=1
+CELL_TAB12_2=10
+CELL_TAB12_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then &uf('6kitexO') else '1' fi fi fi fi/
+CELL_TAB12_4=По левому краю
+CELL_TAB12_5=Нет
+CELL_TAB13_1=1
+CELL_TAB13_2=11
+CELL_TAB13_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then f(val(&unifor('6kitexO')) ,0,0) fi else '1' fi fi fi fi/
+CELL_TAB13_4=По левому краю
+CELL_TAB13_5=Нет
+CELL_TAB14_1=1
+CELL_TAB14_2=12
+CELL_TAB14_3=if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21' then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then f(val(&unifor('6kitexO')),0,0) fi else '1' fi fi fi fi/
+CELL_TAB14_4=По левому краю
+CELL_TAB14_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=0
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=KoItogCheck
+HDR_PFT=KoItogCheckH
+HDR_PARAMS_COUNT=0

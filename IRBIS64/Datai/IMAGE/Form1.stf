@@ -1,0 +1,9 @@
+Form1
+if &uf('Av907^A.4#1')=v999^a then if &uf('Av907^b#1')<>'' then &uf('Av907^b#1') else '???' fi fi
+FIO_SF.mnu
+if &uf('Av907^A.4#1')=v999^a then &uf('Av907^A*4.2#1') fi
+MONTH_SF.mnu
+4,7
+991.wss,999
+'¬вод каталогизаторами данных в электронный каталог по мес€цам за ', v999^A,' г.'
+1,1

@@ -1,0 +1,561 @@
+0
+// v991^A - значение поля 920 для записи WORK
+// v991^B - признак кор-ки 0 - не кор-ть, 1 - кор-ть читателя, 2 - кор-ть каталог
+// добавлена проверка по месту хранения вместе с экземпляром
+// для статуса U - только сообщение НЕ корректировка
+// корректировка только, если у екземпляра статус 0 - меняется на 1
+IF
+if p(v40) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2101
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2102
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2103
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2104
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2105
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2107
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2108
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//            шифр
+ADD
+2101
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^A) and v40^A<>'' then v40^A else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//          инвент номер
+ADD
+2102
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^B) and v40^B<>'' then v40^B else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//          штрих-код
+ADD
+2103
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^H) and v40^H<>'' then v40^H else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//         имя БД
+ADD
+2104
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^G) and v40^G<>'' then v40^G else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//        дата возврата
+ADD
+2105
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^F) and v40^F<>'' then v40^F else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//       дата выдачи
+ADD
+2107
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^D) and v40^D<>'' then v40^D else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//       Место хранения
+ADD
+2108
+XXXXXXXXXXXXXXXXXXX
+(if p(v40^K) and v40^K<>'' then v40^K else ' ' fi/)
+XXXXXXXXXXXXXXXXXXX
+//      в поле 2106 номер повторения поля 40
+DEL
+2106
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+2106
+XXXXXXXXXXXXXXXXXXX
+'0'
+XXXXXXXXXXXXXXXXXXX
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+цикл по повторениям поля 40 читателя
+
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+2106
+1
+f(val(v2106)+1,0,0)
+XXXXXXXXXXXXXXXXXXX
+// если это должник
+IF
+if &unifor('Av2105#1'): '*****' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+111
+
+&unifor('+7W2#')
+
+// есть ли шиф у читателя
+IF
+if &unifor('Av2101#1') <>' ' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// проверка - есть ли запись в БД каталога
+IF
+if val(&unifor('D',&unifor('Av2104#1'),',!','I=',&unifor('Av2101#1'),'!,','mfn'))<=0 then '1' fi
+// нет
+PUTFLD
+ '^A',f(val(MFN),0,0),'^B',v2106,'^C',&unifor('Av2101#1'),'^D',if &unifor('Av2102#1')<>'' then &unifor('Av2102#1') else &unifor('Av2103#1') fi,'^E',&unifor('Av2104#1'),'^Y',&unifor('Av2107#1'),'^F',,'^G','Не найдена запись в ЭК(',v2106,')','^X',v2106
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// корректировать текущее повторение в записи читателя?
+IF
+if v991^B='1' then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+v40
+
+REP
+40^F
+F
+(if p(v40) then if v40^B<>'' and v40^B=&unifor('Av2102#1') or v40^H<>'' and v40^H=&unifor('Av2103#1') or v40^B='' and v40^H='' then &unifor('3') else v40^F fi fi/)
+
+IF
+if v111<>v40 then '1' fi
+PUTFLD
+'^GОформлен возврат у читателя','(',v2106,')'
+// корректировка записи читателя
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(&unifor('D',&unifor('Av2104#1'),',!I=',&unifor('Av2101#1'),'!,mfn'))>0 then '1' fi
+// есть запись каталога
+// есть ли инвентарь или шртих-код - исключаю журналы
+IF
+if &uf('+97',&unifor('D',&unifor('Av2104#1'),',!I=',&unifor('Av2101#1'),'!,v920')) <> 'NJ' and val(&unifor('D',&unifor('Av2104#1'),',!IN=',&unifor('Av2102#1'),'!,mfn'))<=0 and val(&unifor('D',&unifor('Av2104#1'),',!IN=',&unifor('Av2103#1'),'!,mfn'))<=0 then '1' fi
+// нет инвент/штрих-кода
+PUTFLD
+'^A',f(val(mfn),0,0),'^B',&unifor('Av2106#1'),'^C',&unifor('Av2101#1'),'^D',&unifor('Av2102#1'),if &unifor('Av2103#1')<>' ' then ' / ', &unifor('Av2103#1') fi,,,,'^E',&unifor('Av2104#1'),'^F',&unifor('D',&unifor('Av2104#1'),',!I=',&unifor('Av2101#1'),'!,f(val(mfn),0,0)'),,,,'^G','Не найден инвент./штрих-код(',&unifor('Av2106#1'),')',,'^Y',&unifor('Av2107#1')
+ADD
+1
+
+&unifor('+7W2#1')
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if &uf('+97',&unifor('D',&unifor('Av2104#1'),',!I=',&unifor('Av2101#1'),'!,v920')) <> 'NJ' and val(&unifor('D',&unifor('Av2104#1'),',!IN=',&unifor('Av2102#1'),'!,mfn'))>0 or  &uf('+97',&unifor('D',&unifor('Av2104#1'),',!I=',&unifor('Av2101#1'),'!,v920')) <> 'NJ' and val(&unifor('D',&unifor('Av2104#1'),',!IN=',&unifor('Av2103#1'),'!,mfn'))>0 then '1' fi
+// есть инвент-штрих-код
+// чищу переменную G1 и G2
+ADD
+111
+
+&unifor('+7W1#'),&unifor('+7W2#')
+
+// в запись каталога по шифру с передачей инвентаря и штрихкода + места хранения
+CORREC
+if &unifor('Av2104#1')<>' ' then &unifor('Av2104#1') fi
+mpu,if &unifor('Av2102#1')<>' ' then  '^B',&unifor('Av2102#1') fi,if &unifor('Av2103#1')<>' ' then '^H',&unifor('Av2103#1') fi,'^A',f(val(MFN),0,0),'^G',&unifor('Av2104#1'),'^C',&unifor('Av2101#1'),'^D',v2106,if &unifor('Av2107#1')<>' ' then '^Y',&unifor('Av2107#1') fi,,,if &unifor('Av2108#1')<>' ' then '^K',&unifor('Av2108#1') fi,
+'I=',&unifor('Av2101#1')
+
+// проверяю статус инвентаря или штрихкода
+// для статуса 0, если не согласованы, то в переменную G1 пишу MFN каталога
+ADD
+111
+
+if rsum((if p(v910) then if v910^A='0' then if &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or &unifor('Av1001^K#1')='' and &uf('+97',v910^B)=&unifor('Av1001^B#1') or &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or &unifor('Av1001^K#1')='' and &uf('+97',v910^H)=&unifor('Av1001^H#1') then '1,' else '0,' fi fi fi))>0 then &unifor('+7U1#','^A1^B',mfn) fi 
+
+// в переменной G1 MFN записей, в кот. со статусом U, в кот. несогласовано
+ADD
+111
+
+if rsum((if p(v910) then if v910^A='U' then if &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and                &unifor('Av1001^K#1')='' or &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then if a(v910^2) or val(v910^1)<val(v910^2) then '1,' else '0,' fi,,,,,fi,,fi,,,fi))>0 then &unifor('+7U1#','^AU^B',mfn) fi
+
+DEL
+1001
+*
+
+
+END
+// в переменной G1 MFN записей каталога, в кот. статус не согласован
+// выявлены ли несогласованные записи
+IF
+if p(G1) then '1' fi
+DEL
+112
+*
+
+
+ADD
+112
+
+&unifor('+7G1'),(G1/)
+
+
+//цикл по записям каталога
+REPEAT
+
+CORREC
+if &unifor('Av2104#1')<>' ' then &unifor('Av2104#1') fi
+mpu,'^A',f(val(MFN),0,0),if &unifor('Av2102#1')<>' ' then '^B',&unifor('Av2102#1') fi,if &unifor('Av2103#1')<>' ' then '^H',&unifor('Av2103#1') fi,,'^G',&unifor('Av2104#1'),'^C',&unifor('Av2101#1'),'^D',v2106,'^Y',&unifor('Av2107#1'),"^X"v991^B,'^Z',&unifor('Av112^B#1'),'^w',&unifor('Av112^A#1'),,if &unifor('Av2108#1')<>' ' then '^K',&unifor('Av2108#1') fi,
+'I=',&unifor('Av2101#1')
+
+//1001^A - mfn записи, читателя, которая вызывает
+//1001^B - инвентарный номер от читателя
+//1001^H - штрих-код от читателя
+//1001^K - Место хранения
+//1001^G - имя БД каталога
+//1001^C - шифр записи каталога
+//1001^D - номер повторения поля 40
+//1001^Y - дата выдачи
+//1001^X - признак кор-ки 0 - не кор-ть, 1 - кор-ть читателя, 2 - кор-ть каталог
+//1001^Z - mfn записи каталога, в которой несогласованность
+//1001^W - статус экземпляра, у которого несогласованность 1 - если 0,2,4,6,... или U - если U
+IF
+if val(mfn)=val(v1001^Z) then '1' fi
+ADD
+1
+
+&unifor('+7W2#1')
+
+//------- статус 0 корректирую только статус 0!!!
+IF
+if v1001^X='2' and v1001^w='1' then '1' fi
+// задана корректировка и экземпляр не U
+IF
+if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1,' else '0,' fi fi))>0 then '1' fi
+PUTFLD
+'^A',v1001^A,'^B',v1001^D,'^C',v1001^C,'^D',v1001^B,if v1001^H<>'' then ' / ',v1001^H fi,'^E',v1001^G,'^F',f(val(MFN),0,0),'^G','Неверный статус экземпляра(',v1001^D,'/ М.хр.-',v1001^K,,,,')-откорректировано','^X',v1001^D,'^Y',v1001^Y
+REP
+910^A
+F
+(if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1' else v910^A fi fi/)
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------- статус 0 только проверяю
+IF
+if v1001^X<>'2' and v1001^w='1' then '1' fi
+// задана корректировка и экземпляр не U
+IF
+if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1,' else '0,' fi fi))>0 then '1' fi
+PUTFLD
+'^A',v1001^A,'^B',v1001^D,'^C',v1001^C,'^D',v1001^B,if v1001^H<>'' then ' / ',v1001^H fi,'^E',v1001^G,'^F',f(val(MFN),0,0),'^G','Неверный статус экземпляра(',v1001^D,'/ М.хр.-',v1001^K,,,,')','^X',v1001^D,'^Y',v1001^Y
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------- статус U - только сообщение
+IF
+if v1001^W='U' then '1' fi
+PUTFLD
+'^A',v1001^A,'^B',v1001^D,'^C',v1001^C,'^D',if v1001^B<>'' then v1001^B else v1001^H fi,'^E',v1001^G,'^F',f(val(MFN),0,0),'^G',if v1001^W='1' then 'Неверный статус экземпляра(' else 'Неверное кол-во со статусом U(' fi,v1001^D,,'/ М.хр.-',v1001^K,,,,,')',,'^X',v1001^D,'^Y',v1001^Y
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+
+
+END
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+// в G1 MFN несогласованных записей
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// найден инвентарь/штрих-код
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// есть запись каталога
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// есть шифр у читателя 
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// корректировать текущее повторение в записи читателя?
+IF
+if v991^B='1' and G2<>'' then '1' fi
+DEL
+111
+*
+
+-
+ADD
+111
+
+v40
+
+REP
+40^F
+F
+(if p(v40) then if v40^B<>'' and v40^B=&unifor('Av2102#1') or v40^H<>'' and v40^H=&unifor('Av2103#1') then &unifor('3') else v40^F fi fi/)
+
+IF
+if v111<>v40 then '1' fi
+PUTFLD
+'^GОформлен возврат у читателя','(',v2106,')'
+// корректировка записи читателя
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// повторение поля 40 - должник
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец прохода поля 40
+DEL
+2101
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2102
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2103
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2104
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2105
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2107
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2108
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if val(v2106)<val(&unifor('+N40')) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+GETFLD
+4000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2106
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v4000<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+'WORK'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+(v4000/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+v991^A
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2101
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2102
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2103
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2104
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2105
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2106
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2107
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+2108
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

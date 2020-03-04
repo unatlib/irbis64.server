@@ -1,0 +1,7 @@
+'{'
+'\qr\b0 '&uf('DCMPL,?VD=POLZV?,v14^H,"\par "v14^I"\par "v14^J'),'\par'
+'\par\par\qc\b \fs20 Реестр на закупку товаров'
+'\par на ',&uf(|DCMPL,?SZ=|v991^b|?,if v62^M:'1/0' then v62^M.4 else &uf('K33o.mnu\'v62^M*4)' ',v62^M.4 fi|),' г.\b0 '
+'\par\par\qc\fs24 '&uf('DCMPL,?VD=POLZV?,v15^F,"\par \fs18("v15^G")"'),'\par'
+'\par\qc\fs24'&uf('DCMPL,?SZ='v991^b'?,v62^T'),'\par'
+'}'

@@ -1,0 +1,16 @@
+/*&uf('+7W225#1846'),&uf('+7W16#'),
+(if p(v481) then 
+    if v481^q=&uf('Ag225#1') then 
+          &uf('+7U16#'v936": ",v931^c/
+            if p(v481^d) and &unifor(|Kmhrvn.mnu\|v481^d)<>''then else 'Приплет. ',|Шифр |v481^w|: |,&uf('Ag225#1'),' г. ',|(|d481^h,
+               if p(v481^f) then 
+                  if val(v481^f.1)=0 and (not('I X V 0':v481^f.1)) then' ' else 
+                     if &unifor('Av210^8#1')<>''then' '&unifor('Av210^8#1')' ' else ' т.'
+                  fi fi,v481^f|  | fi,
+               if p(v481^h) then   
+                  if val(v481^h.1)=0 and (not(v481^h.1='0'))then' ' else 
+                     if &unifor('Av210^9#1')<>''then' '&unifor('Av210^9#1')' ' else' № '
+               fi fi fi,v481^h|)|,
+            fi) 
+ fi fi/),
+/*(g16/)/

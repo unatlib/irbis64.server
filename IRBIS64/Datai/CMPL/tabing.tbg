@@ -1,0 +1,84 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=1.5
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=10
+CELL_TAB_COL_COUNT=12
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=3.4
+CELL_TAB2_2=Дата, № КСУ
+CELL_TAB2_3=(if p(v910) then  if v910^y<>'' then if '2 7':v910^a or p(v910^4) then else  if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d and &unifor('Av991^C#1')='') or (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')='' and &unifor('Av991^C#1')='')      then ref(L('KSU='&unifor('Av991^a#1')),v88^b*6.2|.|,v88^b*4.2|.|,v88^b*2.2,|(|v88^a|)|),'\par 'else if (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d and &unifor('Av991^A#1')='') or (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')='' and &unifor('Av991^A#1')='') then ref(L('AS='&unifor('Av991^d#1'),'-'&unifor('Av991^c#1')'-'),v88^b*6.2|.|,v88^b*4.2|.|,v88^b*2.2,|(|v88^a|)|),'\par 'else if &unifor('Av991^b#1')=v910^d and &unifor('Av991^a#1')='' and &unifor('Av991^c#1')=''then ref(L('KSU='v910^u),v88^b*6.2|.|,v88^b*4.2|.|,v88^b*2.2,|(|v88^a|)|),'\par 'fi  fi fi fi fi fi),
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=1.35
+CELL_TAB3_2=№ п/п
+CELL_TAB3_3=(if p(v910)then if v910^y<>'' then  if '2  7':v910^a or p(v910^4) then else   if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d and &unifor('Av991^С#1')='') or   (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')='' and &unifor('Av991^a#1')=v910^u and &unifor('Av991^C#1')='') or   (&unifor('Av991^b#1')='' and &unifor('Av991^c#1')=v910^y and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')=v910^d and &unifor('Av991^c#1')='' and &unifor('Av991^A#1')='')   then        if p(v910^a)then &unifor('S1A'),if p(v910^1)then if v910^1='1'then else '-'f(val(&unifor('S1A'))+val(v910^1)-2,0,0),&unifor('S'f(val(v910^1)-2,0,0))fi fi fi'\par 'fi fi fi fi),
+CELL_TAB3_4=По правому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2.35
+CELL_TAB4_2=Инв.№/ Штрих-код
+CELL_TAB4_3=(if p(v910)then if v910^y<>'' then  if '2  7':v910^a or p(v910^4) then else   if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d and &unifor('Av991^С#1')='') or   (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')='' and &unifor('Av991^a#1')=v910^u and &unifor('Av991^C#1')='') or   (&unifor('Av991^b#1')='' and &unifor('Av991^c#1')=v910^y and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')=v910^d and &unifor('Av991^c#1')='' and &unifor('Av991^A#1')='') then v910^b,if a(v910^b) then v910^h fi,| (|v910^1|экз)|'\par 'fi  fi fi fi),
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=1.6
+CELL_TAB5_2=Подразделение
+CELL_TAB5_3=(if p(v910)then if v910^y<>'' then  if '2  7':v910^a or p(v910^4) then else   if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d and &unifor('Av991^С#1')='') or   (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')='' and &unifor('Av991^a#1')=v910^u and &unifor('Av991^C#1')='') or   (&unifor('Av991^b#1')='' and &unifor('Av991^c#1')=v910^y and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')=v910^d and &unifor('Av991^c#1')='' and &unifor('Av991^A#1')='') then v910^d'\par 'fi  fi fi fi),
+CELL_TAB5_4=По центру
+CELL_TAB5_5=Нет
+CELL_TAB6_1=1.1
+CELL_TAB6_2=Отметка о пров.
+CELL_TAB6_3=' '
+CELL_TAB6_4=По центру
+CELL_TAB6_5=Нет
+CELL_TAB7_1=3
+CELL_TAB7_2=Автор. Заглавие
+CELL_TAB7_3=v503^a". ",v461^x,if s(v461^x)<>''then'. 'fi,mhl,v461^c.20,if v461^c*20.1<>''then'...'fi,mpl,if p(v461) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,|: |v461^e,". -"|; |+v461^d,|. -|v461^h,". "d461,v200^v,if p(v200^v) and p(v200^a) then': 'fi,if p(v200^a) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,fi," "d700,mhl,v200^a.20,if v200^a*20.1<>''then'...'fi,mpl,if a(v461)and p(v200^a)then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,if v920='J'then'. - '&unifor('K110b.mnu|'v110^b)," выходит с "v210^d"г."else". - "v210^d fi,if v920:'NJ'then ref(l(|I=|v933),mhl,v200^a,mpl,if &unifor('Kjzk.mnu|'v101.3)<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi'.-'&unifor('K110b.mnu|'v110^b),|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l,|. |v923^m,|. |v923^n),,", "v934"г.",if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi,if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi,),v936 fi," ("v931^c")","  (Введено оглавление)"d922 fi,if v920:'NJ'then else" (Введено оглавление)"d330,".-"v963^1,if a(v963^1)then" //"d463 fi,mhl,(|; |+v463^7,if a(v463^7) then|; |+v463^c fi,mpl,|: |v963^e,|.-|v463^d,|: |v463^g,if p(v463^c)then    if s(v463^d,v463^g)<>''then|, |v463^j else |. -|v463^j fi,|. -|v463^v else       ". -"|.; |+v463^v fi,   if p(v463^v)then|: |v463^a else|. |v463^a fi,   if p(v463^v)then| |v463^h else". -"|.; |+v463^h fi,   if p(v463^h)then|: |v463^i else|. |v463^i fi,|, |v463^k,   if p(v463^k)then|: |v463^l else|. |v463^l fi,|.-|v963^p,|.-Ст.|v463^N,|.-|v463^1,   if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) fi
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_TAB8_1=1.25
+CELL_TAB8_2=Год изд.
+CELL_TAB8_3=v210^d
+CELL_TAB8_4=По центру
+CELL_TAB8_5=Нет
+CELL_TAB9_1=1.25
+CELL_TAB9_2=Раздел знаний
+CELL_TAB9_3=v60
+CELL_TAB9_4=По центру
+CELL_TAB9_5=Нет
+CELL_TAB10_1=2.4
+CELL_TAB10_2=Цена
+CELL_TAB10_3=(if p(v910)then if v910^y<>'' then  if '2  7':v910^a or p(v910^4) then else   if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d and &unifor('Av991^С#1')='') or   (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')='' and &unifor('Av991^a#1')=v910^u and &unifor('Av991^C#1')='') or   (&unifor('Av991^b#1')='' and &unifor('Av991^c#1')=v910^y and &unifor('Av991^A#1')='') or (&unifor('Av991^b#1')=v910^d and &unifor('Av991^c#1')='' and &unifor('Av991^A#1')='')  then if s(v910^e)<>''then f(val(v910^e,' 0'),0,2),|/экз|d910^1 else              if val(&unifor('Av10^d#1'))>0 then f(val(&unifor('Av10^d#1'),' 0'),0,2),|/экз|d910^1 else &unifor('Av10^d#1') fi fi'\par 'fi  fi fi fi),
+CELL_TAB10_4=По правому краю
+CELL_TAB10_5=Нет
+CELL_TAB11_1=1.1
+CELL_TAB11_2=№ Акта выбытия
+CELL_TAB11_3=' '
+CELL_TAB11_4=По центру
+CELL_TAB11_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=20
+CELL_SORT4=0
+CELL_SORT5=if s(v215^y)=''then if rsum((if p(v910) then if '2 7':v910^a or p(v910^4) then else if v910^U<>'' then     if (&unifor('Av991^a#1')=v910^u and &unifor('Av991^b#1')=v910^d) or (&unifor('Av991^c#1')=v910^y and &unifor('Av991^b#1')=v910^d) or (&unifor('Av991^b#1')='' and &unifor('Av991^a#1')=v910^u) or (&unifor('Av991^b#1')='' and &unifor('Av991^c#1')=v910^y) or (&unifor('Av991^a#1')='' and &unifor('Av991^c#1')='' and &unifor('Av991^b#1')=v910^d) then '1;'else'0;' fi fi fi fi))>0 then '^aB='if &unifor('Av910^b#1')<>''then if &unifor('Av910^b.1#1')='0'or val(&unifor('Av910^b.1#1'))>0 then f(val(&unifor('Av910^b#1'),' 0'),8,0) else &unifor('Av910^b.1#1'),f(val(&unifor('Av910^b*1#1')),7,0) fi else &unifor('Av910^h#1')fi fi fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=in11.ws
+HDR_PFT=tabinhg
+HDR_PARAMS_COUNT=0

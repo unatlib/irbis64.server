@@ -1,0 +1,15 @@
+mhl,
+(if '***'='2101'then v210^a fi/)/ 
+(if '***'='2102'then if p(v210) then v210^b,| |n210^b fi fi/)/
+(if '***'='2103'then if p(v210) then v210^c,| |n210^c fi fi/)/
+(if '***'='2104'then if p(v210) then v210^d,| |n210^d fi fi/)/
+(if '***'='2105'then if p(v210) then v210^g,| |n210^g fi fi/)/
+(if '***'='2106'then if p(v210) then v210^e,| |n210^e fi fi/)/
+(if '***'='2107'then if p(v210) then v210^o,| |n210^o fi fi/)/
+(if '***'='2108'then if p(v210) then v210^x,| |n210^x fi fi/)/
+(if '***'='2109'then if p(v210) then v210^y,| |n210^y fi fi/)/
+(if '***'='2110'then if p(v210) then v210^z,| |n210^z fi fi/)/
+(if '***'='2116'then if p(v210) then v210^J,| |n210^J fi fi/)/
+(if '***'='2118'then if p(v210) then v210^H,| |n210^H fi fi/)/
+(if '***'='2119'then if p(v210) then v210^H,| |n210^H fi fi/)/
+mpl,

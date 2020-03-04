@@ -1,0 +1,5 @@
+(if p(v122) then 
+    if v122:'['then v122^a,
+       if p(v122^b) then ' - 'v122^b fi 
+    else |; |+v122^a*6|.|,v122^a*4.2|.|,v122^a.4,
+       if p(v122^b) then ' - ',v122^b*6|.|,v122^b*4.2|.|,v122^b.4 fi fi fi),' ã.',"ã."d122^b

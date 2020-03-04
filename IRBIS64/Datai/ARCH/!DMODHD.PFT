@@ -1,0 +1,6 @@
+'900$'if '***'='9001'then v900^c else 
+         if '***'='9002'then v900^2 else 
+            if '***'='9003'then v900^3 else 
+               if '***'='9004'then v900^4  
+      fi fi fi fi
+

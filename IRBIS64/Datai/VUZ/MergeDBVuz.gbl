@@ -1,0 +1,268 @@
+0
+//17 импорт-слияние в БД VUZ
+// 991^? - признак создания новых в VUZ
+// 991^! - признак удаления старых контингентов из найденной записи DISC - удаление в другом задании
+// 991^= - имя БД каталога, которую надо обновить
+// в g10 признак, что в VUZ были обновления
+// в 993 - запрос на поиск дисциплины в VUZ - беру первую
+// в 994 - кладу ИД найденной дисциплин, кот. будет дописываться
+// g21 и g22 использую для создания связанных контингентов
+// новые контингенты в поле 831
+//-----------отладка
+PUTLOG
+mhl,'На загрузку запись: ',v3,", "v4,,", "v5,,", "v6,,mpl,,
+//                       PUTLOG
+//                       'v991=',v991,,,,,'  v993=',v993,,,
+DEL
+994
+*
+
+
+ADD
+994
+
+&uf('+3S,10,!',,,,v993,,,'!,v3^0/'),,,,&uf('+7W20#'),,,&uf('+7W21#'),,&uf('+7W22#')
+
+//-----------отладка
+PUTLOG
+'Запрос ',,,v993,,,if &uf('Av994#1')<>'' then '. Найдена для обновления: ',,,&uf('Av994#1') fi,
+//---------в g21 кладу новое поле 83
+IF
+if p(v994) then '1'  fi
+//------------------------------------------в запись дисциплины, в g20 кладу ИД дисциплины, 
+CORREC
+'*'
+"^3"v3^A,,,"^4"v4,,"^5"v5,,"^6"v6,,"^!"v991^!/,,v83
+'IDD=',,&uf('Av994#1'),
+1
+IF
+if p(v1001) then '1' fi,,,,,,,&uf('+7W20#',v3^0)
+PUTLOG
+'БД VUZ: заменено в записи ',,,f(val(mfn),0,0),,,
+//---------------обновляю поля 4,5,6, поле 3 не обновляю!
+REP
+4
+1
+&uf('Av1001^4#1')
+
+REP
+5
+1
+&uf('Av1001^5#1')
+
+REP
+6
+1
+&uf('Av1001^6#1')
+
+ADD
+4
+
+if v4='' then &uf('Av1001^4#1') fi
+
+ADD
+5
+
+if v5='' then &uf('Av1001^5#1') fi
+
+ADD
+6
+
+if v6='' then &uf('Av1001^6#1') fi
+
+IF
+if &uf('Av1001#2')<>'' then '1' fi,,&uf('+7W12#'),,
+//-----------------добавляю поле 83 и 831 с проверкой , если есть поле задано в исх. файле
+ADD
+83
+
+if rsum( (if p(v83) then if &uf('Av1001^A#2')='' or &uf('+97',&uf('Av1001^A#2'))=&uf('+97',v83^A) then  if  &uf('Av1001^O#2')='' or &uf('+97',&uf('Av1001^O#2'))=&uf('+97',v83^O) then if  &uf('Av1001^V#2')='' or &uf('+97',&uf('Av1001^V#2'))=&uf('+97',v83^V) then  if &uf('Av1001^N#2')='' or &uf('+97',&uf('Av1001^N#2'))=&uf('+97',v83^N) then  if  &uf('Av1001^C#2')='' or &uf('+97',&uf('Av1001^C#2'))=&uf('+97',v83^C) then  if  &uf('Av1001^F#2')='' or &uf('+97',&uf('Av1001^F#2'))=&uf('+97',v83^F) then '1,' fi fi fi fi fi fi fi ) )=0 then '^I',,&uf('Av3^0#1'),,,,,&uf('Av1001#2'),,,&uf('+7W12#1'),,fi
+
+IF
+if val(g12)>0 then '1' fi
+//---добавляю в 831 как новый контингент
+ADD
+831
+
+'^I',,,,&uf('Av3^0#1'),,,,&uf('Av1001#2'),,,,&uf('+7W21#',,,'^I',,,,&uf('Av3^0#1'),,,,&uf('Av1001#2')  ),,,&uf('+7W22#',,'^D',v3^0,'^B',v4 )
+
+FI
+//---конец добавленя поля 83
+FI
+//-----в задание на удаление старых контингентов
+PUTLOG
+if &uf('Av1001^!#1')='1' then 'LINKCORRTASK=MergeDBVuzDEL%MFN=',,,f(val(mfn),0,0),,'%' fi
+DEL
+1001
+*
+
+
+FI
+END
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//---------------------------конец обновления VUZ
+IF
+if a(v994) and v991: '^?1' then '1' fi
+//--------------------------нет записей на обновление - новая дисциплина
+NEWMFN
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ALL
+ADD
+991
+
+&uf('+7W21#',,v83),,,&uf('+7W22#',,'^D',v3^0,'^B',v4 )
+
+DEL
+991
+*
+
+
+DEL
+993
+*
+
+
+END
+PUTLOG
+'БД VUZ: создана новая запись - ',v3^A
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------конец создания записи VUZ
+IF
+if g21<>'' then '1' fi
+//----------------------выполнение связи
+NEWMFN
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+68
+XXXXXXXXXXXXXXXXXXX
+g21
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+
+g22
+
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Создана новая запись VUZ (',v68^A,v68^N,v68^C,v68^V,v68^O,'-',v68^F,,,')'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+
+IF
+if v991^=<>'' and g20<>'' then '1' fi
+//---------------------на замену в БД каталога 
+// по ИД из дописанной записи беру шифры БО в 994
+DEL
+994
+*
+
+
+ADD
+994
+
+&uf('+3S',,v991^=,,,,',10,!',,,,'IDD=',g20,,'!,"I="v903/')
+
+//----------отладка
+//                       PUTLOG
+//                       ' 994: ',,(v994+|,  |)
+//                       PUTLOG
+//                       'В каталоге ',,v991^=,,,' по запросу ',,'IDD=',g20,,,' найдено ',,,(v994|, |)
+
+IF
+if p(v994) then '1' fi
+//---------------------------------цикл по найденным для обновления записям каталога
+DEL
+995
+*
+
+
+ADD
+995
+
+(v994/)
+
+REPEAT
+//                       PUTLOG
+//                       'CORREC по БД ',,,v991^=,,,,,,,,' по запросу ',,,&uf('Av995#1'),,,,
+CORREC
+v991^=
+if g20<>'' then '^0',g20 else "^0"v3^0 fi,,"^3"v3^A,,,"^4"v4,,"^5"v5,,"^6"v6/v83
+mpu,,&uf('Av995#1')
+
+//             PUTLOG
+//            '1001.1=',,&uf('Av1001#1'),,,,'1001.2=',,&uf('Av1001#2')
+//                  'в записи ----- ',,,f(val(mfn),0,0),,,
+IF
+if &uf('Av1001#2')<>'' then '1' fi,,,&uf('+7W12#')
+//-----------------добавляю поле 691 с проверкой , если есть поле в исх.записи
+ADD
+691
+
+if rsum( (if p(v691) then if &uf('Av1001^A#2')='' or &uf('+97',&uf('Av1001^A#2'))=&uf('+97',v691^A) then if &uf('Av1001^O#2')='' or &uf('+97',&uf('Av1001^O#2'))=&uf('+97',v691^O) then if &uf('Av1001^V#2')='' or &uf('+97',&uf('Av1001^V#2'))=&uf('+97',v691^V) then if &uf('Av1001^N#2')='' or &uf('+97',&uf('Av1001^N#2'))=&uf('+97',v691^N) then if &uf('Av1001^C#2')='' or &uf('+97',&uf('Av1001^C#2'))=&uf('+97',v691^C) then if &uf('Av1001^F#2')='' or &uf('+97',&uf('Av1001^F#2'))=&uf('+97',v691^F) then '1,' fi fi fi fi fi fi fi) )=0 then if &uf('Av1001^0#1')<>'' then '^I',,&uf('Av1001^0#1') fi,,,,if &uf('Av1001^3#1')<>'' then '^D',,&uf('Av1001^3#1') fi,,,,if &uf('Av1001^4#1')<>'' then '^S',,&uf('Av1001^4#1') fi,,,,if &uf('Av1001^5#1')<>'' then '^B',,&uf('Av1001^5#1') fi,,,,if &uf('Av1001^6#1')<>'' then '^K',,&uf('Av1001^6#1') fi,,,,,&uf('Av1001#2'),&uf('+7W12#1') fi
+
+IF
+if val(g12)=1 then '1' fi
+PUTLOG
+'БД ',,&uf('+D'),,': добавлено повторение поля 691 в записи ',,,f(val(mfn),0,0),,,
+FI
+
+FI
+DEL
+1001
+*
+
+
+END
+DEL
+995
+1
+
+
+UNTIL
+if p(v995) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+991
+*
+
+
+DEL
+993
+*
+
+
+DEL
+994
+*
+
+

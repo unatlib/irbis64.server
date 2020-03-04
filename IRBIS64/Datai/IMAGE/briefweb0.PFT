@@ -1,0 +1,17 @@
+&uf('S1'),'<tr><td>',&uf('SA'),'</td>',
+'<td>',
+v503^a,v700^a," "v700^b,v700^x,", "v970^a," "v970^b,v710^s".",v710^a,". "v71
+0^b,if p(v710^n)or p(v710^c)or p(v710^d)or p(v710^f)or p(v710^e)then'('v710^d";"
+,v710^f,if p(v710^f)then";"v710^e else v710^e fi,";"v710^h,";"v710^i,v710^n";",v
+710^c,')'fi,"."d710,v971^b,if (p(v971^d)or p(v971^f)or p(v971^e))then'('v971^d";
+ ",v971^f,if p(v971^f)then"; "v971^e else v971^e fi')'fi"."d971^b,v461^x,","v461
+^y,v461^b,if p(v503)or p(v700)or p(v710) or p(v461^a)or p(v461^x)or p(v461^b)the
+n x2 fi,v461^c,if p(v461)then". "v200^v,":"v200^a else v200^a fi,"/"v200^f,if v9
+00^c:'34'then |: |v923^i else | |v923^h,|: |v923^i,| |v923^k,|: |v923^l fi,if v9
+20='J'then". - <b>Журнал выходит с</b> "v210^d"г."else". - "v210^d fi,if v920:'NJ'then 
+ref(l(|I=|v933), v200^a)," - "v934"г."," т."v935,",N "v936,"  <b>(Введено оглавлени
+е)</b>"d922 fi," // "d463(|;|+v463^c,|. -|v463^d,|:|v463^g,|, |v463^j,|. т.|v463^v,i
+f p(v463^v)then|:|v463^a else |. |v463^a fi,|,N |v463^h,if p(v463^h)then|:|v463^
+i else |. |v463^i fi,|, |v463^k,if p(v463^k)then|:|v463^l else |. |v463^l fi,|.-
+ Ст.|v463^N,|.-С.|v463^s),
+'</td></tr>',

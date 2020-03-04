@@ -1,0 +1,39 @@
+/* RDR: на записях RDR
+/* используется в таблице LicenDisc, KoDiscD, KoDiscPoly
+/* фильтруется по принадлежности к текущему семестру и параметрам отбора
+/* g991^O
+/* g991^A
+/* g991^N
+/* g991^C
+/* g991^F
+/* g993=1 признак не учитывать отбор, всего студентов в полугодии
+/* g991^=  0-для любого семестра
+&uf('+7W40#'),,,
+if g991^=='' or g991^=='1' 
+then 
+   &uf('+7W40#'
+    if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+    then 'V' 
+    else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or            
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+      then 
+        'O' 
+      fi 
+    fi),,
+fi,,,,,,,,,,,,,,
+if rsum((if p(v90) 
+                then 
+                    if &uf('Ag993#1')='1' or &uf('Ag991^O#1')='' or &uf('Ag991^O#1')=' ' or s('!',&uf('Ag991^O#1'),'!'): s('!',v90^O,'!') then 
+                    if &uf('Ag993#1')='1' or &uf('Ag991^A#1')='' or &uf('Ag991^A#1')=' ' or s('!',&uf('Ag991^A#1'),'!'): s('!',v90^A,'!') then 
+                    if &uf('Ag993#1')='1' or &uf('Ag991^N#1')='' or &uf('Ag991^N#1')=' ' or s('!',&uf('Ag991^N#1'),'!'): s('!',v90^N,'!') then 
+                    if &uf('Ag993#1')='1' or &uf('Ag991^C#1')='' or &uf('Ag991^C#1')=' ' or s('!',&uf('Ag991^C#1'),'!'): s('!',v90^C,'!') then 
+/* проверка текущего семестра
+                   if &uf('Ag40#1')='O' and s(',0,1,3,5,7,9,11,13,'): s(|,|v90^F|,|) or 
+                      &uf('Ag40#1')='V' and s(',2,4,6,8,10,12,14,'):  s(|,|v90^F|,|) or
+                      v90^F=''  or 
+                      &uf('AG40#1')=''  
+                   then '1,' 
+                fi fi fi fi fi fi)) >0 then '1,',
+fi,,,

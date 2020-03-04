@@ -1,0 +1,19 @@
+if v920='J' then else 
+   if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else 
+      if rsum((if p(v910) and &unifor(|Kmhrvn.mnu\|v910^d)=''then'1;'else'0;'fi))>0 then 
+         if s(v905^c)<>''or &unifor('IPRIVATE,KKI,')<>''then'<br> <b> Ýêç-ðû: </b>',
+            (if p(v910) then 
+                if '2 6 7':v910^a and &unifor(|Kmhrvn.mnu\|v910^d)<>''then else| ; |+d910,v910^d,
+                   if p(v910^c)then' ('v910^c*6.2'.'v910^c*4.2'.'v910^c.4'ã.',| (|d910^1 else| (|d910^1 fi,
+                      v910^1|ýêç.)|,| Èíâ.|v910^b,' - ',v910^e,
+                   if val(v910^e)>0 then 
+                      if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3') fi fi,
+                   if a(v910^e)then &unifor('Av10^d#1'),
+                      if val(&unifor('Av10^d#1'))>0 then 
+                         if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3') fi fi,
+                      if &unifor('Av10^d#1')='' then'Á.ö.'fi 
+                   fi,|)|d910^c, 
+             fi fi) 
+         else'<br><b> Ýêç-ðû: </b>',&unifor('O') fi,
+         ("<dd><b> Êîïèÿ:</b>  "| ; |+d993,&unifor('G2='v993^a),|, Øèôð |v993^b,| (|v993^d|)|),'<br> '
+fi fi fi,

@@ -1,0 +1,32 @@
+'{',if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на ПРЕД
+МЕТНЫЕ РУБРИКИ\b0 ',if p(v210) then '\par 'fi                                   
+                   if p(v210) and a(v510) and a(v410) then '\par ',v210^a," - "v
+210^b," - "v210^c," - "v210^d else if p(v410) and p(v510) then '\par ',v210^a," 
+- "v210^b," - "v210^c," - "v210^d else if a(v410) then '\par ',v210^a," - "v210^
+b," - "v210^c," - "v210^d fi fi fi,if v510:'^5' and (not(v305:'^b')) and (not(v5
+10^5*1:'0')) then if v510:'^5h' then '\par \tab \b см.также под более узким поня
+тием:\b0 ' else if v510:'^5g' then '\par \tab \b см.также под более широким поня
+тием:\b0 ' fi fi fi,if p(v510) and (not(v510:'^5')) and (not(v510:'^0'))then '\p
+ar \tab \b см.также:\b0 ' else if v305:'^b' and v510^5:'0' then ("\par \b "v305^
+a"\b0 ",v305^b,|,|v305^c,|,|v305^d,|,|v305^e/) else if v510:'^0' then ("\par \b 
+"v510^0"\b0 ") fi fi fi,&unifor('S0')if p(v510) and (not(v510^5*1:'0')) then if 
+v510:&unifor('Av510#2') then (if p(v510) then '\par '&unifor('S1A')'.'v510^a,| -
+ |v510^b,| - |v510^c,| - |v510^d fi/) else '\par 'v510^a,| - |v510^b,| - |v510^c
+,| - |v510^d  fi fi,if p(v410) and p(v510) and (not(v510^5*1:'0')) and (not(v410
+^5*1:'0')) then "\par ***"d410 fi,&unifor('S0')if p(v410) and (not(v410^5*1:'0')
+) then if v410:&unifor('Av410#2') then (if p(v410)then '\par '&unifor('S1A')'.'v
+410^a,| - |v410^b,| - |v410^b,| - |v410^c,| - |v410^d fi/) else '\par ',v410^a,|
+ - |v410^b,| - |v410^c,| - |v410^d  fi fi,if v410:'^5' and (not(v305:'^b')) and 
+(not(v410^5*1:'0')) then if v410:'^5h' then '\par \tab \b см. под более узким по
+нятием\b0 ' else if v410:'^5g' then '\par \tab \b см. под более широким понятием
+\b0 ' fi fi fi,if p(v410) and (not(v410:'^5')) then '\par \tab \b см.\b0 ' else 
+if v305:'^b' and v410^5:'0' then ("\par \b "v305^a"\b0 ",v305^b,|,|v305^c,|,|v30
+5^d,|,|v305^e/) else if v410:'^0' then ("\par \b "v410^0"\b0 ")fi fi fi,if p(v41
+0) then '\par 'v210^a," - "v210^b," - "v210^c," - "v210^d fi fi,if p(v210) and p
+(v310) then '\tab \b Ссылочная запись на ПРЕДМЕТНУЮ РУБРИКУ\b0 ','\par ',v210^a,
+if a(v210^g) then " "v210^b else " "v210^g fi,("\par \b "v310^a"\b0 ",| |v310^b,
+|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p(v210) and p(v320) then '\tab \b Общая по
+яснительная запись на ПРЕДМЕТНУЮ РУБРИКУ\b0 ','\par ',v210^a,if a(v210^g) then "
+ "v210^b else " "v210^g fi,'\par ',v320^a fi,if p(v300) then '\par \tab \bПримеч
+ание:  \b0 '(v300^a/) fi'\par -------------}',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,

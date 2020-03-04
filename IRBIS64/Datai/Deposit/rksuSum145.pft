@@ -1,0 +1,51 @@
+/* наименований на баланс без периодики
+'^A',,if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else if rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then if v910^4='' then'1 ' fi fi fi/))>0 then '1 ' fi fi,,,,,,
+/* экземпляров на баланс без периодики
+'^B',,if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then if a(v910^4) then v910^1,|1|n910^1,,' ' fi fi fi)),0,0)  fi,,,,,
+/* стоимость без периодики
+'^C',,if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(if a(v910^4) then v910^1,|1|n910^1 fi,' 0'),0,2) ' '  fi fi/)),0,2)    fi,,,,,
+/* наименований НЕ на баланс без периодики - может отличаться от 17^B если не на баланс признак в 910^4
+'^D',,if (v920:'NJ' or v920:'Spec' and p(v933))then else if v215^y<>'' or rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') and v910^4<>'' then'1 'fi fi))>0 then '1' fi fi,,,,,,,,
+/* экземпляров НЕ на баланс без периодики
+'^E',,if (v920:'NJ' or v920:'Spec' and p(v933))then else if v215^y<>''then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' '  fi fi)),0,0)   else if v215^y='' and s(v910^4)<>''then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then if p(v910^4) then v910^1,|1|n910^1 ' '  fi fi fi)),0,0) fi fi fi,,,,,,,,
+/* стоимость НЕ на баланс без периодики
+'^F',,if (v920:'NJ' or v920:'Spec' and p(v933))then else if v215^y<>''then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2) ' '   fi fi)),0,2)    else if v215^y='' and s(v910^4)<>''then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(if p(v910^4) then v910^1,|1|n910^1 fi,' 0'),0,2) ' '   fi fi)),0,2)  fi fi fi,,,,,,,
+/* наименований всего без периодики
+'^G',,if (v920:'NJ' or v920:'Spec' and p(v933)) then else if s(| |v910^u| |):&uf('Av991^A#1') then '1' fi  fi,,,,,,,,
+/* экземпляров всего с периодикой
+'^H',,f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' '   fi fi)),0,0) ,,,,,,,,
+/* стоимость всего
+'^I',,f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1')fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2) ' 'fi fi)),0,2),,,,,,,,
+/* сумма всего на баланс по всем записям
+'^2',,if p(v910) then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then if '2 7':v910^a then else  if &uf('Av215^y#1'):'ДА'then else f(val(if v910^4:'ДА'then else v910^e ,if a(v910^e)then &unifor('Av10^d#1')fi fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2) ' '   fi fi fi fi)),0,2) fi,,,,,,,,
+/* наименований  книг-текстовых материалов без брошюр
+'^J',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '03 04 05 07 ':v900^b.2 and a(v933) and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then if s(| |v910^u| |):&uf('Av991^A#1') then'1' fi fi fi,,,,,,,,
+/* экземпляров  книг-текстовых материалов без брошюр
+'^K',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '03 04 05 07 ':v900^b.2 and a(v933) and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi fi
+/* количество наименований (томов) многотомников
+'^L',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '03 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then if s(| |v910^U| |):&uf('Av991^A#1') then '1' fi fi fi,,,,,,
+/* количество  экземпляров многотомников
+'^M',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '03 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi fi
+/*  количество наименований (выпусков) продолжей
+'^N',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '04 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then if s(| |v910^u| |):&uf('Av991^A#1') then'1'fi fi fi,,,,,,
+/*  количество  экземпляров продолжей
+'^O',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '04 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi fi,,,,,,
+/*  количество наименований книг-моноизданий
+'^P',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '05 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then if s(| |v910^u| |):&uf('Av991^A#1') then'1'fi fi fi,,,,,,
+/*  количество экземпляров книг-моноизданий
+'^Q',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '05 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi fi,,,,,,
+/*  количество выпусков монографических серий
+'^R',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '07 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then if s(| |v910^u| |):&uf('Av991^A#1') then'1'fi fi fi,,,,,,
+/*  количество экземпляров монографических серий
+'^S',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then else if '07 ':v900^b.2 and (a(v900^t) or 'a 1 2 3 4 5 b':v900^t or v900^t:'a1' or v900^t:'a2') then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi fi,,,,,,
+/*  количество наименований брошюр 
+'^T',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then if s(| |v910^u| |):&uf('Av991^A#1') then'1'fi fi,,,,,,
+/*  количество экземпляров брошюр
+'^U',,if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98'then f(rsum((if p(v910) then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi,,,,,,
+/*  количество экземпляров журналов
+'^V',,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^b): 'a' then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi,,,,,,
+/*  количество экземпляров журналов-информационных изданий
+'^W',,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^b' 'v110^f): 'a 541' then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi),0,0) fi,,,,,,
+/*  количество экземпляров газет
+'^X',,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^b): 'c' then f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1') then v910^1,|1|n910^1 ' ' fi fi)),0,0) fi,,,,,
+

@@ -1,0 +1,24 @@
+'</>',
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<DIV ALIGN=LEFT><b> Издание в обработке. Не выдается<br> </b> </dd>' fi fi, 
+&uf('6osvex_H'), 
+&uf('6orchifr_H'), 
+&uf('6ozboz_H'), 
+&uf('6otitkn_H'), mhl,
+Oizd, 
+ospec, 
+ovixd, 
+ofizxar_H, 
+ if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,
+oistasp_H, 
+oprimd_H, 
+ogrudk_H, 
+orubdks_H, 
+oprip481_H, 
+odoptd_H, 
+&uf('6oex910_H'), 
+ofinal_H, 
+bibl390_H, 
+&uf('6rating'),
+&uf('6others0'),
+'<br>',&unifor('!')

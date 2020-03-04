@@ -1,0 +1,4 @@
+if (l("I="v1)<=0) or (val(ref(l("I="v1),mfn))=val(mfn)) 
+   then &uf('+7W1#'),(if v3<>'' then if v3^g='' then &uf('+7U1#0') else &uf('+7U1#1') fi fi),if (g1:'0') and (g1:'1') then '1 Количественные ограничения в одной записи не могут иметь разные единицы измерения' else '0', fi
+   else '1 Дублетный индекс ', v1,ref(l("I="v1),' (См. MFN ',f(val(mfn),0,0),')') 
+fi,

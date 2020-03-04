@@ -1,0 +1,99 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=8
+CELL_TAB_COL_COUNT=8
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=\b № п/п\b0 
+CELL_TAB2_3=&uf('S1A')
+CELL_TAB2_4=По центру
+CELL_TAB2_5=Нет
+CELL_TAB3_1=7
+CELL_TAB3_2=\b Заглавие учебника\b0 
+CELL_TAB3_3= '\b 'v461^x,   if p(v461)then       if s(v461^x)<>''then'\b0 . 'V461^C       else &unifor('E3'v461^c),'\b0  ',&unifor('F3'v461^c)       fi,      | : |v461^e,|/ |v461^f,   fi,   "\b "d461,v700^a," "v700^b,'\b0 '," "v700^x,", "v970^a," "v970^b,   "\b   "v200^v"\b0 ",   if v200:'^v'then" : "v200^a else       if s(v700v710)=''then'\b ',&unifor('E3'v200^a),'\b0  ',      &unifor('F3'v200^a) else "  "v200^a fi    fi,   if v920:'NJ'then ref(l(|I=|v933), v200^a)," - "v934"г.",   " т."v935,",N "v936    fi,   | : |v200^e,|, |v923^h,| : |v923^i,|, |v923^k,| : |v923^l,|/ |v200^f,   |; |v200^g,   (if v123^x:'0'then ". - 1: "|, 1: |+v123^d,|; 1: |v123^e,v123^f fi),   ". -"v205^a,   if p(v205^a)then"/ "v205^f else". -"v205^f fi,    ". -Взамен "v982^a,   if a(v982^a)then". -"d982 else"; "d982 fi, "Введ. с "v982^b," по "v982^c,    (". -"|; |+v210^a,|; |v210^x,|; |v210^y,|: |v210^c)   if p(v461)then       if s(v210^a,v210^c)<>''then", "v210^d else". -"v210^d fi    else       if s(v463v110)<>''then else ", "v210^d    fi fi,   if v920='J'then" - "d210^d,v210^e fi," ("v210^1")",". -"v215^a," "v215^1,   if s(v215^1)=''then       if v215^a:'с'or v215^a:'p'then else" с."d215^a fi    fi,":"v215^c,"; "v215^d,   if p(v215^x)then       if val(v215^x)=0 then"  тираж "v215^x else"  "v215^x" экз."fi    fi, 
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=1.75
+CELL_TAB4_2=\b Осн/Доп\b0 
+CELL_TAB4_3=(if p(v691) then       if v691^a=&unifor('Av991^a#1') and          (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and          (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and          (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and          (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')      then v691^g|\par |fi fi)
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=2
+CELL_TAB5_2=\b Всего\b0 
+CELL_TAB5_3=f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0)/
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=2
+CELL_TAB6_2=\b Для студентов заданной формы\b0 
+CELL_TAB6_3=f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')) * val(if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e) else '0' fi )  / rmax('1;'f(rsum('0; ',if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then '1;' else '0;'fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; ',fi,(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then else &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; 'fi fi)),0,0)),0,0)
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Да
+CELL_TAB7_1=2.25
+CELL_TAB7_2=\b Книгообеспеченность\b0 
+CELL_TAB7_3=if val(if rsum('0;',(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then  &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e) else '0' fi )=0 then else f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0'))   / rmax('1;'f(rsum('0; ',if rsum('0;',(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;'fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; ',fi,(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then else &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; 'fi fi)),0,0)),0,2) fi/
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Да
+CELL_MULTI_TAB_ROW_COUNT=2
+CELL_MULTI_TAB_COL_COUNT1=6
+CELL_TAB1_1_1=1
+CELL_BORDER1_1=28
+CELL_TAB1_1_2=\b № п/п\b0 
+CELL_TAB1_2_1=7
+CELL_BORDER1_2=28
+CELL_TAB1_2_2=\b Заглавие учебника\b0 
+CELL_TAB1_3_1=1.75
+CELL_BORDER1_3=28
+CELL_TAB1_3_2=\b Осн/Доп\b0 
+CELL_TAB1_4_1=2
+CELL_BORDER1_4=30
+CELL_TAB1_4_2=\b Всего\b0 
+CELL_TAB1_5_1=2
+CELL_BORDER1_5=30
+CELL_TAB1_5_2=\b Для студентов заданной формы\b0 
+CELL_TAB1_6_1=2.25
+CELL_BORDER1_6=28
+CELL_TAB1_6_2=\b Книгообеспеченность\b0 
+CELL_MULTI_TAB_COL_COUNT2=5
+CELL_TAB2_1_1=1
+CELL_BORDER2_1=26
+CELL_TAB2_1_2=
+CELL_TAB2_2_1=7
+CELL_BORDER2_2=26
+CELL_TAB2_2_2=
+CELL_TAB2_3_1=1.75
+CELL_BORDER2_3=26
+CELL_TAB2_3_2=
+CELL_TAB2_4_1=4
+CELL_BORDER2_4=30
+CELL_TAB2_4_2=\b Кол-во экз-ров\b0 \par 
+CELL_TAB2_5_1=2.25
+CELL_BORDER2_5=26
+CELL_TAB2_5_2=
+CELL_SUM00='Общее кол-во учебников:   'f(val(v1),5,0)' экз. \par \par   Из них - для студентов заданной формы:   'f(val(v2),5,2),if val(v2)=0 then '0' fi,' экз. \par \par   Книгообеспеченность:   'if val(v2)=0 then '-'else f(val(v3),5,2) fi'\par '
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=200
+CELL_SORT4=0
+CELL_SORT5=if p(v691) then if rsum('0;',(if p(v691) then if &uf('Av991#1'):v691^a and (&uf('Av991#1'):v691^b or (not(&uf('Av991#1'):'^b'))) and (&uf('Av991#1'):v691^c or (not(&uf('Av991#1'):'^c'))) and (&uf('Av991#1'):v691^d or (not(&uf('Av991#1'):'^d'))) and (&uf('Av991#1'):v691^f or (not(&uf('Av991#1'):'^e'))) then '1;'else '0;' fi fi)) >0 then v461^x,v461^b,&unifor("9"d461^c,&unifor('+S0',v461^c)),v700^a,v700^d,", "v700^g,if a(v700^g) then" "v700^b fi,v710^a,v200^v,&unifor("9"d200^a,&unifor('+S0',v200^a)),if v920:'NJ'then ref(l(|I=|v933),&unifor("9"d200^a,&unifor('+S0',v200^a)),|/ |v200^f),v934,"/"v935,"/"v936 fi,v963^x,&unifor("9"d463^c,&unifor('+S0',v463^c)),v463^j,v463^v,v463^h,v463^k fi fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=tabkojw.wss
+HDR_PFT=tabkojhw.pft
+HDR_PARAMS_COUNT=0

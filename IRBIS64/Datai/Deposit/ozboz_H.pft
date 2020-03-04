@@ -1,0 +1,34 @@
+mhl,'<b> ',(if p(v740)then if v740^u='ÄÀ'then v740^a|. |,v740^b|. |,|(|v740^c|). |,v740^t,if s(v740^i,v740^f)=''then '. ' else |. |v740^i,| (|v740^f|)|,'. 'fi,v470^n|.| fi,fi)
+v700^a," "v700^d,", "v700^g, 
+   if a(v700^g)then", "d700^b 
+      if v700^b:'. ' then v700^b else 
+         if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+         else v700^b 
+   fi fi fi'</b>', 
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+      if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')',", "v700^7,'. ', 
+   else ", "v700^7". " if a(v700^7)then "."d700^g, fi,
+   fi,if s(v700^1,v700^c,v700^b,v700^g,v503)=''then"<b>.</b>"d700^a else " "d700^a fi
+   '<b>'if v710^s<>''then if &uf('Kstr.mnu|'v710^s)<>''then &uf('Kstr.mnu|'v710^s)else v710^s fi fi,". "d710^s,v710^a, 
+   if s(v710^n,v710^c)<>''then' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d" ; ",v710^f, 
+      if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+   fi,". "d710,v971^b, 
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d" ; ",v971^f, 
+      if p(v971^f)then" ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+   fi,". "d971^b, 
+   (if v509^2:'1' then 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| 
+          fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,if v509^2:'1' then '.'fi fi),
+    if p(v982^u) then v982^0' 'v982^9'<br>'fi,'</b> ', 
+   if s(v700v710,v981,v503)='' and &unifor('Av509^2#1')<>'1' then'<dd> <b> '&unifor('E3'v200^a),'</b>', 
+      if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
+   else 
+      if p(v710) and v517^t.3:'500' then 
+         (if p(v517) then if v517^t.3:'500' then if v517^9:'1' then else |<b>|v517^a|.</b>|,break fi fi fi),
+      fi,"<dd>"v200^a 
+   fi,

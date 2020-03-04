@@ -1,0 +1,3 @@
+'\pard \li108 \ri108 ','\f0\qc \fs24 Список штрихкодов \par ','экземпляров фонда', 
+if &unifor('IPRIVATE,PRFDMHR,')<>'' then ' '&unifor('IPRIVATE,PRFDMHR,') fi, 
+', НЕ прошедших проверку,  \par по состоянию на ',if v991^a=''then &unifor('+7W10#'&unifor('3')),g10*6.2,'.',g10*4.2,'.',g10.4' г.', else v991^a*6.2,'.',v991^a*4.2,'.',v991^a.4,' г.'fi, if v991^B<>''then ' для подразделения ',v991^b fi,'\par \par',

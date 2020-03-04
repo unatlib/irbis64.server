@@ -1,0 +1,17 @@
+if s('M0 P1 B1 B2 B3'): &uf('Av942^A#',,&uf('+N942') ) 
+then 
+  if v31: '01' then 'O1' else if s('02 05 06 07 08'): v31 then 'O3' fi fi 
+else 
+  if s('K1 K2 K3 K6'): &uf('Av942^A#',,&uf('+N942') ) 
+  then
+    'O3' 
+  else 
+     if s('M4 K4'): &uf('Av942^A#',,&uf('+N942') ) 
+     then
+       if v31: '01' then 'O4' else if s('02 05 06 07 08'): v31 then 'O3' fi fi
+     else 
+        if s('N1 N5 N3 N72 N81 N01 N0'): &uf('Av942^A#',,&uf('+N942') ) 
+        then
+          'Z1' 
+        else 
+fi fi fi fi 

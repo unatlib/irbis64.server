@@ -1,0 +1,29 @@
+if s(v14,v421,v422)<>'' or &uf('J,B422='v19^b)<>'' 
+then 
+'<table width="100%"><tr><td>'
+'<b>  Связанные записи (просмотр, отбор, экспорт) : </b>'
+   if s(v14,v422)<>'' or &uf('J,B422='v19^b)<>'' then '<A HREF="IRBIS:2,,,,',&uf('+3EI='v903),'?PFTNAME_DEFAULT=Derevo_ARCH_wn&TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&CHECKNAME=CHECKINDEX">','ДЕРЕВО''</A>' fi,
+   if s(v421,v422)<>''  then 
+      if p(v14) or &uf('J,B422='v19^b)<>''then '<b> / </b>' fi 
+      '<A HREF="IRBIS:2,,,,',&uf('+3EI='v903),'?PFTNAME_DEFAULT=ARCH_WN&TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&CHECKNAME=CHECKINDEX">','ГНЕЗДО ''</A>' fi,
+fi,'</td></tr></table>'
+'<br>'
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<dd><b>Издание в обработке. Не выдается<br><b>' fi fi, 
+&uf('6osvex_H'), 
+&uf('6orchifr_arch_H'), 
+&uf('6ozboz_arch_H'), 
+&uf('6otitkn_arch_H'),
+'. - ',ospec_arch_H, 
+'. - ',ovixd, 
+'. - ',ofizxar_H, 
+'. - ',oser_arch, 
+'. - ',oprim_arch_H, 
+oprimd_arch_H, 
+ogrudk_arch_H, 
+orubdks_arch_H, 
+odoptd_arch_H, 
+oex910_arch_H, 
+ofinal_arch_H, 
+'<br>',&unifor('!'), 
+

@@ -1,0 +1,62 @@
+if rsum((if p(v961) then if p(v961^a) and a(v961^4) then'1;'else'0;'fi fi))
+   >0 then  
+   if rsum((if p(v961) then if p(v961^a) and a(v961^4)then'1;'else'0;'fi fi))
+      >4 then &unifor('S0'),
+      (if p(v961) then 
+       if p(v961^a) and a(v961^4) then 
+          if val(&unifor('S1A'))>3 then else|, |+d961,
+             if p(v961^9) then v961^a,| |v961^d,| |v961^b,
+                if a(v961^b) then v961^g fi else v961^b| |,
+                 if a(v961^b) then v961^g| | fi,v961^a,| |v961^d 
+      fi fi fi fi),if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' и др'else' et al'fi 
+   else 
+      (if p(v961) then 
+          if p(v961^a) and a(v961^4) then|, |+d961^a,
+             if p(v961^9) then v961^a,| |v961^d,| |v961^b,
+                if a(v961^b) then v961^g fi 
+             else v961^b| |,
+                if a(v961^b) then v961^g| | fi,v961^a,| |v961^d 
+      fi fi fi) 
+   fi,
+   if rsum((|1;|d961^4,|0;|n961^4))>0 or rsum((|0;|d962^z,|1;|n962^z))>0 then 
+      if rsum((|0;|d961^4,|1;|n961^4))>0 or s(v962^z)<>''then'; ' 
+   fi fi,&unifor('S0'),
+   (if p(v961^a) and p(v961^4) then 
+       if val(&unifor('S1A'))=1 then else', 'fi,v961^4*4| |,
+       if p(v961^9)then v961^a,| |v961^d,| |v961^b,
+          if a(v961^b) then v961^g fi else v961^b| |,
+          if a(v961^b) then v961^g| |fi,v961^a,| |v961^d 
+   fi  fi),
+   if rsum((|0;|d962^z,|1;|n962^z))>0 then &unifor('S0'),
+      if rsum((|1;|d961^4,|0;|n961^4))>0 then '; 'fi,
+      (if p(v962) then 
+          if p(v962^z) then else 
+          if val(&unifor('S1A'))=1 then else',!!! 'fi,v962^7,
+             if a(v962^7) then v962^a,
+                if s(v962^n,v962^c)<>''then' ('v962^n|; |,v962^c')'fi,|. |v962^b,
+                if s(v962^d,v962^f,v962^e)<>''then' ('v962^d|; |,v962^f,
+                   if p(v962^f)then|; |v962^e else v962^e fi,|/ |v962^h,|/ |v962^i')'
+             fi fi,
+       fi fi) 
+   fi 
+else 
+   if rsum((if p(v961) then if p(v961^a) and p(v961^4) then'0;'else'1;'fi fi))>0 then else 
+      if rsum((|0;|d962^z,|1;|n962^z))>0 then &unifor('S0'),
+         (if p(v962) then 
+             if v962^z<>''then else 
+                if val(&unifor('S1A'))=1 then else', 'fi,v962^7,
+                if a(v962^7) then v962^a,
+                   if s(v962^n,v962^c)<>''then' ('v962^n|; |,v962^c')'fi,|. |v962^b,
+                   if s(v962^d,v962^f,v962^e)<>''then' ('v962^d|; |,v962^f,
+                      if p(v962^f)then|; |v962^e else v962^e fi,|/ |v962^h,|/ |v962^i,')'
+                fi fi,
+         fi fi), 
+         if s(v961^4)<>'' then '; 'fi,
+      fi,
+      (if p(v961^4) then |, |+v961^4*4| |,
+          if p(v961^9) then v961^a,| |v961^d,| |v961^b,if a(v961^b) then v961^g fi 
+          else v961^b| |,if a(v961^b) then v961^g| | fi,
+          v961^a,| |v961^d 
+      fi fi) 
+   fi 
+fi  

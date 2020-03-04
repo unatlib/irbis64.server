@@ -1,0 +1,77 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=1
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=29.7
+TAB_PAGE_HEIGHT=21
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=11
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=6
+CELL_TAB2_2=Дисциплина
+CELL_TAB2_3=v1,&uf('+7W2#'),,&uf('+7W10#'),,,&uf('+7U2#',,&uf('D,?DISC=',v1,'?,(v691/)') ),,&uf('+7W3#'),,&uf('+7U3#',,(if p(g2) then if &uf('Av1#1'): g2^D then g2^I fi fi/) ),,&uf('+7G3'),' (',,(if p(g3) then g3,' ' fi),')',,
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=2
+CELL_TAB3_2=Кафедра
+CELL_TAB3_3=&uf('+7W1#',v1,),&uf('+7W2#'),,&uf('+7U2#',,&uf('D,?DISC=',g1,'?,(v691/)') ),,,,&uf('+7W3#'),,&uf('+7U3#',,(if p(g2) then if &uf('Ag1#1')=&uf('+97',g2^D) then g2^B fi fi/) ),&uf('+7G3'),,(g3,' ')
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=Цикл
+CELL_TAB4_3=&uf('+7W1#',v1,),&uf('+7W2#'),,&uf('+7U2#',,&uf('D,?DISC=',g1,'?,(v691/)') ),,,,&uf('+7W3#'),,&uf('+7U3#',,(if p(g2) then if &uf('Ag1#1')=&uf('+97',g2^D) then g2^S fi fi/) ),&uf('+7G3'),,(g3,' ')
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=2
+CELL_TAB5_2=УК
+CELL_TAB5_3=&uf('+7W1#',v1,),&uf('+7W2#'),,&uf('+7U2#',,&uf('D,?DISC=',g1,'?,(v691/)') ),,,,&uf('+7W3#'),,&uf('+7U3#',,(if p(g2) then if &uf('Ag1#1')=&uf('+97',g2^D) then g2^K fi fi/) ),&uf('+7G3'),,(g3,' ')
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Нет
+CELL_TAB6_1=2
+CELL_TAB6_2=Кол-во учебников
+CELL_TAB6_3=,&uf('+7U10#',,&uf('7,?DISC=',,v1,,'?,mfn/') ),,,f(rsum((if p(g10) then '1,' fi)),0,0),,,,,,,,,,&uf('+7W10#'),,
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_TAB7_1=6
+CELL_TAB7_2=Дисциплинв в БД VUZ
+CELL_TAB7_3=&uf('7VUZ,?DISCN=',,v1,,'?,v3^A," ("v3^0") \par "/')
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_TAB8_1=2
+CELL_TAB8_2=Кафедра
+CELL_TAB8_3=&uf('7VUZ,?DISCN=',,v1,,'?,v5" \par "/')
+CELL_TAB8_4=По левому краю
+CELL_TAB8_5=Нет
+CELL_TAB9_1=2
+CELL_TAB9_2=Цикл
+CELL_TAB9_3=&uf('7VUZ,?DISCN=',,v1,,'?,v4" \par "/')
+CELL_TAB9_4=По левому краю
+CELL_TAB9_5=Нет
+CELL_TAB10_1=2
+CELL_TAB10_2=УК
+CELL_TAB10_3=
+CELL_TAB10_4=По левому краю
+CELL_TAB10_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=1
+CELL_SORT2=v1
+CELL_SORT3=100
+CELL_SORT4=1
+CELL_SORT5=(if p(v691) then v691^D fi/)
+[HDR]
+HDR_PARAMS_COUNT=0

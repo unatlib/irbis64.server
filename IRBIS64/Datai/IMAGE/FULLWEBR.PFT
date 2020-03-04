@@ -1,0 +1,30 @@
+'<tr width=100%><td with=10% valign="top"><b><--MFNCOUNT--></b></td><td width=95%>', 
+'<div class="sub_format">',
+mhl,
+if v920:'NJ' then njw_Helse
+,!!kw0shp,
+,!!kw1bo,
+,!!kw2udk,
+,oWrubdks,
+,!!kw4ann,
+,!!kw6j,
+,!!kw7ex,
+fi,OWfinal,&unifor('!'),
+
+if (v910^a='0') or (('U C':v910^a)and(v910^1<>v910^2)) then
+ if (v2225<>'') then 
+ '<br><a href="/cgi/irbis64r/cgiirbis_64.exe?Z21ID=',&uf('+3E',v2225),'&P21DBN=',v3331,'&I21DBN=',S(v3331,'_ZAKAZ'),'&S21FMT=zakaz&C21COM=F&Z21MFN=<--MFN-->">',
+ 'Заказать',
+ '</a> <br>' fi,
+fi,
+
+  &uf('+1W1#',v1100),
+  &uf('+1W2#0'),
+  &uf(|DRDR,!RI=|v1002|!,(if p(v112) then if (v112=&uf('+1R1'))or(v112='*.*.*.*') then  &uf('+1W2#1'),break,fi fi)|)
+  if &uf('+1R2')='1' then
+     '<br><a href="/cgi/irbis64r/62/cgiirbis_64.exe?Z21ID=',&uf('+3E',v2225),'&P21DBN=',v3331,'&I21DBN=',v3331,'&EXP21FMT=ISO&C21COM=4&EXP21MFN=',f(val(MFN),0,0),'">',
+     'Скачать',
+     '</a> <br>' 
+  fi,
+
+'</div><hr noshade size="1"></td></tr>'

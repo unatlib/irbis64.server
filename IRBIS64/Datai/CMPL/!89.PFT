@@ -1,0 +1,6 @@
+if p(v89^e) then 
+   if (l("kor="v89^e))<=0 or val(ref(l("kor="v89^e),mfn))
+=val(mfn) then'0'else'1 Ошибка: Дублетный Код организации 'v89^e fi 
+else "1Ошибка: Отсутствует Код организации"d89  
+fi
+

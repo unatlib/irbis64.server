@@ -1,0 +1,7 @@
+if v920:'Ab' then "Абонент: "v100,"  "v81^A,"  "v81^B else 
+if v920:'ODER' or v920:'Arhiv' 
+then 
+   "Заказ: "v30^A,,,
+   ", Абонент: "v100". ",,&unifor('Kkodn.mnu|',&unifor('Av942^a#',&unifor('+N942'))), "->"d942^c,&unifor('Av942^c#',&unifor('+N942')), 
+else 
+if v920:'Cena' then 'Рабочий лист цен' fi fi fi

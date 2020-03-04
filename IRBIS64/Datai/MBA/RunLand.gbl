@@ -1,0 +1,195 @@
+0
+// выдача по МБА
+// выдача по МБА
+// 991^S - заданный статус
+// 991^A - шифр в ЭК - готовое поле 40 в запись абонента
+// 991^B - номер заказа
+// 991^D - дата выдычи
+// 991^E - дата предпол. возврата
+// 991^F - дата факт.возврата
+// 991^H - экземпляр
+// 991^G - имя БД каталога из записи заказа
+// 991^Q - номер абонента в записи заказа
+// 991^V - библиотека-флндодержатель
+// 991^W - ИД читателя для записи выдачи
+// 991^Y - признак оформления выдачи в каталоге
+// 991^1 - ШК
+// 991^2 - Радио
+// 991^3 - ИН
+// используется параметры CorrRdrAble, CorrCatAble
+//---------------ищу запись абонента
+IF
+if s('O1 O3 O4'): v991^S then '1' fi
+CORREC
+'*'
+mpu,,"^A"v991^A,,"^D"v991^D,,"^E"v991^E,,,,,if v31='01' then '^F******' else '^F',v991^E, fi,,"^H"v991^H,,"^G"v991^G,,"^V"v991^V,,"^B"v991^B,,&uf('+7W11#',,,if v991^G<>'' then  ,&uf('D',v991^G,',!IN=',,v991^H,,'!,(v910/)')  fi   ),,
+"AB="v991^Q
+
+//------------------------------------------------------в запись абонента
+//добавляю с проверкой, с добавлением места хранения из g12
+ADD
+40
+
+&uf('+7W10#'),,,&uf('+7W12#',,(if p(g11) then if s(| |g11^B,,| |g11^H): &uf('Av1001^H#1') then g11^D,,break fi fi/)  )
+
+
+ADD
+40
+
+if rsum((if p(v40) then if &uf('+97',v40^G)=&uf('Av1001^G#1') and &uf('+97',v40^A)=&uf('Av1001^A#1') and &uf('+97',v40^V)=&uf('Av1001^V#1') and &uf('+97',v40^H)=&uf('Av1001^H#1') and &uf('+97',v40^B)=&uf('Av1001^B#1') and &uf('+97',v40^D)=&uf('Av1001^D#1') then '1,' fi fi/))>0 then else v1001,,if &uf('Ag12#1')<>''  then '^K',&uf('Ag12#1') fi,,&uf('+7W10#1') fi
+
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Абонент ',v100,,,' - оформлена выдача MFN=',f(val(mfn),0,0)
+FI
+DEL
+1001
+*
+
+
+END
+//---регистрация у читателя, если есть разрешение и задан ИД
+IF
+if val(&uf('IMAIN,CorrRdrAble,0'))=1 and  v991^W<>'' then '1' fi
+CORREC
+'RDR'
+mpu,,"^A"v991^A,,"^D"v991^D,,"^H"v991^H,,,,"^E"v991^E,,'^F******',,,"^G"v991^G,,
+"RI="v991^W
+
+//--------------------------------------------------------в запись читателя
+//добавляю с проверкой 
+ADD
+40
+
+&uf('+7W10#')
+
+ADD
+40
+
+if rsum((if p(v40) then if &uf('+97',v40^G)=&uf('Av1001^G#1') and &uf('+97',v40^A)=&uf('Av1001^A#1') and &uf('+97',v40^D)=&uf('Av1001^D#1') then '1,' fi fi/))>0 then else "^A"v1001^A,,"^G"v1001^G,,"^B"v1001^3,,"^B"v1001^H,,,,,,,,"^D"v1001^D,,"^E"v1001^E,,"^F"v1001^F,,'^VMBA',,,,,&uf('+7W10#1') fi
+
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Читатель ',v30,,,' - оформлена выдача MFN=',f(val(mfn),0,0)
+FI
+DEL
+1001
+*
+
+
+END
+//---конец регистрации у читателя
+FI
+FI
+IF
+if v991^G<>'' and v991^A<>'' and val(v991^Y)=1 and val(&uf('IMAIN,CorrCatAble,0'))=1 then '1' fi
+//----------------------------------------------------------------------запись каталога
+CORREC
+v991^G
+mpu,v991
+'I=',v991^A
+
+// случай статуса 0
+REP
+910^A
+F
+&uf('+7W10#'),,,,,(if p(v910) then if v910^A='0' then  if  s(| |v910^B| |,,| |v910^H| |): s(' ',&uf('Av1001^H#1'),' ') then '1',,&uf('+7W10#1') else v910^A  fi else v910^A  fi fi/),,,,
+
+IF
+if val(g10)=0 then '1' fi
+// случай статуса U
+REP
+910^1
+F
+(if p(v910) then if p(v910^1) then if v910^A: 'U' then  if s(| |v910^B| |,,| |v910^H| |): s(' ',&uf('Av1001^H#1'),' ')  then  if val(v910^1)>0 then f(val(v910^1)-1,0,0),,,&uf('+7W10#1') else '0' fi else v910^1 fi else v910^1 fi else # fi fi/)
+
+IF
+if val(g10)=1 then '1' fi
+// замена ^2
+REP
+910^2
+F
+(if p(v910) then if p(v910^2) then if v910^A: 'U' then if s(| |v910^B| |,,| |v910^H| |): s(' ',&uf('Av1001^H#1'),' ') then  f(val(v910^2)+1,0,0),,,&uf('+7W10#2') else v910^2 fi else v910^2 fi else # fi fi/)
+
+IF
+if val(g10)=2 then else '1' fi
+// добавление ^2
+REP
+910
+F
+(if p(v910) then  v910 if v910^A: 'U' then if p(v910^2) then else if s(| |v910^B| |,,| |v910^H| |): s(' ',&uf('Av1001^H#1'),' ') then  '^21' fi fi fi fi/)
+
+FI
+FI
+FI
+IF
+if val(g10)>0 then '1' fi
+PUTLOG
+'Каталог - оформлена выдача MFN=',f(val(mfn),0,0)
+REP
+999
+1
+f(val(v999)+1,0,0)
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+//----------------в запись заказа - добавляю поле 942 с проверкой, поле 902 - фондодержатель
+REP
+902
+1
+if v991^V<>'' then "^D"v991^V else v902 fi
+
+ADD
+902
+
+if v902='' and v991^V<>'' then "^D"v991^V fi
+
+DEL
+111
+*
+
+
+ADD
+111
+
+v942
+
+//---в g1 v991^S или код операции в зависимости от вида выдачи - оригинал или копия
+IF
+if p(v942) then '1' fi,,,,,,,,,,,if v991^S='' then if s(' 01 16 '): v31 then &uf('+7W1#',,&uf('IRequest,MBASTATUSLAND,O1') ) else &uf('+7W1#',,,&uf('IRequest,MBASTATUSLANDCP,O3') ) fi,,,else &uf('+7W1#',v991^S) fi
+
+ADD
+942
+F
+if rsum((if p(v942) then if &uf('+97',v942^A)=&uf('Ag1#1') and &uf('+97',v942^B)=&uf('3')  then '1,' fi fi/))>0 then else '^A',&uf('Ag1#1'),,,'^B',&uf('3') fi
+
+// приписываю фондодержателя
+REP
+942
+F
+(if p(v942) then v942,,if v994^V='' and v942^A=&uf('IRequest,MbaStatusLib,M4')and &uf('Av902#1')<>'' then '^V',&uf('Av902#1') fi fi/)
+
+FI
+IF
+if v111=v942 then '0' else '1' fi
+PUTLOG
+'Заказ ',,v30^A,,': откорректирована запись MFN=',f(val(mfn),0,0)
+FI
+DEL
+991
+*
+
+
+DEL
+111
+*
+
+

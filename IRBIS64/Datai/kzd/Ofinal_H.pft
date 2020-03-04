@@ -1,0 +1,3 @@
+
+(if p(v951^I) then '<br><A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+(if p(v951^A) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 

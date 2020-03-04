@@ -1,0 +1,1 @@
+f(rsum((if p(v910) then if v910^A='U' and v910^1<>'' then v910^1|,| else if v910^A='0' then '1 ' fi fi fi)),0,0)

@@ -1,0 +1,84 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx500  
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1800 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4000 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6900 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8613 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10300 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11200 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx12800 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14450 
+\pard \widctlpar\intbl {\ql \fs18 ''##'
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,
+/*----автор заказа
+(if p(v62) then if p(v62^A) then v62^9,,| - |n62^9 fi '\par ',fi/),,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,
+/*----------место-дата
+(if p(v62) then ,v62^a,|-|v62^c*6.2,|.|v62^c*4.2,|.|v62^c.4 '\par ' fi/),,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,
+/*--------БО
+v461^x| |,v461^c,if p(v461) then"; "v200^v,if p(v200^v) then": "d200^a fi else ,v700^a," "v700^b," "d700,v200^a,"; "v200^v fi,(if p(v225)then'. -('v225^a, if p(v225^a)then"; "v225^v fi')'fi),if p(v215^a) then". -"v215^a,| |d215^1,&unifor('G2='v215^1), if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,
+/*------- заказано
+(if p(v62) then |Заказ |v62^B| - |,v62^D '\par ' fi/),,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',
+/*-----------получено
+&uf('+7W12#'),&uf('+7W13#'),,,,&uf('+7W15#'),,&uf('+7W16#'),,
+&uf('+7W10#',(|^B|v62^b,,|^D|v62^D,,,,,,,|^U|v62^U/)),
+(if p(g10) 
+ then 
+    &uf('+7W9#',g10),,
+    g10^B| - |,,
+    &uf('6TabZakCost'),,
+    &uf('Ag15#1') 
+    '\par ',,
+ fi),,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,
+/*-------------  всего получено
+f(rsum((G16|,|)),0,0),,&uf('+7W21#',f(val(g21)+rsum((G16|,|)),0,0)  ),,
+'\cell }\pard \widctlpar\intbl {\ql \fs18 ',,,
+/*---------стоимость по заказам
+g12,,,,,,,,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs18 ',,,,,
+/*     стоимость всего
+f(rsum((G13|,|)),0,2),,&uf('+7W22#',f(val(g22)+rsum((G13|,|)),0,2)  ),,
+
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

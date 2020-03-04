@@ -1,0 +1,110 @@
+'</>',,,,,,
+   '<table border=1 cellspacing=0 >' 
+   '<tr><td><b><font size="2"> Заказ: ',,,,,'</b>',
+   '<td>',,v30^a,,'</tr>',
+   '<tr>',
+   '<td><b><font size="2"> Абонент: ',,,'</b>',
+   '<td>',v100,,,"  (вид: "v140^A")",,,,,,,,,'</tr>'
+
+   if v30^c<>'' then '<tr>','<td><b><font size="2"> Дата оформления заказа абонентом:',,,,'</b>',
+   '<td>',,,,,,,v30^c,,,,,,'</tr>',,fi,,,
+   if v30^e<>'' then '<tr>','<td><b><font size="2"> № заявки абонентом:',,,,'</b>',
+   '<td>',,,,,,,v30^e,,,,,,'</tr>',,fi,,
+   if v31<>'' then '<tr>','<td><b><font size="2">Вид выдачи:',,,,'</b>',
+   '<td>',,,,,(if p(v31) then if &unifor(|KTypLand.mnu!|v31)='' then v31 else &unifor(|KTypLand.mnu!|v31) fi ,,,| |d31,,,fi),,,,,,,,,'</tr>',,fi,,
+   if v215^b<>'' then '<tr>','<td><b><font size="2"> Кол-во скопированных страниц',,,,'</b>',
+   '<td>',,,,,v215^b,,,,,,,,'</tr>',,fi,,
+   if p(v913) then '<tr>','<td><b><font size="2"> БД каталога: ',,,,'</b>',
+   '<td> ',,,,,,v913,,,,,,,'</tr>',,fi,,   
+   if p(v903) then '<tr>','<td><b><font size="2"> Шифр хранения: ',,,,'</b>',
+   '<td> ',,,,,,v903,,,,,,,'</tr>',,fi,,
+   if p(v700) or p(v701) then '<tr>','<td><b><font size="2"> Авторы: ',,,,'</b>',
+   '<td>',,,,,,if p(v700) and a(v700^a) then v700 else v700^a," "v700^b,fi, "; "d701,(v701^a,| |v701^b+|; |)
+,,,,,,,'</tr>',,fi,,
+   if v711<>'' then '<tr>','<td><b><font size="2"> Коллектив:',,,,'</b>',
+   '<td>',,,,,,v711,,,,,,,'</tr>',,fi,,
+   if v200^a<>'' then '<tr>','<td><b><font size="2"> Заглавие:',,,,'</b>',
+   '<td>',,,,,,if p(v200^a) then  v200^a fi,if p(v200^a) then ", "d909^q,&unifor('Av909^q#1'),", "d909^f,&unifor('Av909^f#1')", "d909^a,&unifor('Av909^a#1') fi
+,,,,,,'</tr>',,fi,,
+   if v2002<>'' then '<tr>','<td><b><font size="2"> Заглавие ММБА:',,,,'</b>',
+   '<td>',,,,,,if p(v2002) then  v2002 fi
+  if p(v2002) then ", "d909^q,&unifor('Av909^q#1'),", "d909^f,&unifor('Av909^f#1')", "d909^a,&unifor('Av909^a#1') fi
+,,,,,,,'</tr>',,fi,,
+   if v225^v<>'' then '<tr>','<td><b><font size="2"> Серия: ',,,,'</b>',
+   '<td>',,,v225^A,,,", "v225^v,,,,,,,'</tr>',,fi,,
+   if v461^v<>'' then '<tr>','<td><b><font size="2"> Мнготомник:',,,,'</b>',
+   '<td>',,,,,,v461^v,,,,,,,'</tr>',,fi,,
+   if v210^D<>'' then '<tr>','<td><b><font size="2"> Год издания:',,,,'</b>',
+   '<td>',,,,,,,v210^D,,,,,,'</tr>',,fi,,
+   if v210^C<>'' then '<tr>','<td><b><font size="2"> Издательство:',,,,'</b>',
+   '<td>',,,,,,,(v210^c+|, |),,,,,,'</tr>',,fi,,
+   if v923<>'' then '<tr>','<td><b><font size="2"> Сведения об издании:',,,,'</b>',
+   '<td>',,,,"Tом "v923^a,," Выпуск "v923^b,," Дополнительнvе сведения- "v923^c,,,,,,,,'</tr>',,fi,,
+   if v110<>'' then '<tr>','<td><b><font size="2"> Вид издания',,,'</b>',
+   '<td><font size="2"> ',,,,,,v110^a,," Тип издания "d110^b, if v110^b:'0' then &unifor("Kvdu.mnu|"v110^b), else v110^b/ fi,,,,,'</tr>',,fi,,
+   if v909<>'' then '<tr><td><b><font size="2"> Журнал:',,,,'</b>',
+   '<td>',,,," Год: "v909^Q,," Том: "v909^F,,," Номер: "v909^A,,,,,'</tr>',,fi,,
+   if v910<>'' then '<tr>','<td><b><font size="2"> Есть поступления:',,,,'</b>',
+   '<td>',,&uf('+7W10#',,(v910^d/)),&uf('+7G10'),,,,(g10+|, |),
+,,,,,,'</tr>',,fi
+   if v64<>'' then '<tr>','<td><b><font size="2"> ГРНТИ :',,,,'</b>',
+   '<td>',,,,,,,(v64+|, |),
+,,,,,,'</tr>',,fi
+   if v60<>'' then '<tr>','<td><b><font size="2"> УДК: ',,,,'</b>',
+   '<td>',,,,,,(v60+|, |),,,,,,,,'</tr>',,fi,,
+   if v902<>'' then '<tr>','<td><b><font size="2"> Фондодержатель: ',,,,'</b>',
+   '<td>',,,,,,if p(v902^d) then v902^d,", "v902^e fi,,,,,,,'</tr>',,fi,,
+   
+   if v30^F<>'' then '<tr>','<td><b><font size="2"> Этап обработки:',,,,'</b>',
+   '<td>',,if &uf('Ketr.mnu|',v30^F)<>'' then &uf('Ketr.mnu|',v30^F) else v30^F fi,
+,,,,,,,'</tr>',,fi,,      
+   '<tr>','<td><b>',,,,,' Tехнологический путь заказа: ',,,,'</b> </td>',,,
+   '<td>',,
+   '<table border="0" >',    
+   (if p(v942) 
+    then
+      '<tr>',,
+      '<td>',,if v942^A: 'M4' then 'Заказано в ',&uf('Av902^D#1') else &unifor(|KStatus.mnu!|v942^A) fi,'</td><td>',,,| - |v942^c| - |,,'</td><td>',,,v942^d| руб.|,,,'</td>',
+      '</tr>',,,
+    fi/),
+    '</table>',
+    '</td>',, 
+    '</tr>',
+    if (not v942^a:'H1') and v942:'^c' then 
+'<tr><td><b><font size="2"> Cтоимость заказа ',,,,'</b>',
+   '<td>',,,,'на ',&unifor('3'),' - ',if rsum((v942^d|,|))=0 then '0.00' else f(rsum((v942^d|,|)),1,2) fi, ' руб',,,,,,,,'</tr>',,fi,,
+    if p(v500^a) then '<tr><td><b><font size="2"> ФИО шифровщика:',,,,'</b>',
+   '<td>',,,,,,v500^a,,,,,,,'</tr>',,fi,,
+   if p(v500^b) then '<tr><td><b><font size="2"> ФИО доработчика:',,,,'</b>',
+   '<td>',,,,,,,v500^b,,,,,,'</tr>',,fi,,
+ '</Table>' ,,,,,,,,,
+ '<br>',,
+/* для 952 
+ if p(v952^Z) and p(v913) and p(v952^B) 
+ then 
+    (if v952^B<>'' then '<IMG style="width: 100%" SRC="IRBIS:11,',,,v913,,,,,',',v952^B,',',mfn,'">',fi)
+ else 
+    if p(v952^I) 
+    then '<br> См. ссылк',
+       if rsum((if s(v952^i,v952^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у 'fi,
+       (if p(v952^I) and a(v952^N) then '<br><A HREF="',&uf('+\1',v952^I),'">',if p(v952^T) then v952^T else &uf('+\1',v952^I) fi,'</A>', fi), 
+    else 
+/* для 951 
+       if v951<>'' 
+       then
+          (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+       fi,,,,,
+    fi,,,,,,
+  fi,,,,,,,,,
+/* для 955
+
+if &uf('IMAIN,FULLTEXTABLE,1')='1' 
+then 
+     if p(v955^A) 
+     then 
+        '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group955&FREEPAR1=1&KEY=@',mfn,'">',
+       if p(v955^T) then v955^T else 'Постраничный просмотр полного текста' fi,'</A>', 
+     fi,
+fi,
+
+

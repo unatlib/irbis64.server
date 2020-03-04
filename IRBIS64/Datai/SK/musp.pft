@@ -1,0 +1,22 @@
+'{'
+if v907^C:'ОБРНЗ' then '\qc\b Издание в обработке. Не выдается\par \b0 \ql' fi,
+osvex,
+orchifr,
+if p(v461) then ,Otit461, else ozboz,otitkn, fi,
+'. - ',oizd,
+'. - ',ospec,
+'. - ',ovixd,
+'. - ',ofizxar,
+'. - ',oser,
+'. - ',oprim,
+'. - ',oISBNcn,
+oprimd,
+ogrudk,
+orubdks,
+oprip481,
+opris488,
+odoptd,
+oex910,
+ofinal,
+'\par ',&unifor('!'),
+'}'

@@ -1,0 +1,19 @@
+if &unifor('Av461#2')<>''then &unifor('S0'),
+   (if p(v461) then 
+       if val(&unifor('S1A'))=1 then|. - |v461^4,if v461^4=''then |. - |v461^d ,
+if v461^d=''then 
+ if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then  
+  if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then 
+     |. - [Á. ì.]|d461^g else |. - [S. l.]|d461^gfi,fi,fi,fi,
+          | : |v461^g,| [|v461^6|]|,if v461^s='1'then else v461^s fi, else if &uf('Av461^s#1')<>''then else
+          if p(v461^?) then else| ; |v461^4,if v461^4=''then | ; |v461^d fi fi,| : |v461^g,| [|v461^6|]| 
+   fi fi fi) 
+else ". - "v461^4,if v461^4=''then ". - "v461^d ,
+ if s(&unifor("Khdmi.mnu|"v900^c),&unifor("Khdmi.mnu|"v900^2),&unifor("Khdmi.mnu|"v900^3))=''then  
+ if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then if s(v461^4,v461^d,v461^g)<>''
+then if s(v461^4,v461^d)=''then '. - [Á. ì.]'fi,| : [á. è.]|n461^g fi else 
+if s(v461^4,v461^d,v461^g)<>''then if s(v461^4,v461^d)=''then '. - [S. l.]'fi,| : [s. n.]|n461^g fi,
+fi,fi,fi,
+| : |v461^g,| [|v461^6|]|,if v461^s='1'then else v461^s fi fi,
+if s(v461^d,v461^4,v461^g)<>''then|, |d461^h else|. - |d461^h fi,v461^5| |,v461^h,
+if p(v461^h) then if v461^h=v461^z then else' - 'v461^z,"    "n461^z fi,fi,

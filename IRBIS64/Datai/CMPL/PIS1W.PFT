@@ -1,0 +1,9 @@
+'{',
+ref(l(|KOR=|v30^k),
+      "\b Куда\b0 \tab "v83^a,", "v83^b,", "v83^c,",\par \tab "v83^d,
+      ", д."v83^e,". "v83^f,
+      '\par \par \b Кому  \b0 \tab ',v81^a,
+      if a(v81^a) then v89^a else " ("v89^a")" fi,'\par ',
+      (if v82^b:'для связи'then|\par \tab |v82^a fi)), 
+'\par \b Адрес отправителя: \b0 \par',ref((1),(v15)),
+'}'

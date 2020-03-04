@@ -1,0 +1,164 @@
+'</>',
+/*G111-признак "сейчас О/V"
+/* G92 - нужные 692 для ВК (если сейчас V)
+/* G93 - нужное 692 с ^x:'!COM' (если сейчас V)
+/* G94 - нужное 692 для филиалов (если сейчас V)
+/* G95 - нужное 692 общие данные (нет ВК) (если сейчас V)
+/* G692 - строки для ОС из 692 (если сейчас V)
+/*(|<br>|g92)
+if p(v691) then 
+   if val(&uf('6KoElectro'))=1 
+   then 
+     '<b> Электронный учебник: КО = 1 </b>' 
+   else 
+   if (val(&uf('6KoElectro'))=2) and (val(&uf('IPRIVATE,AnalogElRes,0'))=1) 
+   then 
+     '<b> Есть аналог - электронный учебник: КО = 1 </b>' 
+   else    
+/*---------срок действия?
+      if p(v955^B) 
+      then 
+          &uf('+7W1#',&uf('DRIGHT,!I=',v955^B,'!,v2^E') ),,
+           if g1<>'' and g1<=&uf('3') then '<b> Электронный учебник - истек срок действия </b>'  fi,,,
+      else 
+      &uf('+7W111#'),&uf('+7W111#'if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+                                     &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then 'O' else 'V' fi),
+      &uf('+7W2#'),&uf('+7W2#'(if p(v693) then if v693^x:'!COM' then v693 fi fi),
+                               if rsum((if p(v910) then if &unifor('Pv910^T')<>'' then '1;'fi fi))> 1 then '^T1'fi),
+      &uf('+7W62#'),&uf('+7W62#'(if p(v692) then if v692^b:s(f(val(&unifor('30'))-1,0,0),'/') then 
+                                 if v692^x:'!COM' then v692 fi fi fi)),
+      &uf('+7W92#'),&uf('+7W93#'),&uf('+7W94#'),&uf('+7W95#'),
+      (if p(v692) then if v692^b:s(f(val(&unifor('30'))-1,0,0),'/') then 
+          if p(v692^a) then &uf('+7U92#'v692) fi, 
+          if v692^x:'!COM' then &uf('+7U93#'v692) fi,
+          if p(v692^L) then &uf('+7U94#'v692) fi, 
+      fi fi/),
+      if s(v692^a,v692^L)='' then 
+         (if p(v692) then if v692^b:s(f(val(&unifor('30'))-1,0,0),'/') then 
+             if a(v692^x) then &uf('+7U95#'v692) fi fi fi) fi, 
+      if v693^a<>'' then 
+         (if p(v693) then 
+             if p(v693^a) then  
+                '<br><b>'&unifor('Knaznac.mnu\'v693^a)
+                if &unifor('Knaznac.mnu\'v693^a)='' then &unifor('Knaznac.mnu\'&uf('Q'v693^a)) 
+                   if &unifor('Knaznac.mnu\'&uf('Q'v693^a))='' then &unifor('Knaznac.mnu\'&uf('+97'v693^a)) 
+                fi fi,'</b>'
+                '<br><b>Экземпляров - </b>'v693^d,| (с учетом КМИ - |v693^k|)|
+                if &uf('Ag2#1')<>'' then 
+                   if &uf('Ag2^k#1')<>'' then ' + общ.' else ' ( + 'fi,&uf('Ag2^d#1'), 
+                   if &uf('Ag2^k#1')<>'' then ' (с учетом КМИ - '&uf('Ag2^k#1')')' else ' общ.)' fi
+                fi,
+                ', <b>ККО ср.</b> - 'v693^s,if a(v693^s) then f(val(v693^f)+val(if &uf('Ag2^t#1'):'1' then &uf('Ag2^m#1') fi),0,2) fi,
+                '<br><b>Осен.  сем. :</b>  '
+                if &uf('Ag111#1'):'O' then 
+                   'Студентов - 'v693^e,if &uf('Ag2#1')<>'' then ' (всего '&uf('Ag2^e#1'),')' fi
+                   ', Экз - 'v693^k,if a(v693^k) then v693^d fi,
+                                    if &uf('Ag2#1')<>'' then ' ( + '&uf('Ag2^k#1')
+                                    if &uf('Ag2^k#1')='' then &uf('Ag2^d#1')fi,'общ.)'fi,
+                   ', ККО - 'f(val(v693^f)+val(if &uf('Ag2^t#1'):'1' then &uf('Ag2^m#1') fi),0,2)
+                else &uf('+7W91#'),&uf('+7W91#'v693^a),&uf('6kos692_H'),
+                fi
+                '<br><b>Весен. сем.:</b>  '
+                   'Студентов - 'if &uf('Ag111#1'):'V' then v693^e,fi
+                                 if &uf('Ag2#1')<>'' then ' (всего '&uf('Ag2^e#1'),')' fi
+                   ', Экз - 'if &uf('Ag111#1'):'V' then v693^k,if a(v693^k) then v693^d fi fi,
+                             if &uf('Ag2#1')<>'' then ' ( + '&uf('Ag2^k#1')
+                                if &uf('Ag2^k#1')='' then &uf('Ag2^d#1')fi,'общ.)'fi,
+                   ', ККО - 'if &uf('Ag111#1'):'V' then f(val(v693^f)+val(if &uf('Ag2^t#1'):'1' then &uf('Ag2^m#1') fi),0,2) fi
+         fi fi),
+         if g2<>'' then '<br>' 
+            if rsum((if p(v910) then if &unifor('Pv910^T')<>'' then '1;'fi fi))> 1 then 
+                   '<b> Экз-ры общего пользования</b>' else  '<b> Для остальных</b>'  fi,
+            (if p(v693) then 
+                if v693^x:'!COM' then '<br><b>Экземпляров - </b>'v693^d,
+                   if &uf('Ag2#1')<>'' then 
+                      if &uf('Ag2^k#1')<>'' then ' (с учетом КМИ - '&uf('Ag2^k#1'),')'
+                   fi fi,
+                   ', <b>ККО ср.</b> - 'v693^m,if a(v693^m) then v693^f fi,
+                   '<br><b>Осен.  сем. :</b>  '
+                   'Студентов - 'if &uf('Ag111#1'):'O' then v693^e else &uf('Ag93^e#1') fi,
+                   ', Экз - 'if &uf('Ag111#1'):'O' then v693^k,if a(v691^k) then v693^d fi 
+                             else &uf('Ag93^k#1'),if &uf('Ag95^k#1')='' then &uf('Ag95^d#1') fi fi,
+                   ', ККО - 'if &uf('Ag111#1'):'O' then v693^m else &uf('Ag93^m#1') fi,
+                   '<br><b>Весен. сем.:</b>  '
+                   'Студентов - 'if &uf('Ag111#1'):'V' then v693^e,fi,
+                   ', Экз - 'if &uf('Ag111#1'):'V' then v693^k,if a(v693^k) then v693^d fi fi,
+                   ', ККО - 'if &uf('Ag111#1'):'V' then v693^m fi
+            fi fi)
+         fi 
+      else 
+         if s(v693^a,v693^L)='' then 
+            (if p(v693) then 
+                if p(v693^x) then else 
+                '<br><b>Экземпляров - </b>'v693^d,
+                   if &uf('Ag2#1')<>'' then 
+                      if &uf('Ag2^k#1')<>'' then ' (с учетом КМИ - '&uf('Ag2^k#1'),')' fi 
+                   fi,
+                   ', <b>ККО ср.</b> - 'v693^s,if a(v693^s) then v693^f fi,
+                   '<br><b>Осен.  сем. :</b>  '
+                   'Студентов - 'if &uf('Ag111#1'):'O' then v693^e else &uf('Ag95^e#1') fi,
+                   ', Экз - 'if &uf('Ag111#1'):'O' then v693^k,if a(v693^k) then v693^d fi 
+                             else &uf('Ag95^k#1'),if &uf('Ag95^k#1')='' then &uf('Ag95^d#1') fi fi,
+                   ', ККО - 'if &uf('Ag111#1'):'O' then v693^f else &uf('Ag95^f#1') fi,
+                   '<br><b>Весен. сем.:</b>  '
+                   'Студентов - 'if &uf('Ag111#1'):'V' then v693^e,fi,
+                   ', Экз - 'if &uf('Ag111#1'):'V' then v693^k,if a(v693^k) then v693^d fi fi,
+                   ', ККО - 'if &uf('Ag111#1'):'V' then v693^f fi
+            fi fi)
+         else 
+            if v693^L<>'' then 
+               '<b><br><br>По филиалам:</b>'  
+               (if p(v693) then 
+                   if p(v693^L) then 
+                      '<br><b>'&uf('Kfili.mnu\'v693^L)
+                      if &uf('Kfili.mnu\'v693^L)='' then &uf('Kfili.mnu\'s(v693^L.1,&uf('Q'v693^L*1))) 
+                         if &uf('Kfili.mnu\'s(v693^L.1,&uf('Q'v693^L*1)))='' then &uf('Kfili.mnu\'&uf('+97'v693^L)) 
+                      fi fi,' : <br></b>'
+                      if v693^C:'V' then 
+                         'ВС : Студентов - 'v693^e,',  Экз. - 'v693^d,'<b>,   ККО</b> - 'v693^f,
+                         '<br>ОС : '&uf('+7W91#'),&uf('+7W91#'v693^L),&uf('6kos_filial_H'),
+                      else 
+                         'ОС : Студентов - 'v693^e,',  Экз. - 'v693^k,if a(v693^k) then v693^d fi 
+                         '<b>,  ККО</b> - 'v693^f,
+               fi fi fi)    
+fi fi fi fi fi fi fi,
+'<br><br>',!!KK1BO_H,
+if p(v691) then 
+   if &uf('IMAIN,LimPftFull_boko691,10')='' and val(&uf('+N691')) > 10 OR 
+      &uf('IMAIN,LimPftFull_boko691,10')<>''and val(&uf('+N691')) > val(&unifor('IMAIN,LimPftFull_boko691,10'))
+   then 
+      '<A HREF="IRBIS:1,,,691tab_H?&KEY=@',mfn,'">',
+      '<i><font size="2"> <br> Учебная литература (в новом окне) </font></i>','</A>','<br>',
+   else , 691tab_H ,
+   fi,,,'<br>'
+fi,
+mpl,
+
+if p(v694) 
+then 
+      '<i><font size="3"> <b> <br> Заказана литература для: </font></i>','</b></A>','<br>',
+      (if p(v694) then v694^D,,| - |v694^A,,| - |v694^N,,| - |v694^C,,| - |v694^V,,| - |v694^O,,| - |v694^1| экз.|,,|; автор заявки: |v694^9,,|<br>|d694  fi /),,,,
+fi,,/* сведения о всех экземплярах
+ ,Oex910_H_full,
+
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     if g140 : 'IRI' 
+         then if p(v955^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?LNG=&I21DBN=',&uf('+D'),'_FULLTEXT&P21DBN=',&uf('+D'),if v991='' then '&Z21ID=GUEST' else '&Z21ID=',&uf('+3E',v991^A),'&Z21FAMILY=',&uf('+3E',v991^B) fi,
+                 '&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=I=&USES21ALL=1&S21STR=',
+                 &uf('+3E',v903),'">',if p(v955^T) then v955^T else 'Полный текст' fi,'</A>', fi, 
+         else     
+         if p(v955^A) then '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group955&FREEPAR1=1&KEY=@',mfn,'">',if p(v955^T) then v955^T else 'Постраничный просмотр полного текста' fi,'</A>', fi,
+     fi,
+fi,
+
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+     if g140 : 'IRI' 
+         then (if p(v951^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?&C21COM=2&IMAGE_FILE_DOWNLOAD=1
+&I21DBN=',&uf('+D'),'&Image_file_name=',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+         else (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+     fi     
+     (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi  fi),
+fi,
+
+'<br> ----------------------------------------<br>',&unifor('!')

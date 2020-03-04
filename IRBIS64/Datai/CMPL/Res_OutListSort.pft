@@ -1,0 +1,19 @@
+&uf('+7W3#',v991^A,if v991^A='' then if v881^P='' then 'IBIS' else v881^P fi fi,,,,,),,,
+/*---g3 - имя БД каталога
+&uf('+7W1#',
+   &uf('7',,,,g3,,,,,,',!NRSU=',if ( v991^1='' or val(v882^E)=0 or val(v882^E)<=val(v991^2) ) AND 
+                                  ( v991^2='' or val(v882^F)=0 or  val(&uf('+95',v882^F))<>8 or 
+                                  ( val(&uf('+95',v882^F))=8 and val(v882^F)>=val(v991^1))  ) 
+                               then v881^A fi,,'!,mfn/' )
+   ),,,
+if g1<>'' 
+then 
+   &uf('+7W2#',,
+           (if p(g1) then '^X',,,&uf('D',,,&uf('Ag3#1'),,,,,',@',g1,',@brief'),,
+                          '^Y',&uf('D',,,&uf('Ag3#1'),,,,,',@',g1,',v903'),,,,
+            fi/) ),,
+   if g2<>'' 
+   then 
+      (if p(g2) then '^A',,&uf('Av881^A#1'),,,'^B',,g2^X,,'^C',&uf('Ag3#1'),,,'^D',g2^Y fi/) 
+   fi 
+fi

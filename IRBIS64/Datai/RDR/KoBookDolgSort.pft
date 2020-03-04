@@ -1,0 +1,72 @@
+/* 991			Отбор	Формирую в ключе сортировки
+/* форма обучения	O	
+/* семестр		F	
+/* факультет		A	
+/* специальность		C	
+/* Место хранения		D
+/* Дата выдачи с которой	E
+/* Признак только должники	N
+/* Имя БД				P
+/* ФИО студента			W
+/* ИД студента			V
+/* Заголовок			A
+/* Дата выдачи			B
+/* Дата предп.возврата		Q
+/* Шифр				X
+/* Инвентаь			Y
+/* Место хранения инв-я		Z
+if rsum((if p(v40) then 
+   if &uf('Av991^D#1')='' or 
+      &uf('Av991^D#1')<>'' and &uf('+97',&uf('Av991^D#1'))=&uf('+97',v40^K) 
+      then 
+          if v40^F: '*'  
+          then 
+             if &uf('Av991^E#1')='' or val(v40^D)>=val(&uf('Av991^E#1')) 
+             then 
+                  if &uf('Av991^N#1')='' or &uf('Av991^N#1')='0' or val(v40^E)<val(&unifor('3')) then '1,' else '0,' 
+                  fi fi fi fi fi))>0 
+then 
+  &uf('+7W9#'),,,,,,,,,,
+  if p(v90) 
+  then 
+    (if p(v90) 
+     then 
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+&uf('+7W9#',,,'^W',&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),' (' v30 ')' ,,,'^V',&uf('Av30#1')),,,
+ fi fi fi fi 
+     fi /),,
+  fi,
+  if G9<>'' 
+  then 
+     (if p(v40) 
+      then 
+        if &uf('Av991^D#1')='' or 
+           &uf('Av991^D#1')<>'' and &uf('+97',&uf('Av991^D#1'))=&uf('+97',v40^K) 
+           then 
+             if v40^F: '*'  
+             then 
+                if &uf('Av991^E#1')='' or val(v40^D)>=val(&uf('Av991^E#1')) 
+                then 
+                  if &uf('Av991^N#1')='' or &uf('Av991^N#1')='0' or val(v40^E)<val(&unifor('3')) then      
+/* заголовок
+            '^A',if p(v40^C) then v40^C.100 else v40^A fi,, 
+/* дата выдачи 
+            '^B',v40^D,,
+/* дата предполаг возврата 
+            '^Q',v40^E,,
+/* БД
+            '^P',v40^G,,
+            &uf('Ag9#1'),,
+/* шифр
+             '^X',v40^A,,
+/* инвентарь
+             '^Y',&uf('+7W10#',if p(v40^H) then v40^H else v40^B fi),&uf('Ag10#1'),
+/* место хранения инвентаря
+             '^Z',,&uf('D',v40^G,',!IN=',&uf('Ag10#1'),'!,@KoBkDolgMhr'),&uf('AG9#1'),,,
+,fi fi fi fi fi/)
+  fi,,
+
+FI,

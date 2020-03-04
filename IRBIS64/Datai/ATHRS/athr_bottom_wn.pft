@@ -1,0 +1,75 @@
+/* v1001 - текст для отбора
+/* v1006 - размер порции
+/* v1002 - результат отбора
+'<script language="JavaScript">',
+
+'function IfEmpty()',
+'{',
+'if (SEARCH.S21STR.value == "") return false;',
+'return true;',
+'}',
+
+'</script>',
+'<hr>'
+'<TABLE>',
+'<TR><TD>',
+'Введите ключевые слова для отбора Авторитетных записей',
+'</TR></TD>',
+'<TR><TD>',
+
+'<form action="IRBIS:" name="SEARCH" enctype="Multipart/form-data" method="GET">',
+
+'<input type="hidden" NAME="C21COM" value="2">',
+/*'<input type="hidden" NAME=I21DBN value="ATHRC">',
+'<input type="hidden" name="PFTNAME" value="athr0_wn">',
+'<input type="hidden" name="TOPPFTNAME" value="athr_top_wn">',
+'<input type="hidden" name="S21P02" value="1">',
+'<input type="hidden" name="S21P03" value="K=">',
+'<input type="text" name="S21STR" size="65" value="',v1001,'" onkeydown="if ((this.value.length>1) && (event.keyCode==13)) SEARCH.submit();">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="S21CNR" value="100">',
+
+'</TD>',
+
+'<TD>',
+'<input type="submit" name="1111" value="Отбор"  onclick="return IfEmpty()">',
+'</TD>',
+
+'</TR>',
+
+
+'<tr>',
+'<td>Логика : ',
+'<select name="S21LOG">',
+'<option value="0">ИЛИ    </option>',
+'<option value="1" selected="">И    </option>',
+'<option value="2">ФРАЗА ЦЕЛИКОМ  </option>',
+'</select>',
+'</td>',
+'</tr>',
+
+'<tr>',
+'<td>Окончания слов : ',
+'<input type="radio" name="S21P01" value="3" checked="checked">',
+'не учитывать /   <input type="radio" name="S21P01" value="1">учитывать',
+'</td>',
+'</tr>',
+'</form>',
+'</TABLE>',
+'<hr>'
+
+'<TABLE BORDER=0>',
+'<TR>',
+
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" NAME="C21COM" value="5">',
+/*'<input type="hidden" NAME=I21DBN value="ATHRC">',
+'<input type="hidden" name="PFTNAME" value="athr_select_wn">',
+'<TD>',
+'<input type="submit" name="1111" value="Отмеченные">',
+'</TD></TR>',
+'</form>',
+'</TABLE>',
+
+
+

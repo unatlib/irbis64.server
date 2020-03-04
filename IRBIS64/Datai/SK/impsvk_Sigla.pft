@@ -1,0 +1,1 @@
+if rsum((if p(v902) then if &uf(|KSiglP.mnu\|v902^s)<>'' then|1;|d902 else |0;|d902 fi fi))>0 then "1"d920 else "0"d920 fi

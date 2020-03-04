@@ -1,0 +1,75 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9178 
+\pard \widctlpar\intbl {\qc \fs20 ''1\pard \f0\qr\widctlpar\intbl { \par Члены комиссии: _______________\par \tab \tab _______________\par \tab \tab _______________''
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+\pard \qc\widctlpar {
+\fs20 
+\par }
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\pard \widctlpar\intbl {\qc \fs20 \b № п/п
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2376 
+\pard \widctlpar\intbl {\qc \fs20 \b Инвентарный номер
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4360 
+\pard \widctlpar\intbl {\qc \fs20 \b Автор и заглавие, год издания
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5777 
+\pard \widctlpar\intbl {\qc \fs20 \b Цена
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7194 
+\pard \widctlpar\intbl {\qc \fs20 \b Коэффициент пересчета
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8044 
+\pard \widctlpar\intbl {\qc \fs20 \b Количество экз.
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9178 
+\pard \widctlpar\intbl {\qc \fs20 \b Стоимость
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

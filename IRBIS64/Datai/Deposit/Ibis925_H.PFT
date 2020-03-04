@@ -1,0 +1,36 @@
+'</>',
+if v920:'SPEC' then 
+   (if p(v925) then 
+       if p(v925^1)then else ' <b>'v925^v'</b>' fi, 
+       if p(v925^a) then 
+          if p(v925) and v925^1<>'1' then ' : 'fi 
+          ,mhl,v925^a,| ; |v925^b,| ; |v925^c mpl 
+       fi,| = |v925^d,| = |v925^p,| = |v925^r,| : |v925^e, 
+       if s(v925^h,v925^i)<>''then', 'fi,v925^h, 
+       if p(v925^h)then|. |d925^i fi,v925^i, 
+       if s(v925^k,v925^l)<>''then', 'fi,v925^k, 
+       if p(v925^k)then|. |d925^l fi,v925^l, 
+       if p(v925^0) then else 
+          if s(v925^g,v925^f)<>'' then' / ',ibis925g,fi 
+       fi,mpl, 
+       if v925=&unifor('Av925#'&unifor('+N925')) then 
+       else 
+          if p(v925^0) or s(v925^f,v925^4)='' and s(&unifor('Av461^x#1'),&unifor('Av961^z#1'))<>'' 
+          then ' ; ' else '.'fi, 
+    fi fi) 
+else 
+   (if p(v925) then ". "| ; |+d925, 
+       if p(v925^1)then else ' <b>'v925^v'</b>' fi, 
+       if p(v925^a) then 
+          if p(v925) and v925^1<>'1' then ' : 'fi 
+          ,mhl,v925^a,| ; |v925^b,| ; |v925^c mpl 
+       fi,| = |v925^d,| = |v925^p,| = |v925^r,| : |v925^e, 
+       if s(v925^h,v925^i)<>''then', 'fi,v925^h, 
+       if p(v925^h)then|. |d925^i fi,v925^i, 
+       if s(v925^k,v925^l)<>''then', 'fi,v925^k, 
+       if p(v925^k)then|. |d925^l fi,v925^l, 
+       if p(v925^0) then else 
+          if s(v925^g,v925^f)<>'' then' / ',ibis925g,fi 
+       fi,mpl, 
+   fi) 
+fi

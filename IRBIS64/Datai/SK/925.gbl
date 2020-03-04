@@ -1,0 +1,31 @@
+0
+ADD
+925^?
+F
+(if p(v925) then if p(v925^f) then if v925^f:',' then if a(v925^?) then &unifor('G2 'v925^f)  else # fi else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+925^F
+F
+(if p(v925) then if p(v925^f) then if v925^f:',' then if p(v925^?) then &unifor('G0,'v925^f) else v925^f fi else v925^f fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+925^,
+F
+(if p(v925) then if p(v925^2) then if v925^2:',' then if a(v925^,) then &unifor('G2 'v925^2)  else # fi else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+925^2
+F
+(if p(v925) then if p(v925^2) then if v925^2:',' then if p(v925^,) then &unifor('G0,'v925^2) else v925^2 fi else v925^2 fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+925^;
+F
+(if p(v925) then if p(v925^3) then if v925^3:',' then if a(v925^;) then &unifor('G2 'v925^3)  else # fi else # fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+925^3
+F
+(if p(v925) then if p(v925^3) then if v925^3:',' then if p(v925^;) then &unifor('G0,'v925^3) else v925^3 fi else v925^3 fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX

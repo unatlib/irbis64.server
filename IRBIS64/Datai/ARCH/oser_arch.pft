@@ -1,0 +1,14 @@
+(if p(v225)then 
+    if v225:'^n0'then 
+    else ". -"| (|v225^a,
+       if a(v225^d) and p(v225^v) then 
+          if f(val(v225^v),0,0)=v225^v then else' = '&uf('G0#'v225^v) fi 
+       else | = |v225^d 
+       fi,| : |d225^e,
+       if p(v225^9) or &unifor('Q'v225^e*1.1)<>v225^e*1.1 then v225^e else &unifor(|Q|v225^e.1),v225^e*1 fi,
+       if p(v225^v) then ' ; код ',
+          if a(v225^d) then 
+             if f(val(v225^v),0,0)=v225^v then v225^v else &uf('G1#'v225^v) fi 
+          else v225^v fi
+       fi,|. |v225^i,|)|d225 
+ fi fi),

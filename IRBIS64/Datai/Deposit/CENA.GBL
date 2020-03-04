@@ -1,0 +1,46 @@
+0
+IF
+if &unifor('Av88#2')<>''then '1'fi
+
+
+
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W991#'),&uf('+7W991#'(if p(v88) then if p(v88^y) then '^A',&uf('Av88^a*2.2#1')'-'v88^y'-' fi fi/)),(g991/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+5
+F
+'^E',&unifor('J,KAS='&uf('Av991^a#1')),'^F'f(rsum((if p(v44) then if v44^i=&unifor('G0-'&unifor('Av991^a*3#1'))then v44^k fi fi/)),0,0)'^G'f(rsum((if p(v44) then if v44^i=&unifor('G0-'&unifor('Av991^a*3#1'))then v44^+ fi fi/)),0,2)
+XXXXXXXXXXXXXXXXXXX
+REP
+88
+F
+(if p(v88) then if p(v88^y) and v88^y=&unifor('G0-'&unifor('Av991^a*3#1')) and &unifor('Av5#1')<>''then |^Y|v88^y,|^B|v88^b,|^C|v88^c,|^D|v88^d,&unifor('Av5#1') else v88 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+5
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v991) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+
+
+
+

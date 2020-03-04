@@ -1,0 +1,65 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[SumPage]
+20
+25
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av34#1'))),0,2) fi fi)
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av24#1'))),0,2) fi fi)
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av34#1')) + val(v39^c)*val(&unifor('Av24#1'))),0,2)fi fi)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx10471
+\pard \ql\widctlpar\intbl {  Итого по листу - Подписка: 'if val(v1)>0 then f(val(v1),0,2),&unifor('Korg.mnu|3')fi,if val(v2)>0 then '\tab  Доставка: ',f(val(v2),0,2),&unifor('Korg.mnu|3')fi,if val(v3)>0 then '\tab  Всего: ',f(val(v3),0,2),&unifor('Korg.mnu|3')fi,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Sum]
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av34#1'))),0,2)fi fi)
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av24#1'))),0,2)fi fi)
+(if s(v39^b)<>''then if &unifor('Q'&unifor('Av991^e#1'))=&unifor('Q'v39^b) then f((val(v39^c)*val(&unifor('Av34#1')) + val(v39^c)*val(&unifor('Av24#1'))),0,2)fi fi)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx10471
+\pard \qr\widctlpar\intbl\par {  ИТОГО -  Подписка: 'if val(v1)>0 then f(val(v1),0,2),&unifor('Korg.mnu|3')fi,if val(v2)>0 then '\tab  Доставка: ',f(val(v2),0,2),&unifor('Korg.mnu|3')fi,if val(v3)>0 then '\tab  Всего: ',f(val(v3),0,2),&unifor('Korg.mnu|3')fi,'\par \par \ql\tab Стоимость подписки будет оплачена по получении извещения\par \par \qc Директор\tab \tab \tab ',ref(1,"/"v14^b"/",'\par \par Гл.бухгалтер\tab \tab \tab ',"/"v14^c"/"),
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trrh240\trleft-108\trkeep\trhdr 
+\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx461\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx1409\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx3481\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4331\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx6785\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx9337\clvmgf\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx10471
+\pard \qc \fs20 \widctlpar\intbl\adjustright {\b\fs20 N\par }
+{\b\f23\fs20 \'ef/\'ef\cell \'c8\'ed\'e4\'e5\'ea\'f1\cell \'cd\'e0\'e8\'ec\'e5\'ed\'ee\'e2\'e0\'ed\'e8\'e5 \'e8\'e7\'e4\'e0\'ed\'e8\'ff\cell \'ca\'ee\'eb. \'ea\'ee\'ec\'ef\'eb\cell \'d6\'e5\'ed\'e0 1-\'e3\'ee \'ea\'ee\'ec\'ef\'eb\'e5\'ea\'f2\'e0}{
+\b\fs20 \cell }{\b\f23\fs20 \'d1\'f3\'ec\'ec\'e0\cell \'cf\'e5\'f0\'e8\'ee\'e4\cell }\pard \widctlpar\intbl\adjustright {\b\fs20 \row }
+\trowd \trqc\trgaph108\trrh240\trleft-108\trkeep\trhdr 
+\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx461\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx1409\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx3481\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4331\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx5509\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx6785\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx8061\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx9337\clvmrg\clvertalt\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx10471
+\pard \qc\widctlpar\intbl\adjustright {\b\fs20 \cell \cell \cell \cell }
+{\b\f23\fs20 \'ef\'ee\'e4\'ef\'e8}{\b\f23\fs20 \'f1}{\b\f23\fs20 \'ea\'e8}
+{\b\fs20 \cell }{\b\f23\fs20 \'e4\'ee\'f1\'f2\'e0\'e2\'ea\'e8}{\b\fs20 \cell }
+{\b\f23\fs20 \'ef\'ee\'e4\'ef\'e8\'f1\'ea\'e8}{\b\fs20 \cell }
+{\b\f23\fs20 \'e4\'ee\'f1\'f2\'e0\'e2\'ea\'e8}{\b\fs20 \cell \cell }
+\pard \widctlpar\intbl {\b \row }
+\pard \qc\widctlpar{}\par }

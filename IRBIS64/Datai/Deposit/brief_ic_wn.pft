@@ -1,0 +1,19 @@
+'<!>',
+'<tr>',
+'<td  width=10% valign="top">',
+'<INPUT TYPE="CHECKBOX" name="CHECKMFN" value="',mfn,'">',
+/*'<td  valign="top">',
+'<b>','<IRBIS TYPE=0>. (',f(val(mfn),0,0),')</b>'
+/*'</td>',
+'</td>',
+'<td  valign="top">',
+'</!>',
+&uf('6brief'),'<br>',
+'<!>',
+'<A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&KEY=@',mfn,'&PFTNAME=rqst_IC_wn&FREEPAR3=',g1103,'&FREEPAR0=',g1100,'&FREEPAR5=',g1105,'">Заказать...</A>',
+'<hr>',
+'</td>',
+'</tr>',
+'</!>',
+
+

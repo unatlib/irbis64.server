@@ -1,0 +1,111 @@
+1
+ѕеренос контингента (поле 68) в записи дисциплин. ¬ыполнить?
+
+//12 PUTLOG
+// 9.1 - с учетом группы
+// перенос из записи VUZ пол€ 68 в запись DISC как новое повторение 84
+// с удалением подпол€ Z
+// 991 - это переносимое поле 68
+// 992 - это поле 69 из записи контингента
+IF
+if v991='' then '1' else '0' fi
+PUTLOG
+'Ќет данных дл€ переноса '
+FI
+// проверка вида записи и наличи€ 991
+IF
+mhu,if v991<>'' and v920='DISC' then '1' else '0' fi
+DEL
+991^Z
+*
+
+
+//цикл по пол€м 991
+REPEAT
+// проверка на дубль в записи DISC
+IF
+if rsum((if p(v83) then if &uf('+97',v83^A)=&uf('+97',&uf('Av991^a#1')) and &uf('+97',v83^N)=&uf('+97',&uf('Av991^N#1')) and &uf('+97',v83^C)=&uf('+97',&uf('Av991^C#1')) and &uf('+97',v83^V)=&uf('+97',&uf('Av991^V#1')) and &uf('+97',v83^O)=&uf('+97',&uf('Av991^O#1')) and &uf('+97',v83^E)=&uf('+97',&uf('Av991^E#1')) and &uf('+97',v83^F)=&uf('+97',&uf('Av991^F#1')) then '1,' else '0,' fi fi))>0 then '1' fi
+// в записи уже есть такое повторение пол€ 83
+PUTLOG
+' онтингент ',if &unifor('Av991^E#1')<>'' then '√р. ',&unifor('Av991^E#1') fi,,&unifor('Av991^a#1'),'-',if &unifor('Av991^c#1')<>''then &unifor('Av991^c#1') else &unifor('Av991^n#1')  fi,'-',&unifor('Av991^v#1'),'-',&unifor('Av991^o#1'),'-',&unifor('Av991^f#1'),' уже есть. MFN=',&unifor('DVUZ,?(',mpu,v3^0,&unifor('Av991^a#1'),,if &unifor('Av991^c#1')<>''then &unifor('Av991^c#1') else &unifor('Av991^n#1')  fi,,&unifor('Av991^v#1'),,&unifor('Av991^o#1'),'-',&unifor('Av991^f#1'),'?,f(val(mfn),0,0)')
+FI
+IF
+if rsum((if p(v83) then if &uf('+97',v83^A)=&uf('+97',&uf('Av991^a#1')) and &uf('+97',v83^N)=&uf('+97',&uf('Av991^N#1')) and &uf('+97',v83^C)=&uf('+97',&uf('Av991^C#1')) and &uf('+97',v83^V)=&uf('+97',&uf('Av991^V#1')) and &uf('+97',v83^O)=&uf('+97',&uf('Av991^O#1')) and &uf('+97',v83^E)=&uf('+97',&uf('Av991^E#1')) and &uf('+97',v83^F)=&uf('+97',&uf('Av991^F#1')) then '1,' else '0,' fi fi))<=0 then '1' fi
+// еще нет - перенос в запись DISC пол€ 84
+ADD
+84
+
+&uf('Av991#1')
+
+PUTLOG
+'ƒописана запись дисциплины. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// запись признака - запустить задание VADD83
+PUTLOG
+'LINKCORRTASK=VADD83%MFN=',,,,f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец проверки на дубль
+FI
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+FI
+//-----------------------------------------------конец записи DISC
+// проверка вида записи и наличи€ 992
+IF
+if v992<>'' and v920='VUZ' then '1' else '0' fi
+REPEAT
+CORREC
+'VUZ'
+mpu,v68
+'IDD=',&uf('Av992^D#1'),,,,,,&uf('+7W1#')
+
+ADD
+83
+
+if rsum((if p(v83) then if &uf('Av1001^A#1') = &uf('+97',v83^A)  and &uf('Av1001^O#1') = &uf('+97',v83^O)  and  &uf('Av1001^V#1') = &uf('+97',v83^V)  and &uf('Av1001^N#1') = &uf('+97',v83^N)  and &uf('Av1001^C#1') = &uf('+97',v83^C)  and &uf('Av1001^F#1') = &uf('+97',v83^F)  then '1' fi fi))=0 then &uf('Av1001#1'),,,,&uf('+7W1#',mfn)   fi
+
+DEL
+1001
+*
+
+
+END
+IF
+if val(G1)>0 then '1' fi
+PUTLOG
+'ƒописана запись дисциплины. MFN=',f(val(G1),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// запись признака - запустить задание LINKDISC
+PUTLOG
+'LINKCORRTASK=LINKDISC%MFN=',,,,f(val(G1),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+992
+1
+
+
+UNTIL
+if p(v992) then '1' fi
+
+
+FI
+//-----------------------------------------------конец записи VUZ
+DEL
+991
+*
+
+

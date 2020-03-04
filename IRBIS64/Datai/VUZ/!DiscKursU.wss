@@ -1,0 +1,81 @@
+8
+1
+______Наименование______
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>'' then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then &unifor('Av3^A#1') fi fi/)
+3
+Номер учебного плана
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^U fi fi/)
+C
+Фак.
+0
+0
+1
+fak.mnu\\2
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^A fi fi/)
+B
+Напр.
+0
+0
+1
+napr.mnu\\2
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^N fi fi/)
+l
+Специальность
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^C fi fi/)
+4
+Семестр
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^F fi fi/)
+D
+Кафедра читающая
+0
+0
+1
+kafch.mnu\\2
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then &unifor('Av5#1') fi fi/)
+A
+Кафедра выпускающая
+0
+0
+1
+kafv.mnu\\2
+
+
+
+(if p(v83) and v83^U<>''  then if &unifor('Av991#1')='1' and (v83^F: '1/' or v83^F='1' or v83^F: '2/' or v83^F='2') or &unifor('Av991#1')='2' and (v83^F: '3' or v83^F: '4') or &unifor('Av991#1')='3' and (v83^F: '5' or v83^F: '6') or &unifor('Av991#1')='4' and (v83^F: '7' or v83^F: '8') or &unifor('Av991#1')='5' and (v83^F: '9' or v83^F: '10') or &unifor('Av991#1')='6' and (v83^F: '11' or v83^F: '12') then v83^H fi fi/)

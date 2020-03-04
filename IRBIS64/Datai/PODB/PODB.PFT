@@ -1,0 +1,24 @@
+'{', 
+&unifor('Av675#1'),
+   if a(v675) then &unifor('Av621#1') fi,
+   if s(v675v621)<>''then'\par 'fi,v908"\par ",
+   if p(v461) then'\b 'v461^x"\par ",v461^c'\b0 'fi,
+   "\par "d461,'\b 'v700^a," "v700^b,'\b0 \par ',"\b "v200^v"\b0 ",
+   if v200:'^v'then" : "v200^a else 
+      if p(v700) then'\tab \b ',&unifor('E3'v200^a),'\b0  ',
+          &unifor('F3'v200^a) else "\tab "v200^a fi 
+   fi,
+   |. |v923^h,| : |v923^i,|. |v923^k,| : |v923^l,
+   if s(v700v701v702)<>''then' / ',v700^b" ",v700^a,
+      (if p(v701) then if &uf('Av700#1')<>'' then |, |d701 else |, |+d701 fi,v701^b| |,v701^a fi), 
+      if s(v700v701)<>''then" ; "d702 fi,|, |+v702^a 
+   fi,". - "v205^a,
+   if a(v210^a) then'. - Б.м.'fi,(". - "|; |+v210^a,| : |v210^c),
+   if a(v210^d) then', Б.г.'fi,", "v210^d,". - "v215^a," "v215^1,
+   (". - ("|. - |+v225^a,| ; |v225^v,")"d225),(|. - ISBN |v10^a),
+   if p(v10^a) then " : "v10^d else". - "v10^d fi,", Б.ц"n10^d,
+   if p(v910) then '\par \par \b Заказано '," в  "v30^a,| (|v30^k|)|,'  'v910' экз. ' 
+      if p(v10^d) then ' на сумму ' f(val(v10^d)*val(v910),0,2) fi,'\b0 ' 
+   fi 
+'\par '
+'}'

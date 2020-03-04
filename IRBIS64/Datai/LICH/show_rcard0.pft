@@ -1,0 +1,21 @@
+'<table width=100%><tr>',
+'<td>',
+ if v40^f:'*' then 
+/*'<span style="vertical-align: super;"><b>~~Литература на руках~~</b></span>',
+
+   '<span> <a title="~~Напечатать~~" href="<--CGI_PATH-->?LNG=',&uf('Av5500#1'),'&P21DBN=RDR&I21DBN=RDR_PRINT&C21COM=F&Z21ID=',&uf('+3E',v2225),'">',
+   '<img border=0 width=32 height=32  src="<--HTTP_PATH-->/images/printer.jpg"></a></span>',
+
+   '<br><br>',
+   &uf('+1W1#'), 
+   (if p(v40) and v40^f.1='*' then &uf('+1W1#',F(val(&uf('+1R1'))+1,0,0)), &uf('+1R1'), 
+   |. ~~Выдан~~ |v40^D*6.2'.'v40^D*4.2'.'v40^D.4,
+
+|, ~~Требуется вернуть до~~ |v40^e*6.2'.'v40^e*4.2'.'v40^e.4
+,|  ~~Шифр~~: |v40^A.9,| ~~Инв.~~№ |v40^B.9,| |v40^c, '<br><br>', fi) 
+    else '<b>~~Литературы на руках нет.~~</b>'
+fi
+
+'<!hr noshade size="1"></td></tr></table>'
+
+

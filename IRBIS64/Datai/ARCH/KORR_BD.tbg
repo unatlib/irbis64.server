@@ -1,0 +1,43 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=10
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=4
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=9
+CELL_TAB2_2=В БД нет ИД (19^B) документа-приложения
+CELL_TAB2_3=mhl,(if p(v421) then if &uf('J,B422='&uf('Av19^b#1'))<>'' then else '\par \b № 'f(mfn,0,0),|, #421:_\b0   |v421' (19^b= ',&uf('G2 'v422^y),')' fi fi) 
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=9
+CELL_TAB3_2=В БД нет ИД (19^B) основного документа
+CELL_TAB3_3=mhl,(if p(v422) then if &uf('J,B='v422^y)<>'' then else '\par \b № 'f(mfn,0,0),|, #422:_\b0   |v422' \b (422^y= ',&uf('G2 'v422^y),')\b0'fi fi/)
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+HDR_LINES0=Контроль наличия в БД док-тов с идентификатором (19^b),указанных в полях 421 и 422
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=5
+CELL_SORT4=1
+CELL_SORT5=if s(v421,v422)<>'' then if p(v421) then if rsum((if p(v421) then if &uf('J,B422='&uf('Av19^b#1'))<>'' then '0' else '1' fi fi/))>0 then 'NNN421=',mfn fi fi,if p(v422) then if rsum((if p(v422) then if &uf('J,B='v422^y)<>'' then '0' else '1' fi fi/))>0 then 'NNN422=',mfn fi fi fi
+[HDR]
+HDR_PARAMS_COUNT=1

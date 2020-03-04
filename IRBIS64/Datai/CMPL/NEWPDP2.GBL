@@ -1,0 +1,28 @@
+1
+
+
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+(mpu,if p(v39) then if p(v39^B) then if v39^B='%1' then '^B*' else |^B|v39^B fi,&unifor('S0') else '^A',&unifor('S1A') fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+(mpu,if p(v1001) then if p(v1001^B) then if v1001^B='*' then '1',&unifor('S0') else '0',&unifor('S999') fi  else if v1001^A=&unifor('S1A') then '1' else '0' fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+39
+F
+(v1002/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

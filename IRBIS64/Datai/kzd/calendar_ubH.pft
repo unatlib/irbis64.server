@@ -1,0 +1,2 @@
+'\par \qc   алендарь знаменательных юбилейных дат \par '
+if &uf('Kub.mnu\1')<>'' then '\par \qc на  '&uf('Kub.mnu\1')' год\par ' fi

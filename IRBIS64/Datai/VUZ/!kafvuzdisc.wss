@@ -1,0 +1,91 @@
+9
+0
+Дисциплина
+0
+0
+0
+
+
+
+G1^0='' or s((if p(v69) then if v69^B=&uf('Av991#1') then ref(l(|IDD=|v69^D),v3^A) fi fi)): G1^0
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then ref(l(|IDD=|v69^D),v3^A) fi fi fi/)
+A
+Факультет
+0
+0
+1
+fak.mnu\\2
+
+VFAK=
+G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^A#1') fi fi fi/)
+L
+Филиал
+0
+0
+1
+fili.mnu
+
+VFAKF=
+G1^L='' or s('!',v68^L,'!'): s('!',G1^L,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^L#1') fi fi fi/)
+N
+Направление
+0
+0
+1
+napr.mnu\\2
+
+VNAPR=
+G1^N='' or s('!',v68^N,'!'): s('!',G1^N,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^N#1') fi fi fi/)
+C
+Специальность
+0
+0
+0
+
+
+VSPEC=
+G1^C='' or s('!',v68^C,'!'): s('!',G1^C,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^C#1') fi fi fi/)
+V
+ВО
+0
+0
+1
+vo.mnu
+
+VVO=
+G1^V='' or s('!',v68^V,'!'): s('!',G1^V,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^V#1') fi fi fi/)
+O
+ФО
+0
+0
+1
+fo.mnu
+
+VFO=
+G1^O='' or s('!',v68^O,'!'): s('!',G1^),'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^O#1') fi fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+VSEM=
+G1^F='' or s('!',v68^F,'!'): s('!',G1^F,'!')
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then &uf('Av68^F#1') fi fi fi/)
+1
+Кол-во студентов
+0
+0
+0
+
+
+
+
+(if p(v69) then if &uf('+97',v69^B)=&uf('Av991#1') then if ( &uf('AG1^0#1')='' or s(ref(l(|IDD=|v69^D),v3^A)): &uf('AG1^0#1') ) and ( &uf('AG1^A#1')='' or s('!',&uf('Av68^A#1'),'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^L#1')='' or s('!',&uf('AG1^L#1'),'!'): s('!',&uf('Av68^L#1'),'!')) and ( &uf('AG1^N#1')='' or s('!',&uf('AG1^N#1'),'!'): s('!',&uf('Av68^N#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',&uf('AG1^C#1'),'!'): s('!',&uf('Av68^C#1'),'!')) and ( &uf('AG1^O#1')='' or s('!',&uf('AG1^O#1'),'!'): s('!',&uf('Av68^O#1'),'!')) and ( &uf('AG1^V#1')='' or s('!',&uf('AG1^V#1'),'!'): s('!',&uf('Av68^V#1'),'!')) and ( &uf('AG1^F#1')='' or val(&uf('AG1^F#1'))=val(&uf('Av68^F#1'))) then if val(&unifor('IMAIN,ACCESSRDR,1'))=1  and &uf('Av68^L#1')='' then &uf('JRDR,?',&uf('Av68^A#1'),if &uf('Av68^C#1')<>'' then &uf('Av68^C#1') else &uf('Av68^N#1') fi,,&uf('Av68^V#1'),&uf('Av68^O#1'),'-S',&uf('Av68^F#1') ) else &uf('Av68^Z#1') fi fi fi fi/)

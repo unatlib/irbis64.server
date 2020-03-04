@@ -1,0 +1,58 @@
+/*&uf('+7W1001#^F2^Iнод.111'),
+&uf('+7W1#'),&uf('+7W2#'),&uf('+7W3#'),&uf('+7W4#'),&uf('+7W5#'),
+if p(g1001) then 
+   &uf('+7W20#',f(rsum((if p(v910) then if &uf('Pv910^t')<>'' then '1;' fi fi)),0,0)),
+   if g1001^o='' or g1001^o<>'' and v910^t=''then 
+      &uf('+7W2#'f(rsum((if p(v910) then 
+                 if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                    if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' fi fi fi)),0,0))
+   else 
+      if val(g20)=1 then 
+         if v910^t:g1001^o then 
+            &uf('+7W3#'f(rsum((if p(v910) then 
+                       if p(v910^t) and v910^t:&unifor('Ag1001^o#1') then 
+                          if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                             if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                       fi fi fi fi)),0,0))
+         else 
+            &uf('+7W4#'f(rsum((if p(v910) then 
+                      if a(v910^t) then 
+                         if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                            if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                      fi fi fi fi)),0,0))
+         fi 
+      else
+         if val(g20)>1 then 
+            if v910^t:g1001^o then 
+               &uf('+7W3#'f(rsum((if p(v910) then 
+                         if p(v910^t) and v910^t:&unifor('Ag1001^o#1') then 
+                            if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                               if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                      fi fi fi fi)),0,0))
+               &uf('+7W5#'f(rsum((if p(v910) then 
+                         if a(v910^t) then 
+                            if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                               if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                      fi fi fi fi)),0,0))
+            else
+               &uf('+7W5#'f(rsum((if p(v910) then 
+                         if a(v910^t) then 
+                            if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                               if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                      fi fi fi fi)),0,0))
+         fi fi 
+   fi fi 
+   if a(g20) then g2 else 
+      if val(g20)=1 then 
+         if p(g4) then g4 else 
+            if p(g3) then g3 else 
+               if p(g2) then g2 
+         fi fi fi 
+      else 
+         if val(g20)>1 then 
+            if p(g3) then g3 else 
+               if p(g5) then g5 else 
+                  if p(g2) then g2 
+   fi fi fi fi fi fi 
+fi
+/*/'1: 'g1/'2: 'g2/'3: 'g3/'4: 'g4/'5: 'g5/'20: 'g20/'1001: 'g1001/

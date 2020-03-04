@@ -1,0 +1,145 @@
+if s(v140,v141,v116,v117,v316,v317,v318)<>''then 
+   "\par \b Общие характеристики: \b0 "d140,
+   if p(v140^b) then 
+      if v140^b:'z' then else &unifor('K140a0.mnu|'v140^b)
+         if s(v140^1,v140^2,v140^3,v140^c,v140^4,v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+              v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^1) then &unifor('K140a0.mnu|'v140^1)
+      if s(v140^2,v140^3,v140^c,v140^4,v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^2) then &unifor('K140a0.mnu|'v140^2) 
+      if s(v140^3,v140^c,v140^4,v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^3) then &unifor('K140a0.mnu|'v140^3)
+      if s(v140^c,v140^4,v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^c) then 
+      if v140^c:'z' then else &unifor('K140a4.mnu|'v140^c),
+         if s(v140^4,v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+              v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^4) then &unifor('K140a4.mnu|'v140^4)
+      if s(v140^5,v140^6,v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^5) then &unifor('K140a4.mnu|'v140^5)
+      if s(v140^6,v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^6) then &unifor('K140a4.mnu|'v140^6)
+      if s(v140^d,v140^e,v140^7,v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^d) then 
+      if v140^d:'z' then else &unifor('K140a8.mnu|'v140^d)
+         if s(v140^e,v140^7,v140^8,
+              v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^e) then 
+      if v140^e:'zz'then else &unifor('K140a9p.mnu|'v140^e)
+         if s(v140^7,v140^8,
+              v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^7) then &unifor('K140a9p.mnu|'v140^7)
+      if s(v140^8,
+           v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^8) then &unifor('K140a9p.mnu|'v140^8)
+      if s(v140^9,v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^9) then &unifor('K140a9p.mnu|'v140^9)
+      if s(v140^f,v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi,
+   if p(v140^f) then 
+      if v140^f:'zz' then else &unifor('K140a17.mnu|'v140^f)
+         if s(v140^g,v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^g) then 
+      if v140^g:'z' then else &unifor('K140a19.mnu|'v140^g)
+         if s(v140^h,v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^h) then 
+      if v140^h:'z' then else &unifor('K140a20.mnu|'v140^h)
+         if s(v140^i,v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^i) then 
+      if v140^i:'z' then else &unifor('K140a21.mnu|'v140^i)
+         if s(v140^j,v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^j) then 
+      if v140^j:'z' then else &unifor('K140a22.mnu|'v140^j)
+         if s(v140^k,v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^k) then 
+      if v140^k:'z' then else &unifor('K140a23.mnu|'v140^k)
+         if s(v140^l,v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^l) then 
+      if v140^l:'z' then else &unifor('K140a24.mnu|'v140^l)
+         if s(v140^m)<>''then' ; 'fi fi fi,
+   if p(v140^m) then 
+      if v140^m:'z' then else &unifor('K140a25.mnu|'v140^m) fi fi,
+   "\par \b Xарактеристики экземпляра: \b0 "d141
+   (|\par |d141,|\b Экз. |v141^!|\b0 : |,
+   if p(v141^b) then if v141^b:'z' then else &unifor('K141a0.mnu|'v141^b)
+      if s(v141^1,v141^2,v141^c,v141^d,v141^e,v141^f)<>''then' ; 'fi fi fi,
+   if p(v141^1) then &unifor('K141a0.mnu|'v141^1)
+      if s(v141^2,v141^c,v141^d,v141^e,v141^f)<>''then' ; 'fi fi,
+   if p(v141^2) then &unifor('K141a0.mnu|'v141^2)
+      if s(v141^c,v141^d,v141^e,v141^f)<>''then' ; 'fi fi,
+   if p(v141^c) then if v141^c:'z' then else &unifor('K141a3.mnu|'v141^c)
+      if s(v141^d,v141^e,v141^f)<>''then' ; 'fi fi fi,
+   if p(v141^d) then if v141^d:'z' then else &unifor('K141a4.mnu|'v141^d)
+      if s(v141^e,v141^f)<>''then' ; 'fi fi fi,
+   if p(v141^e) then if v141^e:'z' then else &unifor('K141a5p.mnu|'v141^e)
+      if s(v141^f)<>''then' ; 'fi fi fi,
+   if p(v141^f) then if v141^f:'z' then else &unifor('K141a6.mnu|'v141^f) fi fi),
+   "\par \b Графические материалы: \b0 "d116,
+   (|\par |d116,|\b Экз. |v116^!| : \b0 |,
+   if p(v116^b) then if v116^b:'z' then else &unifor('K116a0.mnu|'v116^b)
+      if &unifor('K116a0.mnu|'v116^b)='' then v116^b fi,
+      if s(v116^c,v116^d,v116^e,v116^f,v116^1,v116^2,v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi,
+   if p(v116^c) then if v116^c:'z' then else &unifor('K116a1.mnu|'v116^c)
+      if &unifor('K116a1.mnu|'v116^c)='' then v116^c fi,
+      if s(v116^d,v116^e,v116^f,v116^1,v116^2,v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi,
+   if p(v116^d) then if v116^d:'z' then else &unifor('K116a2.mnu|'v116^d)
+      if &unifor('K116a2.mnu|'v116^d)='' then v116^d fi,
+      if s(v116^e,v116^f,v116^1,v116^2,v116^g,v116^3,v116^4,v116^h)<>'' then' ; 'fi fi fi,
+   if p(v116^e) then if v116^e:'z' then else &unifor('K116a3.mnu|'v116^e),
+      if &unifor('K116a3.mnu|'v116^e)='' then v116^e fi,
+      if s(v116^f,v116^1,v116^2,v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^f) then 
+      if v116^f:'zz' then if v116^f='zz'then else &unifor('K116a4.mnu|'v116^f*2) fi 
+      else &unifor('K116a4.mnu|'v116^f),if &unifor('K116a4.mnu|'v116^f)='' then v116^f fi,
+         if s(v116^1,v116^2,v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^1) then 
+      if v116^1:'zz' then if v116^1='zz'then else &unifor('K116a4.mnu|'v116^1*2) fi 
+      else &unifor('K116a4.mnu|'v116^1),if &unifor('K116a4.mnu|'v116^1)='' then v116^1 fi,
+         if s(v116^2,v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^2) then 
+      if v116^2:'zz' then if v116^2='zz'then else &unifor('K116a4.mnu|'v116^2*2) fi 
+      else &unifor('K116a4.mnu|'v116^2),if &unifor('K116a4.mnu|'v116^2)='' then v116^2 fi,
+         if s(v116^g,v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^g) then if v116^g:'z' then else &unifor('K116a10.mnu|'v116^g)
+      if &unifor('K116a10.mnu|'v116^g)='' then v116^g fi,
+      if s(v116^3,v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^3) then if v116^3:'z' then else &unifor('K116a10.mnu|'v116^3)
+      if &unifor('K116a10.mnu|'v116^3)='' then v116^3 fi,
+      if s(v116^4,v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^4) then if v116^4:'z' then else &unifor('K116a10.mnu|'v116^4)
+      if &unifor('K116a10.mnu|'v116^4)='' then v116^4 fi,
+      if s(v116^h)<>''then' ; 'fi fi fi, 
+   if p(v116^h) then if v116^h:'z' then else &unifor('K116a16.mnu|'v116^h)fi fi),
+    "\par \b Трехмерные искусственные объекты: \b0 "d117,
+   (|\par |d117,|\b Эксп. |v117^!| : \b0 |,
+   if p(v117^b) then 
+      if v117^b:'z' then else &unifor('K117a0.mnu|'v117^b)
+         if &unifor('K117a0.mnu|'v117^b)='' then v117^b fi,
+         if s(v117^c,v117^d,v117^1,v117^2)<>''then' ; 'fi fi fi,
+   if p(v117^c) then 
+      if v117^c:'z' then else &unifor('K117a2.mnu|'v117^c)
+         if &unifor('K117a2.mnu|'v117^c)='' then v117^c fi,
+         if s(v117^d,v117^1,v117^2)<>''then' ; 'fi fi fi,
+   if p(v117^d) then 
+      if v117^d:'z' then else &unifor('K117a7.mnu|'v117^d)
+         if &unifor('K117a7.mnu|'v117^d)='' then v117^d fi,
+         if s(v117^1,v117^2)<>'' then' ; 'fi fi fi,
+   if p(v117^1) then 
+      if v117^1='zz' then else &unifor('K117a2.mnu|'v117^1*2),  
+      if &unifor('K117a2.mnu|'v117^1)='' then v117^1 fi,
+      if s(v117^2)<>''then' ; 'fi fi fi, 
+   if p(v117^2) then 
+      if v117^2='zz' then else &unifor('K117a2.mnu|'v117^2*2) fi    
+      if &unifor('K117a2.mnu|'v117^2)='' then v117^2 fi fi)
+   "\par \b Примечания о действиях по сохранности экземпляра:\b0 "d318,
+   (if p(v318) then '\par ',|\b Экз. |v318^!|\b0 : |,&unifor('G0!'v318,mdl),mpl,fi), 
+   "\par \b Примечания об особенностях экземпляра:\b0 "d316,
+   (if p(v316) then'\par ',|\b Экз. |v316^!|\b0 : |,v316^a|. |,v316^b|, |,v316^c|. |,v316^5|.|,fi),
+   "\par \b Примечания о происхождении экземпляра:\b0 "d317,
+   (if p(v317) then'\par ',|\b Экз. |v317^!|\b0 : |,&unifor('G0!'v317,mdl),mpl,fi) 
+fi, 

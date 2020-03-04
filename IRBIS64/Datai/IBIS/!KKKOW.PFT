@@ -1,0 +1,109 @@
+if v920:'nj'then /'\\$A0,0$B\\','E',v903,'F'/'\\$A0,0\\', 
+ref(l("I="v933),v200^a, 
+   if p(v200^e) then ' : ' 
+      if s(v982^0,v982^9)<>'' or v905^2:'1' or &unifor('Q'v200^e*1.1)<>v200^e*1.1 then v200^e else 
+         &unifor('Q'v200^e.1),v200^e*1 
+   fi fi, 
+     (|. |v923^h,if p(v923^h) then|, |v923^i else |. |v923^i fi,| : |v923^e, 
+      |. |v923^k,if p(v923^k) then|, |v923^l else |. |v923^l fi,| : |v923^s, 
+      |. |v923^m,if p(v923^m) then|, |v923^n else |. |v923^n fi,| : |v923^v),". - "d110^d, 
+   if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d)else"Периодичность "v110^d fi),if s(&unifor('IPrivate,KKS,'),v905^t)<>'' then  else if v203=''  then '. - Текст : непосредственный.'  else
+ if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi fi
+,/'E',v934"г.", 
+   if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi, 
+   if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' № 'fi),v936 fi,'F',oprimK, 
+else,&uf('6!kkkbok'), 
+   
+ if a(v463) then '. - ',ofizxar,'. - ',oser,'. - ',oprimK,'. - ',oISBNcnK, 
+      if v905^l=''and &unifor('IPRIVATE,KKP,')=''then if p(v300)then mhl,(/|\\$A9,6\\|v300|.|),mpl,fi fi 
+   else if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,&uf('6oistaspK'), fi, 
+   if p(v541)then/'EПеревод заглавия: F'v541 fi 
+fi,
+if p(v481)then/'\\$A9,6\\','Приплет.:',&unifor('S0'), 
+   (if p(v481)then 
+       if &unifor('Av481#2')<>''then 
+          if p(v481)then' '&unifor('S1A')'.' 
+       fi fi, 
+       if p(v481^z) then &unifor('Av461^x#1')' '&unifor('Av461^c#1'),|. |v481^v, 
+          | : |v481^c,| : |v481^e, 
+       else 
+          if p(v481^9) then 
+             if v481^9='1' then v481^x 
+             else &unifor('E'v481^9,v481^x), 
+                if p(v481^?)then |, |v481^? else 
+                   if &unifor('F'v481^9,v481^x)<>'' then ', '&unifor('F'v481^9,v481^x) fi fi,'.' 
+             fi 
+          else 
+             if v481^x:',' then v481^x|.| else 
+                if v481^x:' ' then &unifor('G0 'v481^x),|, |v481^?|.| 
+                   if a(v481^?) then 
+                      if v481^x:'.' then ', ' 
+                         if v481^x:'. ' 
+                         then &unifor('G2 'v481^x) else &unifor('G0.'&unifor('G2 'v481^x)),'. ' &unifor('G2.'v481^x) 
+                         fi 
+                      else ', '&unifor('G2 'v481^x)'.' 
+                   fi fi 
+                else v481^x,|, |v481^?,|.|d481^x, 
+          fi fi fi,|. |d481^x,v481^c,| : |v481^e,|. |v481^v 
+       fi, 
+       if s(v481^r,v481^s)<>''then ', ' fi,v481^r  
+       if p(v481^s) then if p(v481^r) then' : 'fi,v481^s fi, 
+       if s(v481^k,v481^l)<>''then', 'fi,v481^k, 
+       if p(v481^l) then if p(v481^k) then' : 'fi,v481^l fi, 
+       if &unifor('Av905^1#1')='' then | / |v481^f fi, 
+       |. -|v481^n, 
+       if s(v481^d,v481^g)<>''then '. - 'fi,v481^d,| : |v481^g,|, |v481^h, 
+       if a(v481^h) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then', [Б.г]'else', [s.a]'fi 
+       fi,|. - |v481^4, 
+       if p(v481^4)then &unifor('Korg.mnu|4')'.'fi, 
+       | : |v481^0*2, 
+       |. - (|v481^q,| ; |v481^m,|)|d481^q,|. - |v481^p,|. - ISBN |v481^i, 
+    fi)
+fi,
+if v920:'J' then else 
+   if p(v421) then '. - Приложени' 
+      if &uf('Av421#2')<>'' then 'я' else 'е' fi,':',&uf('S0'),
+      (if p(v421) then if &uf('Av421#2')<>''then | |d421,&uf('S1A'),'. ' fi,
+       v421^a,|, ISSN |v421^x fi) 
+fi,". - Является приложением к "v422^a,", ISSN "v422^x,fi,!kkkIND, 
+if s(v905^g)<>''or &unifor('IPRIVATE,KKA,')<>'' or 
+   s(v905^g)=''and &unifor('IPRIVATE,KKA,')='' and s(v900^c,v900^2,v900^3,v900^4):'b' then mhl, 
+   (if p(v331)then/'\\$A9,6\\'v331 fi/),mpl, 
+fi/, 
+if s(v905^r)<>''or &unifor('IPRIVATE,KKR,')<>''then else,!kkkR,fi, 
+if v461:'^y'and (not('et al. и др. ':v461^y)) or s(v961^u,v461^u,v700^u,v701^u,v200^u,v702^u,v600^u,v711^u, 
+v972^u,v962^u) :'2'or s(v46^u,v225^u,v606^u,v607^u,):'1'or s(v461^y,v970v922^c,v924v510v454v601 
+v905^u,v481) <>''or v629^a:'1'or val(v517^u)>0 then &uf('6!kkk5odk'),fi, 
+if v920='J'then 
+   if p(v430)or p(v440)then /' Настоящее издание '/ 
+      (if p(v430)then""d430, 
+          if v430^z:'361'then else| ; |+d430 fi, 
+          if v430^z:'U'then'До 'v430^b.4,if a(v430^b)then v210^d fi'г.'v430^b*4,' см.: 'else 
+             if '32 33 ':v430^z then|С |v430^b.4| |,|  |n430^b else|В |v430^b.4| |,|  |n430^b fi, 
+             &unifor('Krksz.mnu|'v430^z) 
+          fi,v430^a, 
+          if v430^z:'36'and s(v430^c,v430^d)<>''then' ('|ISSN |v430^c.4|-|,v430^c*4.4,| Шифр |v430^d')' 
+          else|. - ISSN |v430^c.4|-|,v430^c*4.4,| (Шифр |v430^d|)| 
+       fi fi), 
+       if p(v430) and p(v440) then / fi, 
+      (if p(v440)then""d440, 
+          if v440^z:'461'then else | ; |+d440 fi, 
+          if v440^z:'U'then|С |v440^b.4 else|В |v440^b.4 fi,|г.|d440^b,|  |n440^b,| (|v440^b*4|)|, 
+          if v440^z:'U'then' см.: 'else &unifor('Krksz.mnu|'v440^z) fi,v440^a, 
+          if v440^z:'46'and s(v440^c,v440^d)<>''then' ('|ISSN |v440^c.4|-|,v440^c*4.4,| Шифр |v440^d')' 
+          else |. - ISSN |v440^c.4|-|,v440^c*4.4,| (Шифр |v440^d|)| 
+       fi fi) 
+   else if s(v210^e)<>''then/"Прекращен с "v210^e fi 
+   fi,". - Сериальное приложение: "v421^a,", ISSN "v421^x, 
+      ". - Является приложением к "v422^a,", ISSN "v422^x, 
+   if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else 
+      if p(v909)then /'EЗарегистрированы поступления: F'fi, 
+      (if p(v909)then/v909^q|г. |, 
+          if p(v909^f) then if &unifor('Av210^8#1')<>''then' '&unifor('Av210^8#1')' ' else' т. 'fi,v909^f| ; |fi, 
+          if p(v909^h) then if &unifor('Av210^9#1')<>''then' '&unifor('Av210^9#1')' ' else' № : 'fi,v909^h+| ; |fi 
+      fi), 
+fi fi,!kkkEXK, 
+c54,(if v905.1='^'then else if val(v905^*)>0 then v905^* fi fi) 
+&unifor('!'),&unifor('+F') 

@@ -1,0 +1,72 @@
+mhl,
+if v920:'NJ'
+then 
+   ref(l(|I=|v933),v200^a,". "| ; |+v923^h,
+       if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi fi,v923^i,|. |v923^k,
+       if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,
+       if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n)
+else 
+,,,", "v934"г.", 
+  v503^a". ",v461^x,
+  if s(v461^x)<>''
+  then 
+    if v461^x:'.' then' ' else'. 'fi 
+  fi,
+  v461^c,
+  ( |. |v46^h,
+    if p(v46^i) then |, |v46^i  else |. |v46^i fi, 
+    |. |v46^k,
+    if p(v46^k) then |, |v46^m  else |. |v46^m fi ),
+  | [|v461^2|]|,  
+  if p(v461) 
+  then 
+    if p(v951^K) then ' [Ёлектронный учебник] ' else 
+   if s(v230v337v135)<>'' then ' [Ёлектронный ресурс] ' fi fi,,,
+    | : |v461^e, 
+    if p(v461^x) then else| / |v461^f fi, 
+    ( if s(v46^a,v46^v)<>'' then". - ("| (|+v46^a,| ; |v46^v')'fi ),
+    ". "d461,v200^v, 
+    if p(v200^v) then" : "v200^a else v200^a fi, 
+    if s(v200^v,v200^a)='' then ( |. |+v925^v,if p(v925^v) then | : |v925^a else v925^a fi ) fi, 
+  fi, 
+  if a(v461) 
+  then 
+    v700^a," "v700^d,", "v700^g, 
+    if a(v700^g)then" "v700^b fi,
+    "."d700^g," "d700^a, 
+    if p(v982) 
+    then 
+      if v200^a:&unifor('Av982^9#1') 
+      then 
+      else 
+        &unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 
+      fi 
+    fi,
+    v200^a," ["v200^b"]", 
+  fi,
+  if a(v461) then if val(&uf('6KoElectro'))=1 then ' [Ёлектронный учебник]' else " [Ёлектр.ресурс]"d230, fi fi,  
+   , if p(v200^e) then 
+            if a(v905^q) then ' : ' 
+               if s(v982^0,v982^9)<>'' or &unifor('Kjznv.mnu\'&unifor("Av101#1"d903))<>'' then mhl,v200^e,mpl, 
+               else 
+                  if s(v905^2,&unifor('IPRIVATE,EEE,')):'1' or v200^e.1='<'and &unifor('Q'v200^e*2.1)<>v200^e*2.1 or 
+                     v200^e.1<>'<'and &unifor('Q'v200^e*1.1)<> v200^e*1.1 then mhl,v200^e,mpl,
+                  else 
+                     if v200^e.1='<' then mhl,&unifor('Q'v200^e*1.1),v200^e*2 mpl, 
+                     else mhl,&unifor('Q'v200^e.1),v200^e*1 mpl, 
+         fi fi fi fi fi,
+  (if p(v923) then
+       if &unifor('Av920#1'):'SPEC' then ", "| ; |+d923,v923^h else ". "| ; |+d923,v923^h fi, 
+       if p(v923^h)then|. |d923^i fi,v923^i, 
+       if s(v923^k,v923^l)<>''then if &unifor('Av920#1'):'SPEC' then ', ' else '. 'fi fi,v923^k, 
+       if p(v923^k)then|. |d923^l fi,v923^l 
+  fi) 
+  ,| / |v200^f, 
+  if v920='J'then'. - '&unifor('K110b.mnu|'v110^b)," выходит с "v210^d"г."else if s(v210^c,v210^d)<>'' then'. - 'v210^c,,,if v210^c<>''then ", "v210^d else v210^d fi fi fi, 
+  if a(v210^d) then|. - |v461^h fi,(". - "| ; |+v215^a,| |d215^1,if v215^1.2:'='then v215^1*2 else v215^1 fi, 
+  if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi), 
+fi,,,,,,,,,,,,,,,
+if p(v699) and v699^U='0' then '(\b аналог ) \b0 ' fi,,,,,  
+if (&uf('Av951^I#1')<>'')  then '\par –ежим доступа: '  
+'{\field{\*\fldinst {\rtlch\fcs1 \af0 \ltrch\fcs0 \lang1033\langfe1033\langnp1033\insrsid15543780  HYPERLINK "}{',,,
+&uf('Av951^I#1'),,'}}}',,,fi,,,,,,,,

@@ -1,0 +1,102 @@
+if &unifor('Av905^1#1')<>'' then v925^g 
+else 
+   if p(v925^f) then  
+      if  (v925^g:&unifor('G0 'v925^f) or v925^g:&unifor('G0,'v925^f) or p(v925^x) and 
+           v925^g:&unifor('E'v925^x,v925^f)) 
+      AND (v925^f:'.' and (v925^g:&unifor('G0.'&unifor('G2 'v925^f)) or val(v925^x)>1 and 
+           v925^g:&unifor('G0.'&unifor('F'v925^x,v925^f))) or (not(v925^f:'.'))) 
+      AND (v925^f:',' and (v925^g:&unifor('G0 '&unifor('G2 'v925^f)) or val(v925^x)>1 and 
+           v925^g:&unifor('G2,'&unifor('F'v925^x,v925^f))) or (not(v925^f:','))) 
+      AND (p(v925^?) and (v925^g:v925^? or v925^g:v925^?.1) or a(v925^?)) 
+      then v925^g 
+      else 
+         if p(v925^g) and &unifor('Av903#1')<>'' then v925^g 
+         else 
+            if p(v925^x) then 
+               if v925^x:'1' then v925^f 
+               else 
+                  if &unifor('F'v925^x,v925^f)<>'' then 
+                     if &unifor('F'v925^x,v925^f):'. ' then &unifor('F'v925^x,v925^f) else 
+                        if &unifor('F'v925^x,v925^f):'.' 
+                        then &unifor('G0.'&unifor('F'v925^x,v925^f)),'.' 
+                           if &unifor('G2.'&unifor('F'v925^x,v330^f)):'.' then ' 'fi, 
+                              &unifor('G2.'&unifor('F'v925^x,v925^f)) 
+                        else &unifor('F'v925^x,v925^f) fi 
+                     fi 
+                  else v925^? 
+                  fi,' '&unifor('G0,'&unifor('E'v925^x,v925^f)) 
+               fi 
+            else 
+               if v925^f:', ' then &unifor('G2 'v925^f)' '&unifor('G0,'v925^f)  
+               else 
+                  if v925^f:' 'then 
+                     if &unifor('G2 'v925^f):'.'then 
+                        if &unifor('G2 'v925^f):'. ' then &unifor('G2 'v925^f) 
+                        else &unifor('G0.'&unifor('G2 'v925^f)),'.' 
+                           if &unifor('G2.'&unifor('G2 'v925^f)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v925^f)) 
+                        fi 
+                     else &unifor('G2 'v925^f) 
+                     fi,' '&unifor('G0,'&unifor('G0 'v925^f)) 
+                  else v925^?| |,v925^f    
+            fi fi fi 
+                          if p(v925^2) then ', ' 
+                  if p(v925^<) then 
+                     if v925^<:'1' then v925^2 
+                     else 
+                        if &unifor('F'v925^<,v925^2)<>'' then 
+                           if &unifor('F'v925^<,v925^2):'. ' then &unifor('F'v925^<,v925^2) else 
+                              if &unifor('F'v925^<,v925^2):'.' 
+                              then &unifor('G0.'&unifor('F'v925^<,v925^2)),'.' 
+                              if &unifor('G2.'&unifor('F'v925^<,v330^2)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v925^<,v925^2)) 
+                              else &unifor('F'v925^<,v925^2) fi 
+                           fi 
+                        else v925^, 
+                        fi,' '&unifor('G0,'&unifor('E'v925^<,v925^2)) 
+                     fi 
+                  else 
+                     if v925^2:', ' then &unifor('G2 'v925^2)' '&unifor('G0,'v925^2)  
+                     else 
+                        if v925^2:' 'then 
+                           if &unifor('G2 'v925^2):'.'then 
+                              if &unifor('G2 'v925^2):'. ' then &unifor('G2 'v925^2) 
+                              else &unifor('G0.'&unifor('G2 'v925^2)),'.' 
+                                 if &unifor('G2.'&unifor('G2 'v925^2)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v925^2)) 
+                              fi 
+                           else &unifor('G2 'v925^2) 
+                           fi,' '&unifor('G0,'&unifor('G0 'v925^2)) 
+                        else v925^,| |,v925^2    
+               fi fi fi fi 
+               if p(v925^3) then ', ' 
+                  if p(v925^>) then 
+                     if v925^>:'1' then v925^3 
+                     else  
+                        if &unifor('F'v925^>,v925^3)<>'' then 
+                           if &unifor('F'v925^>,v925^3):'. ' then &unifor('F'v925^>,v925^3) else 
+                              if &unifor('F'v925^>,v925^3):'.' 
+                              then &unifor('G0.'&unifor('F'v925^>,v925^3)),'.' 
+                              if &unifor('G2.'&unifor('F'v925^>,v330^3)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v925^>,v925^3)) 
+                              else &unifor('F'v925^>,v925^3) fi 
+                           fi 
+                        else v925^; 
+                        fi,' '&unifor('G0,'&unifor('E'v925^>,v925^3)) 
+                     fi 
+                  else 
+                     if v925^3:', ' then &unifor('G2 'v925^3)' '&unifor('G0,'v925^3)  
+                     else 
+                        if v925^3:' 'then 
+                           if &unifor('G2 'v925^3):'.'then 
+                              if &unifor('G2 'v925^3):'. ' then &unifor('G2 'v925^3) 
+                              else &unifor('G0.'&unifor('G2 'v925^3)),'.' 
+                                 if &unifor('G2.'&unifor('G2 'v925^3)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v925^3)) 
+                              fi 
+                           else &unifor('G2 'v925^3) 
+                           fi,' '&unifor('G0,'&unifor('G0 'v925^3)) 
+                        else v925^;| |,v925^3 
+            fi fi fi fi fi,if v925^W<>'' then if v925^W:'  ' then else  if v925^W:', ' then ', '&uf('G1 'v925^W),' '&uf('G0,'v925^W)else  if &uf('G2 'v925^W):' ' then ', '&uf('G1 'v925^W),' '&uf('G0 'v925^W) else  ', '&uf('G0.'&uf('G1 'v925^W)),'. ',&uf('G2.'&uf('G1 'v925^W)),' '&uf('G0 'v925^W) fi fi fi fi,
+
+            if p(v925^w) and v925^W:'  'then 
+               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi | ; |v925^g 
+      fi fi 
+   else v925^g 
+fi fi 
+

@@ -1,0 +1,18 @@
+&uf('S0'),
+(if p(v330) then '<br>	&nbsp;	&nbsp;	&nbsp;','<b><br>'&uf('S1A'),'. '
+    v330^c|</b>|,|<br>Аннотация: |v330^l,|<br>Примечание |v330^p
+    if v330^]<>''then 
+       if v330^[='1' then '<A HREF="',&uf('+\1',v330^]),'">' 
+       else 
+          if v330^[='0'then '<A HREF="IRBIS:3,10,,',v330^],'">',
+    fi fi ,&uf('+S1'| (см. |v330^j|)|),'</A>','</b>'fi
+    if p(v330^u) then '<b>'
+       if &uf('Av951^i#'v330^u):'http' then 
+            '<A HREF="',&uf('+\1',&uf('Av951^i#'v330^u)),'">',
+       else '<A HREF="IRBIS:3,10,,',&uf('Av951^I#'v330^u),'">',fi
+       ,&uf('+S1',&uf('Av951^T#'v330^u),),'</A>','</b>'
+fi fi)
+
+
+
+

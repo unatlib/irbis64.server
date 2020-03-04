@@ -1,0 +1,57 @@
+if p(v210) and a(v310) and a(v320) then  '<DIV ALIGN=CENTER><br><b> Авторитетная запись на ИНДИВИДУАЛЬНОГО АВТОРА </b>',if p(v210) then '<br>' fi,'<DIV align=left>'                              
+                      if p(v210^a) then  '<br>',v210^a," "v210^d,", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi fi,(if p(v953) then 
+       if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+    fi fi) 
+if p(v710) then '<DIV ALIGN=CENTER><br> <b> см.также на параллельном языке:</b> ' fi,'<DIV align=left>' 
+&unifor('S0')if p(v710) then if &unifor('Av710#2')<>'' then (if p(v710) then '<br> ' 
+&unifor('S1A')'.',mhl,v710^a,| |v710^d,|, |v710^g,if a(v710^g)then |, |v710^b fi,
+if s(v710^1,v710^c,v710^f)<>''then ' (',v710^1,if s(v710^1)<>''then |; |d710^c fi,
+v710^c,if s(v710^1,v710^c)<>''then |; |d710^f fi,v710^f,'). ' fi,
+if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi/) else '<br>',
+v710^a,| |v710^d,|, |v710^G,if a(v710^g) then |, |v710^b fi,if s(v710^1,v710^c,v710^f)<>''then ' (',v710^1,if s(v710^1)<>''then |; |d710^c fi,
+v710^c,if s(v710^1,v710^c)<>''then |; |d710^f fi,v710^f,'). '  fi,
+if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi fi,
+if &unifor('Av510#2')<>''then else if v510:'^5' and (not(v305:'^a'))
+ and (not(v510^5*1:'0')) then if v510:'^5e' then '<DIV ALIGN=CENTER><br> <b> см.также под псевдонимом:</b> ' else if v
+510:'^5f' then '<DIV ALIGN=CENTER><br> <b> см.также под подлинным именем: </b> ' else
+ if v510:'^5a' then '<DIV ALIGN=CENTER><br> <b> см.также под предыдущим именем:</b> ' else
+ if v510:'^5b' then '<DIV ALIGN=CENTER><br> <b> см.также под последующим именем:</b> 'else if v510:'^5z' then '
+<DIV ALIGN=CENTER><br> <b> см.также:</b> 'fi fi fi fi fi fi fi,if p(v510) then if (&unifor(
+'Av510#2')<>''or a(v510^5))and a(v305) then '<DIV ALIGN=CENTER><br> <b> см.также: </b> ' else if v305:'^b
+' and v510^5:'0' then (|<br> <b> |v305^a|</b> |,| |v305^b,|,|v305^c,|,|v305^d,|,|v305
+^e/) else if v510:'^0' then ("<br> <b> "v510^0"<b> ") fi fi fi fi,'<DIV align=left>', &unifor('S0')if
+ p(v510) and (not(v305:'^b')) and (not(v510^5*1:'0')) then if &unifor('Av510#
+2')<>'' then (if p(v510) then '<br>'&unifor('S1A')'.'v510^a,| |v510^d,|, |v510^g,if a(v510^g)then |, |v510^b fi,if s(v510^1,v510^c,v510^f)<>''then ' (',v510^1,if s(v510^1)<>''then |; |d510^c fi,v510^c,if s(v510^1,v510^c)<>''then |; |d510^f fi,v510^f,'). '  fi,if p(v510^5)then ' (',&unifor('Kkodm.mnu|'v510^5), ')' fi fi/) else '<br> ',v510^a,| |v510^d,|, |v510^G,if a(v510^g) then |, |v510^b fi,if s(v510^1,v510^c,v510^f)<>''then ' (',v510^1,if s(v510^1)<>''then |; |d510^c fi,v510^c,if s(v510^1,v510^c)<>''then |; |d510^f fi,v510^f,'). ' fi fi fi,if p(v410) and p(v410) and (not(v510^5*1:'0')) and (not(v410^5*1:'0')) then "<DIV ALIGN=CENTER><br> <b> Непринятые формы имени лица </b>" d410
+ fi,'<DIV align=left>' ,&unifor('S0')if p(v410) and (not(v410^5*1:'0')) then if v410:&unifor('Av410#
+2') then (if p(v410)then '<br>'&unifor('S1A')'.'v410^a,| |v410^d,|, |v410^g,if a(v410^g) then |, |v410^b fi,if s(v410^1,v410^c,v410^f)<>''then' (',v410^1,if s(v410^1)<>''then |; |d410^c fi,v410^c,if s(v410^1,v410^c)<>''then |; |d410^f fi,v410^f,'). '  fi fi/) else '<br>',v410^a,| |v410^d,|, |v410^g,if a(v410^g) then |, |v410^b fi,if s(v410^1,v410^c,v410^f)<>''then' (',v410^1,if s(v410^1)<>''then |; |d410^c 
+fi,v410^c,if s(v410^1,v410^c)<>''then |; |d410^f fi,v410^f,'). '  fi fi fi fi,if p(v210) and p(v31
+0) then '<DIV ALIGN=CENTER><br> <b> ссылочная запись на ИНДИВИДУАЛЬНОГО АВТОРА </b> ','<DIV align=left>',v210^a," "v210^d,
+", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi,("<br> <b> "v310^a"</b> ",| |v310^b,
+|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p(v210) and p(v320) then '<DIV ALIGN=CENTER><br> <b>  Общая пояснительная запись на ИНДИВИДУАЛЬНОГО АВТОРА </b>
+','<br> ',v210^a," "v210^d,", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi,"<br> "v320^a fi,if p(v300) or p(v830) or p(v810) or p(v330) or p(v815)or p(v820) or p(v825) or p(v835) 
+ then '<br> ' fi,if p(v300) then '<br> <b> Справочное примечание:  </b> '('<br> ',v
+300^a/) fi,if p(v330) then '<br> <b> Примечание об области применения :  </b> '("<br> ",| 
+|v330^a/) fi,if p(v340) then '<br> <b> Примечание о биографии и деятельности:  </b> '("<br> "v
+340^a/v340^b/v340^P/v340^M/v340^R/) fi,if p(v815) then '<br> <b> Источник,в котором не выявлена информация о заголовке :  </b> '("<br> ",| 
+|v815^a,|, |v815^b,|, |v815^c,|, |v815^d/) fi,if p(v820) then '<br> <b> Информация об использовании заголовка :  </b> '("<br> ",| 
+|v820^a,|, |v820^b,|, |v820^c,|, |v820^d/) fi,if p(v825) then '<br> <b> Пример,приведенный в примечании :  </b> '("<br> ",| 
+|v825^a/) fi,if p(v835) then '<br> <b> Информация об исключении принятого заголовка :  </b> '("<br> ",| 
+|v835^b,|  заменен на : |v835^b/) fi,if p(v836) then '<br> <b> Информация о замещенном заголовке :  </b> '("<br> ",| 
+|v836^B,|  дата изменения : |v836^D/) fi,if p(v830) then '<br> <b> Примечание каталогизатора :  </b>',("<br> ",| 
+|v830^a/) fi,if p(v810) then '<br> <b> Источник информации:  </b> '('<br> ',| |v81
+0^a,|; |v810^b/) fi,if p(v910) then '<br> <b> Место работы автора :  </b> '("<br> "v910^P/) fi,
+if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+     (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+     if g140 : 'IRI' 
+         then (if p(v951^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?&C21COM=2&IMAGE_FILE_DOWNLOAD=1
+&I21DBN=',&uf('+D'),'&Image_file_name=',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+         else (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+     fi     
+     (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi  fi),
+fi,
+
+ if p(v10)then '<br> ORCID '  v10^a.4,|-|v10*4.4,|-|v10*8.4,|-|v10*12.4 fi
+

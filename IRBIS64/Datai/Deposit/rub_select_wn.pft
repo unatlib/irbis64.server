@@ -1,0 +1,37 @@
+/* v1004^A - элемент списка
+/* 
+'<title>Рубрикатор ГРНТИ: Отмеченные рубрики</title>',
+if a(v1004) 
+    then 'Нет отмеченных',
+    else '<b>Отмеченные рубрики: </b>',
+    (&uf('D,|',v1004^A,'|,@rub0_wn')),
+'<br><br><input type="text" NAME="" value="',V1004^A+|   |,'">',
+    
+/*    '<hr>',
+    
+/*    '<form name="SEARCH" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+/*    '<table>',
+/*    '<td>',
+/*    'База данных: ',
+/*    '</td>',
+/*    '<td>',
+/*    '<select name="DBNAME_DEFAULT">',
+/*(if &uf('+5Tdbname_wn.mnu')<>'' then '<option value="',&uf('+5Tdbname_wn.mnu'),'" ',if &uf('+5Tdbname_wn.mnu')=&uf('Av1000#1') then 'selected' fi,'>',&uf('+5Tdbname_wn.mnu'),' - ',&uf('+5Fdbname_wn.mnu'),'</option>' fi),
+/*    '</select>',
+/*    '</td>',
+/*    '<table>',
+/*    '<br><input type="submit" name="" value="Поиск по отмеченным">',
+/*    '<input type="hidden" NAME="C21COM" value="2">',
+/*    '<input type="hidden" name="CHECKNAME" value="CHECKMFN">',
+/*    '<input type="hidden" name="PFTNAME" value="fullw_wn">',
+/*    '<input type="hidden" name="TOPPFTNAME" value="search_bottom_wn">',
+/*    '<input type="hidden" name="BOTTOMPFTNAME" value="search_bottom_wn">',
+/*    '<input type="hidden" name="S21P01" value="4">',
+/*    '<input type="hidden" name="S21P05" value="Поиск по отмеченным рубрикам ГРНТИ">',
+/*    '<input type="hidden" name="S21P02" value="0">',
+/*    '<input type="hidden" name="S21P03" value="R=">',
+/*    '<input type="hidden" name="S21LOG" value="0">',
+/*    '<input type="hidden" name="S21STN" value="1">',
+/*    '<input type="hidden" name="S21CNR" value="20">',
+/*    '</form>',
+fi

@@ -1,0 +1,28 @@
+0
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W900#'),&uf('+7W900#'(&uf('1*R,?v991^H#1')/)),&uf('+7W901#'),&uf('+7W901#'f(rsum((if p(g900) then '1;' fi)),0,0)),g901
+XXXXXXXXXXXXXXXXXXX
+IF
+if v90^a:&uf('3') then '1' else '0' fi 
+REP
+90
+F
+(if p(v90) then if v90^a=&uf('3') then '^D'f(val(v90^d)+val(&uf('Av1000#1')),0,0),|^A|v90^a,|^H|v90^H,','&uf('Av991^H#1') else v90 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+90
+XXXXXXXXXXXXXXXXXXX
+if v90:&uf('3') then else '^A'&uf('3'),"^H"v991^h,"^D"g901 fi/
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

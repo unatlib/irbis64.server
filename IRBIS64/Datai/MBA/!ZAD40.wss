@@ -1,0 +1,61 @@
+6
+A
+Шифр записи ЭК
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^A fi fi/)
+B
+Номер заказа
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^B fi fi/)
+D
+Дата отправки
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^D fi fi/)
+E
+Дата предполаг. возврата
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^E fi fi/)
+F
+Дата фактического возврата
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^F fi fi/)
+L
+Дата продления
+0
+0
+0
+
+
+
+
+(if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then v40^L fi fi/)

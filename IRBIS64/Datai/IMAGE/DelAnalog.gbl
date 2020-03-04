@@ -1,0 +1,152 @@
+0
+// удаление связи база-аналог
+// в базовой записи удаляю поля 699, которые совпали с v991
+// 992=A - запись аналог
+// 992=D - запись аналог, но поля 691 не удалять 
+// 992=E - запись аналог, поля 691 удалять отмеченные в 993
+// 992=B - запись базовая
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v992='B' then '1' fi
+IF
+if p(v991) then '1' fi
+DEL
+1699
+*
+
+
+ADD
+1699
+
+(v699/)
+
+REPEAT
+DEL
+699
+F
+(if p(v699) then if v699^U='1' and &uf('+97',v699^W)=&uf('Av991^W#1') then '1' else '0' fi fi/)
+
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+IF
+if v1699<>v699 then '1' fi
+PUTFLD
+'База: откорректирована запись. MFN=',f(val(mfn),0,0)
+FI
+DEL
+1699
+*
+
+
+FI
+FI
+IF
+if v992='A' or v992='D' or v992='E' then '1' fi
+// из записи-аналога удаляю поля 691 и 699^U=0
+DEL
+1691
+*
+
+
+DEL
+1699
+*
+
+
+ADD
+1691
+
+(v691/)
+
+ADD
+1699
+
+(v699/)
+
+DEL
+699
+F
+(if p(v699) then if v699^U='0' then '1' else '0' fi fi/)
+
+IF
+if v992='A' then '1' fi
+// удаляю у аналога все поля 691
+DEL
+691
+*
+
+
+FI
+IF
+if v992='E' and p(v993) then '1' fi
+// удаляю у аналога поля 691 по отмеченным в 993
+DEL
+111
+*
+
+
+ADD
+111
+
+(|!|v993|!|)
+
+DEL
+691
+F
+(if p(v691) then if &uf('Av111#1'): s('!',&uf('+90'),'!') then '1' else '0' fi fi/)
+
+FI
+IF
+if v1691<>v691 then '1' else if v1699<>v699 then '1' else '0' fi fi
+PUTFLD
+'Аналог: запись откорректирована. MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+111
+*
+
+
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+993
+*
+
+
+DEL
+1691
+*
+
+
+DEL
+1699
+*
+
+
+GETFLD
+4000
+
+

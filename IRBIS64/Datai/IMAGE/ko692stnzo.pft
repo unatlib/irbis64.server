@@ -1,0 +1,35 @@
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')= '' and val(&unifor('34'))> 8 
+then 
+"Студ. ОС не для З/О"d10000, 
+&unifor('+1W200#',f(rsum((if p(v691) then 
+                           if &unifor('Pv691^0')<>'' then 
+                              if &unifor('Pv691^0'):'З/О'then else 
+                                 if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                    &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                 else 
+                                    &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                 fi 
+                        fi fi';'fi)),0,0)), 
+else 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')= '' and val(&unifor('34'))< 9 
+   then 
+"Студ. ВС не для З/О"d10000, 
+&unifor('+1W200#',f(rsum((if p(v691) then 
+                           if &unifor('Pv691^9')<>'' then 
+                              if &unifor('Pv691^9'):'З/О'then else 
+                                 if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                    &unifor('JRDR,','UPS='&unifor('Pv691^9'))'; ' 
+                                    &unifor('JRDR,','?',&unifor('Pv691^9'))'; ' 
+                                    &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^9')))';' 
+                                 else 
+                                    &unifor('DVUZ,"!',&unifor('Pv691^9'),'",v68^Z')';' 
+                                 fi 
+                        fi fi';'fi)),0,0)), 
+fi fi, 
+|'R200: '&unifor('+1R200')/|d10000, 
+
+&unifor('+1R200'), 

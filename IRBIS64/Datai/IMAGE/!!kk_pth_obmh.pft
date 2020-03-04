@@ -1,0 +1,13 @@
+'</>',
+&unifor('MI910^DB'),&unifor('S0'),&uf('+7W15#'),
+&uf('+7W15#',
+&unifor('Av910^d#1'),
+(if p(v910^d) then 
+    if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then 
+    else /v910^d  
+    fi,| - |v910^b,|(|v910^1|)|,
+fi)),
+(if p(g15) then 
+'<table width="400" height="275" border="0" style="border:solid 1 black"><tr><td>'
+g15'</td></tr></table><br>'
+fi)

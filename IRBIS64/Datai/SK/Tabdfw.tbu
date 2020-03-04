@@ -1,0 +1,52 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+if s(v910^v,v940^v):v991 then if ref(mfn,(if p(v910^a)then if v910^a<>'6'and v910^a<>'7'and v910^a<>'2'then'1'else|0|d910 fi fi/)):'1'then '1' else '0'fi fi
+if v910^v:v991 or v940^v:v991 then f(rsum((if 'C U':v910^a and p(v910^1)then f(val(v910^1|;|,' 0'),1,0) else if '0 1 2 3 4 5':v910^a then '1;' else '0;'fi fi/)),1,0)fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx11158
+\pard \qr\widctlpar\intbl {  Итого осталось в фонде: 'f(val(v1),2,0)' наимен. ',f(val(v2),2,0),' экз.'
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+\paperw16727\paperh11907\margl567\margr567\margt567\margb1134{}
+{\b\fs24 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1479
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx2445
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx3459
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6721
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7833
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9130
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx10144
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx11158
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Инвентарный номер\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во выбывших экз.\par (ЦБС / БИУ)\cell }
+\pard \qc\widctlpar\intbl {\b Место хранения\cell }
+\pard \qc\widctlpar\intbl {\b Авторы, заглавие, выходные данные\cell }
+\pard \qc\widctlpar\intbl {\b Всего выбыло экз.\cell }
+\pard \qc\widctlpar\intbl {\b Всего передано экз.\cell }
+\pard \qc\widctlpar\intbl {\b Всего исключено экз.\cell }
+\pard \qc\widctlpar\intbl {\b Всего осталось в фонде\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

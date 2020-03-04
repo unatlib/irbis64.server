@@ -1,0 +1,61 @@
+mhl, 
+if p(v481)then'<br> <b> Приплетено: </b> ',&unifor('S0'), 
+   (if p(v481)then|<br> |d481, 
+       if &unifor('Av481#2')<>''then 
+          if p(v481)then'<b> '&unifor('S1A')'.</b> ' 
+       fi fi, 
+       if p(v481^z) then &unifor('Av461^x#1')'. '&unifor('Av461^c#1'),|. |v481^v, 
+          | : |v481^c,| : |v481^e, 
+       else 
+          if p(v481^9) then 
+             if v481^9='1' then v481^x 
+             else &unifor('E'v481^9,v481^x), 
+                if p(v481^?)then |, |v481^? else 
+                   if &unifor('F'v481^9,v481^x)<>'' then ', '&unifor('F'v481^9,v481^x) fi fi,'.' 
+             fi 
+          else 
+             if v481^x:',' then v481^x|.| else 
+                if v481^x:' ' then &unifor('G0 'v481^x),|, |v481^?|.| 
+                   if a(v481^?) then 
+                      if v481^x:'.' then ', ' 
+                         if v481^x:'. ' 
+                         then &unifor('G2 'v481^x) else &unifor('G0.'&unifor('G2 'v481^x)),'. ' &unifor('G2.'v481^x) 
+                         fi 
+                      else ', '&unifor('G2 'v481^x)'.' 
+                   fi fi 
+                else v481^x,|, |v481^?,|.|d481^x, 
+          fi fi fi,| |d481^x,v481^c,| : |v481^e,|. |v481^v 
+       fi, 
+       if s(v481^r,v481^s)<>''then', 'fi,v481^r, 
+       if p(v481^s) then if p(v481^r) then' : 'fi,v481^s fi, 
+       if s(v481^k,v481^l)<>''then', 'fi,v481^k, 
+       if p(v481^l) then if p(v481^k) then' : 'fi,v481^l fi, 
+       if p(v481^f) or p(v481^x) and &unifor('Av905^1#1')='' then ' / ',o481f, fi, 
+       |. -|v481^n,'. - 'v481^d, 
+       if s(v481^d,v481^g)=''then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then'[Б. м. : б. и.]'else'[S. l. : s. n.]'fi 
+       else 
+       if a(v481^d) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then'[Б.м.]'else'[S.l.]'fi 
+       fi,| : |v481^g, 
+       if a(v481^g) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' : [б. и.]'else' : [s. n.]'fi 
+       fi,fi,|, |v481^h, 
+       |. - |v481^4, 
+       if p(v481^4) then 
+          if v481^4:'p' or v481^4:'s' or v481^4:'с' then else  
+             if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
+             else &unifor('Korg.mnu|4') fi,'.' 
+       fi fi, 
+       | : |v481^0*2, 
+       |. - (|v481^q,| ; |v481^m,|)|d481^q,|. - |v481^p,|. - ISBN |v481^i, 
+       if s(v905^f,&unifor('IPRIVATE,FPK,'))='1'then else". Кл.слова: "d481^5, 
+          if s(v905^f,&unifor('IPRIVATE,FPK,'))='2'then mpu,v481^5,|, |v481^6, 
+             |, |v481^7,mhl else 
+             if s(v905^f,&unifor('IPRIVATE,FPK,'))='3'then &unifor('Q'v481^5, 
+                |, |v481^6,|, |v481^7) else v481^5,|, |v481^6,|, |v481^7 
+       fi fi fi, 
+       |. Другие авторы: |v481^w    
+    fi),'<br>' 
+fi, 
+mpl,

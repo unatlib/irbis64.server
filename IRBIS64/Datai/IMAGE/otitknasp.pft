@@ -1,0 +1,37 @@
+   if p(v922) then ibis922fi,
+   if s(v510^e)<>''then" : "d200^e,
+      if s(v982^0,v982^9)<>'' then v200^e else &unifor('Q'v200^e.1),v200^e*1 fi,
+      (if p(v923) then", "| ; |+d923,v923^h,
+          if p(v923^h)then|. |d923^i fi,v923^i,
+          if s(v923^k,v923^l)<>''then'. 'fi,v923^k,
+          if p(v923^k)then|. |d923^l fi,v923^l
+      fi) 
+   fi,
+   if s(v510^f)<>''then| / |v200^f,| ; |v200^g fi,
+   (| = |v510^d,| : |v510^e,| / |v510^f,| ; |v510^g),(| = |v921^a,| (|v921^b|) |),| : |v924,
+   if s(v510^e)=''then 
+      if a(v922) then 
+         if p(v200^e) or a(v463) and a(v905^2) and p(v900^c) and &unifor('K200ehd.mnu|'v900^c)<>''then ' : ' fi,
+         if s(v982^0,v982^9)<>'' then v200^e else &unifor('Q'v200^e.1),v200^e*1 fi
+         ,o200e,fi
+      (if p(v923) then ", "| ; |+d923,v923^h,
+          if p(v923^h)then|. |d923^i fi,v923^i,
+          if s(v923^k,v923^l)<>''then'. 'fi,v923^k,
+          if p(v923^k)then|. |d923^l fi,v923^l
+      fi)
+   fi,
+   if s(v510^f)=''then 
+      if s(v921v924)<>''or (p(v510)and v510^e=''or a(v510)) and s(v923v200^e) <>''then| / |d200^f 
+      else 
+         if &unifor('Av922^f#',f(rsum((|1;|d922)),0,0))<>'' or 
+            &unifor('Av922^g#',f(rsum((|1;|d922)),0,0))<>'' 
+         then| ; |d200^f 
+         else | / |d200^f 
+      fi fi,o200fz," ; "v200^g,
+      if a(v200^f) then &unifor('+1W1#0'),&unifor('+1W1#',o200f),
+                        &unifor('+1W2#0'),&unifor('+1W2#',o200g),
+         if &unifor('+1R1')<>'' or &unifor('+1R2')<>'' then' / ' 
+            if s(v700v701v328)<>''then &unifor('+1R1'),if &unifor('+1R2')<>''then' ; '&unifor('+1R2') fi
+            else &unifor('+1R2'),
+               if &unifor('+1R1')<>''then if &unifor('+1R2')<>''then' ; 'fi,&unifor('+1R1')
+   fi fi fi fi fi,

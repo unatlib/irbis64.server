@@ -1,0 +1,9 @@
+'\pard \li108 \ri108 ','\par \qc \fs22 '
+if p(v991^d) then v991^d else 'Подписка ',
+   if v33*5.1<>'P' then &unifor('Krkint6.mnu|'v33*4),' 'v33.4' года ',&unifor('Krkint7.mnu|'v33*4),'\par ' 
+   else 'c ',&unifor('Krko.mnu|'v33*7.1),
+      if '3 8':v33*7.1 then'а'else'я'fi,' по ',&unifor('Krko.mnu|'&unifor('G2-'v33)),
+      if '3 8':s(&unifor('G2-'v33)) then else 
+         if s(&unifor('G2-'v33))='5'then'й'else'ь'
+      fi fi,' 'v33.4' года '
+fi fi

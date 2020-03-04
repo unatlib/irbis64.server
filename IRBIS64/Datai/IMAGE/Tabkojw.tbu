@@ -1,0 +1,55 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0)
+f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')) * val(if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then  &unifor('JRDR,VUZ='v991^a"\",v991^b"\",v991^c"\",v991^d"\",v991^e"\") else '0' fi )  / rmax('1;'f(rsum('0; ',if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then '1;' else '0;'fi fi))>0 then &unifor('JRDR,VUZ='v991^a"\",v991^b"\",v991^c"\",v991^d"\",v991^e"\")'; ',fi,(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then else &unifor('JRDR,VUZ='v691^a|\|,v691^b|\|,v691^c|\|,v691^d|\|,v691^f|\|)'; 'fi fi)),0,0)),0,2)
+if val(if rsum('0;',(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then &unifor('JRDR,VUZ='v991^a"\",v991^b"\",v991^c"\",v991^d"\",v991^e"\") else '0' fi )=0 then else F(RSUM((IF P(V910^C) THEN IF '2 6 7':V910^A THEN ELSE V910^1|;|,|1;|N910^1,' 0' FI FI,' 0'))   / RMAX('1;'F(RSUM('0; ',IF rsum('0;',(IF P(V691) THEN IF V691^A=&UNIFOR('aV991^A#1') AND (V691^B=&UNIFOR('aV991^B#1') OR &UNIFOR('aV991^B#1')='') AND (V691^C=&UNIFOR('aV991^C#1') OR &UNIFOR('aV991^C#1')='')AND (V691^D=&UNIFOR('aV991^D#1') OR &UNIFOR('aV991^D#1')='')AND (V691^f=&UNIFOR('aV991^E#1') OR &UNIFOR('aV991^E#1')='')THEN '1;' ELSE '0;'FI FI))>0 THEN &UNIFOR('jrdr,vuz='V991^A"\",V991^B"\",V991^C"\",V991^D"\",V991^E"\")'; ',FI,(IF P(V691) THEN IF V691^A=&UNIFOR('aV991^A#1') AND (V691^B=&UNIFOR('aV991^B#1') OR &UNIFOR('aV991^B#1')='') AND (V691^C=&UNIFOR('aV991^C#1') OR &UNIFOR('aV991^C#1')='')AND (V691^D=&UNIFOR('aV991^D#1') OR &UNIFOR('aV991^D#1')='')AND (V691^f=&UNIFOR('aV991^E#1') OR &UNIFOR('aV991^E#1')='')THEN ELSE &UNIFOR('jrdr,vuz='V691^A|\|,V691^B|\|,V691^C|\|,V691^D|\|,V691^f|\|)'; 'FI FI)),0,0)),0,2) fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9144
+\pard \ql\widctlpar\intbl {\par   Общее кол-во учебников:   'f(val(v1),5,0)' экз. \par \par   Из них - для студентов заданной формы:   'f(val(v2),5,2),if val(v2)=0 then '0' fi,' экз. \par \par   Книгообеспеченность:   'if val(v2)=0 then '-'else f(val(v3),5,2) fi'\par '
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs20 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx459
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4562
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6696
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9114
+\pard \qc\widctlpar\intbl {\b N n/n\cell }
+\pard \qc\widctlpar\intbl {\b Заглавие учебника\cell }
+\pard \qc\widctlpar\intbl {\b Осн/Доп\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во экз-ров\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

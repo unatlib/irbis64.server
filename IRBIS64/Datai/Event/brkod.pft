@@ -1,0 +1,8 @@
+if v920:'Event' then 
+   (if p(v488) then if v488^1='2' then v488^w ' ' fi fi),v972^0" ",v900^a" ",
+   v972^a," ("v972^b")",
+   if a(v972^b) and p(v700) then " : "d972,(if p(v700) then |, |+v700^a,| |v700^B fi) fi 
+else 
+   if v920:'Plan' then if v200^a:'План' then else 'План по теме: ' fi,v200^a,
+      if s(v200^b,v200^c)<>'' then ' на 'v200^b,v200^c fi 
+fi fi

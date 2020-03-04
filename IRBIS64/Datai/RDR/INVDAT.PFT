@@ -1,0 +1,8 @@
+(mpu,if p(v40^D)  then  if &unifor('Av991^P#1')<>'' and &unifor('Av991^Q#1')<>'' then
+ if v40^D>=&unifor('Av991^P#1') and v40^D<=&unifor('Av991^Q#1')  and &unifor('Av991^X#1'): v40^G then |I=|v40^A fi
+ else
+ if &unifor('Av991^P#1')<>'' then if v40^D>=&unifor('Av991^P#1')  and &unifor('Av991^X#1'): v40^G then |I=|v40^A fi
+ else
+ if &unifor('Av991^Q#1')<>'' then if v40^D<=&unifor('Av991^Q#1')  and &unifor('Av991^X#1'): v40^G then |I=|v40^A fi
+ fi fi fi fi/)
+

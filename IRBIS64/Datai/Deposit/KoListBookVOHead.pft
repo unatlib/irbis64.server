@@ -1,0 +1,429 @@
+/*------------копия KoListHead - для одной БД, все по полю 692-693
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^Y='' 
+then 
+/*  -----------------------------------------------------итоги
+  if G992<>'' or G993<>'' or G995<>'' 
+  then 
+  '\trowd \trqc\trgaph108\trleft-108\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng600 
+\cellx10881 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+'\gl Итого: ',,,'\ql Всего наименований: ',,,,,,&uf('+7W1#',g992),G1,,'\par ',,
+    if G995<>'' then '\ql Всего экземпляров: ',,f(rsum((G995|,|)),0,0) fi,,
+    if G993<>'' then '\ql  Всего экземпляров архив: ',,f(rsum((G993|,|)),0,0) fi,,'\par ',,
+    if G994<>'' and val(G1)>0 then '\ql Среднее ККО: ',,f(rsum((G994|,|)) / val(G1),0,2) fi,,
+    if G996<>'' and val(G1)>0 then '\ql  Среднее ККО архив: ',,f(rsum((G996|,|)) / val(G1),0,2) fi,,
+    if G996<>'' and G994<>'' then '\par \ql Среднее ККО по двум семестрам: ',,f((rsum((G996|,|))+rsum((G994|,|)))/val(G1)/2,0,2) fi,,
+    '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+  fi,,,,,,,,,,
+/*--------------------------заголовки
+  &uf('S0'),,&uf('+7W2#'),,,,&uf('+7W992#'),,&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),&uf('+7W996#'),
+  '\trowd \trqc\trgaph108\trleft-108\clbrdrl\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clbrdrt\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng1500 
+\cellx10881 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+  if v1^J<>' ' and v1^J<>''
+  then 
+    ,'\cf27 ','Дисциплина ',
+/* сначала дисциплину ищу по справочнику, потом по VUZ, потом ИД
+        &uf('+7W3#',,,&uf('G2@',v1^J) )
+        if &uf('KDisc.mnu!',&uf('G2|',g3) )<>'' then &uf('KDisc.mnu!',&uf('G2|',g3) ) else 
+        if &uf('DVUZ,?IDD=',,&uf('G2|',g3),,'?,v3^A')<>'' then &uf('DVUZ,?IDD=',,&uf('G2|',g3),,'?,v3^A') else &uf('G2|',g3) fi fi
+    ,,'\cf ',,'\par ' 
+  else 
+       if v1^I<>'' and v1^I<>' ' 
+       then 
+            '\cf27 ',
+            if v1^I: 'M' then ' Учебно-Методическая' else ' Учебная' fi,,,
+       else 
+           if v1^H<>'' and v1^H<>' ' 
+           then 
+               ,'\cf27 ','Тип ',v1^H*1,,'\cf ',,'\par ' 
+           else 
+                if v1^G<>'' and v1^G<>' ' 
+                then 
+                      ,'\cf27 ','Цикл ',
+                      if &uf('Kcicld.mnu!',v1^G)<>'' then &uf('Kcicld.mnu!',v1^G) else v1^G fi,,'\cf ',,'\par ' 
+                else 
+                     if v1^F<>'' and v1^F<>' ' 
+                     then 
+                          ,'\cf27 ','Специальность ',
+                          if &uf('KSpec.mnu!',v1^F)<>'' then &uf('KSpec.mnu!',v1^F) else v1^F fi,,'\cf ',,'\par ' 
+                     else 
+                         if v1^E<>'' and v1^E<>' ' 
+                         then 
+                                ,' \cf27 ',' Направление ',
+                                if &uf('KNapr.mnu!',v1^E)<>'' then &uf('Knapr.mnu!',v1^E) else v1^E fi,,'\cf ',,'\par ' 
+                         else                      
+                              if v1^D<>'' and v1^D<>' ' 
+                              then 
+                                   ,' \cf27 ',' Кафедра ',
+                                   if &uf('KKafch.mnu!',v1^D)<>'' then &uf('Kkafch.mnu!',v1^D) else v1^D fi,,'\cf ',,'\par ' 
+                              else 
+                                    if v1^C<>'' and v1^C<>' ' 
+                                    then 
+                                          ,'\cf27 ','Факультет ',
+                                          if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else v1^C fi,,'\cf ',,'\par ' 
+                                    else 
+                                         if v1^B<>'' and v1^B<>' ' 
+                                         then 
+                                              ,'\cf27 ',' ВО ',
+                                             if &uf('Kvo.mnu|',v1^B)<>'' then &uf('Kvo.mnu|',v1^B) else v1^B fi,,'\cf ',,'\par ' 
+                                         else 
+                                                if v1^A<>'' and v1^A<>' ' 
+                                                then 
+                                                      ,'\cf27 ','ФО ',
+                                                      if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else v1^A fi,,'\cf ',,'\par ' 
+  fi fi fi fi fi fi fi fi fi fi  
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+/* запись______________________________________________________
+/*-----------------фильтр по рабочей программе
+/*-----------------если задано по рабочей программе + отбор по дисциплине или заголовок по дисц.- фильтрую по подполю 5
+/*   в v1^7 идентификатор отобранной дисциплины
+/*   в v1^3 ИД дисциплины-заголовка
+  &uf('+7W11#'),,&uf('+7W12#',&uf('Av1^>#1'),,),,
+  if val(&uf('Av1^>#1'))=1 and &uf('Av1^3#1')<>'' or 
+     &uf('Av1^>#1')<>'' and &uf('Av1^>#1')<>'0' and &uf('Av1^3#1')<>'' or 
+     val(&uf('Av1^>#1'))=1 and &uf('Av1^7#1')<>'' or 
+     &uf('Av1^>#1')<>'' and &uf('Av1^>#1')<>'0' and &uf('Av1^7#1')<>'' 
+  then 
+/*----G1010 - признак, что по РП, в 691^5 можно задать ФИО
+      &uf('+7W1010#1'),,,,,,,,,, 
+      if v1^7<>'' 
+      then 
+/*--     в g10 кладу ИД дисциплины, которая в отборе
+         &uf('+7W10#',,v1^7),,,,
+      else 
+/*--     в g10 кладу ИД дисциплины-заголовка
+/*--     в ^J: гриф@дисц
+        &uf('+7W10#',&uf('G2@',v1^J) ),,,,,
+        &uf('+7W10#',,&uf('G2|',g10) ),,,,
+      fi,,,,,
+/*---- в g11 фильтр по РП
+    ref(val(v1^Y),,,,,,,,,
+        (if p(v691) then if &uf('+97',v691^I)=&uf('+97',&uf('Ag10#1')) and 
+                                    (  &uf('+97',v691^5)=&uf('+97',&uf('Ag12#1')) or &uf('+97',v691^5)<>'' and &uf('+97',&uf('Ag12#1'))='1'   )  
+                                 then &uf('+7W11#1') break fi fi),,,
+       ),,, 
+  else &uf('+7W11#1'),, 
+  fi,,,,,,,,,,
+  if val(g11)=1 
+  then 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,&uf('+7W992#',,&uf('S1A') ),,,g992,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4077 
+\pard \widctlpar\intbl {\ql \fs20 ',,,,
+ref(val(V1^Y),&uf('6BriefKoNew')),,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5211 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,,,,&uf('+7W991#',&uf('+97',v1)),,,,,,,,,,,,,
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/*----------------------------- текущий - осенний, ЛЕВАЯ, осенние экземпляры, 
+  &uf('+7W10#',
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                (if p(v693) 
+                 then 
+                   if v693^C: 'O' 
+                   then 
+                     if &uf('Ag991^T#1')='' and v693^L='' and v693^X='' and v693^A='' OR 
+                        &uf('Ag991^T#1')='' and  v693^X='!NOFOND' OR 
+                        &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v693^A) 
+                     then 
+                        if &uf('AG998#1')<>'' and v693^Q<>'' and &uf('AG991^-#1')='' OR 
+                           &uf('AG998#1')<>'' and v693^Q<>'' and val(&uf('AG991^-#1'))=0 
+                        then
+/* аналоги не выводятся но сумм-ся
+                            f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0),,,
+                            if v693^D<>'' or v693^Q<>'' or v693^K<>'' 
+                            then 
+                               &uf('+7U995#',f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0)) 
+                            fi,
+                        else
+                          if v693^K<>'' then v693^K else v693^D fi,,,
+                          &uf('+7U995#',if v693^K<>'' then v693^K else v693^D fi),,,
+                        fi,,,break,,,,,,,,,,,,, 
+                     fi,
+                   fi 
+                 fi)),,,,
+  ),,,G10,,,,
+else 
+/*-----------------------------текущий - весенний, ЛЕВАЯ,  осенние экземпляры из архива, 
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                 (if p(v692) 
+                 then 
+                   if v692^C: 'O' and v692^B: &uf('30') 
+                   then 
+                     if v692^C: 'O' 
+                     then 
+                        if &uf('Ag991^T#1')='' and v692^L='' and v692^X='' and v692^A='' OR 
+                           &uf('Ag991^T#1')='' and  v692^X='!NOFOND' OR 
+                           &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v692^A) 
+                       then 
+                          if &uf('AG998#1')<>'' and v692^Q<>'' and &uf('AG991^-#1')='' OR 
+                             &uf('AG998#1')<>'' and v692^Q<>'' and val(&uf('AG991^-#1'))=0 
+                          then
+/* аналоги не выводятся но сумм-ся
+                              f(val(if v692^K<>'' then v692^K else v692^D fi)+val(v692^Q),0,0),,,
+                              if v692^D<>'' or v692^Q<>'' or v692^K<>'' 
+                              then 
+                                 &uf('+7U993#',f(val(if v692^K<>'' then v692^K else v692^D fi)+val(v692^Q),0,0)) 
+                              fi,
+                          else
+                            if v692^K<>'' then v692^K else v692^D fi,,,
+                            &uf('+7U993#',if v692^K<>'' then v692^K else v692^D fi),,,
+                          fi,,,,break,,,,,,,,,,,, 
+                       fi,
+                     fi 
+                   fi 
+                 fi)),,,,
+fi,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6345 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,,
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/* -----------------------------текущий - осенний, ЛЕВАЯ осенние СТУДЕНТЫ, 
+  ref(val(V1^Y),(if p(v693) 
+                 then 
+                   if v693^C: 'O' 
+                   then 
+                        if &uf('Ag991^T#1')='' and v693^L='' and v693^X='' and v693^A='' OR 
+                           &uf('Ag991^T#1')='' and  v693^X='!NOFOND' OR 
+                           &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v693^A) 
+                        then 
+                           if val(v693^E)=0 then '\fs16 (нет студентов) \fs20 ',,&uf('+7U2#1'),,else v693^E fi,break, 
+                        fi 
+                   fi 
+                 fi)),,,
+else 
+/*----------------------------- текущий - весенний, ЛЕВАЯ,  СТУДЕНТЫ из архива, 
+  ref(val(V1^Y),(if p(v692) 
+                 then 
+                   if v692^C: 'O' and v692^B: &uf('30') 
+                   then 
+                     if v692^C: 'O' 
+                     then 
+                        if &uf('Ag991^T#1')='' and v692^L='' and v692^X='' and v692^A='' OR 
+                           &uf('Ag991^T#1')='' and  v692^X='!NOFOND' OR 
+                           &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v692^A) 
+                        then v692^E break 
+                        fi 
+                     fi 
+                   fi 
+                 fi)),,,,
+fi,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7479 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/* KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+/*----------------------------- текущий - осенний, ЛЕВАЯ, ККО осенний 
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                 (if p(v693) 
+                 then 
+                   if v693^C: 'O' 
+                   then 
+                      if &uf('Ag991^T#1')<>'' 
+                      then 
+/* выделенная категория
+                         if &uf('Ag991^T#1')=&uf('+97',v693^A) then v693^F,,&uf('+7U994#',v693^F) break fi,,
+                      else 
+                        if v693^L='' and v693^X='' and v693^A='' or v693^X='!NOFOND'
+                        then 
+                           if &uf('AG998#1')<>'' and v693^P<>'' and &uf('AG991^-#1')<>'' OR 
+                              &uf('AG998#1')<>'' and v693^P<>'' and val(&uf('AG991^-#1'))=0 
+                           then
+                             v693^P,,
+                             &uf('+7U994#',v693^P),,,
+                           else
+                             v693^N,,if v693^N='' then v693^F fi,,
+                             &uf('+7U994#',v693^N,,if v693^N='' then v693^F fi),,,
+                           fi,,,,,break,,,,,,,,,,,,,,
+                        fi,,
+                     fi 
+                   fi
+                 fi)),,, 
+else 
+/*----------------------------- текущий - весенний, ЛЕВАЯ,  ККО осенний из архива 
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                 (if p(v692) 
+                 then 
+                   if v692^C: 'O' and v692^B: &uf('30') 
+                   then 
+                     if v692^C: 'O' 
+                     then 
+                      if &uf('Ag991^T#1')<>'' 
+                      then 
+/* выделенная категория
+                         if &uf('Ag991^T#1')=&uf('+97',v692^A) then v692^F,,&uf('+7U996#',v692^F) break fi,,
+                      else 
+                          if v692^L='' and v692^X='' and v692^A='' or v692^X='!NOFOND'
+                          then 
+                             if &uf('AG998#1')<>'' and v692^P<>'' and &uf('AG991^-#1')='' OR 
+                                &uf('AG998#1')<>'' and v692^P<>'' and val(&uf('AG991^-#1'))=0 
+                             then
+                               v692^P,,
+                               &uf('+7U996#',v692^P),,,
+                             else
+                               v692^N,,if v692^N='' then v692^F fi,,
+                               &uf('+7U996#',v692^N,,if v692^N='' then v692^F fi),,,
+                             fi,,,,,break,,,,,,,,,,,
+                          fi,,
+                       fi 
+                     fi 
+                   fi 
+                 fi)),,,,
+fi,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8613 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/* экземпляры
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/*----------------------------- текущий - осенний, ПРАВАЯ, весенние экземпляры - как в осеннем
+    G10,,,
+else 
+/*----------------------------- текущий - весенний, ПРАВАЯ, весенние экземпляры, 
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                 (if p(v693) 
+                 then 
+                   if v693^C: 'V' 
+                   then 
+                     if &uf('Ag991^T#1')='' and v693^L='' and v693^X='' and v693^A='' OR 
+                        &uf('Ag991^T#1')='' and  v693^X='!NOFOND' OR 
+                        &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v693^A) 
+                     then 
+                        if &uf('AG998#1')<>'' and v693^Q<>'' and &uf('AG991^-#1')='' OR 
+                           &uf('AG998#1')<>'' and v693^Q<>'' and val(&uf('AG991^-#1'))=0 
+                        then
+/* аналоги не выводятся но сумм-ся
+                            f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0),,,
+                            if v693^D<>'' or v693^Q<>'' or v693^K<>'' 
+                            then 
+                               &uf('+7U995#',f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0)) 
+                            fi,
+                        else
+                          if v693^K<>'' then v693^K else v693^D fi,,,
+                          &uf('+7U995#',if v693^K<>'' then v693^K else v693^D fi),,,
+                        fi,,,break,,,,,,,,,,,,, 
+                     fi,
+                   fi 
+                 fi)),,,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9747 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/* студенты
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/*----------------------------- текущий - осенний, ПРАВАЯ,  - прогноз на кол-во студентов весной
+  &uf('+7W11#',,,ref(val(V1^Y),&uf('6KoListBookPrognoz') )  ),,G11,,,,,,,,
+else 
+/*----------------------------- текущий - весенний, ПРАВАЯ, весенние СТУДЕНТЫ 
+  ref(val(V1^Y),(if p(v693) 
+                 then 
+                   if v693^C: 'V' 
+                   then 
+                      if &uf('Ag991^T#1')='' and v693^L='' and v693^X='' and v693^A='' OR 
+                         &uf('Ag991^T#1')='' and  v693^X='!NOFOND' OR 
+                         &uf('Ag991^T#1')<>'' and &uf('Ag991^T#1')=&uf('+97',v693^A) 
+                      then 
+                          if val(v693^E)=0 then '\fs16 (нет студентов) \fs20 ',,&uf('+7U2#1'),, else v693^E fi,break, 
+                      fi,,
+                   fi,,
+                 fi)),,,,
+fi,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10881 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/* ККKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+then 
+/*----------------------------- текущий - осенний, ПРАВАЯ,  - весенний ККО прогноз
+   if ref(val(V1^Y),
+                 if val(&uf('6KoElectro'))>0 then '1' fi   
+       )='1' then '1 (ЭУ)' else
+   if val(G11)>0 then f(val(G10) / val(G11),0,2) else '-' fi fi,,,,,,,,,,,,,,,,,,,,
+else 
+/*----------------------------- текущий - весенний, ПРАВАЯ - ККО весенний 
+  ref(val(V1^Y),
+                 if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+                 (if p(v693) 
+                 then 
+                   if v693^C: 'V' 
+                   then 
+                      if &uf('Ag991^T#1')<>'' 
+                      then 
+/* выделенная категория
+                         if &uf('Ag991^T#1')=&uf('+97',v693^A) then v693^F,,&uf('+7U994#',v693^F) break fi,,
+                      else 
+                        if v693^L='' and v693^X='' and v693^A='' or v693^X='!NOFOND'
+                        then 
+                           if &uf('AG998#1')<>'' and v693^P<>'' and &uf('AG991^-#1')='' OR 
+                              &uf('AG998#1')<>'' and v693^P<>'' and val(&uf('AG991^-#1'))=0 
+                           then
+                             v693^P,,
+                             &uf('+7U994#',v693^P),,
+                           else
+                             v693^N,,if v693^N='' then v693^F fi,,
+                             &uf('+7U994#',v693^N,,if v693^N='' then v693^F fi),,
+                           fi,,,,,break,,,,,,,,,,,,,,
+                        fi,,
+                      fi,,
+                   fi,,
+                 fi)),,, 
+fi,,,,,,,,,,,,,,,,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,, 
+/*--------конец фильтр по рабочей программе
+fi,
+/*--------конец запись 
+fi,
+'}'

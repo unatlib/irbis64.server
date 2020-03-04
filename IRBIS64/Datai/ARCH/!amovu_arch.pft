@@ -1,0 +1,18 @@
+mhl,
+(if '***'='7021'then v702^a,| |v702^d,|, |v702^g,if a(v702^g) then| |v702^b fi fi/)/
+(if '***'='7022'then v702^r,| |n702^r fi/)/
+(if '***'='9611'then v961^x,v961^a,| |v961^d,|, |v961^g,if a(v961^g) then| |v961^b fi,if s(v961^x,v961^a)=''then' 'fi fi/)/
+(if '***'='9612'then v961^r,| |n961^r fi/)/
+(if '***'='9261'then v926^a,| |v926^d,|, |v926^g,if a(v926^g) then| |v926^b fi fi/)/
+(if '***'='9262'then v926^r,| |n926^r fi/)/
+(if '***'='4611'then v461^x fi/)/
+&unifor('G0,'&unifor('G0 'v922^3))', 'v922^; fi else v922^3 fi,| |n922^3 fi /)/
+(if '***'='9254'then if p(v925^?) then if val(v925^x)>1 then &unifor('G0,'&unifor('E'v925^x,v925^f)),|, |v925^? else &unifor('G0,'&unifor('G0 'v925^f))', 'v925^? fi else v925^f fi,| |n925^f fi /)/
+(if '***'='9255'then if p(v925^,) then if val(v925^<)>1 then &unifor('G0,'&unifor('E'v925^<,v925^2)),|, |v925^, else &unifor('G0,'&unifor('G0 'v925^2))', 'v925^, fi else v925^2 fi,| |n925^2 fi /)/
+(if '***'='9256'then if p(v925^;) then if val(v925^>)>1 then &unifor('G0,'&unifor('E'v925^>,v925^3)),|, |v925^; else &unifor('G0,'&unifor('G0 'v925^3))', 'v925^; fi else v925^3 fi,| |n925^3 fi /)/
+(if '***'='3301'then if p(v330^?) then if val(v330^x)>1 then &unifor('G0,'&unifor('E'v330^x,v330^f)),|, |v330^? else &unifor('G0,'&unifor('G0 'v330^f))', 'v330^? fi else v330^f fi,| |n330^f fi /)/
+(if '***'='3302'then if p(v330^,) then if val(v330^<)>1 then &unifor('G0,'&unifor('E'v330^<,v330^2)),|, |v330^, else &unifor('G0,'&unifor('G0 'v330^2))', 'v330^, fi else v330^2 fi,| |n330^2 fi /)/
+(if '***'='3303'then if p(v330^;) then if val(v330^>)>1 then &unifor('G0,'&unifor('E'v330^>,v330^3)),|, |v330^; else &unifor('G0,'&unifor('G0 'v330^3))', 'v330^; fi else v330^3 fi,| |n330^3 fi /)/
+(if '***'='4881'then if p(v488^?) then if val(v488^9)>1 then &unifor('G0,'&unifor('E'v488^9,v488^x)),|, |v488^? else &unifor('G0 'v488^x)', 'v488^? fi else v488^x fi,| |n488^x fi /)/
+(if '***'='4882'then if p(v488^,) then if val(v488^<)>1 then &unifor('G0,'&unifor('E'v488^<,v488^2)),|, |v488^, else &unifor('G0 'v488^2)', 'v488^, fi else v488^2 fi,| |n488^2 fi /)/
+(if '***'='4883'then if p(v488^;) then if val(v488^>)>1 then &unifor('G0,'&unifor('E'v488^>,v488^3)),|, |v488^; else &unifor('G0 'v488^3)', 'v488^; fi else v488^3 fi,| |n488^3 fi /)/

@@ -1,0 +1,13 @@
+if v920:'Plan' then "\b "v200^a"\b0  ", 
+   if p(v200^b) then &uf('+7W1#'&uf('G0-'v200^b)),&uf('+7W2#'&uf('G2-'v200^b)),
+   '\b  на ' g1*6' ',
+      if g1*4<>'' then 
+         if g1*6='' then &uf('36'g1*4.2) else &uf('37'g1*4.2) fi, 
+      fi,
+      if g1.4=g2.4 then else ' 'g1.4" г." fi,
+      if v200^b:'-' then' - 'g2*6' ',
+         if g2*4<>'' then 
+            if g2*6='' then &uf('36'g2*4.2) else &uf('37'g2*4.2) fi 
+      fi fi,   ' 'g2.4" г." '\b0 '
+   fi ,
+fi,'\par \par '

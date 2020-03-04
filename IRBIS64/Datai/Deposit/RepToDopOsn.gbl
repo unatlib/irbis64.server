@@ -1,0 +1,79 @@
+1
+RepToDopOsn.wss
+¬ыбрать данные дл€ изменени€ типа литературы
+// перевод основные - дополнительные дл€ устаревших
+// 991^A - срок новизны
+// 991^I - »ƒ дисциплины
+// 991^F - семестр
+// 991^1 - тип, в который надо перевести
+IF
+if p(v691) then '1' fi,,,,&uf('+7W11#',,v210^d,,,if a(v210^d) then v461^h fi),,,
+IF
+if v991^A<>'' then '1' fi
+//----------------перевод в дополнительную по сроку
+DEL
+1001
+*
+
+
+ADD
+1001
+
+(v691^G)
+
+REP
+691^G
+F
+(if p(v691) then if v691^G: 'осн' or v691^G='' then if p(v691^S) then  &uf('+7W10#',,, if &uf('KCycleNew.mnu!',v691^S)<>'' then &uf('KCycleNew.mnu!',v691^S) else &uf('Av991^A#1') fi ),,,,else &uf('+7W10#',,,&uf('Av991^A#1') ) fi,,,if (val(&unifor('30')) - val( &uf('Ag11#1') ) )>=val( &uf('Ag10#1') )  then 'ƒоп' else v691^G,,if v691^G='' then # fi,,fi,,else # fi fi/) 
+
+REP
+691
+F
+(if p(v691) then v691,,if v691^G='' then if p(v691^S) then  &uf('+7W10#',,,if &uf('KCycleNew.mnu!',v691^S)<>'' then &uf('KCycleNew.mnu!',v691^S) else &uf('Av991^A#1') fi ),,,,else &uf('+7W10#',,,&uf('Av991^A#1') ) fi,,,if (val(&unifor('30')) - val( &uf('Ag11#1') ) )>=val( &uf('Ag10#1') )  then '^Gƒоп'  fi,,fi fi/)
+
+IF
+if (v691^G)<>v1001 then '1' fi
+PUTLOG
+'MFN=',,,f(val(mfn),0,0),,' - переведены в дополнителную лит. по сроку',,
+FI
+FI
+IF
+if v991^1<>'' then '1' fi
+//-------------------перевод по дисциплине-семестру в тип из v991^1
+DEL
+1001
+*
+
+
+ADD
+1001
+
+(v691^G)
+
+REP
+691^G
+F
+(if p(v691)  then  if v691^G<>''  then  if &uf('Av991^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('Av991^I#1'))  then if &uf('Av991^F#1')='' or val(&uf('Av991^F#1'))=val(v691^F) then &uf('Av991^1#1')  else v691^G fi,, else  v691^G  fi else #  fi,, fi/)
+
+REP
+691
+F
+(if p(v691)  then  v691,,,if v691^G='' then '^G',,&uf('Av991^1#1') fi,,,fi/)
+
+IF
+if (v691^G)<>v1001 then '1' fi
+PUTLOG
+'MFN=',,,f(val(mfn),0,0),,' - переведены в ',,if v991^1: 'доп' then 'дополнителную' else 'основную' fi,,,,' лит.',,if v991^I<>'' then ' ƒл€ дисциплины ',,v991^I fi,,,if v991^F<>'' then ' дл€ сместра ' v991^F fi,,
+FI
+FI
+DEL
+1001
+*
+
+
+FI
+DEL
+991
+*
+
+

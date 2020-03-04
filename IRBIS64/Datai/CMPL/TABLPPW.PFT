@@ -1,0 +1,31 @@
+'
+\trowd \trrh-500 \trkeep\trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1571
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4966
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx5819
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7086
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8353
+\clbrdrt\brdrs\brdrw45\clbrdrl\brdrs\brdrw45\clbrdrb\brdrs\brdrw45\clbrdrr\brdrs\brdrw45
+\pard \qc\widctlpar\intbl {##\cell}
+\pard \ql\widctlpar\intbl {'v86,'\cell }
+\pard \ql\widctlpar\intbl {'
+if p(v591)then v591.100,if v591*100<>''then '...' fi else v200^a.100,if v200^a*1
+00<>''then '...' fi fi,'\cell }
+\pard \qc\widctlpar\intbl {'
+(if p(v39) then if p(v39^a) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^a) or 
+a(v39^a) and p(v39^b) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^b) then 
+f(val(v39^d,if a(v39^d) then v39^c fi),0,0)'\par 'fi fi),'\cell }
+\pard \qr\widctlpar\intbl {'
+f(val(v34,' 0'),0,2),'\cell }
+\pard \qr\widctlpar\intbl {'
+(if p(v39) then if p(v39^a) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^a) or 
+a(v39^a) and p(v39^b) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^b) then 
+f((val(v39^d,if a(v39^d) then v39^c fi)*val(&unifor('Av34#1'))),0,2)'\par 'fi fi),'\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar'

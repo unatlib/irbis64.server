@@ -1,0 +1,20 @@
+(if p(v1) then, 
+ if p(v1^C) then 
+  '\qc \fs20 \b0 ',&uf('D,@',v1^c,',@tabkfsb'), 
+ else 
+   if p(v1^D) then 
+    '\par \qc \b0 \fs22 ', 
+    &uf('+1W777#',&uf('K691c.mnu|',v1^D)), 
+    if &uf('+1R777')<>'' then 
+     ,&uf('+1R777') 
+    fi, 
+'\par \qc   Специальность ',v1^D, 
+'\par\par \b0 \fs20 ', 
+'\trowd \trqc\trgaph108\trleft-108\trhdr\cellx459\cellx6562\cellx7696\cellx9114\pard \qc\widctlpar\intbl {\b N \cell }\pard \qc\widctlpar\intbl {\b Заглавие учебника\cell }\pard   \qc\widctlpar\intbl {\b Осн/Доп\cell }\pard \qc\widctlpar\intbl {\b Кол-во экз-ров\cell }\pard  \widctlpar\intbl {\b \row }\pard \qc\widctlpar' 
+   else 
+   '\qc \fs30 \b ',v1^a, ' \fs22 \par' 
+   fi, 
+ fi,
+fi/), 
+
+

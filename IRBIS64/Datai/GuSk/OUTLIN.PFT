@@ -1,0 +1,1 @@
+if v3*5.1='.' then '  ' else if v3*2.1='.' then ' ' fi fi,v3,' ',v2

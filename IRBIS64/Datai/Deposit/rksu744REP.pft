@@ -1,0 +1,299 @@
+/*---------замена подполей поля 744 в записи КСУ
+/*-----используется в глобальной StatKsu-Spep2
+/*----данные для замены в g10
+(if p(v744) 
+ then 
+    |^I|v744^I,,|^H|v744^H,,,,,
+    if s(v744^I,v744^H)=s(&uf('Ag10^I#1'),&uf('Ag10^H#1')) 
+    then 
+/*-------------------------A
+       if v744^A='' 
+       then 
+          if &uf('Ag10^A#1') <>'' then '^A',&uf('Ag10^A#1') fi,,
+       else 
+          '^A',,
+          if &uf('Ag10^A#1') <>'' then  f(val(v744^A)+val(&uf('Ag10^A#1')),0,0) else v744^A fi,,
+       fi,,
+/*-------------------------B
+       if v744^B='' 
+       then 
+          if &uf('Ag10^B#1') <>'' then '^B',&uf('Ag10^B#1') fi,,
+       else 
+          '^B',,
+          if &uf('Ag10^B#1') <>'' then  f(val(v744^B)+val(&uf('Ag10^B#1')),0,0) else v744^B fi,,
+       fi,,
+/*-------------------------+ 2
+       if v744^+='' 
+       then 
+          if &uf('Ag10^+#1') <>'' then '^+',&uf('Ag10^+#1') fi,,
+       else 
+          '^+',,
+          if &uf('Ag10^+#1') <>'' then  f(val(v744^+)+val(&uf('Ag10^+#1')),0,2) else v744^+ fi,,
+       fi,,
+/*-------------------------C
+       if v744^C='' 
+       then 
+          if &uf('Ag10^C#1') <>'' then '^C',&uf('Ag10^C#1') fi,,
+       else 
+          '^C',,
+          if &uf('Ag10^C#1') <>'' then  f(val(v744^C)+val(&uf('Ag10^C#1')),0,0) else v744^C fi,,
+       fi,,
+/*-------------------------D
+       if v744^D='' 
+       then 
+          if &uf('Ag10^D#1') <>'' then '^D',&uf('Ag10^D#1') fi,,
+       else 
+          '^D',,
+          if &uf('Ag10^D#1') <>'' then  f(val(v744^D)+val(&uf('Ag10^D#1')),0,0) else v744^D fi,,
+       fi,,
+/*-------------------------E
+       if v744^E='' 
+       then 
+          if &uf('Ag10^E#1') <>'' then '^E',&uf('Ag10^E#1') fi,,
+       else 
+          '^E',,
+          if &uf('Ag10^E#1') <>'' then  f(val(v744^E)+val(&uf('Ag10^E#1')),0,0) else v744^E fi,,
+       fi,,
+/*-------------------------F
+       if v744^F='' 
+       then 
+          if &uf('Ag10^F#1') <>'' then '^F',&uf('Ag10^F#1') fi,,
+       else 
+          '^F',,
+          if &uf('Ag10^F#1') <>'' then  f(val(v744^F)+val(&uf('Ag10^F#1')),0,0) else v744^F fi,,
+       fi,,
+/*-------------------------G
+       if v744^G='' 
+       then 
+          if &uf('Ag10^G#1') <>'' then '^G',&uf('Ag10^G#1') fi,,
+       else 
+          '^G',,
+          if &uf('Ag10^G#1') <>'' then  f(val(v744^G)+val(&uf('Ag10^G#1')),0,0) else v744^G fi,,
+       fi,,
+/*-------------------------8
+       if v744^8='' 
+       then 
+          if &uf('Ag10^8#1') <>'' then '^8',&uf('Ag10^8#1') fi,,
+       else 
+          '^8',,
+          if &uf('Ag10^8#1') <>'' then  f(val(v744^8)+val(&uf('Ag10^8#1')),0,0) else v744^8 fi,,
+       fi,,
+/*-------------------------9
+       if v744^9='' 
+       then 
+          if &uf('Ag10^9#1') <>'' then '^9',&uf('Ag10^9#1') fi,,
+       else 
+          '^9',,
+          if &uf('Ag10^9#1') <>'' then  f(val(v744^9)+val(&uf('Ag10^9#1')),0,0) else v744^9 fi,,
+       fi,,
+/*-------------------------J
+       if v744^J='' 
+       then 
+          if &uf('Ag10^J#1') <>'' then '^J',&uf('Ag10^J#1') fi,,
+       else 
+          '^J',,
+          if &uf('Ag10^J#1') <>'' then f(val(v744^J)+val(&uf('Ag10^J#1')),0,0)  else v744^J fi,,
+       fi,,
+/*-------------------------K
+       if v744^K='' 
+       then 
+          if &uf('Ag10^K#1') <>'' then '^K',&uf('Ag10^K#1') fi,,
+       else 
+          '^K',,
+          if &uf('Ag10^K#1') <>'' then f(val(v744^K)+val(&uf('Ag10^K#1')),0,0)  else v744^K fi,,
+       fi,,
+/*-------------------------L
+       if v744^L='' 
+       then 
+          if &uf('Ag10^L#1') <>'' then '^L',&uf('Ag10^L#1') fi,,
+       else 
+          '^L',,
+          if &uf('Ag10^L#1') <>'' then  f(val(v744^L)+val(&uf('Ag10^L#1')),0,0) else v744^L fi,,
+       fi,,
+/*-------------------------M
+       if v744^M='' 
+       then 
+          if &uf('Ag10^M#1') <>'' then '^M',&uf('Ag10^M#1') fi,,
+       else 
+          '^M',,
+          if &uf('Ag10^M#1') <>'' then  f(val(v744^M)+val(&uf('Ag10^M#1')),0,0) else v744^M fi,,
+       fi,,
+/*-------------------------N
+       if v744^N='' 
+       then 
+          if &uf('Ag10^N#1') <>'' then '^N',&uf('Ag10^N#1') fi,,
+       else 
+          '^N',,
+          if &uf('Ag10^N#1') <>'' then  f(val(v744^N)+val(&uf('Ag10^N#1')),0,0) else v744^N fi,,
+       fi,,
+/*-------------------------O
+       if v744^O='' 
+       then 
+          if &uf('Ag10^O#1') <>'' then '^O',&uf('Ag10^O#1') fi,,
+       else 
+          '^O',,
+          if &uf('Ag10^O#1') <>'' then  f(val(v744^O)+val(&uf('Ag10^O#1')),0,0) else v744^O fi,,
+       fi,,
+/*-------------------------P
+       if v744^P='' 
+       then 
+          if &uf('Ag10^P#1') <>'' then '^P',&uf('Ag10^P#1') fi,,
+       else 
+          '^P',,
+          if &uf('Ag10^P#1') <>'' then  f(val(v744^P)+val(&uf('Ag10^P#1')),0,0) else v744^P fi,,
+       fi,,
+/*-------------------------Q
+       if v744^Q='' 
+       then 
+          if &uf('Ag10^Q#1') <>'' then '^Q',&uf('Ag10^Q#1') fi,,
+       else 
+          '^Q',,
+          if &uf('Ag10^Q#1') <>'' then  f(val(v744^Q)+val(&uf('Ag10^Q#1')),0,0) else v744^Q fi,,
+       fi,,
+/*-------------------------R
+       if v744^R='' 
+       then 
+          if &uf('Ag10^R#1') <>'' then '^R',&uf('Ag10^R#1') fi,,
+       else 
+          '^R',,
+          if &uf('Ag10^R#1') <>'' then  f(val(v744^R)+val(&uf('Ag10^R#1')),0,0) else v744^R fi,,
+       fi,,
+/*-------------------------S
+       if v744^S='' 
+       then 
+          if &uf('Ag10^S#1') <>'' then '^S',&uf('Ag10^S#1') fi,,
+       else 
+          '^S',,
+          if &uf('Ag10^S#1') <>'' then  f(val(v744^S)+val(&uf('Ag10^S#1')),0,0) else v744^S fi,,
+       fi,,
+/*-------------------------T
+       if v744^T='' 
+       then 
+          if &uf('Ag10^T#1') <>'' then '^T',&uf('Ag10^T#1') fi,,
+       else 
+          '^T',,
+          if &uf('Ag10^T#1') <>'' then  f(val(v744^T)+val(&uf('Ag10^T#1')),0,0) else v744^T fi,,
+       fi,,
+/*-------------------------U
+       if v744^U='' 
+       then 
+          if &uf('Ag10^U#1') <>'' then '^U',&uf('Ag10^U#1') fi,,
+       else 
+          '^U',,
+          if &uf('Ag10^U#1') <>'' then  f(val(v744^U)+val(&uf('Ag10^U#1')),0,0) else v744^U fi,,
+       fi,,
+/*-------------------------V
+       if v744^V='' 
+       then 
+          if &uf('Ag10^V#1') <>'' then '^V',&uf('Ag10^V#1') fi,,
+       else 
+          '^V',,
+          if &uf('Ag10^V#1') <>'' then  f(val(v744^V)+val(&uf('Ag10^V#1')),0,0) else v744^V fi,,
+       fi,,
+/*-------------------------W
+       if v744^W='' 
+       then 
+          if &uf('Ag10^W#1') <>'' then '^W',&uf('Ag10^W#1') fi,,
+       else 
+          '^W',,
+          if &uf('Ag10^W#1') <>'' then  f(val(v744^W)+val(&uf('Ag10^W#1')),0,0) else v744^W fi,,
+       fi,,
+/*-------------------------X
+       if v744^X='' 
+       then 
+          if &uf('Ag10^X#1') <>'' then '^X',&uf('Ag10^X#1') fi,,
+       else 
+          '^X',,
+          if &uf('Ag10^X#1') <>'' then  f(val(v744^X)+val(&uf('Ag10^X#1')),0,0) else v744^X fi,,
+       fi,,
+/*-------------------------Y
+       if v744^Y='' 
+       then 
+          if &uf('Ag10^Y#1') <>'' then '^Y',&uf('Ag10^Y#1') fi,,
+       else 
+          '^Y',,
+          if &uf('Ag10^Y#1') <>'' then  f(val(v744^Y)+val(&uf('Ag10^Y#1')),0,0) else v744^Y fi,,
+       fi,,
+/*-------------------------Z
+       if v744^Z='' 
+       then 
+          if &uf('Ag10^Z#1') <>'' then '^Z',&uf('Ag10^Z#1') fi,,
+       else 
+          '^Z',,
+          if &uf('Ag10^Z#1') <>'' then  f(val(v744^Z)+val(&uf('Ag10^Z#1')),0,0) else v744^Z fi,,
+       fi,,
+/*-------------------------?
+       if v744^?='' 
+       then 
+          if &uf('Ag10^?#1') <>'' then '^?',&uf('Ag10^?#1') fi,,
+       else 
+          '^?',,
+          if &uf('Ag10^?#1') <>'' then  f(val(v744^?)+val(&uf('Ag10^?#1')),0,0) else v744^? fi,,
+       fi,,
+/*-------------------------1
+       if v744^1='' 
+       then 
+          if &uf('Ag10^1#1') <>'' then '^1',&uf('Ag10^1#1') fi,,
+       else 
+          '^1',,
+          if &uf('Ag10^1#1') <>'' then  f(val(v744^1)+val(&uf('Ag10^1#1')),0,0) else v744^1 fi,,
+       fi,,
+/*-------------------------2
+       if v744^2='' 
+       then 
+          if &uf('Ag10^2#1') <>'' then '^2',&uf('Ag10^2#1') fi,,
+       else 
+          '^2',,
+          if &uf('Ag10^2#1') <>'' then  f(val(v744^2)+val(&uf('Ag10^2#1')),0,0) else v744^2 fi,,
+       fi,,
+/*-------------------------3
+       if v744^3='' 
+       then 
+          if &uf('Ag10^3#1') <>'' then '^3',&uf('Ag10^3#1') fi,,
+       else 
+          '^3',,
+          if &uf('Ag10^3#1') <>'' then  f(val(v744^3)+val(&uf('Ag10^3#1')),0,0) else v744^3 fi,,
+       fi,,
+/*-------------------------4
+       if v744^4='' 
+       then 
+          if &uf('Ag10^4#1') <>'' then '^4',&uf('Ag10^4#1') fi,,
+       else 
+          '^4',,
+          if &uf('Ag10^4#1') <>'' then  f(val(v744^4)+val(&uf('Ag10^4#1')),0,0) else v744^4 fi,,
+       fi,,
+/*-------------------------5
+       if v744^5='' 
+       then 
+          if &uf('Ag10^5#1') <>'' then '^5',&uf('Ag10^5#1') fi,,
+       else 
+          '^5',,
+          if &uf('Ag10^5#1') <>'' then  f(val(v744^5)+val(&uf('Ag10^5#1')),0,0) else v744^5 fi,,
+       fi,,
+/*-------------------------6
+       if v744^6='' 
+       then 
+          if &uf('Ag10^6#1') <>'' then '^6',&uf('Ag10^6#1') fi,,
+       else 
+          '^6',,
+          if &uf('Ag10^6#1') <>'' then  f(val(v744^6)+val(&uf('Ag10^6#1')),0,0) else v744^6 fi,,
+       fi,,
+/*-------------------------7
+       if v744^7='' 
+       then 
+          if &uf('Ag10^7#1') <>'' then '^7',&uf('Ag10^7#1') fi,,
+       else 
+          '^7',,
+          if &uf('Ag10^7#1') <>'' then  f(val(v744^7)+val(&uf('Ag10^7#1')),0,0) else v744^7 fi,,
+       fi,,
+    else 
+       |^A|v744^A,,|^B|v744^B,,|^+|v744^+,,|^C|v744^C,,|^D|v744^D,,|^E|v744^E,,
+       |^F|v744^F,,|^G|v744^G,,|^8|v744^8,,|^9|v744^9,,|^J|v744^J,,
+       |^K|v744^K,,|^L|v744^L,,|^M|v744^M,,|^N|v744^N,,|^O|v744^O,,
+       |^P|v744^P,,|^Q|v744^Q,,|^R|v744^R,,|^S|v744^S,,|^T|v744^T,,
+       |^U|v744^U,,|^V|v744^V,,|^W|v744^W,,|^X|v744^X,,|^Y|v744^Y,,
+       |^Z|v744^Z,,|^?|v744^?,,|^1|v744^1,,|^2|v744^2,,|^3|v744^3,, 
+       |^4|v744^4,,|^5|v744^5,,|^6|v744^6,,|^7|v744^7,,
+    fi,,,
+ fi/)
+    

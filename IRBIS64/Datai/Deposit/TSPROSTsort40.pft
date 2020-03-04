@@ -1,0 +1,7 @@
+(if p(v40) then 
+        if &uf('+97',&uf('Ag903#1'))=&uf('+97',v40^A) then 
+        if ( &uf('Ag991^A#1')='' or val(v40^D)>=val(&uf('Ag991^A#1')) ) and 
+           ( &uf('Ag991^B#1')='' or val(v40^D)<=val(&uf('Ag991^B#1')) ) and
+           ( &uf('Ag991^V#1')='' or &uf('+97',&uf('Ag991^V#1'))=&uf('+97',v40^V) ) 
+        then |^A|v40^A,,|^D|v40^D,,|^V|v40^V fi fi fi/ )
+

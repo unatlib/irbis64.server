@@ -1,0 +1,70 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+'\trowd \trqc\trgaph108\trleft-108',,
+if v1^A<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs20 ',,&uf('S1A'),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5000 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+v1^A,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6000 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/* --------------год издания,
+&uf('D',,v1^P,,,',?I=',,v1^X,,'?,v210^D+|,|'),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7300 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*---------------- инвентарь
+v1^Y,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8100 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*---------- место хранения
+V1^Z,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9100 
+\pard \widctlpar\intbl {\qc \fs16 ',,
+/* ---------дата выдачи
+v1^B,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10500 
+\pard \widctlpar\intbl {\qc \fs16 ',,
+/*--------------- студент
+if val(v1^Q)<val(&uf('3')) then '\cf7 ' else '\cf ' fi,,
+v1^W,,,,,,,'\cf ',,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}'

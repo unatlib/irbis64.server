@@ -1,0 +1,8 @@
+/* формирую запрос на отбор записей студентов из записей DISC или VUZ
+if val(&uf('IMAIN,ACCESSRDR,1'))=1 
+then 
+   if v920: 'DISC' then "IDD="v3^0 else  'LN=',v68^a,v68^n,v68^c,v68^v,v68^o,'-S'v68^f, fi  
+else 
+   if v920: 'DISC' then "IDV="v3^0 else  "?"d68,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-"  fi  
+fi 
+

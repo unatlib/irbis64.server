@@ -1,0 +1,26 @@
+'<script language="JavaScript">',
+'	function DropDownParams(it)',
+'	{',
+'		el1 = document.getElementById(it);',
+'		if(el1.style.display=="none")',
+'		{',
+'			el1.style.display="block";',
+'		}',
+'		else',
+'		{',
+'			el1.style.display="none";',
+'		}',
+'	}',
+' </script>',
+
+
+(if v952^B<>'' then '<IMG style="width: 100%" SRC="IRBIS:11,,',v952^B,',',mfn,'">',
+'<br><br>',
+&uf('+7W1#',&uf('+91',v952^B)),
+&uf('+7W2#',&uf('+92',v952^B)),
+
+|<input type="CheckBox" style="{cursor: hand;}" onclick="javascript:DropDownParams('ParamSearch');">Оборот КК|d952,
+'<div id="ParamSearch" style="display:none">',
+'<IMG style="width: 100%" SRC="IRBIS:10,,',g2,"W"g1*1,,'">',
+'</div>',
+ fi)

@@ -1,0 +1,11 @@
+0
+ADD
+510^3
+F
+(if p(v510) then if a(v510^3) then &uf('7ATHRC,?',if s(v510^n,v510^c,v510^X,v510^a)<>'' and (not(v510:'^d')) and (not(v510:'^e')) and (not(v510:'^f')) then '!',v510^c,v510^n,v510^X,if v510^a*6.1<>''then &unifor('B',v510^a) else v510^a fi,if v510^b*6.1<>''then &unifor(|B|v510^b)else v510^b fi, else if s(v510^d,v510^f,v510^e)<>''then '!',v510^d,v510^f,v510^e,if v510^a*6.1<>''then &unifor(|B|v510^a)else v510^a fi fi fi,'?,v903' ) else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+710^3
+F
+(if p(v710) then if a(v710^3) then &uf('7ATHRC,?',if s(v710^n,v710^c,v710^X,v710^a)<>'' and (not(v710:'^d')) and (not(v710:'^e')) and (not(v710:'^f')) then '!',v710^c,v710^n,v710^X,if v710^a*6.1<>''then &unifor('B',v710^a) else v710^a fi,if v710^b*6.1<>''then &unifor(|B|v710^b)else v710^b fi, else if s(v710^d,v710^f,v710^e)<>''then '!',v710^d,v710^f,v710^e,if v710^a*6.1<>''then &unifor(|B|v710^a)else v710^a fi fi fi,'?,v903' ) else # fi fi/)
+XXXXXXXXXXXXXXXXXXX

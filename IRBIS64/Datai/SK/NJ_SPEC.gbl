@@ -1,0 +1,55 @@
+0
+REP
+920
+1
+'SPEC'
+XXXXXXXXX
+ADD
+900
+
+if a(v900) then '^B'ref(L("I="v933),&uf('K110B_spec.mnu\'v110^b)) fi
+ADD
+905
+
+'^31'
+XXXXXXXXX
+ADD
+215
+
+if a(v215) then ref(L("I="v933),(v215/)) fi
+
+ADD
+919
+
+if a(v919) then ref(L("I="v933),(v919/)) fi
+
+ADD
+461
+
+if a(v461) then ref(L("I="v933),"^C"v200^a,"^E"v200^e,"^F"v200^f,"^H"v210^d,|^j|v11^a,(|^D|v210^a,| ; |v210^x,| ; |v210^y,|^G|v210^c/)) fi
+XXXXXXXXX
+ADD
+46
+
+if a(v46) then ref(L("I="v933),"^H"v923^h,"^I"v923^i,"^K"v923^k,"^M"v923^l) fi
+XXXXXXXXX
+ADD
+200
+
+if s(v935,v936)<>'' then'^V'if p(v935) then if val(v935.1)=0 and (not(v935.1='0')) then else ref(l("I="v933),if p(v210^8) then v210^8 else' Ò.'fi) fi,v935" " fi,if p(v936) then if val(v936.1)=0 and (not(v936.1='0'))then else ref(l("I="v933),if p(v210^9) then v210^9' 'else'N 'fi) fi,v936 fi fi
+XXXXXXXXX
+ADD
+210
+
+"^D"v934
+XXXXXXXXX
+ADD
+330
+
+(v922/)
+XXXXXXXXX
+DEL
+922
+*
+XXXXXXXXX
+XXXXXXXXX

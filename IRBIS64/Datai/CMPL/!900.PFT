@@ -1,0 +1,8 @@
+if v920:'zk'then 
+   if p(v900^b) then 
+      if &unifor("Kvdu.mnu|"v900^b.2)<>''then '0' 
+      else '1 Ошибка: Неверен вид док-та 'v900^b 
+      fi 
+   else '1 Ошибка: отсутствует вид док-та '
+fi fi
+

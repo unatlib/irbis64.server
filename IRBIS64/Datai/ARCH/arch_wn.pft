@@ -1,0 +1,28 @@
+'</>',
+'<title>Архив: ГНЕЗДО - ',v200^a,'</title>',
+   '<b>ОСНОВНОЙ ДОКУМЕНТ',
+if p(v421) then ,arch4210_wn, fi,
+if p(v422) then ,arch4220_wn, fi,
+if s(v421,v422)<>'' then else  
+   '<table><tr>', 
+      '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">','</td>', 
+      '<td valign=top>','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+      '<td valign=top>','<b>'v19^b"__",brief_arch,'</b>'
+      '</td>'
+   '</tr></table>', 
+   if val(&unifor('J,B422='v19^b))>0 then '<b>','На документ есть ссылк',
+      if val(&unifor('J,B422='v19^b))>1 then 'и от документов:<dd>' else 'а от документа: <dd>' fi,'</b>',
+      mpl,&uf('+7W111#'),&uf('7,!B422='v19^b|!,&uf('+7U111#^A'mfn,'^B'v19^b)|),
+   '<table>', 
+      (if p(g111) then 
+       '<tr>', 
+         '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"value="',g111^A,'">','</td>', 
+         '<td valign=top >','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+         '<td valign=top>','<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=B422=',
+         &uf('+3E',g111^b),'">',&uf('7,!B='g111^b,'!,@brief_derevo'),'</A>''</td>',
+       '</tr>'          
+       fi)   
+   '</table>' ,
+   else '<b><br> Связанных документов нет </b>' 
+fi fi,
+'<br>'         

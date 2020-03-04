@@ -1,0 +1,35 @@
+/*&uf('+7W225#1880'),&uf('+7W909#'),
+&uf('+7W5#'),&uf('+7W16#'),&uf('+7W6#'),
+if v909<>'' then 
+   &uf('+7U6#' (if p(v909) then if v909^q=&uf('Ag225#1') then if v909^h:'Подш' then v909^d fi fi fi/))/
+      &uf('+7U16#'(if p(v909) then 
+                   if v909^q=&uf('Ag225#1') then 
+                      if v909^h:'Подш' then  
+                         if &uf('Av423#1')='' 
+                         then &uf('D,!I='&uf(|Av903#1|d909),|/|v909^q,|/|v909^f,|/|v909^h'!,v936|: (номера |v931^c|); |')   
+                         else &uf('7,?I='v909^p,if v909^p='' then &uf(|Av903#1|d909),|/|v909^q,|/|v909^f,|/|v909^h fi,'?,@Jwh_vlp') 
+                fi fi fi fi/)),
+   &uf('+7U5#'(if p(v909) then 
+                  if v909^q=&uf('Ag225#1') then 
+                     if p(v909^d) and &unifor(|Kmhrvn.mnu\|v909^d)<>''then else 
+                        if v909^h:'Подш' then else
+                           &uf('Ag225#1'),'=',|компл. |v909^k,| (|v909^d|)|,
+                           if p(v909^f) then 
+                              if val(v909^f.1)=0 and (not('I X V 0':v909^f.1)) then' ' else 
+                                 if &unifor('Av210^8#1')<>''then' '&unifor('Av210^8#1')' ' else ' т.'
+                              fi fi,v909^f|  | fi,
+                           if p(v909^h) then | |+d909^h  
+                              if val(v909^h.1)=0 and (not(v909^h.1='0'))then' ' else 
+                                 if &unifor('Av210^9#1')<>''then' '&unifor('Av210^9#1')' ' else' № '
+                           fi fi fi,v909^h,| (|v909^v|)|
+               fi fi fi fi/)), 
+fi, 
+&uf('S0'),
+&uf('+7U909#'(if g5 <>'' then 
+                 if val(&uf('S1A'))=1 then '^Q',mfn,&uf('G0='g5),'^B'else if g5<>'' then '; ' fi fi,
+              &uf('G2='g5) fi),
+              if g16<>'' then ' <br>Есть переплетенные номера: ',(if p(g6)then |в |g6| |,| |+g16 fi) fi,),
+/*(|g6: |g6|<br>|)
+/*(|g16: |g16|<br>|),
+/*(|g5: |g5|<br>|)
+/*(|g909: |g909|<br>|)

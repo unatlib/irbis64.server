@@ -1,0 +1,180 @@
+0
+//12 PUTLOG
+// 7.1 установка записи-аналога
+// выполняется на записях-аналогах
+// в 991 поля 691 из базовой записи
+// в 992 шифр базовой записи
+// формирование поля в аналоге 699
+// нет ли уже 699^U=0
+IF
+if rsum((if p(v699) then if v699^U='0' then '1,' else '0,' fi fi))>0 then '1' fi
+PUTLOG
+'Запись уже аналог. MFN=',f(val(mfn),0,0)
+FI
+IF
+if a(v699) or rsum((if p(v699) then if v699^U='0' then '1,' else '0,' fi fi))=0 then '1' fi
+ADD
+699
+
+'^U0^W',v992
+
+PUTLOG
+'Откорректирована запись-аналог. MFN=',f(val(mfn),0,0)
+FI
+IF
+if p(v991) then '1' fi
+DEL
+1691
+*
+
+
+ADD
+1691
+
+(v691/)
+
+REPEAT
+// перенос с проверкой на дубль
+ADD
+691
+
+if rsum((if p(v691) then if &uf('+97',v691^S)=&uf('+97',&unifor('Av991^S#1')) and &uf('+97',v691^B)=&uf('+97',&unifor('Av991^B#1')) and &uf('+97',v691^A)=&uf('+97',&unifor('Av991^A#1')) and &uf('+97',v691^L)=&uf('+97',&unifor('Av991^L#1')) and &uf('+97',v691^K)=&uf('+97',&unifor('Av991^K#1')) and &uf('+97',v691^V)=&uf('+97',&unifor('Av991^V#1')) and v691^F=&unifor('Av991^F#1') and &uf('+97',v691^I)=&uf('+97',&unifor('Av991^I#1')) and  &uf('+97',v691^O)=&uf('+97',&unifor('Av991^O#1')) and &uf('+97',v691^H)=&uf('+97',&unifor('Av991^H#1')) then '1,' else '0,' fi fi))=0 then &unifor('Av991#1') fi
+
+DEL
+991
+1
+
+
+UNTIL
+if p(v991) then '1' fi
+IF
+if v1691<>v691 then '1' fi
+PUTLOG
+'Дописаны в запись-аналог поля КО. MFN=',f(val(mfn),0,0)
+FI
+FI
+// --------------------все то же для БД CMPL
+// перенос в записи БД CMPL, если задано имя NameCmpl
+IF
+if &unifor('IMAIN,NAMECMPL,')<>'' then '1' fi
+CORREC
+&unifor('IMAIN,NAMECMPL,')
+(v991/)/"^X"v992
+"I="v903
+
+// формирование поля 699
+// нет ли уже 699^U=0
+IF
+if rsum((if p(v699) then if v699^U='0' then '1,' else '0,' fi fi))>0 then '1' fi
+PUTLOG
+'CMPL: запись уже аналог. MFN=',f(val(mfn),0,0)
+FI
+IF
+if rsum((if p(v699) then if v699^U='0' then '1,' else '0,' fi fi))=0 then '1' fi
+ADD
+699
+
+'^U0^W',&uf('Av1001^X#',&uf('+N1001'))
+
+PUTLOG
+'CMPL: откорректирована запись. MFN=',f(val(mfn),0,0)
+FI
+// перенос 691 с проверкой на дубль
+REPEAT
+ADD
+691
+
+if rsum((if p(v691) then if  &uf('+97',v691^S)=&uf('+97',&unifor('Av1001^S#1')) and &uf('+97',v691^B)=&uf('+97',&unifor('Av1001^B#1')) and &uf('+97',v691^A)=&uf('+97',&unifor('Av1001^A#1')) and &uf('+97',v691^L)=&uf('+97',&unifor('Av1001^L#1')) and &uf('+97',v691^K)=&uf('+97',&unifor('Av1001^K#1')) and &uf('+97',v691^V)=&uf('+97',&unifor('Av1001^V#1')) and v691^F=&unifor('Av1001^F#1') and &uf('+97',v691^I)=&uf('+97',&unifor('Av1001^I#1')) and  &uf('+97',v691^O)=&uf('+97',&unifor('Av1001^O#1')) and &uf('+97',v691^H)=&uf('+97',&unifor('Av1001^H#1')) then '1,' else '0,' fi fi))=0 then &unifor('Av1001#1') fi
+
+DEL
+1001
+1
+
+
+UNTIL
+if p(v1001) then '1' fi
+DEL
+691^X
+*
+
+
+DEL
+1001
+*
+
+
+END
+// конец задана БД CMPL
+FI
+//------------------ в базовую запись впишу шифр аналога
+CORREC
+if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else &uf('+D') fi
+mpu,v903
+'I=',v992
+
+DEL
+1699
+*
+
+
+ADD
+1699
+
+(v699/)
+
+ADD
+699
+
+if a(v699) or rsum((if p(v699) then if v699^U='1' and &uf('+97',v699^W)=&uf('Av1001#1') then '1,' else '0,' fi fi))=0 then '^U1^W',v1001 fi
+
+DEL
+1001
+*
+
+
+IF
+if v1699<>v699 then '1' fi
+PUTLOG
+'Откорректирована базовая запись. MFN=',f(val(mfn),0,0)
+FI
+DEL
+1699
+*
+
+
+END
+// то же с БД комплектования 
+IF
+if &unifor('IMAIN,NAMECMPL,')<>'' then '1' fi
+CORREC
+&unifor('IMAIN,NAMECMPL,')
+v903
+"I="v992
+
+ADD
+699
+
+'^U1^W',v1001
+
+DEL
+1001
+*
+
+
+END
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+1691
+*
+
+

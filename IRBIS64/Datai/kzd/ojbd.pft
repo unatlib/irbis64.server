@@ -1,0 +1,11 @@
+ 
+   If p(v200) then '\b'v200^a,'\par \d   ' fi if p(v309^e) then '\par \b Дата события: ',v309^e.4,'г.' fi 
+ IF p(v309^i)AND v309^i<>' '  
+ THEN &unifor('+7W100#'F((val(&unifor('30'))-val(v309^e.4))/val(v309^i),4,2)), 
+      &unifor('+7W101#'F((val(v309^i)-val(v309^i)/100*val(&unifor('G2.'G100))),0,0)) 
+      if v309^i='1' then'\par \b Празднуется каждый год' else  
+if &unifor('G2.'G100)='00' then '\par\b Текущий год - юбилейный' 
+  else '\par \b До юбилея события 'F(val(&unifor('G2.'G101)),0,0) ' лет'fi fi 
+  else fi  
+  
+   

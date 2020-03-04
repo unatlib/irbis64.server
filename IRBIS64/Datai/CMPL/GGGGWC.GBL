@@ -1,0 +1,67 @@
+0
+REP
+30^C
+F
+(if v30^C.1:'9'then |19|v30^C else if v30^C.1:'0'then |20|v30^c else v30^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+31^C
+F
+(if v31^C.1:'9'then |19|v31^C else if v31^C.1:'0'then |20|v31^C else v31^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+32^C
+F
+(if v32^C.1:'9'then |19|v32^C else if v32^C.1:'0'then |20|v32^C else v32^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+88^B
+F
+if v88^B.1:'9'then "19"v88^B else if v88^B.1:'0'then |20|v88^B else v88^b fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+800^B
+F
+(if v800^B.1:'9'then |19|v800^B else if v800^B.1:'0'then |20|v800^B else v800^b fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+888^B
+F
+if v888^B.1:'9'then "19"v888^B else if v888^B.1:'0'then |20|v888^B else v888^b fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+907^A
+F
+(if v907^A.1:'9'then |19|v907^A else if v907^A.1:'0'then |20|v907^A else v907^a fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+41^D
+F
+(if v41^D.1:'9'then |19|v41^D else if v41^D.1:'0'then |20|v41^D else v41^d fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+41^I
+F
+(if v41^I.1:'9'then |19|v41^I else if v41^I.1:'0'then |20|v41^I else v41^i fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+42^D
+F
+(if v42^D.1:'9'then |19|v42^D else if v42^D.1:'0'then |20|v42^D else v42^d fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+42^I
+F
+(if v42^I.1:'9'then |19|v42^I else if v42^I.1:'0'then |20|v42^I else v42^i fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+43^D
+F
+(if v43^D.1:'9'then |19|v43^D else if v43^D.1:'0'then |20|v43^D else v43^d fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+43^I
+F
+(if v43^I.1:'9'then |19|v43^I else if v43^I.1:'0'then |20|v43^I else v43^i fi fi/)
+XXXXXXXXXXXXXXXXXXX
+

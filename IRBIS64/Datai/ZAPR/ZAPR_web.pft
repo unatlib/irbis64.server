@@ -1,0 +1,47 @@
+if v2<>'' then
+   if v1<>'' then
+      '
+      <script>
+         $("#ctrl_show_search_queries_readerName").html(
+            "',
+               &uf('++1','<b>Читатель:</b>',v1,&uf('DRDR',',!RI=',v1,'!,@brief')),
+            '");
+         
+         function onclick_deleteStoredQuery(n)
+         {
+            onCompleteDelete =
+               function()
+               {
+                  $("#ctrl_search_queries_row_" + n).css("display", "none");
+               };
+               
+            new WebIrbisSystem(CGI_PATH).uc_deleteStoredQuery("',F(val(MFN),0,0),'", n, onCompleteDelete);
+         }
+         
+      </script>
+      ',
+   fi,
+   (if v2<>'' then 
+      '
+      <tr id="ctrl_search_queries_row_',&uf('+90'),'">
+      <td style="cursor: pointer; color: blue;" onclick="onclick_executeStoredQuery_',&uf('+90'),'();">
+      ',
+      if v2^A <> v2^B then '<b>', v2^A, '</b>', fi,
+      if v2^B <> '' then ' Запрос:&nbsp;<b>', v2^B, '</b>', fi,
+      if v2^C <> '' then ' Запрос по библиографии:&nbsp;', v2^C, fi,
+      '
+      <script>
+         function onclick_executeStoredQuery_',&uf('+90'),'()
+         {
+            new WebIrbisSystem(CGI_PATH).uc_executeStoredQuery("',&uf('++1',v2^B),'", "',&uf('++1',v2^C),'");
+         }   
+      </script>
+      </td>
+      <td>',V2^D,'&nbsp;</td>
+      <td>
+         <div style="cursor: pointer;" onclick="onclick_deleteStoredQuery(',&uf('+90'),');"><img src="<--HTTP_PATH-->/images/dismiss.png"></a>
+      </td>
+      </tr>
+      ',
+   fi),
+fi

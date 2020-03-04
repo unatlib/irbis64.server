@@ -1,0 +1,10 @@
+[HeaderNumber]
+1
+[HeaderFormat]
+'\par 'if v1^A<>'' then if v1^B='' then '\b ',,'Контингенты найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else  if v1^O='' then v1^B else "\tab \tab MFN: "v1^O fi fi  else if v1^C<>'' then if v1^D='' then '\b ',,'В записях студентов, указанных контингентов, отсутствуют дисциплины',,'\b0 ' else v1^D fi  else if v1^E<>'' then if v1^F='' then '\b ',,'Факультеты найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^F fi  else if v1^G<>'' then if v1^H='' then '\b ',,'Специальности найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^H fi  else if v1^I<>'' then if v1^J='' then '\b ',,'Направления найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^J fi  else if v1^K<>'' then if v1^L='' then '\b ',,'Формы обучения найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^L fi  else if v1^M<>'' then if v1^N='' then '\b ',,'Виды обучения найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^N fi  fi fi fi fi fi fi fi'\par '
+*****
+[KeyOptions]
+100
+1
+if p(v90) then if val(&uf('+N90'))=1 and val(&uf('JVUZ,?',v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f"-"))=0 then '^AААААА',/,'^AААААА^B',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,/,,if val(v991^A)=1 then '^AААААА',/,'^AААААА^B',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,'^O',,&uf('7RDR,!LN=',v90^A,v90^N,v90^C,v90^V,v90^O,'-S',v90^f,,'!,f(val(mfn),0,0),,","d920') fi/,,fi,,if a(v69) then  '^CЖЖЖЖЖ',/,'^CЖЖЖЖЖ^D',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f/,,,fi,,if &uf('Av90^A#1')<>'' and val(&uf('JVUZ,DISCFAK=',&uf('Av90^A#1')))<=0 then '^EБББББ',/,'^EБББББ^F',,&uf('Av90^A#1')/,,fi,,,if &uf('Av90^C#1')<>'' and val(&uf('JVUZ,DISCS=',&uf('Av90^C#1')))<=0 then '^GВВВВВ',/,'^GВВВВВ^H',,&uf('Av90^C#1')/ fi,,,if &uf('Av90^N#1')<>'' and val(&uf('JVUZ,DISCNPR=',&uf('Av90^N#1')))<=0 then '^IГГГГГ',/,'^IГГГГГ^J',,&uf('Av90^N#1')/,,fi,,,if &uf('Av90^O#1')<>'' and val(&uf('JVUZ,DISCFO=',&uf('Av90^O#1')))<=0 then '^KДДДДД',/,'^KДДДДД^L',,&uf('Av90^O#1')/,,fi,,,if &uf('Av90^V#1')<>'' and val(&uf('JVUZ,DISCVO=',&uf('Av90^V#1')))<=0 then '^MЕЕЕЕЕ',/,'^MЕЕЕЕЕ^N',,&uf('Av90^V#1')/,,fi,,,FI,,
+*****

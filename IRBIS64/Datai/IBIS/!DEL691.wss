@@ -1,0 +1,131 @@
+13
+D
+Дисциплина
+0
+0
+0
+
+
+DISC=
+G1^D='' or s((|!|v691^D|!|)): s('!',G1^D,'!')
+(if p(v691) then if ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and   ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^D<>'' then v691^D else ' ' fi else ' ' fi fi/)
+I
+Идентификатор
+0
+0
+0
+
+
+
+G1^I='' or s((|!|v691^I|!|)): s('!',G1^I,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and   ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^D<>'' then v691^I else ' ' fi else ' ' fi fi/)
+B
+Кафедра
+0
+0
+1
+kafch.mnu
+
+KAFCH=
+G1^B='' or s((|!|v691^B|!|)): s('!',G1^B,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and   ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^B<>'' then v691^B else ' ' fi else ' ' fi fi/)
+S
+Цикл дис.
+0
+0
+1
+cikld.mnu
+
+CIKLD=
+G1^S='' or s((|!|v691^S|!|)): s('!',G1^S,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^S<>'' then v691^S else ' ' fi else ' ' fi fi/)
+A
+Факультет
+0
+0
+1
+FAK.mnu
+
+FAK=
+G1^A='' or s((|!|v691^A|!|)): s('!',G1^A,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and    ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^A<>'' then v691^A else ' ' fi else ' ' fi fi/)
+N
+Направление
+0
+0
+1
+napr.mnu
+
+NAPR=
+G1^N='' or s((|!|v691^N|!|)): s('!',G1^N,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^N<>'' then v691^N else ' ' fi else ' ' fi fi/)
+C
+Спец./Профиль
+0
+0
+1
+spec.mnu
+
+SPEC=
+G1^C='' or s((|!|v691^C|!|)): s('!',G1^C,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and (&uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and    ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^C<>'' then v691^C else ' ' fi else ' ' fi fi/)
+V
+Вид обуч.
+0
+0
+1
+vo.mnu
+
+VO=
+G1^V='' or s((|!|v691^V|!|)): s('!',G1^V,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and    ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^V<>'' then v691^V else ' ' fi else ' ' fi fi/)
+O
+Форм.обуч.
+0
+0
+1
+fo.mnu
+
+FO=
+G1^O='' or s((|!|v691^O|!|)): s('!',G1^O,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and    ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^O<>'' then v691^O else ' ' fi else ' ' fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+SEM=
+G1^F='' or s((|!|v691^F|!|)): s('!',G1^F,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and  ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^G#1')='' or v691^G: &uf('AG1^G#1')  )  then if v691^F<>'' then v691^F else ' ' fi else ' ' fi fi/)
+G
+Осн\Доп
+0
+0
+1
+691g.mnu
+
+TL=
+G1^G='' or s((|!|v691^G|!|)): s('!',G1^G,'!')
+(if p(v691) then if ( &uf('AG1^I#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG1^I#1'))  )  and ( &uf('AG1^D#1')='' or v691^D: &uf('AG1^D#1') )  and   ( &uf('AG1^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG1^B#1'))  )  and ( &uf('AG1^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG1^S#1'))  )  and ( &uf('AG1^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG1^A#1'))  )  and ( &uf('AG1^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG1^N#1'))  )  and ( &uf('AG1^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG1^C#1'))  )  and ( &uf('AG1^V#1')='' or &uf('+97',v691^V)=&uf('+97',&uf('AG1^V#1'))  )  and ( &uf('AG1^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG1^O#1'))  )  and ( &uf('AG1^F#1')='' or &uf('+97',v691^F)=&uf('+97',&uf('AG1^F#1'))  )  then if v691^G<>'' then v691^G else ' ' fi else ' ' fi fi/)
+L
+Филиал
+0
+0
+!0
+
+
+
+
+
+1
+MFN записи
+0
+0
+!0
+
+
+
+
+(if p(v691) then f(val(mfn),0,0) fi/)

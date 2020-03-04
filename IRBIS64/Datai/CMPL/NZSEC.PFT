@@ -1,0 +1,19 @@
+(if p(v62) then if p(v62^K) then |KOR=|v62^K break fi fi)/,,,,
+if ref(mfn,if p(v30^g) and f(rsum((v30^g|;|/)),0,0)=&unifor('Av30^d#1')then     
+   else if p(v30^d) then '"KOR=',v30^k,'"' fi fi)<>'' then '"KOR=',v30^k,'"'               
+   if p(v31^g) and f(rsum((v31^g|;|/)),0,0)=&unifor('Av31^d#1')then else        
+      if p(v31^d) then ' + "KOR=',v31^k,'"' fi fi,                                    
+else                                                                            
+   if p(v31^g) and f(rsum((v31^g|;|/)),0,0)=&unifor('Av31^d#1')then else        
+      if p(v31^d) then '"KOR=',v31^k,'"' fi fi,                                       
+fi,                                                                             
+if ref(mfn,if p(v30^g) and f(rsum((v30^g|;|/)),0,0)=&unifor('Av30^d#1')then     
+   else if p(v30^d) then '"KOR=',v30^k,'"' fi fi)<>''or                               
+   ref(mfn,if p(v31^g) and f(rsum((v31^g|;|/)),0,0)=&unifor('Av31^d#1')then     
+   else if p(v31^d) then '"KOR=',v31^k,'"' fi fi)<>''then                             
+   if p(v32^g) and f(rsum((v32^g|;|/)),0,0)=&unifor('Av32^d#1')then else        
+      if p(v32^d) then ' + "KOR=',v32^k,'"' fi fi,                                    
+else                                                                            
+   if p(v32^g) and f(rsum((v32^g|;|/)),0,0)=&unifor('Av32^d#1')then else        
+      if p(v32^d) then '"KOR=',v32^k,'"' fi fi,                                       
+fi

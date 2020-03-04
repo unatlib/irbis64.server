@@ -1,0 +1,113 @@
+/*v1002, G1002 - идентификатор читателя
+/*G10 - РАЗРЕШЕНО (повт.)
+/*G11 - РАЗРЕШЕНО (объединенные через +)
+/*G2 - ЗАПРЕЩЕНО (повт.)
+/*G12 - ЗАПРЕЩЕНО (объединенные через +)
+/*G3 - МХР СВОБОДНЫХ ЭКЗ-ОВ
+/*G4 - Каф.Выдачи - ДОСТУПНЫЕ
+/*G5 - МХР - ЗАНЯТЫХ ЭКЗ-ОВ
+/*G31 - МХР СВОБОДНЫХ ПОДШИВОК
+/*G41 - Каф.Выдачи - ДОСТУПНЫЕ ПОДШИВКИ
+/*G51 - МХР - ЗАНЯТЫХ ПОДШИВОК
+/*G6 - Журнал - МХР ТЕКУЩИХ ПОСТУПЛЕНИЙ
+/*G7 - Журнал - Каф.Выдачи ЗА СТАРЫЕ ГОДЫ
+/*G8 - промежуточная для передачи в FREVL
+/*G16 - Каф.Выдачи экз. в FREVL (доступны)
+/*G17 - Каф.Выдачи экз. из FREVL,объединены через ", "
+/*G18 - итоговое значение из FREVL
+/*G20 - итог для *****
+
+&uf('+7W1002#'),&uf('+7W1002#'v1002),
+if v920.1:'A' and v463^w<>'' then ,BRIEF,(if p(v463^w) then /'==='/,&uf('D,!I='v463^w'!,@freekz1_ist') fi/) 
+else 
+   if p(v699) then 
+      &uf('+7W699#'(v699^w/)),
+      &uf('DRDR,?RI='g1002|?,(if p(v40) then if v40^f:'*' then &uf('+7W40#'v40^a/) fi fi/)|),
+      &uf('+7M40#699'),
+      if g40<>'' then 'У Вас на руках АНАЛОГ ЗАКАЗЫВАЕМОЙ КНИГИ: '&uf('D,?I='g40|?,&uf('6brief')|) fi
+   fi,
+   &uf('+7W10#'),&uf('+7W10#'&uf("DRDR,?RI="g1002"?,(v56/)")),
+   &uf('+7W2#'),&uf('+7W2#'&uf("DRDR,?RI="g1002"?,(v57/)")),
+   &uf('+7W3#'),
+   &uf('+7W3#',
+       if v920='J' then if p(v909)then if v909^d<>''then (if &uf('Kmhrvn.mnu\'v909^d)='' then v909^d fi/)else if p(v910^d)then (if &uf('Kmhrvn.mnu\'v910^d)='' then v910^d fi/)else (if &uf('Kmhrvn.mnu\'v901^d)='' then v901^d fi/) fi fi fi else 
+          (if p(v910) then 
+              if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
+                 if v910^a:'0' or v910^a:'U' and val(v910^1) > val(v910^2)  
+              then v910^d fi fi fi/),
+          (if p(v910) then 
+              if v910^a:'p' then &uf(|D,!I=|v910^p|!,(if v910^a:'0' then v910^d fi/)|) fi fi/)
+       fi),&uf('+7G3'), 
+   &uf('+7W4#'),&uf('+7U4#'(&uf(|+Omhrkv.mnu\|g3)/)),&uf('+7G4'),
+       if g10<>'' then &uf('+7M4#10') else if g2<>'' then &uf('+7S4#2') fi fi,
+   &uf('+7W5#'),&uf('+7W5#'
+       (if p(v910) then 
+           if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
+              if v910^a:'1' or v910^a:'U' and val(v910^2)=val(v910^1) 
+              then v910^d fi fi fi/)),
+   &uf('+7W31#'),&uf('+7W31#'
+       (if v910^a:'p' then 
+           if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
+              if v910^a:'p'then &uf('+7W910#'),&uf('+7W910#'v910^d),
+                 if &uf(|D,!I=|v910^p|!,(if p(v910) then if v910^d=&uf('Ag910#1') then v910^a fi fi)|):'0' 
+                 then &uf('Ag910#1') fi fi fi fi/)),&uf('+7G31'),
+   &uf('+7W41#'),&uf('+7U41#'(&uf('+Omhrkv.mnu\'g31)/)),&uf('+7G41'),
+                 if g10<>'' then &uf('+7M41#10') else if g2<>'' then &uf('+7S41#2') fi fi,
+   &uf('+7W51#'),&uf('+7W51#'
+       (if v910^a:'p' then 
+           if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
+              if v910^a:'p'then &uf('+7W910#'),&uf('+7W910#'v910^d),
+                 if &uf(|D,!I=|v910^p|!,(if p(v910) then if v910^d=&uf('Ag910#1') then v910^a fi fi)|):'1' 
+                 then &uf('Ag910#1') fi fi fi fi/)),
+   /,BRIEF,/ 
+   &uf('+7W18#'),&uf('+7W6#'),&uf('+7W7#'),
+   if s(g4,g3)='' then 
+      if v920='J' then else 'Свободных экземпляров нет'/ fi
+   else 
+      if v920='J' then 
+         if s(g10,g2)<>'' and g4<>'' or s(g10,g2)='' then 'Можно получить: ',|, |+g4,if g4='' then |, |+g3 fi fi, 
+         &uf('+7W6#'(v910^d/)),&uf('+7G6'),&uf('+7W6#'(&uf('+Omhrkv.mnu\'g6)/)),
+         &uf('+7W7#'(v909^d/)),&uf('+7G7'),&uf('+7W7#'(&uf('+Omhrkv.mnu\'g7)/)),&uf('+7S7#6'),
+         if g7<>'' then 
+            (if p(g7) then &uf('+7W8#'g7),&uf('6freeVL')fi),
+            if &uf('Ag17#1') <>'' then /'За старые годы см. также : '&uf('Ag17#1') fi,
+         fi, 
+      else 
+         if &uf('Y')<>'' then 'Свободные экземпляры: '&uf('Y'),/ 
+            if s(g10,g2)<>'' and g4<>'' or s(g10,g2)='' then 
+               'Можно получить: ',|, |+g4,if s(g10,g2,g4)='' then |, |+g3 fi 
+            else 
+               if s(g10,g2)<>'' and g4='' then 'Доступных Вам экземпляров нет' 
+   fi fi fi fi fi,
+   &uf('+7W11#'),&uf('+7W11#'g10+|+|),
+   &uf('+7W12#'),&uf('+7W12#'g2+|+|),
+   if g5<>'' then 
+      (/if p(v910) then 
+           if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
+              if v910^a:'1' or v910^a:'U' and val(v910^1)=val(v910^2) then 
+                 if &uf('Ag12#1'):v910^d then else 
+                    if &uf('Ag11#1')<>'' and &uf('Ag11#1'):v910^d or &uf('Ag11#1')='' then 
+                       ' Экз.'v910^b,if a(v910^b) then v910^h fi,| (|v910^d|)|,' занят - можно ожидать - '
+                       &uf('+7W8#'),&uf('+7W8#'v910^d),&uf('6freeVL'),&uf('Ag17#1'), 
+                       if &uf('IMain,StrongRequest,0')='1' then &uf('+7W18#') fi 
+              fi fi fi,
+       fi fi),
+   fi,  
+   if s(g41,g51) <>'' then 
+      (/if v910^a:'p' then 
+           if &uf('Kmhrvn.mnu\'v910^d)='' then 
+              if &uf('Ag12#1'):v910^d then else 
+                 if &uf('Ag11#1'):v910^d or &uf('Ag11#1')='' then | Экз.|v910^b,|(|v910^d|)|,' переплетен ',|(см. |v910^p|)|,
+                    &uf('+7W8#'),&uf('+7W8#'v910^d),&uf('6freeVL'),
+                    if &uf('D,!I='v910^p|!,(if v910^d=&uf('Ag8#1') then v910^a fi|):'0' 
+                    then ' - cвободен - можно получить: ' 
+                    else ' - занят - можно ожидать: ',if &uf('IMain,StrongRequest,0')='1' then &uf('+7W18#') fi 
+                    fi,&uf('Ag17#1')
+        fi fi fi fi),
+   fi,
+   /'*****'/,
+   &uf('+7W20#'),&uf('+7W20#',if s(g10,g2,g4)='' then (g3/) fi,
+   (if p(g4) then g4| - |,&uf('Kkv.mnu!'g4) fi/),(if p(g6) then g6| - |,&uf('Kkv.mnu!'g6) fi/),
+   (if p(g7) then g7| - |,&uf('Kkv.mnu!'g7) fi/),(if p(g18) then g18| - |,&uf('Kkv.mnu!'g18) fi/)),&uf('+7G20'),(g20/)
+fi 
+/*('g10: 'g10/),('g2: 'g2/),('g3: 'g3/),('g4: 'g4/),('g6: 'g6/),('g7: 'g7/),('g18: 'g18/),('g20: 'g20/)

@@ -1,0 +1,59 @@
+0
+DEL
+14
+*
+
+
+ADD
+14
+*
+if a(v6) then &uf('+7W1#0'),&uf('6level0'),g1 fi
+
+IF
+if p(v100) then '1' fi
+REPEAT
+IF
+if val(&uf('J,I=',&uf('Av100#1')))>0 then '1' fi
+//---------------- корректировка записи
+CORREC
+'*'
+(v1/)
+'I=',&uf('Av100#1')
+
+ADD
+4
+
+if a(v4) or p(v4) and rsum((if p(v4) then if &uf('+97',v4)=&uf('+97',&uf('Av1001#1')) then '1,' fi fi))=0 then &uf('Av1001#1') fi
+
+DEL
+1001
+*
+
+
+END
+FI
+IF
+if val(&uf('J,I=',&uf('Av100#1')))=0 then '1' fi
+//---------------- новая запись
+NEWMFN
+'*'
+ADD
+1
+
+&uf('Av100#1')
+
+ADD
+4
+
+(v1/)
+
+END
+FI
+DEL
+100
+1
+
+
+UNTIL
+if p(v100) then '1' fi
+FI

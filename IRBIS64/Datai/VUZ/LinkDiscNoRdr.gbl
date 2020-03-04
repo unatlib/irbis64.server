@@ -1,0 +1,260 @@
+0
+//12 PUTLOG
+// 9.1 вариант без корректировки БД RDR
+// предварительно проверяю и создаю идентификатор 
+// выполняется безусловно для полей 83, независимо от ^9
+// корректировка/создание записей VUZ и RDR - заново поля 69
+// вызываю в REPMARK1
+IF
+if v920:'DISC' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if p(v83) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v3^A<>'' and v3^0='' then '1' fi
+//---------------------------- нет идентификатора - создаю
+DEL
+111
+*
+
+
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5))>0 then '1' fi
+ADD
+111
+
+'0'
+
+REPEAT
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' fi
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+FI
+UNTIL
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' else '0' fi
+FI
+REP
+3
+1
+v3,'^0',v3^A.5,v111
+
+//--------------------------------- конец создания идентификатора
+FI
+//==================== начало работки=====================
+// Формирование полей 1932 - добавляемых и 932 размноженных по семестрам
+DEL
+932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----------------------------корректировка разделителя семестров
+REP
+83^F
+F
+(if p(v83) then if p(v83^F) then  if v83^F: '-' then  if &uf('G2-',v83^F): '-' then &uf('+98-/',v83^F) else &uf('+98,/',&uf('V',v83^F) ) fi,,else v83^F fi  else # fi fi/)
+
+DEL
+1932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+(v83/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+mpu,if &unifor('Av1932^f#1'):'/' then (if &unifor('1*R/?v1932^f#1')<>''then ,if &unifor('Av1932^U#1')<>'' then '^U',&unifor('Av1932^U#1') fi,if &unifor('Av1932^H#1')<>'' then '^H',&unifor('Av1932^H#1') fi,if &unifor('Av1932^N#1')<>'' then '^N',&unifor('Av1932^N#1') fi,if &unifor('Av1932^C#1')<>'' then '^C',&unifor('Av1932^C#1') fi,if &unifor('Av1932^A#1')<>'' then '^A',&unifor('Av1932^A#1') fi,if &unifor('Av1932^L#1')<>'' then '^L',&unifor('Av1932^L#1') fi,,if &unifor('Av1932^T#1')<>'' then '^T',&unifor('Av1932^T#1') fi,,if &unifor('Av1932^V#1')<>'' then '^V',&unifor('Av1932^V#1') fi,if &unifor('Av1932^O#1')<>'' then '^O',&unifor('Av1932^O#1') fi,,'^F',&unifor('1*R/?v1932^f#1'),,'^E',&unifor('Av1932^E#1') fi/) else &unifor('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// ЦИКЛ ПО ПОВТОРЕНИЯМ ПОЛЯ 83, которые развернуты в 932
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// проверка условия создания новой записи VUZ
+IF
+if val(&uf('IMAIN,LinkGroup,0'))=1 then if &unifor('Av932^E#1')<>'' and val(&unifor('JVUZ,VGR=',&unifor('Av932^E#1')))<=0  then '1' else fi,,else if val(&unifor('JVUZ,?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi))<=0 then '1' fi fi
+//----------------- Ввод новой записи VUZ из записи 
+IF
+if s(&uf('Av932^a#1'),,&uf('Av932^o#1'),,&uf('Av932^v#1'),,&uf('Av932^n#1'),,&uf('Av932^c#1'),,&uf('Av932^f#1') )<>'' then '1' fi,,
+NEWMFN
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+68
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av932^a#1')<>''then'^A'&unifor('Av932^a#1') fi,if &unifor('Av932^L#1')<>''then'^L'&unifor('Av932^L#1') fi,,if &unifor('Av932^T#1')<>''then'^T'&unifor('Av932^T#1') fi,,if &unifor('Av932^n#1')<>''then'^N'&unifor('Av932^n#1') fi,if &unifor('Av932^c#1')<>''then'^C'&unifor('Av932^c#1') fi,if &unifor('Av932^v#1')<>''then'^V'&unifor('Av932^v#1') fi,if &unifor('Av932^o#1')<>''then'^O'&unifor('Av932^o#1') fi,if &unifor('Av932^h#1')<>''then'^H'&unifor('Av932^h#1') fi,if &unifor('Av932^f#1')<>''then'^F'&unifor('Av932^f#1') fi,,if &unifor('Av932^E#1')<>''then'^E'&unifor('Av932^E#1') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then "="v3^b else v3^b fi fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+111
+
+v3^0
+
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'VUZ'
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Создана новая запись VUZ (',v68^A,v68^N,v68^C,v68^V,v68^O,'-',v68^F,' из ',,v111,,,')'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------- Корректировка записи VUZ - дописывание 
+IF
+if val(&uf('IMAIN,LinkGroup,0'))=1 then if &unifor('Av932^E#1')<>'' then '1' fi,,else if val(&unifor('JVUZ,?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi))>0 then '1' fi fi
+// есть запись VUZ
+CORREC
+'VUZ'
+mpu,"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,,&unifor('Av932#1')
+if val(&uf('IMAIN,LinkGroup,0'))=1 then if &unifor('Av932^E#1')<>'' then 'VGR=',&unifor('Av932^E#1') fi,,,else '?',if &unifor('Av932^a#1')<>'' then &unifor('Av932^a#1'),'-' fi,,if &unifor('Av932^n#1')<>'' then &unifor('Av932^n#1'),'-' fi,,if &unifor('Av932^c#1')<>'' then &unifor('Av932^c#1'),'-' fi,,if &unifor('Av932^v#1')<>'' then &unifor('Av932^v#1'),'-' fi,,if &unifor('Av932^o#1')<>'' then &unifor('Av932^o#1'),'-' fi,,if &unifor('Av932^f#1')<>'' then &unifor('Av932^f#1'),'-' fi fi
+XXXXXXXXXXXXXXXXXXX
+// возможное дописывание поля 68
+DEL
+112
+*
+
+
+ADD
+112
+
+v68
+
+REP
+68
+1
+v68,if v68^A='' and v1001^A<>'' then '^A',v1001^A fi,,,if v68^N='' and v1001^N<>'' then '^N',v1001^N fi,,,if v68^C='' and v1001^C<>'' then '^C',v1001^C fi,,,if v68^V='' and v1001^V<>'' then '^V',v1001^V fi,,,if v68^O='' and v1001^O<>'' then '^O',v1001^O fi,,,if v68^F='' and v1001^F<>'' then '^F',v1001^F fi,,,if v68^E='' and v1001^E<>'' then '^E',v1001^E fi,,,
+
+// добавление поля 69 с проверкой на дубль
+DEL
+111
+*
+
+
+ADD
+111
+
+mpu,(v69/),&uf('+7W7#')
+
+IF
+if rsum((if p(v111) then if v111^B=&uf('Av1001^B#1') and v111^D=&uf('Av1001^D#1')  then '1,' else '0,' fi fi))=0 then '1' fi
+
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+"^B"v1001^B,,"^D"v1001^D,,,,&uf('+7W7#1')
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if v112<>v68 or G7<>'' then '1' fi
+PUTLOG
+'Дописана запись VUZ. MFN=',f(val(mfn),0,0),,,' из ',,&uf('Av1001^D#1')
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+111
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+111
+*
+
+
+DEL
+932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v932) then '1'else'' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+*
+
+
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

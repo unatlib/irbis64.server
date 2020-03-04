@@ -1,0 +1,305 @@
+1
+DelTotalVuz.wss
+  ВВЕДИТЕ имя файла - списка на удаление. Только ОДНО значение!
+// 2017 - добавлено удаление по списку БД каталога
+// в 991^C - имя файла списка специальностей с расширение
+// в 991^N - имя файла списка направлений с расширением
+// в 991^A - имя файла списка факультетов с расширением
+// в 991^1 - признак удалять в записях каталога:
+//0 - не удалять
+//N - удалять, если семетр больше-равен N
+// берется одно, первое из найденных
+//--------в 992 список из файла
+// 2017 - 991^[ - признак подключить доп БД
+// 2017 - 991^] - список доп.БД
+DEL
+992
+*
+
+
+DEL
+993
+*
+
+
+ADD
+992
+
+if v991: '^C' then  (if &uf('+5T',,&uf('Av991^C#1'))<>'' then &uf('+5T',,&uf('Av991^C#1')) else break fi/)/   (if &uf('+5F',,&uf('Av991^C#1'))<>'' then &uf('+5F',,&uf('Av991^C#1')) else break fi/) else if v991: '^N' then (if &uf('+5T',,&uf('Av991^N#1'))<>'' then &uf('+5T',,&uf('Av991^N#1')) else break fi/)/(if &uf('+5F',,&uf('Av991^N#1'))<>'' then &uf('+5F',,&uf('Av991^N#1')) else break fi/) else if v991: '^A' then (if &uf('+5T',,&uf('Av991^A#1'))<>'' then &uf('+5T',,&uf('Av991^A#1')) else break fi/)/(if &uf('+5F',,&uf('Av991^A#1'))<>'' then &uf('+5F',,&uf('Av991^A#1')) else break fi/) else  if v991: '^S' then (if &uf('+5T',,&uf('Av991^S#1'))<>'' then &uf('+5T',,&uf('Av991^S#1')) else break fi/)/(if &uf('+5F',,&uf('Av991^S#1'))<>'' then &uf('+5F',,&uf('Av991^S#1')) else break fi/) fi fi fi fi
+
+DEL
+992
+F
+(if p(v992) then if v992.1='*' then '1' else '0' fi fi/)
+
+IF
+if a(v992) then '1' fi
+PUTLOG
+'Нет данных на удаление'
+FI
+IF
+if p(v992) then '1' fi
+/* запоминаю значения в 993 для удаления в каталоге
+ADD
+993
+
+(v992/)
+
+//-----------------------------------------------------------------------цикл пл кодам из поля 992
+REPEAT
+IF
+if v920: 'DISC' then '1' fi
+//---------------------------запись DISC
+IF
+if v991: '^C' then '1' fi
+//------------для специальностей
+IF
+if s((| |v83^C| |)): s(' ',,&uf('Av992#1'),,' ') then '1' fi,,,&uf('+7W10#')
+//----------------есть специальность
+DEL
+83
+F
+(if p(v83) then if &uf('+97',v83^C)=&uf('+97',&uf('Av992#1')) then '1',,&uf('+7W10#1') else '0' fi fi/)
+
+IF
+if val(g10)>0 then '1' fi
+PUTLOG
+'Удалено в записи дисциплины - ',v3^A,,' (',v3^0,,'). MFN=',,f(val(mfn),0,0)
+FI
+//---------конец есть специальность
+FI
+//---------конец для специальностей
+FI
+IF
+if v991: '^N' then '1' fi
+//------------для направлений
+IF
+if s((| |v83^N| |)): s(' ',,&uf('Av992#1'),,' ') then '1' fi,,,&uf('+7W10#')
+//----------------есть направление
+DEL
+83
+F
+(if p(v83) then if &uf('+97',v83^N)=&uf('+97',&uf('Av992#1')) then '1',,&uf('+7W10#1') else '0' fi fi/)
+
+IF
+if val(g10)>0 then '1' fi
+PUTLOG
+'Удалено в записи дисциплины - ',v3^A,,' (',v3^0,,'). MFN=',,f(val(mfn),0,0)
+FI
+//---------конец есть направление
+FI
+//---------конец для направлений
+FI
+IF
+if v991: '^A' then '1' fi
+//------------для факультетов
+IF
+if s((| |v83^A| |)): s(' ',,&uf('Av992#1'),,' ') then '1' fi,,,&uf('+7W10#')
+//----------------есть факультет
+DEL
+83
+F
+(if p(v83) then if &uf('+97',v83^A)=&uf('+97',&uf('Av992#1')) then '1',,&uf('+7W10#1') else '0' fi fi/)
+
+IF
+if val(g10)>0 then '1' fi
+PUTLOG
+'Удалено в записи дисциплины - ',v3^A,,' (',v3^0,,'). MFN=',,f(val(mfn),0,0)
+FI
+//---------конец есть факультет
+FI
+//---------конец для факультетов
+FI
+IF
+if v991: '^S' then '1' fi
+//------------для циклов
+IF
+&uf('+7W10#'),,if s(" "v4" "): s(' ',,&uf('Av992#1'),,' ') then '1',,,,&uf('+7W10#1') fi,,
+//----------------есть цикл
+DEL
+4
+*
+
+
+IF
+if val(g10)>0 then '1' fi
+PUTLOG
+'Удалено в записи дисциплины - ',v3^A,,' (',v3^0,,'). MFN=',,f(val(mfn),0,0)
+FI
+//---------конец есть цикл
+FI
+//---------конец для цикл
+FI
+//------------------------------------------конец записи DISC
+FI
+IF
+if v920: 'VUZ' then '1' fi
+//-------------------------------------------запись VUZ
+IF
+if &uf('+97',v68^C)=&uf('+97',&uf('Av992#1')) or &uf('+97',v68^N)=&uf('+97',&uf('Av992#1')) or &uf('+97',v68^A)=&uf('+97',&uf('Av992#1')) then '1' fi
+PUTLOG
+mdl,'Удалена запись контингента - ',,v68,,' MFN=',f(val(mfn),0,0),,mpl
+DELR
+
+
+
+
+FI
+//-------------------------------------------------------конец записи VUZ
+FI
+DEL
+992
+1
+
+
+UNTIL
+if p(v992) then '1' fi
+FI
+//...........................................................................теперь для записей каталога
+IF
+if v920:'DISC' then '1' else '0' fi,,,,,,&uf('+7W100#',,,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//.................. Новое в 2017, в G100 имена всех БД
+IF
+if val(v991^[)=1 and v991^]<>'' then '1' fi
+REP
+991^]
+1
+v991^] ,,,if v991^]: '.' then  else '.mnu' fi
+
+ADD
+991
+
+(if  &uf('+5T',,&uf('Av991^]#1'),,)<>'' then &uf('+7U100#',&uf('+5T',,&uf('Av991^]#1'),,) ) else break fi/),,&uf('+7G100'),,,&uf('+7G100')
+
+FI
+
+
+//имена БД каталога кладу из G100 в v994
+DEL
+994
+*
+
+
+ADD
+994
+
+(g100/)
+
+//-----------------------------------------цикл по БД каталога по полю 994
+REPEAT
+/* удаляемые значения из 993 в 995
+DEL
+995
+*
+
+
+ADD
+995
+
+(v993/)
+
+/*-----проверка на доступность БД каталога
+IF
+if &uf('D',,&uf('Av994#1'),,',@1,v920')<>'' then '1' fi
+//----------------------цикл по удаляемым значениям по полю 995
+REPEAT
+CORREC
+&uf('Av994#1')
+if v991: '^C' then '^C' else if v991: '^N' then '^N' else  if v991: '^A' then '^A' else if v991: '^S' then '^S' fi fi fi fi,,,, &uf('Av995#1'),,"^1"v991^1
+if v991: '^C' then 'SPEC=' else if v991: '^N' then 'NAPR=' else if v991: '^A' then 'FAK=' else if v991: '^S' then 'CIKLD=' fi fi fi fi,,,,&uf('Av995#1')
+
+IF
+if v1001: '^C' and val(v1001^1)>0 then '1' fi,,,,&uf('+7W10#'),,,,&uf('+7W11#')
+DEL
+691
+F
+(if p(v691) then if p(v691^C) then if &uf('+97',v691^C)=&uf('+97',&uf('Av1001^C#1')) and val(v691^F)>=val(&uf('Av1001^1#1') ) then '1',,&uf('+7W10#1'),,,&uf('+7U11#',v691^F) else '0' fi else '0' fi fi/)
+
+FI
+IF
+if v1001: '^N' and val(v1001^1)>0 then '1' fi
+DEL
+691
+F
+(if p(v691)  then if p(v691^N) then if &uf('+97',v691^N)=&uf('+97',&uf('Av1001^N#1')) and val(v691^F)>=val(&uf('Av1001^1#1') ) then '1',,&uf('+7W10#1'),,,&uf('+7U11#',v691^F) else '0' fi else '0' fi fi/)
+
+FI
+IF
+if v1001: '^A' and val(v1001^1)>0 then '1' fi
+DEL
+691
+F
+(if p(v691)  then if p(v691^A) then if &uf('+97',v691^A)=&uf('+97',&uf('Av1001^A#1')) and val(v691^F)>=val(&uf('Av1001^1#1') ) then '1',,&uf('+7W10#1'),,,&uf('+7U11#',v691^F) else '0' fi else '0' fi fi/)
+
+FI
+IF
+if v1001: '^S' and val(v1001^1)>0 then '1' fi
+DEL
+691
+F
+(if p(v691)  then if p(v691^S) then if &uf('+97',v691^S)=&uf('+97',&uf('Av1001^S#1')) and val(v691^F)>=val(&uf('Av1001^1#1') ) then '1',,&uf('+7W10#1'),,,&uf('+7U11#',v691^F) else '0' fi else '0' fi fi/)
+
+FI
+IF
+if val(g10)>0 then '1' fi,,,,&uf('+7G11')
+PUTLOG
+&uf('+D'),,': удалено в записи каталога, MFN=',,f(val(mfn),0,0),,' для семестров: ',,,(g11| |)
+FI
+DEL
+1001
+*
+
+
+END
+DEL
+995
+1
+
+
+/*-----конец цикла по значениям
+UNTIL
+if p(v995) then '1' fi
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+994
+1
+
+
+/*-----конец цикла по БД каталога
+UNTIL
+if p(v994) then '1' fi
+/*-----запись DISC
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+993
+*
+
+
+DEL
+994
+*
+
+
+DEL
+995
+*
+
+
+

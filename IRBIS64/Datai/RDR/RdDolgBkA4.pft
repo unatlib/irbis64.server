@@ -1,0 +1,53 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx600 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3500 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4700 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6000 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10000 
+\pard \widctlpar\intbl {\ql \fs24 '&uf('+7W11#',f(val(G11)+1,0,0)),,,G11
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'v10,' ',v11,' ' ,v12
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'V30
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',(if p(v90) then if &uf('+97',v90^A)=&uf('AG12^B#1') and v90^2<>'' then 'ÄÀ',break fi fi/),
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'f(rsum((if p(v40) then if v40^F='******' and val(v40^E)<val(&unifor('3')) then '1,' else '0,' fi fi)),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,
+(if p(v40) then if v40^F='******' and val(v40^E)<val(&unifor('3')) then 
+if v40^C<>'' then |\par |+v40^C.60| ...| else |\par |+v40^A fi,,,
+ fi fi/),,,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,36 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+{\b\fs28
+\par
+\par
+\par \qc Лист инвентарной книги \fs24\par (Индивидуальный учет)
+\par }
+{}
+{\b\fs24 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx2023\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx3306\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4157\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4816\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6745\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7454\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8221\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9539\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx10673
+\pard \qc\widctlpar\intbl {\b Дата, N КСУ\cell }
+\pard \qc\widctlpar\intbl {\b Инв.N/ Штрих-код\cell }
+\pard \qc\widctlpar\intbl {\b Подразделение\cell }
+\pard \qc\widctlpar\intbl {\b Отм о пр.\cell }
+\pard \qc\widctlpar\intbl {\b Автор и заглавие\cell }
+\pard \qc\widctlpar\intbl {\b Год изд.\cell }
+\pard \ql\widctlpar\intbl {\b Раздел знаний\cell }
+\pard \qc\widctlpar\intbl {\b Цена\cell }
+\pard \qc\widctlpar\intbl {\b N акта выбытия\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

@@ -1,0 +1,60 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if G15: s('!',mfn,'!') then else &uf('+7U15#','!',mfn,'!') '1' fi 
+(if p(v90) then if &uf('+97',v90^A)=&uf('AG12^B#1') and v90^2<>'' then '1',break fi fi/),
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8328 
+\pard \widctlpar\intbl {\qc \fs24 ''ИТОГО: ',v1,' Среди отчисленных ',v2,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs24 NN
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5211 
+\pard \widctlpar\intbl {\qc \fs24 ФИО
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6628 
+\pard \widctlpar\intbl {\qc \fs24 ИДЕНТ
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7478 
+\pard \widctlpar\intbl {\qc \fs24 Отчислен
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8328 
+\pard \widctlpar\intbl {\qc \fs24 Кол-во книг
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

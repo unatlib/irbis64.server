@@ -1,0 +1,39 @@
+mhl,
+if v920='J' then '@@Номера периодического издания@@',|"I933=|v903|/$"|,| + "I=|v423^H|"|,| + "I933=|v423^H|/$"| fi,
+if v920='NJP'then '@@включен в подшивки :@@', (|"I=|v463^w|" + |) fi,
+if v920:'NJ' then if &unifor('J,II='v903)<>'' then '@@Статьи из журнала@@',|"II=|v903|"| fi, fi,
+if 'PAZK PVK SPEC ':v920 then '@@',
+   if &unifor('J,I470='v903)<>'' then 'Есть рецензия' fi,
+   if s(v421,v422,v904)<>'' then 
+      if p(v421) and s(v422,v904)<>'' then 
+         ' Приложения к документу и Основной документ, к которому относится данное приложение'
+      else 
+         if p(v421) then ' Приложения' else ' Основной документ, к которому относится данное приложение'
+   fi fi fi,
+   if s(v451,v452)<>'' then ' Параллельные издания' fi,
+   if &unifor('J,II='v903)<>'' then ' Статьи из сборника' fi,
+   if p(v461^c) then 
+      if val(&unifor('J,TMN=',&uf('9'v461^c,(|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,|. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),if v461^u:'1'then|/|v461^x,|/|v461^b fi)))>1 
+      then 'Тома того же многотомного издания'
+   fi fi,'@@'
+   if &unifor('J,I470='v903)<>'' then |"I470=|v903|" + | fi, 
+   |"I=|v421^w|" + |,if a(v421^w) then |"B=|v421^i|" + | fi,if s(v421^w,v421^i)=''then|"B=|v421^x|" + | fi,
+   if s(v421^w,v421^i,v421^x)=''then |"B=|v421^y|" + | fi 
+   |"I=|v422^w|" + |,if a(v422^w) then |"B=|v422^i|" + | fi,if s(v422^w,v422^i)=''then|"B=|v422^x|" + | fi,
+   if s(v422^w,v422^i,v422^x)=''then    |"B=|v422^y|" + | fi,|"I=|v904^a|" + | 
+   |"I=|v451^w|" + |,if a(v451^w) then |"B=|v451^i|" + | fi,
+   if s(v451^w,v451^i)='' then|"B=|v451^j|" + | fi,if s(v451^w,v451^i,v451^j)=''then |"B=|v451^y|" + | fi,
+   |"I=|v452^w|" + |,if a(v452^w) then |"B=|v452^i|" + | fi,if s(v452^w,v452^i)=''then|"B=|v452^j|" + | fi,
+   if s(v452^w,v452^i,v452^j)=''then |"B=|v451^y|" + | fi, 
+   if &unifor('J,II='v903)<>'' then |"II=|v903|" + | fi 
+   if val(&unifor('J,TMN=',&uf('9'v461^c,(|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,|. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),if v461^u:'1'then|/|v461^x,|/|v461^b fi)))>1 
+   then |"TMN=|d461^c,&uf('9'v461^c,(|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi,|. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi),if v461^u:'1'then|/|v461^x,|/|v461^b fi),'" + ' fi,
+fi,
+if v920.1:'A'then
+   if p(v470) then '@@Рецензируемый документ@@',|"I=|v470^i|" + |,
+      if a(v470^i) then |"B=|v470^b|" + |fi,if s(v470^i,v470^b)='' then|"B=|v470^y|" + | fi 
+   else 
+      if val(&unifor('J,II='v463^w))>1 
+      then '@@Источник(и) статьи и Cтатьи из того же источника@@',|"I=|v463^w|" + |,|"II=|v463^w|" + |,   
+      else '@@Источник(и) статьи@@',|"I=|v463^w|" + |,
+fi fi fi,

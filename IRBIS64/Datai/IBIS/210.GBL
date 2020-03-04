@@ -1,0 +1,6 @@
+0
+REP
+210
+*
+(if p(v210) then if v210.2:'00' then |^C|v210^b,|^A|v210^a,if val(&umarci('2210#^a'))>1 then'^X'&umarci('1210#a#2')fi,if val(&umarci('2210#^a'))>2 then'^Y'&umarci('1210#a#3')fi,|^D|v210^c else v210 fi fi/)
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,27 @@
+/* верхнее отображение студенты для УНД
+/* v1100 - связка
+/* v1102 - факультет
+/* v1103 - ФО
+/* v1101 - дисциплина
+/* v1104 - Специальность
+/* v1105 - Семестр
+/* v1106 - ВО
+'<body bgcolor="#C0C0C0">',
+'<p><font color="black" size=+1>',
+'<b>Книги по дисциплине ',v1101,,,,'</b><br>',,,,,
+'Факультет ',&uf('KFAK.mnu|',V1102),,
+'; Семестр ',v1105,'<br>',
+'Специальность ',v1104,'<br>',
+'Форма обучения ',if &uf('KFO.mnu|',v1103)<>'' then &uf('KFO.mnu|',v1103) else v1103 fi,,,
+'; Вид обучения ',if &uf('KVO.mnu|',v1106)<>'' then &uf('KVO.mnu|',v1106) else v1106 fi,,,
+'<p><font color="white" size=+1>',
+'<table bgcolor="#FFFFFF" border=1 width="100%" cellpadding=1 cellspacing=1>',
+'<tr>',
+'<td width="5%" >','n/n','</td>',
+'<td align="center"  > ',
+'<b>Краткое БО',
+'</td>',
+'</tr>',
+&uf('S0'),
+
+

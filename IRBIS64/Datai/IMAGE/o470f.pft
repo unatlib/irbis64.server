@@ -1,0 +1,27 @@
+    if a(v470^f)then 
+       if p(v470^9) then 
+          if v470^9:'1' then v470^a 
+          else 
+             if &unifor('F'v470^9,v470^a)<>'' then 
+                if &unifor('F'v470^9,v470^a):'. ' then &unifor('F'v470^9,v470^a) else 
+                   if &unifor('F'v470^9,v470^a):'.' 
+                   then &unifor('G0.'&unifor('F'v470^9,v470^a)),'.' 
+                      if &unifor('G2.'&unifor('F'v470^9,v470^a)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v470^9,v470^a)) 
+                   else &unifor('F'v470^9,v470^a) fi 
+                fi 
+             else v470^? 
+             fi,' '&unifor('G0,'&unifor('E'v470^9,v470^a)) 
+          fi 
+       else 
+          if v470^a:', ' then &unifor('G2 'v470^a)' '&unifor('G0,'v470^a)  
+          else 
+             if v470^a:' 'then 
+                if &unifor('G2 'v470^a):'.'then 
+                   if &unifor('G2 'v470^a):'. ' then &unifor('G2 'v470^a) 
+                   else &unifor('G0.'&unifor('G2 'v470^a)),'.' 
+                      if &unifor('G2.'&unifor('G2 'v470^a)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v470^a)) 
+                   fi 
+                else &unifor('G2 'v470^a) 
+                fi,' '&unifor('G0,'&unifor('G0 'v470^a)) 
+             else v470^?| |,v470^a    
+    fi fi fi fi 

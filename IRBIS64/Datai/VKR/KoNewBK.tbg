@@ -1,0 +1,60 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=2
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=7
+CELL_TAB1_1=1
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=8
+CELL_TAB2_2=Автор, заглавие (дата поступления) 
+CELL_TAB2_3=@briefp
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=2
+CELL_TAB3_2=Кол-во экз.
+CELL_TAB3_3=f(rsum((if p(v910) then if v910^A: 'U' then v910^1,': ' else '1, ' fi fi)),0,0)
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=Кол-во студентов
+CELL_TAB4_3=&uf('+7W5#',if v991^B<>'' then v991^B else if val(&uf('31'))<9 then 'V' else 'O' fi fi),,(if p(v692) then if &unifor('Av991^A#1')=v692^B then if &unifor('AG5#1')=v692^C then v692^E fi fi fi/)
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=2
+CELL_TAB5_2=КО
+CELL_TAB5_3=&uf('+7W5#',if v991^B<>'' then v991^B else if val(&uf('31'))<9 then 'V' else 'O' fi fi),,(if p(v692) then if &unifor('Av991^A#1')=v692^B then if &unifor('AG5#1')=v692^C then v692^F fi fi fi/)
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Нет
+CELL_TAB6_1=2
+CELL_TAB6_2=1111
+CELL_TAB6_3=&uf('+7W5#',if v991^B<>'' then v991^B else if val(&uf('31'))<9 then 'V' else 'O' fi fi),,(if p(v692) then if &unifor('Av991^A#1')=v692^B then if &unifor('AG5#1')=v692^C then v692^F fi fi fi/)
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=1
+CELL_SORT2=v1
+CELL_SORT3=50
+CELL_SORT4=1
+CELL_SORT5=(v691^D/)
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=KoNewBk
+HDR_PFT=KoNewBKH
+HDR_PARAMS_COUNT=0

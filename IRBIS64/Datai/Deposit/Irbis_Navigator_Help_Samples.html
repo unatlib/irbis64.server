@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Описание ИРБИС-Навигатора - Примеры</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+
+<body>
+<p align="center"><strong><font size="+1">Примеры, иллюстрирующие возможности 
+  ИРБИС-Навигатора</font></strong></p>
+<p><a href="IRBIS:1,,,diction_wn">Просмотр словаря</a>
+<br>
+  В примере используются форматы DICTION_WN, TRM0_WN, SELECT_TRM0_WN и справочники 
+  DBNAME_WN.MNU, PREFIX_WN.MNU </p>
+<p><a href="IRBIS:1,,,list_wn">Просмотр справочника</a> <br>
+  В примере используются форматы LIST_WN, MNU_WN и справочники DBNAME_WN.MNU, 
+  MNU_WN.MNU</p>
+<p><a href="IRBIS:1,,,display_wn">Просмотр и Экспорт документов БД</a> <br>
+  В примере используются форматы DISPLAY_WN, FULLW0_WN, BRIEF0_WN, TABL_WN, DISPLAY_BOTTOM_WN, 
+  SELECT_MFN_WN и справочники DBNAME_WN.MNU, PFTW0_WN.MNU. <br>
+  Следует обратить внимание на документы, которые содержат внутренние ссылки на 
+  другие документы или внешние объекты - это документы БД IBIS с MFN 6, 10, 13, 
+  25, 26.</p>
+<p><a href="irbis:1,,,arh_wn?DBNAME_DEFAULT=ARCH&CHECKNAME=CHECKARH">Экспорт отмеченных  ARH</a> <br>
+<p><a href="IRBIS:1,,,search_wn">Поиск в БД</a> <br>
+  В примере используются форматы SEARCH_WN, FULLW0_WN, BRIEF0_WN, TABL_WN, SEARCH_BOTTOM_WN, 
+  SELECT_MFN_WN, TRM_WN, SELECT_TRM_WN и справочники DBNAME_WN.MNU, PFTW0_WN.MNU, 
+  SUBJECT_WN.MNU, VD_WN.MNU, CVALIF_WN.MNU, PREFIX_WN.MNU. <br>
+</p>
+<p><a href="IRBIS:1,,,search_entry_wn">Поиск, Ввод/Редактирование документов, 
+  Импорт</a> <br>
+  В примере используются форматы SEARCH_ENTRY_WN, FULLW_WN, BRIEF_WN, TABL_WN, 
+  FULLW_ENTRY1_WN, FULLW_ENTRY2_WN, SEARCH_BOTTOM_WN, SELECT_MFN_WN, TRM_WN, SELECT_TRM_WN 
+  и справочники DBNAME_WN.MNU, PFTW_WN.MNU, SUBJECT_WN.MNU, VD_WN.MNU, CVALIF_WN.MNU, 
+  PREFIX_WN.MNU, FIELDNAME.MNU, FIELDNAME1.MNU, FIELDHINT.MNU. <br>
+  Следует обратить внимание на два варианта корректировки. В варианте 1 применяется 
+  режим полного обновления (R21UPD=0) и в качестве рабочего листа ввода используется 
+  полный список элементов описания (FIELDNAME.MNU). В варианте 2 применяется режим 
+  замены/добавления (R21UPD=1) и в качестве рабочего листа ввода используется 
+  список полей (FIELDNAME1.MNU), доступных для корректировки, - т.е. в этом случае 
+  есть возможность определить для конечного пользователя &quot;жесткий&quot; сценарий 
+  ввода. (Состав полей с списке FIELDNAME1.MNU абсолютно условный).</p>
+<p><a href="IRBIS:1,,,rub_wn,0?DBNAME_DEFAULT=HELP&CHECKNAME=CHECKINDEX">Навигация 
+  по классификатору (на примере ГРНТИ)</a> <br>
+  В примере используются форматы RUB_WN, RUB0_WN, RUB00_WN, RUB_SELECT_WN, RUB_SEE_WN, 
+  RUB_TOP_WN. <br>
+  Весь навигатор реализован с помощью шести не самых &quot;хитрых&quot; форматов 
+  - основным среди них является RUB_WN. Рекомендую обратить внимание на использование 
+  в этом формате форматного выхода &amp;unifor('7...). (Кстати, хочется напомнить, 
+  что &amp;unifor('7...) является наиболее мощным и принципиальным форматным выходом 
+  в языке форматирования ИРБИС).
+<br>Прежде чем разбирать форматы для данного примера, следует познакомиться со 
+  структурой БД ГРНТИ (HELP).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* ОТЛАДКА
+/*&uf('+7W1112#5'),
+/*Формат для создания документа в БД  SK_NEW
+/* - FREEPAR10  login пользователя
+'<title>Формирование ЗАЯВКИ на описание НОВОЙ книги</title>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+/*'<br>mfn=',mfn,
+'<br><A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A>',
+
+
+
+'<br><br><b>Заявка на включение в СВОДНЫЙ каталог НОВОЙ книги</b>',
+
+'<input type="hidden" name="907_1R21STR" value="^A',&uf('3'),"^B"v1110,'">',
+/*&uf('+7W2#',g1112),
+
+'<table width="100%">',
+'<tr>',
+    '<td>',
+    '<b>Первый автор:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="1_R21STR" value="">',
+    '</td>',
+'</tr>',
+'<tr>',
+    '<td>',
+    '<b>Заглавие:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="2_R21STR" value="">',
+    '</td>',
+'</tr>',
+'<tr>',
+    '<td style="width: 150px;">',
+    '<b>Год издания:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="3_R21STR" value="">',
+    '</td>',
+'</tr>',
+'<tr>',
+    '<td style="width: 150px;">',
+    '<b>ISBN:</b>',
+    '</td>',
+    '<td>',
+    '<input style="width: 100%;" class="" name="4_R21STR" value="">',
+    '</td>',
+'</tr>',
+
+'</table>',
+
+'<br><input type="submit" class="sub1" name="nnnn" value="Ввод"><br><br>',
+
+'<input type="hidden" name="C21COM" value="6">',
+'<input type="hidden" name="ENTRY_MFN" value="">',
+'<input type="hidden" name="R21UPD" value="0">',
+'<input type="hidden" name="I21DBN" value="SK_NEW">',
+'<input type="hidden" name="PFTNAME" value="SK_NEW_entry">',
+'<input type="hidden" name="ENTRY_DBNFLC" value="dbnflc">',
+'<input type="hidden" name="RELOAD" value="1">',
+/*'<input type="hidden" name="TOPPFTNAME" value="SK_NEW_BOTTOM">',
+'<input type="hidden" name="ENTRY_MESSAGE" value="Ваша ЗАЯВКА принята!">',
+'</form>',
+
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=SK_search&FREEPAR3=',v1103,'&I21DBN=SK&FREEPAR0=',v1100,'&FREEPAR10=',&uf('+3E',v1110),'">Вернуться к основной поисковой форме</A>',

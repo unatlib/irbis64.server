@@ -1,0 +1,10 @@
+[HeaderNumber]
+1
+[HeaderFormat]
+,SpisDolgHead,
+*****
+[KeyOptions]
+200
+1
+,SpisDolgSort,
+*****

@@ -1,0 +1,329 @@
+0
+//12 PUTLOG
+// 7.1 замена кода специальности,направления,факультета,кафедры читающей
+// в 991^A что заменить, 991^B на что 
+// используется для всей БД 
+//18 991 условия замены в - ! факультет / специальность | направление + ФО = ВО
+IF
+if v991^C='C' then '1' fi
+//-------------------------СПЕЦИАЛЬНОСТЬ
+IF
+if v920: 'DISC' then '1' fi
+//......................откорректирую коды в записях DISC
+DEL
+111
+*
+
+
+ADD
+111
+
+(v83^C/)
+
+REP
+83^C
+F
+(if p(v83) then if v83^C<>'' then  if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v83^V) then if s(|!|v83^C|!|): s('!',&unifor('Av991^A#1'),'!') then if &unifor('Av991^B#1')<>'' then &unifor('Av991^B#1') else v83^C fi else v83^C fi  else v83^C fi else v83^C fi else v83^C fi else v83^C fi else v83^C fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v83^C) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^A,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^C
+
+REP
+68^C
+1
+if v68^C<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v68^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then if s("!"v68^C"!"): s('!',v991^A,'!') then v991^B else v68^C fi else v68^C fi else v68^C fi else v68^C  fi else v68^C fi else v68^C fi fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v68^C) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='N' then '1' fi
+//-------------------------НАПРАВЛЕНИЕ
+IF
+if v920: 'DISC' then '1' fi
+//......................откорректирую коды в записях DISC
+DEL
+111
+*
+
+
+ADD
+111
+
+(v83^N/)
+
+REP
+83^N
+F
+(if p(v83) then if v83^N<>'' then  if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v83^V) then if s(|!|v83^N|!|): s('!',&unifor('Av991^A#1'),'!') then if &unifor('Av991^B#1')<>'' then &unifor('Av991^B#1') else v83^N fi else v83^N fi else v83^N fi else v83^N fi else v83^N fi else v83^N fi else v83^N fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v83^N) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^A,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^N
+
+REP
+68^N
+1
+if v68^N<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v68^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then if s("!"v68^N"!"): s('!',v991^A,'!') then v991^B else v68^N fi else v68^N fi else v68^N fi else v68^N  fi else v68^N fi else v68^N fi fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v68^N) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='A' then '1' fi
+//-------------------------ФАКУЛЬТЕТ
+IF
+if v920: 'DISC' then '1' fi
+//......................откорректирую коды в записях DISC
+DEL
+111
+*
+
+
+ADD
+111
+
+(v83^A/)
+
+REP
+83^A
+F
+(if p(v83) then if v83^A<>'' then  if &uf('Av991^!#1')='' or &uf('+97',&uf('Av991^!#1'))=&uf('+97',v83^A) then if &uf('Av991^/#1')='' or &uf('+97',&uf('Av991^/#1'))=&uf('+97',v83^C) then if &uf('Av991^|#1')='' or &uf('+97',&uf('Av991^|#1'))=&uf('+97',v83^N) then if &uf('Av991^+#1')='' or &uf('+97',&uf('Av991^+#1'))=&uf('+97',v83^O) then if &uf('Av991^=#1')='' or &uf('+97',&uf('Av991^=#1'))=&uf('+97',v83^V) then if s(|!|v83^A|!|): s('!',&unifor('Av991^A#1'),'!') then if &unifor('Av991^B#1')<>'' then &unifor('Av991^B#1') else v83^A fi else v83^A fi else v83^A fi else v83^A fi else v83^A fi else v83^A fi else v83^A fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v83^A) then '1' fi
+PUTLOG
+'Заменено в записи DISC - ',v3^A,'. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^A
+
+REP
+68^A
+1
+if v68^A<>'' then if v991^!='' or &uf('+97',v991^!)=&uf('+97',v68^A) then if v991^/='' or &uf('+97',v991^/)=&uf('+97',v68^C) then if v991^|='' or &uf('+97',v991^|)=&uf('+97',v68^N) then if v991^+='' or &uf('+97',v991^+)=&uf('+97',v68^O) then if v991^=='' or &uf('+97',v991^=)=&uf('+97',v68^V) then if s("!"v68^A"!"): s('!',v991^A,'!') then v991^B else v68^A fi else v68^A fi else v68^A fi else v68^A  fi else v68^A fi else v68^A fi fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v68^A) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='O' then '1' fi
+//-------------------------Форма обучения
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^O
+
+REP
+68^O
+1
+if v68^O<>'' then if s("!"v68^O"!"): s('!',v991^A,'!') then v991^B else v68^O fi fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v68^O) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='V' then '1' fi
+//-------------------------Вид обучения
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^V
+
+REP
+68^V
+1
+if v68^V<>'' then if s("!"v68^V"!"): s('!',v991^A,'!') then v991^B else v68^V fi fi
+
+IF
+if &uf('+97',v111)<>&uf('+97',v68^V) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='F' then '1' fi
+//-------------------------Семестр
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+v68^F
+
+REP
+68^F
+1
+if v68^F<>'' then if val(v68^F)=val(v991^A) then v991^B else v68^F fi fi
+
+IF
+if v111<>v68^F then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+IF
+if v991^C='H' then '1' fi
+//-------------------------КАФЕДРА ЧИТАЮЩАЯ
+IF
+if v920: 'VUZ' then '1' fi
+//....................откорректирую коды в записях VUZ
+DEL
+111
+*
+
+
+ADD
+111
+
+(v69^B/)
+
+REP
+69^B
+F
+(if p(v69) then if v69^B<>'' then if s(|!|v69^B|!|): s('!',&unifor('Av991^A#1'),'!') then if &unifor('Av991^B#1')<>'' then &unifor('Av991^B#1') else # fi else v69^B fi else # fi fi/)
+
+IF
+if &uf('+97',v111)<>&uf('+97',v69^B) then '1' fi
+PUTLOG
+'Заменено в записи VUZ. MFN=',f(val(mfn),0,0)
+FI
+DEL
+111
+*
+
+
+FI
+FI
+DEL
+991
+*
+
+

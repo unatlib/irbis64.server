@@ -1,0 +1,27 @@
+&uf('+7W991#'v991^a,if v991^a=''then &uf('3') fi),
+&uf('+7W101#'f(rsum((if p(v40) then if v40^f:'***'then if 
+v40^V='*' or &uf('Av991^b#1')='' or &uf('Av991^b#1')<>'' and v40^V<>'*' and &uf('+97',&uf('Av991^b#1'))=&uf
+('+97',v40^V) then if val(v40^e)<val(&uf('Ag991#1')) then '1;'fi fi fi fi)),0,0)),&uf('S0'),
+if val(g101)>0 
+then 
+   &uf('+7W8#'),,,,,,,,,,
+   &uf('+7W7#',,,,'^A'mhu,&uf('Av50#1'),
+   if &uf('Av50#2')<>'' then ';' &uf('Av50#2') fi
+   ,mpl,if &uf('Av50#1')='' then '€€€Ѕез категории' fi,,,),,,,
+   &uf('+7U8#',,g7),,,,,,,,
+   (if p(v40) 
+    then 
+       if v40^f:'***' 
+       then 
+          if v40^V='*' or &uf('Av991^b#1')='' or &uf('Av991^b#1')<>'' and v40^V<>'*' and &uf('+97',&uf('Av991^b#1'))=&uf('+97',v40^V) 
+          then 
+             if val(v40^e)<val(&uf('Ag991#1')) 
+             then 
+                &uf('+7U8#',,&uf('Ag7#1'),,'^C'&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),'^E',,&uf('Av30#1'),,'^S',&uf('Ag101#1'),,, 
+                '^Zяяя',|^G|v40^g,|^I|v40^a,
+/*---F - инв.номер                
+                |^F|v40^b,
+/*---H - Ў     
+                |^H|v40^h  ),,,
+             fi fi fi,,fi/),fi
+(g8/)

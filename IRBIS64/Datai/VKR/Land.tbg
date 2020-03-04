@@ -1,0 +1,47 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=8
+CELL_TAB_COL_COUNT=5
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=7.5
+CELL_TAB2_2=\b Краткое описание\b0 
+CELL_TAB2_3='\b 'mhl,v503^a,v700^a," "v700^b,v710^s".",v710^a,if s(v710^n,v710^c)<>''then' ('v710^n"; ",v710^c')'fi,". "v710^b,if s(v710^d,v710^f,v710^e)<>''then' ('v710^d"; ",v710^f,if p(v710^f)then"; "v710^e else v710^e fi,"/ "v710^h,"/ "v710^i')'fi,if p(v971)then". "d710fi,v971^b,if s(v971^d,v971^f,v971^e)<>''then' ('v971^d"; ",v971^f,if v971^f<>''then"; "v971^e else v971^e fi,"/ "v971^h,"/ "v971^i')'fi". "d971^b,v461^x,","v461^y,v461^b,if p(v503)or p(v700)or p(v710) or p(v461^a)or p(v461^x)or p(v461^b)then x2 fi,v461^c,if p(v461)then". "v200^v,":"v200^a else v200^a fi,"/"v200^f,if v900^c:'34'then |: |v923^i else | |v923^h,|: |v923^i,| |v923^k,|: |v923^l fi,if v920='J'then". - Журнал выходит с "v210^d"г."else". - "v210^d fi,if v920:'NJ'then ref(l(|I=|v933), v200^a)," - "v934"г."," т."v935,",N "v936,"  (Введено оглавление)"d922 fi,if p(v330) then ' (Введено оглавление)'fi," // "d463(|;|+v463^c,|. -|v463^d,|:|v463^g,|, |v463^j,|.-|v463^v,if p(v463^v)then|:|v463^a else |. |v463^a fi,|.-|v463^h,if p(v463^h)then|:|v463^i else |. |v463^i fi,|, |v463^k,if p(v463^k)then|:|v463^l else |. |v463^l fi,|.- Ст.|v463^N,|.-С.|v463^s)'\b0 '
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=3.5
+CELL_TAB3_2=\b Шифр\b0 
+CELL_TAB3_3='\b 'v903'\b0 '
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=3
+CELL_TAB4_2=\b Кол-во выдач\b0 
+CELL_TAB4_3='\b 'v999'\b0 '
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\b '"Общее кол-во выдач: "v1'\b0 '
+CELL_MULTI_SUM_ROW_COUNT=0
+HDR_LINES0=\b \fs24 \qc Спрашиваемость литературы\par 
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=10
+CELL_SORT4=0
+CELL_SORT5=if val(v999)>0 then F(100000/val(v999),10,2) fi
+[HDR]
+HDR_PARAMS_COUNT=1

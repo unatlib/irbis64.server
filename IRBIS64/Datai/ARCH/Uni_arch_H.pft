@@ -1,0 +1,47 @@
+'</>',
+&uf('+7W951#'),
+if v951^a<>'' then (if p(v951^a) then &uf('+7U951#'v951^a/) fi) fi,
+if &uf('Ag951#1'):'jp' or &uf('Ag951#1'):'gif' or &uf('Ag951#1'):'bmp' or &uf('Av953^p#1'):'1' then 
+   '<table width="100%">',
+     '<tr>',
+       '<td   valign="top">',
+   if &uf('Av953^p#1'):'1' then 
+      '<A HREF="IRBIS:3,12,,',mfn,',1">',
+      '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',1"></A>'
+   else 
+      '<A HREF="IRBIS:3?PATH=10&FILENAME=',&uf('Ag951#1'),'">',
+      '<IMG  style="width:105 px" SRC="IRBIS:10,,',&uf('Ag951#1'),'"></A>'
+/* Директория с внешними файлами расположена внутри DATAI
+/*     '<A HREF="IRBIS:3?PATH=1&FILENAME=',&uf('Ag951#1'),'">',
+/*     '<IMG  style="width:105 px" SRC="IRBIS:1,,',&uf('Ag951#1'),'"></A>'
+/* Директория с внешними файлами расположена рядом с DATAI
+/*     '<A HREF="IRBIS:3?PATH=0&FILENAME=',&uf('Ag951#1'),'">',
+/*     '<IMG  style="width:105 px" SRC="IRBIS:0,,',&uf('Ag951#1'),'"></A>',
+       '</td>',
+   fi 
+       '<td>',
+   &uf('6osvex_H'),&unifor('6!!kk1bo_arch_H')
+       '</td>',       
+     '</tr>',
+   '</table> ',
+else 
+   if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else '<b> Издание в обработке. Не выдается<br> </b>' fi fi, 
+   &uf('6osvex_H'), &unifor('6!!kk1bo_arch_H') 
+fi,
+,Ogrudk_arch_H,
+,Orubdks_arch_H,
+,odoptd_arch_H, 
+,oex910_arch_H, 
+   (if p(v951^I) then '<br><A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+   if &uf('Ag951#1'):'jp' or &uf('Ag951#1'):'gif' then &uf('S0'),
+      (if p(g951) then 
+          if val(&uf('S1A'))=1 then else '<br><A HREF="IRBIS:3,10,,',v951^A,'">',
+             if p(v951^T) then v951^T else v951^A fi,'</A>', fi fi), 
+   else 
+      (if p(v951^A) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+   fi,
+   ("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b),
+   if s(,odfp_H,)<>'' then '<br> ',odfp_H, fi,
+
+'<table> <tr> <td> <b> Шифр </td> <td>',mpl,&uf('6orchifr_arch_H'),'</b></td> </tr> </table>',
+&unifor('!'), 

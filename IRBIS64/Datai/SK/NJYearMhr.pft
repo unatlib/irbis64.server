@@ -1,0 +1,29 @@
+/* дл€ мастера списани€
+/* отбор номеров журналов дл€ заданных годов и одного места хранени€
+/* с учетом статуса
+/* ¬ G5 годы в символах !
+/* в G6 место хранени€
+/* учет записей NJ-SPEC
+if v920: 'NJ' 
+then 
+  if G5='' or G5: v934 
+  then 
+    if G6='' or 
+       rsum((if p(v910) then if G6='' or v910^D: &uf('AG6#1') then if s('0 3 4 5 p'): v910^A then '1,' fi  fi fi))>0 
+    then  
+      '^4',v934,,if G6<>'' then '^D',G6 fi,,'^A',v933,,'^I',v903,,
+    fi,
+  fi, 
+else 
+   if v920: 'SPEC' 
+   then 
+     if G5='' or G5: s(&uf('Av210^D#1'))  
+     then 
+       if G6='' or 
+          rsum((if p(v910) then if G6='' or v910^D: &uf('AG6#1') then if s('0 3 4 5 p'): v910^A then '1,' fi  fi fi))>0 
+       then  
+         '^4',&uf('Av210^D#1'),,if G6<>'' then '^D',G6 fi,,'^A',v933,,'^I',v903,,
+       fi,
+     fi, 
+   fi,
+fi,

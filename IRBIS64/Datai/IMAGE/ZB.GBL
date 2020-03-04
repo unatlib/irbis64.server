@@ -1,0 +1,18 @@
+6
+
+Старый ББК(1)
+
+Новый ББК (1)
+
+Старый ББК(2)
+
+Новый ББК (2)
+
+Старый ББК(3)
+
+Новый ББК (3)
+REP
+621
+F
+(if p(v621) then if v621='%1' then '%2',if '%2'='' then # fi else if v621='%3' then '%4',if '%4'='' then # fi else if v621='%5' then '%6',if '%6'='' then # fi else v621 fi fi fi fi/)
+

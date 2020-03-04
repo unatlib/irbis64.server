@@ -1,0 +1,18 @@
+6
+mhr.mnu
+Откуда передают(1)
+mhr.mnu
+Куда передают  (1)
+mhr.mnu
+Откуда передают(2)
+mhr.mnu
+Куда передают  (2)
+mhr.mnu
+Откуда передают(3)
+mhr.mnu
+Куда передают  (3)
+REP
+910^d
+F
+(if p(v910) then if v910^d='%1' then '%2'else if v910^d='%3' then '%4'else if v910^d='%5' then '%6'else v910^d fi fi fi fi/)
+

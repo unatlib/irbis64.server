@@ -1,0 +1,10 @@
+'\pard \li108 \ri108 ','\par \qr \fs20 ',ref(l("AS="v991),'Дата 'v88^b*6'.'v88
+^b*4.2'.'v88^b.4,' г.',
+'\pard \li7000 \ri1100 ','\par Источник: ',
+'\pard \li7000 \ri1100 ','\par ',ref(l("KOR="v88^d),v81^a". ",v81^b,if a(v81)the
+n v89^a". ",v89^b fi),
+'\par ','\pard \li108 \ri108 ','\ql \fs20 Номер записи в КСУ 
+поступлений: ',v88^a,
+(if p(v88) then if v88^y=&unifor('G0-'&unifor('Av991*3#1')) then '\par \qc \fs25 ',
+' АКТ N ',v88^y,'\par \qc \fs20 Поступило всего 'v88^f,' экз.\par На общую сумму ',
+v88^g,' руб.'fi fi/)),'\par '

@@ -1,0 +1,18 @@
+(if p(v910)then     
+    if '2 6':v910^a then else 
+       if v910^u=&unifor('Av991#1') then 
+          if a(v910^e) then 
+             if val(&unifor('Av10^d#1'))<>0 then 
+                if p(v910^1) then f(val(&unifor('Av10^d#1')) * val(v910^1),0,2) 
+                else f(val(&unifor('Av10^d#1')),0,2) fi 
+             else 
+                if &unifor('Av10^d#1')<>'' then &unifor('Av10^d#1') 
+             fi fi 
+          else 
+             if val(v910^e)<>0 then 
+                if p(v910^1) then f(val(v910^e) * val(v910^1),0,2) 
+                else f(val(v910^e),0,2) fi 
+             else v910^e
+          fi fi'\par '
+ fi fi fi)
+ 

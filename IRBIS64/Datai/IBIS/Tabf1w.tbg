@@ -1,0 +1,65 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=1
+FONT_SIZE=10
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=8
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=№ п/п
+CELL_TAB2_3=&uf('S1A')
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=7
+CELL_TAB3_2=\b Автор, заглавие\b0 
+CELL_TAB3_3=&uf('6brief')
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=\b Цена\b0 
+CELL_TAB4_3=if v910:'^e'or val(v10^d)>0 then (if v910:'^c' then if '2 6 7':v910^a then else if &uf('Av991^a#1') <>'' and v910^u=&uf('Av991^a#1')    or &uf('Av991^b#1') <>'' and v910^u*2.2=&uf('Av991^b.2#1') and v910^y=&uf('G0-'&uf('G2-'&uf('Av991^b#1'))) then v910^1|x|,             if v910:'^e'then f(val(v910^e,' 0'),0,2) else f(val(&unifor('Av10^d#1'),' 0'),0,2) fi'\par ' fi fi fi) else v10^d'\par 'fi
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Нет
+CELL_TAB5_1=2
+CELL_TAB5_2=\b Экз.\b0 
+CELL_TAB5_3=f(rsum((if v910:'^c' then if '2 6 7':v910^a then else if &uf('Av991^a#1') <>'' and v910^u=&uf('Av991^a#1') or &uf('Av991^b#1') <>'' and v910^u*2.2=&uf('Av991^b.2#1') and v910^y=&uf('G0-'&uf('G2-'&uf('Av991^b#1'))) then v910^1|;|,|1;|n910^1,' 0'fi fi fi'\par ')),0,0)             
+CELL_TAB5_4=По правому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=2.5
+CELL_TAB6_2=\b Сумма\b0 
+CELL_TAB6_3=f(rsum((if v910:'^c' then if '2 6 7':v910^a then else if &uf('Av991^a#1') <>'' and v910^u=&uf('Av991^a#1') or &uf('Av991^b#1') <>'' and v910^u*2.2=&uf('Av991^b.2#1') and v910^y=&uf('G0-'&uf('G2-'&uf('Av991^b#1'))) then f(val(v910^e,if v910^e='' then &uf('Av10^d#1') fi) * val(v910^1,|1;|n910^1),0,2) fi fi fi'\par ')),0,2)/
+CELL_TAB6_4=По правому краю
+CELL_TAB6_5=Да
+CELL_TAB7_1=2.5
+CELL_TAB7_2=\b ББК\b0 
+CELL_TAB7_3=v621^*+|+|
+CELL_TAB7_4=По левому краю
+CELL_TAB7_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\qr Итого в партии 'f(val(v1),0,0)' экз. на сумму  ' f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=500
+CELL_SORT4=0
+CELL_SORT5=if v991^a<>'' and rsum((if p(v910) then if v910^u=&uf('Av991^a#1') then'1;' fi fi))>0 or v991^b<>'' and rsum((if p(v910) then if v910^u*2.2=&uf('Av991^b.2') and v910^y=&uf('G0-'&uf('G2-'&uf('Av991^b#1'))) then'1;' fi fi))>0 then v461^x,v461^c,v700^a,v200^a fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=Tabf1w.wss
+HDR_PFT=Tabf1wH.pft
+HDR_PARAMS_COUNT=0

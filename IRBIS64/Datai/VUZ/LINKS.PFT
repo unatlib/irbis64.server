@@ -1,0 +1,6 @@
+/'<HTML>',
+/'<BODY>',
+(/if p(v951^I) then |<A HREF="|v951^I|">| else if p(v951^A) then '<A HREF="file:///',&unifor('Av1001#1'),v951^A|">| fi fi,
+if p(v951^T) then v951^T else if p(v951^I) then v951^I else v951^A fi fi,|</A><BR>|d951),
+/'</BODY>',
+/'</HTML>'

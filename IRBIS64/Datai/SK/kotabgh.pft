@@ -1,0 +1,9 @@
+'\pard \li108 \ri108 ','\qc \b \fs20 \par ÎÁÅÑÏÅ×ÅÍÍÎÑÒÜ Ó×ÅÁÍÎÉ ËÈÒÅÐÀÒÓÐÎÉ \ íà 'v991^u,
+if a(v991^u) then 
+   if val(&unifor('34'))>8 then s(&unifor('30'),'/',f(val(&unifor('30'))+1,0,0)) else 
+      if val(&unifor('34'))<9 then s(f(val(&unifor('30'))-1,0,0),'/',&unifor('30')) 
+fi fi fi,' ãîä\par \fs18 ',v991^b,
+if v991^b=' 'or v991^b=''then 
+   if p(v991^a) then'\par '&unifor('Knaznac.mnu|'v991^a),
+   else '\par îáùèé (âñå êíèãè èç òåêóùåãî ñïèñêà) '
+fi fi,'\par ',

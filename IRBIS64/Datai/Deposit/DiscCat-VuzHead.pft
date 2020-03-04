@@ -1,0 +1,133 @@
+'{',,,,,,,,,
+'\trowd \trqc\trgaph108\trleft-108',,,
+/*-------------------------------каталог
+/*-------дисциплина
+&uf('+7W31#',,
+  v1,
+  &uf('+7W2#'),,&uf('+7U2#',,&uf('D,?DISC=',v1,'?,(v691/)') ),,
+  &uf('+7W3#',,(if p(g2) then if &uf('+97',&uf('Av1#1'))=&uf('+97',g2^D) then g2^I,break fi fi/) ),,
+  ' (',,g3,')',,
+),,,,,
+/*-----кафедра
+&uf('+7W2#',,&uf('7,?DISC=',v1,'?,(v691/)') ),,
+&uf('+7W32#',,
+  &uf('+7W3#',,(if p(g2) then if &uf('+97',&uf('Av1#1'))=&uf('+97',g2^D) then g2^B fi fi/) ),
+  &uf('+7G3'),,(if p(g3) then g3|\par | fi/) 
+),,,,,,,,,
+/*------цикл
+&uf('+7W33#',,
+  &uf('+7W3#',,(if p(g2) then if &uf('+97',&uf('Av1#1'))=&uf('+97',g2^D) then g2^S fi fi/) ),
+  &uf('+7G3'),,(if p(g3) then g3|\par | fi/) 
+),,,,,,,,,
+&uf('+7W34#',,
+  &uf('+7W3#',,(if p(g2) then if &uf('+97',&uf('Av1#1'))=&uf('+97',g2^D) then g2^K fi fi/) ),
+  &uf('+7G3'),,(if p(g3) then g3|\par | fi/) 
+),,,,,,
+&uf('+7W10#'),,,&uf('+7U10#',,&uf('7,?DISC=',,v1,,'?,mfn/') ),,,
+/*--------------------VUZ
+&uf('+7W41#',,
+&uf('7VUZ,?DISCN=',,v1,,'?,v3^A," ("v3^0")"')  ),,,,,,,,,,,
+&uf('+7W42#',,
+&uf('7VUZ,?DISCN=',,v1,,'?,v5')  ),,,,,,,,,,
+&uf('+7W43#',,
+&uf('7VUZ,?DISCN=',,v1,,'?,v4')  ),,,,,,,,,
+&uf('+7W44#',,
+&uf('7VUZ,?DISCN=',,v1,,'?,v6')  ),,,,,,,,,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx3510 
+\pard \widctlpar\intbl {\qc \fs20 ',,
+/*-----дисциплина
+g31,,
+'\cell }' 
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx4644 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*--------кафедра
+g32,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx5778 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*-------цикл
+g33,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx6912 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*-------УК
+g34,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx8046 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*----Кол-во учебников
+f(rsum((if p(g10) then '1,' fi)),0,0),,,,
+/*-----------------------------------------дисциплина в БД VUZ
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx11448 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+g41,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx12582 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+/*----- Кафедра
+g42,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx13716 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+g43,,
+'\cell }',,
+if g41='' or g42='' or g43='' or g44='' or &uf('Ag32#2')<>'' or &uf('Ag33#2')<>'' or &uf('Ag34#2')<>'' 
+then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1600 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30',,
+fi,,
+'\cellx14850 
+\pard \widctlpar\intbl {\ql \fs20 ',,
+g44,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+'}'

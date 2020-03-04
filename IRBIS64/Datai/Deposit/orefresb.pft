@@ -1,0 +1,13 @@
+if p(v470) then '. - ', 
+   if s(v470^0)<>''then &unifor('+I?2,,,,I='v470^I'?'&unifor('Av470^0#1')) else 
+                        &unifor('+I?2,,,,I='v470^I'?–ец. на  ')fi, 
+   if &unifor('Av470#2')<>''then': ', 
+      (|;\par |+d470,v470^a|. |,v470^c,|: |v470^e,|/ |d470^a,v470^f, 
+       if a(v470^f) then ,o470f,fi, 
+       if v470^d.4:'. - 'or v470^d.3:'//'  then v470^d else |. - |v470^d fi, 
+        
+   else v470^v": "," "n470^v,v470^a|. |,v470^c,|: |v470^e,|/ |d470^a,v470^f, 
+       if a(v470^f) then ,o470f,fi, 
+       if v470^d.4:'. - 'or v470^d.3:'//'  then v470^d else |. - |v470^d fi, 
+   fi, 
+fi, 

@@ -1,0 +1,244 @@
+if v1^B='' 
+then 
+/*------------------------------------------------------------------------Заголовок
+   if g31<>''   
+   then
+/*========================итого по кварталу
+      '\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx4043 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx4693 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx5543 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx6960 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx7610 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx8460 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx9877
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx10527
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx11377
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx12427 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx13850 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx14500 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx15150 
+\pard \widctlpar\intbl {\ql \fs24 \ql \b За квартал ',,,,,g30,,,,,,,,,,,'\cell }
+\pard \widctlpar\intbl {\ql \fs24 \b ',
+/*---наимен. на баланс
+g61,,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в на баланс
+g62,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---сумма на баланс
+g63,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----наименований НЕ на баланс впервые
+g64,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в НЕ на баланс
+g65,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+g66,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---наименований всего 
+,g67,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---наименований всего впервые
+g68,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в всего
+g69,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---сумма всего
+g70,,
+'\cell }\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---Эл рес
+g71,,,,,,,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----Книги
+g72,,,,,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+   &uf('+7W31#',,),,,,,,,,,,,,,, 
+   &uf('+7W61#'),,&uf('+7W62#'),,&uf('+7W63#'),,&uf('+7W64#'),,&uf('+7W65#'),,&uf('+7W66#'),,&uf('+7W67#'),,&uf('+7W68#'),,&uf('+7W69#'),,&uf('+7W70#'),,&uf('+7W71#'),,&uf('+7W72#'),,
+   &uf('+7W30#'),,
+   &uf('+7W41#'),,&uf('+7W42#'),,&uf('+7W43#'),,&uf('+7W44#'),,&uf('+7W45#'),,&uf('+7W46#'),,&uf('+7W47#'),,&uf('+7W48#'),,&uf('+7W49#'),,
+   &uf('+7W50#'),,&uf('+7W51#'),,&uf('+7W52#'),,
+   fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+/*===================================
+   '\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx15150 \pard \widctlpar\intbl {\qc \fs24 ''\b ',,,,
+   if v1^B='' 
+   then 
+      if v1^A.1='0' then 'Состояние на начало' else   if v1^A.1='1' then 'Поступило ',,,,,,,else 'Выбыло '     fi fi 
+   fi,,,'\b0 ',
+   '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+else 
+/*--------------------------------------------------------------------------------------------------строка
+   &uf('+7W40#',,ref(val(v1^Y),v920) ),
+/*-----------------------   if g40: 'KSI' then &uf('+7W30#'),,,else 
+
+   if g40: 'KSU' or g40: 'KS2' then 
+   &uf('+7W30#',,,ref(val(v1^Y),if v88<>'' then if val(v88^B*4)>0 and val(v88^B*4)<0401 then 'I' else if val(v88^B*4)>=0401 and val(v88^B*4)<0701 then 'II' else if val(v88^B*4)>=0701 and val(v88^B*4)<1001 then 'III' else if val(v88^B*4)>=1001 then 'IV' fi fi fi fi else if val(v888^B*4)>0 and val(v888^B*4)<0401 then 'I' else if val(v888^B*4)>=0401 and val(v888^B*4)<0701 then 'II' else if val(v888^B*4)>=0701 and val(v888^B*4)<1001 then 'III' else if val(v888^B*4)>=1001 then 'IV' fi fi fi fi fi,,)  ),,,,,,,,,,
+   fi,,,,,,,,,
+   if g40: 'KSU' or g40: 'KS2' 
+   then  
+   if g30<>'' and g31<>'' and g30<>g31 
+   then
+/*========================перед строкой итого по кварталу
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx4043 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx4693 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx5543 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx6960 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx7610 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx8460 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx9877 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx10527 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx11377 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx12427 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx13850 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx14500 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 \cellx15150 
+\pard \widctlpar\intbl {\ql \fs24 \ql \b За квартал ',,,,,,g31,,,,,'\cell }
+\pard \widctlpar\intbl {\ql \fs24 \b ',
+/*---наимен. на баланс
+g61,,,
+,'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в на баланс
+g62,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---сумма на баланс
+g63,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----наименований НЕ на баланс впервые
+g64,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в НЕ на баланс
+g65,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+g66,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---наименований всего 
+,g67,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---наименований всего впервые
+g68,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*----экз-в всего
+g69,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+/*---сумма всего
+g70,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+g71,,
+'\cell }\pard \widctlpar\intbl {\ql \b \fs24 ',,
+g72,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+&uf('+7W61#'),,&uf('+7W62#'),,&uf('+7W63#'),,&uf('+7W64#'),,&uf('+7W65#'),,&uf('+7W66#'),,&uf('+7W67#'),,&uf('+7W68#'),,&uf('+7W69#'),,&uf('+7W70#'),,&uf('+7W71#'),,&uf('+7W72#'),,
+&uf('+7W41#'),,&uf('+7W42#'),,&uf('+7W43#'),,&uf('+7W44#'),,&uf('+7W45#'),,&uf('+7W46#'),,&uf('+7W47#'),,&uf('+7W48#'),,&uf('+7W49#'),,&uf('+7W50#'),,&uf('+7W51#')&uf('+7W52#')
+/*   &uf('+7W30#'),,
+fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, 
+   &uf('+7W31#',,g30),,,,,,,,,,,,,, 
+/*===================================
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx658 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2075 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx3476 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4043 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4693 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx5543 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6960 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7610 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8460 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9877 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx10527 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx11377
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx12427
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx13850 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx14500 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx15150 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----------вид записи
+,g40,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+ref(val(v1^Y),v88^A,,v888^A),,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+ref(val(v1^Y),v88^B,,v888^B),,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*--------------квартал
+ref(val(v1^Y),
+if v88<>'' then if val(v88^B*4)>0 and val(v88^B*4)<0401 then 'I' else if val(v88^B*4)>=0401 and val(v88^B*4)<0701 then 'II' else if val(v88^B*4)>=0701 and val(v88^B*4)<1001 then 'III' else if val(v88^B*4)>=1001 then 'IV' fi fi fi fi else if val(v888^B*4)>0 and val(v888^B*4)<0401 then 'I' else if val(v888^B*4)>=0401 and val(v888^B*4)<0701 then 'II' else if val(v888^B*4)>=0701 and val(v888^B*4)<1001 then 'III' else if val(v888^B*4)>=1001 then 'IV' fi fi fi fi fi,,
+),,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----наименований на баланс впервые
+&uf('+7W1#',,ref(val(v1^Y),v17^1) ),,g1,, if g40<>'KSI' then &uf('+7W61#',f(val(g61)+val(g1),0,0)  ) else 
+&uf('+7W41#',f(val(g41)+val(g1),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----экз-в на баланс
+&uf('+7W2#',,ref(val(v1^Y),v145^B) ),,g2,, if g40<>'KSI' then&uf('+7W62#',f(val(g62)+val(g2),0,0)  )  else 
+&uf('+7W42#',f(val(g42)+val(g2),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---сумма на баланс
+&uf('+7W3#',,ref(val(v1^Y),v145^C) ),,g3,,if g40<>'KSI' then &uf('+7W63#',f(val(g63)+val(g3),0,2)  ),,else &uf('+7W43#',f(val(g43)+val(g3),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----наименований НЕ на баланс впервые
+&uf('+7W4#',,ref(val(v1^Y),v17^2) ),,g4,,if g40<>'KSI' then &uf('+7W64#',f(val(g64)+val(g4),0,0)  ),,else 
+&uf('+7W44#',f(val(g44)+val(g4),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----экз-в НЕ на баланс
+&uf('+7W5#',,ref(val(v1^Y),v145^E) ),,g5,,if g40<>'KSI' then &uf('+7W65#',f(val(g65)+val(g5),0,0)  ),,else 
+&uf('+7W45#',f(val(g45)+val(g5),0,0)  ) 
+fi,,
+'\cell }
+/*----сумма
+\pard \widctlpar\intbl {\ql \fs24 ',,
+&uf('+7W6#',,ref(val(v1^Y),v145^F) ),,g6,,if g40<>'KSI' then &uf('+7W66#',f(val(g66)+val(g6),0,2)  ),,else 
+&uf('+7W46#',f(val(g46)+val(g6),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---наименований всего 
+&uf('+7W7#',,ref(val(v1^Y),f(val(v45^4)+val(v155^V)+val(v155^X),0,0)   )  ),,g7,,if g40<>'KSI' then &uf('+7W67#',f(val(g67)+val(g7),0,0)  ),,else 
+&uf('+7W47#',f(val(g47)+val(g7),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---наименований всего впервые
+&uf('+7W8#',,ref(val(v1^Y),f(val(v17^A)+val(v155^P)+val(v155^L),0,0)   )  ),,g8,,if g40<>'KSI' then &uf('+7W68#',f(val(g68)+val(g8),0,0)  ),,else 
+&uf('+7W48#',f(val(g48)+val(g8),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----экз-в всего
+&uf('+7W9#',,ref(val(v1^Y),v145^H) ),,g9,,if g40<>'KSI' then &uf('+7W69#',f(val(g69)+val(g9),0,0)  ),,else 
+&uf('+7W49#',f(val(g49)+val(g9),0,0)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---сумма всего
+&uf('+7W10#',,ref(val(v1^Y),V145^I) ),,g10,,if g40<>'KSI' then &uf('+7W70#',f(val(g70)+val(g10),0,2)  ),,else 
+&uf('+7W50#',f(val(g50)+val(g10),0,2)  ) 
+fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*---ЭИ 
+&uf('+7W21#',,ref(val(v1^Y),V45^L) ),,g21,,if g40<>'KSI' then &uf('+7W71#',f(val(g71)+val(g21),0,0)  ),,else 
+&uf('+7W51#',f(val(g51)+val(g11),0,0)  ),,,,,
+fi,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----Книг
+&uf('+7W22#',,ref(val(v1^Y),v18^2) ),,g22,,if g40<>'KSI' then &uf('+7W72#',f(val(g72)+val(g22),0,0)  ),,else 
+&uf('+7W52#',f(val(g52)+val(g12),0,0)  ),,,
+fi,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+fi

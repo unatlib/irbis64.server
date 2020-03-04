@@ -1,0 +1,129 @@
+/* G46 формирую признак - для текущего семестра
+/* g43=1 - учебная  g43=2 - учебно-методическая
+/* G44=0 без новизна
+/* G44=1 за посл годы учебная - срок в 991^8
+/* G44=2 за посл годы методич
+/* G45=0 без грифа
+/* G45=1 сгрифом учебная
+/* G45=2 с грифом  методич
+/* G48 - цикл для вычисл-я новизны
+/* Новизна - CycleNew.mnu - GRPart1YearNew - 5 лет
+/*--------------- в G40 будет признак полугодия
+if G991^=='' or G991^=='1' then &uf('+7W46#1') else &uf('+7W46#0') fi,,,,,,,,,,,,,,,,
+&uf('+7W40#'
+    if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+    then 'V' 
+    else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or            
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+      then 
+        'O' 
+      fi 
+    fi),
+/*-------------- в G41 будет призна, что есть соответствие заданным условиям отбора
+&uf('+7W41#'),
+&uf('+7W41#',,,,
+    f(rsum((if p(v691) 
+            then 
+              if  ( &uf('AG991^X#1')='' or &uf('+97',v691^I)=&uf('+97',&uf('AG991^X#1'))) then 
+              if  ( &uf('AG991^A#1')='' or s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  ) then 
+              if  ( &uf('AG991^O#1')='' or s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!')  ) then 
+              if  ( &uf('AG991^V#1')='' or s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  ) then 
+              if  ( &uf('AG991^B#1')='' or s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  ) then 
+              if  ( &uf('AG991^C#1')='' or s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  ) then 
+              if  ( &uf('AG991^N#1')='' or s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  ) then 
+              if  ( &uf('AG991^S#1')='' or s('!',&uf('Ag991^S#1'),'!'): s('!',v691^S,'!')  ) then 
+              if  ( &uf('AG991^F#1')='' or s('!',&uf('Ag991^F#1'),'!'): s('!',v691^F,'!')  ) then 
+              if    &uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or 
+                    &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' or
+                    val(v691^F)=0 or 
+                    val(&uf('AG46#1'))=0 
+               then  
+               if  (    &uf('AG991^g#1')=''  or 
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g:'осн' or  
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g='' or  
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'): v691^g   
+                   ) 
+               then '1;'else'0;' 
+               fi fi fi fi fi fi fi fi fi fi fi  
+            fi)),0,0)),
+/*--------------- вычисляется кол-во
+if val(g41)>0  
+then 
+  if val(G43)=2 
+  then 
+    if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' 
+    then 
+/*-----методическая
+      if val(g44)=2 
+      then  
+/* ----с условием новизны метод
+            if ( val(&unifor('30')) - val(v210^d| |,if a(v210^d) then v461^h| | fi ) ) <=  
+                 val( s( &uf('Ag991^8#1'),,if &uf('Ag991^8#1')='' then  
+                                                           if &uf('KCycleNew.mnu!',g48)<>'' then  &uf('KCycleNew.mnu!',g48) else  
+                                                              &uf('IDISPLAY,GRPart1YearNew,5')  fi fi  )  ) 
+            then 
+               if val(G45)=0 
+               then  
+/*-----всего новых метод
+                  f(rsum((if p(v910) then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi fi)),0,0),,,
+                else 
+/*-----с грифом новых метод 
+                   if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ): 'jj' 
+                   then 
+                       f(rsum((if p(v910) then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi fi)),0,0),,,
+                   fi,,,  
+                fi,,,
+            fi,,,   
+      else  
+/*------Всего методическая
+         f(rsum((if p(v910) 
+          then 
+             if v910^a:'U' 
+             then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  
+             else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi 
+           fi)),0,0),,,,,,,,,,,,
+      fi,,, 
+    else '0' 
+    fi,,
+  else 
+    if val(G43)=1 
+    then 
+/*---------учебная
+      if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' 
+      then '0' 
+      else 
+         if val(g44)=1 
+         then  
+/* ------с условием новизны
+         if ( val(&unifor('30')) - val(v210^d| |,if a(v210^d) then v461^h| | fi ) ) <= 
+              val( s( &uf('Ag991^8#1'),,if &uf('Ag991^8#1')='' then  
+                                                        if &uf('KCycleNew.mnu!',g48)<>'' then  &uf('KCycleNew.mnu!',g48) else  
+                                                           &uf('IDISPLAY,GRPart1YearNew,5')  fi fi  )  ) 
+            then 
+               if val(g45)=0 
+               then 
+/*------всего новых учебная
+                  f(rsum((if p(v910) then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi fi)),0,0),,,
+               else 
+/*-------с грифом новых учебная
+                   if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ): 'jj' 
+                   then 
+                  f(rsum((if p(v910) then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi fi)),0,0),,,
+                   fi,,,
+               fi,,,
+            fi,,  
+         else 
+/*-----------Всего учебная
+            f(rsum((if p(v910) 
+             then 
+                if v910^a:'U' 
+                then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  
+                else  if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi 
+              fi)),0,0),,,,,,,,,,,,
+         fi,,
+      fi,,
+    fi,,
+  fi,,
+else '0' fi,,',',,,,,

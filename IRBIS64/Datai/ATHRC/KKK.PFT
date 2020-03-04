@@ -1,0 +1,31 @@
+'{',if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на КОЛЛ
+ЕКТИВ/ МЕРОПРИЯТИЕ\b0 ',if p(v210) then '\par ' fi                              
+                                                 if p(v510) or (p(v710) and a(v4
+10) and a(v510)) then'\par ',mhl,v210^a,"."v210^b,if v210:'^d' or v210:'^f' or v
+210:'^e' then '(',v210^d,if v210:'^d' and v210:'^f' then ";"v210^f  else v210^f 
+fi,if v210:'^e' and (v210:'^f' or v210:'^d') then ";"v210^e else v210^e fi,')' f
+i,"("v210^c")" fi,if p(v510) then '\par \tab \b СМ.ТАКЖЕ:\b0 'fi,&unifor('S0')if
+ p(v510) then if v510:&unifor('Av510#2') then (if p(v510) then '\par '&unifor('S
+1A')'.',mhl,v510^a,|.|v510^b,if v510:'^d' or v510:'^f' or v510:'^e' then '(',v51
+0^d,if v510:'^d' and v510:'^f' then |;|v510^f  else v510^f fi,if v510:'^e' and (
+v510:'^f' or v510:'^d') then |;|v510^e else v510^e fi,')' fi,|(|v510^c|)| fi/) e
+lse '\par 'v510^a,"."v510^b,if v510:'^d' or v510:'^f' or v510:'^e' then '(',v510
+^d,if v510:'^d' and v510:'^f' then ";"v510^f  else v510^f fi,if v510:'^e' and (v
+510:'^f' or v510:'^d') then ";"v510^e else v510^e fi,')', fi,"("v510^c")", fi,"\
+par ***"d410 fi,&unifor('S0')if p(v410) then if v410:&unifor('Av410#2') then (if
+ p(v410)then '\par '&unifor('S1A')'.',mhl,v410^a(6,2),|.|v410^b,if v410:'^d' or 
+v410:'^f'or v410:'^e' then '(',v410^d,if v410:'^d' and v410:'^f' then |;|v410^f 
+else v410^f fi,if v410:'^e' and (v410:'^f' or v410:'^d') then |;|v410^e else v41
+0^e fi,')' fi,|(|v410^c|)| fi) else '\par ',v410^a,| .|v410^b,if v410:'^d' or v4
+10:'^f' or v410:'^e' then '(',v410^d,if v410:'^d' and v410:'^f' then ";"v410^f  
+else v410^f fi,if v410:'^e' and (v410:'^f' or v410:'^d') then ";"v410^e else v41
+0^e fi,')' fi,"("v410^c")" fi,'\par \tab \b СМ.\b0 \par ',v210^a,"."v210^b,if v2
+10:'^d' or v210:'^f' or v210:'^e' then '(',v210^d,if v210:'^d' and v210:'^f' the
+n ";"v210^f  else v210^f fi,if v210:'^e' and (v210:'^f' or v210:'^d') then ";"v2
+10^e else v210^e fi,')' fi,"("v210^c")", fi fi,if p(v210) and p(v310) then '\tab
+ \b Ссылочная запись на КОЛЛЕКТИВ/МЕРОПРИЯТИЕ\b0 ','\par ',v210^a,if a(v210^g) t
+hen " "v210^b else " "v210^g fi,("\par \b "v310^a"\b0 ",| |v310^b,|,|v310^c,|,|v
+310^d,|,|v310^e/) fi,if p(v210) and p(v320) then '\tab \b Общая пояснительная за
+пись на КОЛЛЕКТИВ/МЕРОПРИЯТИЕ\b0 ','\par ',v210^a,if a(v210^g) then " "v210^b el
+se " "v210^g fi,'\par ',v320^a fi,if p(v300) then '\par \tab \bПримечание:  \b0 
+'(v300^a|.|/) fi'\par -------------}'

@@ -1,0 +1,17 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if p(v910) and rsum((if p(v910) then if '2 6 7':v910^a then'0;'else '1; 'fi fi/))>0 then f(rsum((if p(v910)then if '2 6 7':v910^a then else if p(v910^s)then v910^1|;|,|1;|n910^1 else'0;'fi fi fi/)),0,0) fi/
+if p(v910) and rsum((if p(v910) then if '2 6 7':v910^a then'0;'else '1; 'fi fi/))>0 then f(rsum((if p(v910)then if '2 6 7':v910^a then else if p(v910^s)then if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(v910^1,|1|n910^1),0,2)';',fi fi fi fi/)),0,2)fi/
+if p(v910) and rsum((if p(v910) then if '2 6 7':v910^a then'0;'else '1; 'fi fi/))>0 then f(rsum((if p(v910)then if '2 6 7':v910^a then else if a(v910^s)then v910^1|;|,|1;|n910^1 else'0;'fi fi fi/)),0,0)fi/
+if p(v910) and rsum((if p(v910) then if '2 6 7':v910^a then'0;'else '1; 'fi fi/))>0 then f(rsum((if p(v910)then if '2 6 7':v910^a then else if a(v910^s)then if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(v910^1,|1|n910^1),0,2)';',fi fi fi fi/)),0,2)fi/~
+#
+'\par \ql \fs20 1.  По всем учетным документам в фонде  числится \par \tab 'f(val(v1),0,0)' экз. книг на общую сумму 'f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi'\par 2.  ',if val(v3)>0 then 'Обнаружено недостающих экз., записанных в инвентарные книги, \par 'f(val(v3),0,0)' экз. на общую сумму  'f(val(v4),0,2),if val(v4)>0 then &unifor('Korg.mnu|3')fi else 'Недостающих экземпляров, записанных в инвентарные книги, не обнаружено ' fi'\par '
+*****
+[Tab]
+{\fs24 \qc
+[Header]
+}
+{}
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar \par }

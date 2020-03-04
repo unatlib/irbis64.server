@@ -1,0 +1,32 @@
+[ROWQRY]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,
+&uf('+7W999#',,,,,(if G1003<>'' then,,,&uf('+7W1005#',G1003),,,'"CIKLD=',&uf('Ag1005#1'),'"',,/,,&uf('6KoStatCycleSch'),fi/) )/(if g999^B: '****' then else g999 fi/)
+'"!I=$"'
+'"!I=$"'
+[FLDMODE1001]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,
+&uf('+7W999#',,,,,(if G1003<>'' then,'^A',g1003,'^C\b Всего по циклу \b0 ' /&uf('+7W1005#',G1003),,,,,&uf('6KoStatCycleMode'),fi/) )/(if g999^B: '****' then else g999 fi/)
+'^E  '
+'^E  '
+[FLDTEXT]
+&uf('+7W1003#',(&uf('+5TCIKLD.mnu')/)),&uf('+7W1004#',(&uf('+5TFo.mnu')/)),,,,
+&uf('+7W999#',,,,,(if G1003<>'' then,&uf('+7W1005#',G1003),,,'^A',&uf('Ag1005#1'),'^C\b Всего по циклу \b0 ',,/,,, &uf('6KoStatCycleMode'),fi/) )/(if g999^B: '****' then else g999 fi/)
+'^E\b Всего учебников - \b0 '
+'^E\b Всего экземпляров - \b0 '
+[FLDSUM]
+/*вся по циклу
+&uf('+7W1007#^A^B',,,&uf('AG1001^B#1')  ),,,,,,,,&uf('+7W1006#0'),,,&uf('6KoStatCycleBook')
+/* учебная
+&uf('+7W1007#',,,&uf('AG1001#1') ),,,,&uf('+7W1006#1'),,,&uf('6KoStatCycleBook')
+/* методическая
+&uf('+7W1007#',,,&uf('AG1001#1') ),,,,&uf('+7W1006#2'),,,&uf('6KoStatCycleBook')
+/* все по циклу
+&uf('+7W1007#^A^B',,,&uf('AG1001^B#1')  ),,,,,,,,&uf('+7W1006#0'),,,&uf('6KOStatCycleEkz')
+/*учебная
+&uf('+7W1007#',,,&uf('AG1001#1') ),,,,&uf('+7W1006#1'),,,&uf('6KOStatCycleEkz')
+/* методическая
+&uf('+7W1007#',,,&uf('AG1001#1') ),,,,&uf('+7W1006#2'),,,&uf('6KOStatCycleEkz')
+/* ВСЕ
+&uf('+7W1007^E#',,,&uf('AG1001^E#1')   ),,,,,&uf('+7W1006#0'),,,&uf('6KoStatCycleBook')
+/* ВСЕ
+&uf('+7W1007^E#',,,&uf('AG1001^E#1')   ),,,,,&uf('+7W1006#0'),,,&uf('6KOStatCycleEkz')

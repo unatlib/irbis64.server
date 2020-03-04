@@ -1,0 +1,5 @@
+'CONTEXTIN'/
+'SEARCH "',,'I=',(if p(v488) then if v488^1:'2' then v488^W fi fi),,'" + "|',&uf('+7W488#'(if p(v488) then if v488^1:'2' then v488^w fi fi/)),if s(&uf('D,?I='g488'?,|+|v330^0"+"')):s("+"v972^0"+") then v972^0 else if v972^0:'.'then &uf('G0.'v972^0) fi fi,,,'"',/
+'CONTEXTOUT'/
+'NOPROTOCOL'/
+

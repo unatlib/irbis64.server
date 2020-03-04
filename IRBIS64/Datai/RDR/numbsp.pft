@@ -1,0 +1,1 @@
+if rsum((if p(v90) then if &uf('Ag991^o#1')='' or &uf('+97',&uf('Ag991^o#1'))=&uf('+97',v90^O) then if &uf('+97',G2002)=&uf('+97',v90^C) then '1,' fi fi fi))>0 then '1;' fi,

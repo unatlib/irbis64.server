@@ -1,0 +1,26 @@
+mhl,
+,v200^a," ["v200^b"]", 
+if p(v200) and a(v200^b) then &unifor('+1W1'''), 
+   if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
+   if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
+   if a(v900^t) then 
+      if s(v230v337v135)<>''then 
+         if &unifor('+1R1')<>''then' [Ёлектронный ресурс] ' else' [Electronic resource]'fi 
+      else 
+fi fi fi,| : |v200^e, 
+(if p(v923) then ". "| ; |+d923,v923^h, 
+    if p(v923^h)then|. |d923^i fi,v923^i, 
+    if s(v923^k,v923^l)<>''then '. 'fi,v923^k, 
+    if p(v923^k)then|. |d923^l fi,v923^l 
+ fi),| / |v200^f,'. - ',ovixd,". - "| ; |+v215^a," "d215^1,
+if v215^1.2:'='then v215^1*2 else v215^1 fi, 
+if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi,
+if p(v951) then '  ' fi,
+(if p(v951^I) then | , |+d951,'<A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+(if p(v951^A) then 
+    if p(v951^i) then 
+       if  v951^i:v951^a then else | , |d951 fi 
+    else | , |+d951,'<A HREF="IRBIS:3,10,,',v951^A,'">',
+       if p(v951^T) then v951^T else v951^A fi,'</A>', 
+ fi fi), 
+&unifor('!'),

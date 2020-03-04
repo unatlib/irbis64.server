@@ -1,0 +1,185 @@
+0
+//19 В записи DISC удаление поле 83, отличных от полей 831
+// удаляемые поля - в поле 832
+// выполняется после задания MergeDBVuz
+// v991^A - имя БД каталога
+// удаленные поля 691 в 943
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v83/)
+
+DEL
+111
+*
+
+
+//---цикл по полям 83 - формирую поле 111 - признаки на удаление
+REPEAT
+ADD
+111
+
+if rsum( (if p(v831) then if &uf('Av1083^A#1')='' or &uf('+97',&uf('Av1083^A#1'))=&uf('+97',v831^A) then  if  &uf('Av1083^O#1')='' or &uf('+97',&uf('Av1083^O#1'))=&uf('+97',v831^O) then if  &uf('Av1083^V#1')='' or &uf('+97',&uf('Av1083^V#1'))=&uf('+97',v831^V) then if &uf('Av1083^N#1')='' or &uf('+97',&uf('Av1083^N#1'))=&uf('+97',v831^N) then  if  &uf('Av1083^C#1')='' or &uf('+97',&uf('Av1083^C#1'))=&uf('+97',v831^C) then if  &uf('Av1083^F#1')='' or &uf('+97',&uf('Av1083^F#1'))=&uf('+97',v831^F) then '1,' fi fi fi fi fi fi fi ) )=0 then '1' else '0' fi
+
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+// удаляемые повторения в поле 832
+ADD
+832
+
+(if p(v83) then if val(v111)=1 then '^I',,&uf('Av3^0#1'),,,v83 fi fi/)
+
+// по удаленным повторениям удаляю поле соотв. поле 69 в VUZ
+DEL
+833
+*
+
+
+ADD
+833
+
+(v832/)
+
+
+//---цикл по полям 832, удаляемым повторениям
+REPEAT
+DEL
+1832
+*
+
+
+ADD
+1832
+
+if &unifor('Av833^f#1'):'/' then (if &unifor('1*R/?v833^f#1')<>''then ,if &unifor('Av833^H#1')<>'' then '^H',&unifor('Av833^H#1') fi,,if &unifor('Av833^N#1')<>'' then '^N',&unifor('Av833^N#1') fi,,if &unifor('Av833^C#1')<>'' then '^C',&unifor('Av833^C#1') fi,,if &unifor('Av833^A#1')<>'' then '^A',&unifor('Av833^A#1') fi,,if &unifor('Av833^L#1')<>'' then '^L',&unifor('Av833^L#1') fi,,if &unifor('Av833^T#1')<>'' then '^T',&unifor('Av833^T#1') fi,,if &unifor('Av833^V#1')<>'' then '^V',&unifor('Av833^V#1') fi,,if &unifor('Av833^O#1')<>'' then '^O',&unifor('Av833^O#1') fi,,'^F',&unifor('1*R/?v833^f#1'),,'^E',&unifor('Av833^E#1') fi/) else &unifor('Av833#1') fi
+
+IF
+if p(v1832) then '1' fi
+REPEAT
+//---удаление поля 69 в записи VUZ
+CORREC
+'*'
+mpu,,v3^0
+'Z=',v3^0,'-'&uf('Av1832^a#1'),,,'-',&uf('Av1832^n#1'),,,'-',&uf('Av1832^c#1'),'-',&uf('Av1832^v#1'),'-',&uf('Av1832^o#1'),'-S'&uf('Av1832^f#1')
+
+DEL
+69
+F
+(if p(v69) then if &uf('+97',v69^D)=&uf('Av1001#1') then '1' else '0' fi fi/)
+
+DEL
+1001
+*
+
+
+END
+DEL
+1832
+1
+
+
+UNTIL
+if p(v1832) then '1' fi
+FI
+DEL
+833
+1
+
+
+UNTIL
+if p(v833) then '1' fi
+DEL
+833
+*
+
+
+ADD
+833
+
+(v832/)
+
+//---цикл по полям 832, удаляемым повторениям
+REPEAT
+DEL
+1832
+*
+
+
+ADD
+1832
+
+if &unifor('Av833^f#1'):'/' then (if &unifor('1*R/?v833^f#1')<>''then ,if &unifor('Av833^H#1')<>'' then '^H',&unifor('Av833^H#1') fi,,if &unifor('Av833^N#1')<>'' then '^N',&unifor('Av833^N#1') fi,,if &unifor('Av833^C#1')<>'' then '^C',&unifor('Av833^C#1') fi,,if &unifor('Av833^A#1')<>'' then '^A',&unifor('Av833^A#1') fi,,if &unifor('Av833^L#1')<>'' then '^L',&unifor('Av833^L#1') fi,,if &unifor('Av833^T#1')<>'' then '^T',&unifor('Av833^T#1') fi,,if &unifor('Av833^V#1')<>'' then '^V',&unifor('Av833^V#1') fi,,if &unifor('Av833^O#1')<>'' then '^O',&unifor('Av833^O#1') fi,,'^F',&unifor('1*R/?v833^f#1'),,'^E',&unifor('Av833^E#1') fi/) else &unifor('Av833#1') fi
+
+IF
+if p(v1832) then '1' fi
+REPEAT
+//---удаление поля 691 в записи каталога
+CORREC
+if v991^A<>'' then v991^A else &uf('IPRIVATE,DBN,IBIS') fi
+mpu,,'^I'v3^0,,,&uf('Av1832#1')
+'!I=',v3^0,&uf('Av1832^a#1'),,,,&uf('Av1832^n#1'),,,,&uf('Av1832^c#1'),,&uf('Av1832^v#1'),,&uf('Av1832^o#1'),'-S'&uf('Av1832^f#1')
+
+ADD
+943
+
+(if p(v691) then if &uf('Av1001^I#1')=&uf('+97',v691^I) then if &uf('Av1001^A#1')='' or &uf('Av1001^A#1')=&uf('+97',v691^A) then if &uf('Av1001^N#1')='' or &uf('Av1001^N#1')=&uf('+97',v691^N) then if &uf('Av1001^C#1')='' or &uf('Av1001^C#1')=&uf('+97',v691^C) then if &uf('Av1001^O#1')='' or &uf('Av1001^O#1')=&uf('+97',v691^O) then if &uf('Av1001^V#1')='' or &uf('Av1001^V#1')=&uf('+97',v691^V) then if &uf('Av1001^F#1')='' or val(&uf('Av1001^F#1'))=val(v691^F) then v691 fi fi fi fi fi fi fi fi/)
+
+//---меняю дату
+REP
+943
+F
+(if p(v943) then v943,,,if v943^4='' then '^4',,&unifor('3'),,'-DEL-',,&uf('IPRIVATE,FIO,') fi fi/)
+
+REP
+943^4
+*
+&unifor('3'),,'-DEL-',,&uf('IPRIVATE,FIO,')
+
+DEL
+691
+F
+(if p(v691) then if &uf('Av1001^I#1')=&uf('+97',v691^I) then if &uf('Av1001^A#1')='' or &uf('Av1001^A#1')=&uf('+97',v691^A) then if &uf('Av1001^N#1')='' or &uf('Av1001^N#1')=&uf('+97',v691^N) then if &uf('Av1001^C#1')='' or &uf('Av1001^C#1')=&uf('+97',v691^C) then if &uf('Av1001^O#1')='' or &uf('Av1001^O#1')=&uf('+97',v691^O) then if &uf('Av1001^V#1')='' or &uf('Av1001^V#1')=&uf('+97',v691^V) then if &uf('Av1001^F#1')='' or val(&uf('Av1001^F#1'))=val(v691^F) then '1' else '0' fi fi fi fi fi fi fi fi/)
+
+DEL
+1001
+*
+
+
+END
+DEL
+1832
+1
+
+
+UNTIL
+if p(v1832) then '1' fi
+FI
+DEL
+833
+1
+
+
+UNTIL
+if p(v833) then '1' fi
+//---------------само удаление поля 83
+DEL
+83
+F
+(v111/)
+
+DEL
+111
+*
+
+
+

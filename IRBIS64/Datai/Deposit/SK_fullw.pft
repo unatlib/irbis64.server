@@ -1,0 +1,44 @@
+mpl,
+&uf('+7W999#',&uf('DSK_EKZ,!I=',g1110,'/',v903,'!,f(rsum((v910^1| |,|1 |N910^1)),0,0)')), /* в g999 - кол-во экземпляров
+'<table width="100%">',
+'<tr width="100%">',
+'<td with="3%" valign="top">',
+'<INPUT type="checkbox" name="CHECKMFN" value="',
+if g2='SK_EKZ' 
+    then g1, 
+    else mfn, 
+fi,
+'">','</td>',
+'<td with="7%" valign="top">',
+
+'<b>','<IRBIS type=0></IRBIS>. ','</b>'
+'</td><td width="90%">',
+if v920='J' then &uf('6JW_H') 
+            else if v920:'NJ' then &uf('6NJW_H') 
+                              else if v920:'SPEC' then &uf('6MN_H') 
+                                                  else if (v920:'ASP') or (v920:'AUNTD') then &uf('6ASP_H')
+                                                                     else if v920:'MUSP' then &uf('6MUSI_H') 
+                                                                                         else if v920:'BOUNI' then &uf('6VS600_H') 
+                                                                                                              else &uf('6KN_H') 
+                                                                                              fi 
+                                                                          fi 
+                                                       fi 
+                                   fi 
+                 fi 
+fi,
+
+/* через FREEPAR10 (g1110) передается login пользователя
+'<div>',
+if (g1110<>'') and (v903<>'') then 
+&uf('+7W1#',&uf('DSK_EKZ,!I=',g1110,'/',v903,'!,&uf("+N910"D1)')),/* кол-во повторений 910 в g1
+&uf('+7W1#',f((val(f(val(g1)/10,0,0))+1)*10,0,0)),
+   if val(g999)=0
+       then '<A HREF="IRBIS:1,,SK_EKZ,SK_EKZ_entry?RELOAD=1&KEY=',&uf('+3EI=',g1110,'/',v903),'&FREEPAR10=',&uf('+3E',g1110),'&FREEPAR11=',&uf('+3E',v903),'&FREEPAR12=',g1,'&TOPPFTNAME=SK_EKZ_BOTTOM','">ВКЛЮЧИТЬ ИЗДАНИЕ В МОЙ КАТАЛОГ...</A><br>',
+       else 'Всего экземпляров в МОЕМ КАТАЛОГЕ - ',g999,
+            '<br><A HREF="IRBIS:1,,SK_EKZ,SK_EKZ_entry?RELOAD=1&KEY=',&uf('+3EI=',g1110,'/',v903),'&FREEPAR10=',&uf('+3E',g1110),'&FREEPAR11=',&uf('+3E',v903),'&FREEPAR12=',g1,'&TOPPFTNAME=SK_EKZ_BOTTOM','">КОРРЕКТИРОВАТЬ МОИ ЭКЗЕМПЛЯРЫ...</A><br>', 
+   fi,
+fi,   
+'</div>',
+'<hr noshade size="1"></td></tr>',
+'</table>',
+

@@ -1,0 +1,25 @@
+if v940^v:v991 then f(rsum(
+(if p(v940)then 
+    if p(v940^v) and v940^v=&unifor('Av991#1')then 
+       if p(v940^e) then 
+          if p(v940^c) then 
+             if &unifor('Kizc.mnu|'v940^c.6)<>''
+             then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6))*val(v940^x,|1|n940^x,' 0'),0,2) 
+             else 
+                if &unifor('Kizc.mnu|'v940^c.4)<>''
+                then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4))*val(v940^x,|1|n940^x,' 0'),0,2) 
+                else f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1990'))*val(v940^x,|1|n940^x,' 0'),0,2)  
+             fi fi 
+          else f(val(v940^e|;|)*val(v940^x,|1|n940^x,' 0'),0,2) 
+          fi 
+       else 
+          if p(v940^c) then 
+             if &unifor('Kizc.mnu|'v940^c.6)<>'' 
+             then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6))*val(v940^x,|1|n940^x,' 0'),0,2)';', 
+             else 
+                if &unifor('Kizc.mnu|'v940^c.4)<>'' 
+                then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4))*val(v940^x,|1|n940^x,' 0'),0,2)';',
+                else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1990'))*val(v940^x,|1|n940^x,' 0'),0,2)';',
+             fi fi 
+          else f(val(&unifor('Av10^d#1'),' 0')*val(v940^x,|1|n940^x,' 0'),0,2)';',
+ fi fi fi fi/)),0,2)fi,

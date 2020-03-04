@@ -1,0 +1,5 @@
+if ((l("I="v903))<=0) or (val(ref(l("I="v903),mfn))=val(mfn)) then '0'else 
+   if v920:'asp'then 
+   else '1 Ошибка: Дублетный Шифр 'v903,ref(l("I="v903),' (см. N ',f(val(mfn),0,0)')') fi fi/if s(v910^a):'1' or s(v910^2)<>''then
+/'1 Книга выдана читателю - корректировать шифр нельзя'fi
+

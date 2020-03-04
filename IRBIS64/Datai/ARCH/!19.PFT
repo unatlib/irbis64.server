@@ -1,0 +1,5 @@
+if p(v19) then if v19:'^b' then if L("B="d19,v19^a*2" ",v19^b) <= 0 or val(ref(l
+("B="d19,v19^a*2" ",v19^b),mfn))=val(mfn) then '0' else '1Дублетный Номер: ',v19
+^a*2" ",v19^b,ref(l("B="d19,v19^a*2" ",v19^b),' (см. N ',f(val(mfn),0,0),')')fi 
+else '1 Ошибка в структуре' fi fi
+

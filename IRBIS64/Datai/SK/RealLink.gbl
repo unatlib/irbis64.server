@@ -1,0 +1,129 @@
+1
+RealLink.wss
+  Задайте режим выполнения
+// определение активности ссылки
+// 991^A=1 - удалять неактивную 991^A=C - удалять ^K, 991^A=B - менять ^T
+IF
+if p(v951) then '1' fi
+DEL
+111
+*
+
+
+DEL
+112
+*
+
+
+DEL
+113
+*
+
+
+DEL
+114
+*
+
+
+ADD
+111
+
+(v951/)
+
+REPEAT
+ADD
+112
+
+'0'
+
+ADD
+113
+
+'0'
+
+ADD
+114
+
+if &uf('Av111^T#1')<>'' then &uf('Av111^T#1') else 'XXXXX' fi
+
+IF
+if &uf('Av111^I#1')<>'' then '1' fi
+IF
+if val(&uf('+9L11,,',,&uf('Av111^I#1')))=0 then '1' fi
+//---------не активна
+PUTLOG
+'MFN=',f(val(mfn),0,0),,' - ссылка ',,&uf('Av111#1'),,' не активна',,,if val(&uf('Av991^A#1'))=1 then ', удалена' fi,,,if &uf('Av991^B#1')<>'' then ', изменен текст' fi,,,if val(&uf('Av991^C#1'))=1 then ', снят признак ЭУ' fi
+IF
+if val(&uf('Av991^A#1'))=1  then '1' fi
+REP
+112
+L
+'1'
+
+FI
+IF
+if val(&uf('Av991^C#1'))=1 then '1' fi
+REP
+113
+L
+'1'
+
+FI
+IF
+if &uf('Av991^B#1')<>'' then '1' fi
+REP
+114
+L
+&uf('Av991^B#1')
+
+FI
+FI
+FI
+DEL
+111
+1
+
+
+UNTIL
+if p(v111) then '1' fi
+REP
+951^T
+F
+(if p(v951) then if p(v951^T) then if v114<>'' and v114<>'XXXXX' then v114 else v951^T fi else # fi fi/)
+
+REP
+951
+F
+(if p(v951) then v951,,,if p(v951^T) then  else if v114<>'' and v114<>'XXXXX' then '^T',,v114 fi  fi fi/)
+
+DEL
+951^K
+F
+(v113/)
+
+DEL
+951
+F
+(v112/)
+
+DEL
+112
+*
+
+
+DEL
+113
+*
+
+
+DEL
+114
+*
+
+
+FI
+DEL
+991
+*
+
+

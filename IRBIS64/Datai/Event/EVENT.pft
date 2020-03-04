@@ -1,0 +1,277 @@
+'</>',
+if v920:'event' then 
+   if p(v972) then '<b>'v972^a," ("v972^b")",'</b>',
+      (if p(v700) then '<br><b>'v700^a,| |v700^d,|, |v700^g,
+          if a(v700^g) then |, |d700^b,
+             if v700^b:'. 'or (not(v700^b:'.')) then v700^b else &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+          fi fi,'</b>'
+          if s(v700^1,v700^c,v700^f)<>''then' (',v700^1,
+             if s(v700^1)<>''then|;     |d700^c fi,v700^c,
+             if s(v700^1,v700^c)<>''then|; |d700^f fi,v700^f,')' 
+          fi,
+          | \|d700^4,&uf(|K702vs.mnu\|v700^4),if &uf('K702vs.mnu|'v700^4)='' then v700^4*4 fi,
+          |; |d700^5,&uf(|K702vs.mnu\|v700^5),if &uf(|K702vs.mnu\|v700^5)='' then v700^5*4 fi,
+          |; |d700^6,&uf(|K702vs.mnu\|v700^6),if &uf('K702vs.mnu|'v700^6)='' then v700^6*4 fi,
+          |(|v700^7|)|,|\|d700^4 
+      fi/) 
+   fi,
+   (if p(v702) then 
+       if p(v702^4) then '<br><b>'v702^a,| |v702^d,|, |v702^g,
+          if a(v702^g) then |, |d702^b,
+             if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) 
+          fi fi,'</b>'
+          if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,
+             if s(v702^1)<>''then|;     |d702^c fi,v702^c,
+             if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' 
+          fi,
+          | \|d702^4,&uf(|K702vs.mnu\|v702^4),if &uf('K702vs.mnu|'v702^4)='' then v702^4*4 fi,
+          |; |d702^5,&uf(|K702vs.mnu\|v702^5),if &uf(|K702vs.mnu\|v702^5)='' then v702^5*4 fi,
+          |; |d702^6,&uf(|K702vs.mnu\|v702^6),if &uf('K702vs.mnu|'v702^6)='' then v702^6*4 fi,
+          |(|v702^7|)|,|\|d702^4 
+   fi fi/),
+   '<br>',
+   "<br><b> Категория мероприятия: "d900^a,'</b>',&uf('K900aKat.mnu\'v900^a),
+   if &uf('K900aKat.mnu\'v900^a)='' then v900^a fi," ("v900^b")",
+   
+   "<br><b>Характер мероприятия: "d900^c,'</b>'
+   &uf('+7W1#'(&uf('1*R,?v900^c#1')/)/),
+   (&uf(|K900cHr.mnu\|g1)/),if s((&uf(|K900cHr.mnu\|g1)/))='' then v900^c fi,| "|v33^0|"|
+   
+   "<br><b>Степень доступности: "d900^p,'</b>'&uf('K900pSd.mnu\'v900^p),
+   if &uf('K900pSd.mnu\'v900^p)='' then v900^p fi,
+
+   if s(v210,v211)<>'' then '<br><b> Место проведения: </b> ',  
+      if v210:'^' then 
+         (if p(v210) then |<br><b>|v210^e|</b>|,|, |v211^g,|<br>Адрес: |v211^H,|<br>Телефон: |v211^T fi)
+      else       
+         &uf('+7W210#'if v210:'; ' then (&uf('1*R; ?v210#1')/) else v210 fi/),
+         &uf('+7W2101#'
+                (if g210<>'' then 
+                    if &uf(|Kmp_otd.mnu\|g210)<>'' then &uf(|Kmp_otd.mnu\|g210) else g210 fi fi/))
+         if v211<>'' then '<br>',|; |+g2101 else " "|; |+g2101 fi,
+         (if p(v211) then '<br>'
+             if v211=s('^K'v211^k) then 
+                if &uf(|Kmp_so.mnu\|v211^k)<>'' then '<b>'&uf(|Kmp_so.mnu\|v211^k)'</b>' else 
+                   if &uf(|Kotd_vse.mnu\|v211^k)<>'' then '<b>'&uf(|Kotd_vse.mnu\|v211^k)'</b>' 
+                   else '<b>'v211^k '</b>'
+                fi fi 
+             else '<b>'v211^e '</b>',
+                if v211^e='' then 
+                   if &uf(|Kotd_vse.mnu\|v211^k)<>'' then '<b>'&uf(|Kotd_vse.mnu\|v211^k)'</b>' 
+                   else '<b>'v211^k '</b>'
+                fi fi,
+                |, |v211^g,|<br>Адрес: |v211^H,|<br>Телефон: |v211^T 
+          fi fi)
+   fi fi
+   if v30<>'' then 
+      if v30^b='' 
+      then 
+         if v900^c:'P' then '<br><b> Дата открытия: </b>'
+         else '<br><b> Дата проведения: </b>'fi,
+        if v30^a*4<>'' then v30^a*6' '&uf('37'v30^a*4.2)fi, ' 'v30^a.4" г.","  с "v31^a," до "v31^b,
+        if 'P D':v900^c then ' - ' fi
+      else '<br><b> Время проведения</b>: ',
+        '  с ' v30^a*6' '&uf('37'v30^a*4.2) ' 'v30^a.4" г.",
+        ' до 'v30^b*6' '&uf('37'v30^b*4.2) ' 'v30^b.4" г.", 
+        "  с "v31^a," до "v31^b,
+        "<br>  (Исключения: "v30^c|)|,
+   fi fi,
+   "<br>Возрастные ограничения: "v900^z,
+   "<br><b> Коллектив"d711, 
+   if &unifor('Av711#2')<>'' then 'ы: ' else ": "d711, fi "</b>"d711,
+   (if p(v711) then |<br>|+v711^a,if a(v711^a) then v711^r fi,
+       if p(v711^4) then 
+          | \|d711^4,if &uf('K702vs.mnu\'v711^4)<>'' then &uf('K702vs.mnu\'v711^4) else v711^4 fi,
+          |, |d711^5,if &uf('K702vs.mnu\'v711^5)<>'' then &uf('K702vs.mnu\'v711^5) else v711^5 fi,,
+          |, |d711^6,if &uf('K702vs.mnu\'v711^6)<>'' then &uf('K702vs.mnu\'v711^6) else v711^6 fi,
+          |(|v711^7|)|,|\|d711^4 
+   fi fi), 
+
+  if s(v90,v40,v41)<>'' then '<br>'
+      &uf('+7W90#'f(rsum((v90^d|,|)),0,0)),
+      &uf('+7W40#'f(rsum((v40^c|,|,v41^d|,|,v90^d|,|)),0,0)),
+           '<br><b>Мероприятие посетили: </b>всего - 'g40,' человек',if '2 3 4':&uf('+961*0.1#'g40) then 'а'fi,
+           ' (читатели - ',f(rsum((v90^d|,|)),0,0)'; гости - 'f(rsum((v40^c|,|,v41^d|,|)),0,0),')',
+      &uf('+7W41#'f(rsum((if p(v40) then if v40^a=&uf('3') then v40^c|,| fi fi/))+
+                    rsum((if p(v41) then if v41^a=&uf('3') then v41^d|,| fi fi/))+
+                    rsum((if p(v90) then if v90^a=&uf('3') then v90^d|,| fi fi)),0,0)),
+     if g41<>'' then 
+            '<br><b>Сегодня: </b>всего - 'g41,' человек',if '2 3 4':&uf('+961*0.1#'g41) then 'а'fi,
+            ' (читатели - ',f(rsum((if p(v90) then if v90^a=&uf('3') then v90^d|,| fi fi)),0,0)
+            '; гости - '    f(rsum((if p(v40) then if v40^a=&uf('3') then v40^c|,| fi fi/))+
+                              rsum((if p(v41) then if v41^a=&uf('3') then v41^d|,| fi fi/)),0,0),')'
+   fi fi,
+   
+   if v997:'Z' then '<br>Мероприятие ЗАКОНЧЕНО'
+   else 
+      if v997:'P' or v997:'O' then 
+         (if p(v997) then 
+             if v997:'P' then '<br>Мероприятие ПЕРЕНЕСЕНО на '
+                v30^a*6' '&uf('37'v30^a*4.2) ' 'v30^a.4" года",
+               if v30^b<>'' then' - 'v30^b*6' '&uf('37'v30^b*4.2) ' 'v30^b.4" года" fi,
+               | (|v997^b|)| 
+          fi fi/) 
+         (if p(v997) then if v997^A:'O' then '<br>Мероприятие ОТМЕНЕНО',| (|v997^b|)| fi fi/)
+      else 
+         if v30<>'' then 
+            if v30^a >= &uf('3') then 
+               if val(v30^a) = val(&uf('3'))then '<br> <b>Мероприятие состоится СЕГОДНЯ - </b>' fi 
+            else 
+               if (not(v900^c:'P')) and 
+                  (v30^b='' and v30^a<>'' and v30^a < &uf('3') or 
+                   v30^b<>'' and v30^b < &uf('3')) 
+               then '<br>Мероприятие ЗАКОНЧЕНО'
+               else 
+                  if val(v30^a) = val(&uf('3')) then '<br><b>Открытие сегодня</b>' fi 
+                  if val(v30^b*4.2) = val(&uf('31')) then 
+                     if v30^b = &uf('3') then '<br>Мероприятие заканчивается СЕГОДНЯ'  
+                     else '<br>До окончания мероприятия осталось: '&uf('3C'v30^b/&uf('3')), ' 'den 
+             fi fi fi fi 
+          else 
+             if v900^c='P' then '<br>Начало мероприятия: '
+                v30^a*6' '&uf('37'v30^a*4.2) ' 'v30^a.4" года"," в "v31^a' час.'
+    fi fi fi fi,
+   
+    "<br>Ответственный:  "v304^a,
+    
+    if v60<>''then '<br><br><b>Тематика: </b>' if &uf('Av60^a#2')<>'' then'<br>' fi 
+       (if p(v60) then |<br>|+d60^a,&uf(|Ktema.mnu\|v60^a),
+           if p(v60^x) then | (|d60^a,v60^x+|; |")" fi fi)
+    fi,
+
+      
+    if p(v330)then '<br>'&uf('S0'),
+       if a(v905^c) then 
+          if v920:'event' then 
+            &uf('+7W330#'(v330^v/)),&uf('+7G330'),
+            if &uf('IMAIN,LimPftFull_330,10')='' and val(&uf('+N330')) > 10 OR 
+               &uf('IMAIN,LimPftFull_330,10')<>''and val(&uf('+N330')) > val(&unifor('IMAIN,LimPftFull_330,10')) or 
+               v905^k <>'' and val(&uf('+N330')) > val(v905^k) or v905^k ='' and val(&uf('+N330')) > 10 
+            then 
+               '<A HREF="IRBIS:1,,,o330_H_FULL_mer?&KEY=@',mfn,'">','<i><font size="3"> ' 
+               '<br>' &uf('Kvv_mn.mnu\'&uf('Av330^v#1')),' (в новом окне)',' </font></i>','</A>','<br>',
+            else 
+               if &uf('Ag330#2')<>'' or g330='' or &uf('Av330#2')<>'' 
+               then'<b>'&uf('Kvv_mn.mnu\'&uf('Av330^v#1')) ':</b>'
+                  (if p(v330) then '<br>	&nbsp;	&nbsp;	&nbsp;','<b>'&uf('S1A'),'. '
+                      v330^c|</b>|,|<br>Аннотация: |v330^l,|<br>Примечание |v330^p
+                      if v330^]<>''then 
+                         if v330^[='1'then '<A HREF="',&uf('+\1',v330^]),'">', 
+                         else 
+                            if v330^[='0'then '<A HREF="IRBIS:3,10,,',v330^],'">',
+                         fi fi,&uf('+S1',| (см.  |v330^j|)|),'</A>','</b>' 
+                      fi
+                      if p(v330^i) and p(v330^j) and v330^j<>'3' then  
+                         if v330^j='2' then 
+                            '	&nbsp;<A HREF="IRBIS:3,12,,',mfn,',',f(val(v330^i),0,0),'">',
+                            'см. '&uf('Av953^t#'v330^i) ,'</A><br>' fi,
+                         if v330^j='1' then 
+                            '<br>'&uf('Av953^t#'v330^i)'<br>',
+                            '<A HREF="IRBIS:3,12,,',mfn,',',f(val(v330^i),0,0),'">',
+                            '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',v330^i,'"></A>' fi
+                  fi fi)  
+               else 
+                  if &unifor('Av330#2')<>'' then &uf('Kvv_mn.mnu\'&uf('Av330^v#1'))," : "d330 
+                  else &uf('Av330^v#1') fi,
+                  (if p(v330) then '<br>''	&nbsp;	&nbsp;	&nbsp;'
+                      |<b>|v330^c|</b>|,|<br>Аннотация: |v330^l,|<br>Примечание |v330^p
+                      if v330^]<>''then 
+                         if v330^[='1'then '<A HREF="',&uf('+\1',v330^]),'">', 
+                         else 
+                            if v330^[='0'then '<A HREF="IRBIS:3,10,,',v330^],'">',
+                         fi fi,&uf('+S1',| (см.  |v330^j|)|),'</A>','</b>' 
+                      fi
+                      if p(v330^i) then 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+             '<br>'&uf('Av953^t#'v330^i)'<br>','<A HREF="IRBIS:3,12,,',mfn,',',f(val(v330^i),0,0),'">',
+             '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',v330^i,'"></A>'
+                      fi'<br>', 
+                   fi) 
+            fi fi
+   fi fi fi,
+   mhl,"<br>"d331,(|<br>	&nbsp;	&nbsp;	&nbsp;|v331),
+
+   if v320<>'' then 
+      if a(v905^d) then 
+         if &uf('IMAIN,LimPftFull_390,30')='' and val(&uf('+N320')) > 30 OR 
+            &uf('IMAIN,LimPftFull_390,30')<>''and val(&uf('+N320')) > val(&unifor('IMAIN,LimPftFull_390,30')) or 
+            v905^m <>'' and val(&uf('+N320')) > val(v905^m) or v905^m ='' and val(&uf('+N320')) > 10
+         then       
+            '<A HREF="IRBIS:1,,,bibl320_H_Full?&KEY=@',mfn,'">',
+            '<i><font size="3"> <br> <b> Список библиографии </b> (в новом окне) </font></i>','</A>','<br>',
+         else '<br><b>Библиография:</b>',&unifor('S0'), 
+            (if p(v320) then|<br>|d320,&uf('S1A'),'. ', 
+                if p(v320^w) then |<A HREF="IRBIS:2,,|d320^w,v320^9,if a(v320^9) then 'IBIS' fi,
+                |,,I=|v320^w|">|,v320^a,'</A>',
+                | <b>- см.</b> |,v320^8 
+                else v320^a fi, 
+             fi) 
+   fi fi fi, 
+ 
+   if v905^a<>'' then else 
+      if p(v230) then '<br><b>Технические требования</b>',
+         if v230^x:'2' then 
+            &uf('+7W230#'(if p(v230) then if v230^x='2' then v230^d fi fi/)),
+            &uf('+7W231#'(| ; |+g230)),
+            &uf('+7W232#'(&uf('1*R ; ?g231#1')/)),
+            '<br><b>Участники:</b> '(|<br> - |g232),(|<br> - |v230^e),
+         fi,
+         if v230^x:'1' then 
+            &uf('+7W130#'(if p(v230) then if v230^x='1' then v230^d fi fi/)),
+            &uf('+7W131#'(| ; |+g130)),
+            &uf('+7W132#'(&uf('1*R ; ?g131#1')/)),
+            '<br><b>Организаторы:</b> '(|<br> - |g132),
+   fi fi fi,
+  
+   if p(v488) then '<br><b>См. также</b>: ',&uf('S0'),
+      (if p(v488) then|<br> |d488,
+          if &unifor('Av488#2')<>''then 
+             if p(v488)then'<b> ',&unifor('S1A'),'.</b> '
+          fi fi,
+          if v488^1:'3' then 'В БД  КЗД - '  fi
+          if v488^1:'2' then 
+             if p(v488^w) then 
+                '<A HREF="IRBIS:1,,,,'&uf('+3EI='v488^w),'">',v488^a,' (№ пункта Плана '&uf('Av972^0#1'),')','</A>' 
+             else v488^a fi fi,
+          if '1 0 3':v488^1 then 
+             if p(v488^w) then '<A HREF="IRBIS:1,,'v488^9',,I='&uf('+3E'v488^w),'">',v488^a,
+                if a(v488^a) then 'В БД 'v488^9 fi,'</A>' else v488^a 
+          fi fi,
+       fi/) 
+   fi 
+
+   if v905^b<>'' then else 
+      if p(v709) then '<br><b>Контакты: </b>',
+         (if p(v709) then |<br>|v709^a,|, |v709^b,|, Адрес для связи: |v709^c,|, Тел.: |v709^d,| E-mail: |v709^e fi) 
+   fi fi
+   if s(v330^i,v330^j)<>'' then else 
+      (if p(v953) then 
+          if v953^p:'3' then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+             "<br>"|<br>	&nbsp;	&nbsp;	&nbsp;|+v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+             '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+       fi fi'<br>') 
+   fi,
+   if s(v330^[)<>'' then else 
+      if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+         (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',
+             if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+         if g140 : 'IRI' then 
+            (if p(v951^A) then '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),
+             '?&C21COM=2&IMAGE_FILE_DOWNLOAD=1&I21DBN=',&uf('+D'),'&Image_file_name=',v951^A,'">',
+                if p(v951^T) then v951^T else v951^A fi,'</A>', 
+             fi), 
+         else 
+            (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',
+                if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+         fi     
+         (if v951^N<>'' then 
+             if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' 
+             else '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',
+                &uf('+90'),'&KEY=@',mfn,'">',
+                if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', 
+         fi  fi),
+    fi,
+    (if p(v19)then if v19^a:'DOI'then If &uf('Av951#1')<>''then', 'fi,
+        '<br><A HREF="',&uf('+\1','http://dx.doi.org/'v19^b),'">',|Переход по DOI|d19^b,'</A>', fi fi)
+fi fi 

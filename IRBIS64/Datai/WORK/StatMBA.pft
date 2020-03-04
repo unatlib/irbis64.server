@@ -1,0 +1,58 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx788 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5324 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7025 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8726 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10427 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12128 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13829 
+\pard \widctlpar\intbl {\ql \fs24 '&uf('S1A')
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if v1.1='#' then v1*1 else v1 fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if v1.1='#' then if val(v2)<=0 then ' - ' else f(val(v2),0,0) fi   else  if val(v2)<=1 then ' - ' else f(val(v2)-1,0,0) fi   fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if val(v3)<=0 then ' - ' else f(val(v3),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if val(v4)<=0 then ' - ' else f(val(v4),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if val(v5)<=0 then ' - ' else f(val(v5),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',if val(v6)<=0 then ' - ' else f(val(v6),0,0) fi,,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

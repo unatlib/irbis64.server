@@ -1,0 +1,91 @@
+9
+0
+Дисциплина
+0
+0
+0
+
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v3^A) then v3^A else ' ' fi/')
+W
+УНД
+0
+0
+0
+
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v97) then v97 else " "n97 fi/')
+H
+Вып.каф.
+0
+0
+0
+
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v94) then v94 else " "n94 fi/')
+N
+Напр.
+0
+0
+1
+napr.mnu\\2
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v92^n) then v92^n else " "n92^n fi/')
+C
+Спец.
+0
+0
+0
+
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v92^c) then v92^c else " "n92^c fi/')
+A
+Фак.
+0
+0
+1
+fak.mnu\\2
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v93) then v93 else " "n93 fi/')
+V
+ВО
+0
+0
+1
+vo.mnu
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v96) then v96 else " "n96 fi/')
+O
+ФО
+0
+0
+1
+fo.mnu
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v98) then v98 else " "n98 fi/')
+F
+Семестр
+0
+0
+0
+
+
+
+
+&unifor('7VUZ,"IDU=',v3^0,'",if p(v95) then v95 else " "n95 fi/')

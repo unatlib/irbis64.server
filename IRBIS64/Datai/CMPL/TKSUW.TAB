@@ -1,0 +1,90 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+v18^1
+v45^5
+f(val(v45^6,' 0'),0,2)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9808
+\pard \ql\widctlpar\intbl {\par  Итого: Названий, поступивших впервые, - ',f(val(v1),0,0),'; Экземпляров - ',f(val(v2),0,0),'; На сумму - ',if val(v3)>0 then f(val(v3),0,2),' р.'fi
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;
+\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\widctlpar \f0\fs22\lang1049 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\widctlpar\tqc\tx4153\tqr\tx8306 \f0\fs20\lang1049 \sbasedon0\snext15 header;}{\*\cs16 \additive\sbasedon10 page number;}}{\info
+{\title          \'cb\'e8\'f1\'f2 \'e8\'ed\'e2\'e5\'ed\'f2\'e0\'f0\'ed\'ee\'e9 \'ea\'ed\'e8\'e3\'e8 \'e4\'eb\'ff \'ef\'ee\'e4\'f0\'e0\'e7\'e4\'e5\'eb\'e5\'ed\'e8\'ff \'d5\'d0}{\author Alexandre Katalov}{\operator Alexandre Katalov}
+{\creatim\yr1999\mo4\dy8\hr10\min14}{\revtim\yr1999\mo4\dy8\hr10\min17}{\version2}{\edmins3}{\nofpages1}{\nofwords37}{\nofchars212}{\*\company Elcom Ltd}{\vern57443}}\paperw13041\paperh16727\margl567\margr567\margt567\margb1134
+\widowctrl\ftnbj\aenddoc\hyphhotz60\hyphauto1\formshade \fet0\sectd \linex0\headery709\footery709\colsx709\endnhere {\header \pard\plain \s15\widctlpar\tqc\tx4153\tqr\tx8306\pvpara\phmrg\posxc\posy0 \f0\fs20\lang1049 {\field{\*\fldinst {\cs16 PAGE  }
+}{\fldrslt {\cs16\lang1024 1}}}{\cs16
+\par }\pard \s15\widctlpar\tqc\tx4153\tqr\tx8306
+\par }{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \widctlpar \f0\fs20\lang1049 {\b\fs24
+\par }\pard \qc\widctlpar
+{}
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1066
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2028
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3350
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4412
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6718
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7680
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8642
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9808
+\pard \qc\widctlpar\intbl {\b Год и N записи в КСУ\cell }
+\pard \qc\widctlpar\intbl {\b N акта\cell }
+\pard \qc\widctlpar\intbl {\b Дата\cell }
+\pard \qc\widctlpar\intbl {\b N сопр. док-та\cell }
+\pard \qc\widctlpar\intbl {\b Источник комплектования\cell }
+\pard \qc\widctlpar\intbl {\b Всего назв.\cell }
+\pard \qc\widctlpar\intbl {\b Всего экз.\cell }
+\pard \qc\widctlpar\intbl {\b На сумму\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

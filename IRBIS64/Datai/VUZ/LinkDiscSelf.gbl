@@ -1,0 +1,167 @@
+1
+PrLinkRdr.wss
+Выполнять задание для записей БД RDR?
+//12 PUTLOG
+// 10.1 добавила задание на связь студентов
+// 13 добавила создание записей FAK
+// используется: возврат из каталогизатора, связать для записи DISC
+// 9.1 задание програмно вызывается на записях VUZ
+// 1001 - содержит данные поля 83 + номер группы и вып.кафедры
+// 1069 - для поля 69 идент. дисциплины и кафедра
+IF
+if v920:'VUZ' then '1' else '0' fi
+//--------запись VUZ, добавление нового повторения поля 69 
+IF
+if p(v1001) then '1' fi,,,,&uf('+7W7#')
+DEL
+2069
+*		
+
+
+DEL
+1002
+*
+
+
+ADD
+1002
+
+mpu,(v1001/)
+
+REPEAT
+REP
+68
+1
+v68,,,if v68^E='' and &uf('Av1002^E#1')<>'' then '^E',,&uf('Av1002^E#1'),,,&uf('+7W7#1') fi,,if v68^H='' and &uf('Av1002^H#1')<>'' then '^H',,&uf('Av1002^H#1'),,,&uf('+7W7#1') fi,,
+
+ADD
+2069
+
+if &uf('Av1002^A#1')=&uf('+97',v68^A) and &uf('Av1002^N#1')=&uf('+97',v68^N) and &uf('Av1002^C#1')=&uf('+97',v68^C) and &uf('Av1002^O#1')=&uf('+97',v68^O) and &uf('Av1002^V#1')=&uf('+97',v68^V) and val(&uf('Av1002^F#1'))=val(v68^F) then &uf('Av1069#1'), fi
+
+DEL
+1002
+1
+
+
+UNTIL
+if p(v2069) then '0' else if p(v1002) then '1' fi fi
+// из поля 2069 в 69 с проверкой на дубль
+IF
+if p(v2069) then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+mpu,(v69/)
+
+IF
+if rsum((if p(v111) then if v111^B=&uf('+97',&uf('Av2069^B#1')) and v111^D=&uf('+97',&uf('Av2069^D#1'))  then '1,' else '0,' fi fi))=0 then '1' fi
+
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+v2069,&uf('+7W7#1')
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if G7<>'' then '1' fi
+PUTLOG
+'Дописана запись VUZ. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+111
+*
+
+
+FI
+DEL
+1001
+*
+
+
+DEL
+1002
+*
+
+
+DEL
+1069
+*
+
+
+DEL
+2069
+*
+
+
+FI
+//----------------------- создание записи FAK
+IF
+if val(&unifor('JVUZ,',,,,,,'FFO=',v68^A,"ВСЕ"n68^A,v68^L,v68^T'-',v68^O,"ВСЕ"n68^O,,,,,,,,,,))<=0 then '1' fi
+// записи FAK-FO еще нет - создаю
+NEWMFN
+'VUZ'
+ADD
+920
+
+'FAK'
+
+ADD
+93
+
+if v68^A<>'' then v68^A else 'ВСЕ' fi
+
+ADD
+91
+
+v68^L
+
+ADD
+92
+
+v68^T
+
+ADD
+98
+
+if v68^O<>'' then v68^O else 'ВСЕ' fi
+
+// на случай одинаковой кафедры
+ADD
+5
+
+(if p(v69^B) then &uf('Pv69^B')/ fi/)
+
+PUTLOG
+'Создана запись факультета ',,v93,," - "v98
+END
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------------------------------Корректировка записей RDR, если задана
+IF
+if val(v991^1)=1 then '1' fi
+//--------------------------------------запись читателя - чтобы сформировать поля 69
+IF
+if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then '1' else '0' fi
+PUTLOG
+'LINKCORRTASK=LinkRDR%DBN=RDR%QUERY=',,if val(&uf('IMAIN,LinkGroup,0'))=1 then "GR="v68^E ,,else '"?',v68^a,,v68^n,,v68^c,v68^v,v68^o,'-S',,v68^f fi,,'"%'
+FI
+FI
+//----------конец записи VUZ
+FI
+DEL
+991
+*
+
+

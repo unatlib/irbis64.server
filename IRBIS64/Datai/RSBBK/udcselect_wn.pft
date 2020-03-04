@@ -1,0 +1,8 @@
+'<title>',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,': Отобранные элементы</title>'
+'<b>',if p(v1004) then 'Отобраны элементы: 'else 'Нет отобранных элементов.'fi,'</b>'
+(if p(v1004) then &unifor(|D,!U=|v1004^A|!,@ref0_wn|) fi),
+'<br>',
+/*if p(v1004) then '<b>Конструктор:</b><br>',
+/*'<input type="text" name="" size="50" value="',v1004^A+|    |,'">',
+/*fi,
+

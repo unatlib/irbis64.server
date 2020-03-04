@@ -1,0 +1,11 @@
+Form4ev
+if &uf('Av907^A.4#1')=v1000^a then &uf('+7W100#'(if p(v60) then if &uf(|KTO_form3ev_tema_SF.mnu\|v60^a)<>'' then &uf(|KTO_form3ev_tema_SF.mnu\|v60^a) else '???' fi fi/)),&uf('+7G100'),(g100/) fi
+form4ev_tema_SF.mnu
+if &uf('Av907^A.4#1')=v1000^a then &uf('+7W100#'(if p(v60) then if &uf(|KTO_form3ev_tema_SF.mnu\|v60^a)<>'' then &uf(|KTO_form3ev_tema_SF.mnu\|v60^a) else '???' fi fi/)),if g100<>'' then &uf('Av907^a*4.2#1') fi fi
+MONTH_SF.mnu
+4,7
+991.wss,1000
+'Ввод различных описаний мероприятий по месяцам за ', v1000^A,' г.'
+1,1
+'Распределение по темам мероприятий, проведеных за ', v1000^A,' г.',/'Тематика (укрупненная)'
+'Распределение по месяцам мероприятий, проведеных за ', v1000^A,' г.',/'Месяц'

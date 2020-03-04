@@ -1,0 +1,4 @@
+(if s(v691^d,v691^i)<>''then 
+   if p(v691^i) then &unifor('DVUZ,!IDD=',v691^i,'!,v3^a,|=|v3^b,|(|v3^0|)|') 
+   else v691^d 
+fi fi/)

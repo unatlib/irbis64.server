@@ -1,0 +1,1 @@
+&uf('S0'),(if p(v702)then if s(v702^4*4,|, |v702^5*4,|, |v702^6*4)=&uf('Ag1#1') then &uf('+7W5#'&uf('S1A')), fi/ fi,),&uf('+7U4#^!'g1,'^$'g5,(if p(v702)then if s(v702^4*4,|, |v702^5*4,|, |v702^6*4)=&uf('Ag1#1') then v702,if val(&uf('Ag5#1'))>2 then '^+'if &uf('Av101#1')='' or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и др.]' else ' [et al.]' fi  BREAK fi/, fi fi,))

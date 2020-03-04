@@ -1,0 +1,282 @@
+0
+IF
+if p(v200) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v200^R:'1' then '0' else '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+400
+XXXXXXXXXXXXXXXXXXX
+if p(v200) then '^G'v200^g,"IBIS"n200^g,'^W'v200^a,if p(v200^!)then else'-'&unifor('R') fi,"^B"v200^b,"^H"v200^k,'^K'v200^m,if a(v200^m) then &unifor('IREQUEST,MaskStore,') fi,'^D'v200^d,if a(v200^d) then &unifor('3') fi,'^1'&uf('39'),'^E'v200^e,if a(v200^e) then &unifor('3'),'^!' fi,'^V'v200^w,if a(v200^w) then &unifor('IREQUEST,MaskMrg,') fi,'^F******',"^C"d200,v200^f" ",v200^c,". "v200^h,": "v200^i,|. -|v200^j,'^I'&unifor('IMAIN,OtvFace,'),if &unifor('IMAIN,OtvFace,')='' then v200^l fi fi/
+XXXXXXXXXXXXXXXXXXX
+REP
+400^e
+F
+(if p(v400) then if p(v400^!) then if '01 03 05 07 08 10 12':v400^e*4.2 then if (val(v400^e*6)+20)>31 then if v400^e*4.2:'12'then f((val(v400^e.4)+1),0,0),'01'else v400^e.4,if v400^e*4.2:'10'then else'0'fi,f((val(v400^e*4.2)+1),0,0) fi,if val(v400^e*6)>=21 then else'0'fi,f((val(v400^e*6)+20-31),0,0) else v400^e.6,f((val(v400^e*6)+20),0,0) fi else if v400^e*4.2:'02' then if (val(v400^e*6)+20)>28 then v400^e.4,'03',if val(v400^e*6)>=18 then else'0'fi,f((val(v400^e*6)+20-28),0,0) else v400^e.6,f((val(v400^e*6)+20),0,0) fi else if (val(v400^e*6)+20)>30 then v400^e.4,if val(v400^e*4.2)>=9 then else'0'fi,f((val(v400^e*4.2)+1),0,0),if val(v400^e*6)>=20 then else'0'fi,f((val(v400^e*6)+20-30),0,0) else v400^e.6,f((val(v400^e*6)+20),0,0) fi fi fi else v400^e fi fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+400^1
+*
+':'
+''
+CHA
+400
+*
+'^!'
+''
+ADD
+40
+XXXXXXXXXXXXXXXXXXX
+(v400/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+400
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if p(v200) and a(v200^!) then v200^g,"IBIS"n200^g fi
+ADD
+700
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then "^A"v200^f,"^X"v200^x fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+700
+F
+if v700^a:', 'then', 'else if v700^a:','then',' else if v700^a:' 'then' ' fi fi fi
+if v700^a:', 'then'^G'else if v700^a:','then'^G'else if v700^a:' 'then'^B'fi fi fi
+ADD
+701
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then "^A"v200^2,"^X"v200^x fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+701
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then "^A"v200^3,"^X"v200^x fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+701
+F
+(if v701^a:', 'then', 'else if v701^a:','then',' else if v701^a:' 'then' ' fi fi fi/)
+(if v701^a:', 'then'^G'else if v701^a:','then'^G'else if v701^a:' 'then'^B'fi fi fi/)
+ADD
+200
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then "^A"v200^c else "^V"v200^h,"^A"v200^i fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+923
+XXXXXXXXXXXXXXXXXXX
+if (v200^v:'05' or a(v200^v)) and s(v200^h,v200^i)<>'' then "^H"v200^h,"^I"v200^i fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+461
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then else "^X"v200^f,"^9"v200^x,"^C"v200^c fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+961
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then else "^A"v200^f,"^X"v200^x,'^ZДА' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+961
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then else "^A"v200^2,"^X"v200^x fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+961
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then else "^A"v200^3,"^X"v200^x fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+961
+F
+(if v961^a:', 'then', 'else if v961^a:','then',' else if v961^a:' 'then' ' fi fi fi/)
+(if v961^a:', 'then'^G'else if v961^a:','then'^G'else if v961^a:' 'then'^B'fi fi fi/)
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+if v200^v:'05' or '04 07':v200^v and a(v200^h) or a(v200^v) then 'PAZK'else'SPEC' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+"^D"v200^j
+XXXXXXXXXXXXXXXXXXX
+ADD
+215
+XXXXXXXXXXXXXXXXXXX
+"^A"v200^s
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if v200^r:'1' then v200^a,if p(v200^!)then else'-'&unifor('R') fi else v40^w fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+906
+XXXXXXXXXXXXXXXXXXX
+v200^a
+XXXXXXXXXXXXXXXXXXX
+ADD
+900
+XXXXXXXXXXXXXXXXXXX
+"^B!!!"v200^v,"^B!!!05"n200^v
+XXXXXXXXXXXXXXXXXXX
+ADD
+905
+XXXXXXXXXXXXXXXXXXX
+"^0"v200^9
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if p(v200^1)then'^AU^1'v200^1,'^21'else '^A' if v200^r:'1'then '9' else '1' fi fi,"^B"v200^b,'^C',v200^p,if a(v200^p) then &unifor('3') fi,"^D"v200^m,"^H"v200^k
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+'^C!!! из RDR','^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),if &unifor('IPRIVATE,FIO,')=''then v200^l fi
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if p(v200^!) then v200^g,"IBIS"n200^g fi
+v200
+"I="v200^a
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if p(v1001^1)then'^AU^1'v1001^1,'^21'else'^A1'fi,"^B"v1001^b,'^C',v1001^p,if a(v1001^p) then &unifor('3') fi,"^D"v1001^m,"^H"v1001^k
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+'^C!!! из RDR','^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),if &unifor('IPRIVATE,FIO,')=''then v1001^l fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+&uf('+7W2#'&uf('7RQST,?RR='v30"/",v200^a|?,if p(v200) and v40<>'' and v41='' then 'RR='v30"/",v200^a fi|)),if g2<>'' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+'RQST'
+v200
+g2
+XXXXXXXXXXXXXXXXXXX
+ADD
+40
+XXXXXXXXXXXXXXXXXXX
+if p(v1001^1)then'^AU^1'v1001^1,'^21'else'^A1'fi,"^B"v1001^b,'^C',v1001^p,if a(v1001^p) then &unifor('3') fi,"^D"v1001^m,"^H"v1001^k
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CHA
+40
+*
+'^W'
+'^A'
+DEL
+200
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-----архивация данных по параметру
+IF
+if p(v40) and val(&uf('IMAIN,AUTOARHIV,'))=1 then '1' fi
+DEL
+1040
+*
+
+
+ADD
+1040
+
+(if p(v40) then if v40^F<>'' and v40^F<>'******' then v40 fi fi/)
+
+DEL
+40
+F
+(if p(v40) then if v40^F<>'' and v40^F<>'******' then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+
+REPEAT
+NEWMFN
+'RDR_ARH'
+ADD
+30
+
+v30
+
+ADD
+40
+
+&uf('Av1040#1')
+
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') 
+XXXXXXXXXXXXXXXXXXX
+END
+DEL
+1040
+1
+
+
+UNTIL
+if p(v1040) then '1' fi
+ 
+FI
+// формирование поля 51 дата записи
+ADD
+51
+
+if a(v51) and val(mfn)<1 then &uf('3'),,,if &uf('IRequest,MaskMrg,')<>'' then '^C',,&uf('IRequest,MaskMrg,') fi fi
+

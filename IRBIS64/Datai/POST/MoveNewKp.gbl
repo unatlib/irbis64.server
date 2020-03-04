@@ -1,0 +1,132 @@
+// Перенос новых из КП
+o
+DEFFLD
+3000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+4000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if a(v86) then '1' fi
+PUTFLD
+'POST: MFN=',f(val(mfn),0,0),' - нет индекса подписки, не перенесена
+FI
+IF
+if p(v86) then '1' fi
+// проверка наличия индекса в CMPL
+IF
+if val(&unifor('JCMPL,IP=',v86) )>0 then '1' fi
+PUTFLD
+'POST: MFN=',f(val(mfn),0,0),' - в БД CMPL уже есть запись с индексом ',v86,', не перенесена
+FI
+IF
+if val(&unifor('JCMPL,IP=',v86) )<=0 then '1' fi
+NEWMFN
+'CMPL'
+ADD
+920
+
+'OJK'
+
+ADD
+101
+
+if &unifor("Kjzo.mnu|"v101)<>''then &unifor("Kjzo.mnu|"v101) else v101 fi
+
+ADD
+102
+
+if &unifor("Kstro.mnu|"v102)<>''then &unifor("Kstro.mnu|"v102) else v102 fi
+
+ADD
+110
+
+if p(v110)then '^B',&unifor("Kvido.mnu|"v110^b),if &unifor("Kvido.mnu|"v110^b)=''then v110^b FI,|^X|v110^x|^D|,if &unifor("K110do.mnu|"v110^x)<>''then &unifor('K110do.mnu|'v110^x) else v110^x fi fi
+
+ADD
+591
+
+v591
+
+ADD
+200
+
+if v200:'^a' then v200 else"^A"v200 fi
+
+ADD
+903
+
+if v903.1='-' or a(v903) then v200.1,if a(v200)then v951.1 fi,&uf('R') else v903 fi
+
+ADD
+923
+
+v923
+
+ADD
+210
+
+(v210/)
+
+ADD
+86
+
+v86
+
+ADD
+60
+
+v60
+
+ADD
+675
+
+(v675/)
+
+ADD
+33
+
+if s(v340^b,v341^b,v342^b,v3411^b,v3412^b,v3413^b,v3414^b)<>'' then if &unifor('IPRIVATE,GOD,')<>'' then &unifor('IPRIVATE,GOD,') else &unifor('30') fi,'/',"0"d340^b,"1"d341^b,"2"d342^b,"1-1"d3411^b,"1-2"d3412^b,"1-3"d3413^b,"1-4"d3414^b else &uf('+7W33#'&unifor('IPRIVATE,PP,')),if s(v340,v341,v342,v3411,v3412,v3413,v3414)<>'' then if g33<>'' then g33 else if &unifor('IPRIVATE,GOD,')<>''then &unifor('IPRIVATE,GOD,') else &unifor('30') fi,'/',"0"d340,"1"d341,"2"d342,"1-1"d3411,"1-2"d3412,"1-3"d3413,"1-4"d3414 fi fi fi
+
+ADD
+34
+
+if s(v340^b,v341^b,v342^b,v3411^b,v3412^b,v3413^b,v3414^b)<>'' then if p(v340^b) then v340^a fi,if p(v341^b) then v341^a fi,if p(v342^b)then v342^a fi,if p(v3411^b)then v3411^a fi,if p(v3412^b)then v3412^a fi,if p(v3413^b)then v3413^a fi,if p(v3414^b)then v3414^a fi else if g33<>'' then if g33:'0' then v340^a fi,if g33:'-' then if &uf('G2-'g33)='1' then v3411^a fi,if &uf('G2-'g33)='2' then v3412^a fi,if &uf('G2-'g33)='3' then v3413^a fi,if &uf('G2-'g33)='4' then v3414^a fi, fi,if p(v342)then v342^a fi else if &uf('G2/'g33)='1' then v341^a fi,if &uf('G2-'g33)='2' then v342^a fi, fi fi
+
+ADD
+39
+
+if s(v340^b,v341^b,v342^b,v3411^b,v3412^b,v3413^b,v3414^b)<>''and rsum(v340^b|;|,v341^b|;|,v342^b|;|,v3411^b|;|,v3412^b|;|,v3413^b|;|,v3414^b|;|)>0 then if &unifor('IPRIVATE,AP,')<>'' then '^B',&unifor('IPRIVATE,AP,') fi,'^C'v340^b,v341^b,v342^b,v3411^b,v3412^b,v3413^b,v3414^b fi
+
+ADD
+36
+
+if p(v36^a) then "^A"v36^a else if &unifor('IPRIVATE,KAT,')<>''then '^A',&unifor('IPRIVATE,KAT,') fi fi,if &unifor('Av10^d#2')<>''then '^CВ 'if &unifor('IPRIVATE,GOD,')<>'' then &unifor('IPRIVATE,GOD,') else &unifor('30') fi' г.: ',(if p(v10) then|/ |+v10^g,| цена по кат. |v10^d,|, цена дост. |v10^C fi) fi
+
+ADD
+59
+
+"^D"v36^d
+
+ADD
+24
+
+if s(v340^b,v341^b,v342^b,v3411^b,v3412^b,v3413^b,v3414^b)<>'' then if p(v340^b) then v340^c fi,if p(v341^b) then v341^c fi,if p(v342^b)then v342^c fi,if p(v3411^b)then v3411^c fi,if p(v3412^b)then v3412^c fi,if p(v3413^b)then v3413^c fi,if p(v3414^b)then v3414^c fi fi
+
+ADD
+907
+
+'^C'&unifor('IPRIVATE,ETR,'),'^B'&unifor('IPRIVATE,FIO,'),'^A'&unifor('3')
+
+END
+FI
+FI
+GETFLD
+4000
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,26 @@
+'{ \par \qc',,,'Дисциплины',
+if p(v991^C) or p(v991^N) or p(v991^F) or p(v991^B) or p(v991^A) or p(v991^O)or p(v991^N)  then ' для' fi,,,,,
+if p(v991^F) then '\par \ql \tab \tab \tab \tab \tab \tab \tab семестра - ',v991^F fi,,,,,
+if p(v991^B) then '\par \ql \tab \tab \tab \tab \tab \tab \tab кафедры (чит.) - ',v991^B fi,,,,,
+if p(v991^A) then '\par \ql \tab \tab \tab \tab \tab \tab \tab факультета - ',v991^A fi,,,,,
+if p(v991^O) then '\par \ql \tab \tab \tab \tab \tab \tab \tab формы обучения - ',v991^O fi,,,,,
+if p(v991^V) then '\par \ql \tab \tab \tab \tab \tab \tab \tab вида обучения - ',v991^V fi,,,,,
+if p(v991^N) then '\par \ql \tab \tab \tab \tab \tab \tab \tab направления - ',v991^N fi,,,,,
+if p(v991^C) then '\par \ql \tab \tab \tab \tab \tab \tab \tab специальности - ',v991^C fi,,,,,
+'\par \ql ',,,
+if p(v991^K)or p(v991^M)or p(v991^L)or p(v991^R)or p(v991^P)or p(v991^1)or p(v991^2)or p(v991^4) 
+then 
+   '\tab \tab \tab \tab \tab \tab \tab Заданы заголовки: ',
+   if v991^K<>'' then "форма обучения"d991^K,,if s(v991^4,v991^M,v991^2,v991^L,v991^P,v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^4<>'' then "вид обучения"d991^4,,,if s(v991^M,v991^2,v991^L,v991^P,v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^M<>'' then "факультет"d991^M,,if s(v991^2,v991^L,v991^P,v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^2<>'' then "кафедра (чит.)"d991^2,if s(v991^L,v991^P,v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^L<>'' then "семестр"d991^L,,if s(v991^P,v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^P<>'' then "Цикл"d991^P,,if s(v991^R,v991^1)<>'' then ', ' fi fi,,
+   if v991^R<>'' then "специальность"d991^R,,,if s(v991^1)<>'' then ', ' fi fi,,
+   "направление"d991^1,,
+fi,,,,,,,,,,,,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+'\par ',,,'}'

@@ -1,0 +1,52 @@
+"^A"v30^A,"^C"v30^C,"^E"V30^E,,,
+if &unifor('Av942^A#',&unifor('+N942')): 'H1' 
+then
+/*---Выполнено итоговое списание 
+  '^FH' 
+else 
+   if &unifor('Av942^A#',&unifor('+N942')): 'M4' 
+   then 
+/*----перенапрапвлен
+      '^FM' 
+   else  
+   if &unifor('Av942^A#',&unifor('+N942')): 'O1' or 
+      &unifor('Av942^A#',&unifor('+N942')): 'O2' or 
+      &unifor('Av942^A#',&unifor('+N942')): 'O4' 
+   then 
+/*---Выдан абоненту
+      '^FV' 
+   else
+      if &unifor('Av942^A#',&unifor('+N942')): 'S2' or
+         &unifor('Av942^A#',&unifor('+N942')): 'S1' or
+         &unifor('Av942^A#',&unifor('+N942')): 'N' or
+         &unifor('Av942^A#',&unifor('+N942')): 'O3'  or 
+         &unifor('Av942^A#',&unifor('+N942')): 'Z1'   
+      then 
+/*---Готов к итоговому списанию
+         '^FE' 
+      else 
+         if &unifor('Av942^A#',&unifor('+N942')): 'K1'  or 
+            &unifor('Av942^A#',&unifor('+N942')): 'K2'  or
+            &unifor('Av942^A#',&unifor('+N942')): 'K3'  or
+            &unifor('Av942^A#',&unifor('+N942')): 'K4'  or
+            &unifor('Av942^A#',&unifor('+N942')): 'K5'  or
+            &unifor('Av942^A#',&unifor('+N942')): 'K6'  or 
+            &unifor('Av942^A#',&unifor('+N942')): 'B2' or
+            &unifor('Av942^A#',&unifor('+N942')): 'B4' 
+         then 
+/*---Подготовка к выдаче
+            '^FK' 
+         else
+            if &unifor('Av942^A#',&unifor('+N942')): 'X'  
+            then 
+/*---Готов к выдаче абоненту
+               '^FR' 
+            else 
+               if &unifor('Av942^A#',&unifor('+N942')): 'P1'  
+               then
+/*---Заказ зашифрован 
+                  '^FP' 
+               else 
+/*---Оформление заказа
+                 '^FO' 
+fi fi fi fi fi fi fi 

@@ -1,0 +1,42 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4360 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5777 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7700 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9700 
+\pard \widctlpar\intbl {\ql \fs22 ',,v1,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,if v3='' then '\qc - \ql ' fi,,f(val(v3),0,0),,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,if v4='' then '\qc - \ql ' fi f(val(v4),0,0),,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,if v5='' then '\qc - \ql ' fi v5,,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs22 'v6
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,23 @@
+     if p(v461) then 
+         if a(v461^e) then 
+            if p(v328^a) or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1' 
+                         or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then 
+               if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1'then'автореферат дис. ... 'else 
+                  if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then'дис. ... ' 
+               fi fi,v328^a," : "v328^n,", "v328^0,", "v328^9 
+            else 
+               if p(v982^u) then (|, |+v982^0,| |v982^9) 
+                  " : Взамен "d982^a,|, |+v982^a,&unifor('S0'), 
+                  (if p(v982^d) then 
+                      if val(&unifor('S1A'))=1 then ' : Частично взамен 'else |, |+d982^d 
+                   fi fi,v982^d), 
+                   if s(v982^b,v982^c)<>''then | : Введ. с |v982^b,| по |v982^c fi 
+                   " : Заменен на "d982^e,| и |+v982^e,&unifor('S0'), 
+                  (if p(v982^f) then 
+                      if val(&unifor('S1A'))=1 then ' : Частично заменен на 'else | и |+d982^f 
+                   fi fi,v982^f,| с |v982^g), 
+               else 
+                  if s(v905^2,&unifor('IPRIVATE,EEE,'))<>'' then else 
+                     if p(v461^c) and p(v900^c) and &unifor('K200ehd.mnu|'v900^c)<>'' 
+                     then &unifor('K200ehd.mnu|'v900^c) 
+      fi fi fi fi fi fi 

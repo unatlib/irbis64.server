@@ -1,0 +1,83 @@
+[ROWQRY]
+'CIKLD=ÅÍ'
+'CIKLD=ÅÍ'
+'CIKLD=ÃÑÝ'
+'CIKLD=ÃÑÝ'
+'CIKLD=ÎÏÄ'
+'CIKLD=ÎÏÄ'
+'CIKLD=ÑÄ'
+'CIKLD=ÑÄ'
+[FLDTEXT]
+'1-Åñòåñòâåííî-íàó÷íûå ó÷åáíûå'
+'5-     - ó÷åáí-ìåòîäè÷åñêèå'
+'2-Îáùåãóìàíèòàðíûå è ñîöèàëüíî-ýêîíîìè÷åñêèå ó÷åáíûå'
+'6-     - ó÷åáí-ìåòîäè÷åñêèå'
+'3-Îáùåïðîôåññèîíàëüíûå'
+'7-     - ó÷åáí-ìåòîäè÷åñêèå'
+'4-Ñïåöèàëüíûå'
+'8-     - ó÷åáí-ìåòîäè÷åñêèå'
+[FLDSUM]
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ'  then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ'  then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then else if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ä/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Â/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' and &uf('+97',v691^O)='Ç/Î' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ'  then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÅÍ'  then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÃÑÝ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÎÏÄ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if a(v699) or p(v699) and v699: '^U1' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' then '1,' fi fi)) >0 then '1' fi fi  fi
+if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' then if rsum((if p(v691) then if &uf('+97',v691^S)='ÑÄ' then '1,' fi fi)) >0 then &uf('6KOStatEkz') fi fi

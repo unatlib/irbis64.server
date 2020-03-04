@@ -1,0 +1,9 @@
+'\pard \li108 \ri108 ','\qc \b \fs24 \par '
+if p(v991^a) then 'гюохяэ ймхцх ясллюпмнцн сверю ╧ \b 'v991^a'\b0 '
+else 'кхяр ймхцх ясллюпмнцн сверю '
+   if val(v991.6)=val(v991*6.6) then ' ГЮ ',&unifor("Krk96d.mnu|"v991*10.2)," "v991.4" Ц." 
+   else 
+      if v991*4.1='/' then v991 else 
+      '\par Я ',&unifor("Krk96e.mnu|"v991*4.2)," "v991.4" Ц.",' ОН ', 
+                                 &unifor("Krk96d.mnu|"v991*10.2)," "v991*6.4" Ц." 
+fi fi fi,'\par ',

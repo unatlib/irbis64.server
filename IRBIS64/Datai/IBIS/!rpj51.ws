@@ -1,0 +1,13 @@
+6
+@REGI
+@BOJ
+@FIZH
+@Index
+@Kumul
+@Technj
+0
+0
+0
+0
+0
+0

@@ -1,0 +1,70 @@
+0
+IF v920:'ojk' then 
+ADD
+5910
+
+if &unifor('DPOST,"IP=',v86,'",v591')=v591 or &unifor('DPOST,"IP=',v86,'",v591')=&unifor('Av5910#'&unifor('+N5910')) then else v591 fi
+XXXXXXXXXXXXXXXXXXX
+REP 591
+*
+if &unifor('DPOST,"IP=',v86,'",v591')=v591 then v591 else &unifor('DPOST,"IP=',v86,'",v591') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+2000
+
+if &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi')=v200^a or &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi')= &unifor('Av2000#'&unifor('+N2000')) then else v200^a fi
+XXXXXXXXXXXXXXXXXXX
+REP
+200^A
+*
+if &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi')=v200^a then v200^a else &unifor('DPOST,"IP=',v86,'",if p(v200^a) then v200^a else v200 fi') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+5900
+
+if &unifor('DPOST,"IP=',v86,'",v36')=v59^a or &unifor('DPOST,"IP=',v86,'",v36')=&unifor('Av5900#'&unifor('+N5900')) then else v59^a fi
+XXXXXXXXXXXXXXXXXXX
+REP
+59^a
+*
+if &unifor('DPOST,"IP=',v86,'",v36')=v59^a then v59^a else &unifor('DPOST,"IP=',v86,'",v36') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+1100
+
+if &unifor('Av1100#'&unifor('+N1100'))=v110 then else v110 fi
+XXXXXXXXXXXXXXXXXXX
+REP
+110^b
+*
+if &unifor("Kvido.mnu|"v110^b):&unifor('DPOST,!IP=',v86,'!,v110^b') then v110^b else if &unifor('DPOST,!IP=',v86,'!,&unifor("Kvido.mnu|"v110^b)')<>'' then &unifor('DPOST,!IP=',v86,'!,&unifor("Kvido.mnu|"v110^b)') else &unifor('DPOST,!IP=',v86,'!,v110^b') fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+110^x
+*
+if &unifor('DPOST,"IP=',v86,'",v110^d')=v110^x then v110^x else &unifor('DPOST,"IP=',v86,'",v110^d') fi
+XXXXXXXXXXXXXXXXXXX
+REP
+110^d
+*
+if &unifor('DPOST,"IP=',v86,'",v110^d')=v110^x then v110^d else if &unifor('Kpxd.mnu|'v110^x)<>'' then &unifor('Kpxd.mnu|'v110^x) else v110^x fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+3400
+
+if &unifor('IPRIVATE,PP,'):'/1-1' then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v3411') then else &unifor('DPOST,"IP=',v86,'",v3411') fi else if &unifor('IPRIVATE,PP,'):'/1-2'then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v3412') then else &unifor('DPOST,"IP=',v86,'",v3412') fi else if &unifor('IPRIVATE,PP,'):'/1-3'then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v3413') then else &unifor('DPOST,"IP=',v86,'",v3413') fi else if &unifor('IPRIVATE,PP,'):'/1-4'then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v3414') then else &unifor('DPOST,"IP=',v86,'",v3414') fi else if &unifor('IPRIVATE,PP,'):'/1' then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v341') then else &unifor('DPOST,"IP=',v86,'",v341') fi else if &unifor('IPRIVATE,PP,'):'/2' then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v342') then else &unifor('DPOST,"IP=',v86,'",v342') fi else if &unifor('IPRIVATE,PP,'):'/0' then if &unifor('Av3400#'&unifor('+N3400'))=&unifor('DPOST,"IP=',v86,'",v340') then else &unifor('DPOST,"IP=',v86,'",v340') fi fi fi fi fi fi fi fi 
+XXXXXXXXXXXXXXXXXXX
+ADD
+3401
+
+if &unifor('Av3401^a#'&unifor('+N3401'))=v34 and (&unifor('Av3401^c#'&unifor('+N3401'))=v24 or a(v24)) then else "^A"v34,"^C"v24 fi
+REP
+34
+1
+if v34=&unifor('Av3400^a#'&unifor('+N3400')) then v34 else &unifor('Av3400^a#'&unifor('+N3400')) fi
+REP
+24
+1
+if v24=&unifor('Av3400^c#'&unifor('+N3400')) then v24 else &unifor('Av3400^c#'&unifor('+N3400')) fi
+XXXXXXXXXXXXXXXXXXX
+FI

@@ -1,0 +1,9 @@
+[HeaderNumber]
+1
+[HeaderFormat]
+&uf('6SK_ListInvHead') 
+[KeyOptions]
+100
+1
+&uf('6SK_ListInvSort') 
+*****

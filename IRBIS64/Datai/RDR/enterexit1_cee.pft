@@ -1,0 +1,33 @@
+if a(v30) then &uf('6enterexit0_cee'),'<br><b><font style="color: #FF0000">Читатель не найден - ',v1007*3,'</font><b><br><BGSOUND src="C:\Windows\Media\Windows XP - критическая ошибка.wav">' else 
+if val(&uf('J,RI=',v30))>1 /* проверка на неоднозначность читателя 
+   then &uf('6enterexit0_cee'),'<br><b><font style="color: #FF0000">Неоднозначность читателя - ',v30,'</font><b><br><BGSOUND src="C:\Windows\Media\Windows XP - критическая ошибка.wav">',
+   else if v999='1'
+          then /* ВЫХОД
+               /* проверка: ФЛК на ВЫХОД
+               &uf('+7W10#',&uf('6exitflc_cee')),
+               /* результат ФЛК в глобальной 10
+               if g10.1='1'
+                     then &uf('6enterexit0_cee'),'<br><b><font style="color: #FF0000">Выход ЗАПРЕЩЕН. ',g10*1,'</font><b><BGSOUND src="C:\Windows\Media\tormoz.wav">',&uf('6rdrw_html_dolg'), 
+                     else /* формирование конвейерной команды на корректировку записи читателя в части удаления поля 999
+                          /* в глобальной 2 - порядковый номер поля 999
+                          /* FREEPAR1=0 признак оформления ВЫХОДА
+                          /* FREEPAR0 содержит ФЛК-сообщение
+                          &uf('+7W2#',&uf('+E999#1')),
+                         'IRBIS:?C21COM=6&RELOAD=1&PFTNAME=enterexit2_cee&R21UPD=1&ENTRY_MESSAGE=!&ENTRY_MFN=',mfn,'&999_',g2,'R21STR=&FREEPAR0=',&uf('+3E',g10*1),'&FREEPAR1=0',
+               fi 
+          else /* ВХОД
+               /* ПРОВЕРКА: ФЛК на ВХОД
+               &uf('+7W10#',&uf('6enterflc_cee')), 
+               /* в глобальной 10 - результат ФЛК
+               if g10.1='1' 
+                  then &uf('6enterexit0_cee'),'<br><b><font style="color: #FF0000">Вход ЗАПРЕЩЕН. ',g10*1,'</font><b><BGSOUND src="C:\Windows\Media\tormoz.wav">',&uf('6rdrw_html_dolg'),
+                  else /* формирование конвейерной команды на корректировку записи читателя в части ПОСЕЩЕНИЯ
+                       /* в глобальной 2 - заготовка для поля 40
+                       /* FREEPAR1=1 признак оформления ВХОДА
+                       /* FREEPAR0 содержит ФЛК-сообщение
+                       &uf('+7W2#','^F',&uf('3'),'^D',&uf('3'),'^C(Посещение)^1',&uf('39'),'^2',&uf('39'),'^V',&uf('IREQUEST,MASKMRG,*'),'^I',&uf('IMAIN,OTVFACE,')),
+                       'IRBIS:?C21COM=6&RELOAD=1&PFTNAME=enterexit2_cee&R21UPD=1&ENTRY_MESSAGE=!&ENTRY_MFN=',mfn,'&999_0R21STR=1&40_0R21STR=',&uf('+3E',g2),'&FREEPAR0=',&uf('+3E',g10*1),'&FREEPAR1=1',
+               fi 
+        fi 
+fi 
+fi

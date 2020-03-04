@@ -1,0 +1,12 @@
+if s(v700,v701,v702v392^f)<>'' then 
+'<br><b>Персоны: &nbsp </b>'v700^a,", "v700^g,if a(v700^g) then " "v700^b fi," ("v700^4*4")",
+   (if p(v701) then "<br>"d700,|<br><dd><dd>|+v701^a,|, |v701^g,if a(v701^g) then | |v701^b fi,| (|v701^4*4|)|, fi)
+   (if p(v702) then if s(v700,v701) <>'' then"<br><dd><dd>"d702 fi,|<br>|+v702^a,|, |v702^g,if a(v702^g) then | |v702^b fi,| (|v702^4*4|)|,fi), 
+(if p(v392^f) then '<br>'if p(v392^x) then if v392^x:'1' then v392^f else &unifor('E'v392^x,v392^f),|, |v392^?,if a(v392^?) then if &unifor('F'v392^x,v392^f)<>'' then ', 'if &unifor('F'v392^x,v392^f):'. ' then &unifor('F'v392^x,v392^f) else if &unifor('F'v392^x,v392^f):'.'then &unifor('G0.'&unifor('F'v392^x,v392^f)),'. '&unifor('G2.'&unifor('F'v392^x,v392^f)) else &unifor('F'v392^x,v392^f) fi fi fi fi fi else if v392^f:',' then &unifor('G0,'v392^f),else &unifor('G0 'v392^f) fi,|, |v392^?,if a(v392^?) then if &unifor('G2 'v392^f):'. ' then ', '&unifor('G2 'v392^f) else if &unifor('G2 'v392^f):'.'then ', ' &unifor('G0.'&unifor('G2 'v392^f)),'. '&unifor('G2.'&unifor('G2 'v392^f)) fi fi fi fi,| \|v392^q*4|\| fi), 
+
+(if p(v392^2) then '<br>'if p(v392^<) then if v392^<:'1' then v392^2 else &unifor('E'v392^<,v392^2),|, |v392^,,if a(v392^,) then if &unifor('F'v392^<,v392^2)<>'' then ', 'if &unifor('F'v392^<,v392^2):'. ' then &unifor('F'v392^<,v392^2) else if &unifor('F'v392^<,v392^2):'.'then &unifor('G0.'&unifor('F'v392^<,v392^2)),'. '&unifor('G2.'&unifor('F'v392^<,v392^2)) else &unifor('F'v392^<,v392^2) fi fi fi fi fi else if v392^2:',' then &unifor('G0,'v392^2),else &unifor('G0 'v392^2) fi,|, |v392^,,if a(v392^,) then if &unifor('G2 'v392^2):'. ' then ', '&unifor('G2 'v392^2) else if &unifor('G2 'v392^2):'.'then ', ' &unifor('G0.'&unifor('G2 'v392^2)),'. '&unifor('G2.'&unifor('G2 'v392^2)) fi fi fi fi,| \|v392^s*4|\| fi,) 
+
+(if p(v392^3) then '<br>'if p(v392^>) then if v392^>:'1' then v392^3 else &unifor('E'v392^>,v392^3),|, |v392^;,if a(v392^;) then if &unifor('F'v392^>,v392^3)<>'' then ', 'if &unifor('F'v392^>,v392^3):'. ' then &unifor('F'v392^>,v392^3) else if &unifor('F'v392^>,v392^3):'.'then &unifor('G0.'&unifor('F'v392^>,v392^3)),'. '&unifor('G2.'&unifor('F'v392^>,v392^3)) else &unifor('F'v392^>,v392^3) fi fi fi fi fi else if v392^3:',' then &unifor('G0,'v392^3),else &unifor('G0 'v392^3) fi,|, |v392^;,if a(v392^;) then if &unifor('G2 'v392^3):'. ' then ', '&unifor('G2 'v392^3) else if &unifor('G2 'v392^3):'.'then ', ' &unifor('G0.'&unifor('G2 'v392^3)),'. '&unifor('G2.'&unifor('G2 'v392^3)) fi fi fi fi,| \|v392^t*4|\| fi) 
+
+
+fi 

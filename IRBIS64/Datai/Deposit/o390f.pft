@@ -1,0 +1,100 @@
+if &unifor('Av905^1#1')<>'' then v390^f else 
+   if p(v390^x) then 
+      if  (v488^f:&unifor('G0 'v390^x) or v390^f:&unifor('G0,'v390^x) or p(v390^9) and 
+           v390^f:&unifor('E'v390^9,v390^x)) 
+      AND (v390^x:'.' and (v390^f:&unifor('G0.'&unifor('G2 'v390^x)) or val(v390^9)>1 and 
+           v390^f:&unifor('G0.'&unifor('F'v390^9,v390^x))) or (not(v390^x:'.'))) 
+      AND (v390^x:',' and (v390^f:&unifor('G0 '&unifor('G2 'v390^x)) or val(v390^9)>1 and 
+           v390^f:&unifor('G2,'&unifor('F'v390^9,v390^x))) or (not(v390^x:','))) 
+      AND (p(v390^?) and (v390^f:v390^? or v390^f:v390^?.1) or a(v390^?)) 
+      then v390^f 
+      else 
+         if p(v390^f) and &unifor('Av903#1')<>'' then v390^f 
+         else 
+            if p(v390^9) then 
+               if v390^9:'1' then v390^x 
+               else 
+                  if &unifor('F'v390^9,v390^x)<>'' then 
+                     if &unifor('F'v390^9,v390^x):'. ' then &unifor('F'v390^9,v390^x) else 
+                        if &unifor('F'v390^9,v390^x):'.' then &unifor('G0.'&unifor('F'v390^9,v390^x)),'.' 
+                           if &unifor('G2.'&unifor('F'v390^9,v390^x)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v390^9,v390^x)), 
+                        else &unifor('F'v390^9,v390^x) fi 
+                     fi 
+                  else v390^? 
+                  fi,' '&unifor('G0,'&unifor('E'v390^9,v390^x)) 
+               fi 
+            else 
+               if v390^x:', ' then &unifor('G2 'v390^x)' '&unifor('G0,'v390^x)  
+               else 
+                  if v390^x:' 'then 
+                     if &unifor('G2 'v390^x):'.'then 
+                        if &unifor('G2 'v390^x):'. ' then &unifor('G2 'v390^x) 
+                        else &unifor('G0.'&unifor('G2 'v390^x)),'.' 
+                           if &unifor('G2.'&unifor('G2 'v390^x)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v390^x)) 
+                        fi 
+                     else &unifor('G2 'v390^x)' ' 
+                     fi,' '&unifor('G0,'&unifor('G0 'v390^x)) 
+                  else v390^?| |,v390^x    
+            fi fi fi 
+           
+               if p(v390^2) then ', ' 
+                  if p(v390^<) then 
+                     if v390^<:'1' then v390^2 
+                     else 
+                        if &unifor('F'v390^<,v390^2)<>'' then 
+                           if &unifor('F'v390^<,v390^2):'. ' then &unifor('F'v390^<,v390^2) else 
+                              if &unifor('F'v390^<,v390^2):'.' then &unifor('G0.'&unifor('F'v390^<,v390^2)),'.' 
+                                 if &unifor('G2.'&unifor('F'v390^<,v390^2)):'.' then ' 'fi, 
+                                    &unifor('G2.'&unifor('F'v390^<,v390^2)) 
+                              else &unifor('F'v390^<,v390^2) fi 
+                           fi 
+                        else v390^, 
+                        fi,' '&unifor('G0,'&unifor('E'v390^<,v390^2)) 
+                     fi 
+                  else 
+                     if v390^2:', ' then &unifor('G2 'v390^2)' '&unifor('G0,'v390^2)  
+                     else 
+                        if v390^2:' 'then 
+                           if &unifor('G2 'v390^2):'.'then 
+                              if &unifor('G2 'v390^2):'. ' then &unifor('G2 'v390^2)  
+                              else &unifor('G0.'&unifor('G2 'v390^2)),'.' 
+                              if &unifor('G2.'&unifor('G2 'v390^2)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v390^2)) 
+                              fi 
+                           else &unifor('G2 'v390^2) ' ' 
+                           fi,' '&unifor('G0,'&unifor('G0 'v390^2)) 
+                        else v390^,| |,v390^2    
+               fi fi fi fi 
+               if p(v390^3) then ', ' 
+                  if p(v390^>) then 
+                     if v390^>:'1' then v390^3 
+                     else  
+                        if &unifor('F'v390^>,v390^3)<>'' then 
+                           if &unifor('F'v390^>,v390^3):'. ' then &unifor('F'v390^>,v390^3) else 
+                              if &unifor('F'v390^>,v390^3):'.' then &unifor('G0.'&unifor('F'v390^>,v390^3)),'.' 
+                                 if &unifor('G2.'&unifor('F'v390^>,v390^3)):'.' then ' 'fi, 
+                                    &unifor('G2.'&unifor('F'v390^>,v390^3)) 
+                              else &unifor('F'v390^>,v390^3) fi 
+                           fi 
+                        else v390^; 
+                        fi,' '&unifor('G0,'&unifor('E'v390^>,v390^3)) 
+                     fi 
+                  else 
+                     if v390^3:', ' then &unifor('G2 'v390^3)' '&unifor('G0,'v390^3)  
+                     else 
+                        if v390^3:' 'then 
+                           if &unifor('G2 'v390^3):'.'then 
+                              if &unifor('G2 'v390^3):'. ' then &unifor('G2 'v390^3) 
+                              else &unifor('G0.'&unifor('G2 'v390^3)),'.' 
+                              if &unifor('G2.'&unifor('G2 'v390^3)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v390^3)) 
+                              fi 
+                           else &unifor('G2 'v390^3) ' ' 
+                           fi,' '&unifor('G0,'&unifor('G0 'v390^3)) 
+                        else v390^;| |,v390^3 
+            fi fi fi fi,if v390^W<>'' then if v390^W:'  ' then else  if v390^W:', ' then ', '&uf('G1 'v390^W),' '&uf('G0,'v390^W)else  if &uf('G2 'v390^W):' ' then ', '&uf('G1 'v390^W),' '&uf('G0 'v390^W) else  ', '&uf('G0.'&uf('G1 'v390^W)),'. ',&uf('G2.'&uf('G1 'v390^W)),' '&uf('G0 'v390^W) fi fi fi fi,
+
+            if p(v390^w) and v390^W:'  'then 
+               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi fi,
+| ; |v390^f  
+      fi fi 
+   else v390^f   
+fi fi 

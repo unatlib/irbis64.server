@@ -1,0 +1,60 @@
+if v920:'nj'then /'\\$A0,0$B\\','E',v903/'\\$A0,0\\', 
+ref(l("I="v933),v200^a,|. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l,|. |v923^m,|: |v923^n,". - "d110^d,
+   if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d)else"œÂËÓ‰Ë˜ÌÓÒÚ¸ "v110^d fi)/v934"„.",
+   if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' ?.'fi),v935 fi,
+   if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi),v936 fi,
+else &uf('6!kkkbo'),
+   if a(v463) then,ofizxar,oser,oprimK,oISBNcnK,
+      if v905^l=''and &unifor('IPRIVATE,KKP,')=''then if p(v300)then mhl,(/|\\$A9,6\\|v300|.|),mpl,fi fi 
+   else,oistaspK, fi,
+   if p(v481)then/'\\$A9,6\\','œËÔÎÂÚ.:',&unifor('S0'),
+      (if p(v481)then if &unifor('Av481#2')<>''then if p(v481)then' '&unifor('S1A')'.'fi fi,
+          if p(v481^z) then &unifor('Av461^x#1')' '&unifor('Av461^c#1'),|. |v481^v,| : |v481^c 
+          else v481^x| |,v481^c,|. |v481^v fi,| : |v481^e,| / |v481^f,|. - |v481^d,| : |v481^g,
+          if s(v481^d,v481^g)<>''then|, |v481^h else|. - |v481^h fi,|. - |v481^4,
+          if p(v481^4)then &unifor('Korg.mnu|4')'.'fi,| : |v481^0*2,|. - |v481^p,|. - ISBN |v481^i,fi) 
+fi fi/
+if s(v905^r):'1'or &unifor('IPRIVATE,KKR,'):'1'then else 
+   if s(v606v607)<>''then/'\\$A0,6\\',&unifor('S0'),
+      (if p(v606)then' '&unifor('S1A')'.'v606^a,| --|v606^b,| --|v606^c,| --|v606^d,| --|v606^g,| --|v606^e,
+      | --|v606^o,|,|v606^h,| --|v606^9,'. 'fi),
+      (if p(v607)then' '&unifor('S1A')'.'v607^a,| --|v607^b,| --|v607^c,| --|v607^d,| --|v607^g,| --|v607^e,
+      | --|v607^o,|,|v607^h,| --|v607^9'. 'fi),
+fi fi,/
+if p(v908) then 
+   if p(v675)then/#,'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#1')),'F',/
+      if &unifor('Av675#2')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#2')),'F'fi/
+      if &unifor('Av675#3')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#3')),'F'fi/
+      if &unifor('Av675#4')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#4')),'F'fi/
+      if &unifor('Av675#5')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#5')),'F'fi/
+      if &unifor('Av675#6')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#6')),'F'fi/
+      if &unifor('Av675#7')<>'' then /'\\$A0,0$D\\','E','”ƒ  ',&unifor('G0^'&unifor('Av675#7')),'F'fi/
+   fi/
+   if a(v675)and p(v621)then/#,'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#1'),'F',/
+      if &unifor('Av621#2')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#2'),'F'fi/
+      if &unifor('Av621#3')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#3'),'F'fi/
+      if &unifor('Av621#4')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#4'),'F'fi/
+      if &unifor('Av621#5')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#5'),'F'fi/
+      if &unifor('Av621#6')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#6'),'F'fi/
+      if &unifor('Av621#7')<>'' then /'\\$A0,0$D\\','E','¡¡  ',&unifor('Av621^*#7'),'F'fi/
+   fi/
+   if a(v675) and a(v621) and p(v686)then 
+      if &unifor('Av686#2')=''and v903:v686 then else /#,'\\$A0,0$D\\','E',&unifor('Av686#1'),'F',
+         if &unifor('Av686#2')<>'' then /'\\$A0,0$D\\','E',&unifor('Av686#2'),'F'fi/
+         if &unifor('Av686#3')<>'' then /'\\$A0,0$D\\','E',&unifor('Av686#3'),'F'fi/
+         if &unifor('Av686#4')<>'' then /'\\$A0,0$D\\','E',&unifor('Av686#4'),'F'fi 
+   fi fi 
+else 
+   (if p(v675)then /'\\$A0,0$D\\','E',|”ƒ  |v675^*,'F'fi/)/
+   (if p(v621)then '\\$A0,0$D\\','E',|¡¡  |v621^*,'F' fi/)/
+   if &unifor('Av686#2')=''and v903:v686 then else (if p(v686)then '\\$A0,0$D\\','E',v686,'F' fi/) fi 
+fi/
+if s(v905^e):'1'or &unifor('IPRIVATE,KKK,'):'1'then else 
+   if s(v905^e):'2'or &unifor('IPRIVATE,KKK,'):'2'then /"\\$A6,6\\E Î.ÒÎÓ‚‡:F "v610+|--| else 
+      if &unifor('Av610#6')<>''then else /"\\$A6,6\\E Î.ÒÎÓ‚‡:F "d610,
+         if s(v905^e):'3'or &unifor('IPRIVATE,KKK,'):'3'then &unifor('Q'v610+|--|) else &unifor('Q'v610+|--|) 
+fi fi fi fi/
+if s(v905^e)<>''or &unifor('IPRIVATE,KKK,')<>''then else 
+   if &unifor('Av965#6')<>''then else/"\\$A6,6\\ƒÂÒÍËÔÚÓ˚: "d965,v965+|--| 
+fi fi/,
+&unifor('!'),&unifor('+F')

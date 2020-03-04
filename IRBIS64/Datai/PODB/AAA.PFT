@@ -1,0 +1,10 @@
+'{', 
+   if v961^x:','then &unifor('G0,'v961^x),'^B^G' 
+   else &unifor('G0 'v961^x),'^G^B' fi,
+   if v961^x:' 'then &unifor('G2 'v961^x) fi, 
+'\par '
+if v700:','then &unifor('G0,'v700),'^B^G' 
+else &unifor('G0 'v700),'^G^B' fi,
+if v700:' 'then &unifor('G2 'v700) fi
+'}'
+

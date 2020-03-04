@@ -1,0 +1,30 @@
+if v920:'ATHRA' then '<br><b>нямнбмни (смхтхжхпнбюммши) гюцнкнбнй - хлъ хмд
+хбхдсюкэмнцн юбрнпю</b>:  ','<br>',mhl,v210^a," "v210^d," "v210^g,if a(v210^g) then " "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi else if v920:'REF' then '<br><b>дпсцни (бюпхюмрм
+ши) гюцнкнбнй</b>:  ','<br>',mhl,v210^a," "v210^d," "v210^g,if a(v210^g) then " "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi else if v920:'EXP' then '<br><b>онъямхрекэмши гюцнкнбн
+й</b>:  ','<br>',mhl,v210^a," "v210^d," "v210^g,if a(v210^g) then " "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi fi fi fi,'</td>',
+'<td>',
+(if p(v953) then 
+       if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+    fi fi) ,
+'</td>',
+'</table>',
+
+if p(v510) then '<br><b>ябъгюммше смхтхжхпнбюммше гюцнкнб
+йх</b>: ' fi,(if p(v510) then '<br>',mhl,v510^a,| |v510^d,| |v510^g,if a(v510^g) then | |v510^b fi,if s(v510^1,v510^c,v510^f)<>''then' (',v510^1,if s(v510^1)<>''then |; |d510^c fi,v510^c,if s(v510^1,v510^c)<>''then |; |d510^f fi,v510^f,'). '  fi fi),if p
+(v410) then '<br><b>дпсцхе (бюпхюмрмше) гюцнкнбйх</b>:  ' fi,(if p(v410) then '
+<br>',mhl,v410^a,| |v410^d,| |v410^g,if a(v410^g) then | |v410^b fi,if s(v410^1,v410^c,v410^f)<>''then' (',v410^1,if s(v410^1)<>''then |; |d410^c fi,v410^c,if s(v410^1,v410^c)<>''then |; |d410^f fi,v410^f,'). '  fi fi),if p(v710) then '<br><b>ябъгюммше с
+мхтхжхпнбюммше гюцнкнбйх мю дпсцху ъгшйюу</b>:  ' fi,(if p(v710) then '<br>
+',mhl,v710^a,| |v710^d,| |v710^g,if a(v710^g) then | |v710^b fi,if s(v710^1,v710^c,v710^f)<>''then' (',v710^1,if s(v710^1)<>''then |; |d710^c fi,v710^c,if s(v710^1,v710^c)<>''then |; |d710^f fi,v710^f,'). '  fi fi),if p(v300) th
+en '<br><b>хмтнплюжхнммне опхлевюмхе</b>:  ',"<br>"(v300^a) fi,if p(v810
+) then '<br><b>хярнвмхй,б йнрнпнл бшъбкемю хмтнплюжхъ н гюцнкнбйе</b>:  ',('
+<br>',| |v810^a,| |v810^b) fi,if p(v305) then '<br><b>рейярнбне яяшкнвмне о
+пхлевюмхе ял.рюйфе</b>:  ',("<br>"v305^a,| |v305^b,| |v305^c,| |v305^d,
+| |v305^e) fi,if p(v310) then '<br><b>рейярнбне яяшкнвмне опхлевюмхе ял.</b>:  ' 
+,("<br>"| |v310^a,| |v310^b,| |v310^c,| |v310^d,| |v310^e) fi,if p(v830) t
+hen '<br><b>наыее опхлевюмхе йюрюкнцхгюрнпю</b>:  ',(| |v830^a) fi,if p(v836) then  '<br><b>хмтнплюжхъ н гюлеыеммнл гюцнкнбйе</b> :  ' fi,(| |v836^B/),if p(v320) t
+hen '<br><b>наыее яопюбнвмне опхлевюмхе</b>:  ',("<br>"| |v320^a,| |v3
+20^b,| |v320^c,| |v320^d,| |v320^e) fi,'<br>-------------'
+

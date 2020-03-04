@@ -1,0 +1,6 @@
+if p(v940)then                                                                  
+  (if p(v940)then if v940^a:'6'then else                                                               
+      if v940:'^w'then if p(v940^z) then '0'else '1 Ошибка: отсутствует число экз., переданных в другое подразделение'v940^v fi fi/                               
+      if v940:'^w'then if val(v940^x)>=val(v940^z)then/'0'else/'1 Ошибка: число выбывших экз. меньше числа переданных 'v940^v fi fi/                             
+      if v940:'^w'then if v940:'^m'then/'0'else/'1 Ошибка: отсутствует новое место хранения 'v940^d,|   |v940^v fi fi fi fi/)fi
+

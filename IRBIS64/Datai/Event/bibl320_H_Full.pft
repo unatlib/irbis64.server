@@ -1,0 +1,6 @@
+&uf('S0'),
+(if p(v320) then|<br>|d320,&uf('S1A'),'. ', 
+    if p(v320^w) then |<A HREF="IRBIS:2,,|d320^w,v320^9,if a(v320^9) then 'IBIS' fi,|,,I=|v320^w|">|,v320^a,'</A>',
+       | <b>- см.</b> |,v320^8 
+    else v320^a fi, 
+ fi) 

@@ -1,0 +1,769 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then  '0' else '1' fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6900hd'):'21' then if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi else '0' fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6900hd'):'21' then '0' else &unifor('6koravru') fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6900hd'):'21' then &unifor('6koravru') else '0' fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' fi fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then '1' else '0' fi fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi fi/
+if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi else '0'fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then  '0' else '1' fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6900hd'):'21' then if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi else '0' fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6900hd'):'21' then '0' else &unifor('6koravru') fi fi/
+if s(v691^s):'ЕН' then if &unifor('6900hd'):'21' then &unifor('6koravru') else '0' fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' fi fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then '1' else '0' fi fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi fi/
+if s(v691^s):'ЕН' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi else '0'fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then  '0' else '1' fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6900hd'):'21' then if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi else '0' fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6900hd'):'21' then '0' else &unifor('6koravru') fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6900hd'):'21' then &unifor('6koravru') else '0' fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' fi fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then '1' else '0' fi fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then '1' else '0' fi else '0' fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi fi/
+if s(v691^s):'ОПД' or s(v691^s):'СД' then if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi else '0'fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then  '0' else '1' fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6900hd'):'21' then '0' else if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6900hd'):'21' then if &unifor('6692ex'):'Y' then f(rsum((if p(v910^c) then if v910^a:'U' then v910^1|;|,|1;|n910^1 else if 'C 6 2 7':v910^a then else'1;' fi fi fi)),0,0) else if &unifor('6692ex'):'N' then else &unifor('6692ex') fi else '0' fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6900hd'):'21' then '0' else &unifor('6koravru') fi fi/
+if s(v691^o):'з/о' then if &unifor('6900hd'):'21' then &unifor('6koravru') else '0' fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' fi fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then '1' else '0' fi fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then '1' else '0' fi else '0' fi fi fi/
+if s(v691^o):'з/о' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then '0' else if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi fi fi fi/
+if s(v691^o):'з/о' then if s(v691^s):'ГСЭ' then if &unifor('6692ex'):'N' then else if &unifor('6900hd'):'21' then if &unifor('6900hd'):'jj' then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <=5 then '1' else '0' fi else '0' fi else '0'fi fi fi/
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''Общегуманитарные и социально-экономические'
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v1
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v2
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v3
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v4
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v5
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v6
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v1)>0 and p(v7) then if f(val(v7) / val(v1) * 100,0,2) ='' then '0' else f(val(v7) / val(v1) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v3)>0 and p(v8) then if f(val(v8) / val(v3) * 100,0,2) ='' then '0' else f(val(v8) / val(v3) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v1)>0 and p(v9) then if f(val(v9) / val(v1) * 100,0,2) ='' then '0' else f(val(v9) / val(v1) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v1)>0 and p(v11) then if f(val(v11) / val(v1) * 100,0,2) ='' then '0' else f(val(v11) / val(v1) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v3)>0 and p(v10) then if f(val(v10) / val(v3) * 100,0,2) ='' then '0' else f(val(v10) / val(v3) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v3)>0 and p(v12) then if f(val(v12) / val(v3) * 100,0,2) ='' then '0' else f(val(v12) / val(v3) * 100,0,2) fi else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\ql Естественно-научные\par '
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v13
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v14
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v15
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v16
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v17
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v18
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v13)>0 and p(v19) then if f(val(v19) / val(v13) * 100,0,2) ='' then '0' else f(val(v19) / val(v13) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v15)>0 and p(v20) then if f(val(v20) / val(v15) * 100,0,2) ='' then '0' else f(val(v20) / val(v15) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v13)>0 and p(v21) then if f(val(v21) / val(v13) * 100,0,2) ='' then '0' else f(val(v21) / val(v13) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v13)>0 and p(v23) then if f(val(v23) / val(v13) * 100,0,2) ='' then '0' else f(val(v23) / val(v13) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v15)>0 and p(v22) then if f(val(v22) / val(v15) * 100,0,2) ='' then '0' else f(val(v22) / val(v15) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v15)>0 and p(v24) then if f(val(v24) / val(v15) * 100,0,2) ='' then '0' else f(val(v24) / val(v15) * 100,0,2) fi else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\ql Общепрофессиональные и специальные'
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v25
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v26
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v27
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v28
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v29
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v30
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v25)>0 and p(v31) then if f(val(v31) / val(v25) * 100,0,2) ='' then '0' else f(val(v31) / val(v25) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v27)>0 and p(v32) then if f(val(v32) / val(v27) * 100,0,2) ='' then '0' else f(val(v32) / val(v27) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v25)>0 and p(v33) then if f(val(v33) / val(v25) * 100,0,2) ='' then '0' else f(val(v33) / val(v25) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v25)>0 and p(v35) then if f(val(v35) / val(v25) * 100,0,2) ='' then '0' else f(val(v35) / val(v25) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v27)>0 and p(v34) then if f(val(v34) / val(v27) * 100,0,2) ='' then '0' else f(val(v34) / val(v27) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v27)>0 and p(v36) then if f(val(v36) / val(v27) * 100,0,2) ='' then '0' else f(val(v36) / val(v27) * 100,0,2) fi else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\ql Все дисциплины для обучающихся заочно'
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v37
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v38
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v39
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v40
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v41
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'v42
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v37)>0 and p(v43) then if f(val(v43) / val(v37) * 100,0,2) ='' then '0' else f(val(v43) / val(v37) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v39)>0 and p(v44) then if f(val(v44) / val(v39) * 100,0,2) ='' then '0' else f(val(v44) / val(v39) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v37)>0 and p(v45) then if f(val(v45) / val(v37) * 100,0,2) ='' then '0' else f(val(v45) / val(v37) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v37)>0 and p(v47) then if f(val(v47) / val(v37) * 100,0,2) ='' then '0' else f(val(v47) / val(v37) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v39)>0 and p(v46) then if f(val(v46) / val(v39) * 100,0,2) ='' then '0' else f(val(v46) / val(v39) * 100,0,2) fi else '0' fi
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\qr 'if val(v39)>0 and p(v48) then if f(val(v48) / val(v39) * 100,0,2) ='' then '0' else f(val(v48) / val(v39) * 100,0,2) fi else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \ql\widctlpar\intbl {\ql \fs16 ''\par \par \ql Заместитель руководителя, \tab \tab \tab \tab \tab ______________\tab \tab ______________','\par предоставивший информацию,  должность \tab  \tab \tab подпись \tab \tab \tab  ФИО'
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw17820\paperh11340\margl810\margr810\margt1080\margb1080 \lndscpsxn 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \widctlpar\intbl {\ql \fs16 \qc Циклы дисциплин
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \widctlpar\intbl {\ql \fs16 \qc Объем фонда учебной и учебно-методической литературы (количество)
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \widctlpar\intbl {\ql \fs16 Реальная обеспечен-ность учебной и учебно-методической литерату-рой по дисциплинам образовательных программ (экз. на одного обучающегося)
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \widctlpar\intbl {\ql \fs16 \qc Степень новизны литературы \par (процент изданий, вышедших за последние 5 лет, от общего количества)
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \widctlpar\intbl {\ql \fs16 \qc Качество содержания литературы\par  (процент изданий с грифами от общего количества наименований)
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \widctlpar\intbl {\ql \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебная
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебно-методическая
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебная
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \widctlpar\intbl {\ql \fs16 Учебно-методи-
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебная
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \widctlpar\intbl {\ql \fs16 Учебно-методи-
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебная
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \widctlpar\intbl {\ql \fs16 \qc Учебно-методическая
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \widctlpar\intbl {\ql \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \widctlpar\intbl {\ql \fs16 Названий
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \widctlpar\intbl {\ql \fs16 Экз-ров
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \widctlpar\intbl {\ql \fs16 Названий
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \widctlpar\intbl {\ql \fs16 Экз-ров
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \widctlpar\intbl {\ql \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \widctlpar\intbl {\ql \fs16 ческая
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \widctlpar\intbl {\ql \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \widctlpar\intbl {\ql \fs16 ческая
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \widctlpar\intbl {\ql \fs16 \qc Всего
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \widctlpar\intbl {\ql \fs16 Вышедших за послед-ние 5 лет
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \widctlpar\intbl {\ql \fs16 \qc Всего
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \widctlpar\intbl {\ql \fs16 Вышедших за послед-ние 5 лет
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2268 
+\pard \widctlpar\intbl {\ql \fs16 \qc 1
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3348 
+\pard \widctlpar\intbl {\ql \fs16 \qc 2
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4428 
+\pard \widctlpar\intbl {\ql \fs16 \qc 3
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5508 
+\pard \widctlpar\intbl {\ql \fs16 \qc 4
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6588 
+\pard \widctlpar\intbl {\ql \fs16 \qc 5
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7668 
+\pard \widctlpar\intbl {\ql \fs16 \qc 6
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8748 
+\pard \widctlpar\intbl {\ql \fs16 \qc 7
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9828 
+\pard \widctlpar\intbl {\ql \fs16 \qc 8
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10908 
+\pard \widctlpar\intbl {\ql \fs16 \qc 9
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx11988 
+\pard \widctlpar\intbl {\ql \fs16 \qc 10
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx13068 
+\pard \widctlpar\intbl {\ql \fs16 \qc 11
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx14148 
+\pard \widctlpar\intbl {\ql \fs16 \qc 12
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15228 
+\pard \widctlpar\intbl {\ql \fs16 \qc 13
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

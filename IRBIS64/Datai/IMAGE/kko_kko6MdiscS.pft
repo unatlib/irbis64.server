@@ -1,0 +1,10 @@
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'os' or &uf('Ag199#1')='' then '^F1^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'vs' or &uf('Ag199#1')='' then '^F2^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'os' or &uf('Ag199#1')='' then '^F3^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'vs' or &uf('Ag199#1')='' then '^F4^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'os' or &uf('Ag199#1')='' then '^F5^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'vs' or &uf('Ag199#1')='' then '^F6^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'os' or &uf('Ag199#1')='' then '^F7^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'vs' or &uf('Ag199#1')='' then '^F8^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'os' or &uf('Ag199#1')='' then '^F9^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/
+if val(&uf('J,IDD=',G1003))>0 then if &uf('Ag199#1'):'vs' or &uf('Ag199#1')='' then'^F10^I',G1003,if &uf('Ag991^o#1')<>'' then '^O'&uf('Ag991^o#1') fi fi fi/

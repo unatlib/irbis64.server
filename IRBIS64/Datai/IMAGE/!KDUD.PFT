@@ -1,0 +1,14 @@
+mhl,
+if v200:'^a' and p(v981) then 
+   (if p(v981^a) then 
+       if L('!'v981^d*2.2,v981^n,&unifor('B'v981^a' '&unifor('Av200^a#1')))<=0 or 
+          val(ref(l('!'v981^d*2.2,v981^n,&unifor('B'v981^a' '
+                &unifor('Av200^a#1'))),mfn))=val(mfn) 
+       then/'0' 
+       else/'1Дублетное описание:       ',v981^d*2.2,v981^n,
+          &unifor('B'v981^a' '&unifor('Av200^a#1')),
+          ref(l('!'v981^d*2.2,v981^n,&unifor('B'v981^a' '&unifor('Av200^a#1'))),
+        ' (см. N ',f(val(mfn),0,0),')') 
+    fi fi/) 
+else '0' fi,
+mpl

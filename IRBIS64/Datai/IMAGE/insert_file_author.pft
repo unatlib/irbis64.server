@@ -1,0 +1,57 @@
+if (v2225='') then
+'
+<form action="/cgi-bin/irbis64r/cgiirbis_64.exe" enctype="Multipart/form-data" method="Post"> 
+<TABLE bgColor=#6699cc border=0 cellPadding=3 cellSpacing=1 width="100%"><TBODY>
+<TR>
+<TD class=paddleft noWrap><SMALL style="COLOR: #ffffff"><B>Авторизация</B></SMALL></TD>
+<TD align=right><SMALL><A class=nolinkb href=/help.html#avto target="help" style="COLOR: #ffffff" title="Фамилия - русский шрифт, именительный падеж, Пароль - номер пропуска">&nbsp;???&nbsp;</A></SMALL></TD></TR>
+<TR bgColor=#ffffcc>
+<TD colSpan=2>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TBODY>
+<TR>
+<INPUT TYPE="HIDDEN" NAME="I21DBN" VALUE="IBIS">
+<TD width="1%" align=right><SMALL title="Обязательно для заполнения">Фамилия: </SMALL></TD>
+<TD width="99%"><input type="text" name="E21PSD" maxlength=26 style="BACKGROUND-COLOR: #cad5e0; WIDTH: 94px">
+</TD>
+<!-- <TD width="1%" align=left><a href="/help.html" target="help"><IMG border=0 src="/img/help.gif" alt="Фамилия - русский шрифт, именительный падеж, Пароль - номер пропуска"></a></TD> -->
+</TR>
+<TR>
+<TD width="1%" align=right><SMALL title="Обязательно для заполнения">Пароль: </SMALL></TD>
+<TD width="99%"><input class="inp1" type="password" name="Z21ID" maxlength=8 style="BACKGROUND-COLOR: #cad5e0; WIDTH: 46px; HEIGHT: 20px"><IMG border=0 height=1 src="/img/empty.gif" width=2><INPUT TYPE="SUBMIT" NAME="C21COM" VALUE="F" class=button style="WIDTH: 45px; HEIGHT: 21px"></TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TBODY>
+<TR>
+<TD width="99%"><SMALL><A href="/help.html#_Toc59605402" target=new title="Для новых пользователей">Регистрация</A></SMALL></TD>
+<TD align=right width="1%"><SMALL>&nbsp;</SMALL></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+</form>
+'
+else
+'
+<TABLE bgColor=#6699cc border=0 cellPadding=3 cellSpacing=1 width="100%"><TBODY><TR><TD class=paddleft noWrap><SMALL style="COLOR: #ffffff"><B>Авторизация</B></SMALL></TD><TD align=right><SMALL><!-- <A class=nolinkb href="/?context=registration" style="COLOR: #ffffff" title=Регистрация>&nbsp;>>&nbsp;</A> --></SMALL></TD></TR><TR bgColor=#ffffcc><TD colSpan=2><TABLE border=0 cellPadding=1 cellSpacing=0 width="100%"><TBODY><TR>
+<TD width="99%"><SMALL style="COLOR: #990000"><B>',
+
+v10,' 'v11,' 'v12,
+
+'</B></SMALL></TD>
+<TD width="1%">
+<SMALL style="COLOR: #990000"><B></B></SMALL>
+</TD></TR>
+<TR>
+<TD colSpan=2>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+<TBODY>
+<TR>
+<TD align=right width="1%"><SMALL>&nbsp;</SMALL></TD></TR>
+
+<TR>
+<TD width="99%"><br style="FONT-SIZE: 3px"><SMALL><A href="/scripts/irbis64r/cgiirbis_64.dll?I21DBN=RDR&S21CNR=100&S21FMT=MFul&001S21P01=0&001S21P02=0&001S21P03=RI=&001S21P05=SIngleTerminSearch&001S21STR=<--USERID-->&C21COM=%cf%ee%e8%f1%ea&E21PID=<--RUNTIMEPID-->" title="Мой читательский формуляр" target=abonement>Мой формуляр</A></SMALL></TD>
+<TD class=paddleft width="1%" valign=bottom><br style="FONT-SIZE: 5px"><SMALL><A class=nolinkb href="/scripts/dSearch1.dll?I21DBN=RDR_0001&S21CNR=100&S21FMT=MFul&001S21P01=0&001S21P02=0&001S21P03=RI=&001S21P05=SIngleTerminSearch&001S21STR=<--USERID-->&C21COM=%cf%ee%e8%f1%ea&E21PID=<--RUNTIMEPID-->" title="Мой читательский формуляр" target=abonement>&nbsp;>>&nbsp;</A></SMALL></TD></TR>
+</TBODY></TABLE>
+
+</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+'
+fi

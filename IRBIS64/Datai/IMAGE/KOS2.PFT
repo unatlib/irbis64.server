@@ -1,0 +1,305 @@
+if &unifor('Knazn.mnu|2')<>''and s(v910^t):&unifor('Knazn.mnu|2') 
+then'\b '&unifor('Knaznac.mnu|'&unifor('Knazn.mnu|2'))'\b0 \par ' 
+   "Экз. для ВК2 "d10000, 
+   &unifor('+1W1#'''), 
+   &unifor('+1W1#',f(rsum((if p(v910^c) then 
+                  if v910^t:&unifor('Knazn.mnu|2') then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)), 
+   "Признак ДОП для ВК2 "d10000, 
+   &unifor('+7W20#'), 
+   &unifor('+7W20#',f(rsum((if p(v910) then 
+                      if &uf('Pv910^t')<>'' then '1;' fi fi)),0,0)),
+   "Экз. ДОП для ВК2 "d10000, 
+   &unifor('+1W2#'''), 
+   &unifor('+1W2#',f(rsum((if p(v910^c) then 
+                  if a(v910^t) then 
+                     if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                        if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+               fi fi fi fi)),0,0)) 
+   "ОС Студ. из 692 для ВК2"d10000, 
+   &unifor('+1W3#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+   then &unifor('+1W3#',(if p(v692) then 
+                     if v692^c:'O' 
+                     AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^e),0,0) fi fi)) fi, 
+   "ОС КО из 692 для ВК2"d10000, 
+   &unifor('+1W4#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then &unifor('+1W4#'(if p(v692) then 
+                    if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                    AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^f),0,2) fi fi)) fi, 
+   "ОС Студ. тек. для ВК2"d10000, 
+   &unifor('+7W5#'),&uf('+7555#') 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then 
+      if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+         &unifor('+7W555#',(if p(v691) then 
+                               if p(v691^0) then 
+                                  if p(v691^l) then else 
+                                     if v691^0:&unifor('Knazn.mnu|2') then 
+                                  &unifor('7RDR,!UPS='v691^0,'!,mfn/')/ 
+                                  &unifor('7RDR,!?',v691^0,'!,mfn/')/ 
+                                  &unifor('7RDR,!',&unifor('G2*'v691^0),'!,mfn/')/ 
+                            fi fi fi fi/)),&uf('+7G555'),
+         &uf('+7W5#'f(rsum((if p(g555) then '1;'fi/)),0,0))                      
+      else 
+         &uf('+7W5#'f(rsum((if p(v691) then 
+                               if p(v691^0) then 
+                                  if p(v691^l) then else 
+                                     if v691^0:&unifor('Knazn.mnu|2') then 
+                                  &unifor('DVUZ,"!',v691^0,'",v68^Z')';' 
+                            fi fi fi fi)),0,0)), 
+      fi 
+   fi,
+   "ОС Студ. всего"d10000, 
+   &unifor('+7W6#'), &uf('+7666#'),
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 then 
+      if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+         &unifor('+7W666#',(if p(v691) then 
+                               if p(v691^0) then 
+                                  if p(v691^l) then else 
+                               &unifor('7RDR,!UPS='v691^0,'!,mfn/')/ 
+                               &unifor('7RDR,!?',v691^0,'!,mfn/')/ 
+                               &unifor('7RDR,!',&unifor('G2*'v691^0),'!,mfn/')/ 
+                            fi fi fi/)),&uf('+7G666'),
+          &uf('+7W6#'f(rsum((if p(g666) then '1;'fi/)),0,0))                      
+      else 
+         &uf('+7W6#'f(rsum((if p(v691) then 
+                               if p(v691^0) then 
+                                  if p(v691^l) then else 
+                               &unifor('DVUZ,"!',v691^0,'",v68^Z')';' 
+                            fi fi fi)),0,0)), 
+   fi fi,
+   "ВС Студ. из 692 для ВК2"d10000, 
+   &unifor('+1W7#'''), 
+   &unifor('+1W7#',(if p(v692) then 
+                    if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                    AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^e),0,0) fi fi)), 
+   "ВС КО из 692 для ВК2"d10000, 
+   &unifor('+1W8#'''), 
+   &unifor('+1W8#'(if p(v692) then 
+                    if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                    AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^f),0,2) fi fi)), 
+   "ВС Студ. тек. для ВК2"d10000, 
+   &unifor('+7W9#'),&uf('+7999#'),
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 
+      if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+         &unifor('+7W999#',(if p(v691) then 
+                               if p(v691^9) then 
+                                  if p(v691^l) then else 
+                                     if v691^9:&unifor('Knazn.mnu|2') then 
+                                  &unifor('7RDR,!UPS='v691^9,'!,mfn/')/ 
+                                  &unifor('7RDR,!?',v691^9,'!,mfn/')/ 
+                                  &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/')/ 
+                            fi fi fi fi/)),&uf('+7G999'),
+         &uf('+7W9#'f(rsum((if p(g999) then '1;'fi/)),0,0))                      
+      else 
+         &uf('+7W9#'f(rsum((if p(v691) then 
+                               if p(v691^9) then 
+                                  if p(v691^l) then else 
+                                     if v691^9:&unifor('Knazn.mnu|2') then &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                            fi fi fi fi)),0,0)), 
+   fi fi,
+   "ВС Студ. всего"d10000, 
+   &unifor('+7W10#'),&uf('+71000#'),
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 
+      if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+         &unifor('+7W1000#',(if p(v691) then 
+                                if p(v691^9) then 
+                                   if p(v691^l) then else 
+                                &unifor('7RDR,!UPS='v691^9,'!,mfn/')/ 
+                                &unifor('7RDR,!?',v691^9,'!,mfn/')/ 
+                                &unifor('7RDR,!',&unifor('G2*'v691^9),'!,mfn/')/ 
+                             fi fi fi/)),&uf('+7G1000'),
+         &uf('+7W10#'f(rsum((if p(g1000) then '1;'fi/)),0,0))                      
+      else 
+         &uf('+7W10#'f(rsum((if p(v691) then 
+                                if p(v691^9) then 
+                                   if p(v691^l) then else 
+                               &unifor('DVUZ,"!',v691^9,'",v68^Z')';' 
+                             fi fi fi)),0,0)), 
+   fi fi,
+   "ОС Экз. из 692 для ВК2"d10000, 
+   &unifor('+1W11#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+   then 
+   &unifor('+1W11#',(if p(v692) then 
+                     if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^d),0,0) fi fi)) fi, 
+   "ВС Экз. из 692 для ВК2"d10000, 
+   &unifor('+1W12#'''), 
+   &unifor('+1W12#',(if p(v692) then 
+                     if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then f(val(v692^d),0,0) fi fi)), 
+   "ОС Дата из 692 для ВК2"d10000, 
+   &unifor('+1W13#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+   then 
+   &unifor('+1W13#',(if p(v692) then 
+                     if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then v692^g*6.2|.|,v692^g*4.2|.|,v692^g.4  fi fi)) fi, 
+   "ВС Дата из 692 для ВК2"d10000, 
+   &unifor('+1W14#'''), 
+   &unifor('+1W14#',(if p(v692) then 
+                     if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then v692^g*6.2|.|,v692^g*4.2|.|,v692^g.4 fi fi)), 
+   "ОС Студ. из 692 всего"d10000, 
+   &unifor('+1W15#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  
+   then 
+   &unifor('+1W15#',(if p(v692) then 
+                     if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then v692^e fi fi)) fi, 
+   "ВС Студ. из 692 всего"d10000, 
+   &unifor('+1W16#'''), 
+   &unifor('+1W16#',(if p(v692) then 
+                    if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                    AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then v692^e fi fi)), 
+   "ОС Экз. из 692 всего"d10000, 
+   &unifor('+1W17#'''), 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  
+   then 
+   &unifor('+1W17#',(if p(v692) then 
+                     if v692^c:'O' AND v692^b:s(f(val(&unifor('30'))-1,0,0),'/') 
+                     AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                     AND v692^a = &unifor('Knazn.mnu|2') then v692^d fi fi)) fi, 
+   "ВС Экз. из 692 всего"d10000, 
+   &unifor('+1W18#'''), 
+   &unifor('+1W18#',(if p(v692) then 
+                    if v692^c:'V' AND v692^b:s('/',&unifor('30')) 
+                    AND v692^d<>'' and v692^e<>'' and v692^f<>'' 
+                    AND v692^a = &unifor('Knazn.mnu|2') then v692^d fi fi)), 
+   |'\par R1 Экз. для ВК2 : '&unifor('+1R1'),        
+    '\par R2 Экз. ДОП для ВК2 : '&unifor('+1R2'),    '\par R2 Признак ДОП для ВК2 : 'g20,
+    '\par R3 ОС Студ. из 692 для ВК2'&unifor('+1R3'),'\par R4: ОС КО из 692 для ВК2'&unifor('+1R4') 
+    '\par R5 ОС Студ. тек. для ВК2'&unifor('+1R5')   '\par R6 ОС Студ. всего'&unifor('+1R6')
+    '\par R7 ВС Студ. из 692 для ВК2'&unifor('+1R7') '\par R8 ВС КО из 692 для ВК2'&unifor('+1R8') 
+    '\par R9 ВС Студ. тек. для ВК2'&unifor('+1R9')   '\par R10 ВС Студ. всего'&unifor('+1R10')
+    '\par R11 ОС Экз. из 692 для ВК2'&unifor('+1R11')'\par R12 ВС Экз. из 692 для ВК2'&unifor('+1R12')
+    '\par R13 ОС Дата из 692 для ВК2'&unifor('+1R13')'\par R14 ВС Дата из 692 для ВК2'&unifor('+1R14')
+    '\par R15 ОС Студ. из 692 всего'&unifor('+1R15') '\par R16 ВС Студ. из 692 всего'&unifor('+1R16') 
+    '\par R17 ОС Экз. из 692 всего'&unifor('+1R17')  '\par R18 ВС Экз. из 692 всего'&unifor('+1R18')
+    '\par '|d10000,
+
+   '\b Экземпляров\b0  - '&unifor('+1R1'), if &unifor('+1R2')<>''then ' ( + '&unifor('+1R2')' общ.)' fi, 
+   '        \b    ККО ср.\b0  - ' 
+   if a(v910) and p(v951) then '1' else 
+      if s(&unifor('+1R4'),&unifor('+1R8'))<>'' then 
+         if &unifor('+1R4')<>'' and &unifor('+1R8')<>'' then f(ravr(&unifor('+1R4'),';'&unifor('+1R8')),0,2) 
+         else 
+            if &unifor('+1R4')<>'' then 
+               if &unifor('+1R9')<>'' 
+               then f(ravr(&unifor('+1R4')';' 
+                           f(val(&unifor('+1R1')) / val(&unifor('+1R9')) + 
+                             val(if &unifor('+1R10')<>'' and val(g20)>1 then 
+                             f(val(&unifor('+1R2')) / val(&unifor('+1R10')),0,2) fi),0,2)),0,2) 
+               else 
+                  if &unifor('+1R10')<>'' 
+                  then f(ravr(&unifor('+1R4')';'f(val(&unifor('+1R2')) / val(&unifor('+1R10')),0,2)),0,2) 
+                  else &unifor('+1R4') 
+               fi fi 
+            else  
+               if &unifor('+1R8')<>'' then 
+                  if &unifor('+1R5')<>'' then f(ravr(&unifor('+1R8')';' 
+                              f(val(&unifor('+1R1')) / val(&unifor('+1R5')) + 
+                                val(if &unifor('+1R6')<>'' and val(g20)>1 then f(val(&unifor('+1R2')) / 
+                                val(&unifor('+1R6')),0,2)fi),0,2)),0,2) 
+                  else '!!!'
+                     if &unifor('+1R6')<>'' 
+                     then f(ravr(&unifor('+1R8')';'f(val(&unifor('+1R2')) / val(&unifor('+1R6')),0,2)),0,2) 
+                     else &unifor('+1R8') 
+         fi fi fi fi fi 
+      else 
+         if &unifor('+1R5')<>'' 
+         then f(val(&unifor('+1R1'))/val(&unifor('+1R5')) + 
+                val(if &unifor('+1R6')<>'' and val(g20)>1 then f(val(&unifor('+1R2')) / val(&unifor('+1R6')),0,2)fi),0,2) 
+         else 
+            if &unifor('+1R9')<>'' 
+            then f(val(&unifor('+1R1'))/val(&unifor('+1R9')) + 
+                   val(if &unifor('+1R10')<>'' and val(g20)>1 then f(val(&unifor('+1R2')) / val(&unifor('+1R10')),0,2)fi),0,2) 
+         fi fi 
+   fi fi 
+   '\par \b Осен. сем. :\b0   Студентов - ' 
+   if &unifor('+1R3')<>''then &unifor('+1R15') else &unifor('+1R5'), 
+      if &unifor('+1R6')<>'' then ' ( всего '&unifor('+1R6')')'fi 
+   fi, 
+   '    Экз. - '&unifor('+1R17'), 
+                if &unifor('+1R17')='' then &unifor('+1R1'),if &unifor('+1R2')<>'' then ' ( + ',&unifor('+1R2'),' общ.)' fi fi, 
+   '    ККО - ' 
+   if &unifor('+1R4')<>''then &unifor('+1R4') else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+      then 
+         if &unifor('+1R5')<>'' then  
+            f(val(&unifor('+1R1')) / val(&unifor('+1R5')) + 
+              val(if &unifor('+1R6')<>'' and val(g20)>1 then &unifor('+1R2') fi) / val(&unifor('+1R6')),0,2), 
+   fi fi fi, 
+   '\par \b Весен.сем.: \b0  Студентов - ' 
+   if &unifor('+1R7')<>''then &unifor('+1R16') else &unifor('+1R9'), 
+      if &unifor('+1R10')<>'' then ' ( всего '&unifor('+1R10')')'fi 
+   fi, 
+   '    Экз. - '&unifor('+1R18'), 
+                if &unifor('+1R18')='' then &unifor('+1R1'), 
+                   if &unifor('+1R2')<>'' then ' ( + ',&unifor('+1R2'),' общ.)' fi fi, 
+   '    ККО - ' 
+   if &unifor('+1R8')<>''then &unifor('+1R8') else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  
+      then 
+         if &unifor('+1R9')<>'' then  
+            f(val(&unifor('+1R1')) / val(&unifor('+1R9')) + 
+              val(if &unifor('+1R10')<>'' and val(g20)>1 then &unifor('+1R2') fi) / val(&unifor('+1R10')),0,2), 
+   fi fi fi, 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+   then 
+      if &unifor('+1R3')<>''and &unifor('+1R5')<>'' and val(&unifor('+1R3'))<>val(&unifor('+1R5')) or 
+         &unifor('+1R1')<>''and &unifor('+1R11')<>'' and val(&unifor('+1R1'))<>val(&unifor('+1R11')) 
+      then '\par \b Актуальные текущие данные \b0 (не совпадают с сохраненными '&unifor('+1R13')')\par ' 
+      '\b Осен. сем.:\b0   Студентов - '&unifor('+1R5'),if &unifor('+1R6')<>'' then ' ( всего '&unifor('+1R6')')'fi 
+      '    Экз. - '&unifor('+1R1'), if &unifor('+1R2')<>''then ' ( + '&unifor('+1R2')' общ.)' fi, 
+      '    ККО - ' 
+         if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+            &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  
+         then 
+            if &unifor('+1R5')<>'' then  
+               f(val(&unifor('+1R1')) / val(&unifor('+1R5')) + 
+                 val(if &unifor('+1R6')<>'' and val(g20)>1 then &unifor('+1R2') fi) / val(&unifor('+1R6')),0,2), 
+   fi fi fi fi, 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  
+   then 
+      if &unifor('+1R7')<>''and &unifor('+1R9')<>'' and val(&unifor('+1R7'))<>val(&unifor('+1R9')) or 
+         &unifor('+1R1')<>''and &unifor('+1R12')<>'' and val(&unifor('+1R1'))<>val(&unifor('+1R12')) 
+      then '\par \b Актуальные текущие данные \b0 (не совпадают с сохраненными '&unifor('+1R14')')\par ' 
+      '\b Весен. сем.:\b0  Студентов - '&unifor('+1R9'),if &unifor('+1R10')<>'' then ' ( всего '&unifor('+1R10')')'fi 
+      '    Экз. - '&unifor('+1R1'), if &unifor('+1R2')<>''then ' ( + '&unifor('+1R2')' общ.)' fi, 
+      '    ККО - '    
+         if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+            &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9  then 
+            if &unifor('+1R9')<>'' then  
+               f(val(&unifor('+1R1')) / val(&unifor('+1R9')) + 
+                 val(if &unifor('+1R10')<>'' and val(g20)>1 then &unifor('+1R2') fi) / val(&unifor('+1R10')),0,2), 
+   fi fi fi fi, 
+fi, 

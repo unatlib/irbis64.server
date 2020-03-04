@@ -1,0 +1,76 @@
+'</>',
+   if &uf('IRequest,MaskMrg,')<>'*' and 
+         (rsum((if p(v51) then if v51.4:&uf('30') and v51^c=&uf('IRequest,MaskMrg,') then '1;' fi fi))>0 or 
+          rsum((if p(v52) then if v52.4:&uf('30') and v52^c=&uf('IRequest,MaskMrg,') then '1;' fi fi))>0) 
+         or s(v51.4|+|,v52.4|+|):&uf('30') and &uf('IRequest,MaskMrg,')='*' 
+   then else 
+      if s(v51.4) : &uf('30') then else 
+         if s(v52.4) : &uf('30') 
+         then 
+            (if p(v52) then 
+                if v52.4=&uf('30') then 
+                   if &uf('IRequest,MaskMrg,')<>'' and &uf('IRequest,MaskMrg,')<>'*' then 
+                      if v52^c=&uf('IRequest,MaskMrg,') then else 
+                      &uf('+7W54#'&uf('30')' год - НЕТ перерегистрации в '&uf('IRequest,MaskMrg,')), 
+             fi fi fi fi),&uf('+7Q54'),(|<b>|g54|</b><br>|) 
+         else '<b>'&uf('30')' год - НЕТ ПЕРЕРЕГИСТРАЦИИ </b><br>' 
+  fi fi fi,
+if p(v54) then 
+   if v54^c<>'' then 
+      if rsum((if p(v54) then if p(v54^a) and p(v54^c) then '0;' else |1;|d54^a fi fi))>0 then  
+         (if p(v54) then if p(v54^a) and a(v54^c) then '<b>ОТЧИСЛЕН из ВУЗа 'v54*6.2|.|,v54*4.2|.|,v54.4|г.|,| |v54^a,'</b>',
+         | - |v54^b,| фак. |v54^F,| спец. |v54^S,'<br>'fi fi) 
+fi fi fi,
+"<br><b>ОТЧИСЛЕН из библиотеки </b>"d55,(|; |+d55,v55*6.2|.|,v55*4.2|.|,v55.4|г.|,| (|v55^a|)|,| - |v55^c),"<br>"d55,
+&uf('6prg'),
+
+'<br>',
+'<table>',
+'<td>',
+"<b>Идентификатор читателя: </b>"v30,"<br><b>Категория: </b>"|, |+v50,
+"<br><b>ФИО: </b>"v10," "v11," "v12,/*ghfghfghfgh
+"<br><b>Год рождения: </b>"v21,
+&uf('+7W1#'(if p(v51) then v51^c,'!'v51 fi/)),&uf('+7T1')/&uf('+7W51#'(if p(g1) then &uf('G2!'g1) fi/)),
+&uf('+7W2#'(if p(v52) then v52^c,'!'v52 fi/)),&uf('+7T2')/&uf('+7W52#'(if p(g2) then &uf('G2!'g2) fi/)),
+/*&unifor('MD52^c'),&unifor('MD51^c'), 
+if g52^c:g51^c then else if p(v51) then '<br><b>Запись в б-ку: </b>' fi,
+   (if g51.1:'^' then else|.,|+g51*6.2|.|,g51*4.2|.|,g51.4|г.| fi,
+    if s(g51^a,g51^b)<>''then' (' g51^a|; |,g51^b fi,|<b> - |g51^c|</b>|,
+    if s(g51^a,g51^b)<>''then')'fi) 
+fi,
+if p(g52) then '<br><b>Перерегистрация: </b>',
+(if g52.1:'^'then else|.,|+g52*6.2|.|,g52*4.2|.|,g52.4|г.| fi,
+if s(g52^a,g52^b)<>''then' ('g52^a|; |,g52^b fi,|<b> - |g52^c|</b>|,
+if s(g52^a,g52^b)<>''then')'fi),
+if g52:'^c' then else if g51:'^c'then'<br><b>Записан в ',|; |+g51^c'</b>' fi fi,
+fi,
+"<br><b>Разрешенные</b> места получения лит-ры: <b>"v56|, |"</b>",
+"<br><b>Неразрешенные </b>места получения лит-ры: <b>"v57+|, |"</b>",
+"<br><b>Пол: </b>"v23,"<br><b>Образование: </b>"v20,
+'</td>',
+'<td>',
+if p(v950) then '<br><IMG SRC="IRBIS:11,,',v950,'">',
+           else if p(v953) then '<IMG SRC=IRBIS:12,,',mfn,',1','>' fi,
+fi,
+'</td>',
+'</table>',
+
+"<br><b>Место обучения: </b>"v19^a,if s(v19^b,v19^c,v19^e)<>''then
+' ('"фак: "v19^c", ",v19^b", ","(инд.N "v19^f"), ","группа/класс: "v19^e,')'fi,
+"<br><b>Право пользования: </b>"v29,"<br><b>Прописан до: </b>"v34,
+"<br><b>Дом. адрес: </b>"d13,mpl,if v13:'^'then v13^a,", "v13^b," г."v13^c,
+", ул."v13^d," д."v13^e," п."v13^g,", кв."v13^h," ("v13^f")" else v13 fi,mhl,
+"<br><b>Паспортные данные: </b>"v14,
+"<br><b>Место работы: </b>"v15,"<br><b>Должность: </b>"v16,
+if s(v17v18)<>''then'<br><b>Телефон: </b>'," Дом.: "v17+|, |,
+" Служ.: "v18+|, | fi,mpl,"<br><b>E-mail: </b>"|; |+v32,mhl,
+"<br><b>Студент: </b><br>"d67,"Уч.год "v67^0,", Фак. "v67^a,",  Сем. "v67^f,
+", Спец. "v67^c,"<br><b>Не переведен на след.семестр </b>"d67^1,
+("<br>Изучаемые дисциплины (по кафедрам):"|<br>|v691^b,| / |v691^d),
+"<br><b>Отчислен </b>"d54,(|<br>|+v54*6.2|.|,v54*4.2|.|,v54.4|г.|,| |v54^a,| - |v54^b,| фак. |v54^F,,| спец. |v54^S,,,
+|  (Восстановлен)|d54^c),
+"<br><b>Примечания:  </b>"|, |+v33,
+"<br><b>Брайль - </b>"v41";"," <b>  Р-П Шрифт - </b>"v42";","<b>  ГК - </b>"v43
+";","<b>  ППК - </b>"v44,
+'<br>---------------------','<br>' 
+ 

@@ -1,0 +1,246 @@
+/*---------замена подполей поля 44 в записи КСУ
+/*-----используется в глобальной StatKsu-Spep2
+(if p(v44) 
+ then 
+    |^I|v44^I,,|^H|v44^H,,,,,
+    if s(v44^I,v44^H)=s(&uf('Ag10^I#1'),&uf('Ag10^H#1')) 
+    then 
+/*-------------------------J
+       if v44^J='' 
+       then 
+          if &uf('Ag10^J#1') <>'' then '^J',&uf('Ag10^J#1') fi,,
+       else 
+          '^J',,
+          if &uf('Ag10^J#1') <>'' then  f(val(v44^J)+val(&uf('Ag10^J#1')),0,0) else v44^J fi,,
+       fi,,
+/*-------------------------!
+       if v44^!='' 
+       then 
+          if &uf('Ag10^!#1') <>'' then '^!',&uf('Ag10^!#1') fi,,
+       else 
+          '^!',,
+          if &uf('Ag10^!#1') <>'' then  f(val(v44^!)+val(&uf('Ag10^!#1')),0,0) else v44^! fi,,
+       fi,,
+/*-------------------------K
+       if v44^K='' 
+       then 
+          if &uf('Ag10^K#1') <>'' then '^K',&uf('Ag10^K#1') fi,,
+       else 
+          '^K',,
+          if &uf('Ag10^K#1') <>'' then f(val(v44^K)+val(&uf('Ag10^K#1')),0,0)  else v44^K fi,,
+       fi,,
+/*-------------------------+ 2
+       if v44^+='' 
+       then 
+          if &uf('Ag10^+#1') <>'' then '^+',&uf('Ag10^+#1') fi,,
+       else 
+          '^+',,
+          if &uf('Ag10^+#1') <>'' then  f(val(v44^+)+val(&uf('Ag10^+#1')),0,2) else v44^+ fi,,
+       fi,,
+/*-------------------------A
+       if v44^A='' 
+       then 
+          if &uf('Ag10^A#1') <>'' then '^A',&uf('Ag10^A#1') fi,,
+       else 
+          '^A',,
+          if &uf('Ag10^A#1') <>'' then  f(val(v44^A)+val(&uf('Ag10^A#1')),0,0) else v44^A fi,,
+       fi,,
+/*-------------------------B
+       if v44^B='' 
+       then 
+          if &uf('Ag10^B#1') <>'' then '^B',&uf('Ag10^B#1') fi,,
+       else 
+          '^B',,
+          if &uf('Ag10^B#1') <>'' then  f(val(v44^B)+val(&uf('Ag10^B#1')),0,0) else v44^B fi,,
+       fi,,
+/*-------------------------C
+       if v44^C='' 
+       then 
+          if &uf('Ag10^C#1') <>'' then '^C',&uf('Ag10^C#1') fi,,
+       else 
+          '^C',,
+          if &uf('Ag10^C#1') <>'' then  f(val(v44^C)+val(&uf('Ag10^C#1')),0,0) else v44^C fi,,
+       fi,,
+/*-------------------------M
+       if v44^M='' 
+       then 
+          if &uf('Ag10^M#1') <>'' then '^M',&uf('Ag10^M#1') fi,,
+       else 
+          '^M',,
+          if &uf('Ag10^M#1') <>'' then  f(val(v44^M)+val(&uf('Ag10^M#1')),0,0) else v44^M fi,,
+       fi,,
+/*-------------------------N
+       if v44^N='' 
+       then 
+          if &uf('Ag10^N#1') <>'' then '^N',&uf('Ag10^N#1') fi,,
+       else 
+          '^N',,
+          if &uf('Ag10^N#1') <>'' then  f(val(v44^N)+val(&uf('Ag10^N#1')),0,0) else v44^N fi,,
+       fi,,
+/*-------------------------O
+       if v44^O='' 
+       then 
+          if &uf('Ag10^O#1') <>'' then '^O',&uf('Ag10^O#1') fi,,
+       else 
+          '^O',,
+          if &uf('Ag10^O#1') <>'' then  f(val(v44^O)+val(&uf('Ag10^O#1')),0,0) else v44^O fi,,
+       fi,,
+/*-------------------------P
+       if v44^P='' 
+       then 
+          if &uf('Ag10^P#1') <>'' then '^P',&uf('Ag10^P#1') fi,,
+       else 
+          '^P',,
+          if &uf('Ag10^P#1') <>'' then  f(val(v44^P)+val(&uf('Ag10^P#1')),0,0) else v44^P fi,,
+       fi,,
+/*-------------------------D
+       if v44^D='' 
+       then 
+          if &uf('Ag10^D#1') <>'' then '^D',&uf('Ag10^D#1') fi,,
+       else 
+          '^D',,
+          if &uf('Ag10^D#1') <>'' then  f(val(v44^D)+val(&uf('Ag10^D#1')),0,0) else v44^D fi,,
+       fi,,
+/*-------------------------E
+       if v44^E='' 
+       then 
+          if &uf('Ag10^E#1') <>'' then '^E',&uf('Ag10^E#1') fi,,
+       else 
+          '^E',,
+          if &uf('Ag10^E#1') <>'' then  f(val(v44^E)+val(&uf('Ag10^E#1')),0,0) else v44^E fi,,
+       fi,,
+/*-------------------------J
+       if v44^F='' 
+       then 
+          if &uf('Ag10^F#1') <>'' then '^F',&uf('Ag10^F#1') fi,,
+       else 
+          '^F',,
+          if &uf('Ag10^F#1') <>'' then  f(val(v44^F)+val(&uf('Ag10^F#1')),0,0) else v44^F fi,,
+       fi,,
+/*-------------------------J
+       if v44^G='' 
+       then 
+          if &uf('Ag10^G#1') <>'' then '^G',&uf('Ag10^G#1') fi,,
+       else 
+          '^G',,
+          if &uf('Ag10^G#1') <>'' then  f(val(v44^G)+val(&uf('Ag10^G#1')),0,0) else v44^G fi,,
+       fi,,
+/*------------------------- -
+       if v44^-='' 
+       then 
+          if &uf('Ag10^-#1') <>'' then '^-',&uf('Ag10^-#1') fi,,
+       else 
+          '^-',,
+          if &uf('Ag10^-#1') <>'' then  f(val(v44^-)+val(&uf('Ag10^-#1')),0,0) else v44^- fi,,
+       fi,,
+/*-------------------------Q
+       if v44^Q='' 
+       then 
+          if &uf('Ag10^Q#1') <>'' then '^Q',&uf('Ag10^Q#1') fi,,
+       else 
+          '^Q',,
+          if &uf('Ag10^Q#1') <>'' then  f(val(v44^Q)+val(&uf('Ag10^Q#1')),0,0) else v44^Q fi,,
+       fi,,
+/*-------------------------R
+       if v44^R='' 
+       then 
+          if &uf('Ag10^R#1') <>'' then '^R',&uf('Ag10^R#1') fi,,
+       else 
+          '^R',,
+          if &uf('Ag10^R#1') <>'' then  f(val(v44^R)+val(&uf('Ag10^R#1')),0,0) else v44^R fi,,
+       fi,,
+/*-------------------------S
+       if v44^S='' 
+       then 
+          if &uf('Ag10^S#1') <>'' then '^S',&uf('Ag10^S#1') fi,,
+       else 
+          '^S',,
+          if &uf('Ag10^S#1') <>'' then  f(val(v44^S)+val(&uf('Ag10^S#1')),0,0) else v44^S fi,,
+       fi,,
+/*-------------------------0
+       if v44^0='' 
+       then 
+          if &uf('Ag10^0#1') <>'' then '^0',&uf('Ag10^0#1') fi,,
+       else 
+          '^0',,
+          if &uf('Ag10^0#1') <>'' then  f(val(v44^0)+val(&uf('Ag10^0#1')),0,0) else v44^0 fi,,
+       fi,,
+/*-------------------------1
+       if v44^1='' 
+       then 
+          if &uf('Ag10^1#1') <>'' then '^1',&uf('Ag10^1#1') fi,,
+       else 
+          '^1',,
+          if &uf('Ag10^1#1') <>'' then  f(val(v44^1)+val(&uf('Ag10^1#1')),0,0) else v44^1 fi,,
+       fi,,
+/*-------------------------2
+       if v44^2='' 
+       then 
+          if &uf('Ag10^2#1') <>'' then '^2',&uf('Ag10^2#1') fi,,
+       else 
+          '^2',,
+          if &uf('Ag10^2#1') <>'' then  f(val(v44^2)+val(&uf('Ag10^2#1')),0,0) else v44^2 fi,,
+       fi,,
+/*-------------------------3
+       if v44^3='' 
+       then 
+          if &uf('Ag10^3#1') <>'' then '^3',&uf('Ag10^3#1') fi,,
+       else 
+          '^3',,
+          if &uf('Ag10^3#1') <>'' then  f(val(v44^3)+val(&uf('Ag10^3#1')),0,0) else v44^3 fi,,
+       fi,,
+/*-------------------------4
+       if v44^4='' 
+       then 
+          if &uf('Ag10^4#1') <>'' then '^4',&uf('Ag10^4#1') fi,,
+       else 
+          '^4',,
+          if &uf('Ag10^4#1') <>'' then  f(val(v44^4)+val(&uf('Ag10^4#1')),0,0) else v44^4 fi,,
+       fi,,
+/*-------------------------5
+       if v44^5='' 
+       then 
+          if &uf('Ag10^5#1') <>'' then '^5',&uf('Ag10^5#1') fi,,
+       else 
+          '^5',,
+          if &uf('Ag10^5#1') <>'' then  f(val(v44^5)+val(&uf('Ag10^5#1')),0,0) else v44^5 fi,,
+       fi,,
+/*-------------------------6
+       if v44^6='' 
+       then 
+          if &uf('Ag10^6#1') <>'' then '^6',&uf('Ag10^6#1') fi,,
+       else 
+          '^6',,
+          if &uf('Ag10^6#1') <>'' then  f(val(v44^6)+val(&uf('Ag10^6#1')),0,0) else v44^6 fi,,
+       fi,,
+/*-------------------------7
+       if v44^7='' 
+       then 
+          if &uf('Ag10^7#1') <>'' then '^7',&uf('Ag10^7#1') fi,,
+       else 
+          '^7',,
+          if &uf('Ag10^7#1') <>'' then  f(val(v44^7)+val(&uf('Ag10^7#1')),0,0) else v44^7 fi,,
+       fi,,
+/*-------------------------8
+       if v44^8='' 
+       then 
+          if &uf('Ag10^8#1') <>'' then '^8',&uf('Ag10^8#1') fi,,
+       else 
+          '^8',,
+          if &uf('Ag10^8#1') <>'' then  f(val(v44^8)+val(&uf('Ag10^8#1')),0,0) else v44^8 fi,,
+       fi,,
+/*-------------------------9
+       if v44^9='' 
+       then 
+          if &uf('Ag10^9#1') <>'' then '^9',&uf('Ag10^9#1') fi,,
+       else 
+          '^9',,
+          if &uf('Ag10^9#1') <>'' then  f(val(v44^9)+val(&uf('Ag10^9#1')),0,0) else v44^9 fi,,
+       fi,,
+   else 
+      |^J|v44^J,,,|^!|v44^!,,|^K|v44^K,,|^+|v44^+,,|^A|v44^A,,|^B|v44^B,,|^C|v44^C,,|^M|v44^M,,|^N|v44^N,,|^O|v44^O,,
+      |^P|v44^P,,|^D|v44^D,,|^E|v44^E,,|^F|v44^F,,|^G|v44^G,,|^-|v44^-,,|^Q|v44^Q,,|^R|v44^R,,|^S|v44^S,,
+      |^0|v44^0,,,|^1|v44^1,,|^2|v44^2,,|^3|v44^3,,|^4|v44^4,,|^5|v44^5,,|^6|v44^6,,|^7|v44^7,,|^8|v44^8,,|^9|v44^9,,
+      |^T|v44^T,,|^U|v44^U,,|^V|v44^V,,|^W|v44^W,,|^X|v44^X,,|^Y|v44^Y,,|^Z|v44^Z,,
+   fi,,
+ fi/)

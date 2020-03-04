@@ -1,0 +1,57 @@
+/*&uf('+7W1001#^F9^AÌÒÔ^PO'),
+&uf('+7W103#'),&uf('+7W103#'&uf('6kko_103')),
+&uf('+7W2#'),&uf('+7W20#'),
+if val(g103)>0 then 
+   if (v900^t:'L' or p(v230)) and v910='' then 
+      if val(&uf('IPRIVATE,NumbComputers,0'))>0 then 
+         if g35<>'' then else 
+            &uf('+7W33#'(&uf('+5Tfo_elkko.mnu')/)),
+            (if p(g33) then &uf('+7W34#'),&uf('+7W34#'g33),&uf('6elres') fi/),
+            &uf('+7W35#'(if p(g35) then if g35^b='' then else g35 fi fi/)),
+         fi,   
+         if rsum((g35^c|;|))>0 then f(val(&uf('IPRIVATE,NumbComputers,0'))/rsum((g35^c|;|)),0,2) else '0' fi 
+      else '1' fi,
+   else 
+      &uf('+7W20#',f(rsum((if p(v910) then if &uf('Pv910^t')<>'' then '1;' fi fi)),0,0)),
+      if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'O' or  &uf('KsemV.mnu\'g1001^f)<>''then 
+         &uf('+7W2#'(if p(v693) then if v693^x:'!COM' then v693 fi fi)),
+         if g1001^o='' then 
+            if v693^a='' then (if p(v693) then if s(v693^l,v693^x)='' then v693^f fi fi) 
+            else 
+               (if p(v693) then if v693^x:'!NOFOND' then v693^n fi fi) 
+            fi
+         else 
+            if v693^a='' then (if p(v693) then if s(v693^a,v693^l,v693^x)='' then v693^f fi fi) 
+            else 
+               if val(g20)=1 then
+                  (if p(v693) then if v693^a:&uf('Ag1001^o#1') then v693^f fi fi) 
+               else 
+                  if val(g20)>1 then 
+                     (if p(v693) then if v693^a:&uf('Ag1001^o#1') then f(val(v693^f)+val(&uf('Ag2^m#1')),0,2) fi fi) 
+         fi fi fi fi 
+      else 
+         if &uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'V' then 
+            &uf('+7W692#'(if p(v692) then if v692^b=&uf('Av693^b#1') and v692^C:'O' then v692 fi fi/)),
+            &uf('+7W2#'(if p(g692) then if g692^x:'!COM' then g692 fi fi)),
+            if g1001^o='' then 
+               if g692^a='' then (if p(g692) then if s(g692^a,g692^l,g692^x)='' then g692^f fi fi) 
+               else 
+                  (if p(g692) then if g692^x:'!NOFOND' then g692^n fi fi) 
+               fi
+            else   
+               if g692^a='' then (if p(g692) then if s(g692^l,g692^x)='' then g692^f fi fi) 
+               else 
+                  if s(g692^a|+|):&uf('Ag1001^o#1') then 
+                     if val(g20)=1 then
+                        (if p(g692) then if g692^a:&uf('Ag1001^o#1') then g692^f fi fi) 
+                     else 
+                        if val(g20)>1 then 
+                           (if p(g692) then if g692^a:&uf('Ag1001^o#1') then 
+                            f(val(g692^f)+val(&uf('Ag2^m#1')),0,2) fi fi) 
+                     fi fi 
+                  else f(val(g2^m),0,2)
+            fi fi fi 
+        else '0'
+  fi fi fi 
+else '0'fi
+/*/g103/g2/g20/

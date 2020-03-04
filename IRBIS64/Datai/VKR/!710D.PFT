@@ -1,0 +1,1 @@
+if p(v710)then if v710:'^a' then '0'else '1 Ошибка в структуре' fi else '0'  fi

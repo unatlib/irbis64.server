@@ -1,0 +1,14 @@
+(if p(v951^I) then '<br><A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+(if p(v951^A) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+(if p(v600) then 
+    if p(v600^w) then 
+       if v600^w:'VS' then 
+       '<A HREF="IRBIS:2,,,,I='v600^w,'">',' ЗАПИСЬ из ЭК, "связанная" с текущей ','</A>',' <b> \о произв.\','</b><br>' 
+ fi fi fi), 
+if val(&unifor('J,I600='v903))>0 
+then '<br>','<A HREF="IRBIS:2,,,,I600='v903,'">','Есть запись "О произведении"','</A>' fi, 
+
+"<br> <b> Учебная литература: </b> "d691,
+(|<br> |d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g),
+("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b),
+if s(,odfp_H,)<>'' then '<br> ',odfp_H, fi,

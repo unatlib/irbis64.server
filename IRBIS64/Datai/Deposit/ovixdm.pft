@@ -1,0 +1,40 @@
+&uf('+7W2#'s(&uf("Khdmi.mnu|"v900^c),&uf("Khdmi.mnu|"v900^2),&uf("Khdmi.mnu|"v900^3),&uf("Khdmi.mnu|"v900^4),&uf("Khdmi.mnu|"v900^5),&uf("Khdmi.mnu|"v900^6))),
+&uf('+7W3#'s(&uf("Khdiz.mnu|"v900^c),&uf("Khdiz.mnu|"v900^2),&uf("Khdiz.mnu|"v900^3),&uf("Khdiz.mnu|"v900^4),&uf("Khdiz.mnu|"v900^5),&uf("Khdiz.mnu|"v900^6))),
+if &unifor('Av461#2')<>''then &unifor('S0'),
+   (if p(v461) then if 
+       &uf('Ag2#1')=''then if val(&unifor('S1A'))=1 then|. - |v461^4,
+          if v461^4=''then if s(v461^d,v461^+)<>'' then'. - ' fi,
+             if v461^8='' then v461^d,| ; |v461^+ else &uf('G0;'v461^d), if v461^8.1=' 'then v461^8 else | |v461^8 fi, fi,
+             if s(v461^d,v461^+)=''then 
+                  
+                   if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else
+                      |. - [Á. ì.]|d461^g fi else if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else|. - [S. l.]|d461^g 
+          fi,fi,fi,fi,if &uf('Ag3#1')=''then
+          | : |v461^g,| [|v461^6|]|,
+          if v461^s='1'then else if v461^s.1=' 'then v461^s else | |v461^s fi, fi, fi,
+       else 
+          if &uf('Av461^s#1')<>''then else
+             if p(v461^?) then else| ; |v461^4,
+                if v461^4=''then if s(v461^d,v461^+)<>'' then ' ; ' fi,
+                   if v461^8='' then v461^d,| ; |v461^+ else &uf('G0;'v461^d),if v461^8.1=' 'then v461^8 else | |v461^8 fi, fi,
+             fi fi,if &uf('Ag3#1')=''then| : |v461^g,| [|v461^6|]| fi,
+   fi fi fi fi) 
+else if &uf('Ag2#1')=''then ". - "v461^4,
+   if v461^4=''then if s(v461^d,v461^+)<>'' then'. - ' fi,
+      if v461^8='' then v461^d," ; "v461^+ else &uf('G0;'v461^d),if v461^8.1=' 'then v461^8 else | |v461^8 fi,
+      fi,
+    fi    
+         if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then 
+            if s(v461^4,v461^d,v461^+,v461^g)<>''then 
+               if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else if s(v461^4,v461^d,v461^+)=''then '. - [Á. ì.]'fi,| : [á. è.]|n461^g 
+            fi fi
+         else 
+            if s(v461^4,v461^d,v461^+,v461^g)<>''then 
+               if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else if s(v461^4,v461^d,v461^+)=''then '. - [S. l.]'fi,| : [s. n.]|n461^g 
+            fi,fi,
+          fi,if &uf('Ag3#1')=''then
+   | : |v461^g,fi,| [|v461^6|]|,
+   if v461^s='1'then else if v461^s.1=' 'then v461^s else | |v461^s fi, fi,
+fi,fi,
+if s(v461^d,v461^+,v461^4,v461^g)<>''and  s(&uf('Ag2#1'),&uf('Ag3#1'))=''then|, |d461^h else|. - |d461^h fi,v461^5| |,v461^h,
+if p(v461^h) then if v461^h=v461^z then else' - 'v461^z,"    "n461^z fi,fi,

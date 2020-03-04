@@ -1,0 +1,30 @@
+mpl,
+'<table width="100%">',
+'<tr width="100%">',
+'<td width="1%" valign="top">',
+'<INPUT type="checkbox" name="CHECKMFN" value="',mfn,'">',
+'</td>',
+'<td width="5%" valign="top" >',
+'<b style="background-color: #c0c0c0;">','<IRBIS type=0></IRBIS>. ','</b>'
+'</td><td>',
+if v920='J' then &uf('6JW_H') 
+            else if v920:'NJ' then &uf('6NJW_H') 
+                              else if v920:'SPEC' then &uf('6MN_H') 
+                                                  else if (v920:'ASP') or (v920:'AUNTD') then &uf('6ASP_H')
+                                                                     else if v920:'MUSP' then &uf('6MUSI_H') 
+                                                                                         else if v920:'BOUNI' then &uf('6VS600_H') 
+                                                                                                              else &uf('6KN_H') 
+                                                                                              fi 
+                                                                          fi 
+                                                       fi 
+                                   fi 
+                 fi 
+fi,
+
+&uf('+7W1#',&uf('+N910')),/* ÍÓÎ-‚Ó ÔÓ‚ÚÓÂÌËÈ 910 ‚ g1
+&uf('+7W1#',f((val(f(val(g1)/10,0,0))+1)*10,0,0)),
+'<br><A HREF="IRBIS:1,,',&uf('+D'),',CL_EKZ_entry?RELOAD=1&KEY=@',mfn,'&FREEPAR12=',g1,'&TOPPFTNAME=CL_EKZ_BOTTOM','"> Œ––≈ “»–Œ¬¿“‹ —¬≈ƒ≈Õ»ﬂ Œ¡ › «≈ÃœÀﬂ–¿’...</A><br>', 
+'</td></tr>',
+'</table>',
+'<hr noshade size="1">',
+

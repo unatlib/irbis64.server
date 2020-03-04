@@ -1,0 +1,92 @@
+'</>',,,,,,
+'<table border=1 cellspacing=0 > <font size="2">',,,,
+  '<tr><td><b> Абонент номер: </b>',,,'</td><td>',,v100,,'</tr>',
+  '<tr><td><b> НАИМЕНОВАНИЕ : </b>',,,'</td><td>',,,if a(v81^a) then v81^b else v81^a fi,,,,'</tr>',  
+  if p(v841^A) then 
+     '<tr><td><b> Ответственный испольнитель: </b>',,,'</td><td>',v841^A,,
+     if s(v841^A,)<>'' and v841^B<>'' then ', ' fi,v841^B,,
+     if s(v841^A,v841^B)<>'' and v841^C<>'' then ', ' fi,,,"тел."v841^C,,,
+     if s(v841^A,v841^B,v841^D)<>'' and v841^D<>'' then ', ' fi,"mail: "v841^D,,'</tr>',    
+  fi,,,,,,,,,,,
+  if p(v140^A) then 
+  '<tr><td><b> Вид абонента: </b>',,,'</td><td>',,&uf("Kva.mnu|"v140^A),if &uf("Kva.mnu|"v140^A)='' then v140^A fi,'</tr>',  
+  fi,,,,
+  if p(v140^B) then   
+  '<tr><td><b> Вед. признак: </b>',,,'</td><td>',,&unifor("Kved.mnu|"v140^b),,'</tr>',
+  fi,,,,,,,,,,,,,,
+  if v30<>'' then '<tr><td><b> Читательский билет: </b>',,,'</td><td>',,v30,,'</tr>', fi,,
+  if p(v50) 
+  then 
+    '<tr><td><b> Договор </b></td><td>',,,"№ "v50^a,,
+    if v50^A<>'' and v50^D<>'' then ' от ',v50^D fi,,,if s(v50^A,v50^D)<>'' and v50^F<>'' then ', стоимость: ',v50^F fi,,,
+    " ("v50^E")",,,
+    '</tr>',
+  fi,,
+  if p(v83) then '<tr><td><b> АДРЕС: </b>',,,'</td><td>',,,v83^a,", "v83^b,", "v83^c,", "v83^d,", "v83^e,,,,'</tr>',fi,,
+  if v82^C<>'' then '<tr><td><b> ТЕЛЕФОН: </b>',,,'</td><td>',,,(v82^c+|;|),,,,,'</tr>', fi,,
+  if v82^e<>'' then '<tr><td><b> ФАКС: </b>',,,'</td><td>',,,(v82^e+|;|),,,,,'</tr>', fi,,
+  if v82^f<>'' then '<tr><td><b> E-MAIL: </b>',,,'</td><td>',,,(v82^f+|;|),,,,,'</tr>', fi,,
+  if p(v41) then '<tr><td><b> СУММА на ',v41^C*6.2,'.'v41^C*4.2,'.',v41^C.4,': </b>',,,'</td><td>',,,f(rsum(v41^d|,|),1,2)," руб."d41^d,,,,'</tr>', fi,,
+  if p(v42) then '<tr><td><b> ПОСТУПИЛО за: ',&uf('30'),,,,' г.</b>',,,'</td><td>',,,f(rsum((v42^d|,|)),1,2)," руб."d42^b,,,,'</tr>', fi,,  
+  if p(v39) then '<tr><td><b> ИСТРАЧЕНО: </b>',,,'</td><td>',,,f(rsum((v39^d|,|)),1,2)," руб."d39^b,,,,'</tr>', fi,,
+  if p(v35) then '<tr><td><b> ОСТАТОК на: ',&uf('32')'.',&uf('31')'.',&uf('30'),,,'</b>',,,'</td>',,,
+  &uf('+7W1#',,f(  rsum((v41^d|,|))+rsum((v42^d|,|))-rsum((v39^d|,|)),1,2),,,),,,
+  '<td ',,,if g1.1='-' then ' bgcolor="#FFE4E1" ' fi,'>',,,,g1,,," руб."d39,,,,'</tr>', fi,,
+  '</tr></Table>' ,,,,,,,,,
+if val(&uf('+N37'))>val(&uf('IMAIN,LimFull_37,3')) 
+then
+      '<A HREF="IRBIS:1,,,37tab?&KEY=@',mfn,'">',
+      '<i><font size="2"> <br> <br><b> ПРЕДОПЛАТА на </font>',,&uf('3'),,,,'</i>',,'</A>','<br>',    
+else 
+     if p(v37) 
+     then  
+       '<br><b> ПРЕДОПЛАТА на ',&uf('30'),,,,,' год </b><br>',,,
+        (if p(v37) 
+         then     
+           |<tr>|v37^d| руб. - |,,,,v37^c+|; |,,'<br>',
+         fi/),,,
+     fi,,,
+fi,,,
+
+if p(v40) 
+then 
+   '<br><b> СВЕДЕНИЯ О ВЫДАЧЕ ЛИТЕРАТУРЫ, состояние на: ',,&unifor('3'),,,' (задолженный заказ - цвет)',,,,,,,,,'</b>',,,,
+   '<table border=1 cellspacing=0 > <font size="2">',,,,  
+   '<tr><td> Заказ N </b>',,'</td>',,'<td>  Шифр </b>',,'</td>',,,,,,,'<td>  Экземпляр </b>',,'</td>',,,,,,'<td>  Выдано </b>',,,'</td>',,'<td>  Предпол.возврат </b>',,,'</td>',,'<td>  Возврат </b>',,,,'</td>',,
+   '<td>  Из ЭК </b>',,,,'</td>','<td> Из...  </b>',,,,'</td>',
+  (if p(v40) then 
+   '<tr><td>',,v40^b,,'</td>',,
+   '<td',if v40^F.1='*' and val(v40^E)<val(&uf('3')) then ' bgcolor="#FFE4E1" ' fi ,,'>',,,,,,v40^a,,'</td>',,
+   '<td>',,,,,,v40^h,,'</td>',,   
+   '<td>',,,,,,v40^d,,'</td>',,
+   '<td>',,,,,,v40^e,,'</td>',,
+   '<td>',,if v40^f.1='*' then '  -' else v40^f fi,,'</td>',,                 
+   '<td>',,,,,,v40^g,|&nbsp|n40^g,'</td>',,   
+   '<td>',,,,,,v40^v,,'</td>',,      
+  fi/)    
+  '</Table>'
+fi,,,,  
+if val(&uf('JMBA_ARH,AB=',v100) )>0 then '(Есть данные в архивной БД!)' fi,,,
+if &uf('IMAIN,FULLTEXTABLE,1')='1' 
+then 
+  (if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi), 
+  if g140 : 'IRI' 
+  then 
+     (if p(v951^A) 
+      then 
+         '<br><A HREF="',&uf('IMAIN,PATHTOCGIIRBIS,'),'?&C21COM=2&IMAGE_FILE_DOWNLOAD=1
+&I21DBN=',&uf('+D'),'&Image_file_name=',v951^A,,'">',
+         if p(v951^T) then v951^T else v951^A fi,'</A>', 
+      fi), 
+  else 
+     (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,11,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+  fi     
+  (if v951^N<>'' then if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi  fi),
+fi,
+
+if p(v30) and val(&uf('JRDR,RI=',,v30))>0 
+then 
+   '<br>-----------Читатель библиотеки----------------------------'/
+   &uf('DRDR,!RI=',,v30,,'!,@RDRW_HTML')
+fi,,
+

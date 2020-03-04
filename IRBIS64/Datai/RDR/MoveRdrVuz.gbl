@@ -1,0 +1,54 @@
+0
+//12 PUTLOG
+// 9.1 с учетом группы
+// формирование записей контингента в БД VUZ по полю 90
+Для переноса использовать:
+// 991^A - годы обучения
+// v991^B  - имя БД
+IF
+if p(v90) then '1' fi
+DEL
+1090
+*
+
+
+ADD
+1090
+
+mpu,(v90/)
+
+// по полю 90 создаю запись контингента в VUZ
+REPEAT
+IF
+if val(&uf('IMAIN,LinkGroup,0'))=1 then if v1090^E<>'' and val(&uf('JVUZ,VGR=',v1090^E))<=0 then '1' fi else if val(&unifor('JVUZ,!',&uf('Av1090^A#1'),if &uf('Av1090^C#1')<>'' then &uf('Av1090^C#1') else &uf('Av1090^N#1') fi,,&uf('Av1090^V#1'),,,&uf('Av1090^O#1'),'-S',&uf('Av1090^F#1')))<=0 then '1' fi fi
+// еще нет такой записи
+NEWMFN
+'VUZ'
+ADD
+920
+
+'VUZ'
+
+ADD
+68
+
+if &uf('Av1090^A#1')<>'' then '^A',&uf('Av1090^A#1') fi,,,if &uf('Av1090^V#1')<>'' then '^V',&uf('Av1090^V#1') fi,,,if &uf('Av1090^O#1')<>'' then '^O',&uf('Av1090^O#1') fi,,,if &uf('Av1090^N#1')<>'' then '^N',&uf('Av1090^N#1') fi,,,if &uf('Av1090^C#1')<>'' then '^C',&uf('Av1090^C#1') fi,,,if &uf('Av1090^E#1')<>'' then '^C',&uf('Av1090^E#1') fi,,,if &uf('Av1090^F#1')<>'' then '^F',&uf('Av1090^F#1') fi
+
+PUTLOG
+mhl,'Создана запись VUZ - ',v68
+END
+DEL
+1090
+1
+
+
+UNTIL
+if p(v1090) then '1' fi
+FI
+DEL
+1090
+*
+
+
+// конец есть поле 90
+FI

@@ -1,0 +1,55 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=0
+FONT_SIZE=8
+TAB_TABITOGI=1
+CELL_TAB_COL_COUNT=6
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=2
+CELL_TAB2_2=
+CELL_TAB2_3=if p(v910) and rsum((if p(v910) then if &uf('Av991^b#1')<>''then if (&uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) and v910^!='') or &uf('+97'v910^!)=&uf('+97'&uf('Av991^b#1'))then'1; 'else'0;'fi else '1;'fi fi/))>0 then f(rsum((if p(v910)then if p(v910^s)then if &uf('Av991^b#1')<>''then if (&uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) and v910^!='') or &uf('+97'v910^!)=&uf('+97'&uf('Av991^b#1'))then v910^0|;|,|1;|n910^0 else'0;'fi else v910^0|;|,|1;|n910^0 fi else '0;'fi fi/)),0,0) fi/
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Да
+CELL_TAB3_1=3
+CELL_TAB3_2=
+CELL_TAB3_3=if p(v910) and rsum((if p(v910) then  if &uf('Av991^b#1')<>''then  if  (&uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) and v910^!='') or &uf('+97'v910^!)=&uf('+97'&uf('Av991^b#1'))then'1; 'else'0;'fi else '1;'fi fi/))>0 then f(rsum((if p(v910)then if p(v910^s)then if &uf('Av991^b#1')<>''then if  (&uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) and v910^!='') or &uf('+97'v910^!)=&uf('+97'&uf('Av991^b#1'))then if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(v910^0,|1|n910^0),0,2)';'fi fi else  if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(v910^0,|1|n910^0),0,2)';' ,fi ,fi fi fi/)),0,2)fi/
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Да
+CELL_TAB4_1=4
+CELL_TAB4_2=
+CELL_TAB4_3=if p(v910)  and rsum((if p(v910) then if &uf('Av991^b#1')<>''then if &uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1'))then'1; 'else'0;'fi else '1;'fi fi/))>0 then f(rsum((if p(v910)then  if v910^s='' or  val(v910^1)<>val(v910^0) then if &uf('Av991^b#1')<>'' then if &uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1'))then f(val(v910^1)-val(v910^0),0,0),|;|d910^0,|1;|n910^1 else'0;'fi else  f(val(v910^1)-val(v910^0),0,0),|;|d910^0,|1;|n910^1 fi fi fi/)),0,0)fi/
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Да
+CELL_TAB5_1=5
+CELL_TAB5_2=
+CELL_TAB5_3=if p(v910) and rsum((if p(v910) then if &uf('Av991^b#1')<>''then if &uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) then'1; 'else'0;'fi else '1;'fi fi/))>0 then f(rsum((if p(v910)then  if v910^s=''then if &uf('Av991^b#1')<>'' then if &uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1'))then if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(f(val(v910^1)-val(v910^0),0,0),|1|n910^1),0,2)';',fi fi else if s(v910^e,&uf('Av10^d#1'))<>'' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1') fi,' 0') * val(f(val(v910^1)-val(v910^0),0,0),|1|n910^1),0,2)';',fi fi fi fi/)),0,2)fi/
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\par \ql \fs20 1.  По всем учетным документам в фонде  числится \par \tab ',f(val(v1),0,0),' экз. книг на общую сумму ',f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi'\par 2.  ',if val(v3)>0 then 'Обнаружено недостающих экз., записанных в инвентарные книги, \par 'f(val(v3),0,0)' экз. на общую сумму  'f(val(v4),0,2),if val(v4)>0 then &unifor('Korg.mnu|3')fi else 'Недостающих экземпляров, записанных в инвентарные книги, не обнаружено ' fi'\par '
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=100
+CELL_SORT4=0
+CELL_SORT5=if p(v910) then if s((if p(v910) then if &uf('Av991^b#1')<>''then if  (&uf('+97'v910^D)=&uf('+97'&uf('Av991^b#1')) and v910^!='') or &uf('+97'v910^!)=&uf('+97'&uf('Av991^b#1'))then'1'else'0'fi else '1'fi fi)):'1' then mfn fi fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=tprf.wss
+HDR_PFT=tprfah
+HDR_PARAMS_COUNT=0

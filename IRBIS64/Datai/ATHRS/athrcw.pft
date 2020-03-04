@@ -1,0 +1,27 @@
+'{',if v920:'ATHRC'then if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на Предметную рубрику\b0 ',if p(v210) then '\par ' fi                              
+                      if p(v210^a)then '\par ',210c, fi,
+if v510:&unifor('Av510#2') then else if v510:'^5' and (not(v305:'^b')) and (not(v510^5*1:'0')) then i
+f v510:'^5h' then '\par \tab \b см.также под более узким понятием:\b0 ' else if 
+v510:'^5g' then '\par \tab \b см.также под более широким понятием:\b0 ' fi fi fi fi,
+if p(v510) or p(v520) or p(v500) or p(v550)then
+ if v510:&unifor('Av510#2')or a(v510^5) or p(v520) or p(v500) or p(v550)then '\par \tab \b см.также:\b0 ' else
+ if v305:'^b' and v510^5:'0' then ("\par \b "v305^a"\b0 ",v305^b,|,|v305^c,|,|v305^d,|,|v305
+^e/) else if v510:'^0' then ("\par \b "v510^0"\b0 ") fi fi fi fi,(if p(v500)then '\par',500, fi/),(if p(v520)then '\par',520, fi/),(if p(v550)then '\par',550, fi/)&unifor('S0')if
+ p(v510) and (not(v305:'^b')) and (not(v510^5*1:'0')) then if v510:&unifor('Av510#
+2') then (if p(v510) then '\par '&unifor('S1A')'.',510, fi/) else '\par ',,510, fi fi,if p(v410) and (not(v510^5*1:'0')) and (not(v410^5*1:'0')) then "\par  \tab \b Непринятые формы предметной рубрики \b0 "d410
+ fi,&unifor('S0')if p(v410) and (not(v410^5*1:'0')) then if v410:&unifor('Av410#
+2') then (if p(v410)then '\par '&unifor('S1A')'.',410c, fi/) else '\par ',410c fi fi fi fi,if p(v210) and p(v31
+0) then '\tab \b ссылочная запись на Предметную рубрику\b0 ','\par ',210c,("\par \b "v310^a"\b0 ",| |v310^b,
+|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p(v210) and p(v320) then '\tab \b  Общая пояснительная запись на ИНДИВИДУАЛЬНОГО АВТОРА
+\b0 ','\par ',210c,"\par "v320^a fi,if p(v300) or p(v830) or p(v810)
+ then '\par ' fi,if p(v300) then '\par \b Справочное примечание:  \b0 '("\par "v
+300^a/) fi,if p(v830) then '\par \b Примечание каталогизатора :  \b0 '("\par ",| 
+|v830^a/) fi,if p(v820) then '\par \b ИНФОРМАЦИЯ Об ИСПОЛЬЗОВАНИИ ЗАГОЛОВКА В ПОЛЕ 210:  \b0 '('\par ',| |v82
+0^A,|. |v820^B,|. |v820^C,|. |v820^D/) fi,if p(v951) then '\par ' fi,if p(v951) and (&uf('IMAIN,FULLTEXTABLE,1')='1') then'\par См. ссылк',
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у 'fi,
+   (if p(v951) then |,  |+d951,
+/*       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^a) then &unifor('+I$3,10,,'v951^a'$',v951^t,| ФАЙЛ|n951^t) fi 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi) 
+fi,'\par}'
+

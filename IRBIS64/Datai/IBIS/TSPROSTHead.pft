@@ -1,0 +1,18 @@
+'\trowd \trqc\trgaph108\trleft-108\trkeep 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx648
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2268
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7668
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8748
+\pard \ql\widctlpar\intbl {\b ',,
+&uf('+7W20#',f(val(g20)+1,0,0) ),,g20,,
+'\cell }
+\pard \ql\widctlpar\intbl {\b ',,,,,,,,
+v1^B,,,,,
+'\cell }
+\pard \ql\widctlpar\intbl {\b ',,,,,,
+ref(val(v1^Y),&uf('6brief') ),,,,,,,,
+'\cell }
+\pard \ql\widctlpar\intbl {\b ',,,,,
+v1^C,,&uf('+7W21#',,f(val(g21)+val(v1^C),0,0) ),
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'

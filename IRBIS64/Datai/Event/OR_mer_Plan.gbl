@@ -1,0 +1,286 @@
+0
+IF
+if p(v991^c) then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ в 1932* - вводим порядковые номера отобранных ПОЛЕЙ 330. В g933 будут собираться шифры новых записей
+
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+if p(v991^c) then (if &uf('1*R,?v991^c#1')<>'' then &uf('1*R,?v991^c#1') fi/) fi,
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Удаляем поля 933 с шифрами новых записей, созданных при предыдущем выполнении
+
+DEL
+933
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ в 933* - вводим отобранные ПОЛЯ 330 по их номерам в поле 1932, в g33 вводим поля 330 - заголовки разделов(П/п не содержит ".")
+
+ADD
+933
+XXXXXXXXXXXXXXXXXXX
+&uf('+7w33#'),&uf('+7w933#'),(if p(v1932) then &uf('Av330#'v1932) fi/),&uf('+7w33#'(if p(v330) then if f(val(v330^0),0,0)=v330^0 then |^0|v330^0,|^C|v330^c,|^N|v330^n fi fi/)),
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ в 932 вводим первое из полей 933. Есди есть ^M (число требуемых МП), пишем в g99 число уже имеющихся ссылок (введенных МП) на этот № раздела (933^0), и если это число МЕНЬШЕ числа, заданного в 933^M, вводим 932^R с числом недостающих ссыылок, а g99 увеличиваем на 1
+
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+&uf('Av933#1'),if &uf('Av933^M#1')<>'' then &uf('+7W99#'&uf('J,III='v903'/'&uf('G0.'&uf('Av933^0#1')))),if val(&uf('Av933^M#1')) > val(g99) then'^R'f(val(&uf('Av933^M#1'))-val(g99),0,0),'^!'f(val(g99)+1,0,0) fi fi/
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+'*'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+972
+XXXXXXXXXXXXXXXXXXX
+"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+33
+XXXXXXXXXXXXXXXXXXX
+if v932^!<>'' then "^0"v932^c else (if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^0|g33^c fi fi fi) fi,if v932^m<>'' then "^A"v932^a,"^B"v932^b fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'event'
+XXXXXXXXXXXXXXXXXXX
+ADD
+900
+XXXXXXXXXXXXXXXXXXX
+"^A"v932^t,if v932^z<>'' then"^C"v932^x,"^CC"n932^x fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W1#'),&uf('+7W1#'v932^t'-'&unifor('R5')),g1,&uf('+7U933#'g1)/
+ADD
+30
+XXXXXXXXXXXXXXXXXXX
+if v932^m<>'' then else "^A"v932^a,"^B"v932^b fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W210#'if v932^d: '; ' then (&uf('1*R; ?v932^d#1')/) else v932^d fi/),(if g210<>'' then if g210.1:'!' then else |; |+g210 fi fi)
+XXXXXXXXXXXXXXXXXXX
+ADD
+211
+XXXXXXXXXXXXXXXXXXX
+(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+211
+F
+(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+304
+XXXXXXXXXXXXXXXXXXX
+"^A"v932^n
+XXXXXXXXXXXXXXXXXXX
+ADD
+331
+XXXXXXXXXXXXXXXXXXX
+(v331/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+711
+XXXXXXXXXXXXXXXXXXX
+(v711/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+488
+XXXXXXXXXXXXXXXXXXX
+v488/'^12','^W'v903,|^A|v200^a,if p(v200^b) then &uf('+7W1#'&uf('G0-'v200^b)),&uf('+7W2#'&uf('G2-'v200^b)),' на 'if g1*4=''then ' 'g1' г.'else g1*6' ',if g1*6='' then &uf('36'g1*4.2) else &uf('37'g1*4.2) fi,if g1.4=g2.4 then else ' 'g1.4| года| fi,if v200^b:'-' then' - 'g2*6' ',if g2*6='' then &uf('36'g2*4.2) else &uf('37'g2*4.2) fi ' 'g2.4| года| fi fi else " "v200^c fi,'^9'&uf('+D')/if v932^#<>'' then '^13',"^A"v932^C,'^9KZD','^W'v932^# fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+711
+XXXXXXXXXXXXXXXXXXX
+|^A|v932^n,if a(v932^n) then (if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^A|g33^n|^4570 орг.| fi fi fi) fi
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v932^m<>'' then '1' else '0' fi
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Повторяем создание ТОЙ ЖЕ новой записи, если в 932^M введено число
+
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v932^m<>'' then if val(v932^!) < val(v932^m) then '1' else '0' fi else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CHA
+932^R
+1
+v932^R
+f(val(v932^R)-1,0,0)
+CHA
+932^!
+1
+v932^!
+f(val(v932^!)+1,0,0)
+NEWMFN
+'*'
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+972
+XXXXXXXXXXXXXXXXXXX
+"^0"v932^0,"."v932^!,if v932^m<>'' then '^A???' else "^A"v932^c,(if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^B|g33^c fi fi fi) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+33
+XXXXXXXXXXXXXXXXXXX
+if v932^!<>'' then "^0"v932^c else (if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^0|g33^c fi fi fi) fi,if v932^m<>'' then "^A"v932^a,"^B"v932^b fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'event'
+XXXXXXXXXXXXXXXXXXX
+ADD
+900
+XXXXXXXXXXXXXXXXXXX
+"^A"v932^t,if v932^z<>'' then"^C"v932^x,"^CC"n932^x fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W1#'),&uf('+7W1#'v932^t'-'&unifor('R5')),g1,&uf('+7U933#'g1)/
+ADD
+30
+XXXXXXXXXXXXXXXXXXX
+if v932^m<>'' then else "^A"v932^a,"^B"v932^b fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W210#'if v932^d: '; ' then (&uf('1*R; ?v932^d#1')/) else v932^d fi/),(if g210<>'' then if g210.1:'!' then else |; |+g210 fi fi)
+XXXXXXXXXXXXXXXXXXX
+ADD
+211
+XXXXXXXXXXXXXXXXXXX
+(if g210<>'' then if g210.1:'!' then |^K|g210 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+211
+F
+(if p(v211) then v211,if &uf(|J,MP=|v211^k)<>'' then '^E'&uf(|D,?MP=|v211^k|?,v211|) else if &uf('KMP_vse.mnu\'v211^k)<>'' then '^E'&uf('KMP_vse.mnu\'v211^k) fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+304
+XXXXXXXXXXXXXXXXXXX
+"^A"v932^n
+XXXXXXXXXXXXXXXXXXX
+ADD
+331
+XXXXXXXXXXXXXXXXXXX
+(v331/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+711
+XXXXXXXXXXXXXXXXXXX
+(v711/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+488
+XXXXXXXXXXXXXXXXXXX
+v488/'^12','^W'v903,|^A|v200^a,if p(v200^b) then &uf('+7W1#'&uf('G0-'v200^b)),&uf('+7W2#'&uf('G2-'v200^b)),' на 'if g1*4=''then ' 'g1' г.'else g1*6' ',if g1*6='' then &uf('36'g1*4.2) else &uf('37'g1*4.2) fi,if g1.4=g2.4 then else ' 'g1.4| года| fi,if v200^b:'-' then' - 'g2*6' ',if g2*6='' then &uf('36'g2*4.2) else &uf('37'g2*4.2) fi ' 'g2.4| года| fi fi else " "v200^c fi,'^9'&uf('+D')/if v932^#<>'' then '^13',"^A"v932^C,'^9KZD','^W'v932^# fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+711
+XXXXXXXXXXXXXXXXXXX
+|^A|v932^n,if a(v932^n) then (if p(g33) then if &uf('Av932^0#1'):'.' then if g33^0=&uf('G0.'&uf('Av932^0#1')) then |^A|g33^n|^4570 орг.| fi fi fi) fi
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if val(v932^!) < val(v932^m) then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+933
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if &uf('Av933#1')<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+933
+XXXXXXXXXXXXXXXXXXX
+'^N'g933|;|,'^K'f(rsum((if g933<>'' then '1;'fi)),0,0)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

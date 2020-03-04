@@ -1,0 +1,268 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^Y='' 
+then 
+/*  -----------------------------------------------------итоги
+  if G992<>'' 
+  then 
+    '\trowd \trqc\trgaph108\trleft-108 \clbrdrl\brdrs\brdrw30 \clbrdrb\brdrs\brdrw30 \clbrdrr\brdrs\brdrw30\cellx9840 \pard \widctlpar\intbl {\ql \fs20 \b0 ',,,
+    '\ql Всего экземпляров: ',,f(rsum((G992|,|)),0,0),,
+    if G995<>'' 
+    then 
+      &uf('+7W1000#',f(rsum((G995|,|)),0,0)),,,,,,,,,,,,,,,
+      '.   Студентов: ',,G1000,,'\par ',,,
+      if val(G1000)>0 
+      then 
+        '\ql Экземпляры / Студенты: ',,f(rsum((G992|,|))/val(G1000),0,2),,'\par ' 
+      fi,,
+    fi,,,
+    if G993<>''  and G994<>'' 
+    then 
+      &uf('+7W1000#',f(rsum((G994|,|)),0,0)),,,,,,,,,,,,,,
+      if val(G1000)>0 
+      then 
+        '\ql ККО среднее по наименованию: ',,,,
+        f(rsum((G993|,|))/val(G1000),0,2),' (',
+        f(rsum((G993|,|)),0,2),,'/',G1000,')','\par ' ,,,,,,,,,,,,
+      fi,,
+    fi,,,
+    if v1^Q<>'' 
+    then 
+      v1^U": ",,'\b ' v1^Q '\b0 ' 
+    fi,
+    &uf('S0'), &uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),
+    '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+  fi,,,,,,,,,,
+/*  -----------------------------------------заголовки
+  &uf('S0'),,, &uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),
+  '\trowd \trqc\trgaph108\trleft-108
+  \clbrdrl\brdrs\brdrw30 \clbrdrr\brdrs\brdrw30\clcbpat16
+  \cellx9840 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+  if v1^J<>' ' and v1^J<>''
+  then 
+    ,'\cf27 ',' Дисциплина: ',,,
+    if &uf('KDisc.mnu!',&uf('G2@',v1^J))<>'' then &uf('KDisc.mnu!',&uf('G2@',v1^J)) else &uf('G2@',v1^J) fi,
+    ,,'\cf ',,'\par ' 
+  else 
+    if v1^I<>'' and v1^I<>' ' 
+    then 
+      '\cf27 ',
+      if v1^I: 'M' then 'Учебно-Методическая' else ' Учебная' fi,,,
+      '\cf \par ',
+    else 
+      if v1^H<>'' and v1^H<>' ' 
+      then 
+        ,'\cf27 ',' Тип: ',v1^H*1,,'\cf ',,'\par ' 
+      else 
+        if v1^G<>'' and v1^G<>' ' 
+        then 
+          ,'\cf27 ',' Цикл: ',
+          if &uf('Kcicld.mnu!',v1^G)<>'' 
+          then &uf('Kcicld.mnu!',v1^G) else v1^G fi,,'\cf ',,'\par ' 
+        else 
+          if v1^F<>'' and v1^F<>' ' 
+          then 
+            ,' \cf27 ',' Специальность: ',
+            if &uf('KSpec.mnu!',v1^F)<>'' then &uf('KSpec.mnu!',v1^F),' (',v1^F,')',,, else v1^F fi,,'\cf ',,'\par ' 
+          else 
+            if v1^E<>'' and v1^E<>' ' 
+            then 
+              ,' \cf27 ',' Направление: ',
+              if &uf('KNapr.mnu!',v1^E)<>'' then &uf('KNapr.mnu!',v1^E),' (',v1^E,')',,, else v1^E fi,,'\cf ',,'\par ' 
+            else 
+              if v1^D<>'' and v1^D<>' ' 
+              then 
+                ,' \cf27 ',' Кафедра: ',
+                if &uf('KKafch.mnu!',v1^D)<>'' then &uf('Kkafch.mnu!',v1^D) else v1^D fi,,'\cf ',,'\par ' 
+              else 
+                if v1^C<>'' and v1^C<>' ' 
+                then  
+                  ,' \cf27 ',,,,' Факультет: ',
+                  if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else v1^C fi,,'\cf ',,'\par ' 
+                else 
+                  if v1^B<>'' and v1^B<>' ' 
+                  then 
+                    ,'\cf27 ',' Вид обучения: ',
+                    if &uf('Kvo.mnu!',v1^B)<>'' then &uf('Kvo.mnu!',v1^B) else v1^B fi,,'\cf ',,'\par ' 
+                    else 
+                      if v1^A<>'' and v1^A<>' ' 
+                      then 
+                        ,'\cf27 ',' Форма обучения: ',
+                        if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else v1^A fi,,'\cf ',,'\par ' 
+  fi fi fi fi fi fi fi fi fi fi,,,,,,,,,,,,
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+/*  ---------------------------------------------------------- запись
+  '\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx550 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx5800 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6900 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7700 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8790 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9840 \pard \widctlpar\intbl {\ql \fs20 ',,,,
+  &uf('S1A'),,,
+  if s(ref(val(V1^Y),v699)): '^U0' then else &uf('+7U994#1') fi,,,,
+  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,'{',,
+  if v1^P<>'' 
+  then v1^P 
+  else ,,,,
+     v1^X,,,,,
+  fi,,,
+  '}',,,,,,
+  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,&uf('+7W991#',&uf('+97',v1)),,,,
+/* --------Вычисление данных-----------------------------------------
+/* Реальное количество экземпляров в G333
+  &uf('+1W333#',  
+  ref(val(V1^Y),,,
+/* экземпляры
+              if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+              if a(G991^T) 
+              then 
+/* НЕ выделенная
+                (if p(v693) 
+                 then 
+                   if &uf('AG991^L#1')='' 
+                   then 
+                     if v693^L='' and v693^A='' and v693^X=''  or v693^L='' and v693^A='' and v693^X='!NOFOND'  
+                     then  
+                        if &uf('AG998#1')<>'' and v693^Q<>'' and &uf('AG991^-#1')='' OR 
+                           &uf('AG998#1')<>'' and v693^Q<>'' and val(&uf('AG991^-#1'))=0 
+                        then
+/* аналоги не выводятся но сумм-ся
+                            f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0),,,
+                            if v693^D<>'' or v693^Q<>'' or v693^K<>'' 
+                            then 
+                               &uf('+7U992#',f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0)) 
+                            fi,
+                            &uf('+7W997#',f(val(if v693^K<>'' then v693^K else v693^D fi)+val(v693^Q),0,0)),
+                        else
+                          if v693^K<>'' then v693^K,|(|v693^D|)| else v693^D fi,,,
+                          &uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,
+                        fi 
+                     fi 
+                   else 
+                     if &uf('AG991^L#1')=&uf('+97',v693^L) 
+                     then  
+                       if v693^K<>'' then v693^K,|(|v693^D|)| else v693^D fi,,,
+                       &uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,
+                     fi 
+                   fi 
+                 fi/) 
+              else 
+/* выделенная категория
+                (if p(v693) then if v693^L='' and &uf('+97',v693^A)=&uf('AG991^T#1') 
+                                 then 
+                                   if v693^K<>'' then v693^K,|(|v693^D|)| else v693^D fi,,,
+                                   &uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,
+                                 fi fi/) 
+              fi,,
+     )  ),,,,,,,,
+/* Количество студентов в G444
+  &uf('+1W444#',
+  ref(val(V1^Y),,,,,,,
+              if a(G991^T) 
+              then 
+                (if p(v693) 
+                 then 
+                    if &uf('AG991^L#1')='' 
+                    then 
+                       if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+                       then 
+                          v693^E,,
+                          if v693^E<>'' then &uf('+7U995#',v693^E) fi,
+                          &uf('+7W997#',v693^E),fi 
+                       else 
+                          if &uf('AG991^L#1')=&uf('+97',v693^L) 
+                          then 
+                              v693^E,,if v693^E<>'' then &uf('+7U995#',v693^E) fi,
+                              &uf('+7W997#',v693^E),
+                          fi 
+                       fi 
+                   fi/) 
+              else  
+                (if p(v693) then if v693^L='' and &uf('+97',v693^A)=&uf('AG991^T#1') then v693^E,,if v693^E<>'' then &uf('+7U995#',v693^E) fi,&uf('+7W997#',v693^E),fi fi/) 
+              fi,,
+     )  ),,,,,,,,
+/* Реальный коэффициент книгообеспеченности в G777
+  &uf('+1W777#',
+  ref(val(v1^Y),,,,,,,,,
+              if p(v699) and v699: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
+              if a(G991^T) 
+              then 
+                (if p(v693) 
+                 then 
+                   if &uf('AG991^L#1')='' 
+                   then 
+                     if v693^L='' and v693^A='' and v693^X='!NOFOND' or  v693^L='' and v693^A='' and v693^X='' 
+                     then 
+                        if val(v693^S)>0  
+                        then  
+                           v693^S,,&uf('+7U993#',v693^S),,,&uf('+7W996#',v693^S),,
+                        else 
+                           if &uf('AG998#1')<>'' and v693^P<>'' and &uf('AG991^-#1')='' or 
+                              &uf('AG998#1')<>'' and v693^P<>'' and val(&uf('AG991^-#1'))=0 
+                           then
+                             v693^P,,&uf('+7U993#',v693^P),,,&uf('+7W996#',v693^P),,
+                           else
+                              if v693^N<>'' then v693^N,,&uf('+7U993#',v693^N),,,&uf('+7W996#',v693^N) else 
+                             v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F) fi,,,,,,,,,,
+                           fi,, 
+                         fi,,   
+                       fi,,
+                     fi,,
+                   else 
+                     if &uf('AG991^L#1')=&uf('+97',v693^L) then  v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F),,fi 
+                   fi 
+                 fi/) 
+              else 
+                (if p(v693) 
+                 then 
+                   if v693^L='' and v693^A=&uf('AG991^T#1') 
+                   then 
+                       if v693^N<>'' then v693^N,,&uf('+7U993#',v693^N),,,&uf('+7W996#',v693^N) else 
+                       v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F) fi,,
+                   fi,,
+                 fi/) 
+              fi,,,
+     )   ),,,
+/* Экземпляры для докомплектования в G999
+&uf('+1W999#',
+  if val(G996)<val(v1^Q) then f((val(v1^Q)-val(G996))*val(G997),0,0) fi,,,,,),     
+/* Корректировка коэффициента книгообеспеченности и экземпляров(если необходимо) в G777
+  if &uf('IPRIVATE,FictionKKO,')<>'' 
+  then
+     if val(&uf('+1R444'))>0 and val(&uf('+1R777'))<0.45 
+     then 
+/* Увеличиваем счётчик экземпляров (записываем фиктивный коэффициент во временную переменную 222)
+         &uf('+1W222#',f(val(&uf('+1R444'))*(0.45+val('0.0'&uf('R2'))),0,0)),
+         if val(&uf('+1R222'))>val(&uf('+1R333')) 
+         then 
+           &uf('+7U992#',f(val(&uf('+1R222'))-val(&uf('+1R333')),0,0))    
+         fi,
+        &uf('+1W333#',&uf('+1R222')),
+/*Увеличиваем счётчик книгообеспеченности(записываем фиктивный коэффициент во временную переменную 666)
+        &uf('+1W666#',f( val(&uf('+1R222'))/val(&uf('+1R444')) ,0,2)),
+        if val(&uf('+1R666'))>val(&uf('+1R777')) 
+        then 
+           &uf('+7U993#',f(val(&uf('+1R666'))-val(&uf('+1R777')),0,2)),
+        fi,
+        &uf('+1W777#',&uf('+1R666')),
+
+        /* Корректируем количество экземпляров для докомплетования
+        &uf('+1W888#',   f(val(&uf('+1R444'))*0.5,0,0) ) ,,,,
+        &uf('+1W999#', 
+                 if val(&uf('+1R888'))>val(&uf('+1R333')) then f(val(&uf('+1R888'))-val(&uf('+1R333')),0,0) else  '' fi   ),,,,
+     fi,    
+  fi,
+/*--------Конец Вычисления данных-----------------------------------
+/*-------------Вывод данных
+/* Количество экземпляров
+  &uf('+1R333'),    
+  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,,
+/* Количество студентов
+  &uf('+1R444'),     
+  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,,
+/* Коэффициент книгообеспеченности
+  &uf('+1R777'),
+  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,
+  /* Количество экземпляров для докомплектования
+  &uf('+1R999'),
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}',&uf('!'),,

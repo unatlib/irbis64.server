@@ -1,0 +1,24 @@
+v503^a". ",v461^x,if s(v461^x)<>''then'. 'fi,mhl,v461^c.20,if v461^c*20.1<>''then'...'fi,mpl,
+if p(v461) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,|: |v461^e,
+". -"|; |+v461^d,|. -|v461^h,". "d461,v200^v,
+if p(v200^v) and p(v200^a) then': 'fi,
+if p(v200^a) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,
+fi," "d700,mhl,v200^a.20,if v200^a*20.1<>''then'...'fi,mpl,
+if a(v461)and p(v200^a)then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi fi,
+if v920='J'then'. - '&unifor('K110b.mnu|'v110^b)," выходит с "v210^d"г."else". - "v210^d fi,
+if v920:'NJ'then ref(l(|I=|v933),mhl,v200^a,mpl,
+if &unifor('Kjzk.mnu|'v101.3)<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi'.-'&unifor('K110b.mnu|'v110^b),|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l,|. |v923^m,|. |v923^n),
+,", "v934"г.",if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi,
+if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi,),v936 fi," ("v931^c")","  (Введено оглавление)"d922 fi,
+if v920:'NJ'then else" (Введено оглавление)"d330,
+".-"v963^1,if a(v963^1)then" //"d463 fi,mhl,
+(|; |+v463^7,if a(v463^7) then|; |+v463^c fi,mpl,|: |v963^e,|.-|v463^d,|: |v463^g,
+if p(v463^c)then 
+   if s(v463^d,v463^g)<>''then|, |v463^j else |. -|v463^j fi,|. -|v463^v else 
+      ". -"|.; |+v463^v fi,
+   if p(v463^v)then|: |v463^a else|. |v463^a fi,
+   if p(v463^v)then| |v463^h else". -"|.; |+v463^h fi,
+   if p(v463^h)then|: |v463^i else|. |v463^i fi,|, |v463^k,
+   if p(v463^k)then|: |v463^l else|. |v463^l fi,|.-|v963^p,|.-Ст.|v463^N,|.-|v463^1,
+   if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) 
+fi

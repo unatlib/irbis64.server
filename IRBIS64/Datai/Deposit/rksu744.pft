@@ -1,0 +1,365 @@
+&uf('+7W991#',,'^A',v991^A),,,,,,,,,,,,,,,
+/*-----------используется в глобальной StatKsu-Step2
+/*-----в g10 кладу заготовки для поля 744
+/* количество наименований НА БАЛАНС без периодики для подразделения
+&uf('+7W10#',,,,,,,,,,,,,,
+/*----------------------------744^A 11 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) 
+then 
+else 
+   &uf('+7W11#',, 
+   (if p(v910) 
+    then 
+       if &uf('+97',v910^u)=&uf('Ag991^A#1') 
+       then 
+          if p(v910^4) 
+          then 
+          else 
+             '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+             '^A1' 
+          fi 
+       fi 
+     fi/)
+   ),,,,,,,,,,,
+   &uf('+7G11'),,,(g11/),,
+fi,,   
+/* количество экземпляров НА БАЛАНС без периодики для подразделения
+/*----------------------------744^B 11 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) 
+then else (if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if a(v910^4) then 
+            '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+            '^B',,v910^1,|1|n910^1 
+else fi fi fi/)fi/
+/* сумма НА БАЛАНС без периодики для подразделения
+/*----------------------------744^+ 12 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) then else (if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+if f(   val(v910^e,if a(v910^e) then &unifor('Av10^d#1')fi,' 0') * val(if a(v910^4) then v910^1,|1|n910^1 else '0'fi,' 0'),0,2)<>'' 
+then 
+   '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+   '^+',,f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1')fi,' 0')*val(if a(v910^4) then v910^1,|1|n910^1 else '0'fi,' 0'),0,2) 
+fi fi fi/)fi/
+/*количество документов (книг или номеров периодики) НЕ НА БАЛАС
+/*----------------------------744^C 11 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) 
+then 
+   &uf('+7W11#',, 
+   (if p(v910) 
+    then 
+       if &uf('+97',v910^u)=&uf('Ag991^A#1') 
+       then 
+          '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+          '^C1' 
+       fi 
+     fi/)
+   ),,,,,,,,,,,
+   &uf('+7G11'),,,(g11/),,
+else 
+   if s(v910^4)<>'' 
+   then 
+      &uf('+7W11#',, 
+      (if p(v910) 
+       then 
+          if &uf('+97',v910^u)=&uf('Ag991^A#1') 
+          then 
+             if p(v910^4) 
+             then 
+                   '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+                   '^C1' 
+             fi 
+          fi 
+        fi/))
+      ),,,,,,,,,,,
+      &uf('+7G11'),,,(g11/),,
+   fi 
+fi/
+/*количество экземпляров (книг и периодики) НЕ НА БАЛАС
+/*----------------------------744^D 11 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) then (if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+        '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+        '^D',,v910^1,|1|n910^1 
+fi fi/) else 
+if v215^y=''and (not(v920:'NJ' or v920:'Spec' and p(v933))) and s(v910^4)<>'' 
+then (if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if p(v910^4) then 
+        '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+        '^D',,v910^1,|1|n910^1 
+fi fi fi/)fi fi/
+/*сумма НЕ НА БАЛАНС с номерами журналов для подразделения
+/*----------------------------744^E 12 
+if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933)) 
+then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+if f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2)<>'' then 
+      '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+      '^E',,f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2) 
+fi fi fi /) else if v215^y=''and (not(v920:'NJ' or v920:'Spec' and p(v933))) and s(v910^4)<>''then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(if p(v910^4) then v910^1,|1|n910^1 fi,' 0'),0,2)<>''then 
+      '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+      '^E',,f(val(v910^e,if a(v910^e)then &unifor('Av10^d#1')fi,' 0')*val(if p(v910^4) then v910^1,|1|n910^1 fi,' 0'),0,2) 
+fi fi fi/)fi fi/
+/*экземпляров газет
+/*----------------------------744^F 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),v110^b): 'c' 
+then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+        '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+        '^F',,v910^1,|1|n910^1 
+fi fi fi/)fi fi/
+/*экземпляров НТД
+/*----------------------------744^G 11 
+if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'62' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'63' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'k' or s(v900^c.1' 'v900^2.1' 'v900^3.1' 'v900^4.1' 'v900^5.1' 'v900^6.1):'g' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'l' 
+then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+        '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+        '^G',,v910^1,|1|n910^1 
+fi fi fi/)fi/
+/*экземпляры кроме типа текстовых или характера кодов 98 62 63 k g l m.
+/*----------------------------744^J 11 
+if ('03 04 05 07 ':v900^b.2 and a(v933) and (a(v900^t) or v900^t:'a1'or v900^t:'a2'or v900^t:'b'or 'a 1 2 3':v900^t)) or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'98' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'62' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'63' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'k' or s(v900^c.1' 'v900^2.1' 'v900^3.1' 'v900^4.1' 'v900^5.1' 'v900^6.1):'g' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'l' or s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'m' or ((v920:'NJ' or v920:'Spec' and p(v933)) and (ref(L("I="v933),v110^b): 'a' or ref(L("I="v933),v110^b): 'c' or '98 62 63 k g l m ':ref(L("I="v933),v110^g) or '98 62 63 k g l m ':ref(L("I="v933),v110^k) or '98 62 63 k g l m ':ref(L("I="v933),v110^l))) 
+then 
+else 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+        '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+        '^J',,v910^1,|1|n910^1 
+fi fi fi/)fi/
+/*экземпляры научной литературы
+/*----------------------------744^K 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if s(v110^g,v110^k,v110^l):'58'then'1'fi)='1'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^K',,v910^1,|1|n910^1 
+fi fi fi/)fi else if v920<>'NJ'then if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'58'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^K',,v910^1,|1|n910^1 
+fi fi fi/)fi fi fi/
+/*наименований учебной литературы
+/*----------------------------744^L 11 
+if (v920:'NJ' or v920:'Spec' and p(v933)) 
+then 
+   if ref(l("I="v933),if s(v110^g,v110^k,v110^l):'j' then '1' fi)='1' 
+   then 
+      &uf('+7W11#',, 
+      (if p(v910) 
+       then  
+          if &uf('+97',v910^u)=&uf('Ag991^A#1') 
+          then 
+             if '2 7':v910^a 
+             then 
+             else 
+                '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+                '^L1' 
+             fi 
+          fi 
+       fi/)
+      ),,,,
+      &uf('+7G11'),,,(g11/),,
+   fi 
+else 
+   if v920<>'NJ' 
+   then 
+      if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'j' 
+      then 
+         &uf('+7W11#',, 
+         (if p(v910) 
+          then  
+             if &uf('+97',v910^u)=&uf('Ag991^A#1') 
+             then
+                '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi  
+                '^L1' 
+             fi 
+          fi/)
+          ),,,,,,
+         &uf('+7G11'),,,(g11/),, 
+      fi 
+   fi 
+fi/
+/*экземпляров учебной литературы
+/*----------------------------744^M 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if s(v110^g,v110^k,v110^l):'j'then'1'fi)='1' 
+then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^M',,v910^1,|1|n910^1 
+fi fi/)fi else if v920<>'NJ'then 
+if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'j' 
+then
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^M',,v910^1,|1|n910^1 
+fi fi/)fi fi fi/
+/*общественно-политическая литература(экземпляры)
+/*----------------------------744^N 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if s(' 'v110^g,' 'v110^k,' 'v110^l):' 20'then'1'fi)='1' 
+then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^N',,v910^1,|1|n910^1 
+fi fi/)fi else if v920<>'NJ'then if s(' 'v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):' 20' 
+then (if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^N',,v910^1,|1|n910^1 
+fi fi/)fi fi fi/
+/*художественная литература (экземпляры)
+/*----------------------------744^O 11 
+if (v920:'NJ' or v920:'Spec' and p(v933)) then if ref(l("I="v933),
+if s(' 'v110^g,' 'v110^k,' 'v110^l):' 11'then'1'fi)='1' then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^O',,v910^1,|1|n910^1 
+fi fi/)fi else if v920<>'NJ'then if s(' 'v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):' 11' 
+then (if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^O',,v910^1,|1|n910^1 
+fi fi/)fi fi fi/
+/*научная литература (экземпляры)
+/*----------------------------744^P 11 
+if s(v700v701v702):'^y'then if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'58'then 
+(if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^P',,v910^1,|1|n910^1 
+fi fi/)fi fi/
+/*методический материал (экземпляры)
+/*----------------------------744^Q 11 
+if s(v700v701v702):'^y'then if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'21'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^Q',,v910^1,|1|n910^1 
+fi fi/)fi fi/
+/*отчеты ОНИР (экземпляры)
+/*----------------------------744^R 11 if s(v700v701v702):'^y'then if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'51'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^R',,v910^1,|1|n910^1 
+fi fi/)
+/*иностранная литература кроме периодики (экземпляры)
+/*----------------------------744^S 11 
+if '03 04 05 07 ':v900^b.2 and a(v933) then if v900^b:'o'or v102:&unifor('Korg.mnu|1')then else  
+(if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^S',,v910^1,|1|n910^1 
+fi fi/) fi fi/
+/*иностранная периодика (экземпляры)
+/*----------------------------744^T 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if v900^b:'o'or v102:&unifor('Korg.mnu|1')then'1'fi)='1'then else 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^T',,v910^1,|1|n910^1 
+fi fi/)fi fi/
+/*иностранная литература за валюту
+/*----------------------------744^U 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if v900^b:'o'or v102:&unifor('Korg.mnu|1')then'1'fi)='1'then else 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if p(v910^l) or &unifor('Av10#1'):'^c'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^U',,v910^1,|1|n910^1 
+fi fi fi/)fi else if v920<>'NJ'then if v900^b:'o' or v102:&unifor('Korg.mnu|1')then else (if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if p(v910^l) or &unifor('Av10#1'):'^c'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^U',,v910^1,|1|n910^1 
+fi fi fi/)fi fi fi/
+/*экземпляры служебных мест хранения
+/*----------------------------744^V 11 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if v910^d:'ОФ'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^V',,v910^1,|1|n910^1 
+fi fi fi/)/
+/*----------------------------744^W 11 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if v910^d:'ФРК'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^W',,v910^1,|1|n910^1 
+fi fi fi/)/
+/*----------------------------744^X 11 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if v910^d:'ДФ'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^X',,v910^1,|1|n910^1 
+fi fi fi/)/
+/*----------------------------744^Y 11 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if v910^d:'РФ'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^Y',,v910^1,|1|n910^1 
+fi fi fi/)/
+/*----------------------------744^Z 11 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if v910^d:'ООН'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+    '^Z',,v910^1,|1|n910^1 
+fi fi fi/)/
+/*микрофиши (экземпляры)
+/*----------------------------744^1 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v215^1)then if v215^1='мкфш.'then'1'fi fi)='1' 
+then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^1',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi 
+else if v920<>'NJ' then if v215^1='мкфш.'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^1',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi fi fi/
+/*микрофильмы (экземпляры)
+/*----------------------------744^2 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v215^1)then if v215^1='мкф.'then'1'fi fi)='1'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^2',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi else if v920<>'NJ'then if v215^1='мкф.'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi      
+      '^2',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi fi fi/
+/*дискеты (экземпляры)
+/*----------------------------744^3 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v110^t)then if v110^t: 'l' or p(v230) then if v215^1.2:'j=' or v215^1:'мд'then'1'fi fi fi)='1'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^3',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi else if v920<>'NJ'then if v900^t: 'l' or p(v230) then if v215^1.2='j=' or v215^1:'мд'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^3',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi fi fi fi/
+/*компакт-диски (экземпляры)
+/*----------------------------744^4 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v110^t)then if v110^t: 'l' or p(v230) then if v215^1.2:'o=' or v215^1:'CD-ROM'then'1'fi fi fi)='1'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^4',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi else if v920<>'NJ'then if v900^t: 'l' or p(v230) then if v215^1.2='o=' or v215^1:'CD-ROM'then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^4',,f(rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then v910^1,|1|n910^1 fi fi/))*val(&uf('Av215^a#1')),0,0) 
+fi fi fi fi/
+/*мультимедиа (экземпляры)
+/*----------------------------744^5 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v110^t)then if'm':v110^t then'1'fi fi)='1' then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^5',,v910^1,|1|n910^1 
+fi fi/)fi else if v920<>'NJ'then if'm2':v900^t then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+     '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+     '^5',,v910^1,|1|n910^1 
+fi fi/)fi fi fi/
+/*экземпляры на языках кроме русского
+/*----------------------------744^6 11 
+if (v920:'NJ' or v920:'Spec' and p(v933))then if ref(l("I="v933),if p(v101)then if &unifor('Av101#1'):'rus'then'1'fi fi)='1'then else 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+    '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+    '^6',,v910^1,|1|n910^1 
+fi fi/)fi else if v920<>'NJ'then if &unifor('Av101#1'):'rus'then else 
+(if p(v910) then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+    '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi  
+   '^6',,v910^1,|1|n910^1 
+fi fi/)fi fi fi/
+/*учебники (экземпляры) под авторством сотрудников организации- пользователя
+/*----------------------------744^7 11 
+if s(v700v701v702):'^y'then if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'j'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+    '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+    '^7',,v910^1,|1|n910^1 
+fi fi/)fi fi/
+/*стандарты (экземпляры)
+/*----------------------------744^8 11 
+if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6): 'l' then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then 
+    '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+    '^8',,v910^1,|1|n910^1 
+fi fi/)fi/
+/*авторефераты, диссертации, курсовые работы (экземпляры)
+/*----------------------------744^9 11 
+if s(v900^c' 'v900^2' 'v900^3' 'v900^4' 'v900^5' 'v900^6):'m'then 
+(if p(v910)then if &uf('+97',v910^u)=&uf('Ag991^A#1') then if'2 7':v910^a then else 
+    '^I',v910^d,if &unifor('Av900^b#1')<>''then'^H'&unifor('Av900^b.2#1') else if &unifor('Av920#1'):'NJ'then'^H02'fi fi 
+    '^9',,v910^1,|1|n910^1 
+fi fi fi/)fi/
+),,,,,,,,,,,,,,,,,,,,,

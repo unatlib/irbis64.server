@@ -1,0 +1,5 @@
+if &unifor('Av41^a#2')<>'' or &unifor('Av41^b#2')<>'' or &unifor('Av41^c#2')<>''
+or &unifor('Av41^d#2')<>'' or &unifor('Av41^e#2')<>'' or &unifor('Av41^f#2')<>''
+ then '1 Ошибка: Данные о перечислении на другой период вводить в другое поле' 
+fi
+

@@ -1,0 +1,51 @@
+/*-------Всего исключено из фонда на сумму
+if v940^v:v991 
+then 
+   f(rsum(
+   (if p(v940) 
+    then 
+       if &uf('Av991#1')<>'' and &uf('+97',v940^v)=&uf('+97',&uf('Av991#1')) 
+       then 
+          if v940^a:'6' and p(v940^w) 
+          then 
+          else  
+             if p(v940^e) 
+             then 
+                if p(v940^c) 
+                then 
+                   if &unifor('Kizc.mnu|'v940^c.6)<>'' 
+                   then 
+                      f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2) 
+                   else 
+                      if &unifor('Kizc.mnu|'v940^c.4)<>'' 
+                      then 
+                         f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2) 
+                      else 
+                         f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2) 
+                      fi 
+                   fi 
+                else 
+                   f(val(v940^e|;|)*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,|0;|n940^z,' 0')),0,2) 
+                fi 
+             else 
+                if p(v940^c) 
+                then 
+                   if &unifor('Kizc.mnu|'v940^c.6)<>'' 
+                   then 
+                      f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+                   else 
+                      if &unifor('Kizc.mnu|'v940^c.4)<>'' 
+                      then 
+                         f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';' 
+                      else 
+                         f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+                      fi 
+                   fi 
+               else 
+                  f(val(&unifor('Av10^d#1'),' 0')*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+               fi 
+             fi 
+           fi 
+        fi 
+      fi/)),0,2),,
+fi,,,,

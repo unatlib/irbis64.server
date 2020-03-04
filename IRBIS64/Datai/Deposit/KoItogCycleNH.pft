@@ -1,0 +1,36 @@
+&uf('+7W40#',if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 'V' else if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,'))  or &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 then 'O' fi fi),,,,
+if v991^W='' or v991^W=' ' 
+then 
+  '\fs20 Обеспеченность обучающихся '
+  if v991^g<>'' 
+  then 
+    if v991^g:'осн' then 'основной ' else 'дополнительной 'fi  
+  fi 
+  'учебной и учебно-методической литературой из фонда вуза \par \par ',,
+  '\fs16 ________________________________________________________________\par \b0 ' 
+else  v991^W"\par \par " 
+fi
+'\pard \qc \fs16 (полное наименование соискателя лицензии)\par \par ' ,,
+if &uf('Ag40#1')='O' then &uf('+7W5#',&uf('30'),'/',,,,f(val(&uf('30'))+1,0,0) ) else 
+                                                    &uf('+7W5#',f(val(&uf('30'))-1,0,0),'/',,,,&uf('30') ) fi,,,,,,,,,,,,,,,,,,,,,
+"\fs20 \b  на "G5" учебный год \par ",,,,,,,,,,,,,,,,,,,,,,
+if p(v991^&) then '\par данные по запросу ',v991^& 
+else 
+if s(&uf('Av991^O#1'),&uf('Av991^V#1'),&uf('Av991^A#1'),&uf('Av991^C#1'),&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'),&uf('Av991^T#1')  )<>'' then 'Для: ',,,
+   if &uf('Av991^T#1')<>'' then 'выделенного фонда ',&uf('Av991^T#1') if s(&uf('Av991^O#1'),&uf('Av991^V#1'),&uf('Av991^A#1'),&uf('Av991^C#1'),&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,,
+   if &uf('Av991^O#1')<>'' then 'формы обучения ',,,,&uf('+98! ',&uf('Av991^O#1')),,, if s(&uf('Av991^V#1'),&uf('Av991^A#1'),&uf('Av991^C#1'),&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,,
+   if &uf('Av991^V#1')<>'' then 'вида обучения ',,,&uf('+98! ',&uf('Av991^V#1')) if s(&uf('Av991^A#1'),&uf('Av991^C#1'),&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,,
+   if &uf('Av991^A#1')<>'' then 'факультета ',&uf('+98! ',&uf('Av991^A#1')) if s(&uf('Av991^C#1'),&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,
+   if &uf('Av991^C#1')<>'' then 'специальности ',&uf('+98! ',&uf('Av991^C#1')) if s(,&uf('Av991^N#1'),&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,
+   if &uf('Av991^N#1')<>'' then 'напрапвления ',&uf('+98! ',&uf('Av991^N#1')) if s(,&uf('Av991^F#1'),&uf('Av991^B#1'))<>'' then ', ' fi fi,
+   if &uf('Av991^F#1')<>'' then 'семестра ',&uf('+98! ',&uf('Av991^F#1')) if s(&uf('Av991^B#1'))<>'' then ', ' fi fi,
+   if &uf('Av991^B#1')<>'' then 'кафедры ',&uf('Av991^B#1')  fi,'\par ',,,,,,,,
+fi,,,,,,,
+'срок новизны ',if v991^1='' and &uf('+5TCycleNew.mnu')<>'' then '- по справочнику CycleNew '  else  if &uf('Av991^1#1')<>'' then  &uf('Av991^1#1')  else '5'  fi ' лет'   fi  '\par ',,,,,,,,
+if &uf('Av991^=#1')='' or &uf('Av991^=#1')='1' then  'для текущего семестра' else 'независимо от семестра' fi '\par ',,,,,,,,
+if val(&uf('Av991^9#1'))>0 then '(с учетом электронных учебников)' else '(без учета электронных учебников )'  fi,
+fi,,,,,,,,,,,,,,,,,,,
+'\par ',,,,,,'(по базе данных ',if &uf('IPRIVATE,DBN,')<>'' then &uf('IPRIVATE,DBN,') else 'IBIS' fi,,,,
+if val(&uf('Av991^7#1'))=1 then ' с учетом БД из справочника ',,,v991^@ fi ,,,
+')',,
+'\par ',,,,

@@ -1,0 +1,1 @@
+if (v2225<>'') then if val(v1001) > 0 then '<!FILE=footer_export.frm>' fi fi

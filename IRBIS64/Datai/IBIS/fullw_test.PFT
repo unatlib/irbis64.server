@@ -1,0 +1,129 @@
+'</>',mpl,'<tr width=100%><td with=10% valign="top"><b>',v9999".",'</b></td><td width=85%>' 
+, 
+if v920:'NJ'then ref(l("I="v933),"<b>"v903"</b>", 
+if v110^b:'a'then' / <i>Журнал</i>'fi, 
+if v110^b:'c'then' / <i>Газета</i>'fi, 
+"<br><b>"v200^a"</b>",|/ |v200^f,|, |v923^h,|: |v923^i,|, |v923^k,|: |v923^l, 
+(". - "|; |+v210^a,|; |v210^x,|; |v210^y,|: |v210^c,),if v210:'^c'then'. - 'else', ' 
+fi,v210^d" - ",v210^e),'<br><b>',v934" г."," т."v935,", N "v936'</b>', 
+"<dd><b>Интерес ные статьи:</b>"d922(if p(v922)then'<br>'v922^f,|,|v922^2,|,|v922^3,". "d922^f, 
+v9 22^c,| (стр.|v922^4|)|fi), 
+else if v900^c:'34'then'Препринт<br>'fi, 
+if v920='J'then"<b>"v903"</b>",if v110^b:'a'then' / <i>Журнал</i>'fi, 
+if v110^b:'c'then' / <i>Газета</i>'fi'<br>' 
+fi, 
+if v920='J'or v920.1='A'then else 
+if p(v903)then'<b>'      
+if v903:v908 or v903:v906 then 
+if p(v908)then &unifor('Av686#1') 
+if a(v686)then &unifor('Av675#1') 
+if a(v675)then &unifor('Av621#1')fi fi'  'else v906'  'fi 
+else v903'  ' 
+fi fi'</b>' 
+if p(v106)then'  ',&unifor('K106.mnu|'v106^a)," "v106^b fi, 
+"<br>"v908,if v903:v906 then else v906 fi,'<br>', 
+fi,v503^a"<br>",'<b>'v461^x, 
+if' et al. и др. ':v461^y then" "v461^y else", "v461^y fi,v461^b, 
+if p(v461)then 
+if s(v461^x,v461^b)<>''then'</b><br><dd>  'v461^c 
+else'<dd>  ',&unifor('E3'v461^c),'</b> ',&unifor('F3'v461^c) 
+fi, 
+| : |v461^e,|/ |v461^f,|. -|v461^p,(". -"|; |+v461^d,| : |v461^g),|. -|v461^h, 
+(|. -(|v46^a,|; |v46^v,if s(v46^a,v46^v)<>''then|)|d46fi,|. -|v46^p), 
+". -ISBN "v461^i 
+fi,"<br><b>"d461,v700^a," "v700^b,"("v700^1")",","v700^c," "v700^x,", "v970^a, 
+" "v970^b,"("v970^1")",","v970^c,v710^s".",v710^a, 
+if s(v710^n,v710^c)<>''then' ('v710^n"; ",v710^c,')'fi, ". "v710^b, 
+if s(v710^d,v710^f,v710^e)<>''then' ('v710^d"; ",v710^f, 
+if p(v710^f)then"; "v710^e else v710^e fi, "/ "v710^h,"/ "v710^i')' 
+fi,". "d710,v971^b, 
+if s(v971^d,v971^f,v971^e)<>''then' ('v971^d"; ",v971^f, 
+if p(v971^f)then"; "v971^e else v971^e fi,"/ "v971^h,"/ "v971^i')' 
+fi ". "d971^b,'</b>', 
+if s(v700v710)<>''then'<br>'fi, "<b> "v200^v"</b>", 
+if v200:'^v'then" : "v200^a else 
+if s(v700v710)=''then '<dd><b> ',&unifor('E3'v200^a)' </b>',&unifor('F3'v200^a) 
+else "<dd> "v200^a fi 
+fi, 
+if s(v510^e)<>''then| : |v200^e,|, |v923^h,| : |v923^i,|, |v923^k,| : |v923^l 
+fi, 
+if s(v510^f)<>''then|/ |v200^f,|; |v200^g fi, 
+if p(v922)then'<b>'"/ "v700^a," "v700^b'</b>',(if v123^x:'0'then 
+". - 1: "|, 1: |+v123^d,|; 1: |v123^e,v123^f fi),(|. |v922^c,|/ <b> |v922^f,|, |v922^2, 
+|, |v922^3,|</b> |d922^f, 
+if v123^x:'2'then | 1: |v123^d,|; 1: |v123^e,v123^f,| : <b> |v123^a*3|</b> |,v123^b*3 fi) 
+fi,(| = |v510^d,|: |v510^e,|/ |v510^f,|; |v510^g),  | : |v924, 
+if s(v510^e)=''then| : |v200^e,|, |v923^h,| : |v923^i,|, |v923^k,| : |v923^l 
+fi, 
+if s(v510^f)=''then|/ |v200^f,|; |v200^g fi, | =|v540,". -"v205^a, 
+if s(v205^a)<>''then"/ "v205^c else". -"v205^c fi,(if v123^x:'0'then ' . - ',|1: |v123^d,|; 1:|v123^e,v123^f fi), 
+if p(v461)and a(v210^a)or p(v463)then else" -Б.м."n210^a fi,(". -"|; |+v210^a,|; |v210^x,|;|v210^y,|: |v210^c) 
+if p(v461)then". -"|, |+v210^d else 
+if a(v463)then", Б.г."n210^d,|, |v210^d fi 
+fi,if v920='J'then" - "d210^d,v210^e fi,".-"v215^a," "v215^1, 
+if a(v215^1)then 
+if v215^a:'с'or v215^a:'p'then else" c."d215^a fi 
+fi," :"v215^c,"; "v215^d," + "v215^e," "v215^2,(if p(v225)then if v225:'^n0'then 
+else|. -(|v225^a,|. |v225^h,| |v225^i,|. |v225^k,| |v225^l,|/ |v225^f,|; |v225^x 
+,|; |v225^v,|)|d225fi fi),(if v517:'^n0'then else|. -|v517^t*4,|: |v517^a fi), 
+". -Пер.изд.: "v454^a,"/ "v454^d,", "v454^e,", "v454^f,". -"v454^p,". -"v454^g, 
+", "v454^h,". -"v963^1, 
+if a(v963^1)then" //"d463 fi,(" "|; |+v963^x,|,|v963^y," "|; |+v963^b, 
+if s(v963^x,v963^y,v963^b)<>''then|. |v463^c else" "|; |+v463^c fi,|: |v963^e, 
+|/  |v963^f,|. -|v463^d,|: |v463^g, 
+if &unifor(|Av900^b#1|d963):'08'then|. -<b>ISSN</b> |v963^i else 
+if &unifor(|Av900^b#1|d963):'09'or &unifor(|Av900^b#1|d963):'10'then|. -<b>ISBN </b> |v963^i fi 
+fi, 
+if p(v463^c)then 
+if p(v463^d)and a(v463^g)then|, |v463^j else |. -|v463^j fi, 
+if val(v463^v.1)>0 then|. -Т.|v463^v else|. -|v463^v fi, 
+else 
+if val(v463^v.1)>0 then". -Т."|.; Т.|+v463^v else". -"|.; |+v463^v fi, 
+fi, 
+if p(v463^v)then|: |v463^a else|. |v463^a fi, 
+if p(v463^v)then|: |v463^a else|. |v463^a fi, 
+if p(v463^v)then 
+if val(v463^h.1)>0 then|. -N |v463^h else|. -|v463^h fi, 
+else 
+if val(v463^h.1)>0 then". -N "|.; N |+v463^h else". -"|.; |+v463^h fi, 
+fi, 
+if p(v463^h)then|: |v463^i else|. |v463^i fi, 
+if val(v463^k.1)>0 then|, ч.|v463^k else|, |v463^k fi, 
+if p(v463^k)then|: |v463^l else|. |v463^l fi,|. -|v963^p,|. -(|v963^a,|/ |v963^o, 
+|; |v963^v,|)|d963^a,|. - Ст.|v463^N,|. - |v463^1, 
+if a(v463^1)then|. - C. |d463^s fi,   v463^s,| (|v463^p|)|,| (Шифр |v463^w|)|), 
+|. -|v320,". -<b>ISBN</b> "|. -|+v10^a,". -<b>ISSN</b> "|. -|+v11^a, 
+if s(v10^a,v11^a)<>''then|, |d19 else |. -|d19 fi,v19^a*2," "v19^b,"; "v215^3, 
+if p(v10^a)or p(v19^b)then": "n463 else if v920:'J'then else". -"n463 fi fi, 
+if v10:'^d'then 
+if val(v10^d)>0then v10^d,v10^c," р."n10^c else v10^d fi 
+else 
+if v920:'J'then else if a(v463)then'Б.ц.'fi fi 
+fi,"  "v215^x" экз.<br>"/ 
+if s(v300v541)<>''then c9,|. |+v300," Перевод загл. на русск.яз.: "v541fi/ 
+if p(v391)then c9'<br>Есть автограф: '(if p(v391)then v391^a,| |v391^b, 
+| (|v391^c|)|,mhl,v391.1+|; |,mpl,fi),'.' fi/ 
+if p(v336)or p(v904)then '<br>         <b>Приложение:</b> 'fi,'  ' 
+(&unifor('K106.mnu|'v336^a),|<br> Шифр |v336^b,| |v336^c, 
+|<br> Шифр |v904^a,| |v904^b/) 
+if p(v330)then c9'<br>Содерж.:'(if p(v330) then v330^c,|/ |v330^f,|,|v330^2, 
+|,|v330^3,if p(v330^f)then'. 'else mhl,v330.1+|; |,mpl,fi fi) 
+fi, 
+if s(v675,v621,v964,v686)<>''then"<br><b>ГРНТИ </b>"| + |+v964, 
+"<br><b>УДК</b> "| + |+v675,"<br><b>ББК</b> "|    |+v621,if a(v621) then| + |+ v686 fi fi, 
+"<br><b>Предметные рубрики:</b><br>  "d606, 
+(if p(v606^a)then|;  |+v606^a,|--|v606^b,|--|v606^c,|--|v606^d fi), 
+"<br><b>Кл.слова:</b> "v610+|  |,mhl, 
+"<br><b>Аннотация:</b> "v331,mpl,'<br>' 
+if v920='J'then'<b>Зарегистрированы поступления:</b><br>' 
+(if p(v909)then if v909^h:'Подш'then else"<b>"|<b>|+v909^q|,</b>|,|экз.|v909^k| |, 
+|(|v909^d|),|,|т.|v909^f|;|,|NN:|v909^h+|; |fi,fi/) 
+if v909^h:'Подш'then '<b> Есть переплетенные номера. </b>', fi, 
+ else if v910:'^c'then'<b> Имеются экземпляры в отделах: </b>',&unifor('O') fi 
+fi, 
+fi, 
+(if p(v951^I) then '<br><A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+(if p(v951^A) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+if p(v210^D) then '<br><A HREF="IRBIS:2,,,,G=',v210^d,'">Год издания: ',v210^D,'</A>',fi, 
+'<br><IMG SRC=IRBIS:0,,irbis.gif>', 
+'<hr noshade size="1"></td></tr>'  

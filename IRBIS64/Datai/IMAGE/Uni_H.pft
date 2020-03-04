@@ -1,0 +1,94 @@
+'</>',
+&uf('+7W951#'),
+if v951^a<>'' then (if p(v951^a) then &uf('+7U951#'v951^a/) fi) fi,
+if &uf('Ag951#1'):'jp' or &uf('Ag951#1'):'gif' or &uf('Ag951#1'):'bmp' or &uf('Av953^p#1'):'1' then 
+   '<table width="100%">',
+     '<tr>',
+       '<td   valign="top">',
+   if &uf('Av953^p#1'):'1' then 
+      '<A HREF="IRBIS:3,12,,',mfn,',1">',
+      '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',1"></A>'
+   else 
+      '<A HREF="IRBIS:3?PATH=10&FILENAME=',&uf('Ag951#1'),'">',
+      '<IMG  style="width:105 px" SRC="IRBIS:10,,',&uf('Ag951#1'),'"></A>'
+/* Директория с внешними файлами расположена внутри DATAI
+/*     '<A HREF="IRBIS:3?PATH=1&FILENAME=',&uf('Ag951#1'),'">',
+/*     '<IMG  style="width:105 px" SRC="IRBIS:1,,',&uf('Ag951#1'),'"></A>'
+/* Директория с внешними файлами расположена рядом с DATAI
+/*     '<A HREF="IRBIS:3?PATH=0&FILENAME=',&uf('Ag951#1'),'">',
+/*     '<IMG  style="width:105 px" SRC="IRBIS:0,,',&uf('Ag951#1'),'"></A>',
+       '</td>',
+   fi 
+       '<td>',
+   if v920:'NJ' then ,NjW_H, else if v920='J' then ,JwU_H, else &uf('6osvex_H'),&unifor('6!!kk1bo_H')fi fi  
+       '</td>',       
+     '</tr>',
+   '</table> ',
+else 
+   if v920='J' then ,JwU_H, else 
+      if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+         '<b> Издание в обработке. Не выдается<br> </b>' fi fi, 
+      if v920:'NJ' then ,Njw_H, else 
+         &uf('6osvex_H'), &unifor('6!!kk1bo_H') 
+fi fi fi,
+if p(v909) then '<br> <b> Зарегистрированы поступления:</b> <br> ',
+   &unifor('MD909^Q'),
+'<script language="JavaScript">'/
+'	function DropDown(it)'/
+'	{'/
+'		el1 = document.getElementById(it);'/
+'		if(el1.style.display=="none") '/
+'		{'/
+'			el1.style.display="block";'/
+'		}'/
+'		else'/
+'		{'/
+'			el1.style.display="none";'/
+'		}'/
+'	}'/
+
+'	function loadClose()'/
+'	{'/
+'		document.all.el1.style.display="none";'/
+'	}'/
+' </script>  '/,
+mpl,
+&uf('+7W223#'),&uf('+7W909#'),&uf('+7W1909#'),&uf('+7W225#'),
+&uf('+7U223#'(&uf('Pv909^q')/)),
+   (if p(g223) then &uf('+7W225#'),&uf('+7W225#'g223),&uf('6jwh_vl') fi/),
+'<table><tr>',
+   (if p(g909) then 
+|<td><div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 12px;}"> <a onclick="javascript:DropDown('|g909^q,
+|');" target="_top">|g909^q*6|</a> </div></td>| 
+   fi/),
+'</tr></table>'  
+'<table>',
+'<table cellpadding="0" cellspacing="0">',/
+   (if g909<>'' then '<tr><td><div id="',g909^q,'" style="display:none">',
+    |<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 12px;}"><a onclick="javascript:DropDown('|g909^Q|');" target="_top">|g909^q*6|<img src=/Irbis64r/images/Descending.bmp width=8 height=7 hspace=0 vspace=0 border=0></a></div>|,g909^B, '</div></td></tr>' 
+    fi/)
+'</table>'  
+else
+,Ogrudk_H,
+,Orubdks_H,
+,oprip481_H, 
+,odoptd_H, 
+,oex910_H, 
+
+   (if p(v951^I) then '<br><A HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi), 
+   if &uf('Ag951#1'):'jp' or &uf('Ag951#1'):'gif' then &uf('S0'),
+      (if p(g951) then 
+          if val(&uf('S1A'))=1 then else '<br><A HREF="IRBIS:3,10,,',v951^A,'">',
+             if p(v951^T) then v951^T else v951^A fi,'</A>', fi fi), 
+   else 
+      (if p(v951^A) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>', fi), 
+   fi,
+   "<br> <b> Учебная литература: </b> "d691,
+   (|<br> |d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g),
+   ("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b),
+   if s(,odfp_H,)<>'' then '<br> ',odfp_H, fi,
+
+fi,
+if v920:'J' then else 
+'<table> <tr> <td> <b> Шифр </td> <td>',mpl,&uf('6orchifr_H'),'</b></td> </tr> </table>' fi,
+&unifor('!'), 

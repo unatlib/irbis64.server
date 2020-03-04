@@ -1,0 +1,18 @@
+if p(v744) then 
+   if rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1') then v744^a';' fi fi))>0 then 'На баланс: ' 
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1') then v744^a';' fi fi)),0,0),' назв., ',
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1')or v744^?=&uf('Ag10#1') then v744^b';' fi fi)),0,0),' экз.,' 
+      if rsum((if p(v744) then if v744^i=&uf('Ag10#1')or v744^?=&uf('Ag10#1') then v744^+';' fi fi))>0 then ' на сумму ',
+         f(rsum((if p(v744) then if v744^i=&uf('Ag10#1')or v744^?=&uf('Ag10#1') then v744^+';' fi fi)),0,2),' '&uf('Korg.mnu|3'),
+      else ' бесплатно' fi,
+   fi, 
+   if rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1')then v744^c';' fi fi))>0 then '  Не на баланс: '
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1')or v744^?=&uf('Ag10#1') then v744^c';' fi fi)),0,0),' назв., ',
+      f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1') then v744^d';' fi fi)),0,0),' экз.,' 
+      if rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1') then v744^e';' fi fi))>0 then ' на сумму ',
+         f(rsum((if p(v744) then if v744^i=&uf('Ag10#1') or v744^?=&uf('Ag10#1') then v744^e';' fi fi)),0,2),' '&uf('Korg.mnu|3'),
+      else ' бесплатно'
+fi fi fi
+
+
+

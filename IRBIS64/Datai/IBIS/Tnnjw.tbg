@@ -1,0 +1,65 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=8
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=8
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=\b № п/п\b0 
+CELL_TAB2_3=&uf('S1A')
+CELL_TAB2_4=По центру
+CELL_TAB2_5=Нет
+CELL_TAB3_1=5.5
+CELL_TAB3_2=\b Заглавие\b0 
+CELL_TAB3_3=v200^a,| = |v510^d,|: |v200^e,|. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l," ISSN "v11^a.4," - "v11^a*4," (комп "v903")"
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=\b NN в год\b0 
+CELL_TAB4_3=v110^X
+CELL_TAB4_4=По центру
+CELL_TAB4_5=Нет
+CELL_TAB5_1=4
+CELL_TAB5_2=\b Поступившие номера\b0 
+CELL_TAB5_3=(if p(v909)then if v909:&unifor('Av991^a.4#1')then v909^q| г.|,| Т.|v909^f,|, №№:|v909^h| |'\par 'fi fi)
+CELL_TAB5_4=По левому краю
+CELL_TAB5_5=Нет
+CELL_TAB6_1=4.5
+CELL_TAB6_2=\b Непоступившие номера\b0 
+CELL_TAB6_3=&uf('+7W2#'),&uf('+7W5#'),&uf('+7W6#'(if p(v938)then if v938^q=&uf('Av991^a#1')then |^A|v938^a,|^B|v938^b, BREAK, fi,fi)),if g6=''then &uf('+7W6#'(if p(v901)then if v901^q=&uf('Av991^a.4#1')then v901^j, BREAK, fi,fi))fi,&uf('+7W1#'if v991^a*5='0'then'^A1^B'v110^x fi,if v991^a*5='1'then'^A1^B'f((val(v110^x,' 0')*0.5),0,0) fi,if v991^a*5='2'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B'v110^x fi,if v991^a*7='1'then'^A1^B',f((val(v110^x,' 0')*0.25),0,0) fi,if v991^a*7='2'then'^A',f((val(v110^x,' 0')*0.25+1),0,0),'^B',f((val(v110^x,' 0')*0.5),0,0) fi,if v991^a*7='3'then'^A',f((val(v110^x,' 0')*0.5+1),0,0),'^B',f((val(v110^x,' 0')*0.75),0,0) fi,if v991^a*7='4'then'^A',f((val(v110^x,' 0')*0.75+1),0,0),'^B',v110^x fi,if v991^a*5.1='P'then'^A',&unifor('G0-'&unifor('G2:'&unifor('Av991^a*5#1'))),'^B',&unifor('G2-'&unifor('Av991^a*5#1'))fi ),if g6<>''then &uf('+7W1#^a'f(val(g1^a)+val(g6)-1,0,0),'^B',f(val(g1^B)+val(g6)-1,0,0))fi,&uf('+7W4#'g1^a),&uf('+7W1#'g1^b),(if  val(&uf('Ag4#1'))> val(&uf('Ag1#1'))then BREAK else &uf('+7U2#'&uf('Ag4#1')), &uf('+7W4#'f(val(&uf('Ag4#1'))+1,0,0))fi/),&uf('+7W3#'v903,|/|v991^a.4,(if v909^q=&uf(|Av991^a.4#1|d909) then |/|v909^f,BREAK,fi)),(if p(g2)then if val(&uf('J,I='&uf('Ag3#1'),|/|g2))<1 then g2+|,| else  &uf(|D,!I=|d909,&uf('Ag3#1'),|/|g2,|!,(if p(v910)then if v910^c=''then &uf('Av936#1')' комп.'v910^b,'('v910^d'),',fi fi),|d909)fi fi/)
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Нет
+CELL_TAB7_1=1.5
+CELL_TAB7_2=\b Стоимость непоступивших номеров\b0 
+CELL_TAB7_3=f(rsum((if p(g2)then &uf('6938e'),&uf('Ag5#1')';'fi)),0,2)
+CELL_TAB7_4=По правому краю
+CELL_TAB7_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=200
+CELL_SORT4=0
+CELL_SORT5=&unifor("9"d200^a,&unifor('+S0',v200^a)),v200^e,v923^h,v923^i,v923^k,v923^l
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=tnnj.wss
+HDR_PFT=tnnjh.pft
+HDR_PARAMS_COUNT=0

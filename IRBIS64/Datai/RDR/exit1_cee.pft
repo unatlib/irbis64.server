@@ -1,0 +1,18 @@
+if a(v30) then &uf('6exit0_cee'),'<br><b><font style="color: #FF0000">Читатель не найден - ',v1007*3,'</font><b><br>' else 
+if val(&uf('J,RI=',v30))>1 /* проверка на неоднозначность читателя 
+   then &uf('6exit0_cee'),'<br><b><font style="color: #FF0000">Неоднозначность читателя - ',v30,'</font><b><br>',
+   else   if v999<>'1'  /* проверка: числится ли читатель среди посетителей
+                      then &uf('6exit0_cee'),'<br><b><font style="color: #FF0000">Читатель не числится среди текущих посетителей</font><b>',&uf('6rdrw_html_dolg'), 
+                      else /* проверка: ФЛК на ВЫХОД
+                           &uf('+7W10#',&uf('6exitflc_cee')),
+                           /* результат ФЛК в глобальной 10
+                           if g10.1='1'
+                                then &uf('6exit0_cee'),'<br><b><font style="color: #FF0000">Выход НЕ зафиксирован. ',g10*1,'</font><b>',&uf('6rdrw_html_dolg'), 
+                                else /* формирование конвейерной команды на корректировку записи читателя в части удаления поля 999
+                                     /* в глобальной 2 - порядковый номер поля 999
+                                     &uf('+7W2#',&uf('+E999#1')),
+                                     'IRBIS:?C21COM=6&RELOAD=1&PFTNAME=exit2_cee&R21UPD=1&ENTRY_MESSAGE=!&ENTRY_MFN=',mfn,'&999_',g2,'R21STR=&FREEPAR0=',&uf('+3E',g10*1)
+                           fi 
+          fi 
+fi 
+fi

@@ -1,0 +1,19 @@
+      if val(g991^1)=0 or val(g991^1)=1 and p(v913) 
+      then  
+         if g991^2='' or &uf('+97',g991^2)=&uf('+97',&uf('Av942^A#',,&uf('+N942') ) ) 
+         then 
+            if g991^3='' or val(g991^3)<=val(&uf('Av942^C#1')) and 
+               g991^4='' or val(g991^4)>=val(&uf('Av942^C#1')) 
+            then 
+               '^A',,v100,,/
+               '^A',,v100,,
+               '^B',,v30^A,,'^C',v30^C,,,'^D',,v30^F,,
+               '^E',,if &uf('Av942^A#',,&uf('+N942') ): 'H1' then &uf('Av942^D#',,&uf('+N942') ) else f(rsum((v942^D|,|)),0,2) fi,,
+               '^F',,v31,,
+               '^G',,v913,,
+               '^H',,v903,,
+               '^I',,v902^D,,
+               '^XARH',,,
+            fi,,
+         fi,,
+      fi,,   

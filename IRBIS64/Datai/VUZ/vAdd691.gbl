@@ -1,0 +1,149 @@
+0
+// замена повторения поля 691
+// использую только при изменении контингента, после выполнения vAdd83
+//14 - возможность изменения кафедры
+//12 PUTLOG
+// 10.1 при изменении контингента сохраняю подполе ^G
+//13 проверка при добавлении
+// 992 - новые данные для поля 691 - добавила кафедру
+// 991 - заданный старый контингент, по нему поиск 991^I и по нему ищу 691^G
+// g993^@ - список дополнительных БД каталога 
+//----имена БД в G100 через v993
+//.................. в G100 имена всех БД каталога
+DEL
+993
+*
+
+
+ADD
+993
+
+"^@"v992^@,,,&uf('+7W100#',,,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi)
+
+IF
+if v993^@<>'' then '1' fi
+REP
+993^@
+1
+if v993^@<>'' then v993^@,,,if v993^@: '.' then  else '.mnu' fi fi,,,,,,,
+
+ADD
+993
+
+(if  &uf('+5T',,&uf('Av993^@#1'),,)<>'' then &uf('+7U100#',&uf('+5T',,&uf('Av993^@#1'),,) ) else break fi/),,&uf('+7G100'),,,&uf('+7G100')
+
+FI
+DEL
+994
+*
+
+
+//---в v994 имя БД каталога, в g10 текст протокола
+ADD
+994
+
+(g100/),,,&uf('+7W10#')
+
+//===================================Цикл по БД каталога
+REPEAT
+IF
+if &uf('Av994#1')<>'' then '1' fi
+//----------------------------- БД каталога
+CORREC
+&uf('Av994#1')
+mpu,,v992/v991
+if v991^I<>'' then  '!I=',,,v991^I,v991^a,v991^n,v991^c,v991^v,v991^o,'-S'v991^f  fi,,,
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+
+
+ADD
+991
+
+&uf('Av1001#2')
+
+DEL
+1691
+*
+
+
+// ищу старое повторение и беру подполе ^G ^E ^H
+ADD
+1691
+
+(if p(v691) then if (&uf('Av991^I#1')<>''and &uf('+97',v691^I)=&uf('Av991^I#1') or &uf('Av991^I#1')='') then if &uf('Av991^A#1')=&uf('+97',v691^A) and &uf('Av991^N#1')=&uf('+97',v691^N) and &uf('Av991^C#1')=&uf('+97',v691^C) and &uf('Av991^O#1')=&uf('+97',v691^O) and &uf('Av991^V#1')=&uf('+97',v691^V) and val(&uf('Av991^F#1'))=val(v691^F) then |^G|v691^G,,|^E|v691^E,,,,|^H|v691^H,,,,,,break fi fi fi)
+
+
+DEL
+992
+*
+
+
+// для сравнения на верхнем регистре
+ADD
+992
+
+mpu,&uf('Av1001#1')
+
+/*-----------добавление при условии совпадения со старым 
+IF
+if &uf('Av991#1')='' or rsum( (if p(v691) then if &uf('Av991^A#1')=&uf('+97',v691^A) and &uf('Av991^I#1')=&uf('+97',v691^I) and &uf('Av991^N#1')=&uf('+97',v691^N) and &uf('Av991^C#1')=&uf('+97',v691^C) and &uf('Av991^O#1')=&uf('+97',v691^O) and &uf('Av991^V#1')=&uf('+97',v691^V) and val(&uf('Av991^F#1'))=val(v691^F) then '1,',,break fi fi) )=1 then '1' fi
+ADD
+691
+
+if rsum( (if p(v691) then if (&unifor('Av992^I#1')<>''and &uf('+97',v691^I)=&unifor('Av992^I#1') or &unifor('Av992^I#1')='') then if (&unifor('Av992^B#1')<>''and &uf('+97',v691^B)=&unifor('Av992^B#1') or &unifor('Av992^B#1')='') then if &uf('Av992^A#1')=&uf('+97',v691^A) and &uf('Av992^N#1')=&uf('+97',v691^N) and &uf('Av992^C#1')=&uf('+97',v691^C) and &uf('Av992^O#1')=&uf('+97',v691^O) and &uf('Av992^V#1')=&uf('+97',v691^V) and val(&uf('Av992^F#1'))=val(v691^F) then '1,' fi fi fi fi))=0 then &uf('Av1001#1'),,,,v1691 fi
+
+ADD
+1001
+
+&uf('+7U10#',mdl,,'vAdd691: ',,&uf('+D'),,,': Добавлено в запись каталога (',&uf('Av1001#1'),'). MFN=',f(val(mfn),0,0))
+
+FI
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1691
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+992
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+994
+1
+
+
+UNTIL
+if p(v994) then '1' fi
+//==========================конец цикла по БД каталога
+FI
+PUTLOG
+&uf('+7G10'),,(g10/)
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+992
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

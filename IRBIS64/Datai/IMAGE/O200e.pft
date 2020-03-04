@@ -1,0 +1,35 @@
+     if a(v461) then 
+         if a(v200^e) then 
+            if p(v328^a) or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1' 
+                         or s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then 
+               if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m1'then'автореферат дис. ... 'else 
+                  if s(v900^c' 'v900^2' 'v900^3' 'v900^4):'m2' then'дис. ... ' 
+               fi fi,v328^a," : "v328^n,
+               if p(v328^c)then ' : защищена 'v328^c*6'.'v328^c*4.2'.'v328^c.4 fi,
+               if p(v328^d)then ' : утв. 'v328^d*6'.'v328^d*4.2'.'v328^d.4 fi,", "v328^0,", "v328^9 
+            else 
+               if p(v982^u) then (|, |+v982^0,| |v982^9) 
+                  " : взамен "d982^a,|, |+v982^a,&unifor('S0'), 
+                  (if p(v982^d) then 
+                      if val(&unifor('S1A'))=1 then ' : частично взамен 'else |, |+d982^d 
+                   fi fi,v982^d), 
+                   if s(v982^b,v982^c)<>''then | : введ. с |v982^b,| по |v982^c fi 
+                   " : заменен на "d982^e,| и |+v982^e,&unifor('S0'), 
+                  (if p(v982^f) then 
+                      if val(&unifor('S1A'))=1 then ' : частично заменен на 'else | и |+d982^f 
+                   fi fi,v982^f,| с |v982^g), 
+               else 
+                  if s(v905^2,&unifor('IPRIVATE,EEE,')):'1' or p(v922) or 
+                     s(v905^2,&unifor('IPRIVATE,EEE,')):'2' and v920.1:'A' then else 
+                     &uf('+7W200#'if p(v200^a) and p(v900^c) and &unifor('K200ehd.mnu|'v900^c)<>'' 
+                                  then &unifor('K200ehd.mnu|'v900^c) fi),
+                     g200,
+                     (if p(v125)then if &uf('Ag200#1')<>'' then | : |v125^e*5 else | : |+v125^e*5 fi,
+                      if s(&uf('Ag200#1'),v125^e)<>'' then | : |v125^6 else | : |+v125^6 fi,
+                      if s(&uf('Ag200#1'),v125^e,v125^6)<>'' then | : |v125^1*3,| (|v125^2|)| else | : |+v125^1*3,| (|v125^2|)| fi,
+                      if s(&uf('Ag200#1'),v125^e,v125^6,v125^1)<>'' then | : |v125^3*3,| (|v125^4|)| else | : |+v125^3*3,| (|v125^2|)| fi,
+                      if s(&uf('Ag200#1'),v125^e,v125^6,v125^3)<>'' then | : |v125^h else | : |+v125^h fi
+                      if s(&uf('Ag200#1'),v125^e,v125^6,v125^3)<>'' then | : |v125^7 else | : |+v125^7 fi fi)
+      fi fi fi fi fi, 
+ 
+ 

@@ -1,0 +1,38 @@
+(if p(v1) 
+ then 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1100 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1800 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2800 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4300 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5300 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8200 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9000 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10000 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10600 
+\pard \widctlpar\intbl {\ql \fs20 ',,,,
+/*-------Дата,№ КСУ
+v1^1,|\par |v1^2,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-------Номер п.п.
+if p(v1)then &unifor('S1A'),if p(v1^z)then if v1^z='1'then else '-',f(val(&unifor('S1A'))+val(v1^z)-2,0,0),&unifor('S'f(val(v1^z)-2,0,0)) fi fi fi,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----инв.
+v1^3,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----ШК
+v1^7,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs16 ',,,
+/*-----Дата проверки
+v1^8,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----БО
+ref(val(v1^4), if rsum((if'2 7':v910^a then'0;'else|1;|d910 fi/))>0 then if v920:'NJ'then ref(l(|I=|v933), v200^a,". "v923^h,". "v923^k)," - "v934"г."," т."v935,",N "v936 else v461^x| |,v461^c,"; "v200^v,if p(v200^v) then": "d200^a fi,v700^a," "v700^b," "d700,v200^a,if p(v215^a) then". -"v215^a,v215^1,if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi fi fi),,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*-----цена
+ref(val(v1^4),v210^d),,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*----номер акта списания
+if ref(val(v1^4),s(v215^y))=''then v1^5 fi,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs20 ''''\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi/)

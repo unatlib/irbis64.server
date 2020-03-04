@@ -1,0 +1,124 @@
+'<body bgcolor="#ffffcc">'/,
+'<script language="JavaScript">'/,
+'	function DropDownParams(it)'/,
+'	{'/,
+'		el1 = document.getElementById(it);'/,
+'		if(el1.style.display=="none")'/,
+'		{'/,
+'			el1.style.display="block";'/,
+'		}'/,
+'		else'/,
+'		{'/,
+'			el1.style.display="none";'/,
+'		}'/,
+'	}',
+' </script>'/,
+
+'<script language="JavaScript">'/,
+'  function TransferParam()'/,
+'  {'/,
+'  if (REQUEST.n30R21STR.value == "") return false;'/,
+'  READER.S21STR.value = REQUEST.n30R21STR.value;'/,
+'  return true;'/,
+'  }',
+' </script>'/,
+
+'<style type="text/css">'/
+'	#anchor{'/
+'	border:0;'/
+'	background-color:#ffffcc;'/
+'	text-decoration:underline;'/
+'	text-align:left;'/
+'	font-family:Times New Roman;'/
+'	font-size:16;'/
+'	cursor:hand;'/
+'	color:blue;'/
+'	}'/
+'</style>'/
+
+'<title>Формирование заказа на книговыдачу (БД: ',&uf('+D'),' MFN=',f(mfn,0,0),')</title>',
+
+'<b>Формирование заказа на книговыдачу (БД: ',&uf('+D'),' MFN=',f(mfn,0,0),')</b><br><br>',
+
+'<div>',
+'<IMG width="600" height="363" SRC="IRBIS:11,,',v952^b,',',mfn,'">',
+
+&uf('+7W11#',&uf('+91',v952^B)),
+&uf('+7W12#',&uf('+92',v952^B)),
+'<br>',
+|<input type="CheckBox" style="{cursor: hand;}" onclick="javascript:DropDownParams('ParamSearch|d952,mfn,|');">Оборот КК|d952,
+'<div id="ParamSearch',mfn,'" style="display:none">',
+'<IMG width="600" height="363" SRC="IRBIS:10,,',g12,"W"g11*1,,'">',
+'</div>',
+'</div>',
+'<form name="REQUEST" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<table  width=100%>',
+'<tr>',
+'<td>',
+'<b>Идентификатор читателя: </b>'
+'</td>',
+'<td  width=70%>',
+        
+        '<input name="n30R21STR" style="width: 100%; ">',
+'</td>',
+'</tr>',
+'<tr>',
+'<td>',
+'<b>Место выдачи: </b>'
+'</td>',
+'<td  width=70%>',
+        
+'            <select name="102R21STR" style="width: 100%;">',
+(if &uf('+5TKV_IC_wn.mnu')<>'' then '<option value="',&uf('+5TKV_IC_wn.mnu'),'" ',,'>',&uf('+5TKV_IC_wn.mnu'),' - ',&uf('+5FKV_IC_wn.mnu'),'</option>' fi),
+'            </select>',
+'</td>',
+'</tr>',
+'<tr>',
+'<td>',
+'<b>Доп.информация: </b>'
+'</td>',
+'<td  width=70%>',
+        
+        '<input name="101R21STR" style="width: 100%; ">',
+'</td>',
+'</tr>',
+'<tr>',
+'<td>',
+
+        '<input type="submit"  name="nnnn" value="Сформировать заказ">',      
+        '<input type="hidden" name="C21COM" value="6">',
+        '<input type="hidden" name="I21DBN" value="RQST">',
+        '<input type="hidden" name="ENTRY_MFN" value="0">',
+        '<input type="hidden" name="1R21STR" value="',&uf('+D'),'">',
+        '<input type="hidden" name="903R21STR" value="',v952^b,'">',
+        '<input type="hidden" name="952R21STR" value="',v952,'">',
+        '<input type="hidden" name="40R21STR" value="',&uf('31'),'-',&uf('32'),'-',&uf('30'),'  ',&uf('39'),'">',
+        '<input type="hidden" name="ENTRY_DBNFLC" value="dbnflc">',
+        '<input type="hidden" name="201R21STR" value="',v22,'">',
+        '<input type="hidden" name="ENTRY_MESSAGE" value="Ваш заказ включен в очередь">',
+        '<input type="hidden" name="ENTRY_AFTERACTION" value="0">',
+        
+'</td>',
+'</tr>',
+'</table>',
+'</form>',
+'<form name="READER" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+        '<input type="submit" onclick="return TransferParam()" name="rrrr" value="Формуляр читателя..." id="anchor">',      
+        '<input type="hidden" name="C21COM" value="2">',
+        '<input type="hidden" name="I21DBN" value="RDR">',
+        '<input type="hidden" name="PFTNAME" value="rdr_IC_wn">',
+        '<input type="hidden" name="TOPPFTNAME" value="rdr_IC_top_wn">',
+        '<input type="hidden" name="S21STR" value="">',
+        '<input type="hidden" name="S21P01" value="0">',
+        '<input type="hidden" name="S21P02" value="0">',
+        '<input type="hidden" name="S21P03" value="RI=">',
+        '<input type="hidden" name="S21STN" value="1">',
+        '<input type="hidden" name="S21CNR" value="1">',
+        '<input type="hidden" name="FREEPAR0" value="',g1100,'">',
+        '<input type="hidden" name="FREEPAR2" value="',&uf('+D'),'">',
+        '<input type="hidden" name="FREEPAR3" value="',g1103,'">',
+
+
+'</form>',
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=search_IC_wn&S21CNR=',g1103,'&I21DBN=',&uf('+D'),'&FREEPAR0=',g1100,'">Вернуться к основной поисковой форме</A>',
+'</body>'

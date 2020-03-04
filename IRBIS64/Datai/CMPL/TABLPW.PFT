@@ -1,0 +1,30 @@
+'
+\trowd \trqc\trgaph108\trleft-108\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1430\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4406\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx5399\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6816\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8234\clbrdrt\brdrs\brdrw45\clbrdrl\brdrs\brdrw45\clbrdrb\brdrs\brdrw45\clbrdrr\brdrs\brdrw45
+\pard \qc\widctlpar\intbl {##\cell}
+\pard \ql\widctlpar\intbl {'
+(if p(v37)then if &unifor('G0/'v37^a)=&unifor('Av991^c#1') and 
+&unifor('G1/'v37^a)=&unifor('Av991^d#1') then v37^b fi fi/),'\cell }
+\pard \ql\widctlpar\intbl {'
+if p(v591)then v591 else v200^a fi,'\cell }
+\pard \qc\widctlpar\intbl {'
+(if p(v38)then if &unifor('G0/'v38^a)=&unifor('Av991^c#1') and 
+&unifor('G1/'v38^a)=&unifor('Av991^d#1') then if &unifor('Q'v38^z)=&unifor('Q'&unifor('Av991^e#1')) 
+and p(v38^y) then f(val(v38^y),0,0)'\par 'fi fi fi),'\cell }
+\pard \qr\widctlpar\intbl {'
+(if p(v38)then if &unifor('G0/'v38^a)=&unifor('Av991^c#1') and 
+&unifor('G1/'v38^a)=&unifor('Av991^d#1') then if &unifor('Q'v38^z)=&unifor('Q'&unifor('Av991^e#1')) 
+and p(v38^y) then f(val(v38^e,' 0'),0,2)'\par 'fi fi fi),
+'\cell }
+\pard \qr\widctlpar\intbl {'
+(if p(v38)then if &unifor('G0/'v38^a)=&unifor('Av991^c#1') and 
+&unifor('G1/'v38^a)=&unifor('Av991^d#1') then if &unifor('Q'v38^z)=&unifor('Q'&unifor('Av991^e#1')) 
+and p(v38^y) then f(val(v38^y)*val(v38^e),0,2)'\par ' fi fi fi),'\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar'
+

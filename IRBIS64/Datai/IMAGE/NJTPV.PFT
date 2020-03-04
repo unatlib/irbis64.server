@@ -1,0 +1,117 @@
+'{','\pard\tx4',
+if v910:'^c'then 
+   if v910:'^a0'or rsum((if v910^a:'U'then 
+            if p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 or a(v910^2)then'1;'
+            fi fi,if v910^a:'p'then ref(l(|I=|v910^p),if v910^a:'0'then'1;'else"0;"d910                   fi) fi'\par '))>0 then  
+   else '\tab (Свободных экземпляров нет) \par '   
+   fi 
+else '\tab (Нет сведений об экземплярах) \par ' 
+fi,
+'\b Шифр: 'v903,
+ref(l(|I=|v933),'\tab \tab ', &unifor('K110b.mnu|'v110^b)),
+if p(v904^c) then'\par (',&unifor('G2='v904^c),')'fi,   '\b0 ',
+ref(l(|I=|v933),"\par \tab "d710,v710^s".",v710^a," ("v710^r")",". "v710^b,
+  if s(v710^n,v710^c)<>''then' ('v710^n"; ",v710^c,')'fi,". "d710,'\par ',
+"  "v503"\par ","\b "v200^a"\b0 ",if s(v230v135)<>''then if v101:'rus'then" [Электр.ресурс]"d230  else" [Electr.resource]"d230 fi fi,(|. |v923^h,|. |v923^i,|. |v923^k,|. |v923^l,|. |v923^m,|. |v923^n),": "v200^e,"/ "v200^f),
+if s(v230,v215)=''then ref(l(|I=|v933),". - "d230^a,(if p(v230^a) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| и |+v230^a else ""| and |+v230^a fi fi),(". - "|; |+v210^a,|; |v210^x,|; |v210^y,|: |v210^c,),if s(v210^a,v210^c)<>''then", "v210^d" - " else". - "v210^d" - " fi,v210^e,"    "n210^e),
+if s(v230,v215)=''then ref(l(|I=|v933),if s(v215,&unifor('G2='v230^b),&unifor('G2='v230^c))<>''then'. - 'fi,v215^a," "d215^1,&unifor('G2='v215^1),if a(v215^1)then" c."d215^a fi,if p(v215^a)then" : "d215^c fi,v215^c,if s(v215^a,v215^c)<>''then"; "d215^d fi,v215^d,
+(if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>''and p(v215)then'\b : 'fi,&unifor('G2='v230^b),if &unifor('G2='v230^c)<>''then if &unifor('G2='v230^b)<>''then', 'fi,&unifor('G2='v230^c)'\b0 'fi)) fi,
+ref(l(|I=|v933),(if v115^x:'0'then| (|d115^b,f(val(v115^b),0,0),| мин.)|d11
+5^b,| : |v115^c*3,|, |v115^d*3,|; |v115^e*3,|, |v115^f*3,|, |v115^h*3,|, \b |v11
+5^j*3|\b0 |,|, |v115^k*3,|, |v115^l*2 fi),(if v915^x:'0'then| (|d915^b,f(val(v91
+5^b),0,0),if v915^g.1:'k'then' дп.'else if v915^g.1:'l'then ' трансп.'else ' кад
+р.'fi fi,|)|d915^b,' : 'v915^c*3,|, |v915^f*3,|, \b |v915^g*3|\b0 |,|, |v915^p*3
+,|, |v915^q*3 fi),(if v916^x:'0'then| (|d916^b,f(val(v916^b),0,0)| мин.)|d916^b,
+' : 'v916^1| кадр/с.|,|, |v916^c*3,|, |v916^d*3,|, |v916^e*3,|; |v916^2| м|,|, |
+v916^f*3,|, \b |v916^g*3|\b0 |,|, |v916^h*3,|, |v916^i*3,|, |v916^m*3,|, |v916^n
+*2 fi),if a(v230) then(if v135^x:'0'then| : \b |v135^a*3|\b0 |,|, |v135^b,|, |v135^c,|, |v135^d fi) fi,(if v130^x:'0'then| : \b |v130^a*3|\b0 |,|, |v130^b*3,|(|v130^c*3|)|,|, |v130^d*3,|, |v130^e,|, |v130^f*3,|, |v130^g*3,|, |v130^h*3,|, |v130^i*3 fi),(if v1
+25^x:'0'then| (|d125^a,if v125^a.2:'00'then else if v125^a.1:'0'then v125^a*1.1|
+ час.|else v125^a.2| час.|fi fi,if v125^a*2.2:'00'then else if v125^a*2.1:'0'the
+n v125^a*3.1| мин.| else v125^a*2.2| мин.| fi fi,if v125^a*4.2:'00'then else if 
+v125^a*4.1:'0'then v125^a*5.1| сек.|else v125^a*4.2| сек.|fi fi,|)|d125^a,|, |v1
+25^b*3,|, |v125^c*3,| |v125^d*2,|, |v125^e*5,|, |v125^1*2,| |v125^2,|, |v125^3*2
+,| |v125^4 fi),if v125^x:'0'and v126^x:'0'then', 'fi,(if v126^x:'0'then |\b |v12
+6^a*3|\b0 |,|, |v126^b*3,| (|d126^1,f(val(v126^1),0,0),| мин.)|d126^1,|, |v126^c
+*3,|, |v126^d*3,|, |v126^e*3,|, |v126^f*3,|, |v126^g*3,|, |v126^h*3,|, |v126^i*3
+,|, |v126^j*3 fi),(if v123^x:'0' then | : \b |v123^a*3|\b0 |,|, |v123^b*3 fi)," 
++"v215^e,| |d215^2,&unifor('G2='v215^2),"  "v215^3,", "v215^x" экз.",". - \b Систем. требования:\b0  "d230^d,(if p(v230) then if v230^x:'1'then'; Прил.: 'else|. |+d230^d fi,v230^d,| (|v230^e|)|fi),(|. - Режим доступа: |v337^d,|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a))fi,
+ref(l(|I=|v933),". - ISSN "v11^a,". -"d110^d,if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d) else"Периодичность "v110^d fi),
+   "\par \tab \b "v934"г.",
+if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi,
+if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' N 'fi),v936 fi,
+" ("v931^c")","\b0 "d934,". - "d230^a,
+(if p(v230^a) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| и |+v230^a else ""| and |+v230^a fi fi),
+if s(v215,&unifor('G2='v230^b),&unifor('G2='v230^c))<>''then'. - 'fi,v215^a," "d215^1,&unifor('G2='v215^1),
+(if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>''and p(v215)then'\b : 'fi,&unifor('G2='v230^b),
+ if &unifor('G2='v230^c)<>''then 
+    if &unifor('G2='v230^b)<>''then', 'fi,&unifor('G2='v230^c)'\b0 '
+ fi)," +"v215^e,| |d215^2,&unifor('G2='v215^2),
+". - \b Систем. требования:\b0  "d230^d,
+(if p(v230) then if v230^x:'1'then'; Прил.: 'else|. |+d230^d fi,v230^d,| (|v230^e|)|fi),(|. - Режим доступа: |v337^d,|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a),". -"v931^b," ("v931^e," - Шифр "v931^d,")"d931^e,". - "v904^b,
+if p(v904^c) then' (',&unifor('G2='v904^c),')'fi,". -"v320,
+   if rsum((v910^e|;|))>0then '. -',
+      (if p(v910)then 
+          if &unifor('Pv910^e')<>''then &unifor('Pv910^e'),', 'fi, 
+       fi),&unifor('Av910^l#1'),
+       if a(v910^l)then &unifor('Korg.mnu|3') fi 
+   fi,
+   if p(v922)then'\par \tab \b ',
+      if &unifor('Av905^k#1')<>''then'Из содержания: '
+      else'Содержание: 'fi,
+     (if p(v922)then'\par   \b 'v922^f|. |,v922^c'\b0 ',|/ |v922^g,
+         if a(v922^g)then 
+            if p(v922^x)then|/ |v922^f,|, |v922^2,|, |v922^3 else|/ |d922^f,
+               &unifor('F1'v922^f)' '&unifor('E1'v922^f),
+               |, |d922^2,&unifor('F1'v922^2),| |d922^2,&unifor('E1'v922^2),
+               |, |d922^3,&unifor('F1'v922^3),| |d922^2,&unifor('E1'v922^3) 
+         fi fi,if p(v922^4)then' (',&unifor('Korg.mnu|5'),v922^4')' fi,
+         | Кл.слова: |d922^5,&unifor('Q'v922^5,|, |v922^6,|, |v922^7) fi) 
+fi,"\par \b На вкладках: \b0 "d330,(|; |+d330,v330^f| |,v330^c,| (|v330^p|)|),
+if v910:'^c'then'\par \b Имеются экземпляры в отделах: \b0 '   
+   if &unifor('IPRIVATE,FPI,')<>''then 
+      (if p(v910^c)then'\par 'v910^d,
+          |(в подшивке)|d910^p,'  'v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.',
+          |(|v910^1|экз.)|,| Экз. |v910^b,' - ',v910^e,
+          if val(v910^e)>0 then 
+             if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+             else &unifor('Korg.mnu|3') 
+          fi fi 
+          if a(v910^e)then &unifor('Av10^d#1'),
+             if val(&unifor('Av10^d#1'))>0 then 
+                if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') 
+                else &unifor('Korg.mnu|3') 
+             fi fi 
+             if &unifor('Av10^d#1')='' then 'Б.ц.'fi
+          fi,|)|d910^c, 
+       fi),
+   else 
+       if rsum((|1;|d910^c))>1 then '\tab всего  '
+          f(rsum((if p(v910^c) then 
+                     if'C U':v910^a then v910^1|;|,|1;|n910^1 else 
+                        if '6 2 7':v910^a then else'1;' fi 
+                     fi
+                  fi)),0,0),': ',
+       fi,&unifor('O') 
+   fi,
+   if &unifor('Y')<>''then'\par Свободны: ',&unifor('Y') fi,'\par '
+fi,
+   if rsum((if'CU':v910^a then if p(v910^c)then'0;'else'1;'fi else'0;'fi))>0 
+    or v910^a:'2'
+   then'\par Заказаны экземпляры для отделов: '
+     (if v910^a:'2'or 'CU':v910^a and a(v910^c) then v910^d,|(|v910^1|)|,', 'fi)
+   fi,
+   (if v910^a:'p'then|\par Экз.|v910^b,|(|v910^d|)|,' переплетен ',|(см. |v910^p|)|,        ref(l(|I=|v910^p),if v910^a:'0'then' - cвободен'else' - занят 'fi) fi),
+   (if v910^a:'3'then|\par Экз.|v910^b,|(|v910^d|)|,' в переплете'fi),
+   (if v910^a:'4'then|\par Экз.|v910^b,|(|v910^d|)|,' утерян'fi),
+   (if v910^a:'5'then|\par Экз.|v910^b,|(|v910^d|)|,' временно не выдается' fi),
+   (if v910^a:'8'then|\par Экз.|v910^b,|(|v910^d|)|,' поступил, но еще не дошел 
+ до места хранения'fi),
+if p(v937)then'\par \b Технологический путь: \b0 ',
+"\pard\tx500\tx1000\tx1500\tx2000\tx2500 \par N экз.\tab Куда\tab ПЕРЕДАЧА \ta
+b фио\tab ВОЗВРАТ \tab фио"D937,'\par '
+'--------------------------------------------------------------------'
+(if p(v937)then |\par |v937^n,|\tab |v937^a,|\tab |v937^b*6,|.|v937^b*4.2,|.|v9
+37^b.4,|\tab |v937^c,|\tab |v937^d*6,|.|v937^d*4.2,|.|v937^d.4,|\tab |v937^e fi)
+fi
+'}'
+

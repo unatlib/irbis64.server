@@ -1,0 +1,2 @@
+if p(g31) then &uf('S0'),
+(if val(&uf('G0^'&uf('Ag31#1')))>0 then mfn,'^A1^+'&uf('Ag31^X#1'),'^Y'&uf('S1A'),&uf('+7W31#'f(val(&uf('G0^'&uf('Ag31#1')))-1,0,0),'^X'&uf('Ag31^X#1'),) else break fi/) fi

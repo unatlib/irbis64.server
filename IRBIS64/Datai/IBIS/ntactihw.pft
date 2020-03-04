@@ -1,0 +1,29 @@
+'\pard \li108 \ri108 ','\qr \fs20 '
+'\par \qr \tab \tab \tab ','\fs24 Утверждаю: \fs20 ',
+'\par \qr Руководитель учреждения __________________ ',if &uf('DCMPL,?VD=POLZV?,v14^B,"')<>'' then '\ul '&uf('DCMPL,?VD=POLZV?,v14^B,"'),'\ul0' else '\ul _____________\ul0' fi, '\par\tab\tab\tab\tab \fs12 \b                                                       (подпись)','                            (расшифровка подписи) '
+'\par \fs20 "___"____________ 20__ г.',
+'\par \par \qc \fs20  АКТ  N '&unifor('G0 'v991),
+'\par от ',&unifor('G2 'v991),
+'\par О СПИСАНИИ ИСКЛЮЧЕННЫХ ОБЪЕКТОВ БИБЛИОТЕЧНОГО ФОНДА'
+'\par \qr \tab \tab \tab ','__________'
+'\par \qr \tab \tab \tab ','\ul|  КОДЫ  |\ul0',
+'\par \qr \tab\tab\tab    Форма по ОКУД  ',
+'\tab\tab\tab ','\ul|0504144  |\ul0'
+'\par \qr \tab\tab\tab\tab      Дата ','\tab\tab\tab ',if &unifor('G2 'v991)<>''then ,'\ul|',&unifor('G2 'v991),'|\ul0' else '\ul|_________|\ul0',fi,
+'\par \qr \tab\tab\tab\tab   по ОКПО ','\tab\tab\tab ',if &uf('DCMPL,?VD=POLZV?,v84^H,"')<>''then '\ul|'&uf('DCMPL,?VD=POLZV?,v84^H,"'),'|\ul0'else '\ul|_________|\ul0',fi,
+'\par \qr \tab\tab\tab\tab\     КПП ','\tab\tab\tab ', if &uf('DCMPL,?VD=POLZV?,v84^L,"')<>''then '\ul|'&uf('DCMPL,?VD=POLZV?,v84^L,"'),'|\ul0'else '\ul|_________|\ul0',fi,
+'\par\tab\tab\tab ','\ul|_________|\ul0',
+'\par\tab\tab\tab ','\ul|_________|\ul0'
+'\par \par \ql Учреждение  ','\ul ',&uf('DCMPL,?VD=POLZV?,v15^F,"'),'\ul0 '
+'\par \ql \tab              ИНН  ','\tab ',if &uf('DCMPL,?VD=POLZV?,v84^E,"')<>'' then '\ul|'&uf('DCMPL,?VD=POLZV?,v84^E,"'),'|\ul0' else '\ul|__________|\ul0',fi,
+'\par \par \ql Структурное '
+'\par \ql подразделение   ',' \ul            \ul0 ',
+'\par \ql Причина исключения    ','\ul ',&unifor('DCMPL,"KS2=',v991,'",v888^p*2'),'\ul0 '
+'\par\par \tab \tab\tab \tab __________', '\tab \tab \tab\tab \tab\tab __________'
+'\par \tab Дебет счета ','\tab\tab ',if &uf('DCMPL,?VD=POLZV?,v84^1,"')<>'' then '\ul|'&uf('DCMPL,?VD=POLZV?,v84^1,"'),'|\ul0' else '\ul|_________|\ul0' fi,
+'\tab \tab \tab Кредит счета','\tab\tab\ ',if &uf('DCMPL,?VD=POLZV?,v84^2,"')<>'' then '\ul|'&uf('DCMPL,?VD=POLZV?,v84^2,"'),'|\ul0' else '\ul|_________|\ul0' fi,
+'\par\par \ql Комиссия в составе ',' \ul            \ul0 ','\par\tab\tab\tab\tab \fs12\b                        (должность, фамилия, инициалы)'
+'\par\ql \fs20 назначенная приказом'
+'\par\ql (распоряжением) от ','\tab "___"____________ 20________ г','\tab\tab произвела проверку', 
+'\par\ql состояния документов ',' \ul            \ul0 ', '\par\tab\tab \fs12\b                  (указать виды объектов)',  
+'\ql \par\fs20 и установила, что перечисленные в прилагаемом списке документы в количестве ',

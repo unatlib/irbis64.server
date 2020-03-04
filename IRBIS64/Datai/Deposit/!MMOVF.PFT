@@ -1,0 +1,26 @@
+mhl,
+(if '***'='981'then v981^a/v981^b fi,
+ if '***'='710'or'***'='711'or'***'='962'then v***^7,
+    if a(v***^7) then v***^a,
+       if p(v***^n) or p(v***^c) then' ('v***^n|; |,v***^c')'fi,|. |v***^b,
+       if p(v***^d) or p(v***^f) or p(v***^e) then' ('v***^d|; |,v***^f,
+          if p(v***^f)then|; |v***^e else v***^e fi,|/ |v***^h,|/ |v***^i,')'
+       fi,
+       if '***'='710'then 
+          if p(v971)then". "d710fi,v971^b,
+          if (p(v971^d)or p(v971^f)or p(v971^e))then' ('v971^d"; ",v971^f,
+             if p(v971^f)then"; "v971^e else v971^e fi,"/ "v971^h,"/ "v971^i')'
+ fi fi fi fi,
+ if '***'='971'or '***'='972'then v***^7,
+    if a(v***^7) then 
+       if '***'='971'then v971^b fi,if '***'='972'or '***'='962'then v***^a fi,
+       if (p(v***^d)or p(v***^f)or p(v***^e))then' ('v***^d|; |,v***^f,
+          if p(v***^f)then|; |v***^e else v***^e fi,|/ |v***^h,|/ |v***^i')'
+ fi fi fi,
+ if '***'='461'or '***'='961'then v***^7,if a(v***^7) then v***^b fi,
+    if s(v***^7,v***^b)<>''then else' 'fi fi,
+ if '***'='601' then v***^7,if a(v***^7) then v***^a fi fi,
+ if '***'='330' or '***'='922' then v***^8 fi,
+ if '***'='7101' then v710^b fi,if '***'='7111' then v711^b fi,
+ if '***'='9621' then v962^b fi/    
+),mpl

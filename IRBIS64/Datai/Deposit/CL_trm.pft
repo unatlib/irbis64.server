@@ -1,0 +1,71 @@
+/* v1000 - имя БД
+/*v1004 - список элементов (терминов)
+/*v1011 - префикс терминов
+/*v1006 - порция терминов
+/*v1100 - свободный параметр FREEPAR0, в котором формат показа документов
+/*V1101 - свободный параметр FREEPAR1,в котором порция показа документов
+'<title>Словарь ',&uf('KCL_prefix.mnu|',v1011),' (БД ',v1000,' начиная с ',&uf('AV1004^A#1'),')</title>',
+'<A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A><br><br>',
+"<b>База данных: "v1000" - Словарь ",&uf('KCL_prefix.mnu|',v1011),'<br></b>',
+'<table border=0 cellpadding=1 cellspacing=1>',
+'<td>',
+'</td>',
+'<td>',
+'<b>Термины</b>',
+'</td>',
+'<td>',
+'<b>Док-ов</b>',
+'</td>',
+(
+'<tr>',
+'<td>',
+if val(v1004^B)>0 then 
+'<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',v1004^A,'">',
+fi,
+'</td>'
+'<td>',
+if val(v1004^B)>0 then 
+'<A HREF="IRBIS:?C21COM=2&I21DBN=',&uf('Av1000#1'),'&CHECKNAME=CHECKMFN&PFTNAME=',&uf('Av1100#1'),'&S21CNR=',&uf('Av1101#1'),'&S21ALL=',&uf('+3E"',&uf('Av1011#1')),&uf('+3E',v1004^A,'"'),'&QUERY=',&uf('+3E',v1004^A),'&S21ALLTRM=',&uf('+3E',v1004^A),'&TOPPFTNAME=CL_search_bottom&BOTTOMPFTNAME=CL_search_bottom','">',
+fi,
+v1004^A,
+if val(v1004^B)>0 then if (&uf('Av1013#1')<>'') and (&uf('Av1013#1')<>'UNDEFINED') then  ' - ',&uf('K',&uf('Av1013#1'),'!',v1004^a) fi,'</A>' fi,
+'</td>',
+'<td>',
+v1004^B,
+'</td>',
+)
+'</table>',
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input name="T21TRM" value="',&uf('AV1004^A#',&uf('+N1004'))'">',
+'<input type="submit" name="" value="Продолжить">',
+'<input type="hidden" name="C21COM" value="4">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="PFTNAME" value="CL_trm">',
+'<input type="hidden" name="T21PRF" value="',v1011,'">',
+'<input type="hidden" name="T21CNR" value="',v1006,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'</form>'
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" name="" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="T21PRF" value="',v1011,'">',
+     '<input type="hidden" name="PFTNAME" value="CL_select_trm">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+     '<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+     '</form>',
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" name="" value="Поиск по отмеченным">',
+     '<input type="hidden" name="C21COM" value="2">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="PFTNAME" value="',v1100,'">',
+     '<input type="hidden" name="S21CNR" value="',v1101,'">',
+     '<input type="hidden" name="S21P01" value="4">',
+     '<input type="hidden" name="S21P02" value="1">',
+     '<input type="hidden" name="S21P03" value="',v1011,'">',
+     '<input type="hidden" name="TOPPFTNAME" value="CL_search_bottom">',
+     '<input type="hidden" name="BOTTOMPFTNAME" value="CL_search_bottom">',
+     '<input type="hidden" name="CHECKNAME" value="CHECKMFN">',
+     '</form>',
+

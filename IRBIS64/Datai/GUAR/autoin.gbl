@@ -1,0 +1,321 @@
+0
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if a(v903) then if p(v488) then if 'delo guar':v920 then if v488:'опись' then (if p(v488) then if v488^1:'опись' then v488^t| |,&uf('Av852^g#1'),if &uf('Av852^j#1')<>'' then' '&uf('Av852^j#1') fi,if &uf('Av852^i#1')<>'' then' '&uf('Av852^i#1') fi fi fi) else (if p(v488) then if v488^1:'фонд' then v488^t| |,&uf('Av852^g#1'),if &uf('Av852^j#1')<>'' then' '&uf('Av852^j#1') fi,if &uf('Av852^i#1')<>'' then' '&uf('Av852^i#1') fi  fi fi) fi else if v488^1:'фонд' then v488^t" ",v852^g" ",v852^j fi fi else if v920:'fond' then v852^g" ",v852^j fi fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+251
+XXXXXXXXXXXXXXXXXXX
+if a(v251) then if v920:'fond' then '^CФонд^!1' else if v920:'opis' then '^CОпись^!2' else if v920:'delo' or v920:'GUAR' and v852^g='д.' then '^CДело^!2' else if v920:'GUAR' and (not(v852^g='д.')) then'^CДокумент^!2' else if v920:'LIST' then ,'^CДокумент','^!2' fi fi fi fi fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v920:'OPIS' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Выравниваю индексы в 327^L на 2 позиции и определяю уровень индекса ^C
+
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+(v327/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+31
+XXXXXXXXXXXXXXXXXXX
+&uf('Av1000^L#1')
+XXXXXXXXXXXXXXXXXXX
+ADD
+32
+XXXXXXXXXXXXXXXXXXX
+(if &uf('1*R.?v31#1')<>'' then &uf('1*R.?v31#1') fi/),
+XXXXXXXXXXXXXXXXXXX
+ADD
+33
+XXXXXXXXXXXXXXXXXXX
+(if v32<>'' then '.'f(val(v32),2,0) fi),
+XXXXXXXXXXXXXXXXXXX
+REP
+1000^L
+1
+v33*1
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Определяю уровень индекса (1-8)
+
+ADD
+1000^C
+1
+if a(v1000^c) then f(rsum((|1;|d32)),0,0) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+3270
+XXXXXXXXXXXXXXXXXXX
+&uf('Av1000#1')
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+31
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+32
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+33
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if &uf('Av1000#1')<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+327
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+327
+XXXXXXXXXXXXXXXXXXX
+(v3270/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+3270
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Определяю длину индекса
+
+ADD
+327^K
+F
+(if p(v327) then if a(v327^k) then &uf('+95'v327^L) else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Определяю индекс, к которому относится данный 
+
+ADD
+327^R
+F
+if v920:'opis' then (if p(v327) then if a(v327^r) then if v327^L:'.' then if p(v327^k) then &uf('+960*0.'f(val(v327^k)-3,0,0),'#'v327^L) fi else # fi else # fi  fi/) fi
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Ввожу индекс как подполе рубрики (^1 - ^8) - новое подполе (дублирует исходное ^M) 
+
+REP
+327
+F
+(if p(v327) then v327,if s(v327^1,v327^2,v327^3,v327^4,v327^5,v327^6,v327^7,v327^8)<>'' then else if v327^L:'.' then if s(&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'v327^l))))))):'.' then '^8'v327^M else if s(&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'v327^l)))))):'.' then '^7'v327^M else if s(&uf('G2.'&uf('G2.'&uf('G2.'&uf('G2.'v327^l))))):'.' then '^6'v327^M else if s(&uf('G2.'&uf('G2.'&uf('G2.'v327^l)))):'.' then '^5'v327^M else if &uf('G2.'&uf('G2.'v327^l)):'.' then '^4'v327^M else if &uf('G2.'v327^l):'.' then '^3'v327^M else '^2'v327^M fi fi fi fi fi fi else '^1'v327^M fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+215^A
+1
+if a(v215^a) then f(rsum((v327^n|;|)),0,0) fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if 'delo guar':v920 then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+Сведения об ответственности
+
+ADD
+200^F
+F
+if s(v200,v925)<>'' and a(v200^f) then ,o200f, fi
+XXXXXXXXXXXXXXXXXXX
+//
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ Заменяю поле 545 - ввожу полный путь рубрики, если не внесено через поле 545
+
+REP
+545
+F
+if p(v545) then if p(v545^L) then if p(v545^M) then v545 else '^L'f(val(&uf('G0_'v545^L)),2,0),if &uf('G0_'v545^L):'.'then &uf('G1.'&uf('G0_'v545^L)) fi,'^M'&uf('G2_'v545^L) fi else # fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+545^A
+1
+if p(v545) then if a(v545^a) then ,gua545_sso_D, fi fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+615^A
+F
+if v920:'fond' then (if p(v615) then if v615^a='' then &uf(|DGURF,?|v615^N|?,v2|) else # fi fi/) else (if p(v615) then if v615^a='' then &uf(|DGUSK,?|v615^N|?,v2|) else # fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+615^F
+F
+if v920:'fond' then (if p(v615) then if v615^f='' then &uf(|DGURF,?|v615^N.2|?,v2|),if v615^N*2.1:'.'then &uf(|DGURF,?|v615^N.5|?," --- "v2|) fi,if v615^N*5.1:'.'then &uf(|DGURF,?|v615^N.8|?," --- "v2|) fi,if v615^N*8.1:'.'then &uf(|DGURF,?|v615^N.11|?," --- "v2|) fi,if v615^N*11.1:'.'then &uf(|DGURF,?|v615^N.14|?," --- "v2|) fi,if v615^N*14.1:'.'then &uf(|DGURF,?|v615^N.17|?," --- "v2|) fi,if v615^N*17.1:'.'then &uf(|DGURF,?|v615^N.20|?," --- "v2|) fi,if v615^N*21.1:'.'then &uf(|DGURF,?|v615^N|?," --- "v2|) fi else # fi fi/) else (if p(v615) then if v615^f='' then &uf(|DGUSK,?|v615^N.2|?,v2|),if v615^N*2.1:'.'then &uf(|DGUSK,?|v615^N.5|?," --- "v2|) fi,if v615^N*5.1:'.'then &uf(|DGUSK,?|v615^N.8|?," --- "v2|) fi,if v615^N*8.1:'.'then &uf(|DGUSK,?|v615^N.11|?," --- "v2|) fi,if v615^N*11.1:'.'then &uf(|DGUSK,?|v615^N.14|?," --- "v2|) fi,if v615^N*14.1:'.'then &uf(|DGUSK,?|v615^N.17|?," --- "v2|) fi,if v615^N*17.1:'.'then &uf(|DGUSK,?|v615^N.20|?," --- "v2|) fi,if v615^N*21.1:'.'then &uf(|DGUSK,?|v615^N|?," --- "v2|) fi else # fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if rsum((if p(v397) then if v397:'=106/' then '1;' else '0;' fi fi)) >0 then '1' else '0' fi 
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1000
+XXXXXXXXXXXXXXXXXXX
+(if p(v397) then if v397:'=106/' then v397 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+106
+XXXXXXXXXXXXXXXXXXX
+if a(v106) then if &uf('Av1000#1'):'=106/' then &uf('G2/'&uf('Av1000#1')) fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1000
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if rsum((if p(v397) then if v397:'=116/^F' then '1;' else '0;' fi fi))>0 then '1' else '0' fi 
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+(if p(v397) then if v397:'=116/^F' then v397 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+116
+XXXXXXXXXXXXXXXXXXX
+if a(v116) then if &uf('Av1001#1'):'=116/^F' then &uf('G2/'&uf('Av1001#1')) fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+397
+F
+(if p(v397) then if v397:'=' then &uf('G0='v397) else v397 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') and v907^c = &unifor('IPRIVATE,ETR,') then '1;'else'0;'fi fi))> 0 then else'^C',&unifor('IPRIVATE,ETR,'),'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi 
+XXXXXXXXXXXXXXXXXXX
+IF
+if v320^0<>'' then '1' else '0' fi 
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+110
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then else v320 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+111
+XXXXXXXXXXXXXXXXXXX
+(if p(v320) then if p(v320^0) then v320^0 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+(if p(v111) then &uf('+7W2#'v111),&uf('7'&uf('IPRIVATE,EKP,ibis'),',!A='v111|!,'^A'&unifor('6brief'),if v920:'NJ' then '^8'(if p(v922) then if s(v922^f,v922^2,v922^3,v922^w):&uf('G0,'&uf('Ag2#1')) then v922^f,if p(v922^2) then ', 'v922^2 fi,if p(v922^3) then', 'v922^3 fi,if p(v922^w) then', 'v922^w fi,' 'v922^c fi fi) fi,if p(v330) then '^8'(if p(v330) then if s(v330^f,v330^2,v330^3,v330^w):&uf('G0,'&uf('Ag2#1')) then ' - см.  ' v330^f,if p(v330^2) then ', 'v330^2 fi,if p(v330^3) then', 'v330^3 fi,if p(v330^w) then', 'v330^w fi,' 'v330^c fi fi) fi,'^W'v903,'^9'&uf('+D')/|) fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if v111<>'' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+320
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+320
+XXXXXXXXXXXXXXXXXXX
+(v110/)/(v112/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+320
+*
+'^0'
+''
+DEL
+320
+F
+&uf('+7W2#'),(if p(v320) then if &uf('Ag2#1'):s(v320^w,v320^8,|+|d320^w) then '1' else '0',&uf('+7W2#'&uf('Ag2#1'),v320^w,v320^8,|+|d320^w) fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+110
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+112
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

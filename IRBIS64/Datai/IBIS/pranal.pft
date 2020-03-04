@@ -1,0 +1,1 @@
+If v920='ASP' or v920='AUNTD' or v920='NJP' or v920='SPEC'and v910^a:'p'and v463^w<>'' then'1' fi

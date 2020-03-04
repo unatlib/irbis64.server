@@ -1,0 +1,86 @@
+0
+// Удаление в БД CMPL
+// 991^A Удалить записи заказов выполненных полностью
+// 991^B Удалить БО выполненных заказов
+// 991^C Удалить БО без заказа переданных в ЭК 
+// 991^X протокол
+/*----------------запись SZ - выполнен полностью?
+IF
+if val(v991^A)=1 then '1' fi,,,&uf('+7W10#')
+IF
+if &uf('+97',v920)='SZ' and p(v62^d) and rsum((f(val(v62^g),0,0)';')) >= val(v62^d) then '1',,,&uf('+7W10#1') fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Удалена запись выполненного заказа.  MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+/*----------------запись SZ - за указанный год?
+IF
+if v991^D<>'' then '1' fi,,,&uf('+7W10#')
+IF
+if &uf('+97',v920)='SZ' and p(v62^C) and val(v62^C.4)= val(v991^D) then '1',,&uf('+7W10#1') fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Удалена запись заказа по году.  MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+/*------------------запись БО - выполнен полностью?
+IF
+if val(v991^B)=1 then '1' fi,,&uf('+7W10#')
+IF
+if 'PAZKK SPECK PVKK':v920 and s(v30^g,v31^g,v32^g,v62^g)<>'' then '1' fi
+IF
+if rsum((f(val(v30^g),0,0)';'f(val(v31^g),0,0)';'f(val(v32^g),0,0)';'f(val(v62^g),0,0)';')) >= rsum((f(val(v30^d),0,0)';'f(val(v31^d),0,0)';'f(val(v32^d),0,0)';'f(val(v62^d),0,0)';'))  then '1'..&uf('+7W10#1') fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Удалена запись БО - заказ выполнен. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+FI
+/*------------------запись БО - без заказа передана?
+IF
+if val(v991^C)=1 then '1' fi,,,,,&uf('+7W10#')
+IF
+if 'PAZKK SPECK PVKK':v920 and s(v30,v31,v32,v62)='' then '1' fi
+IF
+if p(v66) then '1',,&uf('+7W10#1'),,, fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Удалена запись БО, без заказа, передана в ЭК. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

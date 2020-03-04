@@ -1,0 +1,71 @@
+7
+1
+__________ФИО___________
+0
+0
+0
+
+
+
+G1^1='' or s(v10," "v11," "v12,): G1^1 
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then &uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1') fi fi fi/)
+2
+Идентификатор
+0
+0
+0
+
+
+
+G1^2='' or s('!',v30,'!'): s('!',G1^2,'!')
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then &uf('Av30#1') fi fi fi/)
+3
+Год обучения
+0
+0
+0
+
+
+
+G1^3='' or s((if p(v90) then |!|v90^0|!|fi)): s("!"G1^3"!")
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^0 fi fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+SEM=
+G1^F='' or s((if p(v90) then |!|v90^F|!|fi)): s("!"G1^F"!")
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^F fi fi fi/)
+A
+Факультет
+0
+0
+1
+fak.mnu\\2
+
+FAK=
+G1^A='' or s((if p(v90) then |!|v90^A|!|fi)): s("!"G1^A"!")
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^A fi fi fi/)
+C
+Специальность
+0
+0
+0
+
+
+SPEC=
+G1^C='' or s((if p(v90) then |!|v90^C|!|fi)): s("!"G1^C"!")
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then v90^C fi fi fi/)
+4
+Переведен
+0
+0
+0
+
+
+
+G1^4='' or G1^4: 'нет' and v90^1<>''
+(if p(v90) then if a(v90^2) and s(|!|v90^E|!|): s('!'&unifor('Av991#1'),'!') then if ( &uf('AG1^1#1')='' or s(&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),): &uf('AG1^1#1')) and ( &uf('AG1^2#1')='' or s('!',&uf('Av30#1'),'!'): s('!',&uf('AG1^2#1'),'!')) and ( &uf('AG1^3#1')='' or v90^0: &uf('AG1^3#1')) and ( &uf('AG1^F#1')='' or s('!',v90^F,'!'): s('!',&uf('AG1^F#1'),'!')) and ( &uf('AG1^A#1')='' or s('!',v90^A,'!'): s('!',&uf('AG1^A#1'),'!')) and ( &uf('AG1^C#1')='' or s('!',v90^C,'!'): s('!',&uf('AG1^C#1'),'!')) and ( &uf('AG1^4$1')='' or &uf('AG1^4#1'): 'нет' and v90^1<>'') then if v90^1<>'' then 'НЕТ' fi fi fi fi/)

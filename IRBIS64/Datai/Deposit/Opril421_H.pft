@@ -1,0 +1,31 @@
+if s(v904v421)<>''then
+   '<br> <b>  Приложение: </b> <br> ',
+   ("Сопроводительный материал :"d904,|Шифр ||<br> Шифр |+v904^a,
+       | (|d904^c,&unifor('G2='v904^c),| |v904^b,|-|v904^d,|)|d904^c),
+   &unifor('S0'),
+   (if p(v421) then|<br> |+d421,
+       if &unifor('Av421#2')<>''then 
+          if p(v421)then'<b> '&unifor('S1A')'.</b> '
+       fi fi,
+       if p(v421^w) then '<A HREF="IRBIS:2,,,,I='v421^w,'">',v421^a,'</A>' else v421^a fi,,| (|v421^v|)|,
+       |. - |v421^d,| : |v421^h,
+       if s(v421^d,v421^h)<>''then|, |v421^g else|. - |v421^g fi,
+       |. - |v421^4,| // |v421^5, |. - ISSN |v421^x.4,if v421^x:'-'then v421^x*4.5 else |-|v421^x*4.4fi,
+       |. - ISBN |v421^i,|. - |v421^y,|. Шифр |d421^w,
+       if p(v421^z) then &unifor('G0-'v421^w) else v421^w fi,| (|v421^b|)| 
+   fi) 
+fi,
+if p(v422)then'<br> <b>  Издание является приложением к документу: </b> <br> ',
+   &unifor('S0'),
+   (if p(v422) then|<br> |+d422,
+       if &unifor('Av422#2')<>''then 
+          if p(v422)then'<b> '&unifor('S1A')'.</b> '
+       fi fi,
+       if p(v422^w) then '<A HREF="IRBIS:2,,,,I='v422^w,'">',v422^a,'</A>' else v422^a fi,,| (|v422^v|)|,
+       |. - |v422^d,| : |v422^h,
+       if s(v422^d,v422^h)<>''then|, |v422^g else|. -|v422^g fi,
+          |. - |v422^4,| // |v422^5,|. - ISSN |v422^x.4,if v422^x:'-'then v422^x*4.5 else |-|v422^x*4.4fi,
+          |. - ISBN |v422^i,|. - |v422^y,|. Шифр |d422^w,
+       if p(v422^z) then &unifor('G0-'v422^w) else v422^w fi,| (|v422^b|)| 
+   fi) 
+fi,

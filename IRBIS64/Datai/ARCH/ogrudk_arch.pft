@@ -1,0 +1,6 @@
+if p(v686) then '\par '
+   if s(v905^j)<>''or &unifor('IPRIVATE,FPN,')<>''
+   then "\par "| + |+v686 
+   else '\pard\tx2000\tab \b Различные обозначения \b0 '(|\par \tab |v686)
+   fi,'\par \pard\tx4 ',
+fi 

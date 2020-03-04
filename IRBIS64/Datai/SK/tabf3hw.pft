@@ -1,0 +1,17 @@
+'\pard \li108 \ri108 ','\par \qr \fs20 Дата ',v991^c,
+if a(v991^c) then &unifor('DCMPL,!KSUA=',&unifor('G0+'&uf('G2-'v991^a)),'!,
+v88^b*6,"."v88^b*4.2,"."v88^b.4') fi,
+'\pard \li6000 \ri100 ','\par Источник: ','\pard \li6000 \ri100 ','\par ',v991^d,
+if a(v991^d) then &unifor('DCMPL,!KSUA=',&unifor('G0+'&uf('G2-'v991^a)),'!,
+ref(l("KOR="v88^d),v81^a".",v81^b,if a(v81)then v89^a".",v89^b fi)') fi,
+'\par ','\pard \li108 \ri108 ','\par \qc \fs25 ',' АКТ N ',&unifor('G0+'&uf('G2-'v991^a)),
+if a(v991^a)then v991^y fi,      
+'\par ','\par  \ql \fs20 Номер записи в КСУ поступлений: ',v991^x,
+if a(v991^x) then &unifor('DCMPL,!KSUA=',&unifor('G0+'&uf('G2-'v991^a)),'!,v88^a') fi,
+'\par  Поступило всего '&unifor('G0+'&unifor('G2+'v991^a)),
+if a(v991^a) then v991^f fi,
+' экз.\par  На общую сумму ',&unifor('G0^'&unifor('G2+'&unifor('G2+'v991^a))),
+if a(v991^a) then v991^g fi,
+if val(v991^g)>0 or val(&unifor('G0^'&unifor('G2+'&unifor('G2+'v991^a))))>0 then 
+&unifor('Korg.mnu|3') fi,
+'\par \par \par '

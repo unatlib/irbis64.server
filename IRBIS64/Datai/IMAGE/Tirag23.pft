@@ -1,0 +1,32 @@
+&uf('+7W2#'f(rsum((if p(v910) then if v910^u=&uf('Ag991#1') then '1;' fi fi)),0,0)),
+&uf('+7W4#'if v509^2:'2' or 
+s(v461v701v200v702v600v711v972v962v961):'^u2'or s(v46v225v606v607):'^u1'or 
+s(v461^y,v970v922^c,v925^a,v925^b,v925^c,v924v510v454v601v481v905^u) <>''or v629^a:'1'or val(v517^u)>0 
+then f(rsum("1;"d970,
+   (if v701^u:'2'then'1;' fi), 
+   (if v961^u:'2'then'1;' fi), 
+   (if v702^u:'2'then'1;' fi),
+   (if v600^u:'2'then'1;' fi),
+    if v461^u:'2'then'1;' fi, 
+    if v200^u:'2'then'1;' fi, 
+   (if p(v922^c) then'1;' fi), 
+   (if p(v925^a) then'1;' fi), 
+   (if p(v925^b) then'1;' fi),
+   (if p(v925^c) then'1;' fi), 
+   (if p(v481)   then'1;' fi), 
+   (if v629^a:'1'then'1;' fi), 
+   if a(v700)then"1;"d924,|1;|d510 fi/ 
+   (if v517^u:'0'then else|1;|d517 fi)/ 
+   |1;|d454,
+   (if v711^u:'2'then'1;' fi),
+   (if v972^u:'2'then'1;' fi),
+   (if v962^u:'2'then'1;' fi),
+   (|1;|d601^a) 
+   (if v509^2:'2'then'1;' fi),
+   (if v46^u:'1' then'1;' fi),
+   (if v225^u:'1'then'1;' fi),
+   (if v606^u:'1'then'1;' fi),
+   (if v607^u:'1'then'1;' fi),
+   (|1;|d905^u)),0,0), 
+fi),
+&uf('+7W23#'if &uf('Av910^u#1')=&uf('Ag991#1') then f(val(g4)*val(g2),0,0) fi),g23

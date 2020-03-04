@@ -1,0 +1,6 @@
+'\pard \li108 \ri108 ','\f17 \par \qc \fs25 ',' Лист Книги Суммарного Учета 
+поступлений \par ', 
+if v991.1:'^' then else if p(v991) then 
+'за период с '&unifor("Krk96e.mnu|"v991*4.2),' '
+,v991.4' г. по ',&unifor("Krk96d.mnu|"v991*10.2),' ',v991*6.4,' г.', fi fi,
+'\par ',' от ',ref(l("KOR="v88^d),mhu,v89^a,if a(v89)then v81^a fi),'\par '

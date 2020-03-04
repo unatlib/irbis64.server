@@ -1,0 +1,89 @@
+0
+// кумуляция в описании ж по реальным номерам - на сводной записи
+IF
+if &uf('+97',v920)='J' then '1' fi
+DEL
+991
+*
+
+
+ADD
+991
+
+mpu,&uf('+7W10#',,,&uf('+3S,100,',,"!I="v903,,'/$!,@NjYearkum') ),,,&uf('+7G10'),,(g10/)
+
+ADD
+992
+
+mpu,(|^Q|v991^Q,,|^K|v991^K,,|^D|v991^D,,|^P|v991^P/),,,,&uf('+7W12#')
+
+// цикл по v992 - заготовки для поля 909
+REPEAT
+DEL
+881
+*
+
+
+ADD
+881
+
+&uf('Av992#1'),'^H^F^V'
+
+REP
+881^H
+1
+&uf('Av881^H#1'),,,,(if p(v991) then if s(v991^Q,v991^K,v991^D,v991^P)=s(&uf('Av881^Q#1'),,,&uf('Av881^K#1'),,,&uf('Av881^D#1'),,,&uf('Av881^P#1'),,) then if v991^H<>'' then  ',' v991^H fi fi fi)
+
+REP
+881^F
+1
+&uf('Av881^F#1'),,,,(if p(v991) then if s(v991^Q,v991^K,v991^D,v991^P)=s(&uf('Av881^Q#1'),,,&uf('Av881^K#1'),,,&uf('Av881^D#1'),,,&uf('Av881^P#1'),,) then if v991^F<>'' then  ',' v991^F fi fi fi)
+
+REP
+881^V
+1
+&uf('Av881^V#1'),,,,(if p(v991) then if s(v991^Q,v991^K,v991^D,v991^P)=s(&uf('Av881^Q#1'),,,&uf('Av881^K#1'),,,&uf('Av881^D#1'),,,&uf('Av881^P#1'),,) then if v991^V<>'' then  ',' v991^V fi fi fi)
+
+ADD
+993
+
+&uf('+7U12#',,&uf('Av881#1') )
+
+DEL
+992
+1
+
+
+UNTIL
+if p(v992) then '1' fi
+DEL
+993
+*
+
+
+DEL
+909
+*
+
+
+ADD
+909
+
+&uf('+7G12'),,(|^Q|g12^Q,,,|^K|g12^K,,,|^D|g12^D,,,|^P|g12^P,,if g12^H<>'' then '^H',&uf('U',g12^H) fi,,if g12^F<>'' then '^F',&uf('U',g12^F) fi,,if g12^V<>'' then '^V',&uf('U',g12^V) fi /),,
+
+DEL
+991
+*
+
+
+DEL
+993
+*
+
+
+DEL
+881
+*
+
+
+FI

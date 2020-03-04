@@ -1,0 +1,21 @@
+mpl,
+/*'<table border="1" width="100%">',
+'<tr>',
+'<td width="20" valign="top">',
+'<INPUT type="checkbox" name="CHECKMFN" value=',mfn,'>',
+'</td>'
+'<td width="20" valign="top">',
+'<b>','<IRBIS type=0>. ','</b>'
+'</td>',
+'<td width="100">',
+tabl_author_wn, 
+'</td>'
+'<td >',
+tabl_zagl_wn, 
+'</td>'
+'<td width="100">',
+tabl_vd_wn, 
+'</td>'
+'</tr>',
+/*'</table>',
+

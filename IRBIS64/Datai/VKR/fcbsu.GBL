@@ -1,0 +1,17 @@
+1
+mhr.mnu
+Место хранения филиала
+REP
+910^a
+F
+(if p(v910) then if v910^d='%1' then if v910^1='1'then'0'else'U'fi else if '0 2':v910^a then 'C'else v910^a fi fi fi/)
+
+ADD
+910^1
+F
+(if p(v910)then if v910^a='C'and v910^1=''then '1'else # fi fi/)
+
+DEL
+910^1
+F
+(if p(v910)then if v910^A='0'then '1'else'0' fi fi/)

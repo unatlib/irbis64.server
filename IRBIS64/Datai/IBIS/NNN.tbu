@@ -1,0 +1,31 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v920<>'NJK'then f(rsum((if p(v910) then if '2 6 7':v910^a then else if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then if &uf('Av991^b#1')=''or v910^c>&uf('Av991^b#1')then if  &uf('Av991^c#1')=''or v910^c<&uf('Av991^c#1')then v910^1|; |,|1;|n910^1  fi fi fi fi fi)),0,0)  fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2943 
+\pard \widctlpar\intbl {\qc \fs24 'v1'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2943 
+\pard \widctlpar\intbl {\qc \fs24 έκη.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

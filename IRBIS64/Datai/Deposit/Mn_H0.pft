@@ -1,0 +1,9 @@
+,oblo_H,
+if &uf('Y')<>'' then else 
+   if &uf('IMAIN,LimPftFull_910,10')='' and val(&uf('+N910')) > 10 OR 
+      &uf('IMAIN,LimPftFull_910,10')<>''and val(&uf('+N910')) > val(&unifor('IMAIN,LimPftFull_910,10')) then 
+'<dd><b>(Свободных экземпляров нет)</b>' 
+else ,Osvex_H, fi fi, 
+,Orchifr_H,
+,Otit461_H
+if p(v925) then ,Ibis925_H,fi,  mhl,

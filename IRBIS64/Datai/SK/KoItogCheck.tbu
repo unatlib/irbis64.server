@@ -1,0 +1,189 @@
+[Numeration]
+##
+*****
+[Sum]
+&uf('+7W991#',,,,&uf('+97',v991) ),,,,,&uf('+7W41#', f(rsum( (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then  if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then   if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then   if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,if val(g41)>0 then  if s( &unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'   then else if p(v699) and v699^u:'0'  then else &uf('+7W43#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'):  &uf('Ag991^T#1') then if v910^a:'U' then v910^1|,|,,else if '0 1 3 5 9': v910^a  then '1,' ,,fi fi fi fi)),0,0) ),,if val(&uf('AG43#1'))>0 then  '1' else  if   val(&uf('Ag991^9#1'))=1 then if val(&uf('6KoElectro'))>0  then  if &uf('Ag991^T#1')='' or s( (v910^T| |) ): &uf('Ag991^T#1')  then '1'  fi fi,,fi,,,fi fi fi fi
+&uf('+7W991#',,&uf('+97',v991)),,,,,&uf('+7W41#',,,f(rsum(  (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then  if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,,,if val(g41)>0 then &uf('+7W43#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then v910^1|,|,,else if '0 1 3 5 9': v910^a  then  '1,' ,,fi fi fi fi)),0,0) ),,if s( &unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' then else &uf('AG43#1') fi fi,,,
+&uf('+7W991#',,&uf('+97',v991)),,,,,&uf('+7W41#',f(rsum(  (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then  if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then  if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,if val(g41)>0 then &uf('+7W43#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else if '0 1 3 5 9': v910^a  then  f(val(v910^=,|1|n910^=),0,0),,';' ,,fi fi fi fi)),0,0) ),,if s( &unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' then else &uf('AG43#1') fi fi,,,
+&uf('+7W991#',,,,&uf('+97',v991) ),,,,,&uf('+7W41#',,,f(rsum(   (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then  if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then  if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,,,,if val(g41)>0 then  if s( &unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'   then if p(v699) and v699^u:'0'  then else &uf('+7W43#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'):  &uf('Ag991^T#1') then if v910^a:'U' then v910^1|,|,,else if '0 1 3 5 9': v910^a  then '1,' ,,fi fi fi fi)),0,0) ),,if val(&uf('AG43#1'))>0 then '1' else if   val(&uf('Ag991^9#1'))=1 then if val(&uf('6KoElectro'))>0  then  if &uf('Ag991^T#1')='' or s( (v910^T| |) ): &uf('Ag991^T#1')  then '1'  fi fi,,fi,fi fi fi fi,,,
+&uf('+7W991#',,&uf('+97',v991) ),,,,,&uf('+7W41#',,,f(rsum(  (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then  if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,,,if val(g41)>0 then &uf('+7W44#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then  v910^1|,|  else if '0 1 3 5 9': v910^a then '1,' fi fi fi fi)),0,0) ),,if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' then else if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val( s(   &uf('Ag991^1#1'),,if &uf('Ag991^1#1')='' then  if &uf('KCycleNew.mnu!',g991^S)<>'' then &uf('KCycleNew.mnu!',g991^S) else '5' fi fi   ))  then if  g991^5=''  then &unifor('Ag44#1') else if p(v699) and v699^u:'0' then else if val(&uf('Ag44#1'))>0 then '1' else if   val(&uf('Ag991^9#1'))=1 then if val(&uf('6KoElectro'))>0  then if &uf('Ag991^T#1')='' or s( (v910^T| |) ): &uf('Ag991^T#1')  then '1'  fi fi,,fi,,fi,,fi,,fi  fi fi fi
+&uf('+7W991#',,&uf('+97',v991) ),,,,,&uf('+7W41#',,,,f(rsum(  (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then  if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then  if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,,if val(g41)>0 then &uf('+7W44#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then v910^1|,|  else if '0 1 3 5 9': v910^a then '1,' fi fi fi fi)),0,0) ),,if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21' then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):s(  &uf('Ag991^6#1'),if &uf('Ag991^6#1')='' then 'jj' fi  ) then if a(g991^5) then &uf('AG44#1') else if p(v699) and v699^u:'0'  then else if val(&uf('Ag44#1'))>0 then '1' else if   val(&uf('Ag991^9#1'))=1 then if val(&uf('6KoElectro'))>0 then  if &uf('Ag991^T#1')='' or s( (v910^T| |) ): &uf('Ag991^T#1')  then '1'  fi fi fi,,fi,,fi,,fi fi fi fi
+if val(g41)>0 then &uf('+7W44#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then  v910^1|,|  else if '0 1 3 5 9': v910^a then '1,' fi fi fi fi)),0,0) ),,if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'  then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ): s(   &uf('Ag991^6#1'),if &uf('Ag991^6#1')='' then 'jj' fi    ) then  if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val( s(   &uf('Ag991^1#1'),,if &uf('Ag991^1#1')='' then  if &uf('KCycleNew.mnu!',g991^S)<>'' then &uf('KCycleNew.mnu!',g991^S) else '5' fi fi   ))  then if g991^5=''  then &unifor('AG44#1') else if p(v699) and v699^u:'0' then else if val(&uf('Ag44#1'))>0 then '1' else if   val(&uf('Ag991^9#1'))=1 then if val(&uf('6KoElectro'))>0  then  if &uf('Ag991^T#1')='' or s( (v910^T| |) ): &uf('Ag991^T#1')  then '1'  fi fi fi,,fi,,fi,,fi fi fi fi fi
+&uf('+7W991#',,&uf('+97',v991)),,,,,&uf('+7W41#',,,f(rsum(   (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then  if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then  if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'  then  else  if   ( val(&uf('Ag991^9#1'))=1) AND  ( val(&uf('6KoElectro'))>0) AND ( &uf('Ag991^T#1')='') OR ( val(&uf('Ag991^9#1'))=1) AND ( val(&uf('6KoElectro'))>0) AND ( &uf('Ag991^T#1')<>'') AND ( s( (v910^T| |) ): &uf('Ag991^T#1') ) then  '1' else &uf('+7W46#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else if 'C 6 2 4 7':v910^a then else f(val(v910^=,|1|n910^=),0,0),,';'  fi fi fi fi)),0,0) ) if val(G46)>0 then &unifor('6KoItogKKO') fi,,fi fi fi
+&uf('+7W991#',,&uf('+97',v991)),,,,,&uf('+7W41#',,,f(rsum(  (if p(v691) then if &uf('+97',v691^s)=&uf('+97',&uf('AG991^s#1')) then if ( &uf('Ag991^O#1')='' or v691^O='' or &uf('Ag991^O#1')<>'' and s('!',&uf('Ag991^O#1'),'!'): s('!',v691^O,'!') )  then  if ( &uf('Ag991^V#1')='' or v691^V='' or &uf('Ag991^V#1')<>'' and s('!',&uf('Ag991^V#1'),'!'): s('!',v691^V,'!')  )  then  if ( &uf('Ag991^A#1')='' or v691^A='' or &uf('Ag991^A#1')<>'' and s('!',&uf('Ag991^A#1'),'!'): s('!',v691^A,'!')  )  then  if ( &uf('Ag991^C#1')='' or &uf('Ag991^C#1')<>'' and s('!',&uf('Ag991^C#1'),'!'): s('!',v691^C,'!')  )  then  if ( &uf('Ag991^N#1')='' or &uf('Ag991^N#1')<>'' and s('!',&uf('Ag991^N#1'),'!'): s('!',v691^N,'!')  )  then  if ( &uf('Ag991^B#1')='' or &uf('Ag991^B#1')<>'' and s('!',&uf('Ag991^B#1'),'!'): s('!',v691^B,'!')  )  then  if ( &uf('Ag991^F#1')='' or v691^F='' or &uf('Ag991^F#1')<>'' and val(&uf('Ag991^F#1'))=val(v691^F)  )  then  if ( &uf('Ag991^=#1')='0' or &uf('Ag991^E#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag991^E#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' ) then  if ( &uf('Ag991^g#1')='' OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'):'осн' and (v691^g:'осн' or a(v691^g)) ) OR ( &uf('Ag991^g#1')<>'' and &uf('Ag991^g#1'): v691^g ) )  then '1;'  else'0;'  fi fi fi fi fi fi fi fi fi fi fi)),0,0)),,,,,,,,,if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1'),' '&unifor('Av900^5#1'),' '&unifor('Av900^6#1') ):'21'  then if   ( val(&uf('Ag991^9#1'))=1) AND ( val(&uf('6KoElectro'))>0) AND ( &uf('Ag991^T#1')='') OR ( val(&uf('Ag991^9#1'))=1) AND ( val(&uf('6KoElectro'))>0) AND ( &uf('Ag991^T#1')<>'') AND ( s( (v910^T| |) ): &uf('Ag991^T#1') ) then  '1' else &uf('+7W46#',f(rsum((if p(v910) then if &uf('Ag991^T#1')='' or s('!',v910^T,'!'): &uf('Ag991^T#1') then if v910^a:'U' then  f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0),,,';'  else if 'C 6 2 4 7':v910^a then else f(val(v910^=,|1|n910^=),0,0),,';'  fi fi fi fi)),0,0) )  if val(G46)>0 then &unifor('6KoItogKKO') fi,,fi fi fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4700 
+\pard \widctlpar\intbl {\ql \fs20 \b0  Наименований (основная) \b ',,,v1,,,
+'\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7200  
+\pard \widctlpar\intbl {\ql \fs20 \b0  Экз-в \b ',,,v2,,,
+'\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10200  
+\pard \widctlpar\intbl {\ql \fs20 \b0  Экз-в  c КМИ \b ',,,v3,,,
+'\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15200  
+\pard \widctlpar\intbl {\ql \fs20 \b0  Наименований (метод.)  \b ',,,v4,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7200 
+\pard \widctlpar\intbl {\ql \fs20 \b0  ККО книг / кол-во книг (основная) - \b ',,,,V8,' / ',,V1,' = ',,,if val(V1)>0 then f(val(v8)/val(v1),0,2) fi,,,
+'\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15200  
+\pard \widctlpar\intbl {\ql \fs20 \b0  ККО книг / кол-во книг (метод.) - \b ',,,,V9,' / ',,V4,' = ',,,if val(V4)>0 then f(val(v9)/val(v4),0,2) fi,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15200 
+\pard \widctlpar\intbl {\ql \fs20 \b0  ',,,
+if  a(v991^5) then  'Новых экземпляров (основная) - \b ' else 'Новых наименований (основнвя) ' fi,,,V5,,,
+'\b0   Степень новизны - \b ',if a(v991^5) then v5 ' / ' v2 ' = ',,,if val(v2)>0 then f(val(v5)/val(v2) * 100,0,2) fi else 
+                                                                                  v5 ' / ' v1 ' = ',,,if val(v2)>0 then f(val(v5)/val(v1) * 100,0,2) fi fi,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx15200 
+\pard \widctlpar\intbl {\ql \fs20 \b0  ',,
+if a(v991^5) then 'С грифом экз. - \b '   V6,,,,,'\b0   процент  \b ',,v6 ' / ' v2 ' = ',,if val(v2)>0 then f(val(v6)/val(v2) * 100,0,2) fi else 
+                              'С грифом наимен. - \b '   V6,,,,,'\b0   процент  \b ',,v6 ' / ' v1 ' = ',,if val(v2)>0 then f(val(v6)/val(v1) * 100,0,2) fi fi,,,
+
+'\b0  ',,,if a(v991^5) then ' Новых с грифом - \b ',,v7,,'\b0   процент  \b ',,v7 ' / ' v2 ' = ',,if val(v2)>0 then f(val(v7)/val(v2) * 100,0,2) fi else  
+                                          ' Новых с грифом - \b ',,v7,,'\b0   процент  \b ',,v7 ' / ' v1 ' = ',,if val(v2)>0 then f(val(v7)/val(v1) * 100,0,2) fi fi,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+*****
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw16838\paperh11906\margl284\margr284\margt851\margb851\lndscpsxn 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx500 
+\pard \widctlpar\intbl {\qc \fs20 N 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4000 
+\pard \widctlpar\intbl {\qc \fs20 Заголовок 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4700 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во - основная
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6200  
+\pard \widctlpar\intbl {\qc \fs20 Экз. (c КМИ) 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7200 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во - метод. 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8200 
+\pard \widctlpar\intbl {\qc \fs20 Экз. метод.
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9200  
+\pard \widctlpar\intbl {\qc \fs20 KKO книги (по полю 693)
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10200 
+\pard \widctlpar\intbl {\qc \fs20 Новизна экз-ры
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11200 
+\pard \widctlpar\intbl {\qc \fs20 Новизна метод.
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12200 
+\pard \widctlpar\intbl {\qc \fs20 Гриф всего 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13200 
+\pard \w4idctlpar\intbl {\qc \fs20 Гриф всего метод. 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14200 
+\pard \widctlpar\intbl {\qc \fs20 Гриф новизна 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx15200 
+\pard \widctlpar\intbl {\qc \fs20 Гриф новизна метод. 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

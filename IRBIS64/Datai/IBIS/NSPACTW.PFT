@@ -1,0 +1,66 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx958 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2092 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4076 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5210 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6060 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7477 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8894 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10028 
+\pard \widctlpar\intbl {\qr \fs20 '(if p(v940^v) then  if v940^v:&unifor('Av991#1') then &unifor('S1A'), if p(v940^X)then if v940^X='1'then else '-',f(val(&unifor('S1A'))+val(v940^X)-2,0,0),&unifor('S'f(val(v940^X)-2,0,0))fi           fi'\par ' fi fi)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 'if v940^v:v991 then (if p(v940) then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^b)then v940^b else v940^h  fi'\par 'fi fi fi)fi
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 'if v920:'NJ'then &unifor('D,?I=',v933,'?,mhl,v200^a,". "v923^h,". "v923^k,mpl')," - "v934" γ."," Ò."v935,",N "v936 else v461^x| |,v461^c," ; "v200^v,if p(v200^v) then" : "d200^a fi,v700^a," "v700^b," "d700,v200^a,". - "v210^d,if p(v215^a) then". - "v215^a,if p(v215^1) then if v215^1:'=' then ' '&uf('G2='v215^1) else ' 'v215^1 fi fi,if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi,mpl,fi
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ''ύκη.'
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 'if v940^v:v991 then f(rsum((if p(v940)then if s(v940^v)<>''then if &unifor('Av991#1'):v940^v then if p(v940^x)then f(val(v940^x|;|,' 0'),0,0) else '1;' fi fi fi fi/)),0,0)fi,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 '(if p(v940) then if v940^a:'6' then if v940^v=&unifor('Av991#1') then if p(v940^w)then else if p(v940^e) then f(val(v940^e,' 0'),0,2)'\par '       else if val(&unifor('Av10^d#1'))>0 then f(val(&unifor('Av10^d#1'),' 0'),0,2) fi '\par ' fi fi fi fi fi/),(if p(v940)then if v940^v=&unifor('Av991#1') then if v940^a:'6' then else if val(v940^x,' 0')-val(v940^z,' 0') >0 then if p(v940^e) then f(val(v940^e,' 0'),0,2),|/ύκη|d940^1,'\par ' else if val(&unifor('Av10^d#1'))>0 then f(val(&unifor('Av10^d#1'),' 0'),0,2),|/ύκη|d940^1 fi,'\par ' fi fi fi fi fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 ' (if p(v940) then            if v940^a:'6' then             if v940^v=&unifor('Av991#1') then                if p(v940^w)then else                   if p(v940^c) then                     if &unifor('Kizc.mnu|'v940^c.6)<>'' then f(val(&unifor('Kizc.mnu|'v940^c.6)),0,4)else                         if &unifor('Kizc.mnu|'v940^c.4)<>'' then f(val(&unifor('Kizc.mnu|'v940^c.4)),0,4)else f(val(&unifor('Kizc.mnu|1980')),0,4)fi fi'\par '  else |1|d940^c fi fi fi fi fi),(if p(v940)then if v940^v=&unifor('Av991#1') then if v940^a:'6' then else if val(v940^x,' 0')-val(v940^z,' 0') >0 then if p(v940^c)then if &unifor('Kizc.mnu|'v940^c.6)<>''then f(val(&unifor('Kizc.mnu|'v940^c.6)),0,4)else if &unifor('Kizc.mnu|'v940^c.4)<>''then f(val(&unifor('Kizc.mnu|'v940^c.4)),0,4)else f(val(&unifor('Kizc.mnu|1980')),0,4) fi fi'\par ' else |1|d940^C fi fi fi fi fi/)
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 'if &unifor('DCMPL,"KS2=',v991,'",v888^F')<>'' then f((rsum((if p(v910) then if p(v910^v) then if &unifor('Av991#1'):v910^v then if a(v910^w)then'1;'else'0;'fi else'0;'fi else '0;'fi fi/)) + rsum((if p(v940) then if v940^A='6' then else if &unifor('Av991#1'):v940^v then if p(v940^w)then f(val(v940^x,' 0')-val(v940^z,' 0'),0,0),';'else f(val(v940^x|;|,' 0'),0,0)fi else'0;'fi fi fi/)))*val(&unifor('DCMPL,"KS2=',v991,'",v888^F')),0,2) else f(rsum((if p(v910)then if v910^v:&unifor('Av991#1')then if p(v910^w)then else if p(v910^e)then if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>'' then f(val(v910^e|;|)*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)'\par 'else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(v910^e|;|)*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)'\par 'else f(val(v910^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2)'\par 'fi fi else f(val(v910^e|;|),0,2)'\par 'fi else if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)';','\par 'else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)';','\par 'else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2)';','\par 'fi fi else f(val(&unifor('Av10^d#1'),' 0'),0,2)';','\par 'fi fi fi fi fi/)) + rsum((if p(v940)then if v940^v:&unifor('Av991#1')then if v940^a:'6'then else if p(v940^e)then if p(v940^c)then if &unifor('Kizc.mnu|'v940^c.6)<>''then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'else if &unifor('Kizc.mnu|'v940^c.4)<>''then f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'else f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980'))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'fi fi else f(val(v940^e|;|)*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)'\par 'fi else if p(v940^c) then if &unifor('Kizc.mnu|'v940^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',else if &unifor('Kizc.mnu|'v940^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980'))*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',fi fi else f(val(&unifor('Av10^d#1'),' 0')*(val(v940^x,' 0')-val(v940^z,' 0')),0,2)';','\par ',fi fi fi fi fi/)),0,2)fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,52 @@
+(if p(v1) 
+then 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1383 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2233 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3225 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4075 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4783 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7051 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7759 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8467 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9601 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10309 
+\pard \widctlpar\intbl {\ql \fs16 ',,
+v1^1,| |v1^2,,
+'\cell }\pard \widctlpar\intbl {\ql \fs16 ',,,,,
+if p(v1)
+then ,
+   &uf('+7W1#',,f(val(g1)+1,0,0) ),,g1,
+/*,&unifor('S1A'),
+   if p(v1^z) 
+   then 
+     if v1^z='1' 
+     then 
+     else 
+/*        '-',f(val(&unifor('S1A'))+val(v1^z)-2,0,0),&unifor('S'f(val(v1^z)-2,0,0)) 
+        '-',&uf('+7W1#',,f(val(g1)+val(v1^z)-1,0,0) ),,g1,
+/*&unifor('S'f(val(v1^z)-2,0,0)) 
+     fi 
+   fi 
+fi,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs16 ',,
+v1^3,,
+'\cell }\pard \widctlpar\intbl {\qc \fs16 ',,
+/*----подразделение
+v1^7,,
+'\cell }\pard \widctlpar\intbl {\qc \fs16 ''',,
+'\cell }\pard \widctlpar\intbl {\ql \fs16 ',,
+/*----автор, заглавие
+,&uf('DSK,!I=',,v1^Y,,'!,,if p(v461) then v461^x| |,v461^c,,|; |v200^v else v700^a,| |v700^b,| |d700,v200^a,,| |v200^v fi,(|. -(|d225,v225^a,,|; |v225^n,|)|d225),if p(v215^a) then|. - |v215^a,| |d215^1,&unifor("G2="v215^1),fi'),,
+'\cell }\pard \widctlpar\intbl {\qc \fs16 ',,
+/*----год издания
+,&uf('DSK,!I=',,v1^Y,,'!,v210^d'),
+ref(val(v1^4),v210^d),,
+'\cell }\pard \widctlpar\intbl {\qc \fs16 ',,
+/*---раздел знания
+,&uf('DSK,!I=',,v1^Y,,'!,v60'),
+'\cell }\pard \widctlpar\intbl {\qr \fs16 ',,,
+&uf('+7W2#',,f(val(g2)+val(v1^5),0,2) ),,v1^5,,,,
+'\cell }\pard \widctlpar\intbl {\ql \fs16 '''
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi/)

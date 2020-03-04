@@ -1,0 +1,30 @@
+/*v1000 - имя БД
+/*v1004^A повторения элементов списка, в данном случае MFN
+/* v1100 - формат показа
+'<title>Отмеченные документы (БД ',v1000,')</title>'
+
+'<A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A><br><br>',
+
+'<b>',
+"База данных: "v1000"<br>",
+if p(v1004) then 'Отмеченные документы - ',&uf('+N1004') else 'Нет отмеченных документов' fi,
+'</b><br>',
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=CL_search&S21CNR=',v1006,'&I21DBN=',v1000,'&FREEPAR0=',v1012,'&CHECKCLEAR=1','">Вернуться к основной форме</A>',
+'<br><br>',
+
+if p(v1004) then 
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="Выходные формы   ">',
+     '<input type="hidden" name="C21COM" value="1">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',/*формат показа
+     '<input type="hidden" name="FREEPAR1" value="">',/*запрос
+     '<input type="hidden" name="FREEPAR2" value="">',/*формулировка запроса
+     '<input type="hidden" name="FREEPAR3" value="',&uf('+N1004'),'">',/*кол-во документов
+     '<input type="hidden" name="FREEPAR4" value="1">',/*ПРИЗНАК: ТОЛЬКО ОТМЕЧЕННЫЕ
+     '<input type="hidden" name="PFTNAME" value="CL_exitform">',
+     ' </form>',
+fi 
+
+(if p(v1004) then &uf('D',&uf('Av1000#1'),',@',v1004^A,',@',&uf('Av1100#1')) fi),
+

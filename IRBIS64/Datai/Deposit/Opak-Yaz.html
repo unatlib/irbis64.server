@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head language="JavaScript">
+       
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+       
+<script language="JavaScript">
+function IfEmpty()
+{
+if ((SEARCH.S21STR_Author.value == "")&&(SEARCH.S21STR_Title.value == "")&&(SEARCH.S21STR_Year.value == "")&&(SEARCH.S21STR_Publisher.value == "")&&(SEARCH.S21STR_ISBN.value == "")) return false;
+   else return true;
+}
+</script>
+
+                                                                        
+                             
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>ИРБИС64 - поиск в ресурсах Z39-50</title>
+</head>
+ <body>
+     
+<div align="Right">
+<b><font color="#cc9933">Поиск в мировых библиографических ресурсах, <br>доступных по протоколу Z39.50 </font></b>
+</div>
+       
+<form name="SEARCH" action="IRBIS:" enctype="Multipart/form-data" method="Post" onsubmit="return IfEmpty()">
+           
+  <table cellpadding="2" cellspacing="2" border="0" width="100%">
+       <tbody>
+
+         <tr>
+        <td>
+<br>
+        </td>
+         </tr>
+
+         <tr>
+           <td valign="Top" width="30%">                           
+        <div align="Right"><font color="#3333ff"><b>Ресурс</b></font></div>
+           </td>
+           <td valign="Top">                           
+        <select name="I21DBN" style="width: 100%; ">
+        <option value="193.233.14.5:9999/katb;CODE_PAGE_UTF8;RUSMARC">ГПНТБ России</option>
+        <option value="LOGIN:PASSWORD@ns1.gbs.spb.ru/plain">Арбикон - Ассоциация Региональных Библиотечных Консорциумов </option>
+        <option value="ns1.gbs.spb.ru/plain">Арбикон - Ассоциация Региональных Библиотечных Консорциумов </option>
+        <option value="aleph.rsl.ru:9909/rsl01"> РГБ - Российская государственная библиотека</option>
+
+        <option value="nbmgu.ru:210/book;USMARC">МГУ - Московский Государственный Университет</option>
+
+        <option value="www.benran.ru/CATALOG_LNS;CODE_PAGE_WIN1251">Бен РАН - Библиотека по естественным наукам</option>
+        <option value="zserv.libfl.ru/books;CODE_PAGE_UTF8;RUSMARC">ВГБИЛ - Всероссийская государственная библиотека иностранной литературы</option>
+        <option value="z3950.loc.gov:7090/voyager;USMARC">Библиотека Конгресса США</option>
+        </select>
+           </td>
+         </tr>
+
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b>                    
+Форма показа</b></font></div>
+           </td>
+        <td valign="Top">                           
+        <select name="S21FMT" style="width: 100%; ">
+        <option value="infow_Z">Информационное описание</option>
+        <option value="!!KK1BO_Z">Библиографическая карточка</option>
+        <option value="briefwebr_Z">Краткое биб.описание</option>
+        <option value="all_Z">Все поля</option>
+        </select>
+           <br>
+        </td>
+         </tr>
+
+         <tr>
+        <td>
+<br>
+        </td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b> ISBN </b></font></div>
+           </td>
+           <td valign="Top">
+           <input name="S21STR_ISBN" type="text" style="width: 100%; " size="20"></td>
+         </tr>
+
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b> Автор </b></font></div>
+           </td>
+           <td valign="Top">
+           <input name="S21STR_Author" type="text" style="width: 100%; " size="20"></td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b> Заглавие </b></font></div>
+           </td>
+           <td valign="Top">
+           <input name="S21STR_Title" type="text" style="width: 100%; " size="20"></td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b> Год издания </b></font></div>
+           </td>
+           <td valign="Top">
+           <input name="S21STR_Year" type="text" style="width: 100%; " size="20"></td>
+         </tr>
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><font color="#3333ff"><b> Издательство </b></font></div>
+           </td>
+           <td valign="Top">
+           <input name="S21STR_Publisher" type="text" style="width: 100%; " size="20"></td>
+         </tr>
+
+
+
+                                   
+
+         <tr>
+           <td valign="Top">                           
+        <div align="Right"><br>
+           <input type="submit" name="C21COM" value="Искать"></div>
+           </td>
+           <td valign="Top" width="70%"><br>
+           <input type="reset" value="Очистить"></td>
+         </tr>
+                 
+    </tbody>         
+  </table>
+   </form>
+     
+</body>
+</html>

@@ -1,0 +1,48 @@
+'{'
+&unifor('6!!kk0shk'),&unifor('6!!kk1bo'),if p(v905^c) then else '\par '&uf('6!!kk7ex') fi,
+if v910^a:'0' or v910^a:'U' or v910^a:'C' then '\par \b Получены экземпляры:\b0 ' 
+   (if p(v910^a)then 
+       if'2 6 7':v910^a then else '\par 'v910^d,' (', 
+         | Инв.|v910^b,|(|v910^1|экз.)|,|, Акт.N |v910^y,|, N КСУ |v910^u,', Цена 'v910^e, 
+         if a(v910^e)then &unifor('Av10^d#1') fi, 
+         if p(v910^e) or val(&unifor('Av10^d#1'))>0 then &unifor('Av10^c#1') 
+            if &unifor('Av10^c#1')='' then &unifor('Korg.mnu|3') 
+         fi fi,|, Сум.зак. №|v910^9')' 
+   fi fi), 
+fi, 
+if v910^a:'2' then '\par \b Заказаны экземпляры для отделов:\b0   ' 
+   (if v910^a:'2'then v910^d,| (|v910^1| экз.)|,mhl,v910.1+|, |,mpl,fi), 
+fi, 
+if p(v940) or s(v910^v)<>'' then '\par \b Списание экземпляров:\b0 \par ' 
+   (if v940^a:'6'and p(v940^w) then 
+       | Инв.|v940^b,| передан в |v940^m,| из |v940^d,'; N акта передачи 'v940^w'\par ' 
+    fi), 
+   (if 'C U':v940^a and p(v940^w) then 
+       | |v940^z,| 1|n940^z,' экз. ',' ('v940^b,')', 
+       if val(v940^z)<=1 then | был передан в |v940^m else | было передано в |v940^m 
+       fi,| из |v940^d,'; N акта передачи 'v940^w '\par ' 
+    fi), 
+   (if 'C U':v940^a and a(v940^w) then 
+       | |v940^x,| 1|n940^x,' экз. ',' ('v940^b,')', 
+       if val(v940^x)<=1 then ' списан из 'v940^d else ' списаны из ',v940^d 
+       fi,' ; N акта списания 'v940^v,'\par ' 
+    fi), &uf('+7W910#'(v910^v|+|)),&uf('+7W940#'(v940^w|+|)),
+   (if v910^a:'6' and p(v910^v) and a(v910^w) then 
+       if &uf('Ag910#1'):v910^v and &uf('Ag940#1'):v910^w then else 
+       | Инв.|v910^b| списан из |,v910^d,' ; N акта списания 'v910^v'\par 'fi fi), 
+   (if v910^a:'6'and p(v910^v) and p(v910^w) then 
+       if &uf('Ag910#1'):v910^v and &uf('Ag940#1'):v910^w then else 
+       | Инв.|v910^b,| передан в |v910^m,| из |v910^d,'; N акта передачи 'v910^w'\par ' 
+   fi fi), 
+   (if 'C U':v910^a and p(v910^v) and p(v910^x) then 
+       | |v910^x,| 1|n910^x,' экз. ',' ('v910^b,')', 
+       if val(v910^x)<=1 then ' списывается из 'v910^d else ' списываются из ',v910^d 
+       fi,' ; N акта списания 'v910^v,'\par ' 
+    fi), 
+   (if 'C U':v910^a and p(v910^v) and p(v910^w) then 
+       | |v910^z,|1|n910^z,' экз. ',' ('v910^b,')', 
+       if val(v910^z)<=1 then | передается в |v910^m 
+       else | передаются в |v910^m fi,| из |v910^d,'; N акта передачи 'v910^w '\par ' 
+   fi) 
+fi,&unifor('!'), 
+'}'

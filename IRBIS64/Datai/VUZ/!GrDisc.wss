@@ -1,0 +1,81 @@
+8
+E
+Группа
+0
+0
+2
+,VGR=
+
+VGR=
+G1^E='' or s('!',v68^E,'!'): s('!',G1^E,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^G fi
+A
+Факультет
+0
+0
+1
+fak.mnu\\2
+
+VFAK=
+G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^A fi
+N
+Направление
+0
+0
+1
+napr.mnu\\2
+
+VNAPR=
+G1^N='' or s('!',v68^N,'!'): s('!',G1^N,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^N fi
+C
+Специальность
+0
+0
+0
+
+
+VSPEC=
+G1^C='' or s('!',v68^C,'!'): s('!',G1^C,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^C fi
+V
+ВО
+0
+0
+1
+vo.mnu
+
+VVO=
+G1^V='' or s('!',v68^V,'!'): s('!',G1^V,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^V fi
+O
+ФО
+0
+0
+1
+fo.mnu
+
+VFO=
+G1^O='' or s('!',v68^O,'!'): s('!',G1^O,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^O fi
+F
+Семестр
+0
+0
+0
+
+
+VSEM=
+G1^F='' or s('!',v68^F,'!'): s('!',G1^F,'!')
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then v68^F fi
+1
+Кол-во студентов
+0
+0
+0
+
+
+
+
+if G1='' or ( G1^A='' or s('!',v68^A,'!'): s('!',G1^A,'!')) and ( G1^E='' or s('!',G1^E,'!'): s('!',v68^E,'!')) and ( G1^N='' or s('!',G1^N,'!'): s('!',v68^N,'!')) and ( G1^C='' or s('!',G1^C,'!'): s('!',v68^C,'!')) and ( G1^O='' or s('!',G1^O,'!'): s('!',v68^O,'!')) and ( G1^V='' or s('!',G1^V,'!'): s('!',v68^V,'!')) and ( G1^F='' or val(G1^F)=val(v68^F)) then if val(&unifor('IMAIN,ACCESSRDR,1'))=1  and v68^L='' then &uf('JRDR,?',v68^A,if p(v68^C) then v68^C else v68^N fi,,v68^V,v68^O,'-S'v68^F) else v68^Z  fi fi

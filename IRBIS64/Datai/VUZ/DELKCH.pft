@@ -1,0 +1,2 @@
+if &uf('+97',v68^A)=&uf('+97',G3^A) and 
+   &uf('+97',v68^O)=&uf('+97',G3^O) then f(val(mfn),0,0),',' else '0,' fi

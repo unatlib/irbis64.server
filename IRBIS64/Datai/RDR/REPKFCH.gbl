@@ -1,0 +1,78 @@
+0
+//12 PUTLOG
+//замена кода кафедры читающей
+//в 991^A что заменить, 991^B на что 
+// достаточно сформировать заново поля 69
+DEL
+1069
+*
+
+
+ADD
+1069
+
+(v69/)
+
+DEL
+69
+*
+
+
+// сначала в 112, чтобы  не повторять подполя B и D
+DEL
+112
+*
+
+
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+if a(v54) or &unifor('Av54#1')<>'' and &unifor('Av54^C#1')<>'' then if p(v90) and a(v90^U) then if val(&uf('IMAIN,LinkGroup,0'))=1 then if v90^E<>'' and val(&uf('JVUZ,VGR=',v90^E))>0 then &uf('DVUZ,?VGR=',v90^E,'?,(v69/)') fi else if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,v90^v,,v90^o,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,v90^v,,v90^o,"-S"v90^f,'?,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,v90^o,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,"-S"v90^f)>'0' then &unifor('DVUZ,?!',v90^a,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,v90^o,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^o,,,"-S"v90^f)>'0' then &unifor('DVUZ,?!',,,v90^o,,,"-S"v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',"-S"v90^f)>'0' then &unifor('DVUZ,?!',"-S"v90^f,'?,(v69/)') fi fi fi fi
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+ADD
+69
+
+if rsum((if p(v69) then if &uf('+97',v69^B)= &uf('+97',&unifor('Av112^B#1')) and &uf('+97',v69^D)= &uf('+97',&unifor('Av112^D#1')) then '1,' else '0,' fi fi))=0 then &unifor('Av112#1') fi
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+// Удаление 69 в соответствии с изучаемым языком
+DEL
+69
+F
+if v920:'VUZ' then else (if p(v69) then if v69^d:':' then if &unifor('Av26#1')<>'' then if &unifor('DRDR,@'mfn,',v26|, |'):&unifor('G2:'v69^d) then'0'else'1' fi else '1' fi else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+//проверка изменились ли поля 69
+IF
+if p(v69) and &uf('+97',v69)<>&uf('+97',v1069) then '1' else '0' fi
+PUTLOG
+'Откорректирована запись студента ',v30,'. MFN=',f(val(mfn),0,0)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1069
+*
+
+
+DEL
+112
+*
+
+
+DEL
+991
+*
+
+

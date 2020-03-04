@@ -1,0 +1,23 @@
+'</>'
+&unifor('6!!kk0shp_H'),&unifor('6!!kk1bo_H'),
+&unifor('6!!kk1bop_H'),&unifor('6!!kk2udk_H'),&unifor('6!!kk3prk_H'),
+&unifor('6!!kk4ann_H'),&unifor('6!!kk5odk_H'),&unifor('6!!kk6j_H'),
+if s(v710v711v454):'^s'or s(v971v972):'^v'or v46^s:'2'or s(v700v970v701):'^r'
+then' <b> ССЫЛОЧНЫЕ КК:</b> '
+  "<br>"v710^s" см: ...","<br>"v971^v" см:...",(|<br>|v711^s| см:...|),
+  (|<br>|v972^v| см: ...|),"<br>"v700^r" см: ...","<br>"v970^r" см: ...",
+  (|<br>|v701^r| см: ...|),
+  if v454^s:'1'then'\par 'v454^d" ... см. в кат.:..."fi,
+  if v454^s:'2'then'\par 'v454^e" ... см. в кат.:..."fi,
+  if v454^s:'3'then'\par 'v454^f" ... см. в кат.:..."fi,
+  (if v46^s:'2'then'\par '&unifor('Av461^x#1'),
+     if &unifor('Av461^b#1')<>''then &unifor('Av461^b#1')'. 'fi,
+     if &unifor('Av461^c#1')<>''then' '&unifor('Av461^c#1')fi,
+     if &unifor('Av461^e#1')<>''then': '&unifor('Av461^e#1')fi,
+     if &unifor('Av461^f#1')<>''then'/ '&unifor('Av461^f#1')fi,
+     if &unifor('Av461^d#1')<>''then'. - '&unifor('Av461^d#1')fi,
+     if &unifor('Av461^g#1')<>''then': '&unifor('Av461^g#1')fi,
+     if &unifor('Av461^h#1')<>''then', '&unifor('Av461^h#1')fi,
+     |... До |v46^g| Изд. см. под загл...|
+'<br>'fi),
+fi,'<br>'&unifor('6!!kk7ex_H'),&unifor('!'),

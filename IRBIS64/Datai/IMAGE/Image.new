@@ -1,0 +1,33 @@
+@ibis_kl_tit
+@ibis_dubl
+@ibis_tit
+@ibis_aut
+@ibis_kl_col
+@ibis_col
+@ibis_index
+@ibis_kl_rub
+@ibis_ID
+@ibis_kod
+@ibis_ex
+@ibis_ko
+@ibis_other
+@ibis_umn
+@ibis_mesh
+@ibis_titP
+955 0 if (v955^a<>'') and ((v955^N = '') or (val(v955^N) >0)) then 'TXT=',v955^a fi
+955 0 if (v955^a<>'') and ((v955^N = '') or (val(v955^N) >0)) then 'V=FT' fi
+1001 0 MHL,if &uf('+*') <> '' then 'GUID=',&uf('+*') fi
+/*IBIS_BIB_CARD
+1112 8 MHL,'/KT=/',&uf('++0907,951,953,955,691,692,693,910,941,900,920,903')
+1113 8 MHL,'/KT=/'(&uf('G1 ',v953),|%|d953/) 
+1114 8 MHL,'/K=/',&uf('++0907,951,953,955,691,692,693,910,941,900,920,903')
+1115 8 MHL,'/K=/'(&uf('G1 ',v953),|%|d953/) 
+952 9 mhl,'/KT=/',(if p(v952) then if v952^b <> '' then v952^b else v952^a fi fi/)
+952 8 mhl,'/KT=/',if p(v952) and a(v953) then &uf('+0') fi
+952 0 mhl,(if p(v952) then if v952^b <> '' then |TXT=|v952^b|%| else |TXT=|v952^a|%| fi fi/)
+952 0 if p(v952) and p(v20) and p(v21) then "TI="v21 fi
+952 0 if p(v952) and p(v20) and p(v21) then if v21<>'0' then 'TI=0' fi fi
+952 0 if p(v952) and a(v20) then 'TT=NEW' fi
+22 0 mpl,&uf('+7W1#',&uf('++A',(v22/))),"AA="d22,&uf('Ag1.30#1')
+903 0 mhl,"I="v952^b
+952 0 mpl,"BX="d952^b,&uf('+7W1#',&uf('+92',v952^b)),&uf('+91',&uf('+960.',f(val(&uf('+95',g1))-1,0,0),'#',g1))

@@ -1,0 +1,5 @@
+if v920:'UPL'then 
+   if p(v95) then 
+      if L('UPS='v91,'-S'v95)<=0 or val(ref(l('UPS='v91,'-S'v95),mfn))=val(mfn) then/'0' else/'1Дублетный Номер Уч. плана-Семестр:       ',v91,'-S'v95, ref(L('UPS='v91,'-S'v95),' (см. N ',f(val(mfn),0,0),')')
+      fi else /'2 Не введен семестр'
+fi fi

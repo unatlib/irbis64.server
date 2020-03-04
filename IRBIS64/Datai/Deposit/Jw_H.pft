@@ -1,0 +1,168 @@
+'</>',
+'<table><tr>'
+'<td width="80%">''<b> ',"Шифр: "v903,'  (',&unifor('K110b.mnu|'v110^b),'</b>) ','</td>'
+'<td width="20%">'if v110^z<>'' then if v905^y<>'' or &unifor('IPRIVATE,VZV=,')<>'' then else mhu,'<td BGCOLOR="#FA8072"<b><font size=+1>',v110^Z,'</b>',mpl,fi,fi,'</td>'
+'</tr></table>'
+&unifor('6ozboz_H'),
+if v510^e<>''then 
+if p(v200^e) then ' : ' fi,
+         if s(v982^0,v982^9)<>'' then v200^e else 
+            if p(v905^2) then v200^e else &unifor('Q'v200^e.1),v200^e*1, 
+         fi fi,fi,
+(| = |v510^d,| : |v510^e,| / |v510^f,| ; |v510^g),(| = |v921^a,| (|v921^b|)|),
+if v510^e=''then if p(v200^e) then ' : ' fi,
+         if s(v982^0,v982^9)<>'' then v200^e else 
+            if p(v905^2) then v200^e else &unifor('Q'v200^e.1),v200^e*1, 
+         fi fi,
+fi,
+(". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,| : |v923^e,
+|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,| : |v923^s,
+|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n,| : |v923^v),
+|/ |v200^f,|/ |v200^x,|/ |v200^y,| ; |v200^g," = "v540,
+(if v123^x:'0'then ". - 1 : "|, 1: |+v123^d,| ; 1 : |v123^e,v123^f,| ; |v123^p fi),
+&unifor('6ovixd'),
+if s(v215,&unifor('G2='v230^b),&unifor('G2='v230^c))<>''then'. - 'fi,v215^a," "d215^1,&unifor('G2='v215^1),
+if a(v215^1)then" c."d215^a fi,if p(v215^a)then" : "d215^c fi,v215^c,if s(v215^a,v215^c)<>''then"; "d215^d fi,v215^d,
+(if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>''and p(v215)then'<b> : 'fi,&unifor('G2='v230^b),
+if &unifor('G2='v230^c)<>''then if &unifor('G2='v230^b)<>''then', 'fi,&unifor('G2='v230^c)'</b> 'fi),
+(if v115^x:'0'then| (|d115^b,f(val(v115^b),0,0),| мин.)|d11
+5^b,| : |v115^c*3,|, |v115^d*3,|; |v115^e*3,|, |v115^f*3,|, |v115^h*3,|, <b> |v11
+5^j*3|</b> |,|, |v115^k*3,|, |v115^l*2 fi),(if v915^x:'0'then| (|d915^b,f(val(v91
+5^b),0,0),if v915^g.1:'k'then' дп.'else if v915^g.1:'l'then ' трансп.'else ' кад
+р.'fi fi,|)|d915^b,' : 'v915^c*3,|, |v915^f*3,|, <b> |v915^g*3|</b> |,|, |v915^p*3
+,|, |v915^q*3 fi),(if v916^x:'0'then| (|d916^b,f(val(v916^b),0,0)| мин.)|d916^b,
+' : 'v916^1| кадр/с.|,|, |v916^c*3,|, |v916^d*3,|, |v916^e*3,|; |v916^2| м|,|, |
+v916^f*3,|, <b> |v916^g*3|</b> |,|, |v916^h*3,|, |v916^i*3,|, |v916^m*3,|, |v916^n
+*2 fi),if a(v230) then(if v135^x:'0'then| : <b> |v135^a*3|</b> |,|, |v135^b,|, |v135^c,|, |v135^d fi)
+fi,(if v130^x:'0'then| : <b> |v130^a*3|</b> |,|, |v130^b*3,|(|v130^c*3|)|,|, |v1
+30^d*3,|, |v130^e,|, |v130^f*3,|, |v130^g*3,|, |v130^h*3,|, |v130^i*3 fi),(if v1
+25^x:'0'then| (|d125^a,if v125^a.2:'00'then else if v125^a.1:'0'then v125^a*1.1|
+ час.|else v125^a.2| час.|fi fi,if v125^a*2.2:'00'then else if v125^a*2.1:'0'the
+n v125^a*3.1| мин.| else v125^a*2.2| мин.| fi fi,if v125^a*4.2:'00'then else if 
+v125^a*4.1:'0'then v125^a*5.1| сек.|else v125^a*4.2| сек.|fi fi,|)|d125^a,|, |v1
+25^b*3,|, |v125^c*3,| |v125^d*2,|, |v125^e*5,|, |v125^1*2,| |v125^2,|, |v125^3*2
+,| |v125^4 fi),if v125^x:'0'and v126^x:'0'then', 'fi,(if v126^x:'0'then |<b> |v12
+6^a*3|</b> |,|, |v126^b*3,| (|d126^1,f(val(v126^1),0,0),| мин.)|d126^1,|, |v126^c
+*3,|, |v126^d*3,|, |v126^e*3,|, |v126^f*3,|,|v126^g*3,|, |v126^h*3,|, |v126^i*3,|, |v126^j*3 fi),(if v123^x:'0' then | : <b> |v123^a*3|</b> |,|, |v123^b*3 fi)," +"v215^e," "v215^2,"  "v215^3,", "v215^x" экз.",
+(if p(v225)then |. - (|v225^a,| = |v225^d,| : |v225^e,
+|/ |v225^f,|, ISSN |v225^x.4,if v225^x:'-'then v225^x*4.5 else |-|v225^x*4.4 fi,| ; |v225^v,|. |v225^h,if p(v225^h) then|, |v225^i else
+|. |v225^i  fi,| = |v225^1,| ; |v225^w,|. |v225^k,if p(v225^k) then|, |v225^l else |. |v225^l fi,| = |v225^2,| ; |v225^y,|)|d225 fi),
+". - <b> Перевод заглавия:</b>  "v541,|. - |v912,
+|. - |v300, (if v517:'^n0'then else|. -|v517^t*4,|: |v517^a fi),
+if s(v337v230^d)<>'' then". - <b> Систем. требования:</b>  "d230^d, 
+(if p(v230) then if v230^x:'1'then|; Прил.: |d230^d else|. |+d230^d fi,v230^d,| (|v230^e|)|fi),
+fi,". - "d110^d,if &unifor('Krksp.mnu|'v110^
+d.2)<>''then &unifor('Krksp.mnu|'v110^d.2) else"Периодичность "v110^d fi,(|. - ISSN |v11^a.4,if v11^a:'-'then v11^a*4.5 else |-|v11^a*4.4 fi),if  v951^i<>'' and (p(v337) or p(v230) or v110^T:'l') then '. - <b> URL:</b> '
+    &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a), 
+  if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then  else  if v203='' and v200^A<>'' and (v110^T='' or v110^T:'a') then '. - Текст : непосредственный.' else  if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C|.|  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi fi,
+,".- Есть приложение "d904,(|; |+d904,| на |d904^c,&unifor('G2='v904^c),| - Шифр: |v904^a,| (|v904^b|)|),if p(v430)or
+ p(v440)then '<br> <b> СВЕДЕНИЯ ОБ ИЗМЕНЕНИИ ИЗДАНИЯ: Настоящее издание</b> 'mhl,(if p
+(v430)then'<br> 'if v430^z:'U'then|До |v430^b.4|г.|,if a(v430^b)then |До |v210^d|г.| fi,v4
+30^b*4,' см.: 'else if '32 33 ':v430^z then|С |v430^b.4,|  |n430^b else|В |v430^
+b.4,|  |n430^b fi,|г.|d430^b,v4
+30^b*4,&unifor('Krksz.mnu|'v430^z) fi, if p(v430^d)  then 
+          
+             '<A HREF="IRBIS:2,,,I='v430^d'">',v430^a,
+              '</A>',else v430^a fi,|. - ISSN |v430^c.4,if v430^c:'-'then v430^c*4.5 else |-|v430^
+c*4.4 fi,| (Шифр |v430^d|)| fi),(if p(v440)then'<br> 'if v440^z:'U'then|С |v440^b.4
+ else|В |v440^b.4 fi,|г.|d440^b,|  |n440^b,|(|v440^b*4|)|,if v440^z:'U'then' см.
+: 'else &unifor('Krksz.mnu|'v440^z)fi,if p(v440^d)  then 
+          
+             '<A HREF="IRBIS:2,,,I='v440^d'">',v440^a,
+              '</A>',else v440^a fi,,|. - ISSN |v440^c.4,if v440^c:'-'then v440^c*4.5 else |-|v440^c*4.4 fi,| (Ши
+фр |v440^d|)| fi)else if s(v210^e)<>''then'<br> Прекращен с ',f(val(v210^e)+1,0,0) fi fi,
+". - Издание имеет сериальное приложение: "d421,(if p(v421^w) then '<A HREF="IRBIS:2,,,,I='v421^w,'">',""| ; |+v421^a,'</A>' else ""| ; |+v421^a fi,,| (|v421^v|)|,
+|, ISSN |v421^x.4,if v421^x:'-'then v421^x*4.5 else |-|v421^x*4.4 fi),
+". - Издание является приложением к "d422,if p(v422^w) then '<A HREF="IRBIS:2,,,,I='v422^w,'">',""| ; |+v422^a,'</A>' else ""| ; |+v422^a fi,," ("v422^v")",", ISSN "v422^x.4,if v422^x:'-'then v422^x*4.5 else |-|v422^x*4.4 fi,mpl,opri451_H, 
+"<br> <b> В одной обложке с данным изданием"d423," (его номер указан в скобках) 
+есть поступления"d423^1,if 'a 02':v110^b.2 then " журналов"d423^1 else " газет"d423^1 fi,
+if a(v423^1)then " выходят"d423,if 'a 02':v110^b.2 then" журналы"d423 else " газеты"d423fi fi,":</b> "d423,
+(if p(v423)then |<br>  |v423^a ,| : |v423^1, |, Шифр: |v423^h   fi)
+(mhu,|<br> </dd> |d702,v702^4*4.1,mhl,v702^4*5| : |,v702^a,| |v702^b,),
+   if p(v606) or p(v607) or p(v610) or p(v965) or s(v330^5,v922^5,v331)<>'' then mpl,'<br> '&unifor('6orubdks_H') fi,
+if p(v936) then 
+   if p(v909)then'<br> <b> Поступления за 'v934" г.: "'</b> '
+      (if v909^Q:&unifor(|Av934#1|d909) then if v909^h.5:'Подш'then else |экз.|v909^k,|(|v909^d|) |,
+          if p(v909^f) then 
+             if val(v909^f.1)=0 and (not('I X V 0':v909^f.1)) then' ' else 
+                if &unifor('Av210^8#1')<>'' then' '&unifor('Av210^8#1')' ' else 'т. 'fi fi,v909^f|;|fi,
+          if p(v909^h) then  
+             if val(v909^h.1)=0 and (not(v909^h.1='0')) then' ' else 
+                if &unifor('Av210^9#1')<>'' then' '&unifor('Av210^9#1')' ' else' N: 'fi fi,v909^h,| (|v909^v|)|,|;  |d909^hfi,
+        fi fi),
+   fi,"<br> <b> Сведения о заказе на "v934", включающие  N "v936" (",,&uf('+7W1#'),&uf('+7W2#'),
+   (if p(v938) then  
+       if (v938^Q.4=&unifor('Av934#1') and 
+          val(v938^a)<=val(&unifor('Av931^a#1')) and 
+          val(v938^b)>=val(&unifor('Av931^a#1'))) 
+          or 
+          (v938^Q.4=&unifor('Av934#1') and 
+          val(v938^a)<=val(&unifor('Av936#1')) and 
+          val(v938^b)>=val(&unifor('Av936#1')))
+       then  &uf('+7U1#',|^Q|v938^q,|^E|v938^e),
+          if v938^q*4='/0'then ' год 'else 
+             if v938^q*4='/1'then '1п/г ' else 
+                if v938^q*4='/2'then '2п/г 'else 
+                   if v938^q*6.1='-'then v938^q*7.1| кв. |
+       fi fi fi fi,' номера ',v938^a'-'v938^b  fi,   
+   fi,/),,')</b> ',
+  mpl,
+/*'<br> <b> Период N экз. МХР Цена Ист. ТП1</b> '
+
+  &uf('+7W5#1'),,(if p(g1)then  &uf('+7W10#'g1),&uf('6ekz901_H') fi/) , 
+fi,
+
+if p(v909) then '<br> <b> Зарегистрированы поступления:</b> <br> ',
+   if val(&unifor('Av909^q#1'))=rmax(v909^q|;|) and 
+      val(&unifor('Av909^q#*'))=rmin(v909^q|;|) then else &unifor('MD909^Q') fi,
+'<script language="JavaScript">'/
+'	function DropDown(it)'/
+'	{'/
+'		el1 = document.getElementById(it);'/
+'		if(el1.style.display=="none") '/
+'		{'/
+'			el1.style.display="block";'/
+'		}'/
+'		else'/
+'		{'/
+'			el1.style.display="none";'/
+'		}'/
+'	}'/
+
+'	function loadClose()'/
+'	{'/
+'		document.all.el1.style.display="none";'/
+'	}'/
+' </script>  '/,
+mpl,
+&uf('+7W223#'),&uf('+7W909#'),&uf('+7W1909#'),&uf('+7W225#'),
+&uf('+7U223#'(&uf('Pv909^q')/)),
+(if p(g223) then &uf('+7W225#'),&uf('+7W225#'g223),&uf('6jwh_vl') fi/),
+'<table><tr>',
+(if p(g909) then 
+|<td><div style="cursor:hand;color:blue;text-decoration:underline;font-size : 12px;"> <a onclick="javascript:DropDown('|g909^q,
+|');" target="_top">|g909^q*10|</a> </div></td>| 
+fi/),
+'</tr></table>'  
+'<table>',
+
+'<table cellpadding="0" cellspacing="0">',/
+
+(if g909<>'' then '<tr><td><div id="',g909^q,'" style="display:none">',
+    |<div style="cursor:hand;color:blue;text-decoration:underline;font-size : 12px;"><a onclick="javascript:DropDown('|g909^Q|');" target="_top">|g909^q*10|<img src=/Irbis64r/images/Descending.bmp width=8 height=7 hspace=0 vspace=0 border=0></a></div>|,g909^B, '</div></td></tr>' 
+ fi/)
+
+'</table>'  
+
+fi,/
+if a(v909) and a(v1909) then "<br> <b> Издание можно найти в:</b> <br> "d901,   
+   (if p(v901^d)then
+       if &unifor('Pv901^d')<>''then &unifor('Pv901^d')'; ' fi 
+    fi),"<br> "d901 
+fi,"<br> <b> "d488,&unifor('Av488^1#1'),"</b> "d488,if &unifor('Av488#2')=''then
+ else '<br> 'fi,(|  |v488^c|<br> |)  
+if p(v1909) and a(v909) then '<br> <b> Все комплекты издания списаны</b> ' fi,
+Ofinal_H 
+
+&unifor('!'),''

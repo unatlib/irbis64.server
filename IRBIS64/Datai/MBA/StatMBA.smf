@@ -1,0 +1,130 @@
+[ADDDBN]
+if val(v991^5)=1 then 'MBA_ARH' fi
+[ROWQRY]
+/* кол-во абонентов, "V=CENA" - чтобы отображать пустые строки
+'"V=CENA"+"AB=$"'
+/* обратившихся
+'"V=CENA"+"AB=$"'
+/* кол-во поступивших запросов
+'"V=CENA"+"OP=M0"'
+/* кол-во поступивших запросов - на оригинал
+'"V=CENA"+"OP=M0"*"VZV=01"'
+/* кол-во поступивших запросов - на ксерокопию
+'"V=CENA"+"OP=M0"*"VZV=02"'
+/* кол-во поступивших запросов - на микрофильм
+'"V=CENA"+"OP=M0"*"VZV=05"'
+/* кол-во поступивших запросов - на эл.копия
+'"V=CENA"+"OP=M0"*"VZV=06"+"OP=M0"*"VZV=07"'
+/* библ. справка
+'"V=CENA"+"OP=M0"*"VZV=09"'
+/* отказ
+'"V=CENA"+"OP=M0"*"VZV=17"'
+/* Кол-во запросов, отправленных на уточнение абоненту
+'"V=CENA"+"OP=N6"'
+/* Кол-во запросов, находящихся в работе - НЕ Z / H
+'"V=CENA"+"L=M$"+"L=P$"+"L=X$"+"L=B$"+"L=K$"+"L=N$"+"L=S$"+"L=O$"’
+/* Кол-во запросов на лит-ру, отсутствующую в фондах 
+'"V=CENA"+"OP=M4"+"OP=N1"+"OP=N11"+"OP=N2"+"OP=N5"+"OP=B2"+"OP=K4"+"OP=O4"'
+/* Кол-во запросов, удовлетворенных фондами библиотеки
+'"V=CENA"+"OP=K1"+"OP=K2"+"OP=K6"+"OP=O1"+"OP=O2"+"OP=S1"+"OP=S2"+"OP=N91"'
+/*   -  оригиналами
+'"V=CENA"+"OP=S1"+"OP=S2"'
+/*   - ксерокопиями
+'"V=CENA"+"OP=K1"*"vzv=02"'
+/*   -  эл. копиями
+'"V=CENA"+"OP=K1"*"vzv=06"'
+/*    -  копиями с электронных ресурсов
+'"V=CENA"+"OP=K2"*"vzv=07"'
+/* Кол-во запросов, неудовлетворенных фондами библиотеки
+'"V=CENA"+"OP=M4"+"OP=N3"+"OP=N72"+"OP=N81"+"OP=N5"+"OP=B2"+"OP=N2"’
+/*   Дефектный экземпляр
+'"V=CENA"+"OPN=N71"'
+/*   Не выдается-спец.фонд
+'"V=CENA"+"OPN=N36"'
+/* Экземпляр утрачен
+'"V=CENA"+"OPN=N7"'
+/*   Только микрофиша
+'"V=CENA"+"OPN=N4"'
+/*   Не выдается-единственный экз
+'"V=CENA"+"OPN=N31"'
+/*   Списано
+'"V=CENA"+"OPN=N92"'
+[ROWFMT]
+if v920: 'CENA' then else '1' fi
+/* обратившихся
+if val(&uf('J,ZAK=',v100))>0 then    if g991='' then '1' else ref(l('ZAK='v100),if rsum((if p(v942)  then if ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  ) then '1,' fi fi))>0 then '1' fi  ),,,fi  fi
+/* кол-во поступивших запросов
+if  v920: 'CENA' or s((if p(v942)  then if (v942^a:'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  ) then '1' fi fi))<>'' then '1'  else '0' fi
+/* кол-во поступивших запросов - на оригинал
+if  v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* кол-во поступивших запросов - на ксерокопию
+if  v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  ) then '1' fi fi))<>'' then '1' else '0' fi
+/* кол-во поступивших запросов - на микрофильм
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* кол-во поступивших запросов - на эл.копия
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* библ. справка
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* отказ
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'M0') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, отправленных на уточнение 
+if v920: 'CENA' or s((if p(v942) then if v942^a: 'N6' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, находящихся в работе - НЕ Z / H
+if v920: 'CENA' or s((if p(v942) and (not  v942^a:'H1') then if (v942^a.1='M' or v942^a.1='P' or v942^a.1='X' or v942^a.1='B' or v942^a.1='K' or v942^a.1='N'  or v942^a.1='S' or v942^a.1='O')  and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов на лит-ру, отсутствующую в фондах 
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'M4' or v942^a: 'N1' or &uf('+97',v942^h)='N11' or v942^a: 'N2' or v942^a: 'N5' or v942^a: 'B2') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, удовлетворенных фондами библиотеки
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'K1' or v942^a: 'K2' or v942^a: 'K6' or v942^a: 'O1' or v942^a: 'O2' or v942^a: 'S1' or v942^a: 'S2') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, удовлетворенных фондами библиотеки -  оригиналами 
+if v920: 'CENA' or s((if p(v942) then if (v942^a: 'S1' or v942^a: 'S2' or v942^a: 'O1' or v942^a: 'O2') and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, удовлетворенных фондами библиотеки - ксерокопиями
+if v920: 'CENA' or s((if p(v942) then if v942^a: 'K1' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, удовлетворенных фондами библиотеки -  эл. копиями
+if v920: 'CENA' or s((if p(v942) then if v942^a: 'K1' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, удовлетворенных фондами библиотеки -  копиями с электронных ресурсов
+if v920: 'CENA' or s((if p(v942) then if v942^a: 'K2' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Кол-во запросов, неудовлетворенных фондами библиотеки
+if v920: 'CENA' or s((if p(v942) then if ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/*   Дефектный экземпляр
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N71' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/*   Не выдается-спец.фонд
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N36' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/* Экземпляр утрачен
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N7' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/*   Только микрофиша
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N4' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/*   Не выдается-единственный экз
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N31' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+/*   Списано
+if v920: 'CENA' or s((if p(v942) then if &uf('+97',v942^h)='N92' and ( &uf('Ag991^A#1')='' or val(v942^C)>=val(&uf('Ag991^A#1')) ) AND ( &uf('Ag991^B#1')='' or val(v942^C)<=val(&uf('Ag991^B#1'))  )  then '1' fi fi))<>'' then '1' else '0' fi
+[FLDTEXT]
+'#Кол-во абонентов МБА'
+'#Кол-во обратившихся абонентов'
+'Кол-во поступивших запросов '
+'       -  на оригинал'
+'       -  на ксерокопию'
+'       -  микрофильм'
+'       -  эл. копию'
+'       -  библиографическая справка'
+'       -  отказ'
+'Кол-во запросов, отправленных на уточнение абоненту'
+'Кол-во запросов, находящихся в работе'
+'Кол-во запросов на лит-ру, отсутствующую в фонде библиотеки'
+'Кол-во запросов, удовлетворенных фондами библиотеки'
+'       -  оригиналами'
+'       -  ксерокопиями'
+'       -  эл. копиями'
+'       -  копиями с электронных ресурсов'
+'Кол-во запросов, неудовлетворенных фондами библиотеки'
+'Дефектный экземпляр'
+'Не выдается-спец.фонд'
+'Экземпляр утрачен'
+'Только микрофиша’
+'Не выдается-единственный экз.'
+'Списано'
+[FLDSUM]
+'1'
+if  v140^A='1'  then '1' fi
+if  v140^A='2'  then '1' fi 
+if  v140^A='3'  then '1' fi
+if  v140^A='5'  then '1' fi

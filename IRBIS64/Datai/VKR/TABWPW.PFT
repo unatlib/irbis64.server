@@ -1,0 +1,169 @@
+' 
+\trowd \trqc\trgaph108\trleft-108\trkeep 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx461 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx1479 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx2445 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx5707 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx6673 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx7791 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx8747 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx9865 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx10834 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx11797 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx12915 
+\pard \qc\widctlpar\intbl {##\cell } 
+\pard \qc\widctlpar\intbl {' 
+if v940^v:v991 then (if p(v940) then if &unifor('Av991#1')=v940^v then 
+if p(v940^b)then v940^b else v940^h fi'\par 'fi fi)fi, 
+'\cell } 
+\pard \qc\widctlpar\intbl {' 
+if v940^v:v991 then (if p(v940) then if v940^v=&unifor('Av991#1') 
+then v940^d,'\par 'fi fi) fi,'\cell } 
+\pard \ql\widctlpar\intbl {' 
+if rsum((if'2 7':v910^a then'0;'else|1;|d910 fi/))>0 then 
+if v920:'NJ'then ref(l(|I=|v933),mhl,v200^a,". "v923^h,". "v923^k,mpl)," - "v934" ã.",
+" ò."v935,",N "v936 
+else mhl,v461^x| |,v461^c," ; "v200^v, 
+if p(v200^v) then" : "d200^a fi, 
+v700^a," "v700^b," "d700,v200^a, 
+if p(v215^a) then". - "v215^a,if p(v215^1) then if v215^1:'=' then ' '&uf('G2='v215^1) else ' 'v215^1 fi fi, 
+if a(v215^1) then &unifor('Korg.mnu|4')'.'fi fi 
+fi fi,mpl,'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then f(rsum((
+if p(v940) then if p(v940^v) and &unifor('Av991#1')=v940^v then 
+f(val(v940^x|;|,|1;|n940^x,' 0'),0,0)else '0;'fi fi/)),0,0)fi,'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then f(rsum(
+(if p(v940)then 
+    if v940^v=&unifor('Av991#1')then 
+       if p(v940^e)then 
+          if p(v940^c)then 
+             if &unifor('Kizc.mnu|'v940^c.6)<>''then 
+                f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*(val(v940^x,|1;|n940^x,' 0')),0,2)
+             else 
+                if &unifor('Kizc.mnu|'v940^c.4)<>''then 
+                  f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1;|n940^x,' 0'),0,2)
+                else f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1;|n940^x,' 0'),0,2)
+             fi fi 
+          else f(val(v940^e|;|)*val(v940^x,|1;|n940^x,' 0'),0,2) 
+          fi 
+       else 
+          if p(v940^c) then 
+             if &unifor('Kizc.mnu|'v940^c.6)<>'' then 
+                f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*val(v940^x,|1;|n940^x,' 0'),0,2)';',
+             else 
+                if &unifor('Kizc.mnu|'v940^c.4)<>'' then 
+                   f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*val(v940^x,|1;|n940^x,' 0'),0,2)';' 
+                else 
+                   f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2))*val(v940^x,|1;|n940^x,' 0'),0,2)';',
+             fi fi 
+          else f(val(&unifor('Av10^d#1'),' 0')*val(v940^x,|1;|n940^x,' 0'),0,2)';',
+ fi fi fi fi/)),0,2)fi'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then f(rsum((if p(v940) then if &unifor('Av991#1')=v940^v then 
+if v940^a:'6' then if p(v940^w)then'1;'else'0;'fi else'0;'fi fi fi/)) + 
+rsum((if p(v940) then if &unifor('Av991#1')=v940^v then if p(v940^z) then 
+f(val(v940^z|;|,' 0'),0,0)else'0;'fi else '0;'fi fi/)),0,0)fi,'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then 
+f(rsum((if p(v940)then if v940^v=&unifor('Av991#1')then 
+if v940^a:'6' and p(v940^w)then 
+if p(v940^e) then 
+if p(v940^c) then 
+if &unifor('Kizc.mnu|'v940^c.6)<>'' then 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2)'\par ' 
+else 
+if &unifor('Kizc.mnu|'v940^c.4)<>'' then 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2)'\par ' 
+else 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2)'\par ' 
+fi fi 
+else f(val(v940^e|;|),0,2)'\par 'fi 
+else 
+if p(v940^c)then 
+if &unifor('Kizc.mnu|'v940^c.6)<>''then 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2)';','\par ' 
+else 
+if &unifor('Kizc.mnu|'v940^c.4)<>'' then 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2)';','\par ' 
+else 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2)';','\par ' 
+fi fi 
+else f(val(&unifor('Av10^d#1'),' 0'),0,2)';','\par 'fi fi fi fi fi/)) + 
+rsum((if p(v940^v)then if v940^v=&unifor('Av991#1')then if v940^a:'6'then else 
+if p(v940^e)then if p(v940^c)then if &unifor('Kizc.mnu|'v940^c.6)<>''then 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6))*val(v940^z,' 0'),0,2)'\par ' 
+else 
+if &unifor('Kizc.mnu|'v940^c.4)<>''then 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4))*val(v940^z,' 0'),0,2)'\par ' 
+else 
+f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980'))*val(v940^z,' 0'),0,2)'\par ' 
+fi fi 
+else 
+f(val(v940^e|;|)*val(v940^z,' 0'),0,2)'\par ' fi 
+else 
+if p(v940^c) then if &unifor('Kizc.mnu|'v940^c.6)<>'' then 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6))*val(v940^z,' 0'),0,2)';','\par ', 
+else 
+if &unifor('Kizc.mnu|'v940^c.4)<>'' then 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4))*val(v940^z,' 0'),0,2)';','\par ', 
+else 
+f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980'))*val(v940^z,' 0'),0,2)';','\par ', 
+fi fi 
+else 
+f(val(&unifor('Av10^d#1'),' 0')*val(v940^z,' 0'),0,2)';','\par ',fi fi fi fi fi/)),0,2)fi,'\cell } 
+\pard \qc\widctlpar\intbl {' 
+if v940^v:v991 then
+  (if p(v940) then 
+      if p(v940^v) and v940^v=&unifor('Av991#1')then 
+         if p(v940^m)then v940^m else' 'fi'\par '
+   fi fi)fi,'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then f(rsum(
+(if p(v940) then 
+    if &unifor('Av991#1')=v940^v then 
+       if v940^a:'6' and p(v940^w) then else f(val(v940^x,|1|n940^x,' 0')-val(v940^z,|0|n940^z,' 0'),0,0),';' 
+ fi fi fi/)),0,0)fi,'\cell } 
+\pard \qr\widctlpar\intbl {' 
+if v940^v:v991 then 
+f(rsum(
+(if p(v940)then 
+    if v940^v=&unifor('Av991#1')then 
+       if v940^a:'6' and p(v940^w) then 
+       else  
+          if p(v940^e)then 
+             if p(v940^c)then 
+                if &unifor('Kizc.mnu|'v940^c.6)<>''then 
+                 f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)'\par '
+                else 
+                   if &unifor('Kizc.mnu|'v940^c.4)<>''then 
+                 f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)'\par '
+                   else f(val(f(val(v940^e|;|)*val(&unifor('Kizc.mnu|1980')),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)'\par '
+                fi fi 
+             else f(val(v940^e|;|)*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,|0;|n940^z,' 0')),0,2)'\par ' 
+             fi 
+          else 
+             if p(v940^c) then 
+                if &unifor('Kizc.mnu|'v940^c.6)<>'' then 
+                f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.6)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+                else 
+                   if &unifor('Kizc.mnu|'v940^c.4)<>'' then 
+                f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v940^c.4)),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';' 
+                   else 
+                f(val(f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1980')),0,2))*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+                fi fi 
+             else f(val(&unifor('Av10^d#1'),' 0')*(val(v940^x,|1;|n940^x,' 0')-val(v940^z,|0;|n940^z,' 0')),0,2)';',
+ fi fi fi fi fi/)),0,2)'\par 'fi,'\cell } 
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar' 

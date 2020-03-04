@@ -1,0 +1,6 @@
+if v920:'KSU'then '5' else 
+(if p(v910^y)then 
+    if &unifor('G0-'&unifor('Av991*3#1'))=v910^y and v910^c*2.2=&unifor('Av991.2#1') and '0 C U':v910^a then 
+       if p(v910^e)then f(val(v910^e,' 0'),0,2)else f(val(&unifor('Av10^d#1'),' 0'),0,2)fi'\par '
+ fi fi)
+fi

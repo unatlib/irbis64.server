@@ -1,0 +1,14 @@
+'</>''<title>Список описей фонда 'v852^a' 'v903'</title>'
+&uf('+7W903#'),&uf('7',&uf('IPRIVATE,EKP,GUAR'),',?IIopis='v903|?,&uf('+7U903#'v903)|),
+(if p(g903) then 
+    '<table width="100%">'
+      '<tr><td valign="Top">',
+        '<A HREF="IRBIS:2,,'&uf('IPRIVATE,EKP,GUAR')',gua_sso_wn,I='&uf('+3E',g903),
+        '?&TOPPFTNAME=BOTTOM_gua_WN&BOTTOMPFTNAME=BOTTOM_gua_WN'
+        '&CHECKNAME=CHECKINDEX"' '>',g903|<br>|,'</A>''</td></tr>'
+    '</table>'
+ fi)
+ 
+   
+   
+   

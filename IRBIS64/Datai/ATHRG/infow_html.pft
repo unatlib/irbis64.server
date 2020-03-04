@@ -1,0 +1,54 @@
+if v953<>''and v953^p:'2'then 
+
+(if p(v953)then if v953^p='2'then       
+       '<div>',
+       '<A HREF="IRBIS:3,12,,',mfn,',','1','">',
+       '<IMG style="width:100px;margin-right:10px;position:relative;float:left;left:0px;" SRC="IRBIS:12,,',mfn,',','1','"></A>'BREAK,fi,
+       '</div>',
+ fi), 
+else if v951^h:'02a'and v951^a<>'' then 
+(if p(v951)then if v951^h:'02a'and v951^a<>''then 
+'<div>',
+'<A HREF="IRBIS:3?PATH=11&FILENAME=',v951^a,'">',
+'<IMG style="width:100px;margin-right:10px;position:relative;float:left;left:0px;" SRC="IRBIS:11,,',v951^a,'"></A>'BREAK,fi,
+'</div>',
+ fi) 
+
+ fi, fi,
+if p(v210) then '<b> ОCНОВНОЕ ГЕОГРАФИЧЕСКОЕ НАЗВАНИЕ:</b>  
+','<br>',mhl,if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a, 
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi,,
+
+,,,,,,if p(v510) then '<br><b> СВЯЗАННЫЕ ОСНОВНЫЕ ГЕОГРАФИЧЕСКИЕ НАЗВАНИЯ:</b>' fi,(if p(v510) then ,'<br>',mhl,v510^g.1,mhl,v510^g*1,| |d510^g,if p(v510^g) then| - |d510^a fi,v510^a, 
+          if p(v510^b) and p(v510^x) then| (|v510^f|)|,|. |v510^b,| (|v510^x|)| 
+          else |. |v510^b,| (|v510^f|)| 
+          fi,|, |v510^h,|, |v510^I,|, |v510^J,| (|v510^c|)|,| (|v510^E|)|  
+ fi ,if v510^5:'a' then ' (прежний заголовок
+)'fi,if v510^5:'b' then ' (последующий заголовок)'fi,if v510^5:'d' then ' (сокраще
+ние)'fi,if v510^5:'z' then ' (другой заголовок)' fi/),if p(v410) then '<br><b> ДР
+УГИЕ (ВАРИАНТНЫЕ) ГЕОГРАФИЧЕСКИЕ НАЗВАНИЯ:</b>' fi,(if p(v410) the
+n ,'<br>',mhl,v410^g.1,mhl,v410^g*1,| |d410^g,if p(v410^g) then| - |d410^a fi,v410^a, 
+          if p(v410^b) and p(v410^x) then| (|v410^f|)|,|. |v410^b,| (|v410^x|)| 
+          else |. |v410^b,| (|v410^f|)| 
+          fi,|, |v410^h,|, |v410^I,|, |v410^J,| (|v410^c|)|,| (|v410^E|)|  
+ fi,if v410^5:'a' then ' (прежний заголовок)'fi,if v410^5:'b' then ' (последующий
+ заголовок)'fi,if v410^5:'d' then ' (сокращение)'fi,if v410^5:'z' then ' (другой з
+аголовок)'fi/),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,, if p(v300) then '<br><b>ИНФОРМАЦИОННОЕ 
+ПРИМЕЧАНИЕ\b0 :  ',('<br>',v300^a), fi,if p(v810) then '<br><b>ИСТОЧНИК, В
+ КОТОРОМ ВЫЯВЛЕНА ИНФОРМАЦИЯ О ЗАГОЛОВКЕ:</b>',('<br>',| |v810^a,| |v
+810^b) fi,if p(v305) then '<br><b>ТЕКСТОВОЕ ССЫЛОЧНОЕ ПРИМЕЧАНИЕ СМ.ТАКЖЕ:</b>'
+,('<br>',v305^a/| |v305^b/| |v305^c/| |v305^d/| |v305^e/) fi,if p(v310) th
+en '<br><b>ТЕКСТОВОЕ ССЫЛОЧНОЕ ПРИМЕЧАНИЕ СМ.:</b>',('<br>',| |v310^
+a,| |v310^b,| |v310^c,| |v310^d,| |v310^e/) fi,if p(v830) then '<br><b>ОБЩЕЕ ПРИМЕ
+ЧАНИЕ КАТАЛОГИЗАТОРА:</b>',(| |v830) fi fi,
+(if p(v951^I) and a(v951^N) then '<br><A HREF="',&uf('+\1',v951^I),'">',if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi),
+   (if p(v953) then 
+       if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+    fi fi) 

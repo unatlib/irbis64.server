@@ -1,0 +1,20 @@
+mhl,
+if p(v19) then v19^b,'^A',
+   v200^a,". "v923^h,". "v923^i,". "v923^k,". "v923^l," : "v200^e," / "v200^f,'^V',
+   (if &unifor('Knosnt.mnu|'v215^1)<>''then" "| ; |+d215^1,&unifor('G2='v215^1) fi),'^G',v210^5| |,v210^d,
+   '^D',
+   if &unifor('Av210^4#1')<>''then &unifor('Av210^4#1')else &unifor('Av210^a#1')fi,
+   if &unifor('Av210^x#1')<>''then' ; '&unifor('Av210^x#1') fi,
+   if &unifor('Av210^y#1')<>''then' ; '&unifor('Av210^y#1') fi,
+   '^H',&unifor('Av210^c#1'),
+   if &unifor('Av210^6#1')<>''then' ['&unifor('Av210^6#1')']'fi,
+   if a(v210^c)then &unifor('Av461^g#1'),if &unifor('Av461^6#1')<>''then' ['&unifor('Av461^6#1')']'fi fi,
+   '^4'(" "| ; |+d215,v215^a,
+   if s(&unifor('Knos.mnu|'v215^1),&unifor('Knosnt.mnu|'v215^1))<>''then' ',&unifor('G2='v215^1) fi),
+   if p(v215^a) and a(v215^1) then 
+      if v215^a:'c'or v215^a:'s'or v215^a:'p'or v215^a:'с' or v215^a:'л'then 
+      else &unifor('Korg.mnu|4')'.' fi 
+   fi,'^W'v903'+'
+else 'Неправильно выбран Идентификационный номер^A^Z^V^Y^G^D^H^4^W^I^X^5'
+fi,
+mpl,

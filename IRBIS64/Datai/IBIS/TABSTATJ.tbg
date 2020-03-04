@@ -1,0 +1,67 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=2
+BORDER_WIDTH=1
+FONT_SIZE=10
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=7
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=1
+CELL_TAB2_2=№ п/п
+CELL_TAB2_3=&uf('S1A')'.'
+CELL_TAB2_4=По правому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=10
+CELL_TAB3_2=Краткое БО
+CELL_TAB3_3=&uf('+7W991#'v991),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('7,!I933='v903|/!,if v920='NJK'then else &uf('+7U11#'f(rsum((if p(v910) then if val(v910^c)<val(&uf('Ag991^b#1')) and val(v910^c) > val(&uf('Ag991^a#1')) then  v910^1';',if a(v910^1) then '1;' fi fi fi)),0,0)),&uf('+7U14#'f(rsum((if p(v910) then if val(v910^c)<val(&uf('Ag991^b#1')) and val(v910^c) > val(&uf('Ag991^a#1')) then  v910^e';', fi fi)),0,2))fi|),if g11<>'' then &uf('6brief') fi,
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=2
+CELL_TAB4_2=Всего номеров
+CELL_TAB4_3=&uf('+7W12#'f(rsum((if g11<>'' then '1;' fi)),0,0)),g12,
+CELL_TAB4_4=По правому краю
+CELL_TAB4_5=Да
+CELL_TAB5_1=3
+CELL_TAB5_2=Всего экз-ров
+CELL_TAB5_3=&uf('+7W13#'f(rsum((g11|;|)),0,0)),g13,
+CELL_TAB5_4=По правому краю
+CELL_TAB5_5=Да
+CELL_TAB6_1=3
+CELL_TAB6_2=Стоимость
+CELL_TAB6_3=&uf('+7W14#'f(rsum((g14|;|)),0,0)),g14,
+CELL_TAB6_4=По левому краю
+CELL_TAB6_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6345 \pard \ql\widctlpar\intbl {\qr \fs20 ''Итого: ''\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7479 \pard \ql\widctlpar\intbl {\qr \fs20 'v1'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9180 \pard \ql\widctlpar\intbl {\qr \fs20 'v2'\cell}\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10881 \pard \qr\widctlpar\intbl {\qr \fs20 'v3'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=3
+CELL_SUM111=14
+CELL_SUM112='Итого: '
+CELL_SUM121=2
+CELL_SUM122=v1
+CELL_SUM131=3
+CELL_SUM132=v2
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=200
+CELL_SORT4=0
+CELL_SORT5=&uf('+7W991#'v991), if &uf('7,!I933='v903|/!,if v920='NJK'then else f(rsum((if p(v910) then if val(v910^c)<val(&uf('Ag991^b#1')) and val(v910^c) > val(&uf('Ag991^a#1')) then  v910^1,if a(v910^1) then '1;' fi fi fi)),0,0)fi|)<>'' then v200^a fi
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=tabstatJ
+HDR_PFT=tabstatJH
+HDR_PARAMS_COUNT=0

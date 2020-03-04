@@ -1,0 +1,65 @@
+0
+//новая запись, если есть статус 7 и число на докомплектование
+DEL
+1001
+*
+
+
+ADD
+1001
+
+(if p(v910) then if v910^A='7' and v910^K<>'' then '1' else '' fi fi/)
+
+IF
+if p(v1001) then '1' else '0' fi
+NEWMFN
+'CMPL'
+ALL
+// удаляем все повторения кроме ^A=7
+DEL
+910
+F
+(if v910^A: '7' then '0' else '1' fi/)
+
+DEL
+940
+*
+
+
+DEL
+1001
+*
+
+
+END
+FI
+//удаление, если есть статус=7
+DEL
+1002
+*
+
+
+ADD
+1002
+
+(if p(v910) then if v910^A: '7' then '1' else '' fi fi/)
+
+IF
+if p(v1002) then '1' else '0' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+1001
+*
+
+
+DEL
+1002
+*
+
+
+//

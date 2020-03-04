@@ -1,0 +1,177 @@
+0
+DEL
+922
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+903
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CHA
+700^A
+*
+', '
+'^B'
+CHA
+700^A
+*
+','
+'^B'
+REP
+700
+*
+IF P(V700^b)and V700^B:'.'THEN V700 ELSE '^A'&unifor('E1'v700^a),if v700^a:'.'then,'^B'&unifor('G2 'v700^a),else if p(v700^g)then else '^G'&unifor('G2 'v700^a) fi fi,"^G"v700^g,"^C"v700^c,"^X"v700^x,"^R"v700^r fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+970^A
+*
+', '
+'^B'
+CHA
+970^A
+*
+','
+'^B'
+REP
+970
+*
+IF P(V970^b)and V970^B:'.'THEN V970 ELSE '^A'&unifor('E1'v970^a),if v970^a:'.'then,'^B'&unifor('G2 'v970^a),else if p(v970^g)then else '^G'&unifor('G2 'v970^a) fi fi,"^G"v970^g,"^C"v970^c,"^X"v970^x,"^R"v970^r fi
+XXXXXXXXXXXXXXXXXXX
+CHA
+701^A
+*
+', '
+'^B'
+CHA
+701^A
+*
+','
+'^B'
+REP
+701
+F
+(IF P(V701^b)and V701^B:'.'THEN V701 ELSE '^A'&unifor(|E1|v701^a),if v701^a:'.'then,'^B'&unifor(|G2 |v701^a),else if p(v701^g)then else '^G'&unifor(|G2 |v701^a) fi fi,|^G|v701^g,|^C|v701^c,|^X|v701^x,|^R|v701^r fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+701
+F
+if &unifor('Av701#4')<>''then v700/(v701/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+700
+F
+if &unifor('Av701#4')<>''then '1'fi 
+XXXXXXXXXXXXXXXXXXX
+CHA
+702^A
+*
+', '
+'^B'
+CHA
+702^A
+*
+','
+'^B'
+REP
+702
+F
+(IF P(V702^b)and V702^B:'.'THEN V702 ELSE '^A'&unifor(|E1|v702^a),if v702^a:'.'then,'^B'&unifor(|G2 |v702^a),else if p(v702^g)then else '^G'&unifor(|G2 |v702^a) fi fi,|^G|v702^g,|^C|v702^c,|^X|v702^x,|^R|v702^r,|^4|v702^4 fi/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+606^H
+*
+',,'
+','
+REP
+606^H
+F
+(v606^h|!|/)
+XXXXXXXXXXXXXXXXXXX
+CHA
+606^H
+*
+',!'
+''
+CHA
+606^H
+*
+'!'
+''
+DEL
+200^f
+F
+if p(v200^7)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+REP
+461^X
+F
+(if p(v461)then if v461^x<>''then if v461^x:'.' then v461^x else if v461^x:' 'then &uf('G0 'v461^x),',',&uf('G1 'v461^x)else v461^xfi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+461^f
+F
+(if p(v461)then if p(v461^7)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+922^G
+F
+(if p(v922)then if p(v922^7)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+200^f
+F
+v200^7
+XXXXXXXXXXXXXXXXXXX
+ADD
+922^g
+F
+(if p(v922)then if p(v922^7)then v922^7 else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+461^f
+F
+(if p(v461)then if p(v461^7)then v461^7 else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+200^7
+F
+if p(v200^7)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+DEL
+461^7
+F
+(if p(v461)then if p(v461^7)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+922^7
+F
+(if p(v922)then if p(v922^7)then'1'else'xxx'fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if v910^a=''and v910^b=''then'1'else'xxx'fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+9910
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) then if v910^b:';'then '^A0^B',&unifor('G2;'v910^b),|^C|v910^c,|^D|v910^d,|^U|v910^u  else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910^B
+F
+(if p(v910) then if v910^b:';'then &unifor('G0;'v910^b) else v910^b fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+(v9910/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+9910
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

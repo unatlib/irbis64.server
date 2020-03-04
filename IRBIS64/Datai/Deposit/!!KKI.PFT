@@ -1,0 +1,6 @@
+'\pard \fs16\tx1239 ',&unifor('S0'),
+(if p(v910) then  if v910^a='6'then else   v910^b,|(|v910^1|)|,|-|v910^d, 
+    if f(val(&unifor('S1A'))/4,0,2):'.00' then '\par ' else'\tab ' fi,fi,
+fi/),
+if v481:'^j'then '\par Приплетены инв.N: ',&unifor('S0'),
+(if p(v481^j)then if &unifor('S1A')='1' then else', 'fi,v481^j fi) fi

@@ -1,0 +1,24 @@
+'{',mhl, 
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'\qc\b Издание в обработке. Не выдается\par \b0 \ql' fi fi, 
+&uf('6osvex'), 
+&uf('6orchifr'), 
+&uf('6otit461'), 
+if p(v925) then &uf('6ibis925') fi, 
+otitkn, 
+'. - ',oizd, 
+'. - ',ospec, 
+'. - ',ovixd, 
+'. - ',ofizxar, 
+'. - ',oser, 
+'. - ',oprim, 
+'. - ',oISBNcn, 
+oprimd, 
+ogrudk, 
+orubdks, 
+oprip481, 
+odoptd, 
+&uf('6oex910'), 
+ofinal, 
+'\par ',&unifor('!'), 
+'}' 

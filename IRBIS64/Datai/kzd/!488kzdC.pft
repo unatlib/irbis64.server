@@ -1,0 +1,9 @@
+   (if '***'='972' or '***'='601' or '***'='711' or '***'='710' then 
+       if p(v***) then |^A|v***^a,| : |v***^b, 
+          if s(v***^c,v***^f,v***^e)<>''then ' (' v***^c, 
+             if p(v***^f) then | ; |d***^c, v***^f fi, 
+             if p(v***^e) then 
+                if s(v***^c, v***^f)<>'' then ' ; ' fi, v***^e 
+          fi fi,')','^W'&uf('Av903#1'),'^9'&unifor('+D')                 
+       fi 
+    else 'Ошибка отбора - коллектив не основной' fi/), 

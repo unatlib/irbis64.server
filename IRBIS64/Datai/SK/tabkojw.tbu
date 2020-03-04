@@ -1,0 +1,97 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')),0,0)/
+f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0')) * val(if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e) else '0' fi )  / rmax('1;'f(rsum('0; ',if rsum((if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then '1;' else '0;'fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; ',fi,(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then else &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; 'fi fi)),0,0)),0,0)
+if val(if rsum('0;',(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;' fi fi))>0 then  &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e) else '0' fi )=0 then else f(rsum((if p(v910^c) then if '2 6 7':v910^a then else v910^1|;|,|1;|n910^1,' 0' fi fi,' 0'))   / rmax('1;'f(rsum('0; ',if rsum('0;',(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='') and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='') and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='') then '1;' else '0;'fi fi))>0 then &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; ',fi,(if p(v691) then if v691^a=&unifor('Av991^a#1') and (v691^b=&unifor('Av991^b#1') or &unifor('Av991^b#1')='') and (v691^c=&unifor('Av991^c#1') or &unifor('Av991^c#1')='')and (v691^d=&unifor('Av991^d#1') or &unifor('Av991^d#1')='')and (v691^f=&unifor('Av991^e#1') or &unifor('Av991^e#1')='')then else &unifor('JRDR,?'v991^a,v991^b,v991^c,v991^d,'-S'v991^e)'; 'fi fi)),0,0)),0,2) fi/
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9179 
+\pard \widctlpar\intbl {\qc \fs16 ''Общее кол-во учебников:   'f(val(v1),5,0)' экз. \par \par   Из них - для студентов заданной формы:   'f(val(v2),5,2),if val(v2)=0 then '0' fi,' экз. \par \par   Книгообеспеченность:   'if val(v2)=0 then '-'else f(val(v3),5,2) fi'\par ''
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4644 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5636 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7904 
+\pard \widctlpar\intbl {\qc \fs16 \b Кол-во экз-ров\b0 \par 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9179 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs16 \b № п/п\b0 
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4644 
+\pard \widctlpar\intbl {\qc \fs16 \b Заглавие учебника\b0 
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5636 
+\pard \widctlpar\intbl {\qc \fs16 \b Осн/Доп\b0 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6770 
+\pard \widctlpar\intbl {\qc \fs16 \b Всего\b0 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7904 
+\pard \widctlpar\intbl {\qc \fs16 \b Для студентов заданной формы\b0 
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9179 
+\pard \widctlpar\intbl {\qc \fs16 \b Книгообеспеченность\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

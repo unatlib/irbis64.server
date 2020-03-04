@@ -1,0 +1,28 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+{\b\fs24 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx1331\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx2182\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx3883\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15 
+\cellx4733\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6859\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7700\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8986\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9991
+\pard \qc\widctlpar\intbl {\b Дата, N КСУ\cell }
+\pard \qc\widctlpar\intbl {\b N n/n\cell }
+\pard \qc\widctlpar\intbl {\b Инв.N/ Штрих-код\cell }
+\pard \qc\widctlpar\intbl {\b Отм о пр.\cell }
+\pard \qc\widctlpar\intbl {\b Автор и заглавие\cell }
+\pard \qc\widctlpar\intbl {\b Год изд.\cell }
+\pard \qc\widctlpar\intbl {\b Цена\cell }
+\pard \qc\widctlpar\intbl {\b N акта спис.\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

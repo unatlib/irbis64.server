@@ -1,0 +1,248 @@
+0
+// Списание журналов целиком
+// На входе отмеченные записи журналов
+// v991^A - номер КСУ списания v991^B - номер акта передачи
+// v992^D - место хранения, v992^M - новое место хранения, 992^A - шифр журнала, v992^b-номер комплекта 
+//19 v992^Y - MFN отмеченной записи
+//PUTLOG
+//'Отобрано для списания:'/,(v992/)
+// НАЧАЛО SPZGL. Списание журналов по заглавиям
+ADD
+1992
+
+(if p(v992) then if &uf('+97',v992^a)=&uf('+97',&uf('Av903#1')) or (val(v992^Y)=val(mfn)) or a(v992^a) then |^I|v992^A,,|^D|v992^D,|^M|v992^M,,|^B|v992^B fi fi/)
+
+
+//------------------------- Списание номеров
+CORREC
+if v920:'J' then'*'fi
+(if p(v1992) then '^A',,&uf('Av991^A#1'),,,'^W',,&uf('Av991^B#1'),,v1992 fi/),,,,,,,,&uf('+7W1#'),&uf('+7W111#'),&uf('+7W2#'),,&uf('+7W3#')
+"I933="v903"/"
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+REP
+910
+F
+(if p(v910) then v910,,if &uf('Av1001^D#1')='' or &uf('+97',v910^d)=&uf('+97',&uf('Av1001^d#1')) then if &uf('Av1001^k#1')='' or &uf('+97',v910^b)=&uf('+97',&uf('Av1001^k#1')) then if p(v910^V) then if v910^V<>&uf('Av1001^a#1') then &uf('+7U1#',,&uf('Av903#1'),,,': уже списан по КСУ: ',,v910^V)  fi,,else if &uf('IMAIN,StatusNoSpis,'): v910^A  then &uf('+7U3#',,&uf('Av903#1'),,': списание невозможно по статусу ',,v910^A ),,else  '^V'&uf('Av1001^a#1'),|^X|v910^1,if &uf('Av1001^m#1')<>'' then if s('1 4'):v910^a then &uf('+7U1#Для статусов 1,4 передача невозможна: экз.'v910^b," Ш-К "v910^h,"Шифр:"v903) else |^Z|v910^1,'^M',&uf('Av1001^m#1'),'^W'&uf('Av1001^W#1'),,,&uf('+7U1#',,&uf('Av1001^m#1'),': новое место хранения'  ),,fi fi fi,fi fi,fi, fi/) 
+
+REP
+910^A
+F
+(if p(v910)then if &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) and '0 P 4 5 1 3 9':v910^a then '6',, &uf('+7U1#',,&uf('Av903#1'),': ',,v910^B,,,' - списан. MFN=',f(val(mfn),0,0),),,, else v910^a fi fi/)
+
+ADD
+940
+
+&uf('+7W940#'),&uf('+7U940#'(v940|; |)),(if p(v910)then if &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) then if &uf('Ag940#1'):v910 then else v910 fi fi fi/)
+
+DEL
+910
+F
+(if p(v910) then if 'C U':v910^a then if &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) and v910^1<=v910^x and a(v910^w)then '1',,&uf('+7U1#',,&uf('Av903#1'),': ',,v910^B,,,' - списан'),,, else '0' fi else '0' fi fi/)
+
+REP
+910^A
+F
+(if p(v910) then if &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) and p(v910^w)and v910^w=&uf('Av1001^W#1') then if v910^a:'6' then '0' else v910^a fi, else v910^a fi fi/)
+
+REP
+910^D
+F
+(if p(v910) then if &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) and p(v910^w)and v910^w=&uf('Av1001^W#1') then v910^m, else v910^d fi fi/)
+
+ADD
+1002
+
+(if p(v910)then if v910^A='p'and &uf('+97',v910^v)=&uf('+97',&uf('Av1001^A#1')) then v910^p|;| fi fi)
+
+DEL
+463^w
+F
+(if p(v463)then if s(';',&uf('Av1002#1')):s(|;|v463^w|;|) then'1' else'0'fi fi/)
+
+DEL
+1001
+1
+
+
+DEL
+1002
+*
+
+
+UNTIL
+if v1001<>''then'1' fi
+ADD
+5555
+XXXXXXXXXXXXXXXXXXX
+if p(v910)then f(rsum((if p(v910)then if '2 6':v910^a  then '0;' else '1;'fi fi/)),0,0)else if p(v940)then '0'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+463^w
+1
+if &uf('Av463#2')=''and &uf('Av463^W#1')=v903 then '1'fi
+
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v910:'^A7'then else if val(v5555)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if s('!',g2,'!'):s('!',v903,'!') then '0'else '1'fi,
+ADD
+1111
+
+&uf('+7U2#',v903|!|)
+
+DEL
+1111
+
+
+
+// в g2 шифры номеров, у которых списаны все экземпляры 
+FI
+DEL
+5555
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------выход из номера
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+&uf('+7G1'),,(g1/),,,,if g1='' then &uf('+7G3'),,(g3/), fi
+//-----------------------ЦИКЛ по номерам у кот. все списано - ???
+REPEAT
+ADD
+1111
+
+if g2:'!'then &uf(|G0!|g2) fi
+
+IF
+&uf('+7W2#'&uf('G2!'g2)),if v1111<>''then if l('II=',v1111)>0 then '1'else'0'fi else '0' fi
+CORREC
+'*'
+(v910/)
+'II=',v1111
+
+ADD
+910
+
+'^A7'
+
+END
+
+FI
+
+DEL
+1111
+
+
+
+UNTIL
+if g2<>''then'1'else '0'fi
+
+// Списание 909,имеющих ^D
+
+//------ Создание архивных полей
+//----------------------------------------ЦИКЛ по 1992 - по отмеченным журналам
+REPEAT
+ADD
+9992
+
+&uf('+7W111#'),&uf('Av1992#1')
+
+ADD
+1909
+
+if v9992^d=''then (if p(v909) then v909,'^W',&unifor('Av991^a#1'),if &uf('Av991^b#1')<>''then'^P' &uf('Av991^b#1'),'^M' &uf('Av9992^m#1') fi  fi/)else (if p(v909) then if v909^d<>''and &uf('+97',v909^d)=&uf('+97',&uf('Av9992^d#1')) or v909^d=''then v909,'^W',&unifor('Av991^a#1'),if &uf('Av991^b#1')<>''then'^P' &uf('Av991^b#1'),'^M' &uf('Av9992^m#1') fi fi fi/)fi
+
+DEL
+909
+F
+if v9992^d=''then (|1|d909/)else (if p(v909) then if v909^d<>''and &uf('+97',v909^d)=&uf('+97',&uf('Av9992^d#1')) or v909^d=''then '1'else '0'fi fi/)fi
+
+//Конец списания 909,имеющих ^D 
+
+
+//Списание 909, НЕ имеющих ^D
+
+
+ADD
+888
+
+&uf('+7W6#'),&uf('+7W20#'v991^b),&uf('+7W21#'v9992),&uf('+7W909#'(if p(v1909)then if v1909^w=&uf('Av991^a#1') then if p(v1909^d)then v1909fi fi fi/)),&uf('+7W910#'(if p(v1909)then if v1909^w=&uf('Av991^a#1') then if a(v1909^d)then |^Q|v1909^q,|^F|v1909^f|^H|fi fi fi/)),&uf('+7W12#'&uf(|7,?I933=|d1909,&uf('Av903#1'),|/?,if g909^q:v934 then if v910^a:'7' or s(g20,g21^d,)=''then else (if p(v910)then if &uf('Ag20#1')<>''then if &uf('Ag21^d#1')<>''then if v910^d=&uf('Ag21^d#1')then if '0 P 5 1 3 9 ':v910^a then '^A'&uf('Av934#1'),if &uf('Av935#1')<>''then'~'&uf('Av935#1')fi,'~'v910^b,'^D'&uf('Ag21^m#1'),'^H'&uf('Av936#1')','fi fi else if '0 P 5 1 3 9 ':v910^a then '^A'&uf('Av934#1'),if &uf('Av935#1')<>''then'~'&uf('Av935#1')fi,'~'v910^b,'^D'&uf('Ag21^m#1'),'^H'&uf('Av936#1')','fi fi fi fi/)fi fi,if g910^q:v934 then if v910^a:'7' then else(if p(v910)then if &uf('Ag20#1')<>''then if &uf('Ag21^d#1')<>''then if v910^d=&uf('Ag21^d#1')then if '0 P 5 1 3 9 ':v910^a then '^A'&uf('Av934#1'),if &uf('Av935#1')<>''then'~'&uf('Av935#1')fi,'~'v910^b,'^D'&uf('Ag21^m#1'),'^H'&uf('Av936#1')','fi fi else if'0 P 5 1 3 9 ':v910^a then '^A'&uf('Av934#1'),if &uf('Av935#1')<>''then'~'&uf('Av935#1')fi,'~'v910^b,'^D'&uf('Ag21^m#1'),'^H'&uf('Av936#1')','fi fi else if &uf('Ag21^d#1')<>''then if v910^d=&uf('Ag21^d#1')then else if'0 P 5 1 3 9 ':v910^a then '^A'&uf('Av934#1'),if &uf('Av935#1')<>''then'~'&uf('Av935#1')fi,'~'v910^b,'^D'v910^d,'^H'&uf('Av936#1')','fi fi fi fi fi/)fi fi|d1909)), ,&uf('+7W2#'(g12/)),&uf('+7W3#'(g2^A/)),&uf('+7W8#'&uf('+1G3')),(if p(g8) then &uf('+7W7#'g8),&uf('6knj') fi),(g6/),
+
+ADD
+909
+
+(if p(v888)then '^Q'v888.4,if &umarci('2888#~')>'2'or &umarci('2888#~')='2'and &uf('G2~'&uf('G2~'v888)):S(f(val(&uf('G2~'&uf('G2~'v888))),0,0),'^')then '^F'else '^K'fi,&uf('G0~'&uf('G2~'v888)),if  &umarci('2888#~')='1'then else if  &umarci('2888#~')='2'and val(&uf('G0^'&uf('G2~'&uf('G2~'v888))))=0 then '^D' else '^K'fi,&uf('G0~'&uf('G2~'&uf('G2~'v888))),if &umarci('2888#~')='3'then '^D' &uf('G2~'&uf('G2~'&uf('G2~'v888)))fi fi fi/)
+
+DEL
+9909
+*
+
+
+DEL
+1992
+1
+
+
+DEL
+9992
+*
+
+
+UNTIL
+if v1992<>''then'1'else'0'fi
+
+
+
+// КОНЕЦ SPZGL. Списание журналов по заглавиям
+
+
+
+ADD
+1992
+
+(if p(v992)then if v992^a=&uf('Av903#1')then v992^D+|, |fi fi)
+
+
+ADD
+1993
+
+(if p(v992)then if v992^a=&uf('Av903#1')then v992^m+|, |fi fi)
+
+
+ADD
+1909
+
+(if p(g909)then g909,'^W'&uf('Av991^A#1'),if &uf('Av1992#1')<>''then'; '&uf('Av1992#1')fi,if &uf('Av991^b#1')<>''then'^P' &uf('Av991^b#1'),'^M' &uf('Av1993#1') fi fi/)
+
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+DEL
+1992
+*
+
+
+DEL
+1993
+*
+
+
+DEL
+909
+F
+(if p(v909)then if v909^h=''then '1'else'0'fi fi/)

@@ -1,0 +1,7 @@
+&uf('+7U34#'(if p(v14) then v14,'^B'&uf('Av19^b#1') fi/))/
+if val(&uf('J,B422='v19^b))>0 then 
+   if &uf('Av14#16')<>'' then 
+      &uf('7,?B422='v19^b|&uf('+7U34#'(if p(v14) then v14,'^B'&uf('Av19^b#1') fi/))|) 
+   else &uf('7,?B422='v19^b'?,@d14') 
+fi fi,
+

@@ -1,0 +1,2 @@
+,&uf('+7W6#'),if g3:'комп.'then &uf('+7W6#'f(val(&uf('G2.'g3)),0,0)),fi,
+&uf('+7W5#'(if p(v938)then if v938^q:&uf('Av991^a.4#1')and (val(v938^A)<val(&uf('Ag3#1'))or val(v938^A)=val(&uf('Ag3#1')))and (val(&uf('Ag3#1'))<val(v938^B)or val(&uf('Ag3#1'))=val(v938^B)) then  v938^e break fi fi)),  &uf('+7W5#'(&unifor('1*R;?g5#1')/)),,&uf('+7W5#'if g6=''then f(rsum((if p(g5)then &uf('G2='g5) fi/)';'),0,0) else (if p(g5)then if g5.1=&uf('Ag6#1')then &uf('G2='g5), break fi,fi/)fi),

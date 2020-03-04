@@ -1,0 +1,7 @@
+&uf('+7W18#'),&uf('+7W19#'),&uf('+7W20#'),
+if p(g24) then 
+&uf('+7W18#'(if p(g22) then if g22:&uf('Ag24#1') then g22 fi fi/)),
+&uf('+7W19#'f(rmax((g18^!|;|)),0,0)),
+&uf('+7W20#'(if p(g18) then if g18^!=&uf('Ag19#1') then g18 fi fi/)) 
+fi,
+&uf('+7U21#'(g20/)),

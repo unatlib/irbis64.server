@@ -1,0 +1,17 @@
+1
+mhr.mnu
+Место хранения филиала
+//REP
+//910
+//F
+//(if p(v910) then if v910^d='%1' then '^A',if v910^1='1'then '0^B'v910^b else 'R^B'v910^1|/|,v910^b|/|fi, else if '0 2':v910^a then '^AC^11^B'v910^b else |^A|v910^a,|^B|v910^b,|^1|v910^1 fi,fi,|^H|v910^h,|^C|v910^c,|^D|v910^d,|^U|v910^u,|^Y|v910^y fi/)
+//
+REP
+910^B
+F
+(if p(v910) then if v910^d='%1' and v910^1<>'1'then v910^1|/|,v910^b|/| else v910^b fi, fi/)
+
+REP
+910^A
+F
+(if p(v910) then if v910^d='%1' then if v910^1='1'then '0' else 'R'fi, else if '0 2':v910^a then 'C^11' else v910^a, fi,fi fi/)

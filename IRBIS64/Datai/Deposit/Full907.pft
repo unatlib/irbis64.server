@@ -1,0 +1,19 @@
+ '</>',,&uf('&')
+   '<b>История корректировок <br></b>',,,,/   
+   &uf('+7W11#',
+   (if p(v907) then |^A|v907^A,,|^B|v907^B,,|^C|v907^C,,,if v907^X<>'' then '^X',&uf('+9I!#!?</b><br>?',v907^X) fi fi/)  ),,,,,
+   &uf('+7W12#',   (if p(g11) then |^A|g11^A,,|^B|g11^B,,|^C|g11^C,,,if g11^X<>'' then '</b>^X',&uf('+9I!-!?<b> / ?',g11^X),'</b>', fi fi/)  ),,,,,   
+   &uf('+7W13#',,,
+   (if p(g12) then if g12: '907_' then &uf('+9I!907_!?<font color="red">907_<font color="black">?'g12) else g12 fi fi/) 
+   ),,,,
+   '<table border=1 cellspacing=0 >' 
+   '<tr align="center"><td><font size="2"> Этап работы<td> Пользователь <td> Дата <td> Корректировки: ','<br>',,'Время / Метка_Повторение',,,,,'</b>',   
+   (if p(g11) 
+    then 
+       '<tr>',,
+       '<td width="20%" >',,if g12^C<>'' then g12^C else ' - ' fi,,'</td>',,
+       '<td width="20%">',,if g12^B<>'' then g12^B else ' - ' fi,,'</td>',,              
+       '<td width="20%">',,if g12^A<>'' then g12^A*6.2,'.',g12^A*4.2,'.',g12^A.4 else ' - ' fi,,'</td>',,   
+       '<td width="40%">',,if g13^X<>'' then g13^X else ' - ' fi,,'</td>',,          
+    fi/),,
+ '</Table>' ,,,,,,,,,

@@ -1,0 +1,5 @@
+if v600^w<>'' then if rsum((if p(v600) then if p(v600^w) then if s(v600^a,v600^z)<>'' then '1;' else '0;' fi fi fi))>0 then 
+/'1 Поле с ^W не должно содержать ^A и ^Z ' else /'0' fi fi /
+(if p(v600) then if p(v600^z)then if a(v600^))or v600^):'605' then else if a(v600^() then /'1 не введен "Тип заглавия"'  else /'0' fi fi fi fi/)
+(if p(v600) then if p(v600^9) and val(v600^9)=0 then /'1 Роль (Инвертирование...) не число'  else /'0' fi fi/)
+(if p(v600) then if S(v600^a,v600^z,v600^w)=''then /'1 не введена персоналия/рубрика'  else /'0' fi fi/)

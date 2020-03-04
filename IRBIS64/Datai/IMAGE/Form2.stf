@@ -1,0 +1,9 @@
+Form2
+if &uf('Av907^A.4#1')=v999^a then if &uf('Av900^b#1')<>'' then &uf('Av900^b#1') else '???' fi fi
+vdu_SF.mnu
+if &uf('Av907^A.4#1')=v999^a then &uf('Av907^a*4.2#1') fi
+MONTH_SF.mnu
+4,7
+991.wss,999
+'¬вод различных видов документов по мес€цам за ', v999^A,' г.'
+1,1

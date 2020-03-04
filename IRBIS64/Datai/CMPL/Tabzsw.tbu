@@ -1,0 +1,31 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+(if p(v62) then if &unifor('Av991^a#1')=v62^b then if a(v62^g) then v62^d fi fi fi/)/
+(if p(v62) then if &unifor('Av991^a#1')=v62^b then if a(v62^g) then f(val(v62^d)*val(&unifor('Av10^d#1')' 0'),0,2) fi fi fi/)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx8353
+\pard \widctlpar\intbl {\fs20\par \qr ИТОГО : 'f(val(v1),0,0)' экз. на сумму  ',f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi,'\par \ql Наши реквизиты:',ref(1," р/с "v84^a," Кор. счет "v84^b,'\par ',"Банк: "v84^c," МФО: "v84^d,"; ИНН: "v84^e,'\par '," БИК: "v84^f,"; Код по ОКОНХ: "v84^g,'\par '," Код по ОКПО: "v84^h,"\par Директор\tab \tab \tab "v14^b,"\par Гл.бухгалтер\tab \tab \tab "v14^c),
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx5759\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7056\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8353
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Наименование издания\cell }
+\pard \qc\widctlpar\intbl {\b Кол-во экз\cell }
+\pard \qc\widctlpar\intbl {\b Сумма\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

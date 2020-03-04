@@ -1,0 +1,7 @@
+if v920:'NJ'then 
+   ref(l(|I=|v933),
+       v200^a,". "| ; |+v923^h,
+       if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi fi,v923^i,|. |v923^k,
+       if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,
+       if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n) 
+fi

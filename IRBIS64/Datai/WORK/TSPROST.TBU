@@ -1,0 +1,21 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs22\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trkeep \trhdr
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx648
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx2268
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7668
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8748
+\pard \qc\widctlpar\intbl {\b N\cell }
+\pard \qc\widctlpar\intbl {\b Шифр док-та\cell }
+\pard \qc\widctlpar\intbl {\b Краткое описание\cell }
+\pard \qc\widctlpar\intbl {\b Общее Кол-во выдач у книги\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar
+\par }

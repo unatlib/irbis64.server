@@ -1,0 +1,3 @@
+if p(v950) then '<IMG SRC=IRBIS:10,RDR,',v950,'>',
+           else if p(v953) then '<IMG SRC=IRBIS:12,RDR,',mfn,',1','>' fi,
+fi,

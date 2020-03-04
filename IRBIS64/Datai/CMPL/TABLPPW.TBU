@@ -1,0 +1,49 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[SumPage]
+20
+25
+(if p(v39) then if p(v39^a) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^a) or a(v39^a) and p(v39^b) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^b)then f((val(v39^d,if a(v39^d) then v39^c fi)*val(&unifor('Av34#1'))),0,2) fi fi)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx8353
+\pard \qr\widctlpar\intbl {  Итого по листу : 'if val(v1)>0 then f(val(v1),0,2)' '&unifor('Korg.mnu|3')'\par 'fi,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Sum]
+(if p(v39) then if p(v39^a) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^a) or a(v39^a) and p(v39^b) and &unifor('Q'&unifor('Av991^a#1'))=&unifor('Q'v39^b)then f((val(v39^d,if a(v39^d) then v39^c fi)*val(&unifor('Av34#1'))),0,2) fi fi)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx8353
+\pard \qr\widctlpar\intbl {  ИТОГО : 'if val(v1)>0 then f(val(v1),0,2)' '&unifor('Korg.mnu|3')'\par 'fi,
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1571\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4966\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15
+\cellx5819\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7086\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8353
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Индекс издания\cell }
+\pard \qc\widctlpar\intbl {\b Наименование издания\cell }
+\pard \qc\widctlpar\intbl {\b Кол. компл\cell }
+\pard \qc\widctlpar\intbl {\b Цена 1-го комплекта\cell }
+\pard \qc\widctlpar\intbl {\b Сумма\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+{}
+\par }

@@ -1,0 +1,10 @@
+[HeaderNumber]
+1
+[HeaderFormat]
+&uf('6TReadHistoryHead')
+*****
+[KeyOptions]
+200
+1
+&uf('6TReadHistorySort')
+*****

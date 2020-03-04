@@ -1,0 +1,181 @@
+1
+MoveRdr.wss
+Для переноса использовать:
+//12 PUTLOG
+// формирование полей 691 по книговыдачи из полей 40 читателей
+// 9.1 с учетом группы
+// 991^A - годы обучения
+// v991^B  - имя БД
+//Перенос данных поля 90 в поле 83 записей каталога
+// Записи каталога  - по полю 40
+// сибираю шифры записей по полю 40
+IF
+if v991^B='' then '1' fi
+PUTLOG
+'Не задано имя БД каталога!'
+FI
+IF
+if v991^B<>'' then '1' fi
+// переношу, если студент заданного года обучения или годы не заданы
+IF
+if v991^A='' or v90: s('^0',v991^A) then '1' fi
+DEL
+1040
+*
+
+
+ADD
+1040
+
+&uf('+7W5#'),(if p(v40) then if &uf('+97',v40^G)=&uf('+97',&uf('Av991^B#1')) then v40^A fi fi/)
+
+//-------шифры в переменную G5
+IF
+if p(v1040) then '1' fi
+REPEAT
+ADD
+1040
+
+&uf('+7U5#',&uf('Av1040#1'))
+
+DEL
+1040
+1
+
+
+UNTIL
+if p(v1040) then '1' fi
+FI
+//---------по шифру в запись каталога --------------
+IF
+if p(G5) then '1' fi
+DEL
+1040
+*
+
+
+ADD
+1040
+
+(G5/)
+
+REPEAT
+CORREC
+v991^B
+(v90/)
+'I=',&uf('Av1040#1')
+
+// в поле 691 с проверкой но дубль
+DEL
+1002
+*
+
+
+ADD
+1002
+
+mpu,(v1001/),&uf('+7W7#')
+
+REPEAT
+IF
+if p(v691) then '1' fi
+ADD
+691
+
+(if p(v691) then if &uf('+97',v691^A)=&uf('Av1002^A#1') and &uf('+97',v691^V)=&uf('Av1002^V#1') and &uf('+97',v691^O)=&uf('Av1002^O#1') and &uf('+97',v691^N)=&uf('Av1002^N#1') and &uf('+97',v691^C)=&uf('Av1002^C#1') and val(v691^A)=val(&uf('Av1002#1')) then  else &uf('+7W7#1'),&uf('Av1002#1') fi fi/)
+
+FI
+IF
+if a(v691) then '1' fi
+ADD
+691
+
+&uf('Av1002#1'),&uf('+7W7#1')
+
+FI
+DEL
+1002
+1
+
+
+UNTIL
+if p(v1002) then '1' fi
+IF
+if G7<>'' then '1' fi
+PUTLOG
+mhl,'Откорректирована запись MFN=',f(val(mfn),0,0),' (',v1001,')'
+FI
+DEL
+1001
+*
+
+
+END
+DEL
+1040
+1
+
+
+UNTIL
+if p(v1040) then '1' fi
+FI
+// по полю 90 создаю запись контингента в VUZ
+DEL
+1090
+*
+
+
+ADD
+1090
+
+(v90/)
+
+IF
+if p(v1090) then '1' fi
+REPEAT
+IF
+if val(&uf('IMAIN,LinkGroup,0'))=1 then if v1090^E<>'' and val(&uf('JVUZ,VGR=',v1090^E))<=0 then '1' fi else if val(&unifor('JVUZ,!',&uf('Av1090^A#1'),if &uf('Av1090^C#1')<>'' then &uf('Av1090^C#1') else &uf('Av1090^N#1') fi,,&uf('Av1090^V#1'),,,&uf('Av1090^O#1'),'-S',&uf('Av1090^F#1')))<=0 then '1' fi fi
+// еще нет такой записи
+NEWMFN
+'VUZ'
+ADD
+920
+
+'VUZ'
+
+ADD
+68
+
+if &uf('Av1090^A#1')<>'' then '^A',&uf('Av1090^A#1') fi,,,if &uf('Av1090^V#1')<>'' then '^V',&uf('Av1090^V#1') fi,,,if &uf('Av1090^O#1')<>'' then '^O',&uf('Av1090^O#1') fi,,,if &uf('Av1090^N#1')<>'' then '^N',&uf('Av1090^N#1') fi,,,if &uf('Av1090^C#1')<>'' then '^C',&uf('Av1090^C#1') fi,,,if &uf('Av1090^E#1')<>'' then '^E',&uf('Av1090^E#1') fi,,,if &uf('Av1090^F#1')<>'' then '^F',&uf('Av1090^F#1') fi
+
+PUTLOG
+mhl,'Создана запись VUZ - ',v68
+END
+DEL
+1090
+1
+
+
+UNTIL
+if p(v1090) then '1' fi
+FI
+FI
+DEL
+1090
+*
+
+
+DEL
+1040
+*
+
+
+// конец студента заданного года 
+FI
+// конец v991^B<>''
+FI
+DEL
+991
+*
+
+

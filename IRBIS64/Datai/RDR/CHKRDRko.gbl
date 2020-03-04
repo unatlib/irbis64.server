@@ -1,0 +1,61 @@
+0
+//12 PUTLOG
+// 7.1 проверка записей RDR по полям 69
+// определяю поле для сообщений 
+// проверка непустого идентификатора 
+IF
+if a(v30) and a(v24) then '1' else '0' fi
+PUTLOG
+'Не задан идентификатор студента. MFN=',f(val(mfn),0,0)
+FI
+IF
+if p(v30) or p(v24) then '1' else '0' fi
+IF
+if p(v90) and a(v90^U) and a(v69) then '1' else '0' fi
+PUTLOG
+v30,': нет данных о дисциплинах (',v90^A,'-',v90^N,'-',v90^C,'-',v90^O,'-',v90^V,'-','-S',v90^f,')'
+FI
+// проверка - есть факультет, спец., напр., ФО в БД VUZ
+DEL
+1090
+*
+
+
+ADD
+1090
+
+(v90/)
+
+REPEAT
+IF
+if &uf('Av1090^A#1')<>'' and val(&uf('JVUZ,DISCFAK=',&uf('Av1090^A#1')))<=0 then '1' fi
+PUTLOG
+v30,': В БД VUZ нет факультета ',&uf('Av1090^A#1')
+FI
+IF
+if &uf('Av1090^C#1')<>'' and val(&uf('JVUZ,DISCS=',&uf('Av1090^C#1')))<=0 then '1' fi
+PUTLOG
+v30,': В БД VUZ нет специальности ',&uf('Av1090^C#1')
+FI
+IF
+if &uf('Av1090^N#1')<>'' and val(&uf('JVUZ,DISCNPR=',&uf('Av1090^N#1')))<=0 then '1' fi
+PUTLOG
+v30,': В БД VUZ нет направления ',&uf('Av1090^N#1')
+FI
+IF
+if &uf('Av1090^O#1')<>'' and val(&uf('JVUZ,DISCFO=',&uf('Av1090^O#1')))<=0 then '1' fi
+PUTLOG
+v30,': В БД VUZ нет формы обучения ',&uf('Av1090^O#1')
+FI
+DEL
+1090
+1
+
+
+UNTIL
+if p(v1090) then '1' fi
+DEL
+1090
+*
+
+

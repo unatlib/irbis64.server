@@ -1,0 +1,31 @@
+if s(v910^c,v993)<>''then  
+   if v910:'^a0'or 
+      rsum((if v910^a:'U'then 
+               if p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 
+                  or a(v910^2)then'1;'fi fi'<br>'))>0 then 
+      "Свободные экземпляры:"d910, 
+     (if p(v910) then 
+         if v910^a:'0' then '<br>',v910^b,| (|v910^h|)|,| - |v910^d fi, 
+         if v910^a:'U' then 
+            if p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 or a(v910^2)then 
+               '<br>',v910^b| (|,if a(v910^b)then v910^h| (| fi, 
+               f(val(v910^1,|1|n910^1)-val(v910^2),0,0),' экз.', 
+               if s(v910^b,v910^h)<>''then')'fi,| - |v910^d 
+      fi fi fi) 
+   else 
+      if v910:'^A1'or v910:'^AU'then' Свободных экземпляров нет <br>' 
+      else 
+         if v910:'^AC'then' <b>Издание есть только в отделениях</b><br>' 
+         else 
+            if p(v993) then' <b>Есть только копии издания:</b><br>' 
+               (|<br>|+v993^a,| Шифр |v993^b,| (|v993^d|)|), 
+            else 'Нет экземпляров для выдачи:' 
+               (if v910^a:'3'then|<br>экз.|v910^b,|(|v910^d|)|,' в переплете'fi, 
+                if v910^a:'4'then|<br>экз.|v910^b,|(|v910^d|)|,' утерян'fi, 
+                if v910^a:'5'then|<br>экз.|v910^b,|(|v910^d|)|,' временно не выдается 
+' fi,   if v910^a:'6'and a(v910^w) then|<br>экз.|v910^b,|(|v910^d|)|, 
+' списан' fi,   if v910^a:'8'then|<br>экз.|v910^b,|(|v910^d|)|,' поступил, но 
+еще не дошел до места хранения'fi) 
+   fi fi fi fi 
+else if v920.1:'J' or v920.1:'A' then else 'нет сведений об экземплярах <br>' 
+fi   fi 

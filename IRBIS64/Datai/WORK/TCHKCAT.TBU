@@ -1,0 +1,27 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trkeep \trhdr 
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx391
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1525
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3226
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6628
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8329
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10030
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15133
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 N\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 БД каталога\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 MFN\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 Шифр\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 Инв.номер/Штрих-код\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 MFN читателя\b0 \cell }
+\pard \qc\widctlpar\intbl {\qc \f4\b \fs20 Сообщение\b0 \cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar
+\par }

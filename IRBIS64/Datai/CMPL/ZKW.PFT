@@ -1,0 +1,88 @@
+'{',
+   '\b \tab 'v700^a,", "v700^g,if a(v700^g) then" "v700^b fi,
+   if s(v700v970v701)<>''then'\par \tab 'fi,
+   v200^a," "v200^v,'\b0 '(|. |v922^c,|/ |v922^f),|=|v510^d,|: |v200^e,
+   |. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l,
+   if p(v700) and v200^f:v700^a or a(v700) and v200^f:&unifor('Av701^a#1') 
+   then "/ "v200^f 
+   else 
+      if s(v700v701)<>''then'/ ',v700^b,
+         if v700^b"!":'.!'then else" "d700^b fi,v700^a,", "v970^b,
+         if v970^b"!":'.!'then else" "d970^b fi,v970^a,
+         if p(v700) then ", "d701 fi, 
+            if &unifor('Av701#5')<>''then &unifor('S0'),
+               (if p(v701) then if &unifor('S1A')>'3' then else
+                   if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b,
+                      if a(v701^b)then| |v701^g fi 
+                   else|, |+d701,v701^b| |,
+                      if a(v701^b)then v701^g| | fi,v701^a,| |v701^d 
+                fi fi fi),
+               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' и  др',"."d200^g 
+               else ' et al',"."d200^g fi 
+            else 
+               (if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b,if a(v701^b)then| |v701^g fi 
+                else|, |+d701,v701^b| |,
+                   if a(v701^b)then v701^g| | fi,v701^a,| |v701^d 
+                fi),
+            fi,
+         if s(v700v701)<>''then"; "d702 fi,(|, |+v702^4*4,
+         if p(v702^9)then| |v702^a,| |v702^d,| |v702^b,if a(v702^b)then | |v702^g fi 
+         else| |v702^b| |,
+            if a(v702^b)then| |v702^g| | fi,v702^a,| |v702^d 
+         fi) 
+   fi fi,|; |v200^g,". -"v205^a
+   if p(v205^a)then"/ "v205^c else". -"v205^c fi,
+    ". -Б.м."n210^a,(". -"|; |+v210^a,|; |v210^x,|; |v210^y,|: |v210^c,),", Б.г."n210^d,", "v210^d,"-"v210^e
+   ,".-"v215^a,| |d215^1,&unifor('G2='v215^1),
+   if a(v215^1)then 
+      if v215^a:'с'or v215^a:'p'then else 
+         if p(v215^a) then &unifor('Korg.mnu|4') fi, 
+         if s(v215^c,v216^d,v215^e)<>'' then "."d215^a fi,
+   fi fi,
+   " :"v215^c,"; "v215^d," +"v215^e," "v215^2,(|. -(|d225,v225^a,| / |v225^f,
+   |, ISSN |v225^x,|; |v225^v,|)|d225/),
+   ".-ISBN "v10^a,". -ISSN "v11^a,
+   if val(v10^d)<>0 then". -Цена:"v10^d,v10^c,
+      if a(v10^c)then &unifor('Korg.mnu|3') fi 
+   else". -"v10^d
+   fi,", Б.ц"n10^d,
+   "\par Автор заказа:"d40^a,(|; |+v40^a,|, приоритет:|v40^c,| (|v40^e|экз.)|),
+   "\par Источник информации: "d40^t,v40^t,", "v40^d,", "v40^g,
+   "\par \b Заказ:\b0 \par "d30,
+   (if p(v30)then 
+       if p(v30^a)then'\b  N 'v30^b': 'v30^a'\b0 : 'v30^c*6.2'.'v30^c*4.2'.'
+          v30^c.4' - 'v30^d'экз.'fi,
+       if p(v30^u)then'\par \tab \tab Исполнение: '
+          ref(l(|KSU=|v30^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4)
+          ' - 'v30^g'экз.'fi,
+    fi),"\par "d31,
+    (if p(v31)then 
+       if p(v31^a)then'\b  N 'v31^b': 'v31^a'\b0 : 'v31^c*6.2'.'v31^c*4.2'.'
+          v31^c.4' - 'v31^d'экз.'fi,
+       if p(v31^u)then'\par \tab \tab Исполнение: '
+          ref(l(|KSU=|v31^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4)
+          ' - 'v31^g'экз.' fi,
+    fi),"\par "d32,
+    (if p(v32)then 
+        if p(v32^a)then'\b  N 'v32^b': 'v32^a'\b0 : 'v32^c*6.2'.'v32^c*4.2'.'
+           v32^c.4' - 'v32^d'экз.'fi,
+        if p(v32^u)then'\par \tab \tab Исполнение: '
+           ref(l(|KSU=|v32^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4)
+           ' - 'v32^g'экз.' fi,
+     fi),
+     if v910^a:'0' or v910^a:'U' or v910^a:'C' then '\par \b Получены экземплры:\b0 '
+        (if p(v910^a)then 
+            if'2 6 7':v910^a then else '\par  'v910^d,' (',
+                 ref(l(|ksu=|v910^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4'г.,'),
+                 | Инв.|v910^b,|(|v910^1|экз.)|,|, Акт.N |v910^y,|, N КСУ |v910^u,
+                 ', Цена 'v910^e,
+               if a(v910^e)then &unifor('Av10^d#1') fi
+               if p(v910^e) or val(&unifor('Av10^d#1'))>0 then &unifor('Av106c#1'),
+                  if &unifor('Av10^c#1')='' then &unifor('Korg.mnu|3') 
+               fi fi ')' 
+         fi fi), 
+     fi,
+     if v910^a:'2' then '\par \b Заказаны экземплры дл отделов:\b0   '
+        (if v910^a:'2'then v910^d,| (|v910^1| экз.)|,mpl,v910.1+|, |,mpl,fi),
+     fi,'\par ------------------------------------------------------\par \par '
+'}'

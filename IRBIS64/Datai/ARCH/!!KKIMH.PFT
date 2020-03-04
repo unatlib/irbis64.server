@@ -1,0 +1,7 @@
+'\pard \fs16\tx1239 ',&unifor('MI910^DB'),&unifor('S0'),
+'\fs20'&unifor('Av910^d#1'),'\fs16'
+(if p(v910^d) then 
+    if v910^d=&unifor('Av910^d#'f(val(&unifor('S1A'))-1,0,0)) then 
+    else |\par \fs20|v910^d|\fs16|  
+    fi,| - |v910^b,|(|v910^1|)|,
+fi)

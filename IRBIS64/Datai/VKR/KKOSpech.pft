@@ -1,0 +1,13 @@
+'{',
+if a(v991) or &uf('Av991^z.1#1'):' ' then 
+   '\par \b \fs24 Обеспеченность литературой по специальностям  ',
+   ' ('&uf('32')'.'&uf('31'),'.',&uf('30'),if v991^d<>'' then '-' ,&uf('Av991^d#1') fi,')',
+   if v991^o<>'' then '\par Для формы обучения "',&uf('Av991^O#1'),'"' else 
+   '\par Для всех форм обучения ' fi,'\b0 '
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 
+      '\par \qc (Данные для осенних семестров из архивных полей)' fi 
+   if v991^!<>'' then '\par \qc (Уточненные данные не рассчитываются)'fi,
+else &uf('Av991^z#1') 
+fi,'\fs20 \par \par '
+'}'

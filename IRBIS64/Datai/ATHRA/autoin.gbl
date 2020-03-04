@@ -1,0 +1,113 @@
+0
+ADD
+510^3
+F
+(if p(v510) then if a(v510^3)then v510^a.1,&unifor('R9') else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+710^3
+F
+(if p(v710) then if a(v710^3)then v510^a.1,&unifor('R9') else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if s(v510)<>'' or s(v710)<>'' then if a(v905^7) and &unifor('IPRIVATE,ATHA,')=''then '1' else '0' fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+(v510/v710/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+NEWMFN
+if &unifor('Av1002#1'):'^A'then if &unifor('JATHRA,','!',if &unifor('Av1002^a*23.1#1')<>''then &unifor('B'&unifor('Av1002^a#1')) else &unifor('Av1002^a#1') fi,if &unifor('Av1002#1'):'^G'then &unifor('B'&unifor('Av1002^G#1')) else &unifor('Av1002^b#1') fi,&unifor('Av1002^1#1'),&unifor('Av1002^d#1'),&unifor('Av1002^F#1'),if &unifor('Av1002#1'):'^C'then &unifor('B'&unifor('Av1002^C#1')) fi,if &unifor('Av1002#1'):'^A' then '?'fi)=''then 'ATHRA' else fi fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^A'then '^A',&unifor('Av1002^A#1')fi,if &unifor('Av1002#1'):'^B'then '^B',&unifor('Av1002^B#1') fi,if &unifor('Av1002#1'):'^G'then '^G',&unifor('Av1002^G#1') fi,if &unifor('Av1002#1'):'^1'then '^1',&unifor('Av1002^1#1')fi,if &unifor('Av1002#1'):'^C'then '^C',&unifor('Av1002^C#1')fi,if &unifor('Av1002#1'):'^D'then '^D',&unifor('Av1002^D#1')fi,if &unifor('Av1002#1'):'^8'then '^8',&unifor('Av1002^8#1')fi,if &unifor('Av1002^9#1')<>''then '^9',&unifor('Av1002^9#1') fi,if &unifor('Av1002#1'):'^F'then '^F',&unifor('Av1002^F#1')fi,if &unifor('Av1002#1'):'^<'then '^<',&unifor('Av1002^<#1')fi,if &unifor('Av1002#1'):'^3'then '^3'&unifor('Av1002^3#1')fi,if &unifor('Av1002#1'):'^:'then '^:',&unifor('Av1002^:#1')fi,
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1002#1'):'^3'then &unifor('Av1002^3#1')fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3')
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+'ATHRA'
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1002
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1002) then '1' else '' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+210^<
+*
+if p(v210) then if v210^A:' ' and (not(v210^a:',')) and  a(v210^<) and (p(v210^b)or p(v210^G))then ,aaa, fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+410^<
+*
+if p(v410) then if v410^A:' ' and (not(v410^a:',')) and a(v410^<) and (p(v410^b)or p(v410^G)) then ,aaa, fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+510^<
+*
+if p(v510) then if v510^A:' ' and (not(v510^a:',')) and a(v510^<) and (p(v510^b)or p(v510^G))then ,aaa, fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+710^<
+*
+if p(v710) then if v710^A:' 'and (not(v710^a:',')) and a(v710^<) and (p(v710^b)or p(v710^G))then ,aaa, fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else '^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+903
+XXXXXXXXXXXXXXXXXXX
+IF A(V903) THEN v210^a.1,&UNIFOR('R9') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+if a(v801)then '^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+210^3
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

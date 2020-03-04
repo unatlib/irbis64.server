@@ -1,0 +1,5 @@
+test_ibf.wss
+SEARCH "NKSU=%1"
+GLOBAL test_ibf
+OPERANDSEP ;
+PRINT 0;test_ibf;;;Ёкземпл€ры, поступившие по  —” %1, дл€ которых место хранение %2 заменено на %3 <table border=1>;;1/c:\irbiswrk\test.htm

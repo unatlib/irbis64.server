@@ -1,0 +1,37 @@
+(if p(v62) then if p(v62^6) and a(v62^C) then /'2 Не введена дата заказа' break fi fi/)/
+(if p(v62) then if p(v62^6) and a(v62^E) then /'2 Не введено количество заказанных' break fi fi/)/
+(if p(v62) then if p(v62^G) and val(v62^G)=0 then /'2 Неверное количество поступивших' break fi fi/)/
+(if p(v62) then 
+    if p(v62^n) then 
+       if p(v62^n) then 
+          if val(v62^n)>0 then 
+             if &unifor('G1#'v62^n):',' or &unifor('G1#'v62^n):'=' or 
+                &unifor('G1#'v62^n):'-' or &unifor('G1#'v62^n):'\' or &unifor('G1#'v62^n):'ю'
+             then /'1 Ошибка: нарушена стуктура данных ЦЕНА "NNNN.NN"  'v62^n 
+    fi fi fi fi, 
+    if p(v62^p) then 
+       if p(v62^p) then 
+          if val(v62^p)>0 then 
+             if &unifor('G1#'v62^p):',' or &unifor('G1#'v62^p):'=' or 
+                &unifor('G1#'v62^p):'-' or &unifor('G1#'v62^p):'\' or &unifor('G1#'v62^n):'ю'
+             then /'1 Ошибка: нарушена стуктура данных ЦЕНА "NNNN.NN"  'v62^p 
+    fi fi fi fi,
+    if p(v62^s) then 
+       if p(v62^s) then 
+          if val(v62^s)>0 then 
+             if &unifor('G1#'v62^s):',' or &unifor('G1#'v62^s):'=' or 
+                &unifor('G1#'v62^s):'-' or &unifor('G1#'v62^s):'\' or &unifor('G1#'v62^n):'ю'
+             then /'1 Ошибка: нарушена стуктура данных ЦЕНА "NNNN.NN"  'v62^s 
+    fi fi fi fi,
+    if p(v62^r) then 
+       if p(v62^r) then 
+          if val(v62^r)>0 then 
+             if &unifor('G1#'v62^r):',' or &unifor('G1#'v62^r):'=' or 
+                &unifor('G1#'v62^r):'-' or &unifor('G1#'v62^r):'\' or &unifor('G1#'v62^n):'ю'
+             then /'1 Ошибка: нарушена стуктура данных ЦЕНА "NNNN.NN"  'v62^r 
+    fi fi fi fi 
+fi/), 
+if v920: 'SZ' 
+then 
+    (if p(v62) then if val(&uf('J,SORZ=',v62^K,|!|v62^6))>1 then /'1 Ошибка: уже есть организация-заказ ',,,v62^K,|-|v62^6 break fi fi/) 
+fi,,

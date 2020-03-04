@@ -1,0 +1,9 @@
+(if p(v454) then 
+    if a(v454^u) then 
+       if p(v454^1) then '. - ','<b> '&unifor('Kvdn454.mnu|'v454^1)'</b> ' else '. - <b> Пер. изд. : </b> '  
+       fi,v454^a,| : |v454^6,| / |v454^7,
+       if a(v454^7) and s(v454^b,v454^d)<>'' then ' / ',o4547,fi 
+       if p(v454^1) then &unifor('Kvdk454.mnu|'v454^1) fi,| // |v454^2,|. - |v454^p,|. - |v454^g,
+       if p(v454^g) then|, |v454^h else|. - |v454^h fi,|. - |v454^3,
+       if p(v454^3) then|, |v454^4 else|. - |v454^4 fi,|. - |v454^5 
+ fi fi)

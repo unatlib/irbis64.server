@@ -1,0 +1,12 @@
+,&uf('+7W4#'), &uf('+7W2#'),&uf('+7W3#'),
+if v702^4<>'' then &uf('+7U3#'(if p(v702)then v702^4*4,|, |v702^5*4,|, |v702^6*4 fi/))fi, &uf('+7W3#'&uf('+1I'(g3/))), (if p(g3)then &uf('+7W1#'g3),&uf('6702rr')fi),
+(if p(g4)then | ; |+g4^!,if val(g4^$)>1 then ':'fi ,if a(g4^!)then ','fi,' ', if p(g4^9)then g4^a,| |g4^d,| |g4^b, 
+                            if a(g4^b)then| |g4^g fi 
+                         else 
+                            if g4^b:'. 'or g4^b:'-' then g4^b else 
+                               if g4^b:'.'then &unifor('G0.'g4^b),'.' 
+                                  if &unifor('G2.'g4^b):'.' then ' ' fi,&unifor('G2.'g4^b) else g4^b fi 
+                            fi, 
+                            if a(g4^b)then g4^g fi,| |g4^a,| |g4^d,| (|g4^7|)|, 
+                      fi ,g4^+,fi)
+

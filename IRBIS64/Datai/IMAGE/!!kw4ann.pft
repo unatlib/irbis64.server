@@ -1,0 +1,4 @@
+if s(v905^g)<>''or &unifor('IPRIVATE,KKA,')<>''or 
+   s(v905^g)=''and &unifor('IPRIVATE,KKA,')=''and s(v900^c,v900^2,v900^3,v900^4):'b' 
+then '   ',mhl,(|<br>|+v331),mpl,'<br>'
+fi,

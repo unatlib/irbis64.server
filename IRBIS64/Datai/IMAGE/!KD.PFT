@@ -1,0 +1,57 @@
+mhl,
+if p(v200) and a(v981) and a(v463) THEN 
+   if L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+         if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+         if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a) <=0 
+   or val(ref(l('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+         if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+         if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),mfn))
+      =val(mfn) 
+   then/'0' 
+   else 
+      if v920:'PAZK'or v920:'PVK' then  
+         if  
+               ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                      if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                      if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                      v215^a),v10^a)<>v10^a 
+         or    ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                      if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                      if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                      v215^a),v19)<>v19 
+         or    ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                      if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                      if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                      v215^a),v215^1)<>v215^1 
+         then/'0'
+         else/'1Дублетное описание:       ',v210^d*2.2,v700^a.9,
+                      &unifor('B'v710^a" ",v200^a),v215^a,
+                      if v215^1.2:'='then v215^1*2 else v215^1 fi,
+                      " ISBN "d10^a,&unifor('Av10^a#1'),if v19^x:'0'then', Ид.Ном. 'fi,
+                      (if v19^x:'0'then v19^a*2| |,v19^b fi), 
+                      ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+                      if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                      if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                      v215^a),' (см. N ',f(val(mfn),0,0),')')
+         fi 
+      else 
+         if v920='J'then/'2Дублетное описание:       ',
+               v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+               " Шифр "v903,
+               ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),
+               ' (см. N ',f(val(mfn),0,0),')') 
+         else/'1Дублетное описание:       ',
+               v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+               ref(L('!'v210^d*2.2,v700^a.9,&unifor('B'v710^a" ",v200^a),
+               if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+               if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),
+               ' (см. N ',f(val(mfn),0,0),')')
+   fi fi fi 
+else/'0' fi,
+mpl,

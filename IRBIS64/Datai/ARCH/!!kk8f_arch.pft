@@ -1,0 +1,50 @@
+mhl, 
+'\b ',"\par "v503^a". ",
+if p(v461) then '\par 'v461^x, 
+   if v461^x:','then'.'fi,|\par |v461^b|. |,'\b0 ', 
+   if s(v503,v981,v461^x,v461^b)='' then |\b |v461^c|\b0 | else v461^c fi,| [|v461^2|]|, 
+   if a(v461^2) then &unifor('+1W1'''), 
+      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
+      if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
+      if a(v900^t) then 
+         if s(v230v337v135)<>''then 
+            if &unifor('+1R1')<>''then <>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+         else 
+            if s(&unifor('IPRIVATE,KKS,'),v905^t)<>'' then else 
+               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+   fi fi fi fi,
+   if &uf('Av905^5#1')='' then 
+   if p(v461^e) and &uf('Av905^t#1')='' then ' : ', 
+      if s(&uf('Av982^0#1'),&uf('Av982^9#1'))<>'' or &uf('Av905^2#1'):'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 
+      or &unifor('Kjznv.mnu\'&unifor("Av101#1"d903))<>'' 
+      then v461^e 
+      else &unifor('Q'v461^e.1),v461^e*1 fi 
+   fi fi,
+   if a(v210^d)then". - "v461^h, 
+      if p(v461^h) then 
+         if p(v461^z) and v461^h=v461^z then else ' - 'v461^z fi,"    "n461^z 
+   fi fi, 
+   "\par \b "d200,if p(v200^v)then v200^v"\b0 "," : "v200^a else v200^a"\b0 " fi, 
+fi, 
+if a(v461) then '\par ',ozboz_arch, 
+   if &uf('Av905^5#1')='' then " : "d200^e, 
+      if s(v982^0,v982^9)<>'' then v200^e, 
+      else 
+         if v905^2:'1' or &unifor('Q'v200^e*1.1)<>v200^e*1.1 
+         then v200^e else &unifor('Q'v200^e.1),v200^e*1 fi, 
+   fi fi, 
+   (if p(v923) then", "| ; |+d923,v923^h, 
+       if p(v923^h)then|. |d923^i fi,v923^i, 
+       if s(v923^k,v923^l)<>''then'. 'fi,v923^k, 
+       if p(v923^k)then|. |d923^l fi,v923^l 
+   fi) 
+fi,
+if a(v461) then,ospec_arch,fi,ofizxar, 
+". - "d210^a,&unifor('Av210^a#1'), 
+if a(v210^a)then|. - |v461^d fi, 
+if p(v461)then if p(v210^a)then", "v210^d else". - "v210^d fi 
+else 
+   if a(v463) then", б.г."n210^d fi,", "v210^d 
+fi,"-"v210^e,if v920='J'then "-    "n210^e fi, 
+&unifor('!'), 
+

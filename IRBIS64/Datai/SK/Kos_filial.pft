@@ -1,0 +1,37 @@
+&uf('+7W49#'),&uf('+7W50#'),&uf('+7W51#'),&uf('+7W52#'),
+&uf('+7G'&uf('+7W49#'(if p(v691) then if p(v691^l) and p(v691^9) then v691^l,|^9|v691^9 fi fi/))),
+&uf('+7G'&uf('+7W50#'(if p(v691) then if p(v691^l) and p(v691^0) then v691^l,|^0|v691^0 fi fi/))),
+if p(g35) then 
+   'ВС : Студентов - '
+   &uf('+7W51#'
+   (if p(g49) then 
+       if &uf('+97'&uf('G0^'g49))=&uf('+97'&uf('Ag35#1')) then 
+          &unifor(|DVUZ,"!|g49^9|",(if p(v68) then if v68^l:&uf('Ag35#1') then if &uf('Ksemv.mnu\'v68^f)<>'' then v68^Z ';'fi fi fi)|) 
+    fi fi)),f(rsum((g51|;|)),0,0),
+   ',  Экз. - 'f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi)),0,0)       
+   '\b ,   ККО\b0  - ' 
+   if val(g51)>0 then 
+      f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi))/rsum((g51|;|)),0,2) 
+   fi '\par '      
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+      &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 
+      (if p(v692) then 
+          if v692^b:s(f(val(&uf('30'))-1,0,0)'/') then 
+             if &uf('+97'v692^L)=&uf('+97'&uf('Ag35#1')) then 
+             'ОС : Студентов - 'v692^e,
+             ',  Экз. - 'v692^d,
+             '\b ,   ККО\b0  - 'v692^f,
+       fi fi fi)   
+   else 
+      'ОС : Студентов - '
+         &uf('+7W52#'
+         (if p(g50) then 
+             if &uf('+97'&uf('G0^'g50))=&uf('+97'&uf('Ag35#1')) then 
+                &unifor(|DVUZ,"!|v691^0|",(if p(v68) then if v68^l:&uf('Ag35#1') then if &uf('Ksemo.mnu\'v68^f)<>'' then v68^Z ';'fi fi)|) 
+          fi fi/)),f(rsum((g52|;|)),0,0)
+      ',  Экз. - 'f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi)),0,0)
+      '\b ,   ККО\b0  - ' 
+         if val(g52)>0 then 
+            f(rsum((if p(v910) then if &uf('+97'v910^d)=&uf('+97'&uf('Ag35#1')) then v910^1';' fi fi))/rsum((g52|;|)),0,2) 
+         fi 
+fi fi ,

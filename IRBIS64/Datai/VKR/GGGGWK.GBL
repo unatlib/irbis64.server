@@ -1,0 +1,21 @@
+0
+REP
+910^C
+F
+(if v910^c.1='9'then |19|v910^c else if v910^c.1='0'then |20|v910^c else v910^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+937^B
+F
+(if v937^b.1='9'then |19|v937^b else if v937^b.1='0'then |20|v937^b else v937^b fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+937^D
+F
+(if v937^d.1='9'then |19|v937^d else if v937^d.1='0'then |20|v937^d else v937^d fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+907^A
+F
+(if v907^a.1='9'then |19|v907^a else if v907^a.1='0'then |20|v907^a else v907^a fi fi/)
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,6 @@
+&uf('6exit0_cee')
+if a(v999) 
+    then '<br><b><font style="color: #FF0000">Выход зафиксирован',". "g1100,'</font></b><br>' 
+    else '<br><b><font style="color: #FF0000">Выход НЕ зафиксирован!</font></b><br>'
+fi 
+&uf('6rdrw_html_dolg'),

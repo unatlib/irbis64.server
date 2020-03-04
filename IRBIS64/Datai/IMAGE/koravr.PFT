@@ -1,0 +1,87 @@
+if p(v691) then 
+   if rsum((if p(v691) then 
+               if &unifor('Pv691^0')<>'' 
+               then 
+                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                     &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                     &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                  else 
+                     &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                  fi 
+               fi';' 
+            fi))=0 
+   and 
+      rsum((if p(v691) then 
+               if &unifor('Pv691^9')<>'' 
+               then 
+                  if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                     &unifor('JRDR,','UPS='&unifor('Pv691^9'))'; ' 
+                     &unifor('JRDR,','?',&unifor('Pv691^9'))'; ' 
+                     &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^9')))';' 
+                  else 
+                     &unifor('DVUZ,"!',&unifor('Pv691^9'),'",v68^Z')';' 
+                  fi 
+               fi';' 
+            fi))=0 
+   then '0' 
+   else 
+      if a(v910) and p(v951) then '1' 
+      else f(ravr(if rsum((if p(v691) then 
+                              if &unifor('Pv691^0')<>'' 
+                              then 
+                                 if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                    &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                    &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                 else 
+                                    &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                 fi 
+                              fi';' 
+                           fi))=0 
+                  then '0'  
+                  else f(rsum((if p(v910^c) then 
+                                  if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                     if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                               fi fi fi))/ 
+                         rsum((if p(v691) then 
+                                  if &unifor('Pv691^0')<>'' 
+                                  then 
+                                     if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                        &unifor('JRDR,','UPS='&unifor('Pv691^0'))'; ' 
+                                        &unifor('JRDR,','?',&unifor('Pv691^0'))'; ' 
+                                        &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^0')))';' 
+                                     else 
+                                        &unifor('DVUZ,"!',&unifor('Pv691^0'),'",v68^Z')';' 
+                                     fi 
+                               fi fi)),0,2) 
+                  fi ';' 
+                  if rsum((if p(v691) then 
+                              if &unifor('Pv691^9')<>'' 
+                              then 
+                                 if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                    &unifor('JRDR,','UPS='&unifor('Pv691^9'))'; ' 
+                                    &unifor('JRDR,','?',&unifor('Pv691^9'))'; ' 
+                                    &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^9')))';' 
+                                 else 
+                                    &unifor('DVUZ,"!',&unifor('Pv691^9'),'",v68^Z')';' 
+                                 fi 
+                           fi fi))=0 
+                  then '0' 
+                  else f(rsum((if p(v910^c) then 
+                                  if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                                     if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                               fi fi fi))/ 
+                         rsum((if p(v691) then 
+                                  if &unifor('Pv691^9')<>'' 
+                                  then 
+                                     if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+                                        &unifor('JRDR,','UPS='&unifor('Pv691^9'))'; ' 
+                                        &unifor('JRDR,','?',&unifor('Pv691^9'))'; ' 
+                                        &unifor('JRDR,',&unifor('G2*'&unifor('Pv691^9')))';' 
+                                     else 
+                                        &unifor('DVUZ,"!',&unifor('Pv691^9'),'",v68^Z')';' 
+                                     fi 
+                               fi fi)),0,2) 
+                  fi';'),0,2) 
+fi fi fi, 

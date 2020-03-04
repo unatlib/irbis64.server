@@ -1,0 +1,81 @@
+    if a(v454^7)then 
+       if p(v454^d) then 
+          if p(v454^x) then 
+             if v454^x:'1' then v454^d 
+             else 
+                if &unifor('F'v454^x,v454^d)<>'' then 
+                   if &unifor('F'v454^x,v454^d):'. ' then &unifor('F'v454^x,v454^d) else 
+                      if &unifor('F'v454^x,v454^d):'.' 
+                      then &unifor('G0.'&unifor('F'v454^x,v454^d)),'.' 
+                         if &unifor('G2.'&unifor('F'v454^x,v454^d)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v454^x,v454^d)) 
+                      else &unifor('F'v454^x,v454^d) fi 
+                   fi 
+                fi,' '&unifor('G0,'&unifor('E'v454^x,v454^d)) 
+             fi 
+          else 
+             if v454^d:', ' then &unifor('G2 'v454^d)' '&unifor('G0,'v454^d)  
+             else 
+                if v454^d:' 'then 
+                   if &unifor('G2 'v454^d):'.'then 
+                      if &unifor('G2 'v454^d):'. ' then &unifor('G2 'v454^d) 
+                      else &unifor('G0.'&unifor('G2 'v454^d)),'.' 
+                         if &unifor('G2.'&unifor('G2 'v454^d)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v454^d)) 
+                      fi 
+                   else &unifor('G2 'v454^d) 
+                   fi,' '&unifor('G0,'&unifor('G0 'v454^d)) 
+                else v454^d    
+          fi fi fi 
+          if p(v454^e) then ', ' 
+             if p(v454^<) then 
+                if v454^<:'1' then v454^e 
+                else 
+                   if &unifor('F'v454^<,v454^e)<>'' then 
+                      if &unifor('F'v454^<,v454^e):'. ' then &unifor('F'v454^<,v454^e) else 
+                         if &unifor('F'v454^<,v454^e):'.' 
+                         then &unifor('G0.'&unifor('F'v454^<,v454^e)),'.' 
+                            if &unifor('G2.'&unifor('F'v454^<,v454^e)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v454^<,v454^e)) 
+                         else &unifor('F'v454^<,v454^e) fi 
+                      fi 
+                   fi,' '&unifor('G0,'&unifor('E'v454^<,v454^e)) 
+                fi 
+             else 
+                if v454^e:', ' then &unifor('G2 'v454^e)' '&unifor('G0,'v454^e)  
+                else 
+                   if v454^e:' 'then 
+                      if &unifor('G2 'v454^e):'.'then 
+                         if &unifor('G2 'v454^e):'. ' then &unifor('G2 'v454^e) 
+                         else &unifor('G0.'&unifor('G2 'v454^e)),'.' 
+                            if &unifor('G2.'&unifor('G2 'v454^e)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v454^e)) 
+                         fi 
+                      else &unifor('G2 'v454^e) 
+                      fi,' '&unifor('G0,'&unifor('G0 'v454^e)) 
+                   else v454^e    
+          fi fi fi fi 
+          if p(v454^f) then ', ' 
+             if p(v454^>) then 
+                if v454^>:'1' then v454^f 
+                else  
+                   if &unifor('F'v454^>,v454^f)<>'' then 
+                      if &unifor('F'v454^>,v454^f):'. ' then &unifor('F'v454^>,v454^f) else 
+                         if &unifor('F'v454^>,v454^f):'.' 
+                         then &unifor('G0.'&unifor('F'v454^>,v454^f)),'.' 
+                            if &unifor('G2.'&unifor('F'v454^>,v454^f)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v454^>,v454^f)) 
+                         else &unifor('F'v454^>,v454^f) fi 
+                      fi 
+                   fi,' '&unifor('G0,'&unifor('E'v454^>,v454^f)) 
+                fi 
+             else 
+                if v454^f:', ' then &unifor('G2 'v454^f)' '&unifor('G0,'v454^f)  
+                else 
+                   if v454^f:' 'then 
+                      if &unifor('G2 'v454^f):'.'then 
+                         if &unifor('G2 'v454^f):'. ' then &unifor('G2 'v454^f) 
+                         else &unifor('G0.'&unifor('G2 'v454^f)),'.' 
+                            if &unifor('G2.'&unifor('G2 'v454^f)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v454^f)) 
+                         fi 
+                      else &unifor('G2 'v454^f) 
+                      fi,' '&unifor('G0,'&unifor('G0 'v454^f)) 
+                   else v454^f 
+       fi fi fi fi,| ; |d454^b, 
+     fi v454^b 
+  fi 

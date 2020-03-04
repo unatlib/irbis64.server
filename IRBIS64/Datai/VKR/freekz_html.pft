@@ -1,0 +1,61 @@
+/*G2 - свободные экз-ры для G10
+/*G10 - MaskStore
+/*G910 - 910^d (для определения занятости экз-ра подшивки)
+/*G101 - свободные всего
+/*G102 - свободные в филиалах
+&uf('+7W10#'),&uf('+7W10#'&uf('IREQUEST,MaskStore,*')),
+&uf('+7W11#'),&uf('+7W11#'&uf('IREQUEST,MaskInv,*')),
+&uf('+7W12#'),&uf('+7W12#'&uf('IREQUEST,MaskBar,*')),
+IF v920='J' then else 
+if v920.1:'A' then (if p(v463^w) then '===<br>',&uf('D,!I='v463^w'!,@freekz_ist_html') fi/) 
+else 
+   &uf('+7W2#'),&uf('+7W2#' 
+   (if p(v910) then 
+       if v910^c<>'' then 
+          if  (p(v910^d) and &uf('Kmhrvn.mnu\'v910^d)='' and (&uf('=!',&uf('Ag10#1'),'!'v910^d)='1' or &uf('Ag10#1')='*') or v910^d='')
+          and (p(v910^b) and &uf('=!',&uf('Ag11#1'),'!'v910^b)='1' or &uf('Ag11#1')='*')
+          and (p(v910^h) and &uf('=!',&uf('Ag12#1'),'!'v910^h)='1' or &uf('Ag12#1')='*')
+          then 
+             if v910^a:'0' or v910^a:'U' and val(v910^2)<> val(v910^1) then v910^b,| (|v910^h|)|,| - |v910^d 
+                if val(v910^1)-val(v910^2) >0 then '('f(val(v910^1)-val(v910^2),0,0)' экз.)' fi,
+   fi fi fi fi/)),
+   if g2<>'' then 'Свободные экземпляры ',
+      if g10<>'*' then ' в 'g10,' : ' else " : "d910 fi,
+      if &uf('Ag2#2')<>'' then '<br>' fi,
+      (g2+|<br>|) 
+   else 
+      if p(v993) then'<b>Есть только копии издания:\b0 ' 
+         (|<br>|+v993^a,| Шифр |v993^b,| (|v993^d|)|) 
+      else " Свободных экземпляров нет "d910,
+           " Нет сведений об экземплярах"n910
+         (if p(v910) then 
+             if &uf('Kmhrvn.mnu\'v910^d)='' then 
+                if p(v910^d) and &uf('=!',&uf('Ag10#1'),'!'v910^d)='1' or a(v910^d) and &uf('Ag10#1')='*'
+                then 
+                   if v910^a:'1' then |<br>экз.|v910^b,|(|v910^d|)|,' занят'fi,
+                   if v910^a:'9' then |<br>экз.|v910^b,|(|v910^d|)|,' занят (на бронеполке)'fi,
+                   if v910^a:'U' and val(v910^2)= val(v910^1) then |<br>все экз-ры |v910^d,| (|v910^1|)|,' заняты'fi,  
+                   if v910^a:'3'then|<br>экз.|v910^b,|(|v910^d|)|,' в переплете'fi, 
+                   if v910^a:'4'then|<br>экз.|v910^b,|(|v910^d|)|,' утерян'fi, 
+                   if v910^a:'5'then|<br>экз.|v910^b,|(|v910^d|)|,' временно не выдается ' fi,
+                   if v910^a:'6'and a(v910^w) then|<br>экз.|v910^b,|(|v910^d|)|,' списан' fi,
+                   if v910^a:'8'then|<br>экз.|v910^b,|(|v910^d|)|,' поступил, но еще не дошел до места хранения'fi
+                   if v910^a:'p'then|<b><br>экз.|v910^b,|(|v910^d|)|,' переплетен ',|(см. |v910^p|)|,
+                      &uf('+7W910#'v910^d),
+                      if &uf('D',v1,'!I='v910^p|!,(if p(v910) then if v910^d=&uf('Ag910#1') then v910^a fi fi)|):'0' 
+                      then ' - cвободен 'else' - занят ' fi '</b>'
+                fi fi,  
+          fi fi),
+   fi fi,
+   &uf('+7W101#'),&uf('+7W102#'),
+   (if p(v910) then 
+       if &uf('Kmhrvn.mnu\'v910^d)='' then 
+          if v910^a:'0'or v910^a:'U' and p(v910^c) and val(v910^1)>val(v910^2) then &uf(|+7U101#|v910^d/) fi,
+          if v910^a:'C' then &uf(|+7U102#|v910^d/) fi 
+   fi fi/),
+   if g101='' and g102<>'' and 
+      rsum((if v910^a:'C' and p(v910^c) and &uf('Kmhrvn.mnu\'v910^d)=''then '1;' fi)) = 
+      rsum((if &uf('Kmhrvn.mnu\'v910^d)='' then |1;|d910^c fi)) 
+   then ' Издания есть только в отделениях/филиалах <br>' 
+fi fi, 
+FI

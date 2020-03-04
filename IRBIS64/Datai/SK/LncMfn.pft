@@ -1,0 +1,163 @@
+/* отбор
+/* 991^O - форма обучени€
+/* 991^A - факультет
+/* 991^B - кафедра чит
+/* 991^H - кафедра выпуск
+/* 991^F - семестр
+/* 991^C - специальность
+/* g43=1 - учебна€  g43=2 - учебно-методическа€
+/* G44=0 без новизна
+/* G44=1 за посл годы учебна€ - срок в 991^8
+/* G44=2 за посл годы методич
+/* гриф по наименованию 991^5 = 1; гриф по экземпл€рам 991^5 = 
+/* G45=0 без грифа
+/* G45=1 сгрифом учебна€
+/* G45=2 с грифом  методич
+/* G46 формирую признак - дл€ текущего семестра
+/* G47=1 считаю только электронные учебники
+
+/*--------------- в G40 будет признак полугоди€
+if G991^=='' or G991^=='1' then &uf('+7W46#1') else &uf('+7W46#0') fi,,,,,,,,,,,,,,,,
+&uf('+7W40#'
+    if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+    then 'V' 
+    else 
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or            
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+      then 
+        'O' 
+      fi 
+    fi),
+/*-------------- в G41 будет призна, что есть соответствие заданным услови€м отбора
+&uf('+7W41#'),
+&uf('+7W41#',,,,
+    f(rsum((if p(v691) 
+            then 
+              if  ( &uf('AG991^X#1')='' or &uf('AG991^X#1')=' ' or &uf('+97',v691^I)=&uf('+97',&uf('AG991^X#1'))) then 
+              if  ( &uf('AG991^A#1')='' or &uf('+97',v691^A)=&uf('+97',&uf('AG991^A#1'))  ) then 
+              if  ( &uf('AG991^O#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('AG991^O)#1')))  then 
+              if  ( &uf('AG991^B#1')='' or &uf('+97',v691^B)=&uf('+97',&uf('AG991^B#1')) ) then 
+              if  ( &uf('AG991^C#1')='' or &uf('+97',v691^C)=&uf('+97',&uf('AG991^C#1')) ) then 
+              if  ( &uf('AG991^N#1')='' or &uf('+97',v691^N)=&uf('+97',&uf('AG991^N#1')) ) then 
+              if  ( &uf('AG991^S#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('AG991^S#1')) ) then 
+              if  ( &uf('AG991^G#1')='' or &uf('+97',v691^G): &uf('AG991^G#1')) then 
+              if  ( &uf('AG991^F#1')='' or val(v691^F)=val(&uf('AG991^F#1'))) then 
+              if    &uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or 
+                    &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'' or
+                    val(v691^F)=0 or 
+                    val(&uf('AG46#1'))=0 
+               then  
+               if  (    &uf('AG991^g#1')='' and ( v691^g:'осн' or v691^g='' ) or 
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g:'осн' or  
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'):'осн' and v691^g='' or  
+                        &uf('AG991^g#1')<>'' and &uf('AG991^g#1'): v691^g   
+                   ) 
+               then '1;'else'0;' 
+               fi fi fi fi fi fi fi fi fi fi fi  
+            fi)),0,0)),
+/*--------------- вычисл€етс€ кол-во
+if val(g41)>0  
+then 
+  if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')):'21'
+  then 
+/* дл€ методической 
+    if val(G43)=2 
+    then 
+      if val(G47)=1 
+      then 
+         if val(&uf('6KoElectro'))>0 then
+         then 
+/* это электронный учебник
+           f(val(mfn),0,0),,,,
+         fi,,
+      else 
+        if p(v699) and v699^u:'0' then else 
+/* условие есть экземпл€ры???
+          if &unifor('6kitexO')<>''
+          then 
+/* условие новизны, если задано
+            if val(G44)=0 
+            then  
+              if val(G45)=0 
+              then  
+                f(val(mfn),0,0), 
+              else
+                if val(G45)=2 
+                then
+       if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')): 'jj' then f(val(mfn),0,0), fi,,
+                fi,, 
+              fi,,
+            else
+              if val(G44)=2 
+              then  
+                if val(G45)=0 
+                then  
+      if ( rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(if &uf('AG991^8#1')<>'' then &uf('AG991^8#1') else '5' fi)) then f(val(mfn),0,0), fi 
+                else 
+                  if val(G45)=2 
+                  then
+      if ( rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(if &uf('AG991^8#1')<>'' then &uf('AG991^1#8') else '5' fi) ) and 
+         ( s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')): 'jj' ) 
+                    then f(val(mfn),0,0), fi,,
+                  fi,
+                fi,,
+              fi,,,
+            fi,,,
+          fi 
+        fi,,,,,,,,,
+      fi,,
+    fi,,,,
+  else 
+/* основна€
+    if val(&uf('AG43#1'))=1 
+    then 
+      if val(G47)=1 
+      then 
+        if val(&uf('6KoElectro'))>0 then
+        then 
+/* это электронный учебник
+          f(val(mfn),0,0),,,,
+        fi,,
+      else    
+/* учловие не аналог???
+        if p(v699) and v699^u:'0' 
+        then 
+        else 
+/* учловие есть экземпл€ры???
+          if &unifor('6kitexO')<>''
+          then 
+/* условие новизны, если задано
+            if val(G44)=0 
+            then  
+              if val(G45)=0 
+              then  
+                f(val(mfn),0,0), 
+              else
+                if val(G45)=1 
+                then
+       if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')): 'jj' then f(val(mfn),0,0), fi,,
+                fi,, 
+              fi,,
+            else
+              if val(G44)=1 
+              then 
+                if val(G45)=0 
+                then  
+        if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(if &uf('AG991^8#1')<>'' then &uf('AG991^8#1') else '5' fi) then f(val(mfn),0,0), fi ,,,
+                else 
+                  if val(G45)=1 
+                  then
+      if ( rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(if &uf('AG991^8#1')<>'' then &uf('AG991^8#1') else '5' fi) ) and 
+     ( s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')): 'jj' ) 
+                    then f(val(mfn),0,0), fi,,
+                  fi,,
+                fi,,
+              fi,,
+            fi,,,
+          fi,,
+        fi,,,,,,,,
+      fi,,
+    fi,,
+  fi,,
+fi/

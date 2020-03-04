@@ -1,0 +1,137 @@
+1
+ProLongNet.wss
+Продление договора на использование удаленных ресурсов
+DEL
+991
+*
+
+ADD
+991
+
+'%1'
+// 991^A - старый РСУ
+// 991^B - новый РСУ
+// 991^E - дата начала доступа
+// 991^F - дата окончания доступа
+// 991^1 - продление в каталоге
+
+IF
+if &uf('+97',v991^A)<>&uf('+97',v881^A) then '1' fi
+PUTLOG
+'Заданный номер ',,,v991^A,,' не соответствует отмеченной записи'
+FI
+IF
+if v920: 'RSU' and &uf('+97',v881^A)=&uf('+97',v991^A) then '1' fi
+IF
+if v991^B<>'' and val(&uf('JCMPL,RSU=',,,v991^B))>0 then '1' fi
+PUTLOG
+v991^B,,' - такой номер РСУ уже сеществует'
+FI
+IF
+if v991^B<>'' and val(&uf('JCMPL,RSU=',,,v991^B))=0 then '1' fi
+REP
+881
+1
+v881,,if val(v881^W)=0 then '^W1' fi
+
+NEWMFN
+'*'
+ADD
+881
+
+'^A',v991^B,,,if val(v991^C)=1 then "^C"v881^C fi,,if val(v991^D)=1 then "^D"v881^D fi,,if val(v991^T)=1 then "^T"v881^T fi,,"^P"v881^P
+
+ADD
+882
+
+"^E"v991^E,,,,"^F"v991^F
+
+ADD
+920
+
+'RSU'
+
+END
+PUTLOG
+v991^B,,' - создана новая запись РСУ, требует доработки'
+//---конец задан новый РСУ
+FI
+//----если новая не создается, то обновляю даты в старой
+IF
+if v991^B='' then '1' fi
+REP
+882^E
+1
+if v991^E<>'' then v991^E else v882^E fi
+
+REP
+882^F
+1
+if v991^F<>'' then v991^F else v882^F fi
+
+FI
+IF
+if val(v991^1)=1 then '1' fi
+//-------------продление а запиях каталога
+CORREC
+if &uf('DCMPL,!RSU=',v991^A,'!,v881^P')='' then &uf('DCMPL,!RSU=',v991^A,'!,v881^P') else v881^P fi
+V991,
+"NRSU="v991^A
+
+IF
+if val(v1001^2)=1 then '1' fi,,&uf('+7W2#')
+// архивирование в поле 942
+ADD
+942
+
+(if p(v951) then if v951^U<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av1001^A#1')) then &uf('+7W2#',v951),break fi fi fi/),,g2
+
+FI
+//--начало доступа
+IF
+if v1001^E<>'' then '1' fi
+REP
+951^3
+F
+(if p(v951) then if v951^3<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av1001^A#1')) then &uf('Av1001^E#1') else v951^3 fi  else # fi fi/)
+
+REP
+951
+F
+(if p(v951) then v951,,,if v951^3='' then '^3',,&uf('Av1001^E#1') fi fi/)
+
+FI
+//--конец доступа
+IF
+if v1001^F<>'' then '1' fi
+REP
+951^C
+F
+(if p(v951) then if v951^C<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av1001^A#1')) then &uf('Av1001^F#1') else v951^C fi  else # fi fi/)
+
+REP
+951
+F
+(if p(v951) then v951,,,if v951^C='' then '^C',,&uf('Av1001^F#1') fi fi/)
+
+FI
+REP
+951^U
+F
+(if p(v951) then if v951^U<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av1001^A#1')) then &uf('Av1001^B#1') else v951^U fi  else # fi fi/)
+
+PUTLOG
+&uf('+D'),,': MFN=',,f(val(mfn),0,0),,,,' - откорректирована',,if g2<>'' then ', создано архивное поле (942)' fi
+DEL
+1001
+*
+
+
+END
+FI
+FI
+DEL
+991
+*
+
+

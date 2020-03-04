@@ -1,0 +1,42 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8046 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9180 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10314 
+\pard \widctlpar\intbl {\ql \fs20 ''##'
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 '&uf('6brief')
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs20 'if val(&uf('+N140'))>1 then (if p(v140) then v140^B| - |,v140^C.35,'\par ' fi) else v140^B| - |,v140^C fi,
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs20 '&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_1')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,'\par ' fi)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs20 '&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_2')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,'\par ' fi)
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

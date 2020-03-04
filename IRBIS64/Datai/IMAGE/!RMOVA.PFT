@@ -1,0 +1,93 @@
+mhl,
+if '***'='7001' or '***'='4611'then 
+    "^A"v461^x,if p(v461^x)then", "v700^a else"^A"v700^a fi," "v700^b,
+    '^C',
+   if p(v461)then v461^c,| : |v461^e," ; "v200^v," : "v200^a else v200^a fi,
+    ". "v923^h,"."v923^i,". "v923^k,"."v923^l,                                  
+    "^E"v200^e,                                                                 
+    "^V"d900^b,if'05 03 04 07':v900^b then'кн.^D. - 'fi,                         
+   if s(v210^a,v210^c)=''then(| ; |+v461^4,if v461^4=''then | ; |+v461^d fi,| : |v461^g,| [|v461^6|]|),
+   else (| ; |+v210^4,if v210^4=''then| ; |+v210^afi,| ; |v210^x,| ; |v210^y,| : |v210^c,| [|v210^6|]|)          
+   fi,                                                                          
+   if p(v461)then                                                               
+      if s(v210^a,v210^c)<>''then", "d210^d,v210^5| |,v210^d,                                    
+         if a(v210^d) then |, |d461^h,v461^5| |,v461^h fi                                        
+      else". - "d210^d,v210^5| |,v210^d,if a(v210^d) then". - "d461^h,v461^5| |,v461^h fi,                           
+   fi fi,". - "v215^a,
+   if &unifor("Knosnt.mnu|"v215^1)<>''then" "v215^1 fi,
+   if s(v215^1)=''then                                                          
+      if v215^a:'с'or v215^a:'p'then else| с.|d215^a fi                         
+   fi,'^I'
+   if v920:'ASP'then else v903 fi,'^B'v10^a,'^Z'v908,
+   if a(v908) then if v903:v906 then v906 fi fi 
+else              
+   if '***'='9221' or '***'='3301' then 
+      (if p(v922) or p(v330)then |^A|v922^f,|^C|v922^c,|^A|v330^f,|^C|v330^c,
+          if &unifor('Av920#1'):'NJ'then 
+             ref(l(|I=|d922,|I=|d330,&unifor('Av933#1')),                                
+                 if v110^b:'a'then'^Vст. из журн.'fi,                           
+                 if v110^b:'c'then'^Vст. из газеты'fi,|^D // |v200^a),          
+             if &unifor('Av934#1')<>''then|. - |d922,|. - |d330,&unifor('Av934#1') fi,
+             if &unifor('Av936#1')<>''then|. - |d922,|. - |d330,&unifor('Av935#1'),
+                ' № ',&unifor('Av936#1'),|. - C.|v922^4,|. - C.|v330^4 fi         
+             if &unifor('Av903#1')<>''then|^I|d922,|^I|d330,&unifor('Av903#1') fi
+          else                                                                  
+            if '05 03 04 07':&unifor(|Av900^b#1|d922) or                        
+               '05 03 04 07':&unifor(|Av900^b#1|d330) then'^Vст. из кн.^D // ', 
+               &unifor('Av461^x#1'),                                            
+               if &unifor('Av700^a#1')<>''then                                  
+                  if &unifor('Av461^x#1')<>''then', 'fi,&unifor('Av700^a#1')    
+               fi                                                               
+               if &unifor('Av700^b#1')<>''then' '&unifor('Av700^b#1') fi,       
+               if &unifor('Av700#1')<>'' or &unifor('Av461^x#1')<>''then'. 'fi, 
+               if p(v461) then &unifor('Av461^c#1'),                            
+                  if &unifor('Av461^e#1')<>''then' : '&unifor('Av461^e#1') fi,   
+                  if &unifor('Av200^v#1')<>''then' ; '&unifor('Av200^v#1') fi,   
+                  if &unifor('Av200^a#1')<>''then' : '&unifor('Av200^a#1') fi,   
+               else &unifor('Av200^a#1'),                                       
+                  if &unifor('Av200^e#1')<>''then' : '&unifor('Av200^e#1') fi,   
+               fi,                                                              
+                  if &unifor('Av923^h#1')<>''then'. '&unifor('Av923^h#1') fi,   
+                  if &unifor('Av923^i#1')<>''then'. '&unifor('Av923^i#1') fi,    
+                  if &unifor('Av923^k#1')<>''then'. '&unifor('Av923^k#1') fi,   
+                  if &unifor('Av923^l#1')<>''then'. '&unifor('Av923^l#1') fi,    
+               if s(v210^a,v210^4,v210^c)=''then                                       
+                  if &unifor('Av461^4#1')<>''then'. - '&unifor('Av461^4#1')else 
+                     if &unifor('Av461^d#1')<>''then'. - '&unifor('Av461^d#1') fi fi,  
+                  if &unifor('Av461^g#1')<>''then' : '&unifor('Av461^g#1'),
+                     if &unifor('Av461^6#1')<>''then ' [',&unifor('Av461^6#1'),']'fi fi,   
+               else                                                             
+                  if &unifor('Av210^4#1')<>''then'. - '&unifor('Av210^4#1')else 
+                     if &unifor('Av210^a#1')<>''then'. - '&unifor('Av210^a#1') fi fi,  
+                  if &unifor('Av210^x#1')<>''then' ; '&unifor('Av210^x#1') fi,   
+                  if &unifor('Av210^y#1')<>''then' ; '&unifor('Av210^y#1') fi,   
+                  if &unifor('Av210^c#1')<>''then' : '&unifor('Av210^c#1'),
+                     if &unifor('Av210^6#1')<>''then' ['&unifor('Av210^6#1')']'fi fi,   
+               fi,                                                              
+               if p(v461)then                                                   
+                  if s(v210^a,v210^4,v210^c)<>''then                                   
+                     if &unifor('Av210^d#1')<>''then', '
+                        if &unifor('Av210^5#1')<>''then &unifor('Av210^5#1')' 'fi,&unifor('Av210^d#1'),    
+                     else                                                       
+                        if &unifor('Av461^h#1')<>''then', '
+                           if &unifor('Av461^5#1')<>''then &unifor('Av461^5#1'),' 'fi,&unifor('Av461^h#1') 
+                     fi fi                                                      
+                  else                                                          
+                     if &unifor('Av210^d#1')<>''then'. - '
+                        if &unifor('Av210^5#1')<>''then &unifor('Av210^5#1'),' 'fi,&unifor('Av210^d#1')   
+                     else                                                       
+                        if &unifor('Av461^h#1')<>''then'. - ',
+                           if &unifor('Av461^5#1')<>''then &unifor('Av461^5#1'),' 'fi,&unifor('Av461^h#1') 
+                     fi fi                                                      
+               fi fi,                                                           
+               if &unifor('Av215^a#1')<>''then'. - '&unifor('Av215^a#1'),        
+                  if &unifor('Av215^1#1')<>''then' '&unifor('Av215^1#1') fi,    
+                  if s(v215^1)=''then                                           
+                     if 'p с ':&unifor('Av215^a#1')then else                    
+                        if &unifor('Av215^a#1')<>''then' с.'fi                  
+               fi fi fi,                                                        
+               if &unifor('Av903#1')<>''then'^I'&unifor('Av903#1') fi,          
+               if &unifor('Av10^a#1')<>''then'^B'&unifor('Av10^a#1') fi,        
+          fi fi                                                                 
+      fi/),                                                                     
+fi fi,mpl,

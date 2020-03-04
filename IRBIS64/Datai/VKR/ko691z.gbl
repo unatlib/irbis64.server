@@ -1,0 +1,106 @@
+0
+DEL
+691
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1932
+XXXXXXXXXXXXXXXXXXX
+(|^D|v694^d,|^I|v694^i,|^N|v694^n,|^C|v694^c,|^B|v694^b,|^V|v694^v,|^O|v694^o,|^G|v694^g,|^A|v694^a,|^S|v694^s,|^K|v694^k,|^H|v694^h,|^W|v694^w,|^U|v694^u,|^F|v694^f/)
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+932
+XXXXXXXXXXXXXXXXXXX
+if &unifor('Av1932^f#1'):'/'then (if &unifor('1*R/?v1932^f#1')<>''then &unifor('G0F'&unifor('Av1932#1')),'F',&unifor('1*R/?v1932^f#1')fi/) else &unifor('Av1932#1') fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1932)then'1'else''fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1
+XXXXXXXXXXXXXXXXXXX
+&unifor('7VUZ,?IDU=',&unifor('Av932^i#1'),'?,(|^D|v3^a,|^I|v3^0,|^W|v97,|^B|v5,|^S|v4,|^K|v6,|^N|v92^n,|^C|v92^c,|^A|v93,|^H|v94,|^F|v95,|^V|v96,|^O|v98/)')/
+XXXXXXXXXXXXXXXXXXX
+REP
+1^N
+F
+(if p(v1) then if p(v1^n) then if &unifor('Av932^n#1')<>'' and &unifor('Av932^n#1')=v1^n then v1^n else '!N' fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+1^C
+F
+(if p(v1) then if p(v1^c) then if &unifor('Av932^c#1')='' or &unifor('Av932^c#1')=v1^c then v1^c else if &unifor('Av932^c#1')<>'' and &unifor('Av932^c*4.2#1')<>'00' and &unifor('Av932^c.4#1')=v1^c.4 then &unifor('Av932^c#1') else '!N' fi fi else v1^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+1^V
+F
+(if p(v1) then if p(v1^v) then if &unifor('Av932^v#1')<>'' and &unifor('Av932^v#1')=v1^v then v1^v else '!N' fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+1^O
+F
+(if p(v1) then if p(v1^o) then if &unifor('Av932^o#1')<>'' and &unifor('Av932^o#1')=v1^o then v1^o else '!N' fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+1^A
+F
+(if p(v1) then if p(v1^a) then if &unifor('Av932^a#1')<>'' and &unifor('Av932^a#1')=v1^a then v1^a else '!N' fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+1^F
+F
+(if p(v1) then if p(v1^f) then if &unifor('Av932^f#1')<>'' and &unifor('Av932^f#1')=v1^f then v1^f else '!N' fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+2
+XXXXXXXXXXXXXXXXXXX
+(if p(v1) then if &unifor('Pv1')<>'' then &unifor('Pv1'),if &unifor('Av932^g#1')<>'' then'^G'&unifor('Av932^g#1') fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+932
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v932) then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+691
+XXXXXXXXXXXXXXXXXXX
+(if p(v2) then if &unifor('Pv2')<>'' then &unifor('Pv2') fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+691
+F
+(if p(v691) then if v691:'!N' then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+2
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

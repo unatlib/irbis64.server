@@ -1,0 +1,61 @@
+6
+3
+Учебный год
+0
+0
+0
+
+
+
+
+(v692^B/)
+C
+Полугодие
+0
+0
+1
+ovs.mnu
+
+
+
+(v692^C/)
+4
+Число экз.
+0
+0
+0
+
+
+
+
+(if p(v692^B) then if p(v692^D) then v692^D else '-' fi fi/)
+7
+Число студентов
+0
+0
+0
+
+
+
+
+(if p(v692^B) then if p(v692^E) then v692^E else '-' fi fi/)
+A
+Выдел.категория
+0
+0
+1
+naznac.mnu
+
+
+
+(if p(v692^B) then if p(v692^A) then v692^A else '-' fi fi/)
+F
+Коэффициент КО ВК или общий
+0
+0
+0
+
+
+
+
+(if p(v692^B) then if p(v692^F) then v692^F else '-' fi fi/)

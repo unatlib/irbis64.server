@@ -1,0 +1,58 @@
+if s(v606v607)<>'' or p(v600) and v600^b<>'' or p(v601) and v601^b<>'' then '\par \b Рубрики: \b0 '
+   &uf('+7W606#'),
+   &uf('+7U606#'
+   mhl,
+   if v600^b='' then else   
+   (if p(v600) then 
+       if a(v600^b) then 
+          if p(v600^9)then 
+             if v600^9:'1' then v600^a else  &unifor('E'v600^9,&unifor('G0,'v600^a)),|, |v600^g 
+                if a(v600^g) then if &unifor('F'v600^9,v600^a)<>'' then ', '&unifor('F'v600^9,v600^a) fi fi  
+             fi, 
+          else 
+             if v600^a:' 'then 
+                if v600^a:','then v600^a else &unifor('G0 'v600^a)', 'v600^g, 
+                   if a(v600^g) then &unifor('G2 'v600^a) fi fi 
+             else v600^a,|, |v600^g fi, 
+          fi,| |v600^d, 
+          if s(v600^1,v600^c,v600^f)<>''then' (',v600^1,if s(v600^1)<>''then| ; |d600^c fi,v600^c, 
+             if s(v600^1,v600^c)<>''then| ; |d600^f fi,v600^f,')' 
+          fi,
+          if p(v600^a) then |. |d600^z fi,
+          v600^z,| [|v600^:|]|,| : |v600^;,| : |v600^,,| : |v600^<,| (|v600^6|)|,|. |v600^2,|. |v600^5,|, |v600^+,
+          if a(v600^z) and p(v600^w) then &uf('D,?I='v600^w'?,@brief') fi,
+          if s(v600^k,v600^m,v600^8,v600^q,v600^t,v600^o,v600^j,v600^0)<>'' then 
+          | -- |v600^k,| -- |v600^m,| -- |v600^8,| -- |v600^q,| -- |v600^t,| -- |v600^o,| -- |v600^j,| -- |v600^0  
+          fi/ 
+   fi fi),
+   fi,
+   if v601^b='' then else 
+   (if p(v601) then 
+       if a(v601^b) then v601^a,
+          if a(v601^a) then v601^p, 
+             if p(v601^n)or p(v601^c) then' ('v601^n| ; |,v601^c,')'fi,|. |v601^l, 
+             if s(v601^d,v601^f,v601^e)<>''then' ('v601^d| ; |,v601^f, 
+                if p(v601^f) then| ; |v601^e else v601^e fi,| / |v601^h,| / |v601^i')' 
+          fi fi,
+          if s(v601^a,v601^p)<>'' then |. |d601^z fi,
+          v601^z,| [|v601^:|]|,| : |v601^;,| : |v601^,,| : |v601^<,| (|v601^6|)|,|. |v601^2,|. |v601^5,|, |v601^+,
+          if a(v601^z) and p(v601^w) then &uf('D,?I='v601^w'?,@brief') fi,
+          | -- |v601^k,| -- |v601^m,| -- |v601^8,| -- |v601^q,| -- |v601^t,| -- |v601^o,| -- |v601^j,| -- |v601^0) /
+    fi fi),
+    fi,
+   (if p(v606)then v606^a,| -- |v606^b,| -- |v606^c,| -- |v606^d,| -- |v606^g,| -- |v606^e,
+   | -- |v606^o, |, |v606^h,| -- |v606^9 /fi),
+   (if p(v607)then v607^a,| -- |v607^b,| -- |v607^c,| -- |v607^d,| -- |v607^g,| -- |v607^e,
+   | -- |v607^o, |, |v607^h,| -- |v607^9 /fi)),
+   if g606<>'' then 
+      if &uf('Ag606#2')<>'' then '\par 'fi,
+      (if p(g606) then if g606.4:'--' then g606*4 else if g606.2:', 'then g606*2 else g606 fi fi,'\par 'fi),
+fi fi,
+if s(v905^f,&unifor('IPRIVATE,FPK,')):'1'then else
+   if s(v910^a):'U' and s(v330^5,v330^6,v330^7,v922^5,v922^6,v922^7):'; ' then else 
+      "\par \b Кл.слова (ненормированные): \b0 "d610,
+      if s(v905^f,&unifor('IPRIVATE,FPK,')):'2'then v610+| -- | else &unifor('Q'v610+| -- |) 
+fi fi fi,
+if s(v905^f,&unifor('IPRIVATE,FPK,')):'1'then else"\par \b Дескрипторы: \b0 "v965+| -- | fi,
+if s(v905^h)<>''or &unifor('IPRIVATE,FPA,')<>''then else ("\par \b Аннотация: \b0 "|\par  |+v331) fi,
+mpl,

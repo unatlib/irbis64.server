@@ -1,0 +1,23 @@
+  (if '***'='210' then v210^c,'^A'v210^a,'^X'v210^x,'^Y'v210^y,'^7',| |n210^c 
+   else v***^g,  '^A',
+      if v***^d:';' then 
+         if v***^d:' ;'then &unifor('G0 'v***^d) else 
+            if v***^d:';' then &unifor('G0;'v***^d) 
+         fi fi,
+      else v***^d 
+      fi, '^X',  
+      if &unifor('G2;'v***^d):';' then 
+         if &unifor('G2;'v***^d):'; ' 
+         then &unifor('G2 '&unifor('G0;'&unifor('G2;'v***^d))),
+         else &unifor('G0;'&unifor('G2;'v***^d)),
+         fi,
+      else 
+         if v***^d:' ;'then &unifor('G0 'v***^d) else 
+            if v***^d:';' then &unifor('G0;'v***^d) 
+      fi fi fi,
+      '^Y'
+      if &unifor('G2;'v***^d):'; ' 
+      then &unifor('G2 '&unifor('G1;'&unifor('G2;'v***^d)))
+      else if &unifor('G2;'v***^d):';' then &unifor('G2;'&unifor('G2;'v***^d))
+      fi,fi,| |n***^g 
+   fi/) 

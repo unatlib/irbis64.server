@@ -1,0 +1,423 @@
+'{'if v920:'POLZ'then mhl,'\b ПОЛЬЗОВАТЕЛЬ ИРБИС \b0 - данные для заказа книг:\par '(v12|\par |),(v13|\par |),(v15|\par |),v14^a," "v14^b," Гл. бух. "v14^c'\par '"Подписи: "d16'\par '(v16|\par |), mpl, 
+fi, 
+if p(v97)then'\par \b Каталог подписки\b0 \par Код: \b 'v97^a'\b0 ', 
+"  Краткое название: \b "v97^b"\b0 ","\par Текст для Абонементной карточки: \b "v97^c"\b0 ", 
+'\par 'fi, 
+if 'PAZKK PVKK SPECK':v920 then 
+if p(v903) then 
+if v903:v906 then v906,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b, 
+if v906:v908 then else "\par "v908 fi 
+else 
+if v903:&unifor('Av686#1')or v903:&unifor('G0^'&unifor('Av675#1'))or v903: &unifor('Av621#1')then 
+if v903:&unifor('Av686#1') then &unifor('Av686#1') else 
+if v903:&unifor('G0^'&unifor('Av675#1')) then &unifor('G0^'&unifor('Av675#1')) else 
+if v903:&unifor('Av621#1') then &unifor('Av621#1') 
+fi fi fi,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b,"\par "v908 
+else 
+if v903.1='-'or v920:'ASP'then else v903,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b,if p(v906) then"\par "v906, 
+if v906:v908 then else "\par "v908 
+fi fi fi fi fi 
+else 
+if p(v982^0) and p(v982^9) then v982^0' 'v982^9 else 
+if s(v906,v686,v675,v621)<>'' then 
+if p(v906) then v906,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b, 
+if v906:v908 then else"\par "v908 fi 
+else &unifor('Av686#1'), 
+if a(v686) then &unifor('G0^'&unifor('Av675#1')), 
+if a(v675) then &unifor('Av621#1') 
+fi fi,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b,"\par "v908 
+fi fi fi fi, 
+if s(v982^s,v982^k)<>''then' '&unifor("Kstr.mnu|"v982^s),", "d982^k,&unifor('Av982^k#1')," "d982^i,&unifor('Av982^i#1'),"."d982^k,"\tab  "d106,&unifor("K106.mnu|"v106^a)," "v106^b fi, 
+'\b0 \par ' 
+     v503^a"\par ", 
+   if p(v461) then'\b 'v461^x,v461^b, 
+      if s(v461^x,v461^b)<>''then'\b0 \par   'mhl,v461^c 
+      else'  '&unifor('E3'v461^c)'\b0  '&unifor('F3'v461^c) 
+      fi,mpl, 
+      | = |v46^l,| : |v461^e,| / |v461^f,|. - |v461^p, 
+      if &unifor('Av461^d#2')<>''then &unifor('S0'), 
+         (if p(v461) then 
+             if val(&unifor('S1A'))=1 then'. - 'v461^d,| : |v461^g else 
+                if p(v461^?) then else| ; |v461^d fi,| : |v461^g 
+         fi fi) 
+      else ". - "v461^d," : "v461^g 
+      fi, 
+      if s(v461^d,v461^g)<>''then|, |v461^h else|. - |v461^h fi, 
+      if p(v461^h) then' - 'v461^z,"    "n461^z fi, 
+         (|. - (|v46^a,| ; |v46^v, 
+      if s(v46^a,v46^v)<>''then|)|d46 fi,|. - |v46^t*4,| : |v46^r,|. - |v46^p), 
+      if v10^a:v461^i or s(v10^a)=''then else|. - ISBN |v461^i fi,". - ISSN "v461^j, if v461<>''then if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then  else       
+ if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi fi,
+      '\par 'd461,"\b "v200^v"\b0 "," : "v200^a 
+   fi, 
+   if a(v461) then mhl, 
+      if p(v200^a) then'\b ' 
+         if p(v700) then v700^a," "v700^d,", "v700^g, 
+            if a(v700^g)then" "v700^b fi'\b0 ', 
+            if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+               if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+               if s(v700^1,v700^c)<>''then"; "d700^f fi,v700^f,'). 'else"."d700^g," "d700^a 
+            fi, 
+         else 
+            if p(v710) then v710^a, 
+               if s(v710^n,v710^c)<>''then' ('v710^n| ; |,v710^c')'fi,|. |v710^b, 
+               if s(v710^d,v710^f,v710^e)<>''then' ('v710^d| ; |,v710^f, 
+                  if p(v710^f)then| ; |v710^e else v710^e fi,| / |v710^h,| / |v710^i,')' 
+            fi fi   
+         fi'\b0 ' 
+      fi, 
+      if s(v700,v710)='' then'\tab \b '&unifor('E3'v200^a),'\b0 ', 
+         if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
+      else "\par \tab "v200^a,if v461='' and v200^v<>''then  if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then  else       
+ if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi fi, 
+      fi,,mpl,"\par "v200^v 
+   fi,(|. |v922^c,| / |v922^f),| = |v510^d,if v905^2:'1'then else | : |v200^e fi,(|. |v923^h,| : |v923^i, 
+          |. |v923^k,| : |v923^l), 
+   if s(v700,v711,v972,v200^f,v200^g,v701,v702)<>'' then' / 'fi, 
+   if p(v200^f) then v200^f,| ; |v200^g,
+      if p(v200^g) or a(v700) and a(v701) then else 
+         if s(v711v972)<>''then' ; '  
+            (if p(v711) then| ; |+d711,v711^7,if a(v711^7) then v711^a fi, 
+                if s(v711^n,v711^c)<>''then' ('v711^n| ; |,v711^c')'fi,|. |v711^b, 
+                if s(v711^d,v711^f,v711^e)<>''then' ('v711^d| ; |,v711^f, 
+                   if p(v711^f)then| ; |v711^e else v711^e fi,| / |v711^h,| / |v711^i,')' 
+            fi fi), 
+            (if p(v972)then" ; "d711,| ; |+v972^a, 
+                if s(v972^n,v972^c)<>''then' ('v972^n| ; |,v972^c')'fi,|. |v972^b, 
+                if s(v972^d,v972^f,v972^e)<>''then' ('v972^d| ; |,v972^f, 
+                   if p(v972^f)then| ; |v972^e else v972^e fi,| / |v972^h,| / |v972^i,')' 
+            fi fi) 
+      fi fi 
+   else 
+      if s(v700v701v702)<>''then v700^b" ", 
+         if a(v700^b) then v700^g" " fi,v700^a,", "v970^b" ",v970^a, 
+         if p(v700) then ", "d701 fi, 
+         if &unifor('Av701#5')<>''then &unifor('S0'), 
+            (if p(v701) then 
+                if &unifor('S1A')>'3' then else 
+                   if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b, 
+                      if a(v701^b)then| |v701^g fi 
+                   else|, |+d701,v701^b, 
+                      if a(v701^b)then v701^g| | fi,v701^a,| |v701^d 
+             fi fi fi), 
+             if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и  др]',"."d200^g 
+             else ' [et al]',"."d200^g fi 
+         else 
+            (if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b, 
+                if a(v701^b)then| |v701^g fi 
+             else|, |+d701,v701^b| |, 
+                if a(v701^b)then v701^g| | fi,v701^a,| |v701^d 
+             fi), 
+         fi, 
+         if s(v700v701)<>''then" ; "d702 fi,(|, |+v702^4*4, 
+         if p(v702^9)then| |v702^a,| |v702^d,| |v702^b, 
+            if a(v702^b)then | |v702^g fi 
+         else| |v702^b| |,if a(v702^b)then| |v702^g| | fi,v702^a,| |v702^d 
+         fi),| ; |v200^g, 
+      else v200^g, 
+         if a(v200^g)and a(v700) and a(v701) and a(v702) then   
+            (if p(v711) then| ; |+d711,v711^7,if a(v711^7) then v711^a fi, 
+                if s(v711^n,v711^c)<>''then' ('v711^n| ; |,v711^c')'fi,|. |v711^b, 
+                if s(v711^d,v711^f,v711^e)<>''then' ('v711^d| ; |,v711^f, 
+                   if p(v711^f)then| ; |v711^e else v711^e fi,| / |v711^h,| / |v711^i,')' 
+            fi fi), 
+            (if p(v972)then" ; "d711,| ; |+v972^a, 
+                if s(v972^n,v972^c)<>''then' ('v972^n| ; |,v972^c')'fi,|. |v972^b, 
+                if s(v972^d,v972^f,v972^e)<>''then' ('v972^d| ; |,v972^f, 
+                   if p(v972^f)then| ; |v972^e else v972^e fi,| / |v972^h,| / |v972^i,')' 
+            fi fi) 
+      fi fi 
+   fi,
+   if p(v925) then &uf('6ibis925') fi, 
+   ". - "v205^a,", "v205^b, 
+   if s(v205^a,v205^b)<>''then" / "v205^c else". - "v205^c fi, 
+   Ovixd
+   (". - "| ; |+v215^a,| |d215^1,&unifor('G2='v215^1), 
+   if a(v215^1)then 
+      if v215^a:'с'or v215^a:'c'or v215^a:'p'or v215^a:'S'then 
+      else 
+         if p(v215^a) then &unifor('Korg.mnu|4') fi, 
+         if s(v215^c,v215^d,v215^e)<>''then|.|d215^a 
+   fi fi fi,| : |d215^c, 
+   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 
+   else v215^c 
+   fi,| ; |v215^d,| + |v215^e,| |d215^2,&unifor('G2='v215^2)), 
+   (|. -(|d225,v225^a,| / |v225^f,|, ISSN |v225^x,| ; |v225^v,|)|d225/), 
+   |.-ISBN |v10^a,|. - ISSN |v11^a, 
+if  'l1 l2':v900^t then else if val(v10^d)<>0 then". - Цена:"v10^d,v10^c, 
+      if a(v10^c)then &unifor('Korg.mnu|3') fi 
+   else". - "v10^d 
+   fi,", Б.ц"n10^d fi, if v461='' then if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then  else       
+ if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi fi,"\par \b См. ссылку: \b0 "d951,  (if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi) 
+   "\par \b Учебная литература: \b0 "d691, 
+   (|\par |d691,v691^u,|/|v691^w,|/|v691^a,|/|v691^h,|/|v691^n,|/|v691^c,|/|v691^b,|/|v691^d,|/|v691^s,|/|v691^k,|/|v691^v,|/|v691^o,|/|v691^e,|/|v691^f,|/|v691^g), 
+   "\par  Раздел знаний: "v60, 
+   "\par  УДК: "v675^*+|+|, 
+   "\par  ББК: "v621^*+|+|, 
+   "\par \b Заказ (по полю 30-32):\b0 \par "d30, 
+   (if p(v30)then 
+       if p(v30^a)then'\b  N 'v30^b': 'v30^a'\b0 : 'v30^c*6.2'.'v30^c*4.2'.' 
+          v30^c.4' - 'v30^d'экз.'fi, 
+       if p(v30^u)then'\par \tab \tab Исполнение: ' 
+          ref(l(|KSU=|v30^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4) 
+          ' - 'v30^g'экз.'fi, 
+    fi),"\par "d31, 
+    (if p(v31)then 
+        if p(v31^a)then'\b  N 'v31^b': 'v31^a'\b0 : 'v31^c*6.2'.'v31^c*4.2'.' 
+          v31^c.4' - 'v31^d'экз.'fi, 
+        if p(v31^u)then'\par \tab \tab Исполнение: ' 
+          ref(l(|KSU=|v31^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4) 
+          ' - 'v31^g'экз.' fi, 
+    fi),"\par "d32, 
+    (if p(v32)then 
+        if p(v32^a)then'\b  N 'v32^b': 'v32^a'\b0 : 'v32^c*6.2'.'v32^c*4.2'.' 
+           v32^c.4' - 'v32^d'экз.'fi, 
+        if p(v32^u)then'\par \tab \tab Исполнение: ' 
+           ref(l(|KSU=|v32^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4) 
+           ' - 'v32^g'экз.' fi, 
+     fi),
+/*-----------------------13---------------------------------
+    if p(v62) then '\par \b Заказано: \bo ' fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    (if p(v62)
+     then '\par \b ' 
+           |N|v62^b|: |,
+           if p(v62^a) then v62^a else if p(v62^b) then &uf('D,?SZ='v62^b,'?,| |v62^a') fi fi,
+           '\b0 : ',,,if v62^C<>'' then v62^c*6.2'.'v62^c*4.2'.'v62^c.4 fi,,,,
+        ' - ',,,if v62^D='' then '??' else v62^d fi,,' экз.',,,
+        if p(v62^g)then'\par \tab \tab Получено: 'v62^g' экз.' fi, 
+     fi), 
+    if p(v694) then '\par \b Заявка для ВУЗ: \b0 ' fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    (if p(v694)then '\par ' 
+     v694^D,,|-|v694^A,,|-|v694^N,,|-|v694^C,,|-|v694^B,,|-|v694^V,,|-|v694^O,,|-|v694^G,,| - \b |v694^1| экз.\b0 |,,,
+     fi),      
+/*-----------------------13---------------------------------     
+if v905^W<>'' or &unifor('IPRIVATE,FPE,')<>''then else 
+if v910^a:'0' or v910^a:'U' or v910^a:'C' then '\par \b Получены экземпляры:\b0 ' 
+        (if p(v910^a)then 
+            if'2 6 7':v910^a then else '\par  'v910^d,' (',if &unifor('IPRIVATE,FPI,'):'2' or &unifor('IPRIVATE,FPI,'):'3'then else   ref(l(|ksu=|v910^u),v88^b*6.2'.'v88^b*4.2'.'v88^b.4'г.,'), fi 
+                 | Инв.|v910^b,|(|v910^1|экз.)|, if &unifor('IPRIVATE,FPI,'):'2' or &unifor('IPRIVATE,FPI,'):'3' or &unifor('IPRIVATE,FPI,'):'1' then else|, Акт.N |v910^y,|, N КСУ |v910^u, fi,if &unifor('IPRIVATE,FPI,'):'3'then else 
+                 ', Цена 'v910^e, 
+               if a(v910^e)then &unifor('Av10^d#1') fi, 
+               if p(v910^e) or val(&unifor('Av10^d#1'))>0 then &unifor('Av10^c#1') 
+                  if &unifor('Av10^c#1')='' then &unifor('Korg.mnu|3') 
+               fi fi fi,|, Сум.зак. №|v910^9')' 
+         fi fi), 
+     fi,
+     if v910^a:'2' then '\par \b Заказаны экземпляры для отделов:\b0   ' 
+        (if v910^a:'2'then v910^d,| (|v910^1| экз.)|,mhl,v910.1+|, |,mpl,fi), 
+     fi fi, 
+     (if p(v40) then'\par ', 
+          |\b Автор заказа: \b0 |v40^a,if s(v40^c,v40^e)<>''then' ('|Приоритет: |v40^c|. |,| Экз.: |v40^e')'fi, 
+          |\par \b Ист.:\b0 |v40^T,if s(v40^d,v40^h)<>''then' ('|Вых.данные: |v40^d|. |,v40^g')' fi 
+      fi) 
+fi, 
+if v920:'OJK'then 
+   if v110^b:'02'then 'Журнал :'fi,if v110^b:'01'then'Газета 'fi, 
+   '\par \b 'v200^a,'\b0 ', 
+   if a(v200)then'\b 'v591'\b0 'fi,|: |v200^e,(". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,| : |v923^e,
+|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,| : |v923^s,
+|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n,| : |v923^v), 
+   |/ |v200^f,if p(v200^f) then |; |v200^g else |/ |v200^g fi, 
+   " - Б.м"n210^a,(|. - |v210^a,|: |v210^c,),". - Б.г"n210^d,,". - "v210^d, 
+   "-"v210^e,". - ISSN "v11^a,". -"d110^d,if &unifor('Krksp.mnu|'v110^d.3)<>''then  &unifor('Krksp.mnu|'v110^d.3) else"Периодичность "v110^d fi,if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then  else       
+ if &uf('Av203#2')=''then ". - "v203^A," ("v203^O")",". "v203^B," ("v203^P")",". "v203^D," ("v203^U")",". "v203^E," ("v203^Y")",". "v203^F," ("v203^T")",". "v203^G," ("v203^R")",". "v203^I," ("v203^W")",". "v203^K," ("v203^Q")",". "v203^L," ("v203^X")"," : "v203^C'.'  else
+  if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,| (|v203^O|)|,|. |v203^B,| (|v203^P|)|,|. |v203^D,| (|v203^U|)|,|. |v203^E,| (|v203^Y|)|,|. |v203^F,| (|v203^T|)|,|. |v203^G,| (|v203^R|)|,|. |v203^I,| (|v203^W|)|,|. |v203^K,| (|v203^Q|)|,|. |v203^L,| (|v203^X|)|,| : |v203^C'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi fi, 
+   ". -"v300,if p(v86) then'\par \b Индекс \b0 'v86' \b по каталогу \b0 ',if L("skk="v36^a)<1 or ref(L("skk="v36^a),v97^b)=''then v36^a else ref(L("skk="v36^a),v97^b) fi, 
+   "РП"n36^a fi, 
+   "\par \b Шифр \b0 "v903, 
+   if p(v33) then '\par \b Текущая подписка на \b0 'v33, 
+      (if p(v39) then |\par  АДР: |v39^b,| (всего - |v39^c|)|, 
+          if p(v39^b) then|\tab ДЛЯ: |v39^a,| (|v39^d|)| else |, |v39^a,| (|v39^d|)| 
+       fi fi) 
+   fi, 
+   "\par \b Текущей подписки нет  \b0 "n33, 
+   ("\par \b Есть подписка на периоды: \b0 "|; |+v37^a, 
+    if v37^a*4='/0'then'(г.)'fi, 
+    if v37^a*4='/1'then' (1полуг)'fi,if v37^a*4='/2'then' (2полуг)'fi, 
+    if v37^a*4='/1-1'then' (1кв)'fi,if v37^a*4='/1-2'then' (2кв)'fi, 
+    if v37^a*4='/1-3'then' (3кв)'fi,if v37^a*4='/1-4'then' (4кв)'fi,) 
+   if v488<>''then else"\par \b Заглавие для заказа:\b0   "v591 fi 
+   (if p(v488)then '\b ',if val(&uf('+90'v488))<>1 then if v488^1<>&uf('Av488^1#'f(val(&uf('+90'v488^1))-1,0,0))then '\par '&uf('K488.mnu|'v488^1)fi else '\par '&uf('K488.mnu|'v488^1)fi,'\b0 \par ',| |v488^c,| |v488^k,| |v488^p,if s(v488^c,v488^k,v488^p)<>''then| шифр: |v488^t fi, fi) 
+fi, 
+if v920:'AZP'then'\b Данные Адресата для Абонементной карточки подписки через 
+Роспечать\par \b0 ',"Код: "v87^a"\par ", 
+"+--------------------------------------------------------------+\par (Абонемент)\par "d6^a, 
+"Куда: "v6^a,", "v6^b,", "v6^c, 
+"\par Кому: "v6^d,"  "v6^e,"\par "d6, 
+"+--------------------------------------------------------------+\par (Дост.карточка)\par "d7^a, 
+"Куда: "v7^a,", "v7^b,", "v7^c, 
+"\par Кому: "v7^d,"  "v7^e,"\par "d7, 
+fi, 
+if v920:'IZD'then 
+   '\b Издающая, распространяющая или книготорговая организация\b0 ', 
+   " (Код "v81^e")",'\par -------------', 
+   "\b \par Наименование организации: \b0 "v81^a, 
+   "\b \par Аббревиатура: \b0 "v89^a, 
+   if s(v81^b,v89^b)<>''then'\par \b Город: \b0 'fi,v81^b, 
+   if a(v81^b) then v89^b fi, 
+   "\par Предыдущее наименование организации:"v81^c, 
+   if v82:'^a'then'\par \b Руководство: \b0 'fi, 
+   (|\par |d82,v82^a,| (|v82^b|)|,x2,|тел.|v82^c,|; телет.|v82^d, 
+   |; факс |v82^e,|; E-mail |v82^f), 
+   "\par \b Адрес: \b0 "d83,v83^a,", "v83^b,", "v83^c,", "v83^d,",д."v83^e, 
+   ". "v83^f, 
+   "\par \b Финансовые реквизиты: \b0 "d84,"Р/с N "v84^a,"; Кор.счет "v84^b, 
+   "; Банк: "v84^c,"; МФО: "v84^d,"; ИНН: "v84^e,"; БИК: "v84^f, 
+   "; Код по ОКОНХ: "v84^g,"; Код по ОКПО: "v84^h, 
+   "\par \b Условия продажи: \b0 "v85, 
+if p(v41)then'\par -------------\par ПРЕДВАРИТЕЛЬНЫЙ ЗАКАЗ на ',v41^a, 
+   |\par \b Перечислено \b0 |v41^b,&unifor('Korg.mnu|3'),| (N |v41^c, 
+   if p(v41^d)then|-|v41^d*6.2|.|,v41^d*4.2|.|,v41^d.4|)|fi, 
+   |\par \b Заказано: \b0 |v41^f| экз.|,| - |v41^e| наим.|, 
+   (if p(v41^i)then|\par \b Получено \b0 |v41^i*6.2|.|,v41^i*4.2|.|,v41^i.4|:|, 
+   f(val(v41^k),3,0),| экз.|d41^k,| - |v41^j| наим.|, 
+   |(N сч.|v41^h,|-|v41^g,if p(v41^g) then &unifor('Korg.mnu|3')fi, 
+   |, почт.расходы-|v41^m,if p(v41^m) then &unifor('Korg.mnu|3')fi, 
+   |, НДС-|v41^n,if p(v41^n) then &unifor('Korg.mnu|3')fi,')'  
+   fi), 
+   if p(v41^g)then'\par   \b Всего на сумму: \b0 ', 
+   f(rsum((v41^g|;|,v41^m|;|,v41^n|;|,'0 ')),0,2),&unifor('Korg.mnu|3') 
+   fi, 
+   if v41:'^b'and v41:'^g'then 
+      if val(v41^b) > rsum((v41^g|;|,v41^m|;|,v41^n|;|)) then 
+         '\par   \b Остаток суммы: \b0 ', 
+         f((val(v41^b))-(rsum(v41^g|;|,v41^m|;|,v41^n|;|,'0 ')),0,2), 
+         &unifor('Korg.mnu|3') 
+      else 
+         if val(v41^b) = rsum((v41^g|;|,v41^m|;|,v41^n|;|)) then 
+            '\par   Остатка от перечисленной суммы нет' 
+         else'\par   \b Задолженность: \b0 ', 
+             f((rsum(v41^g|;|,v41^m|;|,v41^n|;|))-(val(v41^b)),0,2), 
+             &unifor('Korg.mnu|3') 
+   fi fi fi, 
+   if v41:'^f'and v41:'^k'then 
+      if val(v41^f) > rsum((v41^k|;|)) then '\par   \b Недопоставлено: \b0 ' 
+         f((val(v41^f)-rsum(v41^k|;|)),0,0),' экз.' 
+fi fi fi, 
+if p(v42)then'\par -------------\par ПРЕДВАРИТЕЛЬНЫЙ ЗАКАЗ на ',v42^a, 
+   |\par \b Перечислено \b0 |v42^b,&unifor('Korg.mnu|3'),| (N |v42^c, 
+   if p(v42^d)then|-|v42^d*6.2|.|,v42^d*4.2|.|,v42^d.4|)|fi, 
+   |\par \b Заказано: \b0 |v42^f| экз.|,| - |v42^e| наим.|, 
+   (if p(v42^i)then|\par \b Получено \b0 |v42^i*6.2|.|,v42^i*4.2|.|,v42^i.4|:|, 
+   f(val(v42^k),3,0),| экз.|d42^k,| - |v42^j| наим.|, 
+   |(N сч.|v42^h,|-|v42^g,if p(v42^g) then &unifor('Korg.mnu|3')fi, 
+   |, почт.расходы-|v42^m,if p(v42^m) then &unifor('Korg.mnu|3')fi, 
+   |, НДС-|v42^n,if p(v42^n) then &unifor('Korg.mnu|3')fi,')', 
+   fi) 
+   if p(v42^g)then'\par   \b Всего на сумму: \b0 ', 
+   f(rsum((v42^g|;|,v42^m|;|,v42^n|;|)),0,2),&unifor('Korg.mnu|3') 
+   fi, 
+   if v42:'^b'and v42:'^g'then 
+      if val(v42^b) > rsum((v42^g|;|,v42^m|;|,v42^n|;|)) then 
+           '\par   \b Остаток суммы: \b0 ', 
+           f((val(v42^b))-(rsum(v42^g|;|,v42^m|;|,v42^n|;|)),0,2), 
+           &unifor('Korg.mnu|3') 
+      else 
+         if val(v42^b) = rsum((v42^g|;|,v42^m|;|,v42^n|;|)) then 
+            '\par   Остатка от перечисленной суммы нет' 
+         else 
+            '\par   \b Задолженность: \b0 ', 
+            f((rsum(v42^g|;|,v42^m|;|,v42^n|;|))-(val(v42^b)),0,2), 
+            &unifor('Korg.mnu|3') 
+   fi fi fi, 
+   if v42:'^f'and v42:'^k'then 
+      if val(v42^f) > rsum((v42^k|;|)) then '\par   \b Недопоставлено: \b0 ' 
+         f((val(v42^f)-rsum(v42^k|;|)),0,0),' экз.' 
+fi fi fi, 
+if p(v43) then '\par -------------\par ПРЕДВАРИТЕЛЬНЫЙ ЗАКАЗ на ',v43^a, 
+   |\par \b Перечислено \b0 |v43^b,&unifor('Korg.mnu|3'),| (N |v43^c, 
+   if p(v43^d)then|-|v43^d*6.2|.|,v43^d*4.2|.|,v43^d.4|)|fi, 
+   |\par \b Заказано: \b0 |v43^f| экз.|,| - |v43^e| наим.|, 
+   (if p(v43^i)then|\par \b Получено \b0 |v43^i*6.2|.|,v43^i*4.2|.|,v43^i.4|:|, 
+   f(val(v43^k),3,0),| экз.|d43^k,| - |v43^j| наим.|, 
+   |(N сч.|v43^h,|-|v43^g,if p(v43^g) then &unifor('Korg.mnu|3')fi, 
+   |, почт.расходы-|v43^m,if p(v43^m) then &unifor('Korg.mnu|3')fi, 
+   |, НДС-|v43^n,if p(v43^n) then &unifor('Korg.mnu|3'),fi')' 
+   fi), 
+   if p(v43^g)then'\par   \b Всего на сумму: \b0 ', 
+   f(rsum((v43^g|;|,v43^m|;|,v43^n|;|)),0,2),&unifor('Korg.mnu|3') 
+   fi, 
+   if v43:'^b'and v43:'^g'then 
+      if val(v43^b) > rsum((v43^g|;|,v43^m|;|,v43^n|;|)) then 
+           '\par   \b Остаток суммы: \b0 ', 
+           f((val(v43^b))-(rsum(v43^g|;|,v43^m|;|,v43^n|;|)),0,2), 
+           &unifor('Korg.mnu|3') 
+      else 
+         if val(v43^b) = rsum((v43^g|;|,v43^m|;|,v43^n|;|)) then 
+            '\par   Остатка от перечисленной суммы нет'else 
+            '\par   \b Задолженность: \b0 ', 
+            f((rsum(v43^g|;|,v43^m|;|,v43^n|;|))-(val(v43^b)),0,2), 
+            &unifor('Korg.mnu|3') 
+   fi fi fi, 
+   if v43:'^f'and v43:'^k'then 
+      if val(v43^f) > rsum((v43^k|;|)) then '\par   \b Недопоставлено: \b0 ' 
+         f((val(v43^f)-rsum(v43^k|;|)),0,0),' экз.' 
+fi fi fi, 
+fi, 
+if v920='KSU'then 
+   if p(v88^b) then '\b ЗАПИСЬ КНИГИ СУМ. УЧЕТА (ч.1)\b0 \par -----------------------\par ' 
+   '\b Год/ номер записи: \b0 ',&unifor('Av88^a#1'), 
+   '\par \b Дата поступления: \b0 ',&unifor('Av88^b*6.2#1'),'.',&unifor('Av88^b*4.2#1'),'.',&unifor('Av88^b.4#1') 
+   '\par \b N сопроводительного документа: \b0 '&unifor('Av88^c#1'), 
+   '\par \b Источник комплектования: \b0 ',ref(l('kor='v88^d),v89^a,if a(v89^a)then v81^a.15 fi), 
+   '\par ПОСТУПИЛО ВСЕГО:\par ' 
+(if v88<>'' then if p(v88^a) then 
+|\b Наименований: \b0 |v88^e,|, \b Экз-ров: \b0 |v88^f, 
+|, \b На сумму: \b0 |v88^g,&unifor('KOrg.mnu|3') fi fi), 
+if &unifor('Av88#2')<>''then '\par ПОСТУПИЛО ПО КАЖДОМУ АКТУ:\par ', 
+'\b N акта      Наим.     Экз.     На сумму \b0 \par ', 
+(if p(v88) then if p(v88^y) then v88^y, 
+|             |v88^e,|             |v88^f,|             |v88^g, 
+if val(v88^g)>0 then &unifor('KOrg.mnu|3') fi,|\par |d88^y fi fi) 
+fi else 'ЗАПИСЬ КНИГИ СУМ. УЧЕТА (ч.3 - итоговая) на 'v88^a.4' год' fi,fi, 
+if v920='KS2'then 
+   '\b ЗАПИСЬ КНИГИ СУМ. УЧЕТА (ч.2)\b0 \par -----------------------\par ' 
+   "\b Номер записи в КСУ выбытия: \b0 "v888^a, 
+   "\par \b Подразделение (откуда выбывают издания): \b0 "v888^d, 
+   "\par \b Причина выбытия: \b0 "v888^p*2.17, 
+   "\par \b Дата записи: \b0 "v888^b*6.2,'.'v888^b*4.2,'.'v888^b.4, 
+   "\par \b Номер сопроводительного документа: \b0 "v888^c, 
+   "\par \b Номер акта передачи в другое подразделение: \b0 "v800^a, 
+   "\par \b Выбыло всего из подразделения: \b0 "v180^a" наимен. ",v180^b" экз. ", 
+   "\par \b на сумму \b0 "v180^c, 
+fi, 
+if v920:'SZ' then '\b 'v62^a,| (Код |v62^k|)\b0 |, 
+   '\par СУММАРНЫЙ ЗАКАЗ ',|на |v62^m,|\b  № |v62^6|\b0 |, 
+   |\par \b Перечислено \b0 |v62^n,&unifor('Korg.mnu|3'), 
+   if s(v62^c,v62^f)<>''then' (',|N |v62^f, 
+      if p(v62^c)then| - |v62^c*6.2|.|,v62^c*4.2|.|,v62^c.4 fi, ')' 
+   fi, 
+   |\par \b Заказано: \b0 |v62^d| экз.|,| - |v62^e| наим.|, 
+   (if p(v62^i)then 
+      |\par \b Получено \b0 \par |v62^i*6.2|.|,v62^i*4.2|.|,v62^i.4|:|,| КСУ № |v62^u,|\par - |d62^g, 
+      f(val(v62^g),3,0),| экз.|d62^g,| - |v62^j| наим.|, 
+      | (N сч.|v62^h,|-|v62^p,if p(v62^p) then &unifor('Korg.mnu|3')fi, 
+      |, почт.расходы-|v62^r,if p(v62^r) then &unifor('Korg.mnu|3')fi, 
+      |, НДС-|v62^s,if p(v62^s) then &unifor('Korg.mnu|3')fi,
+      |)|d62^h,  
+   fi), 
+   if s(v62^g)<>''then'\par \par \b Всего на сумму: \b0 ', 
+   f(rsum((v62^p|;|,v62^r|;|,v62^s|;|,'0 ')),0,2),&unifor('Korg.mnu|3') 
+   fi, 
+   if s(v62^n)<>''and s(v62^p)<>''then 
+      if val(v62^n) > rsum((v62^p|;|,v62^r|;|,v62^s|;|)) then 
+         '\par \b Остаток суммы: \b0 ', 
+         f((val(v62^n)-rsum(v62^p|;|,v62^r|;|,v62^s|;|,'0 ')),0,2), 
+         &unifor('Korg.mnu|3') 
+      else 
+         if val(v62^n) = rsum((v62^p|;|,v62^r|;|,v62^s|;|)) then 
+            '\par Остатка от перечисленной суммы нет' 
+         else'\par \b Задолженность: \b0 ', 
+             f((rsum(v62^p|;|,v62^r|;|,v62^s|;|))-(val(v62^n)),0,2), 
+             &unifor('Korg.mnu|3') 
+   fi fi fi, 
+   if s(v62^d)<>'' and s(v62^g)<>''then 
+      if val(v62^d) > rsum((v62^g|;|)) then '\par \b Недопоставлено: \b0 ' 
+         f((val(v62^d)-rsum(v62^g|;|)),0,0),' экз.' 
+fi fi fi, 
+if v920:'Plan' then 'Запись ПЛАНА на 'v99' год' fi,
+'\par ----------------------------------------------------\par \par ' 
+'}' 

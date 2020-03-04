@@ -1,0 +1,8 @@
+'{',
+if v920:'KS3'then'\b ЗАПИСЬ ИТОГА ПОДПИСКИ\b0 \par -----------------------\par '
+   "\b Номер записи: \b0 "v889^a,"="v889^b, '\par '
+ if v889^b<>''then'\b Поставщик: \b0 ',&unifor("Kkp.mnu|"v889^b),                                   ref(L("KOR="v889^b),v81^a,if v81^a=''then v89^a fi),if s(&unifor("Kkp.mnu|"v889^b),ref(L("KOR="v889^b),v81^a,if v81^a=''then v89^a fi))=''then v889^b fi fi
+   "\par \b Дата: \b0 "d907,&unifor('Av907^a#1'),
+   '\par Заказано всего:\par 'v45^1" наим. в ",f(rsum(v44^.|;|),0,0)' комплектах (',f(rsum(v44^,|;|),0,0)' экземплярах) на сумму ',f(rsum(v44^l|;|),0,2)
+   fi,
+'}'

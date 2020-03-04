@@ -1,0 +1,80 @@
+/*			Отбор	Сорт.
+/* A форма обучения	O	K
+/* B семестр		F	L
+/* C факультет		A	M
+/* D группа		E	N
+/* E гражданств		D	P
+/* F специальность	C	R
+/* 2015 добавила проверку - отчисленных не беру
+&uf('+7W8#'),
+if p(v90) 
+then 
+if p(v54) and &unifor('Av54^c#1')='' and &unifor('Av54^F#1')='' and &unifor('Av54^S#1')='' then else 
+  (if p(v90) 
+   then 
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#','^A',if &uf('Av991^K#1')<>'' then v90^O else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),'^B',if &uf('Av991^L#1')<>'' then f(val(v90^F),2,0) else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),'^C',if &uf('Av991^M#1')<>'' then v90^A else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),'^D',if &uf('Av991^N#1')<>'' then v90^E else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),'^E',if &uf('Av991^P#1')<>'' then &uf('Av25#1') else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),'^F',if &uf('Av991^R#1')<>'' then v90^C else ' ' fi,),
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if &uf('Av991^O#1')='' or &uf('Av991^O#1')<>'' and s(&uf('Av991^O#1')): v90^O then 
+if &uf('Av991^A#1')='' or &uf('Av991^A#1')<>'' and s(&uf('Av991^A#1')): v90^A then 
+if &uf('Av991^F#1')='' or &uf('Av991^F#1')<>'' and val(&uf('Av991^F#1'))=val(v90^F) then 
+if &uf('Av991^E#1')='' or &uf('Av991^E#1')<>'' and s(&uf('Av991^E#1')): v90^E  then 
+if &uf('Av991^D#1')='' or &uf('Av991^D#1')<>'' and s(&uf('Av991^D#1')): v25 then 
+if &uf('Av991^C#1')='' or &uf('Av991^C#1')<>'' and s(&uf('Av991^C#1')): v90^C then 
+        &uf('+7W7#',&uf('AG7#1'),,'^W',&uf('Av10#1'),' ',&uf('Av11#1'),' ',&uf('Av12#1'),,'^P',v21,,,,,'^X',&uf('Av30#1')),,,
+        &uf('+7U8#',&uf('AG7#1')),,,,,,,,,,
+fi fi fi fi fi fi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+   fi/),,
+  (G8/)
+FI FI,

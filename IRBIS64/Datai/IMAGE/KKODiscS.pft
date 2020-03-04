@@ -1,0 +1,19 @@
+&UF('+1'),
+&uf('+7W1001#^I'v1^i,'^F'v1^f,'^o'&uf('Av991^o#1')),
+&uf('+7W2001#'),&uf('+7U2001#',&unifor('7',&uf('IPrivate,DBN,IBIS'),if &uf('IPrivate,DBN,IBIS')='' then 'IBIS' fi,',?DF='g1001^i,'-S'g1001^f,'?,@DiscnP_vl')/),&uf('+7W2002#'if p(g991^o) then (if g2001:'!Y' then g2001 fi/)else (g2001/) fi)/&uf('+7G2002'),&uf('+7T2002'),
+if p(g2002) then &uf('+7U2002#^A\qr »“Œ√Œ:  ^B'f(rsum(v1^b),0,0),'^D'if rsum(v1^S)>0 and rsum(g2002^d|;|)>0 then f(rsum(v1^D)/rsum(v1^S),0,2) fi) fi,&uf('S0'),
+(if p(g2002) then 
+'\trowd \trqc\trgaph108\trleft-108'
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx675'
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6345 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7479 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8613 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9747 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx10881 ',
+'\pard \widctlpar\intbl {\qc \fs22 ',if g2002^a:'ËÚÓ„Ó' then else '\qr \b '&uf('S1A')'\b0 ' fi,
+'\cell }\pard \ql\widctlpar\intbl {'g2002^A
+'\cell }\pard \qr\widctlpar\intbl {'g2002^B
+'\cell }\pard \qr\widctlpar\intbl {'g2002^E
+'\cell }\pard \qr\widctlpar\intbl {'g2002^C
+'\cell }\pard \qr\widctlpar\intbl {'g2002^D
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' fi/)

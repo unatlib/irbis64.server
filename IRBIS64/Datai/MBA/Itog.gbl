@@ -1,0 +1,124 @@
+0
+// 991^A - сначала выполнить списание всех этапов
+// 991^B - делать итоговое только у возвращенных
+//-------------- Выполнение итогового списания - на записи заказа
+//-----условие - списание - вхождение в перечень CanItogSpis
+//-----------условие списания только у возвращенных
+IF
+if val(v991^B)=0 or val(v991^B)=1 and &uf('IRequest,CanItogSpis,'): &uf('Av942^A#',,&uf('+N942') ) then else '1' fi
+PUTLOG
+'Заказ ',,v30^A,,' - не подлежит списанию',,,
+FI
+IF
+if val(v991^B)=0 or val(v991^B)=1 and &uf('IRequest,CanItogSpis,'): &uf('Av942^A#',,&uf('+N942') ) then '1' fi
+//---проверяю последний статус - H1?
+IF
+if &uf('+97',&uf('Av942^a#',&unifor('+N942')))=&uf('+97',&uf('IRequest,MBASTATUSITOG,H1')) then '1' fi
+PUTLOG
+'Заказ ',,v30^A,,' - итоговое списание уже выполнено'
+FI
+IF
+if &uf('+97',&uf('Av942^a#',&unifor('+N942')))=&uf('+97',&uf('IRequest,MBASTATUSITOG,H1')) then '0' else '1' fi
+//---проверяю каждый этап на списание суммы - из aution
+// дописываю стоимость в поле 942 - подполя D и L
+IF
+if val(v991^A)=1 then '1' fi
+//---если задан параметр 991^A, то поля ^D и ^L буду делать заново
+DEL
+942^D
+*
+
+
+DEL
+942^L
+*
+
+
+FI
+REP
+942
+F
+&uf('6SubfldDL')
+XXXXXXXXXXXXXXXXXX
+//---сумма по всем этапам поля 942
+ADD
+942
+
+&uf('+7W10#'),,if rsum((v942^D|, |))>0 then '^A',,&uf('IRequest,MBASTATUSITOG,H1'),,,'^C',,,&uf('3'),,,'^D',,f(rsum((v942^D|, |)),0,2),,,'^L',,&uf('3'),,&uf('+7W10#1') fi
+
+IF
+if val(g10)=0 then '1' fi
+PUTLOG
+'Абонент ',v100,', заказ ',,&uf('Av1001^B#1'),,,' - нет данных для списания ',
+FI
+IF
+if val(g10)>0 then '1' fi
+//----------------------------------------в запись абонента
+// ^B - номер заказа
+// ^D - сумма
+CORREC
+'*'
+mpu,,,'^D',&uf('Av942^D#',,&uf('+N942'),,),,,,'^B',&unifor('Av30^a#1'),
+"AB="v100
+
+//-----проверка на повтор суммы для этого заказа
+IF
+if rsum((if p(v39) then if &uf('+97',v39^B)=&uf('Av1001^B#1') then '1,' else '0,' fi fi))<=0 then '1' else '0' fi
+// новый заказ
+ADD
+39
+
+'^B',v1001^B,,,'^D',v1001^D,,'^C',&uf('3')
+
+FI
+IF
+if rsum((if p(v39) then if &uf('+97',v39^B)=&uf('Av1001^B#1') then '1,' else '0,' fi fi))>0 then '1' else '0' fi
+// заказ уже есть
+REP
+39^D
+F
+(if p(v39) then if p(v39^D) then if &uf('+97',v39^B)=&uf('Av1001^B#1') then &uf('Av1001^D#1') else v39^D fi else # fi fi/)
+
+REP
+39^C
+F
+(if p(v39) then if p(v39^C) then if &uf('+97',v39^B)=&uf('Av1001^B#1') then &uf('3') else v39^C fi else # fi fi/)
+
+FI
+// заново поле 35 - делается в autoin
+PUTLOG
+'Абонент ',v100,', заказ ',,&uf('Av1001^B#1'),,,' - списано ',&uf('Av1001^D#1')
+DEL
+1001
+
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец val(g10)>0
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец итоги еще не подсчитаны
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// конец разрешения на итоговое
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+
+
+

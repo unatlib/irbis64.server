@@ -1,0 +1,36 @@
+'\trowd \trqc\trgaph108\trleft-108',,,,,
+&uf('+7W3#'),,,
+&uf('+7W1#',,,f(val(&uf('3C',,&uf('3'),'/',,&uf('30'),,'0101',,,))*val(v110^X) / 365,0,2) ),,,
+&uf('+7W2#',&uf('+3J,I=',v903,,'/',,&uf('30'),'/$') ),,,
+if val(g1)>val(g2) then if &uf('G0.',g1)=&uf('G0.',g2) then  else &uf('+7W3#1') fi fi/,,,,,,
+if val(g3)>0 then 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat15\clshdng0\cellx4644 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat15\clshdng0\cellx5778 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat15\clshdng0\cellx8046 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat15\clshdng0\cellx9180 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat15\clshdng0\cellx13149 ',,
+else 
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx4644 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx5778 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8046 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9180 
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx13149 ',,
+fi
+'\pard \widctlpar\intbl {\ql \fs24 'v200^A,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 'v110^d,"^x"v110^x
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 '&uf('K110d.mnu!',v110^d,"^x"v110^x),,
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 '&uf('+3J,I=',v903,,'/',,&uf('30'),'/$')
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,,
+&uf('+7W1#',,,f(val(&uf('3C',,&uf('3'),'/',,&uf('30'),,'0101',,,))*val(v110^X) / 365,0,2) ),,,
+&uf('+7W2#',&uf('+3J,I=',v903,,'/',,&uf('30'),'/$') ),,,
+if val(g1)>val(g2) then if &uf('G0.',g1)=&uf('G0.',g2) then 'Поступление ожидается ' else 'Не все номера поступили за текущий год! Поступило - ',g2,,'; ожидалось - ',,g1 fi fi/,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

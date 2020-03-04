@@ -1,0 +1,32 @@
+   if rsum((if p(v691) 
+                 then 
+                    if &uf('Ag991^V#1')='' or &uf('+97',&uf('Ag991^V#1'))=&uf('+97',v691^V) 
+                    then 
+                       if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) 
+                       then 
+                          if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) 
+                          then 
+                             if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) 
+                             then 
+                                if &uf('Ag991^F#1')='' or val(&uf('Ag991^F#1'))=val(v691^F) 
+                                then 
+                                   if &uf('Ag1007^A#1')='' or &uf('+97',v691^S)=&uf('+97',&uf('Ag1007^A#1')) 
+                                   then 
+                                      if  &uf('Ag1007^B#1')='' or &uf('+97',v691^O)=&uf('+97',&uf('Ag1007^B#1')) 
+                                   then '1,' 
+                                   fi fi fi fi fi fi fi fi)) >0 
+   then
+      if val(G1006)=0 
+      then 
+         f(rsum((if p(v910) then if '6 2 7': v910^A then else v910^1|; |,|1;|n910^1 fi fi)),0,0),,,
+      fi,,,, 
+      if val(G1006)=1 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21' 
+      then 
+      else 
+         f(rsum((if p(v910) then if '6 2 7': v910^A then else v910^1|; |,|1;|n910^1 fi fi)),0,0),,, 
+      fi fi,,,,,
+      if val(G1006)=2 then if s(v900^C,' ',v900^2,' ',v900^3,' ',v900^4): '21'  
+      then 
+         f(rsum((if p(v910) then if '6 2 7': v910^A then else v910^1|; |,|1;|n910^1 fi fi)),0,0),,, 
+      fi fi,,,,,
+   fi,,

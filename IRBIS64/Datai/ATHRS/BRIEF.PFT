@@ -1,0 +1,11 @@
+if v920:'ATHRS' or v920:'EXP' or v920:'REF' then &unifor('9'v210^a),v210^K,| |v210^6,| |v210^W,if a(v210^W) then | |v210^Z fi,if s(v210^1,v210^j,v210^T)<>''then ' (',v210^1,if s(v210^1)<>''then |; |d210^j fi,v210^J,if s(v210^1,v210^J)<>''then |; |d210^t fi,v210^t,'). ' fi,if p(v210^K)then |. |d210^V fi,v210^V,| [|v210^:|]|,| : |v210^;,| : |v210^,| (|v210^.|)|,|. |v210^2,|. |v210^(,|, |v210^+,
+|, |v210^[,|--|v210^b,|, |v210^],|--|v210^c,|, |v210^<,|--|v210^d,|--|v210^g,|, |v210^>,|--|v210^e,|, |v210^\,|--|v210^o,|, |v210^/,|, |v210^h,|--|v210^9,
+ fi,
+if v920:'ATHRA'then v210^a," "v210^d,", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). ' fi,if p(v210^a)then |. |d210^Z fi,v210^z,| [|v210^:|]|,| : |v210^;,| : |v210^,,| : |v210^<,| (|v210^.|)|,
+|. |v210^2,|.|v210^5,|,|v210^+,"--"v210^k,"--"v210^M,"--"v210^6,"--"v210^Q,"--"v210^T,"--"v210^O,"--"v210^0,", "v210^J fi,
+if v920:'ATHRC' then mhl,v210^a," ("v210^c")",". "v210^b,if v210:'^d' or v210:'^f' or v210:'^e' then '(',v210^d,if v210:'^d' and v210:'^f' then "; "v210^f  else v210^f fi,if v210:'^e' and (v210:'^f' or v210:'^d') then "; "v210^
+e else v210^e fi,')' fi fi,if v920:'ATHRG' then if p(v210) then mhu,v210^g.1,mhl,v210^g*1,| |d210^g,if p(v210^g) then| - |d210^a fi,v210^a,| - |v210^v,| - |v210^W,
+          if p(v210^b) and p(v210^x) then| (|v210^f|)|,|. |v210^b,| (|v210^x|)| 
+          else |. |v210^b,| (|v210^f|)| 
+          fi,|, |v210^h,|, |v210^I,|, |v210^J,| (|v210^c|)|,| (|v210^E|)|  
+ fi fi,

@@ -1,0 +1,208 @@
+2
+ѕеренос отмеченного контингента в записи студентов. ¬ыполнить?
+
+Mvrdr.wss
+  ¬¬≈ƒ»“≈
+//12 PUTLOG
+// верси€ 7.1
+// перенос данных из записи VUZ в записи студентов
+// в 991 данные из VUZ - может несколько 
+// в 992 годы и номер группы
+// 992^9 = 1 - удал€ть поле 90
+IF
+if val(&uf('+N991'))>0 then '1' fi
+IF
+if val(v992^9)=1 then '1' fi
+DEL
+90
+*
+
+
+FI
+ADD
+90
+
+(if p(v991) then v991,,,&uf('Av992#1') fi/)
+
+DEL
+90^9
+*
+
+
+PUTLOG
+'ќткорректирована запись студента (',v30,'). MFN=',f(val(mfn),0,0)
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+// заново сформирую пол€ 69
+DEL
+69
+*
+
+
+// надстройка - учет повтор€емости пол€ 90
+DEL
+9000
+*
+
+
+ADD
+9000
+
+(v90/)
+
+DEL
+9001
+*
+
+
+ADD
+9001
+
+(v90/)
+
+//.............цикл по повторени€м пол€ 90
+REPEAT
+DEL
+90
+*
+
+
+ADD
+90
+
+&uf('Av9000#1')
+
+// сначала в 112, чтобы  не повтор€ть подпол€ B и D
+DEL
+112
+*
+
+
+ADD
+112
+XXXXXXXXXXXXXXXXXXX
+if a(v54) or &unifor('Av54#1')<>'' and &unifor('Av54^C#1')<>'' then if p(v90) and a(v90^U) then if &unifor('JVUZ,?',v90^a"-",,v90^n"-",v90^c"-" ,v90^v"-",v90^o"-",v90^f"-")>'0' then &unifor('DVUZ,!?',v90^a"-",,v90^n"-",v90^c"-" ,v90^v"-",v90^o"-",v90^f"-",,'!,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,'-S',,v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,,v90^o,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,v90^o,,,'-S',,v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,v90^o,,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,v90^o,,,'-S',,v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^o,,'-S',,v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,,,v90^v,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,,,v90^v,,,'-S',,v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,if v90^C<>'' then ,v90^c else v90^n fi,,,v90^v,,,'-S',,v90^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v90^a,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',v90^a,'-S',,v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,v90^o,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,v90^o,,,'-S',,v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^v,,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',,,v90^v,,,'-S',,v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v90^o,,,'-S',,v90^f)>'0' then &unifor('DVUZ,?!',,,v90^o,,,'-S',,v90^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!','-S',,v90^f)>'0' then &unifor('DVUZ,?!','-S',,v90^f,'?,(v69/)') fi fi fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if &uf('IMAIN,DefaultModeSpec,1')='1' then '1' fi
+// если в специальности есть точка, то добавл€ю специальность до точки 
+IF
+if v90^C<>'' and v90^C:'.' then '1' fi
+DEL
+1090
+*
+
+
+ADD
+1090
+
+v90
+
+REP
+1090^C
+1
+&uf('G0.',v1090^C)
+
+ADD
+112
+
+if a(v54) or &unifor('Av54#1')<>'' and &unifor('Av54^C#1')<>'' then if p(v1090) and a(v1090^U) then if &unifor('JVUZ,?',v1090^a"-",,v1090^n"-",v1090^c"-" ,v1090^v"-",v1090^o"-",v1090^f"-")>'0' then &unifor('DVUZ,!?',v1090^a"-",,v1090^n"-",v1090^c"-" ,v1090^v"-",v1090^o"-",v1090^f"-",,'!,(v69/)') fi,,,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,v1090^o,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^o,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!','-S',,v1090^f)>'0' then &unifor('DVUZ,?!','-S',,v90^f,'?,(v69/)') fi fi fi
+
+FI
+FI
+
+IF
+if &uf('IMAIN,DefaultModeSpec,1')='2' then '1' fi
+// если специальность кончаетс€ не на 00, то расшир€ю на 00
+IF
+if v90^C<>'' then if v90^C*4.1<>'0' or v90^C*5.1<>'0' then '1' fi fi
+DEL
+1090
+*
+
+
+ADD
+1090
+
+v90
+
+REP
+1090^C
+1
+v1090^C.4,'00'
+
+ADD
+112
+
+if a(v54) or &unifor('Av54#1')<>'' and &unifor('Av54^C#1')<>'' then if p(v1090) and a(v1090^U) then if &unifor('JVUZ,?',v1090^a"-",,v1090^n"-",v1090^c"-" ,v1090^v"-",v1090^o"-",v1090^f"-")>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,v1090^v,,v1090^o,'-S',,v1090^f,'?,(v69/)') fi,,,,,,if &unifor('JVUZ,?',v1090^a"-",,v1090^n"-",v1090^c"-" ,v1090^v"-",v1090^o"-",v1090^f"-")>'0' then &unifor('DVUZ,!?',v1090^a"-",,v1090^n"-",v1090^c"-" ,v1090^v"-",v1090^o"-",v1090^f"-",,'!,(v69/)') fi,,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,v1090^o,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^o,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,,,v1090^v,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,if v1090^C<>'' then ,v1090^c else v1090^n fi,,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,if &unifor('JVUZ,!',v1090^a,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',v1090^a,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,v1090^o,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^v,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^v,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!',,,v1090^o,,,'-S',,v1090^f)>'0' then &unifor('DVUZ,?!',,,v1090^o,,,'-S',,v1090^f,'?,(v69/)') fi,,,,,if &unifor('JVUZ,!','-S',,v1090^f)>'0' then &unifor('DVUZ,?!','-S',,v90^f,'?,(v69/)') fi fi fi
+
+FI
+FI
+
+REPEAT
+ADD
+69
+
+if rsum((if p(v69) then if &uf('+97',v69^B)= &uf('+97',&unifor('Av112^B#1')) and &uf('+97',v69^D)= &uf('+97',&unifor('Av112^D#1')) then '1,' else '0,' fi fi))=0 then &unifor('Av112#1') fi
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+// ”даление 69 в соответствии с изучаемым €зыком
+DEL
+69
+F
+if v920:'VUZ' then else (if p(v69) then if v69^d:':' then if &unifor('Av26#1')<>'' then if &unifor('DRDR,@'mfn,',v26|, |'):&unifor('G2:'v69^d) then'0'else'1' fi else '1' fi else '0' fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+9000
+1
+
+
+UNTIL
+if p(v9000) then '1' fi
+//.............конец цикла по повторением пол€ 90
+DEL
+90
+*
+
+
+ADD
+90
+
+(v9001/)
+
+DEL
+9001
+*
+
+
+DEL
+1090
+*
+
+
+FI
+DEL
+991
+*
+
+
+DEL
+992
+*
+
+
+GETFLD

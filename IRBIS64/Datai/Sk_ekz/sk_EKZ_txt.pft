@@ -1,0 +1,5 @@
+&uf('DSK,!I=',v2,'!,@SK_TXT'),
+(if v910<>'' then '#910: ^A',if (v910^1='') or (val(v910^1)<2) then '0' else 'U' fi v910,/ fi),
+'*****'
+
+

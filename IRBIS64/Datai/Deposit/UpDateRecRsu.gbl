@@ -1,0 +1,61 @@
+﻿1
+UpdateRecRSU.wss
+Задать значения параметров
+// 991
+DEL
+991
+*
+
+
+ADD
+991
+
+'%1'
+
+
+IF
+if p(v951) then '1' fi,,&uf('+7W5#'),,,&uf('+7W1#',,&uf('DCMPL,!RSU=',,v991^A,,'!,v882^E')),,,&uf('+7W2#',,&uf('DCMPL,!RSU=',,v991^A,,'!,v882^F')),,,
+IF
+if rsum((if p(v951) then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then '1,',,break fi fi))=0 then '1' fi
+//---нет РСУ присоединить
+REP
+951
+1
+&uf('Av951#1'),,,'^U',v991^A,,"^3"g1,,"^C"g2
+ 
+FI
+IF
+if rsum((if p(v951) then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then '1,',,break fi fi))>0 then '1' fi
+//---уже сномером РСУ, изменить данныеIF
+REP
+951^3
+F
+(if p(v951) then if p(v951^3) then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then &uf('Ag1#1'),,,&uf('+7W5#1'),,else v951^3 fi else # fi fi/)
+
+REP
+951^C
+F
+(if p(v951) then if p(v951^C) then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then &uf('Ag2#1'),,&uf('+7W5#1'),,else v951^C fi else # fi fi/)
+
+REP
+951
+F
+(if p(v951) then v951,,,if a(v951^3) and &uf('Ag1#1')<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then '^3',&uf('Ag1#1'),,,&uf('+7W5#1') fi fi fi/)
+
+REP
+951
+F
+(if p(v951) then v951,,,if a(v951^C) and &uf('Ag2#1')<>'' then if &uf('+97',v951^U)=&uf('+97',&uf('Av991^A#1')) then '^C',&uf('Ag2#1'),,,&uf('+7W5#1') fi fi fi/)
+
+IF
+if val(g5)=1 then '1' fi
+PUTLOG
+&uf('+D'),,': update MFN=',f(val(mfn),0,0)
+FI
+FI
+DEL
+991
+*
+
+
+FI

@@ -1,0 +1,26 @@
+/*v1000 - имя БД
+/*v1004^A повторения элементов списка, в данном случае MFN
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" class="sub1" name="nnnn" value="обновить">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="PFTNAME" value="gua_sso_select_wn">',
+'</form>',
+'<title>Отмеченные</title>',
+'<b>',
+if p(v1004) then &uf('+7W1004#'),&uf('+7U1004#'(v1004/)/),&uf('+7G1004'),
+'Отмечено: 'v1003 ' (Индексы: '(if p(g1004) then &uf('G2='g1004^a),' ; ' fi)')' else 'Отмеченных нет' fi,
+'</b><br>',
+
+&uf('7,?Iisso=',g4,'?,@guar') ,
+
+if p(v1004) then 
+'<form name="EXPORT" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+' <input type="hidden" name="C21COM" value="2">',
+/*' <input type="hidden" name="I21DBN" value="',v1000,'">',
+'<br>',
+'<b>Экспорт отмеченных документов<br>',
+'Отмечено документов: 'v1003,'</b><br>',
+FI
+/*'v1003_select : 'v1003'<br>','v1004_select : 'v1004|+|'<br>',
+/*   &uf('+7W1004#'"+"v1004^a*10.1|+|),
+/*'g1004_select 2: 'g1004

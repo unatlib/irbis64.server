@@ -1,0 +1,47 @@
+'{',,
+if v920: 'AB' 
+then 
+  "\b Абонент номер: \b0 "V100, 
+  "\par \b Вед. признак: \b0 "d900^b,&unifor("Kved.mnu|"v900^b)/,
+  if v30<>'' then '\b Читательский билет номер: \b0 ',,v30 '\par ' fi,,,
+  if p(v900^H) and a(v900^g) 
+  then 
+     "\b Договор от \b0 "v900^h 
+  else 
+     if p(v900^H) and p(v900^g) then "\b Договор № \b0 "v900^g, "\b  от \b0 "v900^h fi 
+  fi,,,,
+  "\par \b НАИМЕНОВАНИЕ : \b0 "v81^a,
+  if a(v81^a) then "\par \b НАИМЕНОВАНИЕ : \b0 "v81^b fi/,,,,,,,,
+/*  if p(v81^a) and p(v81^b) then "\par O="d81^a,&unifor("9"v81^a) else if p(v81^b) and a(v81^a) then "O="d81^b,&unifor("9"v81^b) fi fi 
+  "\par \b АДРЕС: \b0 "d83,v83^a,", "v83^b,", "v83^c,", "v83^d,", "v83^e/,
+  "\par \b ТЕЛЕФОН: \b0 "d82^c,(v82^c+|;|),
+  "\tab \b ФАКС: \b0 "v82^e/,
+  "\b E-MAIL: \b0 "v82^f/,
+   "\par \b ПЕРЕЧИСЛЕНО В 2019 г.: \b0 "d41,f(rsum(v41^d|,|),1,2)," руб."d41^d/
+  "\par \b ИСТРАЧЕНО В 2019 г.: \b0 "d39,f((rsum(v39^b|,|)),1,2)," руб."d39^b/
+  "\par \b ОСТАТОК: \b0 "d41,f((rsum(v41^d|,|))- (rsum(v39^b|,|)),1,2)," руб."d41^d/  fi
+(if p(v391) then |\par \ul \b Акт на сумму:  \ul0 \b0 |v391^a,|\ul \b  за период  \ul0 \b0 |v391^b,|\ul \b  Остаток \ul0 \b0 |v391^c,|\ul \b  от \ul0 \b0 |v391^d fi) 
+
+
+(if p(v951) then |,  |+d951,
+/*       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^a) then &unifor('+I$3,10,,'v951^a'$',v951^t,| ФАЙЛ|n951^t) fi 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi),"\par  см. ГРАФИКУ\par "d950,   
+
+    if p(v39)  then
+  '\par \b СВЕДЕНИЯ О СПИСАНИИ ДЕНЕГ ЗА ПОСЛЕДНИЙ ЗАКАЗ N \b0 ',
+   '\b ',&unifor('Av39^d#',&unifor('+N39')),' \b0 ',' \b  , состояние на:  \b0 ',
+    '\b ',&unifor('3'),' \b0 ',/
+   '\par \b Списано: \b0 ',&unifor('Av39^b#',&unifor('+N39')),
+   ' руб. - ',&unifor('Av39^e#',&unifor('+N39')),
+   '\par \b Остаток: \b0 ',f((rsum(v41^d|,|))- (rsum(v39^b|,|)),1,2)," руб."d41^d/,
+   if v40^f:'***' 
+  then 
+  x20,'\par \b СВЕДЕНИЯ О ВЫДАЧЕ ЛИТЕРАТУРЫ, состояние на: \b0 ',
+  '\b ',&unifor('3'),' \b0 '/ fi,
+  (if v40^f:'***' 
+  then |\par \b Заказ N \b0  |v40^b,|\b  Шифр  \b0 |v40^a,|\b  Выдача  \b0 |v40^d,
+  |\b  Возврат  \b0 |v40^e else 
+  fi/) 
+  "\par \b ПРЕДОПЛАТА 97-2019: \b0 "d37/,(v37^d| руб. - |v37^c+|; |/),
+fi '}'

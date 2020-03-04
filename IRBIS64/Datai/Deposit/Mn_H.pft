@@ -1,0 +1,23 @@
+'</>',
+if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
+'<DIV ALIGN=CENTER><b> Издание в обработке.<br> </b><DIV ALIGN=LEFT>' fi fi, 
+&uf('6Mn_H0'),
+otitkn_H, 
+'. - ',oizd, 
+'. - ',ospec, 
+'. - ',ovixd, 
+'. - ',ofizxar_H, 
+'. - ',oser, 
+'. - ',oprim_H, 
+'. - ',oISBNcn_H, '<br>',
+,oprimd_H, ,/*'</td></tr></table>' ,
+,ogrudk_H, 
+,orubdks_H,
+,oprip481_H, 
+,Odoptd_H, 
+,oex910_h,
+/*&uf('6oex910_H'), 
+,ofinal_H, 
+,bibl390_H, 
+'<br> <b> ','Кол-во выдач </b> ',f(val(v999),0,0),&unifor('!')if val(v999) =0 then'0'fi, 
+

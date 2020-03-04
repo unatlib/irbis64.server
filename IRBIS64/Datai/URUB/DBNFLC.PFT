@@ -1,0 +1,16 @@
+if p(v2) then &uf('+7W1#',v2) else &uf('+7W1#',v1) fi,
+if L("I="g1)<=0 or val(ref(l("I="g1),mfn))=val(mfn) 
+    then if a(v1) 
+              then '1Îòñóòñòâóåò ÒÅÐÌÈÍ' 
+              else if (p(v4) or p(v5) or p(v100)) and (p(v6) or p(v7) or p(v8)) 
+                        then '1Íåñîâìåñòèìûå äàííûå: ÎÒÑÛËÊÈ "ÑÌÎÒÐÈ..." è ÂÛØÅÑÒÎßÙÈÅ/ÍÈÆÅÑÒÎßÙÈÅ/ÀÑÑÎÖÈÀÒÈÂÍÛÅ ÄÅÑÊÐÈÏÒÎÐÛ' 
+                        else if (p(v6) and (p(v7) or p(v8))) or (p(v7) and (p(v6) or p(v8))) or (p(v8) and (p(v6) or p(v8))) 
+                                   then '1Íåñîâìåñòèìûå äàííûå: ìîæåò áûòü çàïîëíåíî òîëüêî îäíî èç ïîëåé 6 èëè 7 èëè 8'  
+                                   else '0'  
+                               fi 
+                   fi 
+         fi 
+    else '1Äóáëåòíûé òåðìèí: ',g1,ref(L("I="g1),' (ñì. N ',f(val(mfn),0,0),')') 
+fi                                                                        
+
+

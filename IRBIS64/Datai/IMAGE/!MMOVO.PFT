@@ -1,0 +1,10 @@
+mhl,
+(if '***'='7101'then v710^b else 
+    if '***'='7111'then v711^b else 
+       if '***'='9621'then v962^b else  
+          if '***'='971'or'***'='461'or'***'='961'then v***^b else v***^a fi,
+          if '***'='971'or '***'='972'or'***'='962'or'***'='710'and v920:'PVK' then
+             if s(v***^n,v***^c)<>''then' ('v***^n|; |,v***^c')'fi,|. |v710^b,
+             if s(v***^d,v***^f,v***^e)<>''then' ('v***^d|; |,v***^f,
+                if p(v***^f) then|; |v***^e else v***^e fi,|/ |v***^h,|/ |v***^i')'
+ fi fi fi fi fi/),mpl

@@ -1,0 +1,81 @@
+8
+1
+______Наименование______
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then &unifor('Av3^A#1') fi fi/)
+3
+Номер учебного плана
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>''  then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0) then v83^U fi fi/)
+C
+Фак.
+0
+0
+1
+fak.mnu\\2
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then v83^A fi fi/)
+B
+Напр.
+0
+0
+1
+napr.mnu\\2
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then v83^N fi fi/)
+l
+Специальность
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then v83^C fi fi/)
+4
+Семестр
+0
+0
+0
+
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then v83^F fi fi/)
+D
+Кафедра читающая
+0
+0
+1
+kafch.mnu\\2
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then &unifor('Av5#1') fi fi/)
+A
+Кафедра выпускающая
+0
+0
+1
+kafv.mnu\\2
+
+
+
+(if p(v83) and v83^U<>'' then if val(&unifor('Av991#1'))=1 and v83^F: '1/' or val(&unifor('Av991#1'))=1 and v83^F='1' or v83^F: f(val(&unifor('Av991#1')),0,0)  then v83^H fi fi/)

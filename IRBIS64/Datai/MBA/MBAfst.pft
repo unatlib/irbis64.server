@@ -1,0 +1,39 @@
+"V="v920/
+if &uf('+97',v920)='AB' then "AB="v100 fi/
+if &uf('+97',v920)='AB' then MHL,'/K=/',(v81^a,|%|d81/) fi /
+if &uf('+97',v920)='AB' then MHL,'/K=/',(v81^d,|%|d81/) fi /
+if &uf('+97',v920)='AB' then MHL,'/K=/',(v81^b,|%|d81/) fi /
+if &uf('+97',v920)='AB' and p(v81^d) then "MR="v81^d fi/
+/*Адресабонента
+if &uf('+97',v920)='AB' then "IN="v83^a/,"ST="v83^b/,"RG="v83^c/,"TN="v83^d/,"TU="v83^e/ fi/
+/*абонент- держатель
+if &uf('+97',v920)='AB' then if rsum((if p(v40) then if v40^f:'*****'  then '1,' fi fi))>0 then "AD="v100 fi fi/
+/*абонент- задолжник
+if &uf('+97',v920)='AB' then if rsum((if p(v40) then if v40^f:'*****' and val(&unifor('3'))-val(v40^E)>0 then '1,' else '0,'fi fi))>0 then "AZ="v100 fi,,fi /
+/*абонент- организация
+if &uf('+97',v920)='AB' then if p(v81^a) and p(v81^b) then "O="d81^a,&unifor("9"v81^a) else if p(v81^b) and a(v81^a) then "O="d81^b,&unifor("9"v81^b) fi fi fi/
+/*видабонента, ведомств.признак
+if &uf('+97',v920)='AB' then "VA="v140^A/"VP="v140^b fi/
+/*абонент-заказ
+if v920:'ODER' then "qab="v100," - "v30^a fi/
+if v920:'ODER' then "NZA="v30^E fi/
+/*видзаказа
+if v920:'ODER'  then (if p(v31) then |vzv=|v31 fi/) fi/
+/*последнийкод операции
+if v920:'ODER'  then "L="d942^a,&unifor('Av942^a#',&unifor('+N942'))  fi/
+/*всекода операции
+if v920:'ODER'  then (|OP=|v942^a/) fi/
+/*фондодержатель
+if v920:'ODER' then "DF="v902 FI/
+if v920:'ODER'  then "I="v903 fi/
+if v920:'ODER'  then if p(v200^A)  then "T="v200^A fi fi/
+if v920:'ODER' then if p(v606) then "Tem="v606/ fi fi/
+if v920:'ODER'  and p(v675) then ( |U=|v675/) fi/
+/*поступившиезаказы
+if s('M0 M1 M2 P1 X5'): &uf('Av942^A#',,&uf('+N942') ) then "FST="v30^A,," ("v100")" fi/
+/*ценасписания фиксированная - код операции - вид абонента - цена
+if v920='CENA' then mhu,(if p(v1) then 'CN=1-',v1^A,v1^B,v1^C fi/) fi/
+/*ценаза лист копии - код операции - вид абонента - цена
+if v920='CENA' then mhu,(if p(v2) then 'CN=2-',v2^A,v2^B,v2^C fi/) fi/
+/*ценапроодления за 30 дней - код операции - вид абонента - цена
+if v920='CENA' then mhu,(if p(v4) then 'CN=3-',v3^A,v3^B,v3^C fi/) fi/

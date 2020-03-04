@@ -1,0 +1,56 @@
+if v920:'nj'then 
+   ref(l("I="v933),v200^a, 
+         if p(v200^e) then ' : ' 
+            if s(v982^0,v982^9)<>'' or v905^2:'1' or &unifor('Q'v200^e*1.1)<>v200^e*1.1 then v200^e else 
+               &unifor('Q'v200^e.1),v200^e*1 
+         fi fi,  
+         (|. |v923^h,if p(v923^h) then|, |v923^i else |. |v923^i fi,| : |v923^e, 
+          |. |v923^k,if p(v923^k) then|, |v923^l else |. |v923^l fi,| : |v923^s, 
+          |. |v923^m,if p(v923^m) then|, |v923^n else |. |v923^n fi,| : |v923^v),". - "d110^d, 
+         if &unifor('Krksp.mnu|'v110^d)<>''then &unifor('Krksp.mnu|'v110^d) 
+         else"Периодичность "v110^d fi)'  'v934"г.", 
+            if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т.'fi),v935 fi, 
+            if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' № 'fi),v936 fi, 
+  ,oprimK, 
+else 
+   if p(v461) then v461^c, 
+      (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi, 
+       |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi), 
+       | [|v461^2|]|, 
+      if a(v461^2) then &unifor('+1W1'''), 
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi, 
+         " ["d900^t, 
+         if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPRIVATE,KKS,'),v905^t)<>'' or v900^t='' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+      fi fi fi fi, 
+      (| = |v46^l,| : |d461^e, 
+      if s(v982^0,v982^9)<>'' or v905^2:'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 then v461^e else 
+      &unifor('Q'v461^e.1),v461^e*1 fi,| : |v982^1, 
+      | / |v461^f,|. - |v461^p),". - "d230^a, 
+      (if p(v230^a) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| и |+v230^a else ""| and |+v230^a 
+      fi fi),| ; |v461^r,      
+      (". - ("| (|+v46^a,| : |v46^e,| / |v46^f,|, ISSN |v46^j,| ; |v46^v,if s(v46^a,v46^v)<>''then|)|d46 fi, 
+      |. - |v46^t*4,| : |v46^r,|. - |v46^p, 
+      if p(v46^c) then'. - ',|До |v46^g,'  Издание см. под заглавием: 'v46^c,| / |v46^d,|. - ISSN |v46^x,'. 'fi), 
+      if s(v454^u)<>'' then,origs454, fi ,|. - Пер.загл.: |v461^a,"."d461, 
+      ". "v200^v,if p(v200^v) then" : "v200^a else v200^a fi, 
+fi, 
+   if a(v461) then v200^a," ["v200^b"]", 
+      if a(v200^b) then &unifor('+1W1'''), 
+         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
+         if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
+         if a(v900^t) then 
+            if s(v230v337v135)<>''then 
+               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
+            else 
+               if s(&unifor('IPrivate,FPS,'),v905^s)<>'' or v900^t='' then else 
+                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
+      fi fi fi fi,Otitkn,ibis925,OREFRESB,origp454,". - Пер.загл.: "v541, 
+   fi, 
+fi,&unifor('!') 

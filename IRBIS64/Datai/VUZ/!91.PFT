@@ -1,0 +1,3 @@
+if L("NUP="v91)<=0 or val(ref(l("NUP="v91),mfn))=val(
+mfn) then '0' else '2Дублетный номер УП: 'v91, ref(L("NUP="v91),' (см. N ',f(val(mfn),0,0),')')fi/
+

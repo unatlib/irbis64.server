@@ -1,0 +1,42 @@
+'{',if p(v210) and a(v310) and a(v320) then '\tab \b Авторитетная запись на ИНДИВИДУАЛЬНОГО АВТОРА\b0 ',if p(v210) then '\par ' fi                              
+                      if p(v210^a) then '\par ',v210^a," "v210^d,", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi fi,
+if p(v710) then '\par \tab \b см.также на параллельном языке:\b0 ' fi,
+&unifor('S0')if p(v710) then if &unifor('Av710#2')<>'' then (if p(v710) then '\par ' 
+&unifor('S1A')'.',mhl,v710^a,| |v710^d,|, |v710^g,if a(v710^g)then |, |v710^b fi,
+if s(v710^1,v710^c,v710^f)<>''then ' (',v710^1,if s(v710^1)<>''then |; |d710^c fi,
+v710^c,if s(v710^1,v710^c)<>''then |; |d710^f fi,v710^f,'). ' fi,
+if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi/) else '\par ',
+v710^a,| |v710^d,|, |v710^G,if a(v710^g) then |, |v710^b fi,if s(v710^1,v710^c,v710^f)<>''then ' (',v710^1,if s(v710^1)<>''then |; |d710^c fi,
+v710^c,if s(v710^1,v710^c)<>''then |; |d710^f fi,v710^f,'). '  fi,
+if p(v710^8)then ' (',&unifor('Kkat.mnu|'v710^8), ')' fi fi fi,
+if &unifor('Av510#2')<>''then else if v510:'^5' and (not(v305:'^b'))
+ and (not(v510^5*1:'0')) then if v510:'^5e' then '\par \tab \b см.также под псевдонимом:\b0 ' else if v
+510:'^5f' then '\par \tab \b см.также под подлинным именем:\b0 ' else
+ if v510:'^5a' then '\par \tab \b см.также под предыдущим именем:\b0 ' else
+ if v510:'^5b' then '\par \tab \b см.также под последующим именем:\b0 'else if v510:'^5z' then '
+\par \tab \b см.также:\b0 'fi fi fi fi fi fi fi,if p(v510) then if (&unifor(
+'Av510#2')<>''or a(v510^5))and v305='' then '\par \tab \b см.также:\b0 ' else if v305:'^b
+' and v510^5:'0' then (|\par \b |v305^a|\b0 |,| |v305^b,|:|v305^c,|,|v305^d,|,|v305
+^e/) else if v510:'^0' then ("\par \b "v510^0"\b0 ") fi fi fi fi,&unifor('S0')if
+ p(v510) and v305^b='' and (not(v510^5*1:'0')) then if &unifor('Av510#
+2')<>'' then (if p(v510) then '\par '&unifor('S1A')'.'v510^a,| |v510^d,|, |v510^g,if a(v510^g)then |, |v510^b fi,if s(v510^1,v510^c,v510^f)<>''then ' (',v510^1,if s(v510^1)<>''then |; |d510^c fi,v510^c,if s(v510^1,v510^c)<>''then |; |d510^f fi,v510^f,'). '  fi,if p(v510^5)then ' (',&unifor('Kkodm.mnu|'v510^5), ')' fi fi/) else '\par ',v510^a,| |v510^d,|, |v510^G,if a(v510^g) then |, |v510^b fi,if s(v510^1,v510^c,v510^f)<>''then ' (',v510^1,if s(v510^1)<>''then |; |d510^c fi,v510^c,if s(v510^1,v510^c)<>''then |; |d510^f fi,v510^f,'). ' fi fi fi,if p(v410) and p(v410) and (not(v510^5*1:'0')) and (not(v410^5*1:'0')) then "\par  \tab \b Непринятые формы имени лица \b0" d410
+ fi,&unifor('S0')if p(v410) and (not(v410^5*1:'0')) then if &unifor('Av410#
+2')<>'' then (if p(v410)then '\par '&unifor('S1A')'.'v410^a,| |v410^d,|, |v410^g,if a(v410^g) then |, |v410^b fi,if s(v410^1,v410^c,v410^f)<>''then' (',v410^1,if s(v410^1)<>''then |; |d410^c fi,v410^c,if s(v410^1,v410^c)<>''then |; |d410^f fi,v410^f,'). '  fi fi/) else '\par ',v410^a,| |v410^d,|, |v410^g,if a(v410^g) then |, |v410^b fi,if s(v410^1,v410^c,v410^f)<>''then' (',v410^1,if s(v410^1)<>''then |; |d410^c 
+fi,v410^c,if s(v410^1,v410^c)<>''then |; |d410^f fi,v410^f,'). '  fi fi fi fi,if p(v210) and p(v31
+0) then '\tab \b ссылочная запись на ИНДИВИДУАЛЬНОГО АВТОРА\b0 ','\par ',v210^a," "v210^d,
+", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi,("\par \b "v310^a"\b0 ",| |v310^b,
+|,|v310^c,|,|v310^d,|,|v310^e/) fi,if p(v210) and p(v320) then '\tab \b  Общая пояснительная запись на ИНДИВИДУАЛЬНОГО АВТОРА
+\b0 ','\par ',v210^a," "v210^d,", "v210^g,if a(v210^g) then ", "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi,"\par "v320^a fi,if p(v300) or p(v830) or p(v810) or p(v330) or p(v815)or p(v820) or p(v825) or p(v835) 
+ then '\par ' fi,if p(v300) then '\par \b Справочное примечание:  \b0 '("\par "v
+300^a/) fi,if p(v330) then '\par \b Примечание об области применения :  \b0 '("\par ",| 
+|v330^a/) fi,if p(v340) then '\par \b Примечание о биографии и деятельности:  \b0 '("\par "v
+340^a/v340^b/v340^P/v340^M/v340^R/) fi,if p(v910) then '\par \b Место работы автора:  \b0 '("\par "v910^P/) fi,if p(v951) then '\par ' fi,if p(v951) and (&uf('IMAIN,FULLTEXTABLE,1')='1') then'\par См. ссылк',
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у 'fi,
+   (if p(v951) then |,  |+d951,
+/*       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^a) then &unifor('+I$3,10,,'v951^a'$',v951^t,| ФАЙЛ|n951^t) fi 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi) 
+f fi,if p(v10)then '\par ORCID '  v10^a.4,|-|v10*4.4,|-|v10*8.4,|-|v10*12.4 fi/
+(if p(v10)then '\par См. ссылку: 'if v10^a<>''then &unifor('+I$0,,http://orcid.org/'v10^a'$',|Переход по идентификатору электронного ресурса ORCID|d10^a) fi fi)
+'\par -----------}'
+

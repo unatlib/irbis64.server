@@ -1,0 +1,171 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx500 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6000
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6800  
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7600 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8400  
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9600  
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10400 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11200 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12000 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12800 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13600 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14400 
+\pard \widctlpar\intbl {\ql \fs20 ''##'
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+if p(v461)then ". "d461,v200^v, 
+   if p(v200^v) then" : "v200^a else v200^a fi, 
+   if s(v200^v,v200^a)='' then (|. |+v925^v,if p(v925^v) then | : |v925^a else v925^a fi)fi fi, 
+ 
+if a(v461) then v700^a," "v700^d,", "v700^g, 
+   if a(v700^g)then" "v700^b fi,"."d700^g," "d700^a, 
+   if p(v982) then 
+      if v200^a:&unifor('Av982^9#1') then else &unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 
+   fi fi,v200^a,fi,,,,,' г. ',,,v210^d,,v461^h,,,,,,,,,,,' (',f(val(mfn),0,0),,')',,,if p(v699) and v699^u:'0' then ' (аналог)' fi,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',,,
+/*--------кол-во-наименование без аналогов
+&uf('+7W51#',v991^S) ,,
+  &uf('+7W40#',,,
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+      then 'V' 
+      else 
+         if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+           &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+         then 'O' fi fi),
+  &uf('+7W991#'v991),
+  &uf('+7W41#'),,,,
+  &uf('+7W41#',,,f(rsum((if p(v691) then if v691^s: &uf('AG51#1') and (&uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'') and (&uf('Av991^g#1')='' OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'осн' and (v691^g:'осн' or a(v691^g))) OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'доп' and v691^g:'доп' )) then '1;'else'0;' fi fi)),0,0)),
+  if val(g41)>0 
+  then 
+     if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' 
+     then else 
+     if p(v699) and v699^u:'0' then else if &unifor('6kitexO')<>''then '1' 
+  fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*-V3----------- в G43 кол-во экземпляров с КМИ с аналогами
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then '0' else &uf('6kitexO') fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*-----V5-----Наименований методической без аналогов
+&uf('+7W51#',v991^S) ,,
+  &uf('+7W40#',,,
+      if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
+         &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 
+      then 'V' 
+      else 
+         if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+           &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 
+         then 'O' fi fi),
+  &uf('+7W991#'v991),
+  &uf('+7W41#'),,,,
+  &uf('+7W41#',,,f(rsum((if p(v691) then if v691^s: &uf('AG51#1') and (&uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'') and (&uf('Av991^g#1')='' OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'осн' and (v691^g:'осн' or a(v691^g))) OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'доп' and v691^g:'доп' )) then '1;'else'0;' fi fi)),0,0)),
+  if val(g41)>0 
+  then 
+     if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' 
+     then  
+     if p(v699) and v699^u:'0' then else if &unifor('6kitexO')<>''then '1' 
+  fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*---V6-------экземпляров методической
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then &uf('6kitexO') fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----V8------KKO книги по версии kitf3g2
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then else &unifor('6kitsrO') fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------степень новизны - наименований или экземпляров
+  &uf('+7W41#'),,,,
+  &uf('+7W41#',,,f(rsum((if p(v691) then if v691^s: &uf('AG51#1') and (&uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'') and (&uf('Av991^g#1')='' OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'осн' and (v691^g:'осн' or a(v691^g))) OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'доп' and v691^g:'доп' )) then '1;'else'0;' fi fi)),0,0)),
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then else if a(v991^5) then f(val(if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then &unifor('6kitexO') fi),0,0) else '1' fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------степень новизны - наименований или экземпляров методическая
+  &uf('+7W41#'),,,,
+  &uf('+7W41#',,,f(rsum((if p(v691) then if v691^s: &uf('AG51#1') and (&uf('Ag40#1')='O' and &uf('Ksemo.mnu\'v691^f)<>'' or &uf('Ag40#1')='V' and &uf('Ksemv.mnu\'v691^f)<>'') and (&uf('Av991^g#1')='' OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'осн' and (v691^g:'осн' or a(v691^g))) OR 
+                                             (&uf('Av991^g#1')<>'' and &uf('Av991^g#1'):'доп' and v691^g:'доп' )) then '1;'else'0;' fi fi)),0,0)),
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then if a(v991^5) then f(val(if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then &unifor('6kitexO') fi),0,0) else '1' fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------с грифом всего - наименований или экземпляров
+/* v991^6 - гриф
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then &uf('6kitexO') else '1' fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------с грифом всего методическая - наименований или экземпляров
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then &uf('6kitexO') else '1' fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------с грифом всего за последние 5 лет
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then else if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then f(val(&unifor('6kitexO')) ,0,0) fi else '1' fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------с грифом всего за последние методическая
+if val(g41)>0 then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):'21' then if s(&unifor('Av900^c#1'),' '&unifor('Av900^2#1')' ',&unifor('Av900^3#1'),' '&unifor('Av900^4#1')' ',&unifor('Av900^5#1'),' '&unifor('Av900^6#1')):s(v991^6,"jj"n991^6) then if a(v991^5) then if rsum(&unifor('30')) - rsum(v210^d,if a(v210^d) then v461^h fi) <= val(s(v991^1,"5"n991^1)) then f(val(&unifor('6kitexO')),0,0) fi else '1' fi fi fi fi/
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

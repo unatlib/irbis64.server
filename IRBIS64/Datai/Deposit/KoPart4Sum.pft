@@ -1,0 +1,41 @@
+/* считаю только ЭУ по основной и дополнительной 
+/* с учетом отбора по фак, напр, спец, укрупн. спец. по g991
+if val(&uf('6KoElectro'))=1 
+then 
+   if g100: 'осн' 
+   then 
+      if rsum(
+         (if p(v691) 
+          then 
+             if v691^G='' or v691^G: 'осн'  
+             then 
+                if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) 
+                then             
+                   if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then  
+                   if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then 
+                   if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and val(v691^5)=1 then '1,' fi 
+                fi fi fi fi fi   
+             fi 
+          fi
+         )
+             )>0 
+      then '1 ' 
+      fi 
+   else 
+      if rsum(
+         (if p(v691) 
+          then 
+             if v691^G: 'доп' 
+             then 
+                if &uf('Ag991^A#1')='' or &uf('+97',&uf('Ag991^A#1'))=&uf('+97',v691^A) then if &uf('Ag991^N#1')='' or &uf('+97',&uf('Ag991^N#1'))=&uf('+97',v691^N) then if &uf('Ag991^C#1')='' or &uf('+97',&uf('Ag991^C#1'))=&uf('+97',v691^C) 
+                then 
+                   if &uf('Ag991^O#1')='' or &uf('+97',&uf('Ag991^O#1'))=&uf('+97',v691^O) then 
+                   if &uf('Ag991^K#1')='' or &uf('Ag991^K#1')=&uf('+960.',&uf('+95',,&uf('Ag991^K#1') ),,,'#',,v691^C ) then 
+                   if val(&uf('Ag991^5#1'))=0 or val(&uf('Ag991^5#1'))=1 and val(v691^5)=1 then '1,' fi 
+                fi fi fi fi fi   
+             fi 
+          fi
+         )
+             )>0 then '1 ' fi 
+   fi 
+fi 

@@ -1,0 +1,4387 @@
+0
+ADD
+111
+
+&uf('+7W991#',,v991)
+
+//-------------------в g10 заготовки для поля 44
+ADD
+111
+
+&uf('6rks2-44')
+
+CORREC
+'CMPL'
+mpu,(g10/)
+"PKS2="v991^A
+
+REPEAT
+/*-----замена/добавление в поле 44
+REP
+44
+F
+&uf('+7W10#',,&uf('Av1001#1')),,rksu44REP,,,
+
+DEL
+1001
+1
+
+
+UNTIL
+if p(v1001) then '1' fi
+END
+
+//-------------------в g10 заготовки для поля 744
+ADD
+111
+
+&uf('6rksu744')
+
+CORREC
+'CMPL'
+mpu,(g10/)
+"KSU="v991^A
+
+REPEAT
+/*-----замена/добавление в поле 744
+REP
+744
+F
+&uf('+7W10#',,&uf('Av1001#1')),,rksu744REP,,,
+
+DEL
+1001
+1
+
+
+UNTIL
+if p(v1001) then '1' fi
+END
+//-------------------------------------------145 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+,,rksuSum145,,,
+
+//-------------в запись КСУ поле 145
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+145^A
+1
+if val(v145^A)>0 then f(val(v145^A)+val(v1001^A),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^A='' then "^A"v1001^A fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+145^B
+1
+if val(v145^B)>0 then f(val(v145^B)+val(v1001^B),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^B='' then "^B"v1001^B fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+145^C
+1
+if val(v145^C)>0 then f(val(v145^C)+val(v1001^C),0,2) fi
+
+REP
+145
+1
+v145,,,,,if v145^C='' then "^C"v1001^C fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+145^D
+1
+if val(v145^D)>0 then f(val(v145^D)+val(v1001^D),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^D='' then "^D"v1001^D fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+145^E
+1
+if val(v145^E)>0 then f(val(v145^E)+val(v1001^E),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^E='' then "^E"v1001^E fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+145^F
+1
+if val(v145^F)>0 then f(val(v145^F)+val(v1001^F),0,2) fi
+
+REP
+145
+1
+v145,,,,,if v145^F='' then "^F"v1001^F fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^F"v1001^F
+
+FI
+/*------------G
+REP
+145^G
+1
+if val(v145^G)>0 then f(val(v145^G)+val(v1001^G),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^G='' then "^G"v1001^G fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^G"v1001^G
+
+FI
+/*------------H
+REP
+145^H
+1
+if val(v145^H)>0 then f(val(v145^H)+val(v1001^H),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^H='' then "^H"v1001^H fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^H"v1001^H
+
+FI
+/*------------I
+REP
+145^I
+1
+if val(v145^I)>0 then f(val(v145^I)+val(v1001^I),0,2) fi
+
+REP
+145
+1
+v145,,,,,if v145^I='' then "^I"v1001^I fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^I"v1001^I
+
+FI
+/*------------2
+REP
+145^2
+1
+if val(v145^2)>0 then f(val(v145^2)+val(v1001^2),0,2) fi
+
+REP
+145
+1
+v145,,,,,if v145^2='' then "^2"v1001^2 fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^2"v1001^2
+
+FI
+/*------------J
+REP
+145^J
+1
+if val(v145^J)>0 then f(val(v145^J)+val(v1001^J),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^J='' then "^J"v1001^J fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^J"v1001^J
+
+FI
+/*------------K
+REP
+145^K
+1
+if val(v145^K)>0 then f(val(v145^K)+val(v1001^K),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^K='' then "^K"v1001^K fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^K"v1001^K
+
+FI
+/*------------P
+REP
+145^P
+1
+if val(v145^P)>0 then f(val(v145^P)+val(v1001^P),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^P='' then "^P"v1001^P fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^P"v1001^P
+
+FI
+/*------------Q
+REP
+145^Q
+1
+if val(v145^Q)>0 then f(val(v145^Q)+val(v1001^Q),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^Q='' then "^Q"v1001^Q fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^Q"v1001^Q
+
+FI
+/*------------L
+REP
+145^L
+1
+if val(v145^L)>0 then f(val(v145^L)+val(v1001^L),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^L='' then "^L"v1001^L fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^L"v1001^L
+
+FI
+/*------------M
+REP
+145^M
+1
+if val(v145^M)>0 then f(val(v145^M)+val(v1001^M),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^M='' then "^M"v1001^M fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^M"v1001^M
+
+FI
+/*------------N
+REP
+145^N
+1
+if val(v145^N)>0 then f(val(v145^N)+val(v1001^N),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^N='' then "^N"v1001^N fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^N"v1001^N
+
+FI
+/*------------O
+REP
+145^O
+1
+if val(v145^O)>0 then f(val(v145^O)+val(v1001^O),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^O='' then "^O"v1001^O fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^O"v1001^O
+
+FI
+/*------------R
+
+REP
+145^R
+1
+if val(v145^R)>0 then f(val(v145^R)+val(v1001^R),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^R='' then "^R"v1001^R fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^R"v1001^R
+
+FI
+/*------------S
+REP
+145^S
+1
+if val(v145^S)>0 then f(val(v145^S)+val(v1001^S),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^S='' then "^S"v1001^S fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^S"v1001^S
+
+FI
+/*------------T
+REP
+145^T
+1
+if val(v145^T)>0 then f(val(v145^T)+val(v1001^T),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^T='' then "^T"v1001^T fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^T"v1001^T
+
+FI
+/*------------U
+REP
+145^U
+1
+if val(v145^U)>0 then f(val(v145^U)+val(v1001^U),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^U='' then "^U"v1001^U fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^U"v1001^U
+
+FI
+/*------------V
+REP
+145^V
+1
+if val(v145^V)>0 then f(val(v145^V)+val(v1001^V),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^V='' then "^V"v1001^V fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^V"v1001^V
+
+FI
+/*------------W
+REP
+145^W
+1
+if val(v145^W)>0 then f(val(v145^W)+val(v1001^W),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^W='' then "^W"v1001^W fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^W"v1001^W
+
+FI
+/*------------X
+REP
+145^X
+1
+if val(v145^X)>0 then f(val(v145^X)+val(v1001^X),0,0) fi
+
+REP
+145
+1
+v145,,,,,if v145^X='' then "^X"v1001^X fi
+
+IF
+if a(v145) then '1' fi
+ADD
+145
+
+"^X"v1001^X
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 145
+
+//-------------------------------------------146 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#146'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 146
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+146^A
+1
+if val(v146^A)>0 then f(val(v146^A)+val(v1001^A),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^A='' then "^A"v1001^A fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+146^B
+1
+if val(v146^B)>0 then f(val(v146^B)+val(v1001^B),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^B='' then "^B"v1001^B fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+146^C
+1
+if val(v146^C)>0 then f(val(v146^C)+val(v1001^C),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^C='' then "^C"v1001^C fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+146^D
+1
+if val(v146^D)>0 then f(val(v146^D)+val(v1001^D),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^D='' then "^D"v1001^D fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+146^E
+1
+if val(v146^E)>0 then f(val(v146^E)+val(v1001^E),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^E='' then "^E"v1001^E fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+146^F
+1
+if val(v146^F)>0 then f(val(v146^F)+val(v1001^F),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^F='' then "^F"v1001^F fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^F"v1001^F
+
+FI
+/*------------G
+REP
+146^G
+1
+if val(v146^G)>0 then f(val(v146^G)+val(v1001^G),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^G='' then "^G"v1001^G fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^G"v1001^G
+
+FI
+/*------------H
+REP
+146^H
+1
+if val(v146^H)>0 then f(val(v146^H)+val(v1001^H),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^H='' then "^H"v1001^H fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^H"v1001^H
+
+FI
+/*------------I
+REP
+146^I
+1
+if val(v146^I)>0 then f(val(v146^I)+val(v1001^I),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^I='' then "^I"v1001^I fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^I"v1001^I
+
+FI
+/*------------J
+REP
+146^A
+1
+if val(v146^J)>0 then f(val(v146^J)+val(v1001^J),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^J='' then "^J"v1001^J fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^J"v1001^J
+
+FI
+/*------------K
+REP
+146^K
+1
+if val(v146^K)>0 then f(val(v146^K)+val(v1001^K),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^K='' then "^K"v1001^K fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^K"v1001^K
+
+FI
+/*------------L
+REP
+146^L
+1
+if val(v146^L)>0 then f(val(v146^L)+val(v1001^L),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^L='' then "^L"v1001^L fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^L"v1001^L
+
+FI
+/*------------M
+REP
+146^M
+1
+if val(v146^M)>0 then f(val(v146^M)+val(v1001^M),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^M='' then "^M"v1001^M fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^M"v1001^M
+
+FI
+/*------------N
+REP
+146^N
+1
+if val(v146^N)>0 then f(val(v146^N)+val(v1001^N),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^N='' then "^N"v1001^N fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^N"v1001^N
+
+FI
+/*------------Z
+REP
+146^A
+1
+if val(v146^Z)>0 then f(val(v146^Z)+val(v1001^Z),0,0) fi
+
+REP
+146
+1
+v146,,,,,if v146^Z='' then "^Z"v1001^Z fi
+
+IF
+if a(v146) then '1' fi
+ADD
+146
+
+"^Z"v1001^Z
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 146
+
+//-------------------------------------------147 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#147'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 147
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+147^A
+1
+if val(v147^A)>0 then f(val(v147^A)+val(v1001^A),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^A='' then "^A"v1001^A fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+147^B
+1
+if val(v147^B)>0 then f(val(v147^B)+val(v1001^B),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^B='' then "^B"v1001^B fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+147^C
+1
+if val(v147^C)>0 then f(val(v147^C)+val(v1001^C),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^C='' then "^C"v1001^C fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^C"v1001^C
+
+FI
+/*------------E
+REP
+147^E
+1
+if val(v147^E)>0 then f(val(v147^E)+val(v1001^E),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^E='' then "^E"v1001^E fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+147^F
+1
+if val(v147^F)>0 then f(val(v147^F)+val(v1001^F),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^F='' then "^F"v1001^F fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^F"v1001^F
+
+FI
+/*------------D
+REP
+147^D
+1
+if val(v147^D)>0 then f(val(v147^D)+val(v1001^D),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^D='' then "^D"v1001^D fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^D"v1001^D
+
+FI
+/*------------G
+REP
+147^G
+1
+if val(v147^G)>0 then f(val(v147^G)+val(v1001^G),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^G='' then "^G"v1001^G fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^G"v1001^G
+
+FI
+/*------------H
+REP
+147^H
+1
+if val(v147^H)>0 then f(val(v147^H)+val(v1001^H),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^H='' then "^H"v1001^H fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^H"v1001^H
+
+FI
+/*------------I
+REP
+147^I
+1
+if val(v147^I)>0 then f(val(v147^I)+val(v1001^I),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^I='' then "^I"v1001^I fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^I"v1001^I
+
+FI
+/*------------J
+REP
+147^J
+1
+if val(v147^J)>0 then f(val(v147^J)+val(v1001^J),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^J='' then "^J"v1001^J fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^J"v1001^J
+
+FI
+/*------------K
+REP
+147^K
+1
+if val(v147^K)>0 then f(val(v147^K)+val(v1001^K),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^K='' then "^K"v1001^K fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^K"v1001^K
+
+FI
+/*------------Z
+REP
+147^Z
+1
+if val(v147^Z)>0 then f(val(v147^Z)+val(v1001^Z),0,0) fi
+
+REP
+147
+1
+v147,,,,,if v147^Z='' then "^Z"v1001^Z fi
+
+IF
+if a(v147) then '1' fi
+ADD
+147
+
+"^Z"v1001^Z
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 147
+
+
+//-------------------------------------------148 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#148'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 148
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+148^A
+1
+if val(v148^A)>0 then f(val(v148^A)+val(v1001^A),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^A='' then "^A"v1001^A fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^A"v1001^A
+
+FI
+/*------------1
+REP
+148^1
+1
+if val(v148^1)>0 then f(val(v148^1)+val(v1001^1),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^1='' then "^1"v1001^1 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^1"v1001^1
+
+FI
+/*------------M
+REP
+148^M
+1
+if val(v148^M)>0 then f(val(v148^M)+val(v1001^M),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^M='' then "^M"v1001^M fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^M"v1001^M
+
+FI
+/*------------B
+REP
+148^B
+1
+if val(v148^B)>0 then f(val(v148^B)+val(v1001^B),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^B='' then "^B"v1001^B fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^B"v1001^B
+
+FI
+/*------------2
+REP
+148^2
+1
+if val(v148^2)>0 then f(val(v148^2)+val(v1001^2),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^2='' then "^2"v1001^2 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^2"v1001^2
+
+FI
+/*------------C
+REP
+148^C
+1
+if val(v148^C)>0 then f(val(v148^C)+val(v1001^C),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^C='' then "^C"v1001^C fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^C"v1001^C
+
+FI
+/*------------3
+REP
+148^3
+1
+if val(v148^3)>0 then f(val(v148^3)+val(v1001^3),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^3='' then "^3"v1001^3 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^3"v1001^3
+
+FI
+/*------------D
+REP
+148^D
+1
+if val(v148^D)>0 then f(val(v148^D)+val(v1001^D),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^D='' then "^D"v1001^D fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^D"v1001^D
+
+FI
+/*------------4
+REP
+148^4
+1
+if val(v148^4)>0 then f(val(v148^4)+val(v1001^4),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^4='' then "^4"v1001^4 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^4"v1001^4
+
+FI
+/*------------E
+REP
+148^E
+1
+if val(v148^E)>0 then f(val(v148^E)+val(v1001^E),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^E='' then "^E"v1001^E fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^E"v1001^E
+
+FI
+/*------------5
+REP
+148^5
+1
+if val(v148^5)>0 then f(val(v148^5)+val(v1001^5),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^5='' then "^5"v1001^5 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^5"v1001^5
+
+FI
+/*------------F
+REP
+148^F
+1
+if val(v148^F)>0 then f(val(v148^F)+val(v1001^F),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^F='' then "^F"v1001^F fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^F"v1001^F
+
+FI
+/*------------6
+REP
+148^6
+1
+if val(v148^6)>0 then f(val(v148^6)+val(v1001^6),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^6='' then "^6"v1001^6 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^6"v1001^6
+
+FI
+/*------------N
+REP
+148^N
+1
+if val(v148^N)>0 then f(val(v148^N)+val(v1001^N),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^N='' then "^N"v1001^N fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^N"v1001^N
+
+FI
+/*------------G
+REP
+148^G
+1
+if val(v148^G)>0 then f(val(v148^G)+val(v1001^G),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^G='' then "^G"v1001^G fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^G"v1001^G
+
+FI
+/*------------7
+REP
+148^7
+1
+if val(v148^7)>0 then f(val(v148^7)+val(v1001^7),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^7='' then "^7"v1001^7 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^7"v1001^7
+
+FI
+/*------------H
+REP
+148^H
+1
+if val(v148^H)>0 then f(val(v148^H)+val(v1001^H),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^H='' then "^H"v1001^H fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^H"v1001^H
+
+FI
+/*------------8
+REP
+148^8
+1
+if val(v148^8)>0 then f(val(v148^8)+val(v1001^8),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^8='' then "^8"v1001^8 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^8"v1001^8
+
+FI
+/*------------P
+REP
+148^P
+1
+if val(v148^P)>0 then f(val(v148^P)+val(v1001^P),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^P='' then "^P"v1001^P fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^P"v1001^P
+
+FI
+/*------------Q
+REP
+148^Q
+1
+if val(v148^Q)>0 then f(val(v148^Q)+val(v1001^Q),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^Q='' then "^Q"v1001^Q fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^Q"v1001^Q
+
+FI
+/*------------R
+REP
+148^R
+1
+if val(v148^R)>0 then f(val(v148^R)+val(v1001^R),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^R='' then "^R"v1001^R fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^R"v1001^R
+
+FI
+/*------------S
+REP
+148^S
+1
+if val(v148^S)>0 then f(val(v148^S)+val(v1001^S),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^S='' then "^S"v1001^S fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^S"v1001^S
+
+FI
+/*------------I
+REP
+148^I
+1
+if val(v148^I)>0 then f(val(v148^I)+val(v1001^I),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^I='' then "^I"v1001^I fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^I"v1001^I
+
+FI
+/*------------9
+REP
+148^9
+1
+if val(v148^9)>0 then f(val(v148^9)+val(v1001^9),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^9='' then "^9"v1001^9 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^9"v1001^9
+
+FI
+/*------------J
+REP
+148^J
+1
+if val(v148^J)>0 then f(val(v148^J)+val(v1001^J),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^J='' then "^J"v1001^J fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^J"v1001^J
+
+FI
+/*------------0
+REP
+148^0
+1
+if val(v148^0)>0 then f(val(v148^0)+val(v1001^0),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^0='' then "^0"v1001^0 fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^0"v1001^0
+
+FI
+/*------------K
+REP
+148^K
+1
+if val(v148^K)>0 then f(val(v148^K)+val(v1001^K),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^K='' then "^K"v1001^K fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^K"v1001^K
+
+FI
+/*------------!
+REP
+148^!
+1
+if val(v148^!)>0 then f(val(v148^!)+val(v1001^!),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^!='' then "^!"v1001^! fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^!"v1001^!
+
+FI
+/*------------L
+REP
+148^L
+1
+if val(v148^L)>0 then f(val(v148^L)+val(v1001^L),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^L='' then "^L"v1001^L fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^L"v1001^L
+
+FI
+/*------------?
+REP
+148^?
+1
+if val(v148^?)>0 then f(val(v148^?)+val(v1001^?),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^?='' then "^?"v1001^? fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^?"v1001^?
+
+FI
+/*------------T
+REP
+148^T
+1
+if val(v148^T)>0 then f(val(v148^T)+val(v1001^T),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^T='' then "^T"v1001^T fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^T"v1001^T
+
+FI
+/*------------U
+REP
+148^U
+1
+if val(v148^U)>0 then f(val(v148^U)+val(v1001^U),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^U='' then "^U"v1001^U fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^U"v1001^U
+
+FI
+/*------------W
+REP
+148^W
+1
+if val(v148^W)>0 then f(val(v148^W)+val(v1001^W),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^W='' then "^W"v1001^W fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^W"v1001^W
+
+FI
+/*------------X
+REP
+148^X
+1
+if val(v148^X)>0 then f(val(v148^X)+val(v1001^X),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^X='' then "^X"v1001^X fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^X"v1001^X
+
+FI
+/*------------Y
+REP
+148^Y
+1
+if val(v148^Y)>0 then f(val(v148^Y)+val(v1001^Y),0,0) fi
+
+REP
+148
+1
+v148,,,,,if v148^Y='' then "^Y"v1001^Y fi
+
+IF
+if a(v148) then '1' fi
+ADD
+148
+
+"^Y"v1001^Y
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 148
+
+
+//-------------------------------------------149 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#149'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 149
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+149^A
+1
+if val(v149^A)>0 then f(val(v149^A)+val(v1001^A),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^A='' then "^A"v1001^A fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+149^B
+1
+if val(v149^B)>0 then f(val(v149^B)+val(v1001^B),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^B='' then "^B"v1001^B fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+149^C
+1
+if val(v149^C)>0 then f(val(v149^C)+val(v1001^C),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^C='' then "^C"v1001^C fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+149^D
+1
+if val(v149^D)>0 then f(val(v149^D)+val(v1001^D),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^D='' then "^D"v1001^D fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+149^E
+1
+if val(v149^E)>0 then f(val(v149^E)+val(v1001^E),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^E='' then "^E"v1001^E fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+149^F
+1
+if val(v149^F)>0 then f(val(v149^F)+val(v1001^F),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^F='' then "^F"v1001^F fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^F"v1001^F
+
+FI
+/*------------G
+REP
+149^G
+1
+if val(v149^G)>0 then f(val(v149^G)+val(v1001^G),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^G='' then "^G"v1001^G fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^G"v1001^G
+
+FI
+/*------------H
+REP
+149^H
+1
+if val(v149^H)>0 then f(val(v149^H)+val(v1001^H),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^H='' then "^H"v1001^H fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^H"v1001^H
+
+FI
+/*------------I
+REP
+149^I
+1
+if val(v149^I)>0 then f(val(v149^I)+val(v1001^I),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^I='' then "^I"v1001^I fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^I"v1001^I
+
+FI
+/*------------J
+REP
+149^J
+1
+if val(v149^J)>0 then f(val(v149^J)+val(v1001^J),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^J='' then "^J"v1001^J fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^J"v1001^J
+
+FI
+/*------------K
+REP
+149^K
+1
+if val(v149^K)>0 then f(val(v149^K)+val(v1001^K),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^K='' then "^K"v1001^K fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^K"v1001^K
+
+FI
+/*------------L
+REP
+149^L
+1
+if val(v149^L)>0 then f(val(v149^L)+val(v1001^L),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^L='' then "^L"v1001^L fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^L"v1001^L
+
+FI
+/*------------M
+REP
+149^M
+1
+if val(v149^M)>0 then f(val(v149^M)+val(v1001^M),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^M='' then "^M"v1001^M fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^M"v1001^M
+
+FI
+/*------------N
+REP
+149^N
+1
+if val(v149^N)>0 then f(val(v149^N)+val(v1001^N),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^N='' then "^N"v1001^N fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^N"v1001^N
+
+FI
+/*------------O
+REP
+149^O
+1
+if val(v149^O)>0 then f(val(v149^O)+val(v1001^O),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^O='' then "^O"v1001^O fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^O"v1001^O
+
+FI
+/*------------P
+REP
+149^P
+1
+if val(v149^P)>0 then f(val(v149^P)+val(v1001^P),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^P='' then "^P"v1001^P fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^P"v1001^P
+
+FI
+/*------------S
+REP
+149^S
+1
+if val(v149^S)>0 then f(val(v149^S)+val(v1001^S),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^S='' then "^S"v1001^S fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^S"v1001^S
+
+FI
+/*------------T
+REP
+149^T
+1
+if val(v149^T)>0 then f(val(v149^T)+val(v1001^T),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^T='' then "^T"v1001^T fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^T"v1001^T
+
+FI
+/*------------U
+REP
+149^U
+1
+if val(v149^U)>0 then f(val(v149^U)+val(v1001^U),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^U='' then "^U"v1001^U fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^U"v1001^U
+
+FI
+/*------------V
+REP
+149^V
+1
+if val(v149^V)>0 then f(val(v149^V)+val(v1001^V),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^V='' then "^V"v1001^V fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^V"v1001^V
+
+FI
+/*------------1
+REP
+149^1
+1
+if val(v149^1)>0 then f(val(v149^1)+val(v1001^1),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^1='' then "^1"v1001^1 fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+149^2
+1
+if val(v149^2)>0 then f(val(v149^2)+val(v1001^2),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^2='' then "^2"v1001^2 fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+149^3
+1
+if val(v149^3)>0 then f(val(v149^3)+val(v1001^3),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^3='' then "^3"v1001^3 fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+149^4
+1
+if val(v149^4)>0 then f(val(v149^4)+val(v1001^4),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^4='' then "^4"v1001^4 fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+149^5
+1
+if val(v149^5)>0 then f(val(v149^5)+val(v1001^5),0,0) fi
+
+REP
+149
+1
+v149,,,,,if v149^5='' then "^5"v1001^5 fi
+
+IF
+if a(v149) then '1' fi
+ADD
+149
+
+"^5"v1001^5
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 149
+
+//-------------------------------------------151 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#151'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 151
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+151^A
+1
+if val(v151^A)>0 then f(val(v151^A)+val(v1001^A),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^A='' then "^A"v1001^A fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+151^B
+1
+if val(v151^B)>0 then f(val(v151^B)+val(v1001^B),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^B='' then "^B"v1001^B fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+151^C
+1
+if val(v151^C)>0 then f(val(v151^C)+val(v1001^C),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^C='' then "^C"v1001^C fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+151^D
+1
+if val(v151^D)>0 then f(val(v151^D)+val(v1001^D),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^D='' then "^D"v1001^D fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+151^E
+1
+if val(v151^E)>0 then f(val(v151^E)+val(v1001^E),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^E='' then "^E"v1001^E fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^E"v1001^E
+
+FI
+/*------------X
+REP
+151^X
+1
+if val(v151^X)>0 then f(val(v151^X)+val(v1001^X),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^X='' then "^X"v1001^X fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^X"v1001^X
+
+FI
+/*------------1
+REP
+151^1
+1
+if val(v151^1)>0 then f(val(v151^1)+val(v1001^1),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^1='' then "^1"v1001^1 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+151^2
+1
+if val(v151^2)>0 then f(val(v151^2)+val(v1001^2),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^2='' then "^2"v1001^2 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+151^3
+1
+if val(v151^3)>0 then f(val(v151^3)+val(v1001^3),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^3='' then "^3"v1001^3 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+151^4
+1
+if val(v151^4)>0 then f(val(v151^4)+val(v1001^4),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^4='' then "^4"v1001^4 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+151^5
+1
+if val(v151^5)>0 then f(val(v151^5)+val(v1001^5),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^5='' then "^5"v1001^5 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^5"v1001^5
+
+FI
+/*------------6
+REP
+151^6
+1
+if val(v151^6)>0 then f(val(v151^6)+val(v1001^6),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^6='' then "^6"v1001^6 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^6"v1001^6
+
+FI
+/*------------7
+REP
+151^7
+1
+if val(v151^7)>0 then f(val(v151^7)+val(v1001^7),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^7='' then "^7"v1001^7 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^7"v1001^7
+
+FI
+/*------------8
+REP
+151^8
+1
+if val(v151^8)>0 then f(val(v151^8)+val(v1001^8),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^8='' then "^8"v1001^8 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^8"v1001^8
+
+FI
+/*------------9
+REP
+151^9
+1
+if val(v151^9)>0 then f(val(v151^9)+val(v1001^9),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^9='' then "^9"v1001^9 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^9"v1001^9
+
+FI
+/*------------0
+REP
+151^0
+1
+if val(v151^0)>0 then f(val(v151^0)+val(v1001^0),0,0) fi
+
+REP
+151
+1
+v151,,,,,if v151^0='' then "^0"v1001^0 fi
+
+IF
+if a(v151) then '1' fi
+ADD
+151
+
+"^0"v1001^0
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 151
+
+//-------------------------------------------45 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+,,rksuSum45,,,
+
+//-------------в запись КСУ поле 45
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+45^A
+1
+if val(v45^A)>0 then f(val(v45^A)+val(v1001^A),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^A='' then "^A"v1001^A fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+45^B
+1
+if val(v45^B)>0 then f(val(v45^B)+val(v1001^B),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^B='' then "^B"v1001^B fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+45^C
+1
+if val(v45^C)>0 then f(val(v45^C)+val(v1001^C),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^C='' then "^C"v1001^C fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+45^D
+1
+if val(v45^D)>0 then f(val(v45^D)+val(v1001^D),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^D='' then "^D"v1001^D fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+45^E
+1
+if val(v45^E)>0 then f(val(v45^E)+val(v1001^E),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^E='' then "^E"v1001^E fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+45^F
+1
+if val(v45^F)>0 then f(val(v45^F)+val(v1001^F),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^F='' then "^F"v1001^F fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^F"v1001^F
+
+FI
+/*------------G
+REP
+45^G
+1
+if val(v45^G)>0 then f(val(v45^G)+val(v1001^G),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^G='' then "^G"v1001^G fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^G"v1001^G
+
+FI
+/*------------X
+REP
+45^X
+1
+if val(v45^X)>0 then f(val(v45^X)+val(v1001^X),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^X='' then "^X"v1001^X fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^X"v1001^X
+
+FI
+/*------------1
+REP
+45^1
+1
+if val(v45^1)>0 then f(val(v45^1)+val(v1001^1),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^1='' then "^1"v1001^1 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+45^2
+1
+if val(v45^2)>0 then f(val(v45^2)+val(v1001^2),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^2='' then "^2"v1001^2 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+45^3
+1
+if val(v45^3)>0 then f(val(v45^3)+val(v1001^3),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^3='' then "^3"v1001^3 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+45^4
+1
+if val(v45^4)>0 then f(val(v45^4)+val(v1001^4),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^4='' then "^4"v1001^4 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+45^5
+1
+if val(v45^5)>0 then f(val(v45^5)+val(v1001^5),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^5='' then "^5"v1001^5 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^5"v1001^5
+
+FI
+/*------------6
+REP
+45^6
+1
+if val(v45^6)>0 then f(val(v45^6)+val(v1001^6),0,2) fi
+
+REP
+45
+1
+v45,,,,,if v45^6='' then "^6"v1001^6 fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^6"v1001^6
+
+FI
+/*------------L
+REP
+45^L
+1
+if val(v45^L)>0 then f(val(v45^L)+val(v1001^L),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^L='' then "^L"v1001^L fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^L"v1001^L
+
+FI
+/*------------.
+REP
+45^.
+1
+if val(v45^.)>0 then f(val(v45^.)+val(v1001^.),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^.='' then "^."v1001^. fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^."v1001^.
+
+FI
+/*------------:
+REP
+45^:
+1
+if val(v45^:)>0 then f(val(v45^:)+val(v1001^:),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^:='' then "^:"v1001^: fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^:"v1001^:
+
+FI
+/*------------(
+REP
+45^(
+1
+if val(v45^()>0 then f(val(v45^()+val(v1001^(),0,0) fi
+
+REP
+45
+1
+v45,,,,,if v45^(='' then "^("v1001^( fi
+
+IF
+if a(v45) then '1' fi
+ADD
+45
+
+"^("v1001^(
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 45
+
+//-------------------------------------------17 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#17'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 17
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------A
+REP
+17^A
+1
+if val(v17^A)>0 then f(val(v17^A)+val(v1001^A),0,0) fi
+
+REP
+17
+1
+v17,,,,,if v17^A='' then "^A"v1001^A fi
+
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+17^B
+1
+if val(v17^B)>0 then f(val(v17^B)+val(v1001^B),0,0) fi
+
+REP
+17
+1
+v17,,,,,if v17^B='' then "^B"v1001^B fi
+
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+"^B"v1001^B
+
+FI
+/*------------1
+REP
+17^1
+1
+if val(v17^1)>0 then f(val(v17^1)+val(v1001^1),0,0) fi
+
+REP
+17
+1
+v17,,,,,if v17^1='' then "^1"v1001^1 fi
+
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+17^2
+1
+if val(v17^2)>0 then f(val(v17^2)+val(v1001^2),0,0) fi
+
+REP
+17
+1
+v17,,,,,if v17^2='' then "^2"v1001^2 fi
+
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+17^3
+1
+if val(v17^3)>0 then f(val(v17^3)+val(v1001^3),0,0) fi
+
+REP
+17
+1
+v17,,,,,if v17^3='' then "^3"v1001^3 fi
+
+IF
+if a(v17) then '1' fi
+ADD
+17
+
+"^3"v1001^3
+
+FI
+
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 17
+
+//-------------------------------------------18 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#18'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 18
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------1
+REP
+18^1
+1
+if val(v18^1)>0 then f(val(v18^1)+val(v1001^1),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^1='' then "^1"v1001^1 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+18^2
+1
+if val(v18^2)>0 then f(val(v18^2)+val(v1001^2),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^2='' then "^2"v1001^2 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+18^3
+1
+if val(v18^3)>0 then f(val(v18^3)+val(v1001^3),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^3='' then "^3"v1001^3 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+18^4
+1
+if val(v18^4)>0 then f(val(v18^4)+val(v1001^4),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^4='' then "^4"v1001^4 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+18^5
+1
+if val(v18^5)>0 then f(val(v18^5)+val(v1001^5),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^5='' then "^5"v1001^5 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^5"v1001^5
+
+FI
+/*------------6
+REP
+18^6
+1
+if val(v18^6)>0 then f(val(v18^6)+val(v1001^6),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^6='' then "^6"v1001^6 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^6"v1001^6
+
+FI
+/*------------7
+REP
+18^7
+1
+if val(v18^7)>0 then f(val(v18^7)+val(v1001^7),0,0) fi
+
+REP
+18
+1
+v18,,,,,if v18^7='' then "^7"v1001^7 fi
+
+IF
+if a(v18) then '1' fi
+ADD
+18
+
+"^7"v1001^7
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 18
+
+//-------------------------------------------19 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#19'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 19
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------
+REP
+19
+1
+if val(v19)>0 then f(val(v19)+val(v1001),0,0) fi
+
+IF
+if a(v19) then '1' fi
+ADD
+19
+
+v1001
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 19
+
+//-------------------------------------------47 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#47'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 47
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------1
+REP
+47^1
+1
+if val(v47^1)>0 then f(val(v47^1)+val(v1001^1),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^1='' then "^1"v1001^1 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+47^2
+1
+if val(v47^2)>0 then f(val(v47^2)+val(v1001^2),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^2='' then "^2"v1001^2 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+47^3
+1
+if val(v47^3)>0 then f(val(v47^3)+val(v1001^3),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^3='' then "^3"v1001^3 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+47^4
+1
+if val(v47^4)>0 then f(val(v47^4)+val(v1001^4),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^4='' then "^4"v1001^4 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+47^5
+1
+if val(v47^5)>0 then f(val(v47^5)+val(v1001^5),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^5='' then "^5"v1001^5 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^5"v1001^5
+
+FI
+/*------------6
+REP
+47^6
+1
+if val(v47^6)>0 then f(val(v47^6)+val(v1001^6),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^6='' then "^6"v1001^6 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^6"v1001^6
+
+FI
+/*------------7
+REP
+47^7
+1
+if val(v47^7)>0 then f(val(v47^7)+val(v1001^7),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^7='' then "^7"v1001^7 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^7"v1001^7
+
+FI
+/*------------8
+REP
+47^8
+1
+if val(v47^8)>0 then f(val(v47^8)+val(v1001^8),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^8='' then "^8"v1001^8 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^8"v1001^8
+
+FI
+/*------------9
+REP
+47^9
+1
+if val(v47^8)>0 then f(val(v47^8)+val(v1001^8),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^8='' then "^8"v1001^8 fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^8"v1001^8
+
+FI
+/*------------A
+REP
+47^A
+1
+if val(v47^A)>0 then f(val(v47^A)+val(v1001^A),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^A='' then "^A"v1001^A fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^A"v1001^A
+
+FI
+/*------------B
+REP
+47^B
+1
+if val(v47^B)>0 then f(val(v47^B)+val(v1001^B),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^B='' then "^B"v1001^B fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^B"v1001^B
+
+FI
+/*------------C
+REP
+47^C
+1
+if val(v47^C)>0 then f(val(v47^C)+val(v1001^C),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^C='' then "^C"v1001^C fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^C"v1001^C
+
+FI
+/*------------D
+REP
+47^D
+1
+if val(v47^D)>0 then f(val(v47^D)+val(v1001^D),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^D='' then "^D"v1001^D fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^D"v1001^D
+
+FI
+/*------------E
+REP
+47^E
+1
+if val(v47^E)>0 then f(val(v47^E)+val(v1001^E),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^E='' then "^E"v1001^E fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^E"v1001^E
+
+FI
+/*------------F
+REP
+47^F
+1
+if val(v47^F)>0 then f(val(v47^F)+val(v1001^F),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^F='' then "^F"v1001^F fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^F"v1001^F
+
+FI
+/*------------X
+REP
+47^X
+1
+if val(v47^X)>0 then f(val(v47^X)+val(v1001^X),0,0) fi
+
+REP
+47
+1
+v47,,,,,if v47^X='' then "^X"v1001^X fi
+
+IF
+if a(v47) then '1' fi
+ADD
+47
+
+"^X"v1001^X
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 47
+
+//-------------------------------------------48 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#48'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 48
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------1
+REP
+48^1
+1
+if val(v48^1)>0 then f(val(v48^1)+val(v1001^1),0,0) fi
+
+REP
+48
+1
+v48,,,,,if v48^1='' then "^1"v1001^1 fi
+
+IF
+if a(v48) then '1' fi
+ADD
+48
+
+"^1"v1001^1
+
+FI
+/*------------4
+REP
+48^4
+1
+if val(v48^4)>0 then f(val(v48^4)+val(v1001^4),0,0) fi
+
+REP
+48
+1
+v48,,,,,if v48^4='' then "^4"v1001^4 fi
+
+IF
+if a(v48) then '1' fi
+ADD
+48
+
+"^4"v1001^4
+
+FI
+/*------------X
+REP
+48^X
+1
+if val(v48^X)>0 then f(val(v48^X)+val(v1001^X),0,0) fi
+
+REP
+48
+1
+v48,,,,,if v48^X='' then "^X"v1001^X fi
+
+IF
+if a(v48) then '1' fi
+ADD
+48
+
+"^X"v1001^X
+
+FI
+/*------------2
+REP
+48^2
+1
+if val(v48^2)>0 then f(val(v48^2)+val(v1001^2),0,0) fi
+
+REP
+48
+1
+v48,,,,,if v48^2='' then "^2"v1001^2 fi
+
+IF
+if a(v48) then '1' fi
+ADD
+48
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+48^3
+1
+if val(v48^3)>0 then f(val(v48^3)+val(v1001^3),0,0) fi
+
+REP
+48
+1
+v48,,,,,if v48^3='' then "^3"v1001^3 fi
+
+IF
+if a(v48) then '1' fi
+ADD
+48
+
+"^3"v1001^3
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 48
+
+//-------------------------------------------49 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+&uf('+7W1#49'),,rksuFLDS,,,
+
+//-------------в запись КСУ поле 49
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111
+"KSU="v991^A
+
+/*------------1
+REP
+49^1
+1
+if val(v49^1)>0 then f(val(v49^1)+val(v1001^1),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^1='' then "^1"v1001^1 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^1"v1001^1
+
+FI
+/*------------2
+REP
+49^2
+1
+if val(v49^2)>0 then f(val(v49^2)+val(v1001^2),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^2='' then "^2"v1001^2 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^2"v1001^2
+
+FI
+/*------------3
+REP
+49^3
+1
+if val(v49^3)>0 then f(val(v49^3)+val(v1001^3),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^3='' then "^3"v1001^3 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^3"v1001^3
+
+FI
+/*------------4
+REP
+49^4
+1
+if val(v49^4)>0 then f(val(v49^4)+val(v1001^4),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^4='' then "^4"v1001^4 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^4"v1001^4
+
+FI
+/*------------5
+REP
+49^5
+1
+if val(v49^5)>0 then f(val(v49^5)+val(v1001^5),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^5='' then "^5"v1001^5 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^5"v1001^5
+
+FI
+/*------------6
+REP
+49^6
+1
+if val(v49^6)>0 then f(val(v49^6)+val(v1001^6),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^6='' then "^6"v1001^6 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^6"v1001^6
+
+FI
+/*------------7
+REP
+49^7
+1
+if val(v49^7)>0 then f(val(v49^7)+val(v1001^7),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^7='' then "^7"v1001^7 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^7"v1001^7
+
+FI
+/*------------8
+REP
+49^8
+1
+if val(v49^8)>0 then f(val(v49^8)+val(v1001^8),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^8='' then "^8"v1001^8 fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^8"v1001^8
+
+FI
+/*------------X
+REP
+49^X
+1
+if val(v49^X)>0 then f(val(v49^X)+val(v1001^X),0,0) fi
+
+REP
+49
+1
+v49,,,,,if v49^X='' then "^X"v1001^X fi
+
+IF
+if a(v49) then '1' fi
+ADD
+49
+
+"^X"v1001^X
+
+FI
+DEL
+1001
+*
+
+
+END
+FI
+/*--------------------------------------------конец 49
+
+//-------------------------------------------155 - собираю все подполя в 111
+DEL
+111
+*
+
+
+ADD
+111
+
+,,rksu155,,,
+
+//-------------в запись КСУ поле 155 - количество уникальных значений
+IF
+if v111<>'' then '1' fi
+CORREC
+'CMPL'
+v111,,,,,'^&',MFN
+"KSU="v991^A
+
+ADD
+156
+
+v1001
+
+//----------------V
+ADD
+156
+
+&uf('+7W2#',,(v156^V/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^V
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^V='' then "^V"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^V"g3
+
+FI
+FI
+//----------------P
+ADD
+156
+
+&uf('+7W2#',,(v156^P/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^P
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^P='' then "^P"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^P"g3
+
+FI
+FI
+//----------------X
+ADD
+156
+
+&uf('+7W2#',,(v156^X/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^X
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^X='' then "^X"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^X"g3
+
+FI
+FI
+//----------------L
+ADD
+156
+
+&uf('+7W2#',,(v156^L/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^L
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^L='' then "^L"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^L"g3
+
+FI
+FI
+//----------------W
+ADD
+156
+
+&uf('+7W2#',,(v156^W/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^W
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^W='' then "^W"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^W"g3
+
+FI
+FI
+//----------------B
+ADD
+156
+
+&uf('+7W2#',,(v156^B/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^B
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^B='' then "^B"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^B"g3
+
+FI
+FI
+//----------------2
+ADD
+156
+
+&uf('+7W2#',,(v156^2/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^2
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^2='' then "^2"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^2"g3
+
+FI
+FI
+//----------------A
+ADD
+156
+
+&uf('+7W2#',,(v156^A/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^A
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^A='' then "^A"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^A"g3
+
+FI
+FI
+//----------------C
+ADD
+156
+
+&uf('+7W2#',,(v156^C/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^C
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^C='' then "^C"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^C"g3
+
+FI
+FI
+//----------------Q
+ADD
+156
+
+&uf('+7W2#',,(v156^Q/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^Q
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^Q='' then "^Q"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^Q"g3
+
+FI
+FI
+//----------------R
+ADD
+156
+
+&uf('+7W2#',,(v156^R/) ),,&uf('+7G2'),,,&uf('+7W3#',,,f(rsum((if p(g2) then '1,' fi)),0,0),,,)
+
+IF
+if g3<>'' then '1' fi
+REP
+155^R
+1
+g3
+
+REP
+155
+1
+v155,,,,,if v155^R='' then "^R"g3 fi
+
+IF
+if a(v155) then '1' fi
+ADD
+155
+
+"^R"g3
+
+FI
+FI
+//----------------Z - имена БД каталога для поля 21
+ADD
+156
+
+&uf('+7W2#',,(v156^Z/) ),,&uf('+7G2'),,
+
+IF
+if g2<>'' then '1' fi
+DEL
+111
+*
+
+
+ADD
+111
+
+mpu,,(g2/)
+
+REPEAT
+IF
+if v21='' or rsum((if p(v21) then if &uf('+97',v21)=&uf('Av111#1') then '1,' fi fi))=0 then '1' fi
+ADD
+21
+
+&uf('Av111#1')
+
+FI
+DEL
+111
+1
+
+
+UNTIL
+if p(v111) then '1' fi
+FI
+DEL
+1001
+*
+
+
+END
+FI
+//--------------------------------------------конец 155
+DEL
+111
+*
+
+
+DEL
+991
+*
+
+

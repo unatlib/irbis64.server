@@ -1,0 +1,23 @@
+1
+
+¬ведите дату (√√√√ћћƒƒ). ”даление повторени€, если дата возврата меньше/равна заданного значени€ 
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+'%1'
+XXXXXXXXXXXXXXXXXXX
+DEL
+40
+F
+(if p(v40) then if v40^F<>'' and v40^F<>'******' and v40^F<=&uf('Av991#1') then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,11 @@
+if v920:'KSU'then '2' else 
+(if s(v910^y)<>''then 
+    if &unifor('G0-'&unifor('Av991*3#1'))=v910^y and v910^c*2.2=&unifor('Av991.2#1') then 
+       if p(v910^b)then v910^b,
+          if 'C U':v910^a then| (|d910^b,v910^1,|1|n910^1'ύκη',|)|d910^b fi else 
+          if p(v910^h)then v910^h,
+             if 'C U':v910^a then| (|d910^h,v910^1,|1|n910^1'ύκη',|)|d910^h 
+       fi fi fi,
+       if a(v910^b) and a(v910^h)then v910^1,|1|n910^1' ύκη.'fi'\par '
+ fi fi)
+fi

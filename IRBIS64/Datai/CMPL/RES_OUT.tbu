@@ -1,0 +1,179 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+v881^I
+v881^E
+f(val(v881^G),0,2)
+#
+'\trowd \trqc\trgaph108\trleft-108\trhdr 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10100 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+'Итого:',,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10900 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+v1,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12100 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+v2,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13500 
+\pard \qr\widctlpar\intbl {\qc \fs24 ',,,,,
+f(val(v3),0,2),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14850 
+\pard \qr\widctlpar\intbl {',,,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx700 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3000 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7100 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10100 
+\pard \widctlpar\intbl {\qc \fs24 Срок действия контракта
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10900 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12100 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13500 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14850 
+\pard \widctlpar\intbl {\qc \fs24 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx700 
+\pard \widctlpar\intbl {\qc \fs24 № п/п
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3000 
+\pard \widctlpar\intbl {\qc \fs24 Название ресурса
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\pard \widctlpar\intbl {\qc \fs24 Исполнитель
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7100 
+\pard \widctlpar\intbl {\qc \fs24 № и дата заключения контракта
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8600 
+\pard \widctlpar\intbl {\qc \fs24 Начало доступа
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10100
+\pard \widctlpar\intbl {\qc \fs24 Окончание доступа
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10900 
+\pard \widctlpar\intbl {\qc \fs22 Кол-во БД (пакетов) 
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12100 
+\pard \widctlpar\intbl {\qc \fs22 Кол-во док-в в БД (названий) 
+\cell }
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13500 
+\pard \widctlpar\intbl {\qc \fs22 Сумма контракта (руб)
+\cell }
+\clbrdrb\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14850 
+\pard \widctlpar\intbl {\qc \fs22 Примечание 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

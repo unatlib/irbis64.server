@@ -1,0 +1,71 @@
+0
+// Удаление в БД CMPL
+// 991^A Удалить записи КСУ поступления за год...(ГГГГ)
+// 991^B Удалить записи КСУ выбытия за год...(ГГГГ)
+// 991^C Удалить записи заказов за год...(ГГГГ)
+// 991^D Удалить БО выполненных заказов
+// 991^X протокол
+IF
+if v991^A<>'' then '1' fi
+IF
+if &uf('+97',v920)='KSU' and v991^A=v88^B.4 then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991^X='1' then '1' fi
+PUTLOG
+'Удалена запись КСУ поступления. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+IF
+if v991^B<>'' then '1' fi
+IF
+if &uf('+97',v920)='KS2' and v991^B=v888^B.4 then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991^X='1' then '1' fi
+PUTLOG
+'Удалена запись КСУ выбытия. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+IF
+if v991^C<>'' then '1' fi
+IF
+if &uf('+97',v920)='SZ' and v991^C=v62^C.4 then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991^X='1' then '1' fi
+PUTLOG
+'Удалена запись заказа. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI
+IF
+if v991^D='1' then '1' fi
+IF
+if &uf('+97',v920)='SZ' then '0' else '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+IF
+if v991^X='1' then '1' fi
+PUTLOG
+'Удалена запись БО выполненного заказа. MFN=',f(val(mfn),0,0)
+FI
+FI
+FI

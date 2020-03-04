@@ -1,0 +1,50 @@
+1
+RepToDop.wss
+
+// перевод основные - дополнительные для устаревших
+// 991^A - срок новизны
+// 991^B - ИД дисциплины
+IF
+if p(v691) then '1' fi,,,,&uf('+7W11#',,v210^d,,,if a(v210^d) then v461^h fi),,,
+DEL
+1001
+*
+
+
+ADD
+1001
+
+(v691^G)
+
+IF
+if v991^A<>'' then '1' fi
+REP
+691^G
+F
+(if p(v691) then if v691^G: 'осн' or v691^G='' then if p(v691^S) then  &uf('+7W10#',,, if &uf('KCycleNew.mnu!',v691^S)<>'' then &uf('KCycleNew.mnu!',v691^S) else &uf('Av991^A#1') fi ),,,,else &uf('+7W10#',,,&uf('Av991^A#1') ) fi,,,if (val(&unifor('30')) - val( &uf('Ag11#1') ) )>=val( &uf('Ag10#1') )  then 'Доп' else v691^G,,if v691^G='' then # fi,,fi,,else # fi fi/) 
+
+REP
+691
+F
+(if p(v691) then v691,,if v691^G='' then if p(v691^S) then  &uf('+7W10#',,,if &uf('KCycleNew.mnu!',v691^S)<>'' then &uf('KCycleNew.mnu!',v691^S) else &uf('Av991^A#1') fi ),,,,else &uf('+7W10#',,,&uf('Av991^A#1') ) fi,,,if (val(&unifor('30')) - val( &uf('Ag11#1') ) )>=val( &uf('Ag10#1') )  then '^GДоп'  fi,,fi fi/)
+
+FI
+IF
+if v991^B<>'' then '1' fi
+REP
+691^G
+F
+(if p(v691) then if v691^G<>'' then if &uf('+97',v691^I)=&uf('+97',&uf('Av991^B#1')) then if v691^G: 'осн' then 'Доп' else v691^G fi else v691^G fi,,else 'Доп' fi,,fi/)
+
+FI
+IF
+if (v691^G)<>v1001 then '1' fi
+PUTLOG
+'MFN=',,,f(val(mfn),0,0),,' - переведены в дополнителную лит.',,if v991^B<>'' then ' Для дисциплины ',,v991^B fi
+FI
+DEL
+1001
+*
+
+
+FI

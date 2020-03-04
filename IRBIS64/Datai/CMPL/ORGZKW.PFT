@@ -1,0 +1,14 @@
+if s(v30^k,v31^k,v32^k):v991 then 
+   if v30^k=v991 and &unifor('Av30^d#1') <> f(rsum((v30^g|;|),'0;'),0,0) 
+   then  |Заказ |v30^B,| - |v30^C.4,'.',v30^C*4.2,'.',v30^C*6.2 fi, 
+   if v31^k=v991 and &unifor('Av31^d#1') <> f(rsum((v31^g|;|)'0;'),0,0) 
+   then | Заказ |v31^B,| - |v31^C.4,'.',v31^C*4.2,'.',v31^C*6.2 fi,
+   if v32^k=v991 and &unifor('Av32^d#1') <> f(rsum((v32^g|;|)'0;'),0,0) 
+   then | Заказ |v32^B,| - |v32^C.4,'.',v32^C*4.2,'.',v32^C*6.2 fi 
+fi,
+if s(v62):v991 then 
+   (if p(v62) then 
+       if v62^k=&unifor('Av991#1') and val(v62^d)<>val(v62^g) 
+       then | Сум.заказ |v62^b,| - |v62^C.4,'.',v62^C*4.2,'.',v62^C*6.2
+    fi fi) 
+fi

@@ -1,0 +1,43 @@
+mhl,
+if p(v905^0) then /'0'else 
+   if a(v981)and p(v463) then &unifor('S0'),
+      (if p(v463^c) then 
+          if &unifor('S1A')='1'then 
+             if L('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi)<=0 or 
+                val(ref(l('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi),mfn))=val(mfn) 
+             then/'0' else 
+                '1Дублетное описание:       ',v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi
+                ref(l('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi),' (см. N ',
+                f(val(mfn),0,0),')') 
+      fi fi fi/)/&unifor('S0'), 
+      if &uf('Av463#2')<>'' then &uf('+7W111#'(v463/)),&uf('+7W112#'(v463/)),&uf('+7G112')
+         if g111=g112 then /'0' else /'1 введены идентичные источники' fi,
+         (if p(v463^c) then 
+             if &unifor('S1A')='1'then/'0' else 
+                if L('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                   &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                   &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi)<=0 or 
+                   val(ref(l('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                   &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                   &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi),mfn))=val(mfn) 
+                then/'0' else 
+                '2Дублетное описание:       ',v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi
+                ref(l('!'v463^j*2.2,&unifor('Av700^a.9#1'),
+                &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                &unifor('Av200^a#1'),| |v463^c),v463^v,v463^h,v463^k,if s(v463^v,v463^h,v463^k)='' then v463^s fi),' (см. N ',
+                f(val(mfn),0,0),')') 
+         fi fi fi/) 
+      fi,
+   else '0' fi 
+fi,
+

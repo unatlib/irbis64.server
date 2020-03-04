@@ -1,0 +1,4 @@
+if v1^A<>'' then 'A',,,,"DP="v1^A"$" fi/
+if v1^B<>'' then 'B',,,,"KS"v1^B"$" fi/
+if v1^C<>'' then 'C',,,,"VSZD="v1^C"$" fi/
+if val(v1^D)=1 then '',,,,"BVZ=$" fi/

@@ -1,0 +1,56 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+if v940^v:v991^a or v940^W: v991^B then f(rsum((if p(v940) then if &uf('Av991^A#1')<>'' and &uf('+97',&uf('Av991^A#1'))=&uf('+97',v940^v)  or &uf('Av991^B#1')<>'' and &uf('+97',&uf('Av991^B#1'))=&uf('+97',v940^w) then if v940^a:'6' and p(v940^w) then else f(val(v940^x,|1|n940^x,' 0')-val(v940^z,|0|n940^z,' 0'),1,0),';'fi fi fi/)),1,0)fi
+@sumiw
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx12915
+\pard \qr\widctlpar\intbl {'if val(v1)>0 then ' Итого исключено из фонда : ',f(val(v1),2,0)' экз. на сумму  ',f(val(v2),3,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi else ' Исключений из фонда нет' fi'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+\paperw16727\paperh11907\margl567\margr567\margt567\margb1134
+{\b\fs32 \qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1479
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx2445
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx5707
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx6673
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7791
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8747
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9865
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx10834
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx11797
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx12915
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Инвентарный номер\cell }
+\pard \qc\widctlpar\intbl {\b Место хранения\cell }
+\pard \qc\widctlpar\intbl {\b Авторы, заглавие,\par  выходные данные\cell }
+\pard \qc\widctlpar\intbl {\b Всего выбыло экз.\cell }
+\pard \qc\widctlpar\intbl {\b На сумму\cell }
+\pard \qc\widctlpar\intbl {\b Всего передано экз.\cell }
+\pard \qc\widctlpar\intbl {\b На сумму\cell }
+\pard \qc\widctlpar\intbl {\b Новое место хранения\cell }
+\pard \qc\widctlpar\intbl {\b Всего исключено экз.\cell }
+\pard \qc\widctlpar\intbl {\b На сумму\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

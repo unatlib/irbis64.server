@@ -1,0 +1,44 @@
+'</>',
+if p(v421) then else 
+   '<table>',
+   '<tr>', 
+     '<td  valign=topwidth=20>','<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">','</td>', 
+     '<td  valign=top>','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+     '<td>','<b>',brief_arch,'</b>','</td>' 
+   '</tr>', 
+   '</table>',
+fi,
+if p(v422) then '<b>Входит в :</b>'fi,
+(if p(v422) then 
+    '<table>', 
+    '<tr>', 
+      '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX" value="',&uf('D,!I='v422^w'!,mfn'),'">'
+      '</td>', 
+      '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>',
+      '<td>',
+      '<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=I=',&uf('+3E'v422^w),'">' 
+          v422^y|. |,v422^a,'</A>'
+            if &uf('D,!','I=',v422^w,'!,"1"d951'):'1' then ' [Есть полный текст]' fi ,'<br>',
+            if &uf(|D,!I=|v422^w|!,if &uf('Av421#2')<>'' then 'YYY' fi|):'YYY' then 'Данный документ также имеет приложения:',
+            fi 
+         '<table>',
+           &uf('+7W903#'),&uf('+7W903#'&uf('Av903#1')),mpl,
+           &uf(|D,!I=|v422^w|!,
+             if p(v421) then 
+                if &uf('Av421#2')<>'' then 
+                   (if p(v421) then if v421^w=&uf('Ag903#1')then else 
+           '<tr>',    
+             '<td valign=top width=20>', 
+               '<input type="checkbox" name="CHECKINDEX"  value="',&uf('D,!I='v421^w'!,mfn'),'">','</td>', 
+             '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>', 
+             '<td valign=top width=2000>','<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=I=',&uf('+3E',v421^w),'">' 
+                         if p(v421^y) then v421^y,'. ' fi,v421^a,'</A>','<br>'  
+             '</td>'
+           '</tr>', 
+                   fi fi) 
+          fi fi|),
+         '</table>' 
+      '</td>', 
+    '</tr>', 
+    '</table>', 
+fi),

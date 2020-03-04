@@ -1,0 +1,48 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=3
+ALIGN=1
+BORDER_WIDTH=0
+FONT_SIZE=14
+TAB_TABITOGI=1
+CELL_TAB_COL_COUNT=4
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=7
+CELL_TAB2_2=
+CELL_TAB2_3=f(rsum((if v44<>''then if p(v44^k) then v44^k|;| else'0;'fi fi)),0,0)
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Да
+CELL_TAB3_1=7
+CELL_TAB3_2=
+CELL_TAB3_3=f(rsum((if v44<>''then if p(v44^+) then v44^+|;| else'0;'fi fi)),0,2)
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Да
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00='\trowd \trqc\trgaph108\trleft-108\cellx8046 \pard \ql\widctlpar\intbl {\qc \fs28 ''\ql \fs28 \tab 'f(val(v1),0,0)' единиц'if v1"!":'1!'then'а'else if v1"!":'2!'or v1"!":'3!'or v1"!":'4!'then 'ы'fi fi,'  на сумму 'f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi,'\par   Включено в фонд ',&unifor('Korg.mnu|2'),' по актам NN ',ref(l("KSU="v991^a),v88^y+|; |),'\par \par \par \tab \tab Зав. отделом комплектования:              \par \tab \tab Зав. сектором учета:                 \par ''\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+CELL_MULTI_SUM_ROW_COUNT=1
+CELL_MULTI_SUM_COL_COUNT1=1
+CELL_SUM111=14
+CELL_SUM112='\ql \fs28 \tab 'f(val(v1),0,0)' единиц'if v1"!":'1!'then'а'else if v1"!":'2!'or v1"!":'3!'or v1"!":'4!'then 'ы'fi fi,'  на сумму 'f(val(v2),0,2),if val(v2)>0 then &unifor('Korg.mnu|3')fi,'\par   Включено в фонд ',&unifor('Korg.mnu|2'),' по актам NN ',ref(l("KSU="v991^a),v88^y+|; |),'\par \par \par \tab \tab Зав. отделом комплектования:              \par \tab \tab Зав. сектором учета:                 \par '
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=0
+CELL_SORT2=
+CELL_SORT3=10
+CELL_SORT4=0
+CELL_SORT5=mfn
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=
+HDR_PFT=actsh
+HDR_PARAMS_COUNT=0

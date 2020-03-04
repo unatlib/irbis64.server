@@ -1,0 +1,8 @@
+   (if p(v951) then |,  |+d951,
+       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^I) then |<br>|+d951,'<A target="_blank" HREF="',v951^I,'">',if p(v951^T) then v951^T else v951^I fi,'</A>', fi fi),
+
+"<br> <b> Учебная литература: </b> "d691,
+(|<br> |d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g),
+("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b),
+if s(,odfpW,)<>'' then '<br> ',odfpW, fi,

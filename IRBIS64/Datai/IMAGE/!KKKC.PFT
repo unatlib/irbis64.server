@@ -1,0 +1,70 @@
+mhl,
+if p(v710^r)then/'\\$A12,5$D\\',,v710^r,c176,' см: ',c300,v710^s". ",v710^a,if 
+s(v710^n,v710^c)<>''then' ('v710^n";",v710^c')'fi,". "v710^b,if s(v710^d,v710^f,
+v710^e)<>''then' ('v710^d" ; ",v710^f,if p(v710^f)then" ; "v710^e else v710^e fi,
+" / "v710^h," / "v710^i')'fi'.'fi/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if p(v971^v)then/'\\$A12,5$D\\',,v971^v,c176,' см: ',c300,v971^b,if (p(v971^d)or 
+p(v971^f)or p(v971^e))then' ('v971^d" ; ",v971^f,if p(v971^f)then" ; "v971^e else
+ v971^e fi," / "v971^h," / "v971^i')'fi,'.'fi/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+(if p(v711^r) then/'\\$A12,5$D\\',,v711^r,c176,' см: ',c300,v711^a,| (|v711^c
+|)|,|. |v711^b,if p(v711^d)or p(v711^f)or p(v711^e)then ' (',v711^d| ; |,v711^f,
+if p(v711^f)then | ; |v711^e else v711^e fi,')'fi fi/)/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+(if p(v972^v) then/'\\$A12,5$D\\',,v972^v,c176,' см: ',c300,v972^a,if (p(v972^d)
+or p(v972^f)or p(v972^e))then' ('v972^d" ; ",v972^f,if p(v972^f)then" ; "v972^e else 
+v972^e fi,| / |v972^h,| / |v972^i')'fi,'.'fi/)/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if p(v700^r) then/'\\$A12,5$D\\',,v700^r,c176,' см: ',c300,v700^a,", "v700^d," "v700^g,
+if a(v700^g) then " "v700^b fi fi/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if p(v970^r) then/'\\$A12,5$D\\',,v970^r,c176,' см: ',c300,v970^a' 'v970^b fi/,
+(if p(v701^r) then/'\\$A12,15$D\\',,v701^r,c176,' см: ',c300,v701^a,| |v701^d,| |v701^b 
+fi/)/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if v454^s:'1'then/'\\$A12,9$D\\',v454^d,c190,' Книги этого автора на русском языке
+ см. в каталоге:',/x20,v700^a," "v700^d,", "v700^g,
+if a(v700^g) then " "v700^b fi,
+if s(v700^1,v700^c,v700^f)<>''then ' (',v700^1,
+   if s(v700^1)<>''then" ; "d700^c fi,v700^c,
+   if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')'fi, fi/
+if v454^s:'2'then/'\\$A12,9$D\\',v454^e,c190,' Книги этого автора на русском языке
+ см. в каталоге: ',/x20,v970^a' 'v970^b," ("v970^1")",
+   if a(v970) then &unifor('S0'),
+      (if p(v701) then 
+          if &unifor('S1A')='1'then v701^a,| |v701^d,| |v701^g,
+             if a(v701^g) then| |v701^b fi,
+             if s(v701^1,v701^c,v701^f)<>''then ' (',v701^1,
+                if s(v701^1)<>''then| ; |d701^c fi,v701^c,
+                if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f')'
+       fi fi fi/)  
+fi fi/
+if v454^s:'3'then/'\\$A12,9$D\\',v454^f,c190,' Книги этого автора на русском языке
+ см. в каталоге:',&unifor('S0'),
+   (if p(v701) then 
+       if &unifor('S1A')='2'then v701^a,| |v701^d,| |v701^g,
+          if a(v701^g) then| |v701^b fi,
+          if s(v701^1,v701^c,v701^f)<>''then ' (',v701^1,
+             if s(v701^1)<>''then| ; |d701^c fi,v701^c,
+             if s(v701^1,v701^c)<>''then| ; |d701^f fi,v701^f')'
+    fi fi fi/)  
+fi/
+if v46^s:'2'then 
+   if v46^s:'22'then 
+      (if v46^s:'2'then/'\\$A0,0$D\\',
+          if &unifor('Av903#1'):&unifor('Av908#1') or 
+             &unifor('Av903#1'):&unifor('Av906.15#1') or &unifor('Av903.1#1'):'-' then else 
+             &unifor('Av903#1')fi,
+          c100,&unifor('Av461^x#1'),
+          if &unifor('Av461^b#1')<>''then &unifor('Av461^b#1')'. 'fi,
+          if &unifor('Av461^c#1')<>''then' '&unifor('Av461^c#1')fi,
+          if &unifor('Av461^e#1')<>''then': '&unifor('Av461^e#1')fi,
+          if &unifor('Av461^f#1')<>''then'/ '&unifor('Av461^f#1')fi,
+          if &unifor('Av461^d#1')<>''then'. - ',&unifor('Av461^4'),
+             if &unifor('Av461^4')=''then &unifor('Av461^d#1')fi fi,
+          if &unifor('Av461^g#1')<>''then' : '&unifor('Av461^g#1'),fi,
+          if &unifor('Av461^6#1')<>''then' [',&unifor('Av461^6#1')']',fi
+          if &unifor('Av461^h#1')<>''then', '
+             if &unifor('Av461^5#1')<>''then &unifor('Av461^5#1'),' 'fi,&unifor('Av461^h#1')fi,
+          c300,'До ',v46^g,'  Издание см. под заглавием:',c500,v46^d|. |,v46^c,|. Шифр: |v46^w'.' 
+      fi),
+   else /'\\$A0,0$D\\',
+      if v903:v908 or v903:v906.15 or v903.1:'-' then else v903 fi,c100,
+      if p(v503)then/'E',v503^a". "fi,if p(v981)then/|. |+v981^a". "fi,otit461o,
+      c300,'До ',v46^g,'  Издание см. под заглавием:',c500,v46^d". ",v46^c,". Шифр: "v46^w'.'
+fi fi,&unifor('!'),&unifor('+F'),

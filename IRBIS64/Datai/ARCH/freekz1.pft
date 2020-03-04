@@ -1,0 +1,40 @@
+&unifor('+1W100#'''), 
+&unifor('+1W101,100#'&unifor("DRDR,?RI="v1002"?,(v56/)")) 
+&unifor('+1W200#'''), 
+&unifor('+1W201,200#'&unifor("DRDR,?RI="v1002"?,(v57/)")) 
+&unifor('+1W300#'''), 
+&unifor('+1W301,300#',if v920='J' then (v910^d/) else 
+(if p(v910) then 
+    if v910^a:'U' and (p(v910^2) and val(v910^1,|1|n910^1)-val(v910^2)>0 or a(v910^2)) or v910^a:'0' then v910^d, 
+ fi fi/) fi ), 
+&unifor('+1W400#'''), 
+&unifor('+1W401,400#'&unifor('+1I'&unifor('+1Kmhrkv.mnu|301,',&unifor('+1R300')))) 
+&unifor('+1W500#'''), 
+&unifor('+1W501,500#'&unifor('+1M401,',&unifor('+1R400'),'#101,',&unifor('+1R100'))), 
+&unifor('+1W600#'''), 
+if &unifor('+1R100')='0'and &unifor('+1R200')<>'0' then 
+&unifor('+1W601,600#'&unifor('+1S401,',&unifor('+1R400'),'#201,',&unifor('+1R200'))) fi, 
+/,BRIEF,/ 
+if &unifor('+1R500')='0' and &unifor('+1R600')='0' then 'Свободных экземпляров нет' else 
+   if v920='J' then 
+      if val(&unifor('+1R400'))>0 then 'Можно получить: '&unifor('+1R+401,'&unifor('+1R400')) fi, 
+      &unifor('+1W700#'''),&unifor('+1W701,700#'(&unifor('Pv910^d')/)), 
+      &unifor('+1W800#'''),&unifor('+1W801,800#'(&unifor('Pv909^d')/)), 
+      &unifor('+1W900#'''),&unifor('+1W901,900#'&unifor('+1S801,',&unifor('+1R800'),'#701,',&unifor('+1R700'))), 
+      &unifor('+1R+701,'&unifor('+1R700')) 
+      if val(&unifor('+1R900'))>0 then /'За старые годы см. также : '&unifor('+1R+901,'&unifor('+1R900')) fi, 
+      /'*****'/, 
+      &unifor('+1R*+701,',&unifor('+1R700'))/ 
+      &unifor('+1R*+901,',&unifor('+1R900'))    
+   else 
+      if &unifor('Y')<>'' then 'Свободные экземпляры: '&unifor('Y'),/ 
+         if val(&unifor('+1R500'))>0 then 'Можно получить: '&unifor('+1R+501,',&unifor('+1R500'))  else 
+            if val(&unifor('+1R100'))>0 then 'Доступных Вам экземпляров нет'else 
+               if val(&unifor('+1R600'))>0 then 'Можно получить: '&unifor('+1R+601,',&unifor('+1R600'))  else 
+                  if val(&unifor('+1R400'))>0 then 'Можно получить: '&unifor('+1R+401,'&unifor('+1R400')) 
+      fi fi fi fi fi/'*****'/ 
+      if val(&unifor('+1R500'))>0 then &unifor('+1R*+501,',&unifor('+1R500')) else 
+         if val(&unifor('+1R100'))>0 then else 
+            if val(&unifor('+1R600'))>0 then &unifor('+1R*+601,',&unifor('+1R600')) else 
+               if val(&unifor('+1R400'))>0 then &unifor('+1R*+401,',&unifor('+1R400')) 
+fi fi fi fi fi fi, 

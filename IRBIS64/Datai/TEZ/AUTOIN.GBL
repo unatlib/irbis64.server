@@ -1,0 +1,16 @@
+0
+DEL
+2
+*
+
+
+ADD
+2
+*
+if p(v6) or p(v7) or p(v8) then '0' else '1' fi
+
+ADD
+14
+*
+if a(v14) and v2='1' then &unifor('+T') fi
+

@@ -1,0 +1,23 @@
+if p(v1^I) then v1^I else # fi/
+if p(v1^G) then v1^G else # fi/
+if p(v1^A) then '"',"V="v1^A,'"',fi,
+if p(v1^B) then 
+  if p(v1^A) then '*'  fi,
+  '"',"NOS="v1^B,'"' 
+fi,
+if p(v1^C) then 
+  if p(v1^A) or p(v1^B) then '*' fi,
+  '"',"HD="v1^C,'"'
+fi,
+if p(v1^D) then 
+  if p(v1^A) or p(v1^B) or p(v1^C) then '*' fi,
+  '"',"RZN="v1^D,'"' 
+fi,
+if p(v1^E) then 
+  if p(v1^A)or p(v1^B)or p(v1^C)or p(v1^D) then '*' fi,
+  '"',"U="v1^E,'"'   
+fi,
+if p(v1^F) then 
+  if p(v1^A)or p(v1^B)or p(v1^C)or p(v1^D)or p(v1^E) then '*'   fi,
+  '"',"RIN="v1^F,'"' 
+fi

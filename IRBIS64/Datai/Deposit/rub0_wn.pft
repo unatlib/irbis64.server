@@ -1,0 +1,26 @@
+/* глобальная 1 - перключатель
+/*  глобальная 2 - перключатель (пусто - показывать ссылку СМОТРИ ТАКЖЕ...)
+/*  глобальная 3 - перключатель (пусто - показывать ссылку ВЫШЕСТОЯЩИЙ...)
+'<table>',
+if v3<>'0' then 
+'<tr>',
+'<td>',
+'<input type="checkbox" name="CHECKINDEX" value="',v3,'">',
+'</td>',
+'<td>',
+'<img src=','"','IRBIS:10,HELP,',
+   if &uf('J,G=',v3)<>'' then 'textfolder.gif' else 'folder.gif' fi,
+,'"',' width=16 height=16 hspace=0 vspace=0 border=0>',
+'</td>',
+'<td>',v3,'</td>',
+'<td> - </td>',
+'<td>',
+       if (&uf('J,G=',v3)<>'') and (&uf('+1R1')='') then '<A HREF="IRBIS:1,,,rub_wn,',v3'">' fi,v2,'</A>  ',
+       if &uf('+1R3')='' then '<A HREF="IRBIS:1,,,rub_wn,',if &uf('+R',v3)<>'' then &uf('+R',v3) else '0' fi,'">(Вышестоящий: ',if &uf('+R',v3)<>'' then &uf('D,|',&uf('+R',v3),'|,v2') else 'Верхний уровень' fi,')</A>  ', fi,
+       if p(v20) and (&uf('+1R2')='') then ' <A HREF="IRBIS:1,,,rub_see_wn,',v3,'">(Смотри также...)</A>  ' fi,
+'</td>'
+'</tr>',
+fi,
+'</table>'
+
+

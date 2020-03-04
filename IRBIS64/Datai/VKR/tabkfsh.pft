@@ -1,0 +1,4 @@
+,'\pard \qc \fs36 ÊÀÔÅÄĞÀ ', MPU, 
+if &uf('Kkafch.mnu|',v991^a)<>'' then &uf('Kkafch.mnu|',v991^a) else v991^a fi,'\par ',#, 
+&uf('+1'),&uf('+1W302#',v991^a), &uf('+1W799#',v991^b)
+

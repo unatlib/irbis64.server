@@ -1,0 +1,213 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then f(val(v45^4)+val(v155^V)+val(v155^X),0,0) else  f(rsum((if p(v44^j) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^j|;| else'0;' fi fi)),0,0),,fi,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then f(val(v17^A)+val(v155^P)+val(v155^L),0,0) else  f(rsum((if p(v44^!) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^!|;| else'0;' fi fi)),0,0),,fi,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v45^L  else f(rsum((if p(v44^-) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^-|;| else'0;' fi fi)),0,0),,fi,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v45^5 else f(rsum((if p(v44^k) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then v44^k|;| else'0;' fi fi)),0,0),,fi,fi,,,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v147^C else f(rsum((if p(v44^G) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^G|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v145^I  else  f(rsum((if p(v44^+) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then v44^+|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v145^K else f(rsum((if p(v44^a) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^a|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then  if v991^D='' then v145^U else  f(rsum((if p(v44^b) then  if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^b|;| else'0;'  fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v145^V else  f(rsum((if p(v44^c) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then  v44^c|;| else'0;'  fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then  if v991^D='' then v47^1,,if a(v47^1)then v48^1,if a(v48^1)then v49^1 fi fi, else  f(rsum((if p(v44^1) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^1|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^2,,,if a(v47^2)then v48^2,if a(v48^1)then v49^2 fi fi, else f(rsum((if p(v44^2) then  if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^2|;| else'0;'  fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then  if v991^D='' then v47^3,,if a(v47^3)then v48^3,if a(v48^1)then v49^3 fi fi, else  f(rsum((if p(v44^3) then  if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then  v44^3|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^4,,,if a(v47^4)then v48^4,if a(v48^1)then v49^4 fi fi, else  f(rsum((if p(v44^4) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^4|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then  if v991^D='' then v47^5,,if a(v47^5)then v48^5,if a(v48^1)then v49^5 fi fi, else f(rsum((if p(v44^5) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then  v44^5|;| else'0;'  fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^6,,,if a(v47^6)then v48^6,if a(v48^1)then v49^6 fi fi, else f(rsum((if p(v44^6) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^6|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^7,,,if a(v47^7)then v48^7,if a(v48^1)then v49^7 fi fi, else f(rsum((if p(v44^7) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^7|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^8,,,if a(v47^8)then v48^8,if a(v48^1)then v49^8 fi fi, else f(rsum((if p(v44^8) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then v44^8|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v47^9,,,if a(v47^9)then v48^9,if a(v48^1)then v49^9 fi fi, else f(rsum((if p(v44^9) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^9|;| else'0;' fi fi)),0,0),,fi,,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v45^1 else  f(rsum((if p(v44^q) then  if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^q|;| else'0;' fi fi)),0,0),,fi,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D='' then v45^2 else f(rsum((if p(v44^r) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^r|;| else'0;' fi fi)),0,0),,fi,,fi,
+if v991^b='' or &uf('+97',v88^d)=&uf('+97',v991^b) then if v991^D=''  then v45^3 else  f(rsum((if p(v44^s) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  )  then v44^s|;| else'0;' fi fi)),0,0),,fi,,fi,
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3600 
+\pard \ql\widctlpar\intbl {\qc \fs16 ',,,'\qr \b ИТОГО:  ',,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4120 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,,,v1,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4640 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,,v2,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5160 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v3,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5680 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v4,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6200 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v5,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7200 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v6,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7720 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v7,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8240 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v8,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8760 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v9,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9280 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v10,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9800 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v11,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10320 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v12,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10840 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v13,,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx11360 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v14,,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx11880 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v15,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx12400 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v16,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx12920 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v17,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13440 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v18,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13960 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v19,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx14480 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,v20,,,,
+'\cell }\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 \pard \ql\widctlpar\intbl {\qc \fs18 \b ',,,&uf('Av21#',&uf('+N21'),,),,,,
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,,,
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1000 
+\pard \widctlpar\intbl {\qc \fs16 Дата записи
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2000 
+\pard \widctlpar\intbl {\qc \fs16 Номер в КСУ
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2800 
+\pard \widctlpar\intbl {\qc \fs16 Источник пост.
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3600 
+\pard \widctlpar\intbl {\qc \fs16 № сопр док
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 
+\pard \widctlpar\intbl {\qc \fs16 \par \fs24 Поступило
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2800 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3600 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7200 
+\pard \widctlpar\intbl {\qc \fs16 Всего
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 
+\pard \widctlpar\intbl {\qc \fs16 В том числе (количество экземпляров)
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2800 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3600 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4120 
+\pard \widctlpar\intbl {\qc \fs16 Назв.
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4640 
+\pard \widctlpar\intbl {\qc \fs16 Назв. впервые
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5160 
+\pard \widctlpar\intbl {\qc \fs16 Назв. \par эл.\par рес. 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5680 
+\pard \widctlpar\intbl {\qc \fs16 Экз. 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6200 
+\pard \widctlpar\intbl {\qc \fs16 Экз. \par эл.\par рес.
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7200 
+\pard \widctlpar\intbl {\qc \fs16 Сумма
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8760 
+\pard \widctlpar\intbl {\qc \fs16 По видам
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13440 
+\pard \widctlpar\intbl {\qc \fs16 По содержанию \par (раздел знаний) 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 
+\pard \widctlpar\intbl {\qc \fs16 По языкам
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx1000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2000 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx2800 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx3600 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4120 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx4640 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5160 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx5680 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx6200 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7200 
+\pard \widctlpar\intbl {\qc \fs16 
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx7720 
+\pard \widctlpar\intbl {\qc \fs16 Книги
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8240 
+\pard \widctlpar\intbl {\qc \fs16 Бр
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx8760 
+\pard \widctlpar\intbl {\qc \fs16 Ж
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9280 
+\pard \widctlpar\intbl {\qc \fs16 1
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx9800 
+\pard \widctlpar\intbl {\qc \fs16 2
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10320 
+\pard \widctlpar\intbl {\qc \fs16 3
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx10840 
+\pard \widctlpar\intbl {\qc \fs16 4
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx11360 
+\pard \widctlpar\intbl {\qc \fs16 5
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx11880 
+\pard \widctlpar\intbl {\qc \fs16 6
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx12400 
+\pard \widctlpar\intbl {\qc \fs16 7
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx12920 
+\pard \widctlpar\intbl {\qc \fs16 8
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13440 
+\pard \widctlpar\intbl {\qc \fs16 9
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx13960 
+\pard \widctlpar\intbl {\qc \fs16 рус
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx14480 
+\pard \widctlpar\intbl {\qc \fs16 нац.
+\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\cellx15000 
+\pard \widctlpar\intbl {\qc \fs16 др.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

@@ -1,0 +1,90 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v991^D='' then f(val(v17^A)+val(v155^P)+val(v155^L),0,0) else f(rsum((if p(v44^!) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then  v44^!|;| else'0;' fi fi)),0,0),,fi,,
+if v991^D='' then v45^5 else f(rsum((if p(v44^k) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^k|;| else'0;' fi fi)),0,0),,fi,
+if v991^D='' then v45^6 else f(rsum((if p(v44^+) then if &uf('Av991^D#1')='' or ( v44^?='' and &uf('+97',v44^I)=&uf('+97',&uf('Av991^D#1')) or v44^?<>'' and &uf('+97',v44^?)=&uf('+97',&uf('Av991^D#1'))  ) then v44^+|;| else'0;' fi fi)),0,0),,fi,,,
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10597 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\par Итого: Названий, поступивших впервые,  ',if val(v1)>0 then f(val(v1),0,0) else ' - ' fi,'; Экземпляров  ',f(val(v2),0,0),'; На сумму  ',if val(v3)>0 then f(val(v3),0,2), &uf('Korg.mnu\3'),'.'  fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\pard \widctlpar\intbl {\qc \fs16 \b Год и № записи в КСУ\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx2234 
+\pard \widctlpar\intbl {\qc \fs16 \b № акта\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3509 
+\pard \widctlpar\intbl {\qc \fs16 \b Дата\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4643 
+\pard \widctlpar\intbl {\qc \fs16 \b № сопр. док-та\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6911 
+\pard \widctlpar\intbl {\qc \fs16 \b Источник комплектования\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7761 
+\pard \widctlpar\intbl {\qc \fs16 \b Всего назв.\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8611 
+\pard \widctlpar\intbl {\qc \fs16 \b Назв., получ впервые\b0
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9461 
+\pard \widctlpar\intbl {\qc \fs16 \b Всего экз.\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx10595 
+\pard \widctlpar\intbl {\qc \fs16 \b На сумму\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

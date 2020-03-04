@@ -1,0 +1,29 @@
+1
+
+Введите дату <Alt+Д> 
+ADD
+941
+F
+(if p(v910)then if'2 6 7':v910^a then else if val(v910^s) > val(v910^c)then |^A|v910^a,|^B|v910^b,|^H|v910^h,|^C|v910^c,|^D|v910^d,|^F|v910^f,|^S|v910^s,|^U|v910^u,|^Y|v910^Y,if p(v910^1)then '^1',if v910^1:'/'then &unifor('G0/'v910^1)else v910^1 fi fi,|^2|v910^2,|^E|v910^e fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99
+F
+(if p(v910)then if'2 6 7':v910^a then else if val(v910^s) > val(v910^c)then |^A|v910^a,|^B|v910^b,|^H|v910^h,'^C','%1',|^D|v910^d,|^F|v910^f,'^S','%1',|^U|v910^u,|^Y|v910^Y,if p(v910^1)then'^1',if v910^1:'/'then &unifor('G1/'v910^1)else v910^1 fi fi,|^2|v910^2,'^E',if p(v910^e)then if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(v910^e)*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)else f(val(v910^e)*val(&unifor('Kizc.mnu|1990')),0,2)fi fi else f(val(v910^e),0,2)fi else if p(v910^c)then if &unifor('Kizc.mnu|'v910^c.6)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.6)),0,2)else if &unifor('Kizc.mnu|'v910^c.4)<>''then f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|'v910^c.4)),0,2)else f(val(&unifor('Av10^d#1'),' 0')*val(&unifor('Kizc.mnu|1990')),0,2)fi fi else f(val(&unifor('Av10^d#1'),' 0'),0,2)fi fi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910) then if val(v910^s) > val(v910^c) then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+F
+(if p(v99)then |^A|v99^a,|^B|v99^b,|^H|v99^h,|^C|v99^c,|^D|v99^d,|^F|v99^f,|^S|v99^s,|^U|v99^u,|^Y|v99^Y,if p(v99^1)then '^1',if v99^1:'/'then v99^1*1 else v99^1 fi fi,|^2|v99^2,|^E|v99^e fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+99
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

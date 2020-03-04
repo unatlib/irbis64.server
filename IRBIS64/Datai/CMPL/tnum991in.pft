@@ -1,0 +1,8 @@
+if v920:'KSU'then '1' else 
+(if s(v910^y)<>''then 
+    if &unifor('G0-'&unifor('Av991*3#1'))=v910^y and v910^c*2.2=&unifor('Av991.2#1') then 
+       if '2 6 7':v910^a then else &unifor('S1A'),
+          if p(v910^1)then if v910^1='1'then else '-',f(val(&unifor('S1A'))+val(v910^1)-2,0,0),&unifor('S'f(val(v910^1)-2,0,0))fi 
+          fi'\par '
+ fi fi fi) 
+fi

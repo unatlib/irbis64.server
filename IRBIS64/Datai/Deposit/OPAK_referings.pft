@@ -1,0 +1,68 @@
+/* v1001 - число найденных
+/* v4 - порция
+/* v3 - стартовый номер
+/* v1010 - число видимых ссылок
+'<tr>
+ <td align=right>
+ </td>
+ <td colspan="3" align=left>
+ <font size=-1>',
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+if val(v1001)>2*val(v4) 
+  then
+        &uf('+1W1#',F(val(v3)/val(v4)+val(v1010)/2+1,0,0)),
+        if val(&uf('+1R1'))>(val(v1001)/val(v4)) then &uf('+1W1#',&unifor('+3T',v1001,','v4)) fi  
+        &uf('+1W2#',F(val(v1001)-val(&uf('+1R1'))*val(v4),0,0)),
+        &uf('+1W3#',v4),
+        &uf('+1W4#',F(val(v3)/val(v4)-val(v1010)/2,0,0)),
+        if val(&uf('+1R4'))<1 then &uf('+1W4#1')fi,
+        if (val(v3)=1) then else '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=1','&S21FMT=',&unifor('Av2003#1'),'">' fi,
+        '1',
+        if val(v4)<>1 then
+                '-',F(val(&uf('+1R4'))*val(&uf('+1R3')),0,0),
+        fi        
+                 if (val(v3)=1) then else '</a>' fi/,
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        (if val(&uf('+1R1'))>val(&uf('+1R4')) 
+              then 
+                      if (val(&unifor('Av3#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1) then else '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=',F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),'&S21FMT=',&unifor('Av2003#1'),'">' fi,
+                      F(val(&uf('+1R4'))*val(&uf('+1R3'))+1,0,0),
+                      if ((val(&uf('+1R4'))*val(&uf('+1R3'))+1)<>(val(&uf('+1R4'))+1)*val(&uf('+1R3'))) then
+                              '-',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0),
+                      fi
+                      &uf('+1W5#',F((val(&uf('+1R4'))+1)*val(&uf('+1R3')),0,0)),&uf('+1W4#',F(val(&uf('+1R4'))+1,0,0)),                      
+                      if (val(&unifor('Av3#1'))=val(&uf('+1R4'))*val(&uf('+1R3'))+1-val(&uf('+1R3'))) then else '</a>' fi,      
+              else &uf('+1W1#'),&uf('+1W4#') 
+        fi/),
+        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        if (1+val(v4)*val(&unifor('+3T',v1001,','v4))<=val(v1001)) then
+                if (val(v3)=val(v4)*val(&unifor('+3T',v1001,','v4))+1) then else '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=',F(val(v4)*val(&unifor('+3T',v1001,','v4))+1,0,0),'&S21FMT=',&unifor('Av2003#1'),'">' fi,
+                F(val(v4)*val(&unifor('+3T',v1001,','v4))+1,0,0),
+                if (val(v4)*val(&unifor('+3T',v1001,','v4))+1<val(v1001)) then
+                        '-',v1001
+                fi        
+                if (val(v3)=val(v4)*val(&unifor('+3T',v1001,','v4))+1) then else '</a>' fi,
+        else if val(&uf('+1R5'))<val(v1001) then '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=',F(val(v1001)-val(v4)+1,0,0),'&S21FMT=',&unifor('Av2003#1'),'">',F(val(v1001)-val(v4)+1,0,0),'-',v1001,'</a>' fi
+        fi        
+  else
+        if val(v1001)>val(v4)    then
+                if (val(v3)=1) then else '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=1','&S21FMT=',&unifor('Av2003#1'),'">' fi,
+                '1',
+                if val(v4)>1 then
+                        '-',v4,
+                fi
+                if (val(v3)=1) then else '</a>' fi/,
+                if (val(v3)=1+val(v4)) then else '<a href="IRBIS:?S21RES=',&unifor('Av1001#1'),'&I21DBN=',&unifor('Av2001#1'),'&S21STR=',&unifor('+3E',&unifor('Av2002#1')),'&S21STN=',F(val(v4)+1,0,0),'&S21FMT=',&unifor('Av2003#1'),'">' fi,
+                F(val(v4)+1,0,0),
+                if (val(v4)+1<val(v1001))then
+                        '-',v1001
+                fi        
+                        if (val(v3)=val(v4)+1) then else '</a>' fi/,               
+        fi        
+fi
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+'</font>
+ </td>
+</tr>'
+
+

@@ -1,0 +1,26 @@
+0
+DEL
+10
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+10
+XXXXXXXXXXXXXXXXXXX
+if a(v10) then if p(v340) then"^Gна год ^D"v340^a,"^C"v340^c fi/if p(v341) then"^Gна 1-е п/г ^D"v341^a,"^C"v341^c fi/if p(v342) then"^Gна 2-е п/г ^D"v342^a,"^C"v342^c fi/if p(v3411) then"^Gна 1-й кв.^D"v3411^a,"^C"v3411^c fi/if p(v3412) then"^Gна 2-й кв.^D"v3412^a,"^C"v3412^c fi/if p(v3413) then"^Gна 3-й кв.^D"v3413^a,"^C"v3413^c fi/if p(v3414) then"^Gна 4-й кв.^D"v3414^a,"^C"v3414^c fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if val(v910)=0 or a(v910) then if p(v340^b)and val(v340^b)>0 then "^A"v340^b,"^B"v340^a,"^C"v340^c fi,if p(v341^b)and val(v341^b)>0 then "^A"v341^b,"^B"v341^a,"^C"v341^c fi,if p(v342^b)and val(v342^b)>0 then "^A"v342^b,"^B"v342^a,"^C"v342^c fi,if p(v3411^b)and val(v3411^b)>0 then "^A"v3411^b,"^B"v3411^a,"^C"v3411^c fi,if p(v3412^b)and val(v3412^b)>0 then "^A"v3412^b,"^B"v3412^a,"^C"v3412^c fi,if p(v3413^b)and val(v3413^b)>0 then "^A"v3413^b,"^B"v3413^a,"^C"v3413^c fi,if p(v3414^b)and val(v3414^b)>0 then "^A"v3414^b,"^B"v3414^a,"^C"v3414^c fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+if a(v920) then 'POST' fi
+XXXXXXXXXXXXXXXXXXX

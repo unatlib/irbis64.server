@@ -1,0 +1,65 @@
+'{'
+ if v920:'SZ' THEN
+ "\b ДАННЫЕ ЗАКАЗА \b0"d907
+ '\par -----------------------\par ', '\b 'v62^a,| (Код организации |v62^k|)\b0 |,
+   '\par ЗАКАЗ ',|на |v62^m,| \b  № |v62^6|\b0 |,| от |v62^C,,,,,,,,,,,,,,,
+   '\par \b Этапы работы: \b0 '
+   (if p(v907) then '\par ',&unifor('K907s.mnu|'v907^C),
+        if s(v907^a)<>'' then 
+           | - |v907^a*6.2|.|,v907^a*4.2|.|,v907^a.4,' ',v907^d,|\par |v907^e,| \par \b Заменен на \b0 \par |v907^f fi fi,)
+   (if p(v62^n)then|\par \b Перечислено \b0 |v62^n,if p(v62^n) then &unifor('Korg.mnu|3') fi,
+   if s(v62^c,v62^f)<>''then' (',|N |v62^f,
+      if p(v62^c)then| - |v62^c*6.2|.|,v62^c*4.2|.|,v62^c.4 fi, ')'
+   fi,fi),,,,,,,,,,,
+/*------------------13----------------------------
+   (|\par \b Заказано: \b0 |v62^d| экз.|,| - |v62^e| наим.|),
+   if p(v694) then '\par \b Заявка для ВУЗ: \b0 ' fi,,,,,
+   (if p(v694)then '\par '      v694^D,,|-|v694^A,,|-|v694^N,,|-|v694^C,,|-|v694^B,,|-|v694^V,,|-|v694^O,,|-|v694^G,,| - \b |v694^1| экз.\b0 |,,,
+    fi),      
+   if p(v45) then 
+      if val(v45^a)= val(v62^e) then else'\par \b Внимание!\b0  Заказ введен неполностью ('v45^a' биб. описания)',
+      fi 
+      if val(v45^b)= val(v62^d) then else'\par \b Внимание!\b0  Заказ введен неполностью ('v45^b' экз.)',
+      fi 
+   fi,
+   (if s(v62^i,v62^g,v62^J)<>'' 
+    then 
+      '\par \b Получено \b0 ',,v62^i*6.2|.|,v62^i*4.2|.|,v62^i.4|:|,| КСУ № |v62^u,| - |d62^g,
+      f(val(v62^g),3,0),| экз.|d62^g,| - |v62^j| наим.|,
+      | (N сч.|v62^h,|-|v62^p,if p(v62^p) then &unifor('Korg.mnu|3')
+    fi,
+    if s(v62^s,v62^r)<>'' then', в том числе: 'fi,
+    |почт.расходы-|v62^s,if p(v62^s) then &unifor('Korg.mnu|3') fi,
+    if p(v62^r) then |, |d62^s,|НДС-|v62^r,&unifor('Korg.mnu|3')fi,|)|d62^h   
+   fi),
+   if s(v62^g)<>''then'\par \b Всего на сумму: \b0 ',
+   f(rsum((v62^p|;|,'0 ')),0,2),&unifor('Korg.mnu|3')
+   fi,
+   if s(v62^n)<>''and s(v62^p)<>''then 
+      if rsum((v62^n|;|)) > rsum((v62^p|;|)) then
+         '\par \b Остаток суммы: \b0 ',
+         f((rsum(v62^n|;|)-rsum(v62^p|;|,'0 ')),0,2),
+         &unifor('Korg.mnu|3') 
+      else 
+         if rsum((v62^n|;|))= rsum((v62^p|;|)) then
+            '\par Остатка от перечисленной суммы нет'
+         else'\par \b Задолженность: \b0 ',
+             f((rsum(v62^p|;|))-(rsum(v62^n|;|)),0,2),
+             &unifor('Korg.mnu|3')
+   fi fi fi,
+/*------------15--------------------
+   if rsum((v62^d|;|))=0 then '\par \b Нет кол-ва заказанных ' else 
+   if rsum((v62^g|,|)) >= rsum((v62^d|;|)) then '\par \b Заказ выполнен' fi fi,,,,
+   if rsum((v62^d|,|))<>0 and rsum((v62^G|,|))=0 and rsum((v62^J|,|))=0 then '\par \b Нет поставок\b0 ' fi,,,   
+   if s(v62^d)<>'' and s(v62^g)<>''
+   then 
+      if rsum((v62^g|,|)) < rsum((v62^d|;|)) 
+      then '\par \b Недопоставлено: \b0 ' 
+         f((RSUM(v62^d|;|)-rsum(v62^g|;|)),0,0),' экз.'
+      else 
+         if rsum((v62^g|,|)) > rsum((v62^d|;|)) then '\par \b Поставлено сверх заказа: \b0 ' 
+            f((RSUM(v62^g|;|)-rsum(v62^d|;|)),0,0),' экз.' fi 
+      fi 
+   fi 
+fi,
+ '}'

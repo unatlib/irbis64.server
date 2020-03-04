@@ -1,0 +1,48 @@
+IF p(g1005) then g1005 ELSE 
+IF p(v200^a)and a(v981)and a(v463)and (not(v920:'spec'))then 
+   if val(&unifor('J,!'v110^b,v11^a,if v210^d.1='['then else v210^d*2.2 fi,v700^a.9,
+          &unifor('B'v710^a" ",v200^a),if v920='J'then" "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,
+          if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi,
+          if v920='J'then else (if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                                if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi) fi,f(rsum(v215^a),0,0)))>0 
+   then '!'v110^b,v11^a,if v210^d.1='['then else v210^d*2.2fi,v700^a.9,
+          &unifor('B'v710^a" ",v200^a),if v920='J'then" "v923^h,if a(v923^h) then" "v923^i fi," "v923^k,
+          if a(v923^k) then" "v923^l fi," "v923^m,if a(v923^m) then" "v923^n fi fi,
+          if v920='J'then else (if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+          if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi) fi,f(rsum(v215^a),0,0) fi 
+ELSE 
+   IF p(v200^a) and p(v981)then 
+      if val(&unifor('J,'if &unifor('Av981^a#1')<>'' then '!'&unifor('Av981^d*2.2#1'),&unifor('Av981^n#1'),
+         &unifor('B'&unifor('Av981^a#1')' '&unifor('Av200^a#1'))fi))>0 
+      then 
+         if &unifor('Av981^a#1')<>'' then '!'&unifor('Av981^d*2.2#1'),&unifor('Av981^n#1'),
+            &unifor('B'&unifor('Av981^a#1')' '&unifor('Av200^a#1')) fi fi 
+   ELSE 
+      IF p(v200^a)and a(v981)and p(v463)then 
+         if val(&unifor('J,'if &unifor('Av463^c#1')<>''then'!'&unifor('Av463^j*2.2#1'),&unifor('Av700^a.9#1'),
+            &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                       &unifor('Av200^a#1'),' '&unifor('Av463^c#1')),
+            &unifor('Av463^v#1'),&unifor('Av463^h#1'),&unifor('Av463^k#1'),&unifor('Av463^s#1')  
+            fi))>0 
+         then 
+            if &unifor('Av463^c#1')<>''then'!'&unifor('Av463^j*2.2#1'),&unifor('Av700^a.9#1'),
+               &unifor('B'&unifor('Av710^a#1'),if &unifor('Av710^a#1')<>''then' 'fi,
+                          &unifor('Av200^a#1'),' '&unifor('Av463^c#1')),
+               &unifor('Av463^v#1'),&unifor('Av463^h#1'),&unifor('Av463^k#1'),&unifor('Av463^s#1')
+         fi fi 
+      ELSE 
+         IF v920:'spec'then 
+            if val(&unifor('J,!'if v210^d.1='['then else v210^d*2.2 fi,
+               if a(v210^d)then if v461^h.1='['then else v461^h*2.2 fi fi,
+               &unifor('B'v461^c,if v461^u:'1'then' 'if p(v961^z)then (if p(v961^z) then v961^a.9 fi) else 
+               v461^x.9 fi fi,if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               (if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then 
+               &unifor('G1#'v923^k) else v923^k fi),f(rsum(v215^a),0,0)))>0 
+            then '!'if v210^d.1='['then else v210^d*2.2 fi,
+               if a(v210^d)then if v461^h.1='['then else v461^h*2.2 fi fi,
+               &unifor('B'v461^c,if v461^u:'1'then' 'if p(v961^z)then (if p(v961^z) then v961^a.9 fi) else 
+               v461^x.9 fi fi,if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+               (if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,if val(v923^k)>0 then 
+               &unifor('G1#'v923^k) else v923^k fi),f(rsum(v215^a),0,0) fi 
+FI FI FI FI /
+FI

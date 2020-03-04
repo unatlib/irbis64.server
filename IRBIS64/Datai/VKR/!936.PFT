@@ -1,0 +1,5 @@
+if &unifor('IMAIN,KUMJEX,')='1'then else if v920='J'then if p(v936) then if L("I="v903,"/"v934,"/"v935,'/'&unifor('G0-'v9
+36))<= 0 then'0' else '1Дублетный номер:       ',|Шифр: |v903,| Год: |v934,| Том
+: |v935,| Номер: |v936,ref(l("I="v903,"/"v934,"/"v935,"/"d936,&unifor('G0-'v936)
+),' (см. N ',f(val(mfn),0,0),')') fi else '0' fi else '0' fi fi
+

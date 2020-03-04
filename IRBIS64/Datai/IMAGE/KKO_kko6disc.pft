@@ -1,0 +1,10 @@
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F1^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#1'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F2^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#2'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F3^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#3'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F4^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#4'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F5^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#5'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F6^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#6'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F7^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#7'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F8^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#8'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F9^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#9'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/
+if val(&uf('J,IDD=',G1003))>0 then mpu ,'^F10^I',G1003 ,'^R',&uf('Kdisc.mnu|',G1003),'^O'&uf('Ag991^o#1'),&uf('+7W2002#10'),'^N'&uf('S1A'),'^S',&unifor('7RDR,!IDD=',G1003,'!,@numbds') fi,/

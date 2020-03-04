@@ -1,0 +1,4 @@
+if p(v102)then 
+   (if p(v102) then 
+       if &unifor('Kstr.mnu|'v102)='' then /'1 Ошибка: неверен код страны  'v102 else /'0' fi fi/)
+else /'2 Ошибка: Отсутствует код страны'fi

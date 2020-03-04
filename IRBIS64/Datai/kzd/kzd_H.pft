@@ -1,0 +1,85 @@
+'</>',
+if v920:'PERS' then '<b> 'v700^a, ' 'v700^b '</b>'
+mhl,(|<br>|v331), 
+  (if p(v702^4) then '<br><b>'v702^a,| |v702^d,|, |v702^g,
+      if a(v702^g) then |, |d702^b,
+         if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) 
+      fi fi,'</b>'
+      if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,
+         if s(v702^1)<>''then|; |d702^c fi,v702^c,
+         if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' 
+      fi,
+      |\|d702^4,&uf('K702vs.mnu\'v702^4),
+      |, |d702^5,&uf('K702vs.mnu\'v702^5),
+      |, |d702^6,&uf('K702vs.mnu\'v702^6),|(|v702^7|)|,|\|d702^4      fi/) 
+   fi, 
+if p(v200) then '<b> 'v200^a,'</b> ' fi, 
+if v920:'SOB' or v920:'PREDM'  then " ("v200^e")" , 
+  (if p(v700) then '<br><b>'v700^a,| |v700^d,|, |v700^g, 
+      if a(v700^g)then|, |d700^b 
+         if v700^b:'. ' then v700^b else 
+            if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+            else v700^b 
+      fi fi fi'</b> ', 
+      if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+         if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+         if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,'). ' 
+      else|.|d700^g,| |d700^a  
+   fi fi/)
+   if v920:'sob' and p(v309^e) and v309^e.1<>'?' then '<br> Дата:' v309^e.4  else fi, 
+   mhl,
+   (if p(v702^4) then '<br><b>'v702^a,| |v702^d,|, |v702^g,
+       if a(v702^g) then |, |d702^b,
+          if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) 
+       fi fi,'</b>'
+       if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,
+          if s(v702^1)<>''then|;     |d702^c fi,v702^c,
+          if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' 
+       fi,
+      |\|d702^4,&uf('K702vs.mnu\'v702^4),
+      |, |d702^5,&uf('K702vs.mnu\'v702^5),
+      |, |d702^6,&uf('K702vs.mnu\'v702^6),|(|v702^7|)|,|\|d702^4 
+    fi/) 
+    if p(v461) then |<br>|v461^c fi   
+    (|<br>|v331), 
+    (if p(v600) then |<br><b>|v600^a|</b>|,| (|v600^b|)| fi),
+fi,
+if v920:'VS' and p(v972) then '<b> Выставка : </b>',v972^a," ("v972^b")" fi, 
+if v920:'KF' and p(v972) then '<b> Конференция : </b>',v972^a," (",v972^b")" fi, 
+if v920:'VS' or v920:'KF' then 
+   if p(v700) then 
+      (if &uf('Av200#1')<>'' then |<br><b> |v700^a,|</b>(|v700^f|)| else 
+      |<br><b> |v700^a,| |v700^b|</b>|,| (|v700^c| )| 
+    fi) fi,
+   "<br><b> Время проведения</b> : "d972^d,v972^d, 
+   "<br><b> Место проведения</b> : "d972^e,v972^e,", "v972^g, 
+   "<br><b> Коллектив"d711, 
+   if &unifor('Av711#2')<>'' then 'ы: ' else ": "d711, fi "</b>"d711,
+   (if p(v711) then |<br></b>|v711^a,| /|v711^4,|, |v711^5,|, |v711^6,|/|d711^4 fi), 
+   (if p(v702^4) then '<br><b>'v702^a,| |v702^d,|, |v702^g,
+       if a(v702^g) then |, |d702^b,
+          if v702^b:'. 'or (not(v702^b:'.')) then v702^b else &unifor('G0.'v702^b),'. '&unifor('G2.'v702^b) 
+       fi fi,'</b>'
+       if s(v702^1,v702^c,v702^f)<>''then' (',v702^1,
+          if s(v702^1)<>''then|;     |d702^c fi,v702^c,
+          if s(v702^1,v702^c)<>''then|; |d702^f fi,v702^f,')' 
+       fi,
+      |\|d702^4,&uf('K702vs.mnu\'v702^4),
+      |, |d702^5,&uf('K702vs.mnu\'v702^5),
+      |, |d702^6,&uf('K702vs.mnu\'v702^6),|(|v702^7|)|,|\|d702^4 
+    fi/) 
+   "<br><b> Доклад"d330, if &unifor('Av330#2')<>'' then 'ы' fi, " : </b>"d330, 
+   (if p(v330) then '<br><b>'|"|v330^c|"|,'</b>'|, |v330^j fi)  
+   mhl,(|<br>|v331), 
+fi  
+,o488ss_H,Ofinal_H, 
+if p(v320) then '<br><b>Библиография:</b>',&unifor('S0'), 
+   (if p(v320) then|<br>|+d320, 
+       if p(v320^w) then |<A HREF="IRBIS:2,,|d320^w,v320^9,if a(v320^9) then 'IBIS' fi,|,,I=|v320^w|">|,v320^a,'</A>',
+       | <b>- см.</b> |,v320^8 
+       else v320^a fi, 
+    fi) 
+fi, 
+if v309^i<>'' then '<br>' ,jbdvs_H, fi,
+'<br>',&unifor('!'),  
+

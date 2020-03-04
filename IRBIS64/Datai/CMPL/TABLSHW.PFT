@@ -1,0 +1,9 @@
+'\pard \qc\li108 \ri108 ','\par \qc \fs24 С П P А В К А ','\par \qc \fs20 Была офоpмлена заявка на подписку ','\par \qc 
+на указанные ниже ',if &unifor("Krksvs.mnu|"v991^b)<>''then &unifor('Krksvs.mnu|'v991^b) else 'газеты и журналы' fi,
+if v33*5.1<>'P' then
+&unifor('Krkint6.mnu|'v991^d)," "v991^c" года ",
+&unifor('Krkint7.mnu|'v991^d),'\par '
+
+ else 'c ',&unifor('Krko.mnu|'v991^d*3.1),
+if '3 8':v991^d*3.1 then'а'else'я'fi,' по ',&unifor('Krko.mnu|'&unifor('G2-'v991^d)),
+if '3 8':s(&unifor('G2-'v991^d)) then else if s(&unifor('G2-'v991^d))='5'then'й'else'ь'fi fi,' 'v991^c' года 'fi

@@ -1,0 +1,17 @@
+'{','\par \b нCмнбмне мюхлемнбюмхе йнккейрхбю/лепнопхърхъ\b0 :  ','\par \tab ',mhl,v
+210^a,if s(v210^n,v210^c)<>''then' ('v210^n" ; ",v210^c,')'fi,"."v210^b,if v210:'^d' or v210:'^f' or v210:'^e' then '(',v210^d,if v210:'
+^d' and v210:'^f' then ";"v210^f  else v210^f fi,if v210:'^e' and (v210:'^f' or 
+v210:'^d') then ";"v210^e else v210^e fi,')' fi,,,,,,,,,,,,,,,,,,,,,,
+,,,if p(v510) then '\par \b оюпюккекэмше мюхлемнбюмхъ йнккейрхбю/лепнопхърхъ\b0 
+:   ' fi,(if p(v510) then ,'\par \tab ',v510^a,if s(v510^n,v510^c)<>''then' ('v510^n| ; |,v510^c,'). 'fi,|. |v510^b,if v510:'^d' or v510:'^
+f' or v510:'^e' then '(',v510^d,if v510:'^d' and v510:'^f' then |;|v510^f  else 
+v510^f fi,if v510:'^e' and (v510:'^f' or v510:'^d') then |;|v510^e else v510^e f
+i,')' fi fi),if p(v410) then '\par \b мемнплхпнбюммше мюхлемнбю
+мхъ йнккейрхбю/лепнопхърхъ\b0 :  ' fi,(if p(v410) then ,'\par \tab ',v410^a,if s(v410^n,v410^c)<>''then' ('v410^n| ; |,v410^c,'). 'fi,|. |v410^b,if v410:'^d' or v410:'^f' or v410:'^e' then '(',v410^d,if v410:'^d' and v410:'^f' then |;|v410^f  else v410^f fi,if v410:'^e' and (v410:'^f' or v410:'^d')
+ then |;|v410^e else v410^e fi,')' fi fi/),,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,if p(v710) then '\par \b ябъгюмм
+ше мюхлемнбюмхъ йнккейрхбю/лепнопхърхъ\b0 :  ' fi,(if p(v710) then ,'\par \tab '
+,v710^a,if s(v710^n,v710^c)<>''then' ('v710^n| ; |,v710^c,')'fi,|. |v710^b,if v710:'^d' or v710:'^f' or v710:'^e' then '(',v710^d,if v710
+:'^d' and v710:'^f' then |;|v710^f  else v710^f fi,if v710:'^e' and (v710:'^f' o
+r v710:'^d') then |;|v710^e else v710^e fi,')' fi fi/),,,,,,,,,,,,,
+'\par \b бхд йнккейрхбю/лепнопхърхъ\b0 :  ',v900^a'\par -------------}'

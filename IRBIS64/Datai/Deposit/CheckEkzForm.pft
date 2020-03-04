@@ -1,0 +1,51 @@
+/*---g9 - инвентарь-ШК
+/*---g10 - MFN записи
+ if p(v1)
+ then 
+   &uf('+7W9#',,,&uf('G0@',v1) ),,,&uf('+7W10#',,,&uf('G2@',v1) ),,,&uf('+7W10#',,&uf('G2_',,g10) ),,,,,,
+/*----инвентарь
+   '1-',,
+   if val(&uf('J,IN=',g9))=0 then g9 else 
+   ref(val(g10),
+              if s((|!|v910^b|!|)): s('!',&uf('Ag9#1'),'!') 
+             then 
+                &uf('Ag9#1') 
+             else 
+                (if p(v910) then if v910^h=&uf('Ag9#1') then v910^b, break fi fi) 
+             fi 
+       ),,,
+    fi,,////
+/*----штрих-код
+   '2-',,
+   ref(val(g10),
+              if s((|!|v910^h|!|)): s('!',&uf('Ag9#1'),'!') 
+              then 
+                 &uf('Ag9#1') 
+              else 
+                 (if p(v910)then if v910^b=&uf('Ag9#1') then v910^h, break fi fi) 
+              fi 
+        ),,,////
+/*----статус
+   '3-',,&uf('+7W5#'),,
+   &uf('+7U5#',,,,  
+   ref(val(g10),
+                 (if p(v910)then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^A, fi fi/) 
+        ) ),,g5+|, |,,////
+/*----место хранения, вариант нескольких одинаковых ИН
+   '4-',,&uf('+7W5#'),,
+   &uf('+7U5#',,,,  
+   ref(val(g10),
+                 (if p(v910)then if v910^D<>'' then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^D fi fi fi/) 
+        ) ),,,g5+|, |,,///
+/*----MFN
+   '5-',,
+   ref(val(g10),,f(val(mfn),0,0),,),,,////
+/*----КСУ
+   '6-',,
+   ref(val(g10),
+                 (if p(v910)then if v910^b=&uf('Ag9#1') or v910^h=&uf('Ag9#1') then v910^U, break fi fi) 
+        ),,,////
+/*----если _ то есть запись по ИН/ШК
+   '7-',,
+   if v1: '_' then '0' else '1' fi///
+ fi

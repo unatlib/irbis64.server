@@ -1,0 +1,32 @@
+if g13<>'' then 
+&uf('+7W113#'),&uf('+7W113#'(v327/)),
+'<table>''<table cellpadding="0" cellspacing="0">',
+   (if p(g113) then 
+       if g113^r=&uf('Ag13#1') then 
+       '<tr><td>','<dd><dd><dd><dd>'
+          if &uf('Ag3#1'):s('+'g113^L'+') 
+          then 
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|g113^L,
+|');" target="_top">|,g113^L|.|,| |g113^m,'</a></div>',| (|g113^N| ед. хр.)|
+          else g113^L|.|,| |g113^m,| (|g113^N| ед. хр.)&nbsp &nbsp|,
+          fi
+          if val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIsso='&uf('Av903#1')'_'g113^L))>0 
+          then 
+             &uf('+7W33#'f(val(&uf('J',&uf('IPRIVATE,EKP,GUAR'),',IIsso='&uf('Av903#1')'_'g113^L)),0,0)),'&nbsp'
+             '<A HREF="IRBIS:2,,'&uf('IPRIVATE,EKP,GUAR')',briefK_wn,IIsso='&uf('+3E'&uf('Av903#1'))'_'g113^L,
+             '?TOPPFTNAME=BOTTOM_gua_sso_WN&BOTTOMPFTNAME=BOTTOM_gua_sso_WN">',
+             if &uf('7,?IIsso='&uf('Av903#1'),|_|g113^L|?,v903|)<>'' then  '(введено в ЭК: ',&uf('Ag33#1'),' ед. хр.)'
+                &uf('7,?IIsso='&uf('Av903#1'),|_|g113^L|?,&nbsp|) fi,'</A>','</td>'
+          else '  (в ЭК не введено) &nbsp','</td>',
+          fi 
+       '</td></tr>',
+       '<tr><td>'
+'<div id="',g113^L'" style="display:none">',
+|<div style="{cursor=hand;color=blue;text-decoration=underline;font-size : 16px;}"> <a onclick="javascript:DropDown('|g113^L
+|');" target="_top">|,'</a></div>'
+          if &uf('Ag3#1'):s('+'g113^L'+') then &uf('+7W14#'),&uf('+7W14#'g113^L),&uf('6div14_sso') fi,
+        '</td></tr>'
+    fi fi),
+'</table>'
+fi 
+/*&uf('+7W13#'),&uf('+7W113#'),

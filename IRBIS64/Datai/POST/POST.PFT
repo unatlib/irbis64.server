@@ -1,0 +1,14 @@
+'{'
+if val(v110^b)=0 then v110^b else 
+   if &unifor("Kvdu.mnu|"v110^b)<>''then &unifor("Kvdu.mnu|"v110^b) else v110^d 
+fi fi,'\par \b 'v591,'\b0 ',
+if a(v591)then '\b '
+   if v200:'^a' then v200^a else v200 fi,'\b0 '
+fi,|. |v923^h,|: |v923^i,|. |v923^k,|: |v923^l," - Б.м"n210^a,
+(|. - |v210^a,|: |v210^c,),". - Б.г"n210^d,". - "v210^d,"-"v210^e,
+". - ISSN "v11^a,". -"d110^x,". - Периодичность "v110^x,". -"v300,
+"\par \b Индекс \b0 "v86" \b по каталогу \b0 ",v36^a,"РП"n36^a,
+(if p(v340)then |\par \b На |d340,if a(v340^d)then 'год' else &uf('K33.mnu|..../'v340^d*5)fi,'\b0  ',|заказано |v340^b| компл.|,| - цена |v340^a| р.|,fi/)
+
+"\par \b Заглавие для заказа:\b0   "v591
+'}'

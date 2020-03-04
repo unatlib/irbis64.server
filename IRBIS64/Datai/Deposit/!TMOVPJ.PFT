@@ -1,0 +1,18 @@
+mhl,
+(if '***'='510' then v***^d else 
+    if '***'='923' then v923^i,|. |v923^l else 
+       if '***'='461' then v461^c,|^F|v461^b,|^C|v461^j,
+          if a(v461^j)then |^C|d11^a,&unifor(|Av11^a#1|d461) fi 
+       else 
+          if '***'='225' then v225^a,|^F|v225^f,|^C|v225^x, else 
+             if '***'='463' or '***'='330' or '***'='922' or '***'='481' or '***'='488' or 
+                '***'='470'then v***^c,| |n***^c else 
+                if '***'='9251'then v925^a else 
+                   if '***'='9252'then v925^b else 
+                      if '***'='9253'then v925^c else 
+                         if '***'='4611'then v461^a else 
+                            if '***'='200' then v200^a,|^B|v210^e,|^F|v710^a,|^C|v11^a,
+                               |^D|v903 else v***^a 
+ fi fi fi fi fi fi fi fi fi fi,
+ if '***'='541'then v*** fi/)
+

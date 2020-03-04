@@ -1,0 +1,6 @@
+&uf('6enter0_cee')
+if v999='1' 
+    then '<br><b><font style="color: #FF0000">Посещение зафиксировано',". "g1100,'</font></b><br>' 
+    else '<br><b><font style="color: #FF0000">Посещение НЕ зафиксировано!</font></b><br>'
+fi 
+&uf('6rdrw_html_dolg'),

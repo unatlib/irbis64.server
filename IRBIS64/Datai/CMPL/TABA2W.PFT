@@ -1,0 +1,358 @@
+'\trowd \trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx6445\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx7797 
+\pard\plain \widctlpar\intbl \f0\fs20\lang1049 \cell 
+\pard \widctlpar\intbl {\b\fs24 }{'
+ref(l("SKK="v36^a,"SKK=РП"n36^a),v97^c) 
+'}\par  
+\pard \widctlpar\intbl {\b\fs16 АБОНЕМЕНТ }{\b\fs24 на }{'
+if &unifor('Krksvd.mnu|'v110^b.2)<>''then &unifor('Krksvd.mnu|'v110^b.2) else 'издание' fi
+'\cell} 
+\pard \qc\widctlpar\intbl {'
+&unifor('Av86#1')
+'}{\cell}
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7797 \clbrdrb\brdrs\brdrw15 
+\pard \widctlpar\intbl \f0\fs20\lang1049 {\fs16 \cell '
+v591.45,if v591*45=''then else'-'fi,if a(v591)then v200^a.45,if v200^a*45=''then else'-'fi fi
+'\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx6445\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx7277\clbrdrt\brdrs\brdrw15 
+\cellx7798 
+\pard \widctlpar\intbl \cell 
+\pard \ql\widctlpar\intbl {\fs16 '
+if v591*45='' and v200^a*45 ='' then '  (наименование издания)' else v591*45.29,if v591*74=''then else'-'fi,if a(v591) then v200^a*45.29,if v200^a*74=''then else'-'fi fi fi
+'\cell }
+\pard \widctlpar\intbl {\fs16 количество}{\cell }
+{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx6445\clbrdrb\brdrs\brdrw15 
+\cellx7277\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7798 
+\pard \widctlpar\intbl {\cell }
+\pard \widctlpar\intbl {\fs16 '
+v591*74.29,if v591*103=''then else'...'fi,if a(v591) then v200^a*74.29,if v200^a*103=''then else'...'fi fi
+'}{\cell }
+{\fs16 комплектов}{\cell }
+\pard \qc\widctlpar\intbl {'
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then f(val(v39^c' 0'),2,0) fi fi)else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b)
+ or s(v991)=''then f(val(v39^c' 0'),2,0) fi fi fi
+'\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7797 
+\pard \widctlpar\intbl \cell 
+\pard \qc\widctlpar\intbl {\fs18 на }{'
+&unifor('Av33.4#1')
+'}{  год   по месяцам }{\f25\fs24\lang1033 :\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4158\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4488\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4818\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5148\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5478\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5808\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6138\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6468\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6798\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7128\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7458\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7788 
+\pard \widctlpar\intbl {\fs16 \cell }
+\pard \qc\widctlpar\intbl {\fs16 1\cell 2\cell 3\cell 4\cell 5\cell 6\cell 7\cell 8\cell 9\cell 10\cell 11\cell 12\cell }
+\pard \widctlpar\intbl {\fs16 \row }
+\pard \widctlpar\intbl {\fs16 \cell }'
+if &unifor('Av33*5#1')='0'then'\pard \qc\widctlpar\intbl {\fs16 x\cell x\cell 
+x\cell x\cell x\cell x\cell x\cell x\cell x\cell x\cell x\cell x\cell }'fi,
+if &unifor('Av33*5#1')='1'then'\pard \qc\widctlpar\intbl {\fs16 x\cell x\cell 
+x\cell x\cell x\cell x\cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='2'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell x\cell x\cell x\cell x\cell x\cell x\cell }'fi,
+if &unifor('Av33*5#1')='1-1'then'\pard \qc\widctlpar\intbl {\fs16 x\cell 
+x\cell x\cell \cell \cell \cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-2'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell x\cell x\cell x\cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-3'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell x\cell x\cell x\cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-4'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell \cell \cell \cell x\cell x\cell x\cell }'fi,
+if p(v33) and '0 1 2 1-1 1-2 1-3 1-4':&unifor('Av33*5#1')then else if v33:
+'P'then '\pard \qc\widctlpar\intbl {\fs16 ',
+if s(&unifor('V'v33*7)):'1'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'2'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'3'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'4'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'5'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'6'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'7'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'8'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'9'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'10'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'11'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'12'then'x'fi,'\cell }',
+ else'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell \cell \cell \cell \cell \cell \cell }'fi,fi,
+'
+\pard \widctlpar\intbl {\fs16 \row }
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4402\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx5096\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7797 
+\pard \widctlpar\intbl \cell 
+\pard \qc\widctlpar\intbl {\fs18 Куда}{\cell }
+\pard \qc\widctlpar\intbl {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l('z='v39^b),v6^a) fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l('z='v39^b),v6^a) fi fi fi
+'}{\cell }
+\pard \qc\widctlpar\intbl {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l('z='v39^b),v6^b) fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l('z='v39^b),v6^b) fi fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 
+\cellx7797 \clbrdrt\brdrs\brdrw15 
+\pard \widctlpar\intbl \cell 
+\pard \qc\widctlpar\intbl {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l('z='v39^b),v6^c)fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l('z='v39^b),v6^c) fi fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 
+\clbrdrb\brdrs\brdrw15 
+\cellx7797 
+\pard \ql\widctlpar\intbl \cell {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b)," Кому  "v6^d)fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l(|z=|v39^b)," Кому  "v6^d) fi fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\pard \widctlpar\intbl \cell 
+\pard \ql\widctlpar\intbl {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b),v6^e)fi fi)else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l(|z=|v39^b),v6^e) fi fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-80\trkeep 
+\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx7796 
+\pard \widctlpar\intbl {\cell \cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4477\clbrdrr\brdrs\brdrw15 
+\cellx4962\clbrdrr\brdrs\brdrw15 
+\cellx5245
+\cellx7798 
+\pard \widctlpar\intbl {\cell \cell \cell }
+\pard \qc\widctlpar\intbl {\cell }
+{\b\fs16 ДОСТАВОЧНАЯ КАРТОЧКА}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4477\clbrdrr\brdrs\brdrw15 
+\cellx4962\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx5245
+\cellx6096\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7799 
+\pard \widctlpar\intbl {\cell \cell \cell }
+\pard \qc\widctlpar\intbl {\fs16 ли}{\cell }
+\pard \widctlpar\intbl {\fs16 на '
+if &unifor('Krksvd.mnu|'v110^b.2)<>''then &unifor('Krksvd.mnu|'v110^b.2) else 'издание' fi
+'}{\cell}
+\pard \qc\widctlpar\intbl {\fs16 '
+&unifor('Av86#1')
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4477\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4962\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx5245
+\cellx7798 
+\pard \widctlpar\intbl {\cell }
+\pard \qc\widctlpar\intbl 
+{\fs16 ПВ}{\cell }
+{\fs16 место}{\cell }
+{\fs16 тер}{\cell }
+\pard \qr\widctlpar\intbl {\fs16 (индекс издания)}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 
+\cellx7796 
+\pard \intbl \cell 
+\pard \ql\widctlpar\intbl {\fs16 '
+v591.45,if v591*45=''then else'-'fi,
+if a(v591)then v200^a.45,if v200^a*45=''then else'-'fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 
+\cellx7796 
+\pard \widctlpar\intbl {\f25\fs16\lang1033 \cell }
+\pard \ql\widctlpar\intbl {\fs16 '
+if v591*90=''then v591*45.45 else v591*45.40'...'fi,
+if a(v591)then if v200^a*90=''then v200^a*45.45 else v200^a*45.40'...'fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-80\trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 
+\cellx7796 
+\pard \widctlpar\intbl {\cell \cell }
+\pard \widctlpar\intbl \row 
+\trowd \trkeep 
+\cellx3828\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4395\clbrdrb\brdrs\brdrw15 
+\cellx5244\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx6804\clbrdrt\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx7298\clbrdrt\brdrs\brdrw15 
+\cellx7792 
+\pard \widctlpar\intbl {\cell }
+\pard \qc\widctlpar\intbl {\fs16 Стоимость}{\cell }
+\pard \qc\widctlpar\intbl {\fs16 по каталогу}{\cell }
+\pard \qc\widctlpar\intbl {\fs16 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then f((val(v39^c' 0')*(val(&unifor('Av34#1')' 0'))),0,2),&unifor('Korg.mnu|3')fi fi) else 
+if p(v39^b) then if &unifor('Q'v991^b)=&unifor('Q'v39^b) or s(v991)=''then 
+f((val(v39^c' 0')*(val(&unifor('Av34#1')' 0'))),0,2)'р.' fi fi fi
+'}{\cell }
+\pard \qc\widctlpar\intbl {\fs16 Кол.}{\cell }
+\pard \widctlpar\intbl {\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-400\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx4395\clbrdrb\brdrs\brdrw15 
+\cellx5245\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx6804\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx7300\clbrdrb\brdrs\brdrw15 
+\cellx7796 
+\pard \widctlpar\intbl {\cell }
+\pard \widctlpar\intbl {\cell }
+\pard \widctlpar\intbl {\fs16\qc за\par }
+\pard \qc\widctlpar\intbl {\fs16\qc доставку}{\cell }
+\pard \qc\widctlpar\intbl {\fs16 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then f((val(v39^c' 0')*(val(v39^e,if v39^e=''then &unifor('Av24#1')fi,' 0'))),0,2),if p(v24)or v39^e<>''then &unifor('Korg.mnu|3')fi fi fi) else 
+if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) or s(v991)=''then 
+f((val(v39^c' 0')*(val(v39^e,if v39^e=''then &unifor('Av24#1')fi,' 0'))),0,2),if p(v24)or v39^e<>''then &unifor('Korg.mnu|3')fi fi fi fi
+'}{\cell }
+\pard \qc\widctlpar\intbl {\fs16 комп.}{\cell }
+\pard \qc\widctlpar\intbl {'
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then f(val(v39^c' 0'),0,0) fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then f(val(v39^c' 0'),0,0) fi fi fi
+'\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7796 
+\pard \widctlpar\intbl {\cell }
+\pard \qc\widctlpar\intbl {\fs18  на }{'
+&unifor('Av33.4#1')
+'}{  год   по месяцам}{\f25\fs24\lang1033 :\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\cellx3828\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4158\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4488\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx4818\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5148\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5478\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx5808\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6138\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6468\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx6798\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7128\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7458\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7788 
+\pard \widctlpar\intbl {\f25\fs16\lang1033 \cell }
+\pard \qc\widctlpar\intbl {\fs16 1\cell 2\cell 3\cell 4\cell 5\cell 6\cell 7\cell 8\cell 9\cell 10\cell 11\cell 12\cell }
+\pard \widctlpar\intbl {\fs16 \row }
+\pard \widctlpar\intbl {\f25\fs16\lang1033 \cell }'
+if &unifor('Av33*5#1')='0'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+г\cell о\cell д\cell о\cell в\cell а\cell я\cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1'then'\pard \qc\widctlpar\intbl {\fs16 x\cell x\cell 
+x\cell x\cell x\cell x\cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='2'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell x\cell x\cell x\cell x\cell x\cell x\cell }'fi,
+if &unifor('Av33*5#1')='1-1'then'\pard \qc\widctlpar\intbl {\fs16 x\cell 
+x\cell x\cell \cell \cell \cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-2'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell x\cell x\cell x\cell \cell \cell \cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-3'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell x\cell x\cell x\cell \cell \cell \cell }'fi,
+if &unifor('Av33*5#1')='1-4'then'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell \cell \cell \cell x\cell x\cell x\cell }'fi,
+if p(v33) and '0 1 2 1-1 1-2 1-3 1-4':&unifor('Av33*5#1')then else if v33:
+'P'then '\pard \qc\widctlpar\intbl {\fs16 ',
+if s(&unifor('V'v33*7)):'1'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'2'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'3'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'4'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'5'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'6'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'7'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'8'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'9'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'10'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'11'then'x'fi,'\cell ',
+if s(&unifor('V'v33*7)):'12'then'x'fi,'\cell }',
+ else'\pard \qc\widctlpar\intbl {\fs16 \cell \cell 
+\cell \cell \cell \cell \cell \cell \cell \cell \cell \cell }'fi,fi,
+'
+\pard \widctlpar\intbl {\fs16 \row }
+\trowd \trrh-240\trkeep 
+\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx993\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cellx2127\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 
+\cellx7797 
+\pard \qc\widctlpar\intbl Куда{\cell }
+\pard \qc\widctlpar\intbl '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b),v7^a) fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l(|z=|v39^b),v7^a) fi fi fi
+'{\cell }
+\pard \qc\widctlpar\intbl '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b),v7^b) fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l(|z=|v39^b),v7^b) fi fi fi
+'{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\clbrdrb\brdrs\brdrw15 
+\cellx7796 \clbrdrb\brdrs\brdrw15 
+\pard \qc\widctlpar\intbl {\fs18 '
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b),v7^c)fi fi) else if p(v39^b)then if &unifor('Q'v991^b)=&unifor('Q'v39^b) 
+or s(v991)=''then ref(l(|z=|v39^b),v7^c) fi fi fi
+'}{\cell }
+\pard \widctlpar\intbl \row 
+\trowd \trrh-240\trkeep 
+\clbrdrb\brdrs\brdrw15 
+\cellx7797 \pard \ql\widctlpar\intbl {'
+if rsum((|1;|d39^b))>1 then (if p(v39) then if &unifor('Q'&unifor('Av991^b#1'))=&unifor('Q'v39^b) 
+then ref(l(|z=|v39^b),"    Кому  "v7^d) fi fi) else if p(v39^b)then 
+if &unifor('Q'v991^b)=&unifor('Q'v39^b) or s(v991)=''then ref(l(|z=|v39^b),"    Кому  "v7^d) fi fi fi
+'}
+{\cell }\pard \widctlpar\intbl \row 
+\pard \widctlpar \par 
+'

@@ -1,0 +1,8 @@
+if &uf('Av910^u#1')=&uf('Ag991#1') then 
+   &uf('+7G3'&uf('+7W3#'(if p(v910) then if v910^u=&uf('Ag991#1') then v910^d fi fi/))),
+   &uf('+7W4#'f(rsum((if p(g3) then '1;' fi)),0,0)),
+   &uf('+7W5#'f(rsum((|1;|d675,|1;|d621,|1;|d686)),0,0)),
+   &uf('+7W22#'
+         f(val(g5)*(rsum('1;',(if p(g3) then if &uf('KMhr_TirajS.mnu\'g3)<>'' then &uf('KMhr_TirajS.mnu\'g3)';'fi fi/))),0,0)),
+   g22
+fi,

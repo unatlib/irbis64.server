@@ -1,0 +1,200 @@
+mhl,ref(mfn,
+if p(v922) then &unifor('S0'),
+   (if p(v922) then 
+       if &unifor('S1A')='1'then 
+          if &unifor('Av922^u#1')=''then 
+             if &unifor('Av922^f#1')<>''then 
+                if (p(v700) and &unifor('Av922^f#1'):v700^a and 
+                   (&unifor('Av922^f#1'):v700^b or &unifor('Av922^f#1'):v700^g or s(v700^b,v700^g)='') and 
+                    p(v701) and &unifor('Av922^2#1')<>''and 
+                   (&unifor('Av701^g#1')=''and &unifor('Av701^b#1')='' or &unifor('Av922^2#1'):&unifor('Av701^g#1') or 
+                   &unifor('Av922^2#1'):&unifor('Av701^b#1')) and &unifor('Av701#2')<>''and &unifor('Av922^3#1')<>''and
+                   (&unifor('Av701^g#2')=''and &unifor('Av701^b#2')='' or &unifor('Av922^3#1'):&unifor('Av701^g#2') or 
+                    &unifor('Av922^3#1'):&unifor('Av701^b#2'))) 
+                or (p(v700) and &unifor('Av922^f#1'):v700^a and 
+                   (s(v700^b,v700^g)=''or &unifor('Av922^f#1'):v700^g or &unifor('Av922^f#1'):v700^b) and 
+                   p(v701) and &unifor('Av922^2#1')<>''and 
+                   (&unifor('Av701^g#1')=''and &unifor('Av701^b#1')=''or &unifor('Av922^2#1'):&unifor('Av701^g#1') or 
+                   &unifor('Av922^2#1'):&unifor('Av701^b#1')) and &unifor('Av701#2')='' and &unifor('Av922^3#1')='') 
+                or (p(v700) and &unifor('Av922^f#1'):v700^a and 
+                   (s(v700^b,v700^g)=''or &unifor('Av922^f#1'):v700^g or &unifor('Av922^f#1'):v700^b) and a(v701) and 
+                   &unifor('Av922^2#1')='' and &unifor('Av922^3#1')='')
+                then 
+                   if &unifor('Av922^c#1')<>''then' ; '&unifor('Av922^c#1') fi," = "d922^d,
+                      &unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1')," = "d922^r,&unifor('Av922^r#1')," : "d922^e,
+                      &unifor('Av922^e#1'),", "d922^h,&unifor('Av922^h#1')," : "d922^i,&unifor('Av922^i#1'),", "d922^k,
+                      &unifor('Av922^k#1')," : "d922^l,&unifor('Av922^l#1'),
+                   if &unifor('Av922^g#1')<>''then' / ' &unifor('Av922^g#1') fi 
+                else 
+                   if s(v700v970v701)<>''then' / '
+                      if p(v700^9)then v700^a," "v700^d," "v700^b,
+                         if a(v700^b)then" "v700^g fi else v700^b" ",if a(v700^b)then v700^g" " fi,v700^a," "v700^d 
+                      fi,", "d970,
+                      if p(v700^9)then v970^a," "v970^b else v970^b,v970^a fi,if p(v700)then", "d701 fi,
+                      if &unifor('Av701#1')<>''then 
+                         if &unifor('Av701^9#1')<>''then &unifor('Av701^a#1'),
+                            if &unifor('Av701^d#1')<>''then' '&unifor('Av701^d#1') fi,
+                            if &unifor('Av701^b#1')<>''then' '&unifor('Av701^b#1') else 
+                               if &unifor('Av701^g#1')<>''then' '&unifor('Av701^g#1') 
+                            fi fi 
+                         else 
+                            if &unifor('Av701^b#1')<>''then' '&unifor('Av701^b#1') else 
+                               if &unifor('Av701^g#1')<>''then' '&unifor('Av701^g#1') 
+                            fi fi,&unifor('Av701^a#1'),
+                            if &unifor('Av701^d#1')<>''then' '&unifor('Av701^d#1') 
+                      fi fi fi,
+                      if &unifor('Av701#2')<>''then 
+                         if &unifor('Av701^9#2')<>''then ', '&unifor('Av701^a#2'),
+                            if &unifor('Av701^d#2')<>''then' '&unifor('Av701^d#2') fi,
+                            if &unifor('Av701^b#2')<>''then' '&unifor('Av701^b#2') else 
+                               if &unifor('Av701^g#2')<>''then' '&unifor('Av701^g#2') fi fi 
+                         else 
+                            if &unifor('Av701^b#2')<>''then', '&unifor('Av701^b#2') else 
+                               if &unifor('Av701^g#2')<>''then', '&unifor('Av701^g#2') 
+                            fi fi,&unifor('Av701^a#2'),
+                            if &unifor('Av701^d#2')<>''then' '&unifor('Av701^d#2') 
+                      fi fi fi,
+                      if &unifor('Av701#3')<>''then 
+                         if &unifor('Av701^9#3')<>''then ', '&unifor('Av701^a#3'),
+                            if &unifor('Av701^d#3')<>''then' '&unifor('Av701^d#3') fi,
+                            if &unifor('Av701^b#3')<>''then' '&unifor('Av701^b#3') else 
+                               if &unifor('Av701^g#3')<>''then' '&unifor('Av701^g#3') 
+                            fi fi 
+                         else 
+                            if &unifor('Av701^b#3')<>''then', '&unifor('Av701^b#3') else 
+                               if &unifor('Av701^g#3')<>''then', '&unifor('Av701^g#3') 
+                            fi fi,&unifor('Av701^a#3'),
+                            if &unifor('Av701^d#3')<>''then' '&unifor('Av701^d#3') 
+                      fi fi fi,
+                      if &unifor('Av701#5')<>''then 
+                         if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' и др',"."d200^g else' et al'fi else 
+                         if &unifor('Av701#4')<>''then 
+                            if &unifor('Av701^9#4')<>''then ', '&unifor('Av701^a#4'),
+                               if &unifor('Av701^d#4')<>''then' '&unifor('Av701^d#4') fi,
+                               if &unifor('Av701^b#4')<>''then' '&unifor('Av701^b#4') else 
+                                  if &unifor('Av701^g#4')<>''then' '&unifor('Av701^g#4') 
+                               fi fi else 
+                               if &unifor('Av701^b#4')<>''then', '&unifor('Av701^b#4') else 
+                                  if &unifor('Av701^g#4')<>''then', '&unifor('Av701^g#4') 
+                               fi fi,&unifor('Av701^a#4'),
+                               if &unifor('Av701^d#4')<>''then' '&unifor('Av701^d#4') 
+                      fi fi fi fi,
+                   fi,
+                   if &unifor('Av922^c#1')<>''then'. '&unifor('Av922^c#1') fi," = "d922^d,&unifor('Av922^d#1'),
+                      " = "d922^p,&unifor('Av922^p#1')," = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'),
+                      ", "d922^h,&unifor('Av922^h#1')," : "d922^i,&unifor('Av922^i#1'),", "d922^k,&unifor('Av922^k#1'),
+                      " : "d922^l,&unifor('Av922^l#1'),
+                   if &unifor('Av922^g#1')<>''then' / '&unifor('Av922^g#1') else' / '&unifor('Av922^f#1'),
+                      if &unifor('Av922^2#1')<>''then', '&unifor('Av922^2#1') fi,
+                      if &unifor('Av922^3#1')<>''then', '&unifor('Av922^3#1') fi,
+                   fi 
+                fi  
+             else 
+                if s(v700v970v701)<>''then' / '
+                   if p(v700^9)then v700^a," "v700^d," "v700^b,
+                      if a(v700^b)then" "v700^g fi 
+                   else v700^b" ",
+                      if a(v700^b)then v700^g" " fi,v700^a," "v700^d 
+                   fi,", "d970,
+                   if p(v700^9)then v970^a," "v970^b else v970^b,v970^a fi,if p(v700)then", "d701 fi,
+                   if &unifor('Av701#5')<>''then &unifor('S0'),
+                      (if p(v701) then 
+                          if val(&unifor('S1A'))>3 then else 
+                             if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b,if a(v701^b)then| |v701^g fi else|, |+v701^b| |,
+                                if a(v701^b)then|, |+v701^g| | fi,v701^a,| |v701^d 
+                      fi fi fi),
+                      if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' и др',"."d200^g else ' et al',"."d200^g fi else 
+                      (if p(v701^9)then|, |+v701^a,| |v701^d,| |v701^b,if a(v701^b)then| |v701^g fi else|, |+v701^b| |,
+                          if a(v701^b)then|, |+v701^g| | fi,v701^a,| |v701^d fi) 
+                fi fi,
+                if &unifor('Av922^c#1')<>''then'. '&unifor('Av922^c#1')," = "d922^d,&unifor('Av922^d#1'),
+                           " = "d922^p,&unifor('Av922^p#1')," = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'),
+                           ", "d922^h,&unifor('Av922^h#1')," : "d922^i,&unifor('Av922^i#1'),", "d922^k,&unifor('Av922^k#1'),
+                           " : "d922^l,&unifor('Av922^l#1'),
+                   if &unifor('Av922^g#1')<>''then' / '&unifor('Av922^g#1') 
+             fi fi fi,
+             if &unifor('Av922#2')<>''then '. 'fi 
+          else 
+             if &unifor('Av922^f#'&unifor('Av922^u*3#1')):v700^a and 
+                   (s(v700^b,v700^g)=''or &unifor('Av922^f#'&unifor('Av922^u*3#1')):v700^b or 
+                    &unifor('Av922^f#'&unifor('Av922^u*3#1')):v700^g) 
+             then   
+                if &unifor('Av922^c#1')<>''then' ; ',&unifor('Av922^c#1') fi,
+                      " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1')," = "d922^r,&unifor('Av922^r#1'),
+                      " : "d922^e,&unifor('Av922^e#1'),", "d922^h,&unifor('Av922^h#1')," : "d922^i,&unifor('Av922^i#1'),
+                      ", "d922^k,&unifor('Av922^k#1')," : "d922^l,&unifor('Av922^l#1'),
+                if &unifor('Av922^g#1')<>''then' / '&unifor('Av922^g#1') fi,' ; '
+             else 
+                if s(v700v970v701)<>''then' / '
+                   if p(v700^9)then v700^a," "v700^d," "v700^b,if a(v700^b)then" "v700^g fi else v700^b" ",
+                      if a(v700^b)then v700^g" " fi,v700^a," "v700^d fi,", "d970,
+                   if p(v700^9)then v970^a," "v970^b else v970^b,v970^a fi,if p(v700)then", "d701 fi,
+                   if &unifor('Av701#1')<>''then 
+                      if &unifor('Av701^9#1')<>''then &unifor('Av701^a#1'),
+                         if &unifor('Av701^d#1')<>''then' '&unifor('Av701^d#1') fi,
+                         if &unifor('Av701^b#1')<>''then' '&unifor('Av701^b#1') else 
+                            if &unifor('Av701^g#1')<>''then' '&unifor('Av701^g#1') 
+                         fi fi else 
+                         if &unifor('Av701^b#1')<>''then' '&unifor('Av701^b#1') else 
+                            if &unifor('Av701^g#1')<>''then' '&unifor('Av701^g#1') fi fi,&unifor('Av701^a#1'),
+                         if &unifor('Av701^d#1')<>''then' '&unifor('Av701^d#1') 
+                   fi fi fi,
+                   if &unifor('Av701#2')<>''then 
+                      if &unifor('Av701^9#2')<>''then ', '&unifor('Av701^a#2'),
+                         if &unifor('Av701^d#2')<>''then' '&unifor('Av701^d#2') fi,
+                         if &unifor('Av701^b#2')<>''then' '&unifor('Av701^b#2') else 
+                            if &unifor('Av701^g#2')<>''then' '&unifor('Av701^g#2') fi fi else 
+                         if &unifor('Av701^b#2')<>''then', '&unifor('Av701^b#2') else 
+                            if &unifor('Av701^g#2')<>''then', '&unifor('Av701^g#2') fi fi,&unifor('Av701^a#2'),
+                         if &unifor('Av701^d#2')<>''then' '&unifor('Av701^d#2') 
+                   fi fi fi,
+                   if &unifor('Av701#3')<>''then 
+                      if &unifor('Av701^9#3')<>''then ', '&unifor('Av701^a#3'),
+                         if &unifor('Av701^d#3')<>''then' '&unifor('Av701^d#3') fi,
+                         if &unifor('Av701^b#3')<>''then' '&unifor('Av701^b#3') else 
+                            if &unifor('Av701^g#3')<>''then' '&unifor('Av701^g#3') fi fi else 
+                         if &unifor('Av701^b#3')<>''then', '&unifor('Av701^b#3') else 
+                            if &unifor('Av701^g#3')<>''then', '&unifor('Av701^g#3') fi fi,&unifor('Av701^a#3'),
+                         if &unifor('Av701^d#3')<>''then' '&unifor('Av701^d#3') 
+                   fi fi fi,
+                   if &unifor('Av701#5')<>''then 
+                      if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' и др',"."d200^g else' et al'fi else 
+                      if &unifor('Av701#4')<>''then 
+                         if &unifor('Av701^9#4')<>''then ', '&unifor('Av701^a#4'),
+                            if &unifor('Av701^d#4')<>''then' '&unifor('Av701^d#4') fi,
+                            if &unifor('Av701^b#4')<>''then' '&unifor('Av701^b#4') else 
+                               if &unifor('Av701^g#4')<>''then' '&unifor('Av701^g#4') fi fi else 
+                            if &unifor('Av701^b#4')<>''then', '&unifor('Av701^b#4') else 
+                               if &unifor('Av701^g#4')<>''then', '&unifor('Av701^g#4') fi fi,&unifor('Av701^a#4'),
+                            if &unifor('Av701^d#4')<>''then' '&unifor('Av701^d#4') 
+                   fi fi fi fi 
+                fi,
+                if &unifor('Av922^c#1')<>''then'. ',&unifor('Av922^c#1')," = "d922^d,&unifor('Av922^d#1'),
+                      " = "d922^p,&unifor('Av922^p#1')," = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'),
+                      ", "d922^h,&unifor('Av922^h#1')," : "d922^i,&unifor('Av922^i#1'),", "d922^k,&unifor('Av922^k#1'),
+                      " : "d922^l,&unifor('Av922^l#1'),if &unifor('Av922^g#1')<>''then' / '&unifor('Av922^g#1') fi 
+                fi,
+                if &unifor('Av922#2')<>''then ' ; 'fi 
+             fi 
+          fi 
+      
+       fi
+    else 
+       if v123^x:'0'then ". - 1 : "|, 1 : |+v123^d,| ; 1 : |v123^e,v123^f fi,
+          v922^c,| = |v922^d,| = |v922^p,| = |v922^r,| : |v922^e,|, |v922^h,| : |v922^i,|, |v922^k,| : |v922^l, 
+       if s(v922^f,v922^g)<>''then' / '
+          if v922^g:&unifor('G0 'v922^f) or v922^g:&unifor('G0,'v922^f) or a(v922^f) then v922^g else 
+             if p(v922^f)then 
+                if p(v922^x) then v922^f,|, |v922^2,|, |v922^3 else 
+                   if v922^f:' 'then &unifor('G2 'v922^f)' ',
+                      if v922^f:','then &unifor('G0,'v922^f) else &unifor('G0 'v922^f) fi else v922^f fi,|, |d922^2,
+                   if v922^2:' 'then &unifor('G2 'v922^2)' ',
+                      if v922^2:','then &unifor('G0,'v922^2) else &unifor('G0 'v922^2) fi else v922^2 fi,|, |d922^3,
+                   if v922^3:' 'then &unifor('G2 'v922^3)' ',
+                      if v922^3:','then &unifor('G0,'v922^3) else &unifor('G0 'v922^3) fi else v922^3 fi 
+                fi,| ; |v922^g 
+       fi fi fi,
+       if v123^x:'2'then | 1 : |v123^d,| ; 1 : |v123^e,v123^f,| : \b |v123^a*3|\b0 |,v123^b*3 fi,
+       if v922^u<>''then' ; 'else v922.1+|. | fi,
+   fi)
+fi)

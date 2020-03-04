@@ -1,0 +1,42 @@
+if s(v675,v621,v964,v686)<>'' then 
+   if s(v905^j)<>''or &unifor('IPRIVATE,FPN,')<>''then 
+      "<br> <b> √–Õ“» </b> "| + |+v964,"<br> <b> ”ƒ  </b0> "| + |+v675^*, 
+      "<br> <b> ¡¡  </b> "| + |+v621^*,"<br> "| + |+v686,'<br>'
+   else '<br>'
+      if p(v964)then 
+         if p(v675)then 
+         '<table width="100%">',
+         '<tr> <td><b> √–Õ“» </b><td width="50%"><b> ”ƒ  </b><td></td> </tr>'
+           (if s(v964,v675)<>'' then '<tr> <td>'v964,'<td width="50%">'v675^*'</td> </tr>' fi),
+            if p(v621)then'<tr><td width="50%"><td><b> ¡¡ </b></td> </tr>'
+               (|<tr><td><td>|v621^*|</td width="50%"></tr>|) fi,
+            if p(v686)then'<tr><td width="50%"><td><b> –”¡ </b> </td> </tr>'
+               (|<tr><td width="50%"><td>|v686|</td></tr>|) fi 
+         '</table>',
+         else 
+            if p(v621)then
+            '<table width="100%">',
+               '<tr> <td><b> √–Õ“» </b><td width="50%"><b> ¡¡  </b></td> </tr>'
+               (if s(v964,v621)<>'' then '<tr> <td>'v964,'<td width="50%">'v621^*'</td> </tr>' fi),
+               if p(v686)then'<tr><td width="50%"><td><b> –”¡</b></td></tr>'
+                 (|<tr><td width="50%"><td>|v686|</td></tr>|) fi 
+            '</table>',
+            else 
+               if p(v686)then
+               '<table width="100%">',
+                  '<tr> <td><b> √–Õ“» </b><td width="50%"><b> –”¡ </b></td> </tr>'
+                   (|<tr><td width="50%"><td>|v686|</td></tr>|) 
+               '</table>',
+               else"<b> √–Õ“» </b> "| + |+v964 '<br>'
+         fi fi fi 
+      else 
+         if p(v675) then
+         '<table width="100%">','<tr> <td width="50%"> <td> <b> ”ƒ  </b></td> </tr>',(|<tr><td width="50%"><td>|v675^*|</td></tr>|)
+         '</table>',fi, 
+         if p(v621) then
+         '<table width="100%">','<tr> <td width="50%"> <td> <b> ¡¡  </b></td> </tr>',(|<tr><td width="50%"><td>|v621^*|</td></tr>|)
+         '</table>',fi, 
+         if p(v686) then
+         '<table width="100%">','<tr> <td width="50%"><td><b> –”¡ </b></td> </tr>',(|<tr><td width="50%"><td>|v686|</td></tr>|)
+         '</table>',fi, 
+fi fi fi, 

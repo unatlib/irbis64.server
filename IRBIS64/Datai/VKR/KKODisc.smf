@@ -1,0 +1,14 @@
+[ROWQRY]
+&uf('+7W991#'v991),&uf('+7W1002#'),&uf('+7W1003#'),&uf('+7W2002#'),&uf('+7W1002#900'),&uf('+7W1003#'if p(g9999) then (g9999/) else if p(g991^d) then (if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Ag991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko5disc,fi/),
+[FLDTEXT]
+&uf('+7W991#'v991),&uf('+7W666#^Y'&uf('IPRIVATE,DBN,IBIS')),&uf('+7W101#'if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and  val(&unifor('34'))<9 then 'V' else 'O' fi),&uf('+7W1002#'),&uf('+7W1003#'),&uf('+7W2002#'),&uf('+7W1002#900'),&uf('+7W1003#'if p(g9999) then (g9999/) else if p(g991^d) then (if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Ag991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko6disc,fi/),
+[FLDMODE1001]
+&uf('+7W101#'if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or &unifor('IPRIVATE,DATFINOS,')='' and  val(&unifor('34'))<9 then 'V' else 'O' fi),&uf('+7W991#'v991),&uf('+7W1002#'),&uf('+7W1003#'),&uf('+7W2002#'),&uf('+7W1002#900'),&uf('+7W1003#'if p(g9999) then (g9999/) else if p(g991^d) then (if val(&uf('Ag1002#1'))>0 then &uf('+5T'&uf('Ag991^d#1')),&uf('+7W1002#'f(val(&uf('Ag1002#1'))-1,0,0)) fi/) else (&uf('+5TDISC.mnu')/) fi fi),(if G1003<>'' then,KKO_kko6Mdisc,fi/)
+[FLDSUM]
+if v699^u:'0' or (v900^t:'L' or p(v230)) and v910='' then '0' else &uf('6kko_n_all')fi,/
+if v699^u:'0' or (v900^t:'L' or p(v230)) and v910='' then '0' else &uf('6kko_ex_all') fi/
+if p(g991^!) then else &uf('6kko_ex_f') fi/,
+if p(g991^!) then else &uf('6kko_kk_f') fi/,
+if p(g991^!) then else if v900^t:'L' and v910=''or p(v230) and v910='' then '1'else '0' fi fi,/
+if p(g991^!) then else &uf('6kko_n_f') fi/,
+if v699^u:'0' or (v900^t:'L' or p(v230)) and v910='' then '0' else &uf('6kko_kk_all') fi

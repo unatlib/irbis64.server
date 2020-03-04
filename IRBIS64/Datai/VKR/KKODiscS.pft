@@ -1,0 +1,26 @@
+&uf('+1W1001#'),&uf('+7W1001#^F'v1^f,'^I'v1^i,if p(v991^o) then'^O'&uf('Av991^o#1')fi),&uf('+7W991#'),if p(v991) then &uf('+7W991#',v991) fi,
+&uf('+7W2001#'),&uf('+7U2001#',&unifor('7',&uf('IPrivate,DBN,IBIS'),if &uf('IPrivate,DBN,IBIS')='' then 'IBIS' fi,',?DF='g1001^i,'-S'g1001^f,'?,@DiscnP_vl')/),
+&uf('+7W2002#'),&uf('+7W2002#'if g991^o<>'' then (if g2001:'^!' then g2001 fi/)else (g2001/) fi)/
+&uf('+7W2012#'),&uf('S0'),&uf('+7W2012#'(if p(g2002) then if val(&uf('S1A'))>30 then '^A€€€...' else g2002 fi fi/)),
+&uf('+7W2013#'),&uf('S0'),&uf('+7W2013#'(if p(g2002) then if val(&uf('S1A'))>30 then '^A€€€...',|^B|g2002^b,|^C|g200^c,|^D|g2002^d,|^E|g2002^e else g2002 fi fi/)),
+&uf('+7W2014#'),if g2013^A:'€€€...' then &uf('+7W2014#','^A'f(rsum((if g2013^A:'€€€...' then '1;' fi)),0,0),'^B'f(rsum((if g2013^A:'€€€...' then g2013^b';' fi)),0,0),'^C'f(rsum((if g2013^A:'€€€...' then g2013^c';' fi)),0,0),'^D'f(rsum((if g2013^A:'€€€...' then g2013^d';' fi)),0,0),'^E'f(rsum((if g2013^A:'€€€...' then g2013^e';' fi)),0,0)) fi,
+&uf('+7G2012'),&uf('+7T2012'),
+if p(g2012) then &uf('+7U2012#^A\qr »“ќ√ќ:  ^B'&uf('G0.'v5),
+if val(v2)<>val(v5) then '\par (с кми-'&uf('G0.'v2)')'fi,
+if p(v6) then '\par (+экз.общ.польз.-'&uf('G0.'v6),if val(v6)<> val(v7) then '(' &uf('G0.'v7),')' fi')'fi, 
+'^D'if val(v3)>0 and val(v4)>0 then f(val(v3)/val(v4),0,2) fi) fi,&uf('S0'),
+(if p(g2012) then 
+'\trowd \trqc\trgaph108\trleft-108\fs18'
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx675'
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6345 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7479 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8613 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9747 '
+'\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx10881 ',
+'\pard \widctlpar\intbl {\qc 'if g2012^a:'итого' then else '\qr '&uf('S1A') fi,
+'\cell }\pard \ql\widctlpar\intbl {'if g2012^a:'€€€...'then g2012^A*3,' (' &uf('Ag2014^A#1') ' названий)' else g2012^A fi
+'\cell }\pard \qr\widctlpar\intbl {'if g2012^a:'€€€...'then &uf('Ag2014^B#1') else g2012^B fi
+'\cell }\pard \qr\widctlpar\intbl {'if g2012^a:'€€€...'then &uf('Ag2014^E#1') else g2012^E fi
+'\cell }\pard \qr\widctlpar\intbl {'if g2012^a:'€€€...'then &uf('Ag2014^C#1') else g2012^C fi
+'\cell }\pard \qr\widctlpar\intbl {'if g2012^a:'€€€...'then &uf('Ag2014^D#1') else g2012^D fi
+'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' fi/)

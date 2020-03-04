@@ -1,0 +1,27 @@
+if v920: 'ODER' 
+then 
+   if v100<>'' and v30^A<>'' 
+   then 
+      if L("Qabc="v100," - "v30^a)<=0 or 
+         val(ref(L("qabc="v100," - "v30^a),mfn))=val(mfn) 
+      then '0' 
+      else 
+         /'1Дублетный заказ флк:    ',"qabc="v100,"- "v30^a,ref(l("qabc="v100," - "v30^a),' (см. N ',f(val(mfn),0,0),')') 
+      fi,, 
+   fi,,
+   if &uf('Av942^A#',&uf('+N942'))='M4' and v902='' 
+   then
+      /'1Для заказа в другой библиотеки не задан фондодержатель ',,
+   fi,,,
+fi,,,,,,
+if v920:'AB' 
+then 
+   if v100='' then /'1Отсутствует номер абонента ' fi,,
+   if L("AB="v100)<=0 or val(ref(L("AB="v100),mfn))=val(mfn) 
+   then '0' 
+   else 
+      /'1Дублетный абонент: дубл    ',"AB="v100,ref(l("AB="v100,),' (см. N ',f(val(mfn),0,0),')') 
+   FI 
+FI,,
+
+

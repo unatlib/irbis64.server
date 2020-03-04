@@ -1,0 +1,95 @@
+/* v1001 - текст для поиска
+/* v1002 - результат поиска
+/* v1003 - количество отобранных
+/* v1006 - порция
+
+'<script language="JavaScript">',
+
+'function IfEmpty()',
+'{',
+'if (SEARCH.S21STR.value == "") return false;',
+'return true;',
+'}',
+
+'</script>',
+
+'<b>',
+if p(v1001) then 
+    '<title>',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,': Фрагмент на основе поиска ',mhu,v1001,mpl,'</title>', 
+    
+
+'<TABLE>',
+'<TR><TD>',
+'Выделение фрагмента ',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,' по ключевым словам',
+'</TR></TD>',
+'<TR><TD>',
+
+'<form action="IRBIS:" name="SEARCH" enctype="Multipart/form-data" method="GET">',
+
+'<input type="hidden" NAME="C21COM" value="2">',
+/*'<input type="hidden" NAME=I21DBN value="RSUDC">',
+'<input type="hidden" name="PFTNAME" value="ref0_wn">',
+'<input type="hidden" name="TOPPFTNAME" value="udctop_wn">',
+'<input type="hidden" name="S21P02" value="1">',
+'<input type="hidden" name="S21P03" value="K=">',
+'<input type="text" name="S21STR" size="50" value="',v1001,'" onkeydown="if  ((this.value.length!=0) && (event.keyCode==13)) SEARCH.submit()">',
+'<input type="hidden" name="S21STN" value="1">',
+'<input type="hidden" name="S21CNR" value="100">',
+
+'</TD>',
+
+'<TD>',
+'<input type="submit" name="1111" value="Поиск" onclick="return IfEmpty()">',
+'</TD>',
+
+'</TR>',
+
+
+'<tr>',
+'<td>Логика : ',
+'<select name="S21LOG">',
+'<option value="0">ИЛИ    </option>',
+'<option value="1" selected="">И    </option>',
+'<option value="2">ФРАЗА ЦЕЛИКОМ  </option>',
+'</select>',
+'</td>',
+'</tr>',
+
+'<tr>',
+'<td>Окончания слов : ',
+'<input type="radio" name="S21P01" value="3" checked="checked">',
+'не учитывать /   <input type="radio" name="S21P01" value="1">учитывать',
+'</td>',
+'</tr>',
+'</form>',
+'</TABLE>',
+
+'<br>'
+'<hr>'
+
+'<TABLE BORDER=0>',
+'<TR>',
+
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" NAME="C21COM" value="5">',
+/*'<input type="hidden" NAME=I21DBN value="RSUDC">',
+'<input type="hidden" name="PFTNAME" value="udcselect_wn">',
+'<TD>',
+'<input type="submit" name="1111" value="Отобранные">',
+'</TD></TR>',
+'</form>',
+'</TABLE>',
+'<hr>'
+
+
+    
+    if val(v1002)>0 then 
+    'Фрагмент ',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi," - на основе поискового выражения: "v1001"<br>",if val(v1002)>val(v1006) then "(Представлены первые "v1006" элементов)<br>" fi,
+    else 'Фрагмент ',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,' не найден<br>' fi,
+else 
+    '<title>',if &uf('+D') : 'RSUDC' then 'УДК' else 'ББК' fi,': Отобранные элементы</title>', 
+    if val(v1003)>0 then
+    'Отобранные элементы:<br>',if val(v1003)>val(v1006) then "(Представлены первые "v1006" элементов)<br>" fi,
+    else 'Нет отобранных элементов' fi,
+fi,
+'</b>'

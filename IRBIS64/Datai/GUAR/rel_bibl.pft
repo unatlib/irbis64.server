@@ -1,0 +1,72 @@
+mhl,
+'@@',
+if v920:'fond' then 
+   if &uf('J,IIopis='v903)<>'' then 'Основная: ФОНД. Связанные: Описи фонда' fi,
+   if s(&uf('J,IIdelo='v903),&uf('J,IIguar='v903))<>'' then '==Дела/документы фонда' fi,
+else 
+   if v920:'opis' then 
+      if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 'Основная: ОПИСЬ. Связанные: Фонд' fi,
+      if s(&uf('J,IIdelo='v903),&uf('J,IIguar='v903))<>'' then '==Дела/документы Описи' fi,
+      if val(&uf('J,IIopis='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>1 then '==Другие описи того же Фонда' fi,
+   else 
+      if v920:'delo' then 
+         if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 'Основная: ДЕЛО. Связанные: Фонд' fi,
+         if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then '==Опись' fi,
+         if &uf('J,IIguar='v903)<>'' then '==Документы Дела' fi,
+         if val(&uf('J,IIdelo='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>1 then '==Другие Дела той же Описи' fi,
+      else 
+         if v920:'guar' then 
+            if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 'Основная: ДОКУМЕНТ. Связанные: Фонд' fi,
+            if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then '==Опись' fi,
+            if val(&uf('J,I='(if p(v488) then if v488^1:'дело' then v488^t fi fi)))>0 then '==Дело' fi,
+            if &uf('J,IIList='v903)<>'' then '==Листы Документа' fi,
+            if val(&uf('J,IIguar='(if p(v488) then if v488^1:'дело' then v488^t fi fi)))>1 then '==Другие Документы того же Дела' fi,
+         else 
+            if v920:'list' then 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 'Основная: ЛИСТ. Связанные: Фонд' fi,
+               if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then '==Опись' fi, 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'дело' then v488^t fi fi)))>0 then '==Дело' fi,
+               if val(&uf('J,I='(if p(v488) then if v488^1:'документ' then v488^t fi fi)))>0 then '==Документ' fi,
+               if val(&uf('J,IIList='(if p(v488) then if v488^1:'документ' then v488^t fi fi)))>1 then '==Другие листы того же Документа' fi,
+fi fi fi fi fi        
+'@@'
+if v920:'fond' then 
+   if &uf('J,IIopis='v903)<>'' then |"IIopis=|v903|" + |  fi 
+   if s(&uf('J,IIdelo='v903),&uf('J,IIguar='v903))<>'' then |"IIdelo=|v903|" + |,|"IIguar=|v903|" + | fi 
+else 
+   if v920:'opis' then 
+      if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 
+        (if p(v488) then if v488^1:'фонд' then |"I=|v488^t|" + |, fi fi) fi 
+      if s(&uf('J,IIdelo='v903),&uf('J,IIguar='v903))<>'' then |"IIdelo=|v903|" + |,|"IIguar=|v903|" + | fi 
+      if val(&uf('J,IIopis='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>1 then 
+         (if p(v488) then if v488^1:'фонд' then |"IIopis=|v488^t|" + |, fi fi) fi 
+   else 
+      if v920:'delo' then 
+         if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 
+            (if p(v488) then if v488^1:'фонд' then |"I=|v488^t|" + |, fi fi) fi 
+         if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then 
+            (if p(v488) then if v488^1:'опись' then |"I=|v488^t|" + |, fi fi) fi 
+         if &uf('J,IIguar='v903)<>''  then |"IIguar=|v903|" + | fi 
+         if val(&uf('J,IIdelo='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>1  then 
+            (if p(v488) then if v488^1:'опись' then |"IIdelo=|v488^t|" + | fi fi) fi 
+      else 
+         if v920:'guar' then 
+            if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 
+               (if p(v488) then if v488^1:'фонд' then |"I=|v488^t|" + |, fi fi) fi 
+            if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then 
+               (if p(v488) then if v488^1:'опись' then |"I=|v488^t|" + |, fi fi) fi 
+            if val(&uf('J,IIguar='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>1 then 
+               (if p(v488) then if v488^1:'опись' then |"IIguar=|v488^t|" + | fi fi) fi 
+            if &uf('J,IIList='v903)<>'' then |"IIList=|v903|" + | fi 
+         else 
+            if v920:'list' then 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'фонд' then v488^t fi fi)))>0 then 
+                  (if p(v488) then if v488^1:'фонд' then |"I=|v488^t|" + |, fi fi) fi 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'опись' then v488^t fi fi)))>0 then 
+                  (if p(v488) then if v488^1:'опись' then |"I=|v488^t|" + |, fi fi) fi 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'дело' then v488^t fi fi)))>0 then 
+                  (if p(v488) then if v488^1:'дело' then |"I=|v488^t|" + |, fi fi) fi 
+               if val(&uf('J,I='(if p(v488) then if v488^1:'документ' then v488^t fi fi)))>0 then 
+                  (if p(v488) then if v488^1:'документ' then |"I=|v488^t|" + |, fi fi) fi 
+fi fi fi fi fi 
+

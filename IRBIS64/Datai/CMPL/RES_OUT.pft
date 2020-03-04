@@ -1,0 +1,91 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx700 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3000 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5200 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7100 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8600 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10100 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10900 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12100 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13500 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14850 
+\pard \widctlpar\intbl {\ql \fs24 ''##'
+'
+\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,,
+/*   Название ресурса
+v881^T,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/*    Исполнитель
+v881^D,,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/*   № и дата заключения контракта
+"№ "v882^N,,' от ',v882^D*6.2'.',v882^D*4.2,'.',v882^D.4
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/*   Начало доступа
+v882^E,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/*   Конец доступа
+v882^F,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*   Кол-во БД
+v881^I,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*  Кол-во документов
+v881^E,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/*   Сумма контракта
+v881^G,,
+'\cell }
+\pard \widctlpar\intbl {\ql \fs22 ',,
+/* Примечание
+''
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

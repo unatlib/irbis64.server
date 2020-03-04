@@ -1,0 +1,22 @@
+if p(v951) and (&uf('IMAIN,FULLTEXTABLE,1')='1') then'\par См. ссылк',
+   if rsum((if s(v951^i,v951^a)<>''then'1;'else'0;'fi))>1 then'и:   'else'у 'fi,
+   (if p(v951)  and a(v951^N) then |,  |+d951,
+/*       if p(v951^a) then ' ',v951^t,| ФАЙЛ|n951^t fi,
+       if p(v951^a) then &unifor('+I$3,10,,'v951^a'$',v951^t,| ФАЙЛ|n951^t) fi 
+       if p(v951^i) then &unifor('+I$0,,'v951^i'$',v951^t,| INTERNET|n951^t) fi fi) 
+   (if v951^N<>'' then '\par ' if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  &unifor('+I$?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'$',if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi), fi fi),
+fi,
+(if p(v19)then if v19^a:'DOI'then If &uf('Av951#1')<>''then', 'fi,&unifor('+I$0,,http://dx.doi.org/'v19^b'$',|Переход по DOI|d19^b) fi fi)
+,(if p(v600) then 
+    if p(v600^w) then '\par '
+       if v600^w:'VS' then else 
+          '\f0 '&unifor(|+I?1,,,,I=|v600^w|?ЗАПИСЬ из ЭК, "связанная" с текущей |),' \\о произв.\\' 
+ fi fi fi),
+if val(&unifor('J,I600='v903))>0 
+then '\par \f0 ' &unifor('+I?2,,,,I600='v903'?Есть запись "о произведении"') fi,     
+
+"\par \b Учебная литература: \b0 "d691,
+(|\par |d691,v691^a,| / |v691^b,| / |v691^c,| / |v691^d,| / |v691^e,| / |v691^f,| / |v691^g),
+("\par \b Держатели документа: \b0 "|\par |v902^a,| : |v902^b),
+if a(v902) then if v920:'ASP' then ref(l("I="v463^w),("<br> <b> Держатели документа: </b> "|<br> |v902^a,| : |v902^b)) fi fi 
+if s(,odfp,)<>'' then '\par ',odfp, fi,

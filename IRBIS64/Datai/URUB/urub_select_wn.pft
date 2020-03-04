@@ -1,0 +1,34 @@
+/* В глобальной переменной 1 - переключатель: пусто - показывать СМОТРИ СМОТРИ ТАКЖЕ; не пусто - не показывать
+/* В глобальной переменной 2 - переключатель: пусто - не показывать ВЫШЕСТОЯЩИЙ; не пусто - показывать
+/* В глобальной переменной 3 - переключатель: пусто - показывать ТЕРМИН как ссылку; не пусто - не показывать
+'<body bgcolor="#ffffcc">'
+'<title>Тезаурус: Отмеченные дескрипторы</title>',
+&uf('+7W1101#',v1101),
+&uf('+7W1#1'),
+if a(v1004) then '<b>Нет отмеченных</b>' else '<b>Отмеченные дескрипторы:</b><br>',
+     (if p(v1004) then 
+     &uf('D,@',v1004^A,',@urub0_wn'),
+     fi),
+if v1101<>'1' then      
+'<form action="IRBIS:" enctype="Multipart/form-data" method="POST">',
+'<input type="hidden" NAME="C21COM" value="10">',
+'<input type="hidden" NAME="I21DBN" value="',v1102,'">',
+'<input type="hidden" name="PFTNAME" value="',v1100,'">',
+'<input type="hidden" name="BOTTOMPFTNAME" value="search_ICFT_bottom_wn">',
+'<input type="hidden" name="TOPPFTNAME" value="search_ICFT_bottom_wn">',
+'<input type="hidden" name="CHECKNAME" value="CHECKMFN">',
+'<input type="hidden" name="S21STR" value="*">',
+'<input type="hidden" name="S21P03" value="KT=">',
+'<input type="hidden" name="S21CNR" value="',v1103,'">',
+'<input type="hidden" name="CHECKPFT" value="check_IC_wn">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR2" value="',v1102,'">',
+'<input type="hidden" name="FREEPAR3" value="',v1103,'">',
+'<input type="hidden" name="FREEPAR5" value="',v1105,'">',
+'<input type="submit" name="1111" value="Поиск по отмеченным">',
+'</form>',
+fi,              
+fi,
+&uf('+7W1#'),
+

@@ -1,0 +1,4 @@
+if p(v920)then if 'PAZK PVK SPEC ':v920 or &unifor('K920.mnu|'v920)<>''then 
+'0'else '1 Ошибка: Неверен код 'v920 fi else '1 Ошибка: Отсутствует Код рабоч
+его листа'fi
+

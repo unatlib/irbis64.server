@@ -1,0 +1,64 @@
+'{',,,
+if v920:'VUZ' 
+then 
+  '\b ЗАПИСЬ типа ',
+  'Контингент \par  ',v68^a" - ",v68^n" - ",v68^c" - ",v68^v" - ",v68^o" - ",v68^f,," - "v68^H,,'\b0 '',,,\par  (Фак-Напр-Спец-ВО-ФО-Семестр-Вып.каф.)' 
+   if &uf('KFAK.mnu!',v68^A)<>'' then '\par \b Факультет: \b0 ',,&uf('KFAK.mnu!',v68^A)  fi,,,
+   if &uf('KVO.mnu!',v68^V)<>'' then '\par \b Вид обучения: \b0 ',,&uf('KVO.mnu!',v68^V)  fi,,,
+   if &uf('KFO.mnu!',v68^O)<>'' then '\par \b Форма обучения: \b0 ',,&uf('KFO.mnu!',v68^O)  fi,,,            
+   '\par -----------------------------\par '
+   "\b  Чит.кафедра - Дисц - Идентификатор\b0 "d69,
+   (if p(v69) then'\par 'v69^b' - ',if &uf('D,?IDD='v69^d,'?,v3^a')='' then v69^d else &uf('D,?IDD='v69^d,'?,v3^a') fi,' - ',,,if &uf('D,?IDD='v69^d,'?,v3^0')='' then v69^d else &uf('D,?IDD='v69^d,'?,v3^0') fi fi) 
+   ,,,,,,,,,,,,,
+   '\b \par   Студентов:  ',,,,,
+   if val(&uf('IMAIN,ACCESSRDR,1'))=0 then v68^z, else 
+      &uf('JRDR,?'v68^a,v68^n,v68^c,v68^v,v68^o,'-S',v68^f),,'\b0 '
+   fi,,,,,,,,,,,,
+   if val(&uf('J',if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,',!0=',v68^a,v68^n,v68^c,v68^v,v68^o,'-S'v68^f))>0 or 
+      val(&uf('J',if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,',!9=',v68^a,v68^n,v68^c,v68^v,v68^o,'-S'v68^f))>0 
+   then 
+      '\par \b   Используются учебников:  ',,,&uf('+7W10#'),,
+      if s('0 1 3 5 7 9 11 '): s(v68^F,' ') 
+      then 
+&uf('+7W10#',&uf('7',,,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,,,',?!0=',v68^a,v68^n,v68^c,v68^v,v68^o,'-S'v68^f,'?,mfn/')),,,
+         f(rsum((if p(g10) then '1,' fi)),0,0)
+      else ,,,,
+         if s('2 4 6 8 10 12 '): s(v68^F,' ') 
+         then 
+&uf('+7W10#',&uf('7',,,if &unifor('IPRIVATE,DBN,')<>'' then &unifor('IPRIVATE,DBN,') else 'IBIS' fi,,,,',?!9=',v68^a,v68^n,v68^c,v68^v,v68^o,'-S'v68^f,'?,mfn/')),,,
+            f(rsum((if p(g10) then '1,' fi)),0,0)
+      fi fi,,,
+      '\par \b0 ',,,,,,,,,,
+   fi,,,
+else 
+if v920:'FAK' then 
+   if &uf('Kfak.mnu!'v93)<>'' then &uf('Kfak.mnu!'v93),"\b  ("v93")" else "Факультет \b ",v93 fi,"\b0 "d93,
+   "  Форма обучения "d98,mhu,"\b "v98"\b0 ",mpl,
+   "\par \b Кафедры: \b0 "d5,&uf('MI5'),(if p(v5) then '\par '&uf('Kkafch.mnu!'v5),|\b (|v5|)\b0 | fi) 
+else 
+if v920:'WPD' then 
+/*----------РП
+   '\b0 Рабочая программы \b ',,v3,," ("v110") \b0 ",,". Версия "v205,
+   if v83<>'' then '\par  По дисциплине: ',,&uf('D,!IDD=',,v83,,'!,v3^A'),,fi,,
+   if s(v5,v6)<>'' then '\par \b0 Разработана: \b ',,v5"\b0 (кафедра)",,if v5<>'' and v6<>'' then ', \b' fi,,,,v6"\b0 (факультат)" fi,,,
+   "\par \b0 Разработчики: "d701,,,(if p(v701) then if val(&uf('+90'))>1 then '; ' fi,,v701^A,| |v701^B,,|, |v701^D,,|, |v701^G fi),,,   
+   "\par \b0 Ответственные лица: "d702,,,(if p(v702) then if val(&uf('+90'))>1 then '; ' fi,,v702^A,| |v702^B,,|, |v702^D,,|, |v702^G fi),,,
+   if v215<>'' then "\par \b0 Дата согласования: \b "d215,,v215*6.2,,'.',,v215*4.2,,'.',,v215.4,,fi,,
+   if v215<>'' then "\par \b0 Дата введения: \b "d210,,v210*6.2,,'.',,v210*4.2,,'.',,v210.4,,fi,,
+else 
+/*----------запись дисциплина
+   "Дисциплина \b "d3,v3^a,"\par \tab "v3^b," ("v3^0")","\b0 "d3,
+   if s(v3,v4,v5)<>''then'\par (',"Цикл "v4," Компонент " v6,"  Каф.читающая "v5,')'fi,
+   (if p(v83) 
+    then
+      '\par ',
+      |Филиал \b |v83^L|\b0 |,,, 
+      | Фак. \b |v83^A|\b0 | 
+      if val(&uf('IMAIN,LinkGroup,0'))=1 then | Группа: \b |v83^E|\b0 |,,,fi,,,
+      |, Напр.\b |v83^n|\b0 |,,,|, Спец./Профиль \b |v83^c|\b0 |,,
+      |, ВО:\b |v83^v|\b0 |,|, ФО:\b |v83^o|\b0 |,,
+      if val(&uf('IMAIN,LinkGroup,0'))=1 then | Группа: \b |v83^E|\b0 |,,,fi,
+      |,  Сем.\b |v83^f,|, вып.каф. |v83^H,,|\b0 |d83^f  
+  fi),
+fi fi fi,,,,,,,,,,
+'}'

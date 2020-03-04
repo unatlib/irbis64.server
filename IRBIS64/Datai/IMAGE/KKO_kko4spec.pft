@@ -1,0 +1,10 @@
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F1^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=1!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F2^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=2!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F3^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=3!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F4^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=4!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F5^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=5!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F6^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=6!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F7^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=7!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F8^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=8!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F9^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=9!,@numbsp') fi/
+if val(&uf('J,SPEC=',G1003))>0 then mpu ,'^F10^C',G1003 ,'^R',&uf('Kspec.mnu|',G1003),&uf('+7W2002#',G1003),'^N'&uf('S1A'),'^S',&unifor('7RDR,!SEM=10!,@numbsp') fi/

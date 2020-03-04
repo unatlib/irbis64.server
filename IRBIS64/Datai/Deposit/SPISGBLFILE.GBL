@@ -1,0 +1,187 @@
+0
+// Списание книг по инв.номерам
+// На входе записи книг, для которых выбраны инв.номера
+// v991^A - номер КСУ списания v991^B - номер акта передачи
+// v992^B - отмеченные инвентарные номера 
+// v992^D - место хранения, v992^M - новое место хранения 
+номера/штрих-коды
+// Списание книг со статусом С или U
+// На входе записи отмеченных книг,для которых указано кол-во списываемых экземпляров
+// v991^A - номер КСУ списания v991^B - номер акта передачи
+// Поле 992 формируется для повторения 910 поля,если задано кол-во списываемых экземпляров или
+// задано новое место хранения  v992^A-статус,v992^B - инвентарные номера 
+// v992^D - место хранения, v992^M - новое место хранения,v992^X - кол-во списанных экземпляров,v992^Z-кол-во переданных экземпляров 
+PUTLOG
+'На корректировку запись ',f(val(mfn),0,0)
+// Списание книг по инв.номерам/штрих-кодам
+// Списание книг для группового учета
+ADD
+1002
+XXXXXXXXXXXXXXXXXXX
+mpu,,(v992/)
+XXXXXXXXXXXXXXXXXXX
+REP
+991
+F
+mpu,(v991/),,,&uf('+7W10#')
+XXXXXXXXXXXXXXXXXXX
+//----------------------------------------цикл по значениям ИН/ШК, полю 1002
+REPEAT
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+1003
+XXXXXXXXXXXXXXXXXXX
+&uf('Av1002#1'),&uf('S0'),&uf('+7W8#0'),
+XXXXXXXXXXXXXXXXXXX
+IF
+if rsum((if p(v910)then if 'U C':v910^a then'1;'else'0;'fi fi/))>0 then '1'fi,
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------------статус U
+REP
+910^X
+F
+(if p(v910)then if p(v910^x) then if 'U C':v910^a and (v910^b=''and &uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and( v910^h=''and &uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1')) and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1')))and (v910^v=''or v910^v=&uf('Av991^A#1')) then f(val(v910^x,' 0')+1,0,0),&uf('+7W7#1'),&uf('+7W8#1'),,BREAK, else v910^x fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^X
+F
+(if p(v910)then if (v910^b=''and &uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and( v910^h=''and &uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1')) and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1')))and v910^v='' then if 'U C':v910^a  then if a(v910^x)then '1',&uf('+7W7#1'),&uf('+7W8#1'),BREAK, else # fi else # fi else # fi fi/),
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^V
+F
+(if p(v910)then if v910^v=''and 'C U':v910^a and v910^x<>'' then &uf('Av991^A#1') else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//----------------конец статус U
+REP
+910^A
+F
+&uf('+7W910#'),&uf('+7W7#1'),(if p(v910) then if ((&uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and (&uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1'))or s(&uf('Av1003^b#1'),&uf('Av1003^h#1'))='') and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1'))) and &uf('Ag8#1')='0' then if &uf('IMAIN,StatusNoSpis,'): v910^A  then  v910^A,,&uf('+7U10#',,v910^H,,if v910^H<>'' and v910^B<>'' then '-' fi,,v910^B,,' - не списан по статусу'),,,else  '6',&uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D ),&uf('+7W8#1'), fi  else v910^a  fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^V
+F
+(if p(v910)then if v910^a='6'and v910^v=''and ((&uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and (&uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1'))or s(&uf('Av1003^b#1'),&uf('Av1003^h#1'))='') and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1'))) then &uf('Av991^A#1'),&uf('+7U910#'v910) else # fi fi/),&uf('+7W3910#'(g910^b| |g910^d|,|))
+XXXXXXXXXXXXXXXXXXX
+IF
+if l("II="v903)>0 then '1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//-------------на запись статьи
+CORREC
+'*'
+(v910/)
+"II="v903
+
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if v1001:'^A7'then'^A7'fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------конец статьи
+DEL
+1002
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1003
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+UNTIL
+if p(v1002)then'1'else'0'fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//------------------конец цикла по 1002
+ADD
+940
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W940#'),&uf('+7W940#'(v940|; |)),(if p(v910)then if v910^v=&uf('Av991^A#1')then if &uf('Ag940#1'):v910 then else v910 fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910^1
+F
+(if p(v910) then if p(v910^1) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'U C':v910^A then,,,,,,,&uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D ),,,,,,,,,,,,,,, f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),,,else v910^1 fi,,else # fi,fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910)then if 'C U':v910^a then if v910^v=&uf('Av991^A#1') and (v910^1=v910^x or v910^1='0' or v910^1:'-') and a(v910^w)then'1'else'0'fi else'0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910
+F
+(if p(v910) then if 'U C':v910^a then if v910^1='' then '1' else '0' fi else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910^1
+F
+(if p(v910) then if v910^a:'C U' then if v910^v=&uf('Av991^A#1')then if v910^X<>'' then f(val(v910^1,' 0')-val(v910^x,' 0'),0,0) else v910^1  fi fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910^X
+F
+(if p(v910) then if p(v910^x)then if v910^v=&uf('Av991^A#1')then '1'else '0'fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+910^V
+F
+(if p(v910) then if p(v910^V)and 'C U':v910^a then if v910^v=&uf('Av991^A#1')then '1'else '0'fi else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+5555
+XXXXXXXXXXXXXXXXXXX
+if p(v910)then f(rsum((if p(v910)then if v910^a='6'or 'U C':v910^a and val(v910^1)=0 then '0;' else '1;'fi fi/)),0,0)else if p(v940)then '0'else'1'fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910
+XXXXXXXXXXXXXXXXXXX
+if val(v5555)>0 then else if v940:'^k'then (if p(v940) then if p(v940^k)then|^A7^K|v940^k,|^D|v940^d fi fi/)else'^A7'fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+5555
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// формирование протокола списания
+PUTLOG
+&uf('+7G10'),,(g10/)
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+992
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

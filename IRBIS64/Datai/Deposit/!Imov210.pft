@@ -1,0 +1,18 @@
+if '***'='210' then (v210^c,'^A'v210^a,'^X'v210^x,'^Y'v210^y,'^7',| |n210^c /)
+else 
+   (if p(v***) then &uf('+7W6#'),
+       if &uf('Av***^d#1')<>'' then 
+          &uf('+7W6#'),
+          &uf('+7U6#'if p(v***) then &uf('G0;'v***^d)/
+                        if v***^d:';' then 
+                           if &uf('G2;'v***^d):';' 
+                           then &uf('G0;'&uf('G2;'v***^d))/
+                                &uf('G0;'&uf('G2;'&uf('G2;'v***^d))) 
+                           else &uf('G2;'v***^d) 
+                     fi fi fi/),
+          v***^g,'^7',&uf('+7W7#'),
+          if &uf('Ag6#1')<>'' then '^A',&uf('+7W7#'&uf('Ag6#1')),&uf('6!imov210_vl') fi,
+          if &uf('Ag6#2')<>'' then '^X',&uf('+7W7#'&uf('Ag6#2')),&uf('6!imov210_vl') fi,
+          if &uf('Ag6#3')<>'' then '^Y',&uf('+7W7#'&uf('Ag6#3')),&uf('6!imov210_vl') fi,
+    fi fi/)
+fi

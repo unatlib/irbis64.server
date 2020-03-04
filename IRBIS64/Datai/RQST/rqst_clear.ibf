@@ -1,0 +1,4 @@
+OPENDB RQST
+GLOBAL c:\irbis64\datai\rqst\rqst_clear.gbl
+REORGMF
+LOADIFCOMPLETE

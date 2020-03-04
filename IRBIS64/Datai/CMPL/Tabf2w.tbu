@@ -1,0 +1,47 @@
+[Numeration]
+##
+[FormatCode]
+WIN
+*****
+[Sum]
+f(rsum((f(val(v30^d)+val(v31^d)+val(v32^d)+val(v62^d),0,0)/)),0,0),/
+f(rsum((f(val(v30^g)+val(v31^g)+val(v32^g)+val(v62^g|;|),0,0)/)),0,0),/
+f(rsum((if p(v910)then if p(v910^u) then if v910^u:&unifor('Av30^u#1')or v910^u:&unifor('Av30^u#2')or v910^u:&unifor('Av30^u#3')or v910^u:&unifor('Av31^u#1')or v910^u:&unifor('Av31^u#2')or v910^u:&unifor('Av31^u#3')or v910^u:&unifor('Av32^u#1')or v910^u:&unifor('Av32^u#2')or v910^u:&unifor('Av32^u#3') or p(v910^9) then if 'C U':v910^a then if p(v910^e)then f(val(v910^e|;|,' 0')*val(v910^1|;|,' 0'),0,2)else f(val(&unifor('Av10^d#1'),' 0')*val(v910^1|;|,' 0'),0,2)fi else if v910^a:'0'then if p(v910^e)then f(val(v910^e|;|,' 0'),0,2)else f(val(&unifor('Av10^d#1')';',' 0'),0,2)fi'0;'fi'0;'fi fi fi fi/)),0,2)/
+f(rsum((if p(v910)then if p(v910^u) then if v910^u:&unifor('Av30^u#1')or v910^u:&unifor('Av30^u#2')or v910^u:&unifor('Av30^u#3')or v910^u:&unifor('Av31^u#1')or v910^u:&unifor('Av31^u#2')or v910^u:&unifor('Av31^u#3')or v910^u:&unifor('Av32^u#1')or v910^u:&unifor('Av32^u#2')or v910^u:&unifor('Av32^u#3')or p(v910^9) then else if '0 C U':v910^a then if p(v910^1)then f(val(v910^1|;|,' 0'),0,0) else '1;'fi fi fi fi fi/)),0,0)/
+f(rsum((if p(v910)then if p(v910^u) then if v910^u:&unifor('Av30^u#1')or v910^u:&unifor('Av30^u#2')or v910^u:&unifor('Av30^u#3')or v910^u:&unifor('Av31^u#1')or v910^u:&unifor('Av31^u#2')or v910^u:&unifor('Av31^u#3')or v910^u:&unifor('Av32^u#1')or v910^u:&unifor('Av32^u#2')or v910^u:&unifor('Av32^u#3')or p(v910^9) then else if 'C U':v910^a then if p(v910^e)then f(val(v910^e|;|,' 0')*val(v910^1|;|,' 0'),0,2)else f(val(&unifor('Av10^d#1'),' 0')*val(v910^1|;|,' 0'),0,2)fi else if v910^a:'0'then if p(v910^e)then f(val(v910^e|;|,' 0'),0,2)else f(val(&unifor('Av10^d#1')';',' 0'),0,2)fi'0;'fi'0;'fi fi fi fi/)),0,2)/
+#
+'\trowd \trqc\trgaph108\trleft-108
+\cellx13479
+\pard \qr\widctlpar\intbl {\par Итого заказано: 'v1' экз.\par  Получено по заказам:  'v2' экз. на сумму 'if val(v3)>0 then f(val(v3),0,2),&unifor('Korg.mnu|3')fi'\par Получено без заказа : 'v4' экз. на сумму 'if val(v5)>0 then f(val(v5),0,2),&unifor('Korg.mnu|3')fi
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar'
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx580\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx4510\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx5541\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx7525\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx8376\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx9188\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx10506\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx12023\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx13479
+\pard \qc\widctlpar\intbl {\b N\par п/п\cell }
+\pard \qc\widctlpar\intbl {\b Автор, заглавие, место издания, издательство\cell }
+\pard \qc\widctlpar\intbl {\b Источник заказа\cell }
+\pard \qc\widctlpar\intbl {\b NN счета/акта\cell }
+\pard \qc\widctlpar\intbl {\b Заказано-экз.\cell }
+\pard \qc\widctlpar\intbl {\b Получено-экз.\cell }
+\pard \qc\widctlpar\intbl {\b Цена\cell }
+\pard \qc\widctlpar\intbl {\b NN записей КСУ\cell }
+\pard \qc\widctlpar\intbl {\b Инвентарные NN\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

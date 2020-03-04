@@ -1,0 +1,78 @@
+<SCRIPT language=JavaScript>
+	function DropDown1(id){
+	
+		div = document.getElementById(id);
+
+		if(div.style.display=="none") 
+		{
+			div.style.display="block";
+			form1.cb.checked=true;
+		}
+		else
+		{
+			div.style.display="none";
+			form1.cb.checked=false;
+			for(i=0; i<form1.cb_.length;i++) form1.cb_[i].checked=false;
+		}
+	}
+	function DropUp1(id){
+		div=document.getElementById(id);
+		if(div.style.display=="none") 
+		{
+			div.style.display="block";
+		}
+		else
+		{
+			div.style.display="none";
+		}
+	}
+</SCRIPT>
+<FORM name=form1 >
+<INPUT onclick="javascript:DropDown1('id1');" type=checkbox name=cb > Верхний уровень
+<DIV id=id1 style="DISPLAY: none; MARGIN-LEFT: 20px">
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<a href="#" onClick="javascript:DropUp1('id1');">закрыть</a>
+</DIV>
+</FORM>
+
+<SCRIPT language=JavaScript>
+function DropDown2(id){
+div = document.getElementById(id);
+if(div.style.display=="none") 
+{div.style.display="block"; form2.cb.checked=true;}
+else {div.style.display="none"; form2.cb.checked=false; for(i=0; i<form2.cb_.length;i++) form2.cb_[i].checked=false;}
+}
+function DropUp2(id){
+div=document.getElementById(id); if(div.style.display=="none") {div.style.display="block";}
+else {div.style.display="none";}
+}
+</SCRIPT>
+<FORM name=form2 >
+<INPUT onclick="javascript:DropDown2('id2');" type=checkbox name=cb > Верхний уровень
+<DIV id=id2 style="DISPLAY: none">
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 1<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 2<BR>
+<INPUT type=checkbox name=cb_>нижний уровень 3<BR>
+<a href="#" onClick="javascript:DropUp2('id2');">закрыть</a>
+</DIV>
+</FORM>

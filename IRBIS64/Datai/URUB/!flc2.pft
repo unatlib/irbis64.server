@@ -1,0 +1,2 @@
+if L("I="v2)<=0 or val(ref(l("I="v2),mfn))=val(mfn) then/'0' 
+else/'1Дублетный идентификатор термина: ',v2,ref(L("I="v2),' (см. N ',f(val(mfn),0,0),')')fi/                                                                        

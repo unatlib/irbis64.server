@@ -1,0 +1,20 @@
+mhl,
+(if '***'='4601'then v46^a else 
+    if '***'='4602' then v46^l else 
+       if '***'='510' then v***^d else 
+          if '***'='923' then v923^i,|. |v923^l else 
+             if '***'='461' or'***'='463' or'***'='330' or'***'='922' or'***'='392' or
+                '***'='470'then v***^c,| |n***^c else 
+                if '***'='481'then if v481^u:'1' then else v481^c,| |n***^c fi else 
+                   if '***'='488'then if v488^u:'1' then else v488^c,| |n***^c fi else 
+                      if '***'='9251'then v925^a else 
+                         if '***'='9252'then v925^b,| |n925^b else 
+                            if '***'='9253'then v925^c,| |n925^c else 
+                               if '***'='4611'then v461^a,| |n461^a else 
+                                  if '***'='541'then v*** else 
+                                     if '***'='600'or '***'='601'then v***^z else 
+                                        if '***'='9227' then v922^d,| |n922^d else 
+                                           if '***'='9228' then v922^p,| |n922^p else 
+                                              if '***'='9229' then v922^r,| |n922^r else 
+                                                 if '***'='3307' then v330^d,| |n330^d else v***^a 
+ fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi fi/)

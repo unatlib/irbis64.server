@@ -1,0 +1,104 @@
+if v1^M='' 
+then 
+/*-------------------заголовок
+  '\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9740 \pard \widctlpar\intbl {\qc \fs24 ',,,
+  if v1^E<>'' and v1^Q='' 
+  then 
+    '\b ',,
+    if G992<>'' 
+    then  
+      '\ql \b0 Всего экземпляров: ',,f(rsum((G992|,|)),0,0),,
+      if G995<>'' 
+      then 
+        '.   Студентов: ',,f(rsum((G995|,|)),0,0) 
+      fi,
+      '\par \b \qc ' 
+    fi,,,
+    if G995<>'' 
+    then  
+      &uf('+7W1000#',f(rsum((G995|,|)),0,0)),,,,,,,
+      if val(G1000)>0 
+      then
+        '\ql \b0 Экземпляры / Студенты: ',,f(rsum((G992|,|))/rsum((G995|,|)),0,2),,'\par \b \qc ' 
+      fi,,
+    fi,,,
+    if G993<>''  and G994<>'' 
+    then 
+      &uf('+7W1000#',f(rsum((G994|,|)),0,0)),,,,,,,,,,,,
+      if val(G1000)>0 
+      then 
+        '\ql \b0 ККО среднее по наименованию: ',,,,f(rsum((G993|,|))/rsum((G994|,|)),0,2),,,,'\par \b \qc ' 
+      fi,,
+    fi,,,
+    v1^E,'\b0 ',&uf('S0'),,&uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),
+  else 
+    if G992<>'' 
+    then  
+      '\ql \b0 Всего экземпляров: ',,f(rsum((G992|,|)),0,0),,
+      if G995<>'' 
+      then 
+        '.   Студентов: ',,f(rsum((G995|,|)),0,0) 
+      fi,
+      '\par \b \qc ' 
+    fi,,,
+    if G995<>'' 
+    then  
+      &uf('+7W1000#',f(rsum((G995|,|)),0,0)),,,,,,,,,,,,
+      if val(G1000)>0 
+      then 
+        '\ql \b0 Экземпляры / Студенты: ',,f(rsum((G992|,|))/rsum((G995|,|)),0,2),,'\par \b \qc ' 
+      fi,,
+    fi,,,
+    if G993<>''  and G994<>'' 
+    then 
+      &uf('+7W1000#',f(rsum((G994|,|)),0,0)),,,,,,,,,,
+      if val(G1000)>0 
+      then 
+        '\ql \b0 ККО среднее по наименованию: ',,,,f(rsum((G993|,|))/rsum((G994|,|)),0,2),,,,'\par \b0 \qc '
+      fi,,    fi,,,
+    if v1^Q<>'' 
+    then 
+      '\b0 ',v1^U": ",,'\b ' v1^Q '\b0 ' 
+    fi,
+    &uf('S0'), &uf('+7W992#'),&uf('+7W993#'),&uf('+7W994#'),&uf('+7W995#'),
+  fi,,,
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+/*-------------------запись 
+  '\trowd \trqc\trgaph108\trleft-108\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx550 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx5800 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx6700 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx7600 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx8690 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx9740 \pard \widctlpar\intbl {\ql \fs24 ',,,,
+  &uf('S1A'),,,
+  if s(ref(val(V1^M),v699)): '^U0' 
+  then 
+  else 
+    &uf('+7U994#1') 
+  fi,,,,
+  '\cell }\pard \widctlpar\intbl {\ql \fs24 ',,'{',,
+  if v1^P<>'' 
+  then 
+    v1^P 
+  else ,,,,
+    ref(val(V1^M),&uf('6Brief')) 
+  fi,,,'}',,,,,,
+  '\cell }\pard \widctlpar\intbl {\ql \fs24 ',,,
+  &uf('+7W991#',&uf('+97',v1)),,,,
+  ref(val(V1^M),,,
+              if a(G991^T) 
+              then 
+                (if p(v693) 
+                 then 
+                   if &uf('AG991^L#1')='' 
+                   then 
+                     if v693^L='' and v693^A='' and v693^X<>'!NOFOND' and v693^X<>'!NOZO' and v693^X<>'!COM' or 
+                        v693^L='' and v693^A='' and v693^X='!NOFOND' 
+                     then  
+                       v693^D,|(|v693^K|)|,,,&uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,
+                     fi 
+                   else 
+                     if &uf('AG991^L#1')=&uf('+97',v693^L) 
+                     then  
+                       v693^D,|(|v693^K|)|,,,&uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,
+                     fi 
+                   fi 
+                 fi/) 
+              else 
+                (if p(v693) then if v693^L='' and &uf('+97',v693^A)=&uf('AG991^T#1') then v693^D,|(|v693^K|)|,,,&uf('+7U992#',if v693^K<>'' then v693^K else v693^D fi),,,fi fi/) fi,,),,,,,,,,'\cell }\pard \widctlpar\intbl {\ql \fs24 ',,,,,ref(val(V1^M),,,,,,,if a(G991^T) then (if p(v693) then if &uf('AG991^L#1')='' then if v693^L='' and v693^A='' and v693^X<>'!NOFOND' and v693^X<>'!NOZO' and v693^X<>'!COM' or v693^L='' and v693^X='!NOFOND' then v693^E,,if v693^E<>'' then &uf('+7U995#',v693^E) fi,&uf('+7W997#',v693^E),fi else if &uf('AG991^L#1')=&uf('+97',v693^L) then v693^E,,if v693^E<>'' then &uf('+7U995#',v693^E) fi,&uf('+7W997#',v693^E),fi fi fi/) else  (if p(v693) then if v693^L='' and &uf('+97',v693^A)=&uf('AG991^T#1') then v693^E,,if v693^E<>'' then &uf('+7U995#',v693^E) fi,&uf('+7W997#',v693^E),fi fi/) fi,,),,,,,,,,'\cell }\pard \widctlpar\intbl {\ql \fs24 ',,,,,ref(val(v1^M),,,,,,,,,if a(G991^T) then (if p(v693) then if &uf('AG991^L#1')='' then if v693^L='' and v693^A='' and v693^X<>'!NOFOND' and v693^X<>'!NOZO' and v693^X<>'!COM' then v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F),,else if v693^L='' and v693^X='!NOFOND' then v693^N,,&uf('+7U993#',v693^N),,,&uf('+7W996#',v693^N),,fi fi else if &uf('AG991^L#1')=&uf('+97',v693^L) then  v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F),,fi fi fi/) else (if p(v693) then if v693^L='' and v693^A=&uf('AG991^T#1') then v693^F,,&uf('+7U993#',v693^F),,,&uf('+7W996#',v693^F),,fi fi/) fi,,,),,,'\cell }\pard \widctlpar\intbl {\ql \fs24 ',,,,if val(G996)<val(v1^K) then f((val(v1^K)-val(G996))*val(G997),0,0) fi,,,,,'\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' fi

@@ -1,0 +1,64 @@
+0
+//УДАЛЕНИЕ/ПЕРЕНОС из мастера списания
+// на входе 992
+// ^A - шифр записи БД каталога
+// ^B - признак удаления
+// ^C - признак переноса в БД CMPL
+REP
+992
+F
+mpu,(v992/)
+
+REPEAT
+IF
+if &uf('+97',v903)=&uf('Av992^A#1') then '1' fi
+IF
+if val(&uf('Av992^C#1'))=1 then '1' fi
+// запись на перенос в CMPL
+NEWMFN
+'CMPL'
+ALL
+// удаляем все повторения кроме ^A=7
+DEL
+910
+F
+(if v910^A: '7' then '0' else '1' fi/)
+
+DEL
+940
+*
+
+
+DEL
+1001
+*
+
+
+END
+PUTLOG
+'В БД CMPL новая запись с шифром ',,v903
+FI
+IF
+if val(&uf('Av992^B#1'))=1 then '1' fi
+// запись на удаление
+PUTLOG
+'Удалена запись каталога MFN=',f(val(mfn),0,0)
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+FI
+DEL
+992
+1
+
+
+UNTIL
+if p(v992) then '1' fi
+DEL
+992
+*
+
+

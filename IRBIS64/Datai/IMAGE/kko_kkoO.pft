@@ -1,0 +1,25 @@
+if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,')) or 
+   &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8  then 
+   &unifor('+7W1#'),&unifor('+7W6#'),&uf('+7W666#'), 
+ 
+   &unifor('+7W1#',
+      f(rsum((if p(v910^c) then 
+                 if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                    if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+              fi fi fi)),0,0)) 
+   if val(&unifor('IMAIN,ACCESSRDR,1'))=1 then 
+      &unifor('+7W666#',(if p(v691) then 
+                           if p(v691^0) then 
+                                 &unifor('7RDR,!UPS='v691^0,'!,mfn/')/ 
+                                 &unifor('7RDR,!?',v691^0,'!,mfn/')/ 
+                                 &unifor('7RDR,!',&unifor('G2*'v691^0),'!,mfn/')/ 
+                        fi fi/)),&uf('+7G666'),
+       &uf('+7W6#'f(rsum((if p(g666) then '1;'fi/)),0,0))                      
+   else 
+      &uf('+7W6#'f(rsum((if p(v691) then 
+                            if p(v691^0) then 
+                               &unifor('DVUZ,"!',v691^0,'",v68^Z')';' 
+                         fi fi)),0,0)), 
+   fi 
+   if val(g6)>0 then f(val(g1)/val(g6),0,2) else '-' fi 
+fi, 

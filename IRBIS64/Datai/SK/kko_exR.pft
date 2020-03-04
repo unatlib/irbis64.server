@@ -1,0 +1,47 @@
+/*&uf('+7W1001#^F1^Iнод.111'),
+&uf('+7W22#'),&uf('+7W33#'),&uf('+7W44#'),&uf('+7W55#'),
+ if p(g1001) then 
+   &uf('+7W20#',f(rsum((if p(v910) then if &uf('Pv910^t')<>'' then '1;' fi fi)),0,0)),
+   if g1001^o='' or g1001^o<>'' and v910^t=''then 
+      &uf('+7W22#'f(rsum(
+            (if p(v910) then 
+                if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi';')),0,0))   else 
+      if val(g20)=1 then 
+         if v910^t:g1001^o then 
+            &uf('+7W33#'f(rsum((if p(v910) then 
+                       if p(v910^t) and v910^t:&unifor('Ag1001^o#1') then 
+                          if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi fi';')),0,0)) 
+         else 
+            &uf('+7W44#'f(rsum((if p(v910) then 
+                      if a(v910^t) then 
+                         if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi fi';')),0,0))
+         fi 
+      else 
+         if val(g20)>1 then 
+            if v910^t:g1001^o then 
+               &uf('+7W33#'f(rsum((if p(v910) then 
+                         if p(v910^t) and v910^t:&unifor('Ag1001^o#1') then 
+                            if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi fi';')),0,0))
+               &uf('+7W55#'f(rsum((if p(v910) then 
+                         if a(v910^t) then 
+                            if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi fi';')),0,0))
+            else
+               &uf('+7W55#'f(rsum((if p(v910) then 
+                         if a(v910^t) then 
+                            if 'C 6 2 7':v910^a then else v910^1,|1|n910^1 fi fi fi';')),0,0))
+         fi fi 
+   fi fi 
+   if a(g20) then g22 else 
+      if val(g20)=1 then 
+         if p(g44) then g44 else 
+            if p(g33) then g33 else 
+               if p(g22) then g22 
+         fi fi fi 
+      else 
+         if val(g20)>1 then 
+            if p(g33) then g33 else 
+               if p(g55) then g55 else 
+                  if p(g22) then g22 
+   fi fi fi fi fi fi 
+fi
+/*/'22: 'g22/'33: 'g33/'44: 'g44/'55: 'g55/'20: 'g20/'1001: 'g1001/

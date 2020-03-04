@@ -1,0 +1,4 @@
+if v601^z<>'' then if rsum((if p(v601) then if p(v601^z) then if s(v601^a,v601^p)<>'' then '0;' else '1;' fi fi fi))>0 then 
+/'1 Поле с ^Z должно содержать ^A или ^P (коллектив)' else /'0' fi fi 
+(if p(v601) then if p(v601^z) and a(v601^() then /'1 не введен "Тип заглавия"'  else /'0' fi fi/)
+(if p(v601) then if S(v601^z,v601^a,v601^p)=''then /'1 не введена персоналия/рубрика'  else /'0' fi fi/)

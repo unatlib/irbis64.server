@@ -1,0 +1,14 @@
+/*16
+if v920: 'DISC' 
+then 
+  if p(v3^0) 
+  then 
+    if L('IDD='v3^0)<=0 or val(ref(l('IDD='v3^0),mfn))=val(mfn) 
+    then/'0'
+    else 
+      /'1Дублетный идентификатор дисциплины:   ',v3^0,                                  ref(L('IDD='v3^0),' (см. N ',f(val(mfn),0,0),')') 
+    fi 
+  else 
+     /'2 Не введен идентификатор' 
+  fi 
+fi/ 

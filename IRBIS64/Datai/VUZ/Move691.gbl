@@ -1,0 +1,161 @@
+2
+Перенос отмеченных контингенов в записи каталога. Выполнить?
+
+if val(&uf('IMAIN,ReaderMode,0'))=0 then 'Move691.wss' else 'MoveZak.wss' fi
+  ВВЕДИТЕ данные переноса
+//12 PUTLOG
+// 6.2 перенос из записи VUZ данных в запись каталога 691 и запись комплектования
+// переносимые строки в 991, в 992^1 признак осн/доп, в 992^3 - признак по рабочей пр-ме, 992^4 - автор заявки
+// при совпадении основных подполей - частичная замена подполей
+//15 v992^2=1 задает перенос в поле 694,  перенос дата-MV-логин
+DEL
+112
+*
+
+
+ADD
+112
+
+(if p(v991) then v991,,,if &unifor('Av991^I#1')<>'' then '^D',,&uf('DVUZ,?IDD=',&unifor('Av991^I#1'),'?,v3^A') fi,,,if &uf('Av992^1#1')<>'' then '^G',&uf('Av992^1#1') fi,,if val(&uf('Av992^3#1'))>0 then '^51', fi,,if val(&uf('Av992^2#1'))=1 then if &uf('Av992^4#1')<>'' then '^9',&uf('Av992^4#1') fi fi,,,,'^4',,&unifor('3'),,'-MV-',,&uf('IPRIVATE,FIO,') fi/)
+
+DEL
+1691
+*
+
+
+//-------------если задан перенос в 691
+IF
+if p(v691) and val(v992^2)=0 then '1' fi
+DEL
+2691
+*
+
+
+ADD
+2691
+
+(v691/)
+
+//Цикл по добавляемым повторениям - по поля 112
+REPEAT
+/* замена подполей по данным из VUZ
+/* повторение идент-ся по: A-L-V-O-C-N-F-I
+/* заменяются: G-D-H-B-S-K-E-5-4
+REP
+691
+F
+(if p(v691) then  if  &uf('+97',v691^A)=&uf('+97',&uf('Av112^A#1')) and &uf('+97',v691^L)=&uf('+97',&uf('Av112^L#1')) and  &uf('+97',v691^V)=&uf('+97',&uf('Av112^V#1')) and &uf('+97',v691^O)=&uf('+97',&uf('Av112^O#1'))  and &uf('+97',v691^C)=&uf('+97',&uf('Av112^C#1'))  and &uf('+97',v691^N)=&uf('+97',&uf('Av112^N#1'))  and v691^F=&uf('+97',&unifor('Av112^F#1')) and &uf('+97',v691^I)=&uf('+97',&uf('Av112^I#1'))   then |^I|v691^I,,|^A|v691^A,,|^L|v691^L,,|^V|v691^V,,|^O|v691^O,,|^C|v691^C,,|^N|v691^N,,|^F|v691^F,,,,,,,if &uf('Av112^G#1')<>'' then '^G',&uf('Av112^G#1') else |^G|v691^G fi,,,if &uf('Av112^D#1')<>'' then '^D',&uf('Av112^D#1') else |^D|v691^D fi,,if &uf('Av112^H#1')<>'' then '^H',&uf('Av112^H#1') else |^H|v691^H fi,,if &uf('Av112^B#1')<>'' then '^B',&uf('Av112^B#1') else |^B|v691^B fi,,if &uf('Av112^S#1')<>'' then '^S',&uf('Av112^S#1') else |^S|v691^S fi,,if &uf('Av112^K#1')<>'' then '^K',&uf('Av112^K#1') else |^K|v691^K fi,,if &uf('Av112^E#1')<>'' then '^E',&uf('Av112^E#1') else |^E|v691^E fi,,if &uf('Av112^5#1')<>'' then '^5',&uf('Av112^5#1') else |^5|v691^5 fi,,,,if &uf('Av112^4#1')<>'' then '^4',&uf('Av112^4#1') fi,,,,,,,,,,,,,else v691 fi fi/)
+
+/* добавление нового повторения по неравенству с подполями A-L-V-O-C-N-F-I
+ADD
+1691
+
+if rsum((if p(v691) then if  &uf('+97',v691^A)=&uf('+97',&uf('Av112^A#1')) and &uf('+97',v691^L)=&uf('+97',&uf('Av112^L#1')) and  &uf('+97',v691^V)=&uf('+97',&uf('Av112^V#1')) and &uf('+97',v691^O)=&uf('+97',&uf('Av112^O#1'))  and &uf('+97',v691^C)=&uf('+97',&uf('Av112^C#1'))  and &uf('+97',v691^N)=&uf('+97',&uf('Av112^N#1'))  and val(v691^F)=val(&uf('Av112^F#1')) and &uf('+97',v691^I)=&uf('+97',&uf('Av112^I#1')) then  '1,' else '0,' fi fi))=0 then &unifor('Av112#1') fi
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+// в 1691 добавляемые повторения 
+IF
+if a(v1691) then '1' fi
+IF
+if v691<>v2691 then '1' fi
+PUTLOG
+'Откорректировано поле 691. MFN=',f(val(mfn),0,0)
+FI
+FI
+IF
+if p(v1691) then '1' fi
+ADD
+691
+
+(v1691/)
+
+DEL
+1691
+*
+
+
+PUTLOG
+'Добавлены новые повторения поля 691. MFN=',f(val(mfn),0,0)
+FI
+//----------- конец задан перенос в 691 и 691 было в записи
+FI
+IF
+if a(v691) and val(v992^2)=0 then '1' fi
+ADD
+691
+
+(if p(v991) then v991,,if &unifor('Av991^I#1')<>'' then '^D',,&uf('DVUZ,?IDD=',&unifor('Av991^I#1'),'?,v3^A') fi,,,if &unifor('Av992^1#1')<>'' then '^G',&unifor('Av992^1#1') fi,,if val(&uf('Av992^3#1'))>0 then '^51', fi,,, '^4',,&unifor('3'),,'-MV-',,&uf('IPRIVATE,FIO,') fi,/)
+
+PUTLOG
+'Добавлены повторения поля 691. MFN=',f(val(mfn),0,0)
+FI
+
+IF
+if val(v992^2)=1 then '1' fi,,,&uf('+7W10#')
+//------------перенос в поле 694
+REPEAT
+ADD
+694
+
+if rsum((if p(v694) then if &uf('+97',v694^D)=&uf('+97',&uf('Av112^D#1')) and &uf('+97',v694^S)=&uf('+97',&uf('Av112^S#1')) and &uf('+97',v694^B)=&uf('+97',&uf('Av112^B#1')) and &uf('+97',v694^A)=&uf('+97',&uf('Av112^A#1')) and &uf('+97',v694^O)=&uf('+97',&uf('Av112^O#1')) and &uf('+97',v694^V)=&uf('+97',&uf('Av112^V#1')) and &uf('+97',v694^N)=&uf('+97',&uf('Av112^N#1')) and &uf('+97',v694^C)=&uf('+97',&uf('Av112^C#1')) and val(v694^F)=val(&uf('Av112^F#1')) then '1,' fi fi))=0 then &uf('Av112#1'),,,&uf('+7W10#1') fi
+
+DEL
+112
+1
+
+
+UNTIL
+if p(v112) then '1' fi
+//-----------конец переноса в 694
+IF
+if val(g10)=1 then '1' fi
+PUTLOG
+'Добавлены данные в поле заявки'
+FI
+FI
+DEL
+991
+*
+
+
+DEL
+2691
+*
+
+
+DEL
+992
+*
+
+
+DEL
+993
+*
+
+
+DEL
+994
+*
+
+
+DEL
+112
+*
+
+
+DEL
+1691
+*
+
+
+DEL
+2691
+*
+
+

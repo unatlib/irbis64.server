@@ -1,0 +1,313 @@
+0
+//--------приписывание к последнему повторению подполя ^X - измененные поля при включении Full907
+DEL
+111
+*
+
+
+ADD
+111
+
+if val(&uf('IMAIN,Full907,'))=1 then '^X',&uf('+?') fi
+
+//--------добавление  нового 907
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v111<>'' then '1' fi
+REP
+907
+F
+(if p(v907) then v907,,,if val(&uf('+90'))=val(&uf('+N907')) then  if v907^X<>'' then ';',&uf('Av111^X#1') else &uf('Av111#1') fi  fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+//----------------------------конец 907
+//14---------------------удаление дублей поля 69
+IF
+if v920: 'VUZ' then '1' fi
+//-------------------------------запись VUZ - проверка поляя 69 на дубли
+IF
+if p(v69) then '1' fi
+DEL
+1069
+*
+
+
+REPEAT
+ADD
+1069
+
+if a(v1069) or rsum((if p(v1069) then if &uf('+97',v1069^B)=&uf('+97',&uf('Av69^B#1')) and &uf('+97',v1069^D)=&uf('+97',&uf('Av69^D#1')) then '1,' fi fi))=0 then &uf('Av69#1') fi
+
+DEL
+69
+1
+
+
+UNTIL
+if p(v69) then '1' fi
+ADD
+69
+
+(v1069/)
+
+//--защита от пустых полей ^D^B- удаление
+DEL
+69
+F
+(if p(v69) then if v69^D='' and v69^B='' then '1' else '0' fi fi/)
+
+DEL
+1069
+*
+
+
+FI
+FI
+//8.1
+// создаю идентификатор дисциплины, если его нет
+IF
+if v920:'DISC' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--------------------------------------------------------------запись DISC
+IF
+if v3^A<>'' and v3^0='' then '1' fi
+//------------------------ нет идентификатора - создаю
+DEL
+111
+*
+
+
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5))>0 then '1' fi
+ADD
+111
+
+'0'
+
+REPEAT
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' fi
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+FI
+UNTIL
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' else '0' fi
+FI
+REP
+3
+1
+v3,'^0',v3^A.5,v111
+
+//--------------------конец не идентификатора
+FI
+// убираю последний пробел в идентификаторе
+REP
+3^0
+1
+if &uf('+961.1#',v3^0)=' ' then &uf('+960.',,f(val(&uf('+95',v3^0))-1,0,0),,'#',v3^0) else v3^0 fi
+
+// убираю последний пробел в наименовании
+REP
+3^A
+1
+v3^A,'?'
+
+CHA
+3^A
+1
+' ?'
+''
+CHA
+3^A
+1
+'?'
+''
+//----------------------из поля 84 в 83 с проверкой на дубль
+DEL
+1083
+*
+
+
+ADD
+1083
+
+(v84/)
+
+REPEAT
+IF
+&uf('+7W5#',&uf('Av1083^A#1'),'-',&uf('Av1083^N#1'),'-',&uf('Av1083^C#1'),'-',&uf('Av1083^V#1'),'-',&uf('Av1083^O#1'),'-',&uf('Av1083^F#1'),'-',&uf('Av1083^E#1'),'-',),,,if rsum((if p(v83) then if &uf('+97',&uf('AG5#1'))=&uf('+97',v83^A,'-',v83^N,'-',v83^C,'-',v83^V,'-',v83^O,'-',v83^F,'-',v83^E,'-') then '1,' fi  fi))=0 then '1' fi
+ADD
+83
+
+&uf('Av1083#1')
+
+FI
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+// возможно для полей 84 надо создать новую запись FAK
+IF
+if p(v84) then '1' fi
+DEL
+1083
+*
+
+
+DEL
+1085
+*
+
+
+ADD
+1085
+
+(v84/)
+
+// переношу в поле 1083 с учетом возможных дублей по фак-ФО
+REPEAT
+ADD
+1083
+
+if rsum((if p(v1083) then if s('!',v1083^A,v1083^L,'-',v1083^O,'!'): s('!',&uf('Av1085^A#1'),&uf('Av1085^L#1'),'-',&uf('Av1085^O#1'),'!') then '1,' fi fi))=0 then &uf('Av1085#1') fi
+
+DEL
+1085
+1
+
+
+UNTIL
+if p(v85) then '1' fi
+REPEAT
+IF
+if &uf('Av1083^A#1')<>'' or &uf('Av1083^O#1')<>'' then '1' fi
+// есть ли запись FAK с данным фак.+ФО
+IF
+if val(&uf('JVUZ,FFO=',&uf('Av1083^A#1'),&uf('Av1083^L#1'),'-',&uf('Av1083^O#1'),))<=0 then '1' fi
+//--------------------------------новая запись FAK
+NEWMFN
+'*'
+ADD
+920
+
+'FAK'
+
+ADD
+93
+
+&unifor('Av1083^A#1')
+
+ADD
+91
+
+&unifor('Av1083^L#1')
+
+ADD
+98
+
+&unifor('Av1083^O#1')
+
+ADD
+5
+
+v5
+
+END
+FI
+FI
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+// есть ли кафедра в записи FAK?
+ADD
+1083
+
+(v84/)
+
+REPEAT
+IF
+if &uf('Av1083^A#1')<>'' or &uf('Av1083^O#1')<>'' then '1' fi
+CORREC
+'*'
+v5
+'FFO=',&uf('Av1083^A#1'),&uf('Av1083^L#1'),'-',&uf('Av1083^O#1')
+
+//------------дописывание записи FAK новой кафедрой 
+ADD
+5
+
+if s((|!|v5|!|)): s("!"v1001"!") then '' else v1001 fi
+
+DEL
+1001
+*
+
+
+END
+FI
+DEL
+1083
+1
+
+
+UNTIL
+if p(v1083) then '1' fi
+DEL
+84
+*
+
+
+// конец - есть поле 84
+FI
+DEL
+84
+*
+
+
+DEL
+222
+*
+
+
+DEL
+1083
+*
+
+
+DEL
+1085
+*
+
+
+// конец - запись DISC
+FI
+//----формирование идентификатора РП
+IF
+if v920: 'WPD' and v110='' and v83<>'' and val(&uf('IMAIN,AutoWPD,0'))=1  then '1' fi
+ADD
+110
+
+'РП-',v83
+
+FI

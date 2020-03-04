@@ -1,0 +1,3 @@
+if &unifor('Av32^a#2')<>'' or &unifor('Av32^k#2')<>'' or &unifor('Av32^b#2')<>''
+ or &unifor('Av32^c#2')<>'' or &unifor('Av32^d#2')<>'' then '1 Ошибка: Размещени
+е заказа вводить в другое поле' fi

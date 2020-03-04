@@ -1,0 +1,7 @@
+/* (v1004^A) - результат отбора  
+if &uf('+D') : 'ATHRC' then if &uf('D,?M=',v1004^a,'?,v210^9'):'2'then |"O=|v1004^A|$"+| else|"M=|v1004^A|$"+| fi 
+                       else if &uf('+D') : 'ATHRA' then |"A=|v1004^A|$"+| 
+                                                   else if &uf('+D') : 'ATHRS' then |"S=|v1004^A|$"+| 
+                                                        fi,
+                            fi,
+fi,

@@ -1,0 +1,3 @@
+mhl,if v920='J' then "I="v903/"I933="v903"/$"/(|I=|v423^H/|I933=|v423^H|/$|/) fi/
+if p(v933) then "I="v933/"I933="v933"/$"/(|I=|v423^H/|I933=|v423^H|/$|/), fi/
+if v920:'ASP' or v920:'AUNTD' then |I=|v463^w/"T="d200^a,&unifor("9"v200^a) fi

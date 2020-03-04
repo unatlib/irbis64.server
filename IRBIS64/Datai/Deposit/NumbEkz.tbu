@@ -1,0 +1,112 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+if v920:'NJK' then else &uf('+7W1#',,f(rsum((if p(v910) then  if '2 6 7':v910^a  then else if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then if &uf('Av991^b#1')=''or v910^c='' or val(v910^c)>val(&uf('Av991^b#1')) then if  &uf('Av991^c#1')=''or v910^c='' or val(v910^c)<val(&uf('Av991^c#1'))  then v910^1|; |,|1;|n910^1 fi fi fi fi fi)),0,0) ),,,if val(g1)>1 then '1' fi  fi
+if v920:'NJK' then else f(rsum((if p(v910) then if '2 6 7':v910^a then  else if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then if &uf('Av991^b#1')=''or v910^c='' or val(v910^c)>val(&uf('Av991^b#1')) then if  &uf('Av991^c#1')=''or v910^c='' or val(v910^c)<val(&uf('Av991^c#1')) then v910^1|; |,|1;|n910^1  fi fi fi fi fi)),0,0 )  fi
+if v920:'NJK' then else f( rsum((if p(v910) then  if '6':v910^a then if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then  v910^1|; |  fi fi fi)) +  rsum((if p(v940) then if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v940^D)  then if v940^A: 'U' and v940^V<>'' then v940^X|,| fi fi fi/)) ,0,0 )  fi
+if v920:'NJK' then else f(rsum((if p(v910) then if '4': v910^a then if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then v910^1|; |,|1;|n910^1  fi fi fi)),0,0 )  fi
+if v920:'NJK' then else f(rsum((if p(v910) then if v910^a='1' then if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then v910^1|; |,fi fi fi)) + rsum(( if v910^A: 'U' then if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then v910^2|,| fi fi)),0,0 )  fi
+if v920:'NJK' then else  if v991^A='' then &uf('+7W2#',,,,,&uf('JRDR_ARH,SH=',v903,),,,,,,,)  else  &uf('+7W1#',,&uf('7RDR_ARH,!SH=',v903,'!,v40^K/') ),,&uf('+7W2#',,,f(rsum((if p(g1) then '>>>' if &uf('+97',g1)=&uf('+97',&uf('Av991^A#1') ) then '1,' fi fi)),0,0) ),, fi,,,f( rsum((if p(v910) then  if &uf('Av991^a#1')=''or  &uf('+97',&uf('Av991^A#1'))=&uf('+97',v910^D)  then  if val(&uf('JRDR,H=',,v910^B,if v910^B='' then v910^H fi))>0 then '1,' fi,,,fi fi/  ),,,g2,',',,),0,0 )  fi
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1638 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v1
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3168 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v2
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4698 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v3
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6228 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v4
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7758 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v5
+'
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9288 
+\pard \ql\widctlpar\intbl {\qc \fs20 ''\fs24 ',,v6
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1638 
+\pard \widctlpar\intbl {\qc \fs20 Поступило наименований
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx3168 
+\pard \widctlpar\intbl {\qc \fs20 Поступило экз-ров
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx4698 
+\pard \widctlpar\intbl {\qc \fs20 Списано
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6228 
+\pard \widctlpar\intbl {\qc \fs20 Утеряно
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7758 
+\pard \widctlpar\intbl {\qc \fs20 На руках
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9288 
+\pard \widctlpar\intbl {\qc \fs20 Выдавалось по месту хранения
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

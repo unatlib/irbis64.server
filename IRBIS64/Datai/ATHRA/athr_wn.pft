@@ -1,0 +1,139 @@
+/*   &unifor('9'v510^a),|. |v510^b,if p(v510^d) or p(v510^f) or p(v510^e) then ' (',v510^d,if p(v510^d) and p(v510^f) then |; |v510^f  else v510^f fi,if p(v510^e) and (p(v510^f) or p(v510^d)) then |; |v510^e else v510^e fi,')' fi,| (|v510^c|)|,if p(v510^x) then ' (',v510^x,if p(510^x) and p(v510^y) then |; |v510^y fi,if p(v510^x) and p(v510^y) and p(v510^z) then |; |v510^z fi,')' fi,
+/*   &unifor('9'v710^a),|. |v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then |; |v710^f  else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then |; |v710^e else v710^e fi,')' fi,| (|v710^c|)|,if p(v710^x) then ' (',v710^x,if p(710^x) and p(v710^y) then |; |v710^y fi,if p(v710^x) and p(v710^y) and p(v710^z) then |; |v710^z fi,')' fi,
+mhl,
+'<title>Авторитетная запись на ',v210^a,'</title>',
+'<b>Основной:</b>',
+'<table>',
+'<tr>',
+   '<td>',
+   '<input type="checkbox" name="CHECKINDEX" value="',
+   if &uf('+D') : 'ATHRC' then &uf('9',v210^a)
+                          else if &uf('+D') : 'ATHRA' then if p(v210^A)then if v210^A:' ' and v210^9:'0' and (not(v210^A:','))then &unifor('G0 'v210^a),', ',&unifor('G2 'v210^a) else v210^a fi fi," "v210^D,if p(v210^g) then ", "v210^g fi,if a(v210^g) then ", "d210^b,if v210^b:'. 'or (not(v210^b:'.'))then v210^b else &unifor('G0.'v210^b),'. '&unifor('G2.'v210^b) fi fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,')' fi,
+                                                      else if &uf('+D') : 'ATHRS' then &unifor('9'v210^a),if p(v210^w) then | |v210^w else | |v210^z fi,| |v210^j,|, |v210^v,| -- |v210^b,| -- |v210^c,| -- |v210^d,| -- |v210^G,| -- |v210^E,| -- |v210^O, |, |v210^H,
+   fi fi fi,
+   '">',
+   '</td>'
+   '<td width=20>',
+   '<img src="IRBIS:10,,',
+   if p(v510) or p(v710)  then 'seeso.bmp' else 'blank.bmp' fi,
+   '">',
+   '</td>',
+   '<td>',
+   if &uf('+D') : 'ATHRC' then v210^a,". "v210^b," ("v210^e")"," ("v210^c")",
+                          else if &uf('+D') : 'ATHRA' then if p(v210^A)then if v210^A:' ' and v210^9:'0' and (not(v210^A:','))then &unifor('G0 'v210^a),', ',&unifor('G2 'v210^a) else v210^a fi fi," "v210^D,if p(v210^g) then ", "v210^g fi,if a(v210^g) then ", "d210^b,if v210^b:'. 'or (not(v210^b:'.'))then v210^b else &unifor('G0.'v210^b),'. '&unifor('G2.'v210^b) fi fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,')' fi,
+                                                      else if &uf('+D') : 'ATHRS' then v210^a,if p(v210^w) then | |v210^w else | |v210^z fi,| |v210^j,|, |v210^v,| -- |v210^b,| -- |v210^c,| -- |v210^d, | -- |v210^G,| -- |v210^E,| -- |v210^O,|, |v210^H,
+   fi fi fi,
+   '</td>',
+'</tr>',
+'</table>',
+
+if p(v410) then 
+'<b>Другие формы:</b>',
+'<table>',
+(if p(v410) then 
+'<tr>',
+   '<td>',
+   '<input type="checkbox" name="CHECKINDEX" value="',
+   if &uf('+D') : 'ATHRC' then &uf('9',v410^a),
+                          else if &uf('+D') : 'ATHRA' then if p(v410^A)then if v410^A:' ' and v410^9:'0' and (not(v410^A:','))then &unifor('G0 'v410^a),', ',&unifor('G2 'v410^a) else v410^a fi fi,| |v410^D,if p(v410^g) then |, |v410^g else |, |d410^b,if v410^b:'. 'or (not(v410^b:'.')) then v410^b else &unifor('G0.'v410^b),'. '&unifor('G2.'v410^b) fi  fi,
+                                                      else if &uf('+D') : 'ATHRS' then &unifor('9'v410^a),if p(v410^w) then | |v410^w else | |v410^z fi,| |v410^j,|, |v410^v,| -- |v410^b,| -- |v410^c,| -- |v410^d,| -- |v410^G,|, |v410^H, 
+   fi fi fi,
+   '">',
+   '</td>'
+   '<td width=20>',
+   '<img src="IRBIS:10,,see.bmp">',
+   '</td>',
+   '<td>',
+   if &uf('+D') : 'ATHRC' then v410^a,|. |v410^b,| (|v410^e|)|,| (|v410^c|)|,
+                          else if &uf('+D') : 'ATHRA' then if p(v410^A)then if v410^A:' ' and v410^9:'0' and (not(v410^A:','))then &unifor('G0 'v410^a),', ',&unifor('G2 'v410^a) else v410^a fi fi,| |v410^D,if p(v410^g) then |, |v410^g else |, |d410^b,if v410^b:'. 'or (not(v410^b:'.')) then v410^b else &unifor('G0.'v410^b),'. '&unifor('G2.'v410^b) fi  fi,
+                                                      else if &uf('+D') : 'ATHRS' then v410^a,if p(v410^w) then | |v410^w else | |v410^z fi,| |v410^j,|, |v410^v,| -- |v410^b,| -- |v410^c,| -- |v410^d,| -- |v410^G,|, |v410^H, 
+   fi fi fi,
+   '</td>',
+'</tr>',   
+fi),
+'</table>',
+fi,
+
+
+if p(v510) then 
+'<b>Связанные (Смотри также):</b>',
+'<table>',
+(if p(v510) then 
+'<tr>',
+   '<td>',
+   '<input type="checkbox" name="CHECKINDEX" value="',
+   &uf('9',v510^a),| |v510^D,if p(v510^g) then |, |v510^g else |, |d510^b,if v510^b:'. 'or (not(v510^b:'.')) then v510^b else &unifor('G0.'v510^b),'. '&unifor('G2.'v510^b) fi  fi,if s(v510^1,v510^f)<>''then' (',v510^1,if s(v510^1)<>''then|; |d510^f fi,v510^f,')'  fi,
+     '">',
+   '</td>'
+   '<td width=20>',
+   '<img src="IRBIS:10,,seeso.bmp">',
+   '</td>',
+   '<td>',
+   '<A HREF="IRBIS:1,,,athr_wn?BOTTOMPFTNAME=athr_bottom_wn&KEY=',
+   if &uf('+D') : 'ATHRC' 
+   then 
+   &uf('+3EM=',&unifor('9'v510^a),|. |v510^b,if p(v510^d) or p(v510^f) or p(v510^e) then ' (',v510^d,if p(v510^d) and p(v510^f) then |; |v510^f  else v510^f fi,if p(v510^e) and (p(v510^f) or p(v510^d)) then |; |v510^e else v510^e fi,')' fi,| (|v510^c|)|,if p(v510^x) then ' (',v510^x,if p(510^x) and p(v510^y) then |; |v510^y fi,if p(v510^x) and p(v510^y) and p(v510^z) then |; |v510^z fi,')' fi),
+   '">',
+   v510^a,|. |v510^b,| (|v510^e|)|,| (|v510^c|)|,
+   else if &uf('+D') : 'ATHRA' 
+        then
+        &uf('+3EA=',v510^a,| |v510^D,if p(v510^g) then |, |v510^g else |, |d510^b,if v510^b:'. 'or (not(v510^b:'.')) then v510^b else &unifor('G0.'v510^b),'. '&unifor('G2.'v510^b) fi  fi,if s(v510^1,v510^f)<>''then' (',v510^1,if s(v510^1)<>''then|; |d510^f fi,v510^f,')'  fi),
+        '">',
+        v510^a,| |v510^D,if p(v510^g) then |, |v510^g else |, |d510^b,if v510^b:'. 'or (not(v510^b:'.')) then v510^b else &unifor('G0.'v510^b),'. '&unifor('G2.'v510^b) fi  fi,if s(v510^1,v510^f)<>''then' (',v510^1,if s(v510^1)<>''then|; |d510^f fi,v510^f,') '  fi,
+        else if &uf('+D') : 'ATHRS' 
+             then
+             &uf('+3ES=',&unifor('9'v510^a),if p(v510^w) then | |v510^w else | |v510^z fi,| |v510^j,|, |v510^v,| -- |v510^b,| -- |v510^c,| -- |v510^d, | -- |v510^G,|, |v510^H),
+             '">',
+             v510^a,if p(v510^w) then | |v510^w else | |v510^z fi,| |v510^j,|, |v510^v,| -- |v510^b,| -- |v510^c,| -- |v510^d, | -- |v510^G,|, |v510^H,
+             else 
+   fi,fi,fi,
+   
+   '</A>',
+   '</td>',
+'</tr>',   
+fi),
+'</table>',
+fi,
+
+if p(v710) then 
+'<b>Связанные (Смотри также на параллельном языке):</b>',
+'<table>',
+(if p(v710) then 
+'<tr>',
+   '<td>',
+   '<input type="checkbox" name="CHECKINDEX" value="',
+    &uf('9',v710^a),| |v710^D,if p(v710^g) then |, |v710^g else |, |d710^b,if v710^b:'. 'or (not(v710^b:'.')) then v710^b else &unifor('G0.'v710^b),'. '&unifor('G2.'v710^b) fi  fi,if s(v710^1,v710^f)<>''then' (',v710^1,if s(v710^1)<>''then|; |d710^f fi,v710^f,')'  fi,
+   '">',
+   '</td>'
+   '<td width=20>',
+   '<img src="IRBIS:10,,seeso.bmp">',
+   '</td>',
+   '<td>',
+   '<A HREF="IRBIS:1,,,athr_wn?BOTTOMPFTNAME=athr_bottom_wn&KEY=',
+   if &uf('+D') : 'ATHRC' 
+   then 
+   &uf('+3EM=',&unifor('9'v710^a),|. |v710^b,if p(v710^d) or p(v710^f) or p(v710^e) then ' (',v710^d,if p(v710^d) and p(v710^f) then |; |v710^f  else v710^f fi,if p(v710^e) and (p(v710^f) or p(v710^d)) then |; |v710^e else v710^e fi,')' fi,| (|v710^c|)|,if p(v710^x) then ' (',v710^x,if p(710^x) and p(v710^y) then |; |v710^y fi,if p(v710^x) and p(v710^y) and p(v710^z) then |; |v710^z fi,')' fi),
+   '">',
+   v710^a,|. |v710^b,| (|v710^e|)|,| (|v710^c|)|,
+   else if &uf('+D') : 'ATHRA' 
+        then
+        &uf('+3EA=',v710^a,| |v710^D,if p(v710^g) then |, |v710^g else |, |d710^b,if v710^b:'. 'or (not(v710^b:'.')) then v710^b else &unifor('G0.'v710^b),'. '&unifor('G2.'v710^b) fi  fi,if s(v710^1,v710^f)<>''then' (',v710^1,if s(v710^1)<>''then|; |d710^f fi,v710^f,') '  fi),
+        '">',
+        v710^a,| |v710^D,if p(v710^g) then |, |v710^g else |, |d710^b,if v710^b:'. 'or (not(v710^b:'.')) then v710^b else &unifor('G0.'v710^b),'. '&unifor('G2.'v710^b) fi  fi,if s(v710^1,v710^f)<>''then' (',v710^1,if s(v710^1)<>''then|; |d710^f fi,v710^f,') '  fi,
+        else if &uf('+D') : 'ATHRS' 
+             then
+             &uf('+3ES=',&unifor('9'v710^a),if p(v710^w) then | |v710^w else | |v710^z fi,| |v710^j,|, |v710^v,| -- |v710^b,| -- |v710^c,| -- |v710^d, | -- |v710^G,|, |v710^H),
+             '">',
+             v710^a,if p(v710^w) then | |v710^w else | |v710^z fi,| |v710^j,|, |v710^v,| -- |v710^b,| -- |v710^c,| -- |v710^d, | -- |v710^G,|, |v710^H,
+             else 
+   fi,fi,fi,
+ '</A>',
+   '</td>',
+'</tr>',   
+fi),
+'</table>',
+
+fi
+
+'<br>',
+infow_html

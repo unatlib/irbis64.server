@@ -1,0 +1,11 @@
+Form7
+&uf('&'),&uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),&uf('+7W1#'),&uf('+7W2#'),(if p(g40) then if (g40^a<>'') and (&uf('Av1000^a#1')=g40^d.6) then &uf('+7U1#',g40^d,| |g40^1,if g40^1='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi) fi,if (g40^a<>'') and (&uf('Av1000^a#1')=g40^L.6) then &uf('+7U1#',g40^L,| |g40^3,if g40^3='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi) fi,if (g40^f.1<>'*') and (g40^a<>'') and (&uf('Av1000^a#1')=g40^f.6) then &uf('+7U1#',g40^f,| |g40^2,if g40^2='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi) fi,if (g40^a='') and (&uf('Av1000^a#1')=g40^d.6) then &uf('+7U2#',g40^d*6.2) fi fi),&uf('++B1#30'),(&uf('G0/',g1*6.2)/),(g2/)
+date_STF.mnu
+&uf('&'),&uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),&uf('+7W1#'),&uf('+7W2#'),(if p(g40) then if (g40^a<>'') and (&uf('Av1000^a#1')=g40^d.6) then &uf('+7U1#',g40^d,| |g40^1,if g40^1='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi,) fi,if (g40^a<>'') and (&uf('Av1000^a#1')=g40^L.6) then &uf('+7U1#',g40^L,| |g40^3,if g40^3='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi,) fi,if (g40^f.1<>'*') and (g40^a<>'') and (&uf('Av1000^a#1')=g40^f.6) then &uf('+7U1#',g40^f,| |g40^2,if g40^2='' then ' 000000' fi,'/',if g40^V='' then '*' else g40^V fi) fi,if (g40^a='') and (&uf('Av1000^a#1')=g40^d.6) then &uf('+7U2#',if g40^V='' then '*' else g40^V fi) fi fi),&uf('++B1#30'),(&uf('G2/',g1)/),(g2/),
+kv_STF.mnu
+4,7
+1001.wss,1000
+'Распределение посещений (обслуженных читателей) по местам выдач за ',&uf('36',v1000^A*4.2)," "v1000^A.4" г.",
+1,1
+'Распределение посещений (обслуженных читателей) по дням за ',&uf('36',v1000^A*4.2)," "v1000^A.4" г.",/'День'
+'Распределение посещений (обслуженных читателей) по местам выдач за ',&uf('36',v1000^A*4.2)," "v1000^A.4" г.",/'Место выдачи'

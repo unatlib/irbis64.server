@@ -1,0 +1,23 @@
+1
+LandRet.wss
+Задайте данные для выдачи-возврата
+DEL
+991
+*
+
+
+ADD
+991
+
+'%1',,,&uf('+7W1#',,(&uf('+5Treturn.mnu',,,,)/ )),
+
+ADD
+40
+
+&uf('+7W1#',,(&uf('+5Treturn.mnu',,,,)/ )),if g1='' then &uf('+7W1#20') fi,,,if v40='' or rsum((if p(v40) then if s(v40^A,v40^B,v40^H,v40^K,v40^D)=s(&uf('Av991^A#1'),&uf('Av991^B#1'),&uf('Av991^H#1'),&uf('Av991^K#1'),&uf('Av991^D#1')) then '1,' fi fi))=0 then  if v991^D<>'' then  v991,,'^E',&uf('3B',,v991^D,'/',,,&uf('Ag1#1'),),,'^F',,&uf('3B',,v991^D,'/',,,&uf('Ag1#1'),,) else v991,,'^D',,&uf('3'),,'^E',&uf('3B',,&uf('3'),'/',,,&uf('Ag1#1'),),,'^F',,&uf('3B',,&uf('3'),'/',,,&uf('Ag1#1'),,)  fi fi,,,&uf('+7W2#',,if v991^A<>'' then 'I=',v991^A else if v991^H<>'' then 'IN=',v991^H else if v991^B<>'' then 'IN=',v991^B fi fi fi ),,,if g2<>'' then '^C',,&uf('D',if v991^G<>'' then v991^G else 'IBIS' fi,',?',,,g2,,,'?,@brief') fi,,,
+
+DEL
+991
+*
+
+

@@ -1,0 +1,121 @@
+12
+0
+Дисциплина
+0
+0
+0
+
+
+
+
+if v920: 'DISC' then '@@@@@',,v3^A/ fi,,if val(&uf('JVUZ,IDV=',v3^0))>0 then &uf('+7W5#',v3^A) &unifor('7VUZ,"IDV=',v3^0,'",if p(v68^A) or p(v68^F) then G5 fi/') fi/
+I
+Идентификатор
+0
+0
+0
+
+
+
+
+if v920: 'DISC' then v3^0/ fi,,if val(&uf('JVUZ,IDV=',v3^0))>0 then &uf('+7W5#',v3^0) &unifor('7VUZ,"IDV=',v3^0,'",if p(v68^A) or p(v68^F) then G5 fi/') fi/
+B
+Кафедра
+0
+0
+1
+kafch.mnu
+
+
+
+if v920: 'DISC' then v5/ fi,,if val(&uf('JVUZ,IDV=',v3^0))>0 then &uf('+7W5#',v5) &unifor('7VUZ,"IDV=',v3^0,'",if p(v68^A) or p(v68^F) then G5 fi/') fi/
+A
+Факультет
+0
+0
+1
+fak.mnu\\2
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^A) then v68^A else # fi/')
+N
+Направление
+0
+0
+1
+napr.mnu\\2
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^n) then v68^n else # fi/')
+C
+Спец./Профиль
+0
+0
+1
+spec.mnu
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^c) then v68^c else # fi/')
+V
+Вид обуч.
+0
+0
+1
+vo.mnu
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^v) then v68^v else # fi/')
+O
+Форма обуч.
+0
+0
+1
+fo.mnu
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^o) then v68^o else # fi/')
+F
+Семестр
+0
+0
+0
+
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^f) then v68^f else # fi/')
+E
+Группа
+0
+0
+2
+,VGR=
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^E) then v68^E else # fi/')
+H
+Вып.каф.
+0
+0
+0
+
+
+
+
+if v920: 'DISC' then ' '/ fi,,&unifor('7VUZ,"IDV=',v3^0,'",if p(v68^H) then v68^H else # fi/')
+1
+MFN записи
+0
+0
+0
+
+
+
+
+if v920: 'DISC' then f(val(mfn),0,0) / fi,,&unifor('7VUZ,"IDV=',v3^0,'",f(val(mfn),0,0)/')

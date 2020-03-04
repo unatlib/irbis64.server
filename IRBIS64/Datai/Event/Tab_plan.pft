@@ -1,0 +1,44 @@
+'</>',/*'g972: 'g972'<br>'
+if v920:'Plan' then 
+'<table border=1  cellspacing=0>',
+ '<tr>',
+      '<td>&nbsp;№ п. плана</td>',
+      '<td>Дата 1 - Дата 2</td>',
+      '<td>&nbsp;Название&nbsp;</td>',
+      '<td>&nbsp;Место проведения</td>',
+      '<td>&nbsp;Категория</td>','<td>Число планируемых мероприятий</td>','<td>Ответственный</td>','<td>Число ссылок</td>',
+ '</tr>',
+      (if p(v330) then 
+  '<tr>',     
+    '<td>'if v330^0=&uf('Ag972#1') 
+          then '<b><i><font size="4">','<p style="color:red;">',v330^0,'</i></p></font size="4"></b>'
+          else v330^0 fi,|&nbsp;|n330^0 
+          '</td>'
+    '<td>'v330^a*6'.'v330^a*4.2,|&nbsp;|n330^a, 
+          if v330^b<>'' then 
+             if v330^a.4=v330^b.4 
+             then | - |v330^b*6|.|,v330^b*4.2,' 'v330^a.4 
+             else ' 'v330^a.4| г.|,| - |v330^b*6|.|,v330^b*4.2,' 'v330^b.4,
+             fi 
+          else ' 'v330^a.4,  
+          fi '</td>'
+    '<td>'if v330^0=&uf('Ag972#1') 
+          then '<b><i><font size="4">','<p style="color:red;">', v330^c,'</i></p></font size="4"></b>'
+          else v330^c fi,|&nbsp;|n330^c,
+          '</td>'
+    '<td>'v330^d,|&nbsp; |n330^d'</td>'
+    '<td>'if p(v330^t) then 
+             if &uf('K900aKat.mnu!'v330^t)<>'' then &uf('K900aKat.mnu!'v330^t) else v330^t fi
+             else '&nbsp;' fi,'</td>'
+    '<td>'v330^m,|&nbsp;|n330^m'</td>'
+    '<td>'v330^n,|&nbsp;|n330^n'</td>'
+    '<td>'v330^z,
+             if val(&uf('J,III='&uf('Av903#1')'/'v330^0))>0 
+             then '<br>','<A HREF="IRBIS:2,,,,'&uf('+3EIII='&uf('Av903#1')'/'v330^0),'">',
+                  'См. (',f(val(&uf('J,III='&uf('Av903#1')'/'v330^0)),0,0),' зап.)</A>' 
+             else '&nbsp;' fi 
+          '</td>'
+  '</tr>'           
+      fi)         
+'</table>'
+fi /

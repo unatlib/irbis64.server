@@ -1,0 +1,6 @@
+&uf('+7W10#'),&uf('+7W11#'),&uf('+7W12#'),&uf('+7W1#'(if p(v938)then if v938^q:&uf('Av991^a.4#1')and (val(v938^A)<val(&uf('Ag3#1'))or val(v938^A)=val(&uf('Ag3#1')))and (val(&uf('Ag3#1'))<val(v938^B)or val(&uf('Ag3#1'))=val(v938^B)) then v938^e break  fi fi)),if g3:'комп.'then &uf('+7W10#'&uf('G2.'&uf('G0('g3)))fi,
+
+(if &uf('Ag1#1'):'='then &uf('+7U11#'&uf('G0;'&uf('G2='&uf('Ag1#1')))),&uf('+7W1#'&uf('G2='&uf('Ag1#1')))else BREAK fi),
+
+&uf('+7W5#'if g10=''then f(rsum((g11|;|)),0,2)else &uf('Ag11#'g10)fi)
+ 

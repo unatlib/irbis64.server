@@ -1,0 +1,51 @@
+[TAB]
+TAB_PAGE_FORMAT=0
+TAB_PAGE_ORIENT=0
+TAB_PAGE_LEFT=3
+TAB_PAGE_RIGHT=1.5
+TAB_PAGE_BOTTOM=2
+TAB_PAGE_TOP=2
+TAB_PAGE_WIDTH=21
+TAB_PAGE_HEIGHT=29.7
+AUTONUM=1
+ALIGN=1
+BORDER_WIDTH=2
+FONT_SIZE=12
+TAB_SORT_ONLY=1
+TAB_IRBIS64=1
+CELL_TAB_COL_COUNT=5
+CELL_TAB1_1=2
+CELL_TAB1_2=N
+CELL_TAB1_3=##
+CELL_TAB1_4=
+CELL_TAB1_5=
+CELL_TAB2_1=
+CELL_TAB2_2=
+CELL_TAB2_3=
+CELL_TAB2_4=По левому краю
+CELL_TAB2_5=Нет
+CELL_TAB3_1=
+CELL_TAB3_2=
+CELL_TAB3_3=
+CELL_TAB3_4=По левому краю
+CELL_TAB3_5=Нет
+CELL_TAB4_1=
+CELL_TAB4_2=
+CELL_TAB4_3=
+CELL_TAB4_4=По левому краю
+CELL_TAB4_5=Нет
+CELL_MULTI_TAB_ROW_COUNT=0
+CELL_SUM00=
+CELL_MULTI_SUM_ROW_COUNT=0
+[SORT]
+SORT_ROW_COUNT=6
+CELL_SORT1=1
+CELL_SORT2=if v1^A<>'' then if v1^B='' then '\b ',,'Контингенты найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else  if v1^O='' then v1^B else "\tab \tab MFN: "v1^O fi fi  else if v1^C<>'' then if v1^D='' then '\b ',,'В записях студентов, указанных контингентов, отсутствуют дисциплины',,'\b0 ' else v1^D fi  else if v1^E<>'' then if v1^F='' then '\b ',,'Факультеты найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^F fi  else if v1^G<>'' then if v1^H='' then '\b ',,'Специальности найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^H fi  else if v1^I<>'' then if v1^J='' then '\b ',,'Направления найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^J fi  else if v1^K<>'' then if v1^L='' then '\b ',,'Формы обучения найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^L fi  else if v1^M<>'' then if v1^N='' then '\b ',,'Виды обучения найдены у студентов, но отсутствуют в БД VUZ',,'\b0 ' else v1^N fi  fi fi fi fi fi fi fi
+CELL_SORT3=100
+CELL_SORT4=1
+CELL_SORT5=if p(v90) then if val(&uf('+N90'))=1 and val(&uf('JVUZ,?',v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f"-"))=0 then '^AААААА',/,'^AААААА^B',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,/,,if val(v991^A)=1 then '^AААААА',/,'^AААААА^B',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f,,'^O',,&uf('7RDR,!LN=',v90^A,v90^N,v90^C,v90^V,v90^O,'-S',v90^f,,'!,f(val(mfn),0,0),,","d920') fi/,,fi,,if a(v69) then  '^CЖЖЖЖЖ',/,'^CЖЖЖЖЖ^D',,,v90^A"-",v90^N"-",v90^C"-",v90^V"-",v90^O"-",,v90^f/,,,fi,,if &uf('Av90^A#1')<>'' and val(&uf('JVUZ,DISCFAK=',&uf('Av90^A#1')))<=0 then '^EБББББ',/,'^EБББББ^F',,&uf('Av90^A#1')/,,fi,,,if &uf('Av90^C#1')<>'' and val(&uf('JVUZ,DISCS=',&uf('Av90^C#1')))<=0 then '^GВВВВВ',/,'^GВВВВВ^H',,&uf('Av90^C#1')/ fi,,,if &uf('Av90^N#1')<>'' and val(&uf('JVUZ,DISCNPR=',&uf('Av90^N#1')))<=0 then '^IГГГГГ',/,'^IГГГГГ^J',,&uf('Av90^N#1')/,,fi,,,if &uf('Av90^O#1')<>'' and val(&uf('JVUZ,DISCFO=',&uf('Av90^O#1')))<=0 then '^KДДДДД',/,'^KДДДДД^L',,&uf('Av90^O#1')/,,fi,,,if &uf('Av90^V#1')<>'' and val(&uf('JVUZ,DISCVO=',&uf('Av90^V#1')))<=0 then '^MЕЕЕЕЕ',/,'^MЕЕЕЕЕ^N',,&uf('Av90^V#1')/,,fi,,,FI,,
+[HDR]
+HDR_PARAMS=1
+HDR_WSS=CheckStud
+HDR_PFT=CheckStudH
+HDR_PARAMS_COUNT=0

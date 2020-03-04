@@ -1,0 +1,74 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1242 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2659 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4076 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5493 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6910 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8327 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9744 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11161 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12578 
+\pard \widctlpar\intbl {\qr \fs22 'v1^F
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'f(val(v2),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'f(val(v3),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'f(rsum((v1^S|;|)),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v3) and val(v2)>0 and val(v1^s)>0  then f(val(v3)/val(v2)/rsum((v1^s|,|)),0,2) else '-' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v7) then f(val(v7),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v4) then f(val(v4),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v6) then f(val(v6),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v5) and val(v7)>0 then f(val(v5)/val(v7),0,2) else '0' fi fi 
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

@@ -1,0 +1,76 @@
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1242 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2659 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4076 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5493 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6910 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8327 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9744 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11161 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12578 
+\pard \widctlpar\intbl {\qr \fs22 'v1^F
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v2) then f(val(v2),0,0) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v3) then f(val(v3),0,0) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 '&uf('+7W2#'),&uf('+7W2#',(if &uf('1*R;?@',&uf('Av1^s#1'))<>'' then &uf('1*R;?@',&uf('Av1^s#1')) else break fi/)),&uf('+7G2'),&uf('+7W3#^i'v1^i,'^f'v1^f),/
+&uf('+7W4#'(if p(g2) then &uf('D'&uf('Av1^y#1'),if &uf('Av1^y#1')=''then 'IBIS'fi,',@'g2|,(if p(v691) then if &uf('+97'v691^i)=&uf('+97'&uf('Ag3^i#1')) and v691^f=&uf('Ag3^f#1') and (&uf('+97'v691^o)=&uf('+97'&uf('Ag3^o#1')) or &uf('Ag3^o#1')='') then &uf('Ag3^i#1'),'-'if &uf('Ksemo.mnu\'&uf('Ag3^f#1'))<>'' then v691^0 else v691^9 fi fi fi/)|) fi)),&uf('+7G4'),
+f(rsum((if p(g4) then &uf('DVUZ,?z='g4'?,v68^z|;|') fi)),0,0)
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v8) and val(v2)>0 then f(val(v8)/val(v2),0,2) else '0' fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v7) then f(val(v7),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v4) then f(val(v4),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v6) then f(val(v6),0,0) else '0' fi fi
+'
+\cell }
+\pard \widctlpar\intbl {\qr \fs22 'if p(v991^!) then '-' else if p(v5) and val(v7)>0 then f(val(v5)/val(v7),0,2) else '0' fi fi 
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

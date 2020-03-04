@@ -1,0 +1,26 @@
+mpl,
+if s(v905^r):'1'or &unifor('IPRIVATE,KKR,'):'1'then else 
+   &uf('+7W606#'),
+   &uf('+7U606#'
+   mhl,
+   (if p(v606)then v606^a,| -- |v606^b,| -- |v606^c,| -- |v606^d,| -- |v606^g,| -- |v606^e,
+   | -- |v606^o, |, |v606^h,| -- |v606^9 /fi),
+   (if p(v607)then v607^a,| -- |v607^b,| -- |v607^c,| -- |v607^d,| -- |v607^g,| -- |v607^e,
+   | -- |v607^o, |, |v607^h,| -- |v607^9 /fi)),
+   if s(v606v607)<>'' or 
+      rsum((if p(v600) then if p(v600^b) then '0' else '1' fi fi))>0 or 
+      rsum((if p(v601) then if p(v601^b) then '0' else '1' fi fi))>0 
+   then '\fi0',&unifor('S0'),fi,
+   if &uf('Ag606#2')<>'' then '\par 'fi,
+   (if p(g606) then' ' &uf('S1A'),'. 'if g606.4:'--' then g606*4 else if g606.2:', 'then g606*2 else g606 fi fi fi),'\par '
+fi,
+mpl,
+if s(v905^e,&unifor('IPRIVATE,KKK,')):'1'then else 
+   if s(v910^a):'U' and s(v330^5,v330^6,v330^7):'; ' then else 
+      if s(v905^e,&unifor('IPRIVATE,KKK,')):'2'then mhl,"\fi0\b Кл.слова: \b0 "v610+| -- |"\par " mpl,else 
+         if s(v905^e,&unifor('IPRIVATE,KKK,')):'3' 
+         then mhl,"\fi0\b Кл.слова: \b0 "d610,&unifor('Q'v610+| -- |"\par "),mpl,else 
+            if &unifor('Av610#6')<>''then else mhl,"\fi0\b Кл.слова: \b0 "d610,&unifor('Q'v610+| -- |"\par "),mpl, 
+fi fi fi fi fi, 
+if s(v905^e)<>''or &unifor('IPRIVATE,KKK,')<>''then else 
+   if &unifor('Av965#6')<>''then else "\fi0 Дескрипторы: "d965,v965+| -- |"\par " fi fi, 

@@ -1,0 +1,60 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16839\margl850\margr850\margt1134\margb1134 
+{\b\fs\fs22\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx958 
+\pard \widctlpar\intbl {\ql \fs22 № пункта плана
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2092 
+\pard \widctlpar\intbl {\ql \fs22 Дата/интервал дат
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx4927 
+\pard \widctlpar\intbl {\ql \fs22 Название
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx6628 
+\pard \widctlpar\intbl {\ql \fs22 Место проведения
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7478 
+\pard \widctlpar\intbl {\ql \fs22 Категория
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9179 
+\pard \widctlpar\intbl {\ql \fs22 Ответственный
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10313 
+\pard \widctlpar\intbl {\ql \fs22 Отметка о вып.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

@@ -1,0 +1,16 @@
+'\pard \li108 \ri108 ','\qr \fs20 '
+'\par \qr Рассмотрено на комиссии','\tab \tab \tab \tab \tab \tab ','\fs24 Утверждаю: \fs20 ',
+'\par \qr По сохранению фондов',   '\tab \tab \tab \tab \tab ',&unifor('DCMPL,"VD=POLZV",v14^d'),
+'\par \qr \tab Протокол N ',&unifor('G0 'v991),'\tab \tab \tab \tab \tab ___________',&unifor('DCMPL,"VD=POLZV",v14^b'),
+'\par \qr \tab ','"___"____________ 20__ г.','\tab \tab \tab \tab ','"___"____________ 20__ г.'
+'\par \par \qc АКТ  N '&unifor('G0 'v991),
+'\par от ',&unifor('G2 'v991),
+,'\par \par',
+'\par \tab \tab Настоящий акт составлен ______________________________________________'
+'\par \par \tab \tab ______________________________________________________________________'
+'\par \par \par \ql \tab \tab \tab об исключении '
+if '03 04 05 07 KN ':v900^b then 'КНИГ 'else if v110^b:'02' then 'ЖУРНАЛОВ 'fi,
+if 'NJ':v920 then 'НОМЕРОВ ЖУРНАЛОВ 'fi fi,
+if &unifor('DCMPL,"KS2=',v991,'",v888^d')<>'' then 
+' из фонда ',&unifor('DCMPL,"KS2=',v991,'",v888^d') fi,
+'\tab в количестве '

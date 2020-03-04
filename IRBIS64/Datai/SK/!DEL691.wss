@@ -1,0 +1,131 @@
+13
+D
+Дисциплина
+0
+0
+1
+691d.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^D) then v691^D else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v3^A') else ' ' fi fi fi/)
+B
+Кафедра
+0
+0
+1
+691b.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^B) then v691^B else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v5')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v5') else ' ' fi fi fi/)
+S
+Цикл дис.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^S) then v691^S else ' ' fi fi/)
+A
+Факультет
+0
+0
+1
+691a.mnu\\2
+
+
+
+(if p(v691) and a(v691^U) then if p(v691^A) then v691^A else ' ' fi fi/)
+N
+Направление
+0
+0
+1
+691c.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^N) then v691^N else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^n')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^n') else ' ' fi fi fi/)
+C
+Спец./Профиль
+0
+0
+1
+691c.mnu\\2
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^C) then v691^C else if &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^c')<>'' then &uf('DVUZ,!DUNS=',v691^W,'-S',v691^F,'!,v92^c') else ' ' fi fi fi/)
+V
+Вид обуч.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^V) then v691^V else ' ' fi fi/)
+O
+Форм.обуч.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^O) then v691^O else ' ' fi fi/)
+F
+Семестр
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^F) then v691^F else ' ' fi fi/)
+G
+Осн\Доп
+0
+0
+7
+691g.mnu
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^G) then v691^G else ' ' fi fi/)
+L
+Филиал
+0
+0
+0
+fili.mnu
+
+
+
+(if p(v691) and a(v691^U) then if p(v691^L) then v691^L else ' ' fi fi/)
+W
+Уник.идентиф.
+0
+0
+0
+
+
+
+
+(if p(v691) and a(v691^U)  then if p(v691^W) then v691^W else ' ' fi fi/)
+
+MFN записи
+0
+0
+0
+
+
+
+
+if p(v691) then (if p(v691) and a(v691^U)  then f(val(mfn),0,0) fi/) fi

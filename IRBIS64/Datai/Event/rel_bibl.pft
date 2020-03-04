@@ -1,0 +1,7 @@
+if v972^0<>'' then 
+   if v972^0:'.' 
+   then &uf('+7W1#'(if p(v488) then if v488^1:'2' then v488^w,'/'&uf('G0.'&uf('Av972^0#1'))fi fi)),
+      if val(&uf('J,III='g1))>0 
+      then '@@Мероприятия того же ',if v900^c:'c' then 'цикла' else if v900^c:'M' then 'комплекса'fi fi'@@'
+           |"III=|g1|" + |
+fi fi fi      

@@ -1,0 +1,3 @@
+mhl,(if p(v210)then v210^a,| |v210^b fi,if a(v210^b)and p(v210^g) then if v210^g
+:' ' then ' ',v210^g.1|.|,&unifor('B',&unifor('G1 'v210^g)),'.' else ' ',v210^g.
+1|.| fi fi/)

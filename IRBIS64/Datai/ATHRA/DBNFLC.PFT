@@ -1,0 +1,12 @@
+if p(v210^a) then IF (l('!',if v210^a*23.1<>''then &unifor('B'v210^a) else v210^a fi,if p(v210^G)then &unifor('B'v210^G) else v210^b fi,v210^1,v210^D,v210^F,if p(v210^c)then &unifor('B'v210^c) fi,if p(v210^a)then '?' fi)<=0) or (val(ref(l('!',if v210^a*23.1<>''then &unifor('B'v210^a) else v210^a fi,if p(v210^G)then &unifor('B'v210^G) else v210^b fi,v210^1,v210^d,v210^F,if p(v210^c)then &unifor('B'v210^c) fi,if p(v210^a)then '?' fi),mfn))=val(mfn)) THEN '0'ELSE '1 Ошиб
+ка: Дублетная запись ' v210^a,if p(v210^G)then " "v210^G else " "v210^b fi,ref(l('!',if v210^a*23.1<>''then &unifor('B'v210^a) else v210^a fi,if p(v210^G)then &unifor('B'v210^G) else v210^b fi,v210^1,v210^d,v210^F,if p(v210^c) then &unifor('B'v210^c) fi,if p(v210^a)then '?' fi),' (см. N ',f(val(mfn),0,0),')') 
+FI FI/if ((l("I="v903))<=0) or (val(ref(l("I="v903),mfn))=val(mfn)) then '0'else 
+    '2 Ошибка: Дублетный Шифр 'v903,ref(l("I="v903),' (см. N ',f(val(mfn),0,0)')') fi/(if p(v10) then 
+    if v10:'^a' then 
+       if (L('ORCID='&unifor('Av10^a#1')))<=0 or 
+           val(ref(l('ORCID='&unifor('Av10^a#1')),mfn))=val(mfn) then else
+           '2Дублетный ORCID: ',&unifor('Av10^a#1'),
+          ref(l('ORCID='&unifor('Av10^a#1')),' (см. N ',f(val(mfn),0,0),')')
+       fi     
+fi fi/) 
+

@@ -1,0 +1,31 @@
+0
+ADD
+90
+XXXXXXXXXXXXXXXXXXX
+If p(v67) then if a(v90) then v67,"^E"v19^e,"^O"v19^b,"^J"v19^f fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+69
+XXXXXXXXXXXXXXXXXXX
+if p(v67) and a(v69) then (v691/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+920
+XXXXXXXXXXXXXXXXXXX
+if a(v920) then if s(v67,v90)<>'' then 'RDRU' fi fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+19
+F
+if s(v67)<>'' and v90:v67 then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+67
+F
+if p(v90) and v90:v67 then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+691
+F
+if p(v69) and v69=v691 then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX

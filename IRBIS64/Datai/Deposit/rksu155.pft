@@ -1,0 +1,26 @@
+/* поле 155, метод 5 - количество уникальных значений
+/* журналов всего 
+'^V',,,if (v920:'NJ' or v920:'Spec' and p(v933))then if rsum((if p(v910)then if &uf('+97',v910^u)=&uf('Av991^A#1')then '1;' else '0;'fi fi))>0 then ref(l("I="v933),if v110^b: 'a'or v110^b:'02' then v903 fi) fi fi,,,,,,,
+/* журналов всего впервые - в g10 все пол€ 910, проверка по  —” с наименьшей датой
+'^P',,,if (v920:'NJ' or v920:'Spec' and p(v933)) then  &uf('+7W10#',,&uf('+3S,1000,!I=',,,v933,,,'$!,(if p(v910^U) then v910^C,,|^U|v910^U fi/)') ),,,&uf('+7T10#0'),,,if &uf('+97',&uf('Ag10^u#1'))=&uf('Av991^A#1') then ref(l("I="v933),if v110^b: 'a'or v110^b:'02'then v903 fi) fi fi,,,,,,,
+/* зарегистрированных газет
+'^X',,,if (v920:'NJ' or v920:'Spec' and p(v933)) and ref(l("I="v933),v110^b): 'c'then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/* зарегистрированных газет впервые - в g10 все пол€ 910, проверка по  —” с наименьшей датой
+'^L',,,if (v920:'NJ' or v920:'Spec' and p(v933))  then &uf('+7W10#',,&uf('+3S,1000,!I=',,,v933,,,'$!,(if p(v910^U) then v910^C,,|^U|v910^U fi/)') ),,,&uf('+7T10#0'),,,if &uf('+97',&uf('Ag10^u#1'))=&uf('Av991^A#1') then if  ref(l("I="v933),v110^b): 'c' then v933 fi fi fi,,,,,,,
+/* научные журналы
+'^W',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^b,' 'v110^f)='a 541'    then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*учебна€ периодика
+'^B',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^g' 'v110^k' 'v110^l):'j'then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*учебна€ периодика на национальных €зыках
+'^2',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v110^g' 'v110^k' 'v110^l):'j'and (ref(l("I="v933),v101.3," "n101)=&unifor('Korg.mnu|6') or &unifor('Korg.mnu|6'):'sibir'and &unifor('Ksibir.mnu|'ref(l("I="v933),v101.3))<>'') then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*отечественна€ периодика
+'^A',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v102)= &unifor('Korg.mnu|1') then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*зарубежна€ периодика
+'^C',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v102)<>&unifor('Korg.mnu|1') then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*иностранные журналы
+'^Q',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v102)<>&unifor('Korg.mnu|1') and ref(l("I="v933),v110^b): 'a'then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/*иностранные газеты
+'^R',,,if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v102)<>&unifor('Korg.mnu|1') and ref(l("I="v933),v110^b): 'c'then if s(| |v910^u| |):&uf('Av991^A#1') then v933 fi fi,,,,,,,
+/* им€ Ѕƒ сбора данных
+'^Z',,,&uf('+D')
+

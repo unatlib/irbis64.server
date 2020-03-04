@@ -1,0 +1,36 @@
+1
+DelDate.wss
+¬ведите дату (√√√√ћћƒƒ). ”даление записи, если дата возврата меньше/равна заданного значени€ или не найден читатель
+// 991^A - если дата возврата меньше/равна заданного значени€
+// 991^B - признак удал€ть ненайденного в RDR читател€
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+'%1'
+XXXXXXXXXXXXXXXXXXX
+IF
+if v40^F<>'' and v40^F<>'******' and val(v40^F)<=val(&uf('Av991^A#1')) then '1' fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+IF
+if val(v991^B)=1 then if val(&uf('JRDR,RI=',v30))=0 then '1' fi fi
+DELR
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX

@@ -1,0 +1,228 @@
+'</>',
+/*'<font svze="2">'
+IF 'guar delo list':v920 then 
+   if v953<>''and v953^p:'2' or v951^h:'02a'and v951^a<>''then 
+   '<table>','<font style="font-size: 14">',
+   '<tr>',
+      '<td valign="top" width="32%">','<b>'v852^a'</b>','</td>'
+      '<td>''<b>'if v251^c:'документ' then 'ЕД. ХР. &nbsp &nbsp &nbsp &nbsp' else v251^c fi,'</b> </td>'
+      '<td>'' Шифр: ''<b>'v903,'</b>'
+      if p(v215) then ' ('(| ; |+d215,v215^a,| |v215^1),
+         if v920:'guar' then 
+            if p(v215^a) then 
+               if v215^1='' then ' '
+                  if v215^a:'с'or v215^a:'л'or v215^a:'c'or v215^a:'p'or v215^a:'S'or val(v215^a,'a0')=0 then else 
+                     if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
+                     else &unifor('Korg.mnu|4') fi,'.' 
+         fi fi fi fi,')'
+      fi,'</td>'
+   '</tr>''</table>'
+   '<table>','<font style="font-size: 14">',
+      if v953<>''and v953^p:'2'then 
+   '<tr>''<td valign="top" width="10%">'
+           '<A HREF="IRBIS:3,12,,',mfn,',','1','">',
+           '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',','1','"></A>'
+         '</td>',
+      else 
+         if v951^h:'02a'and v951^a<>'' then 
+   '<tr>''<td valign="top">',
+           '<A HREF="IRBIS:3?PATH=10&FILENAME=',&uf('Av951^a#1'),'">',
+           '<IMG  style="width:150 px" SRC="IRBIS:10,,',&uf('Av951^a#1'),'"></A>'
+         '</td>',
+      fi fi 
+         '<td></td>''<td>'
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+' в БД: &nbsp &nbsp '
+         if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+         '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIguar='v903,'">',
+'Док.: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')) '</A>' 
+         fi '&nbsp &nbsp',
+      fi,
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')))>0 then 
+' в БД: &nbsp &nbsp '
+         if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')))>0 then 
+         '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIlist='v903,'">',
+   'л.: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')) '</A>' 
+         fi '&nbsp &nbsp &nbsp',
+      fi,
+/*   '</font>'
+/*'</tr></table>'
+   else 
+      '<table>' '<tr>'
+      '<td valign="top" width="80%">''<b>'v852^a'</b>',
+      '<td valign="Top"width="100%">'
+      if &uf('IMAIN,FULLTEXTABLE,1')='1' then 
+         (if p(v951^I) and a(v951^N) then '<A HREF="',&uf('+\1',v951^I),'">',
+             if p(v951^T) then v951^T else &uf('+\1',v951^I) fi,'</A>', fi),
+         (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>',           fi), 
+         (if v951^N<>'' then 
+             if &uf('+9V')='32' then 'Групповая ссылка работает только в ИРБИС64' else  
+             '<A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group951&FREEPAR1=',&uf('+90'),'&KEY=@',mfn,'">',
+                if p(v951^T) then v951^T else 'Постраничный просмотр полного текста' fi,'</A>', fi fi),
+      else 
+         (if p(v951^A) and a(v951^N) then '<br><A HREF="IRBIS:3,10,,',v951^A,'">',if p(v951^T) then v951^T else v951^A fi,'</A>',           fi), 
+         (if p(v953) then 
+             if '0 2':v953^p then else 
+        '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+        '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"> </A>'
+          fi fi) 
+      fi    
+      '<td>''</td>'
+      '</tr>''</table>'
+   '<table width="100%">''<font style="font-size: 14">',
+      '<tr>'
+      '<td valign="Top" width="20%">',
+      mhu'<b>'v251^c,'</b>',mpl,'</td>'
+      '<td>Шифр: <b> &nbsp 'v903' &nbsp</b>'
+      if p(v215) then ' ('(| ; |+d215,v215^a,| |v215^1),
+         if v920:'guar' then 
+            if p(v215^a) then 
+               if v215^1='' then ' '
+                  if v215^a:'с'or v215^a:'л'or v215^a:'c'or v215^a:'p'or v215^a:'S'or val(v215^a,'a0')=0 then else 
+                     if &uf('Kjz_str_ogl.mnu\'&uf('Av101#1'))<>'' then &uf('Kjz_str_ogl.mnu\'&uf('Av101#1')) 
+                     else &unifor('Korg.mnu|4') fi,'.' 
+         fi fi fi fi,')'
+      fi,
+/*      if v910^9<>'' then '<br>',"КП-"v910^9,";"v910^b fi
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')))>0 or 
+         val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0
+      then 
+'<br> в БД: &nbsp &nbsp',
+      if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+         if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')))>0 then 
+      '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIguar='v903,'">',
+'Док.: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIguar='&uf('Av903#1')) '</A>' 
+         fi '&nbsp &nbsp',
+      fi,
+         if val(&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')))>0 then 
+      '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR'),',guarF,IIlist='v903,'">',o200f
+   'л.: '&uf('J',&uf('IPRIVATE,gua,GUAR'),',IIlist='&uf('Av903#1')) '</A>' 
+         fi '&nbsp &nbsp &nbsp',
+      fi,
+   fi
+ '<font size="3">',
+   if s(v461,v463,v210)<>'' then 
+      if p(v461) then &uf('6otit461_H'), &uf('6otitkn_H') 
+      else &uf('6ozboz_H')," / "v200^f, 
+         if a(v200^f) then 
+            if &uf('6o200f')<>'' then ' / '&uf('6o200f') fi fi 
+      fi ,
+      mhl,Oizd,,ospec, ,ovixd, ,ofizxar_H, 
+      if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,oistasp_H_gua, 
+   else   
+      if v910^9<>'' then '<br><b>',"КП-"v910^9,"; "v910^b '</b>'fi,
+      if s(v910^+,v910^-)<>'' then'<br>Крайние даты события, описываемого в документе: '
+         (if p(v910) then |, |+d910,v910^+*6|.|,v910^+*4.2|.|,v910^+.4,| - |d910^-,v910^-*6|.|,v910^-.2|.|,v910^-.4, 
+          fi)," г."d910^+,
+         if s(v910^-,&uf('Av910#2'))<>'' then 'г.' fi
+      fi,
+      if s(v910^7,v910^8)<>'' then '<br>Время хранения документа, описываемого в деле : '
+         if &uf('Av910#2')<>'' then 
+            mpl,&uf('+7W910#'),&uf('S0'),&uf('+7U910#'(if p(v910) then v910|^?|,&uf('S1A') fi/)),
+            (if p(g910) then if s(g910^7,g910^8)<>'' then 'экз.'g910^?,' - ',g910^7+|; |,|До |g910^8+|; | fi fi) 
+         else v910^7,
+            if val(v910^7)<>0 then if val(v910^7)<5 then ' г.' else 'лет' fi 
+            |До |v910^8 
+         fi fi,  
+      else '<br><b>Название 'if v920:'delo' then 'дела: ' else if v920:'guar' then 'документа: 'fi fi,'</b>'v200^a," ("v200^j")",
+      fi
+      if p(v397) then '<br><b>Способы воспроизведения: </b> '(|; |+v397) fi, 
+      if p(v122) then '<br>' 
+         if v122^a<>'' then '<b>Крайние даты дела: </b>'
+            (if p(v122) then 
+                if v122:'['then v122^a,|-|v122^b 
+                else|, |+d122,v122^a*6|.|,v122^a*4.2|.|,v122^a.4,| - |d122^b,v122^b*6|.|,v122^b*4.2|.|,v122^b.4, 
+             fi fi)," г."d122^a,
+             if s(v122^b,&uf('Av122#b'))<>'' then 'г.' fi 
+             if s(v122^7,v122^8)<>'' then '<br>Время хранения дела: 'v122^7,
+                if val(v122^7)<>0 then if val(&uf('+961.1#'v122^7))=0 or val(&uf('+961.1#'v122^7))>5 then ' лет'else ' г.' 
+             fi fi,
+             "До "v122^8" г." 
+      fi fi 
+      if p(v330) then '<br><b>Содержание:</b>'
+         &uf('S0'),
+         (if p(v330) then '<br>'&uf('S1A')'. '
+             if s(v330^f,v330^2,v330^3)<>'' then v330^f,|, |v330^2,|, |v330^3,'. ' fi,
+             &uf('+S1'v330^c),| : |v330^e,|/|v330^g,|. - |d330^4,
+             if &uf('Korg.mnu|4')<>''then &uf('Korg.mnu|4')'. ' else 'С. ' fi,v330^4
+          fi) 
+fi fi fi,
+ '</font>'
+ '</table>'
+ '<table width="100%">''<font style="font-size: 10">'
+   (if p(v488) then 
+       if v488^1:'фонд' then '<br>'     
+   '<tr>''<td>'
+          if v488^t<>'' then 
+        '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,I='v488^t,'">','<b> Фонд </b> 'v488^j,'</A>'
+          else '<b>Фонд </b> 'v488^j,
+          fi,'&nbsp &nbsp<b> Название: </b> 'v488^c
+   '</td>''</tr>'
+    fi fi/),
+   (if p(v488) then 
+       if v488^1:'опись' then      
+   '<tr>''<td>'
+          if v488^t<>'' then 
+        '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,I='v488^t,'">','<b> Опись </b> 'v488^j,'</A>'
+          else '<b>Опись </b> 'v488^j,
+          fi,'&nbsp &nbsp<b> Название: </b> 'v488^c
+   '</td>''</tr>'
+    fi fi/),
+    (if p(v488) then 
+        if v488^1:'дело' then      
+   '<tr>''<td>'
+           if v488^t<>'' then 
+        '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,I='v488^t,'">','<b> Дело </b> 'v488^j,'</A>'
+           else '<b>Дело </b> 'v488^j,
+           fi,'&nbsp &nbsp<b> Название: </b> 'v488^c
+   '</td>''</tr>'
+     fi fi/),
+    (if p(v488) then 
+        if v488^1:'документ' then      
+   '<tr>''<td>'
+           if v488^t<>'' then 
+        '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,I='v488^t,'">','<b> Документ </b> 'v488^j,'</A>'
+           else '<b>Документ </b> 'v488^j,
+           fi,'&nbsp &nbsp<b> Название: </b> 'v488^c
+   '</td>''</tr>'
+     fi fi/),
+
+'</table>'
+'<font size="3">'
+   "<br><b>Раздел описи: </b>"v545^A,
+   if p(v615^f) then '<br><b>Рубрики системы классификации: </b>'
+      if &uf('Av615#2')<>'' then '<br>' fi (|<dd>|v615^F|<br>|) fi 
+   ,gua_pers_vl,mpl,gua_prim_vl, 
+   if v488^t<>'' then 
+      if v920:'delo' then 
+         (if v488^1:'опис' then 
+             if val(&uf('J'&uf('IPRIVATE,gua,GUAR'),',IIdelo='v488^T))>1 then 
+                '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,IIdelo='v488^t,'">',
+                '<br><font size="3">Другие дела этой описи','</A>' fi 
+          fi)
+       fi,
+       if v920:'guar' then 
+          if v488^1:'дело' then 
+             (if v488^1:'дело' then
+                 if val(&uf('J'&uf('IPRIVATE,gua,GUAR'),',IIguar='v488^T))>1 then 
+                    '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,IIguar='v488^t,'">',
+                    '<br><font size="3">Другие ед. хр. этого дела ','</A>' fi fi)
+          else 
+             (if v488^1:'опис' then 
+                 if val(&uf('J'&uf('IPRIVATE,gua,GUAR'),',IIdelo='v488^T))>1 then 
+                    '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,IIdelo='v488^t,'">',
+                    '<br><font size="3">Другие ед. хр. этой описи','</A>' fi 
+              fi)
+      fi fi,
+      if 'list':v920 then 
+         (if v488^1:'документ' then 
+             if val(&uf('J'&uf('IPRIVATE,gua,GUAR'),',IIlist='v488^T))>1 then 
+                '<A HREF="IRBIS:2,,'&uf('IPRIVATE,gua,GUAR')',guarF,IIlist='v488^t,'">',
+                '<br><font size="3">Другие листы этого док-та','</A>' fi fi)
+      fi,
+'</font>'
+      if p(v998) then '<br>' if val(&uf('J'v998^#',I='v998^W))>0 then 
+         '<A HREF="IRBIS:2,,'v998^#',,I='v998^W,'">','<br><i><font size="2">Запись в БД 'v998^#,'</A>' fi '<br>' 
+      fi 
+fi fi,
+&uf('!')

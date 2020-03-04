@@ -1,0 +1,12 @@
+if p(v470) then '<br><b>',
+   if s(v470^0)<>''then &unifor('Av470^0#1') else'Рец. на 'fi,'</b>',
+   if &unifor('Av470#2')<>''then': ',
+      (|;<br>|+d470,v470^a|. |,v470^c,|: |v470^e,|/ |d470^a,v470^f,
+       if a(v470^f) then ,o470f,fi,
+       if v470^d:'. - ' then v470^d else |. - |v470^d fi,
+       |. - ISBN | v470^b,|. - ISBN | v470^1|(ошибочный)|,|. |v470^y),"<br>"d470 
+   else v470^v": "," "n470^v,v470^a|. |,v470^c,|: |v470^e,|/ |d470^a,v470^f,
+       if a(v470^f) then ,o470f,fi,
+       if v470^d:'. - ' then v470^d else |. - |v470^d fi,
+       |. - ISBN |v470^b,|. - ISBN | v470^1|(ошибочный)|,|. |v470^y,"<br>"d470 
+fi fi,

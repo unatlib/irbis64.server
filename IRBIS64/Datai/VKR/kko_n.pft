@@ -1,0 +1,31 @@
+/*&uf('+7W1001#^F2^Iнод.111'),,
+&unifor('+7W10#',f(rsum(
+         (if p(v691) then 
+             if (&uf('Ag1001^f#1')<>'' and v691^f=&uf('Ag1001^f#1') or &uf('Ag1001^f#1')='') and 
+                (&uf('Ag1001^a#1')<>'' and &uf('+97',v691^a)=&uf('+97',&uf('Ag1001^a#1')) or 
+                 &uf('Ag1001^a#1')='') and 
+                (&uf('Ag1001^i#1')<>'' and &uf('+97',v691^i)=&uf('+97',&uf('Ag1001^i#1')) or 
+                 &uf('Ag1001^i#1')='') and 
+                (&uf('Ag1001^c#1')<>'' and &uf('+97',v691^c)=&uf('+97',&uf('Ag1001^c#1')) or 
+                 &uf('Ag1001^c#1')='')  
+             then 
+                if &uf('Ag991^o#1')='' or &uf('+97',v691^o)=&uf('+97',&uf('Ag991^o#1')) then '1;'
+          fi fi fi)),0,0)),
+if val(g10)>0 then 
+   if p(v951) or 
+      rsum((if p(v910) then 
+               if &unifor('Ag991^t#1')<>'' and p(v910^t) and v910^t:&unifor('Ag991^t#1') then 
+                  if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' else 
+                     if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                  fi fi 
+               else 
+                  if &unifor('Ag991^t#1')=''then 
+                     if a(v910^t) then 
+                        if v910^a:'U' then f(val(v910^1,|1|n910^1)*val(v910^=,|1|n910^=),0,0)';' 
+                        else 
+                           if 'C 6 2 7':v910^a then else f(val(v910^=,|1|n910^=),0,0)';' 
+                  fi fi fi fi
+            fi fi))>0  
+   then 
+       if v699^u:'0' then '0' else '1'
+fi fi fi

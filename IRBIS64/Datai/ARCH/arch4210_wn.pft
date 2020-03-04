@@ -1,0 +1,58 @@
+'<table>', 
+ '<tr>', 
+   '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"  value="',mfn,'">','</td>', 
+   '<td  valign=top >','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+   '<td>','<b>',brief_arch,'</b>',
+     if p(v421) then '<br> <b>Есть приложени',if &uf('Av421#2')<>'' then 'я' else 'е' fi,':</b>' fi,
+     (if p(v421) then 
+     '<table>','<tr>', 
+         '<td  valign=top width=20>','<input type="checkbox" name="CHECKINDEX" value="',
+         if p(v421^y) then &uf('D,!B='v421^y'!,mfn') else &uf('D,!I='v421^w'!,mfn') fi,'">','</td>', 
+         '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>', 
+         '<td>',
+         '<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY='
+         if p(v421^y) then 'B='&uf('+3E'v421^y) else 'I='&uf('+3E'v421^w) fi,'">' 
+         v421^y|. |,v421^a,'</A>'
+         if &uf('D,!I=',v422^w,'!,"1"d951'):'1' then ' [Есть полный текст]' fi ,'<br>',
+         if &uf(|D,!I=|v421^w|!,if &uf('Av422#2')<>'' then 'YYY',if &uf('Av422#3')<>''then 'YYY:' fi fi|):'YYY' then 
+         'Данное приложение входит также в: 'fi
+            '<table>',
+               &uf('+7W903#'),&uf('+7W903#'&uf('Av903#1')),mpl,
+               &uf(|D,!I=|v421^w|!,
+                 if p(v422) then 
+                   if &uf('Av422#2')<>'' then 
+                      (if p(v422) then if v422^w=&uf('Ag903#1')then else 
+              '<tr>', 
+                '<td valign=top width=20>', 
+                     '<input type="checkbox" name="CHECKINDEX"  value="',&uf('D,!I='v422^w,'!,mfn'),'">','</td>', 
+                '<td  valign=top>','<img src=','"','IRBIS:10,,textfolder.gif">','</td>',
+                '<td valign=top width=2000>','<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=I=',&uf('+3E'v422^w),'">' 
+                          if p(v422^y) then v422^y,'. ' fi,v422^a,'</A>','<br>'  
+                '</td>'
+              '</tr>', 
+                      fi fi) 
+                fi fi|),
+            '</table>' 
+          '</td>', 
+        '</tr>', 
+     '</table>', 
+     fi),
+     if a(v421) then 
+        if val(&unifor('J,B422='v19^b))>0 then '<br><b>','На документ есть ссылк',
+           if val(&unifor('J,B422='v19^b))>1 then 'и от документов:<dd>' else 'а от документа: <dd>' fi,'</b>',
+           mpl,&uf('+7W111#'),&uf('7,!B422='v19^b|!,&uf('+7U111#^A'mfn,'^B'v19^b)|),
+          '<table>', 
+            (if p(g111) then 
+            '<tr>', 
+              '<td valign=top width=20>','<input type="checkbox" name="CHECKINDEX"value="',g111^A,'">','</td>', 
+              '<td valign=top >','<img src=','"','IRBIS:10,,folder.gif">','</td>', 
+              '<td valign=top>',
+                '<A HREF="IRBIS:2,,ARCH,arch_wn?TOPPFTNAME=ARCH_BOTTOM_WN&BOTTOMPFTNAME=ARCH_BOTTOM_WN&KEY=B422=',
+                &uf('+3E',g111^b),'">',&uf('7,!B='g111^b|!,v19^b'__',&uf('6brief_arch')|),'</A>',,'</td>',
+            '</tr>'
+            fi/) 
+          '</table>',
+     fi fi,
+   '</td>',
+ '</tr>', 
+'</table>', 

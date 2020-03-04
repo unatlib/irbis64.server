@@ -1,0 +1,41 @@
+[FormatCode]
+WIN
+*****
+[Tab]
+\paperw11907\paperh16727\margl851\margr851\margt567\margb1134 
+{\b\fs24 }
+\pard \qc\widctlpar 
+{\b\fs28
+\par
+\par
+\par Лист инвентарной книги 
+\par }
+{}
+{\b\fs24 \qc
+[Header]
+\b0 }
+{}
+\trowd \trqc\trgaph108\trleft-108\trhdr
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15
+\cellx1868\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx2847\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx4406\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx5257\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx5966\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx7525\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx8234\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx8942\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx10218\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb 
+\cellx11352
+\pard \qc\widctlpar\intbl {\b Дата, N КСУ\cell }
+\pard \qc\widctlpar\intbl {\b N n/n\cell }
+\pard \qc\widctlpar\intbl {\b Инв.N/ Штрих-код\cell }
+\pard \qc\widctlpar\intbl {\b Подразделение\cell }
+\pard \qc\widctlpar\intbl {\b Отм о пр.\cell }
+\pard \qc\widctlpar\intbl {\b Автор и заглавие\cell }
+\pard \qc\widctlpar\intbl {\b Год изд.\cell }
+\pard \qc\widctlpar\intbl {\b Раздел знаний\cell }
+\pard \qc\widctlpar\intbl {\b Цена\cell }
+\pard \qc\widctlpar\intbl {\b N акта выбытия\cell }
+\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar
+\par }

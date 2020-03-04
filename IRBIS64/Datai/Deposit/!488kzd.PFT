@@ -1,0 +1,19 @@
+mhl, 
+(if '***'='4601' or '***'='4602'then 'Ошибка отбора - заглавие серии' else 
+    if '***'='510' then '^A'v***^d,'^W'&unifor('Av903#1'),'^9'&unifor('+D') else 
+       if '***'='923' then 'Ошибка отбора - заглавие части' else 
+          if '***'='461' then '^A'v***^c,| |n***^c,'^W'&unifor('Av903#1'),'^9'&unifor('+D') else 
+             if '***'='330' then 
+                if p(v330^c) then'^A'v330^c,' // '&uf('6brief'),'^W'&unifor('Av903#1'),'^9'&unifor('+D') fi else 
+                if '***'='463' then 'Ошибка отбора - заглавие источника статьи' else 
+                   if '***'='470'then 'Ошибка отбора - рецензируемая статья' else 
+                      if '***'='481'then 'Ошибка отбора - приплетенное издание' else 
+                         if '***'='9251' or '***'='9252' or '***'='9253' then 'Ошибка отбора - заглавие тома' else 
+                            if '***'='922' then '^A'v922^c,' 'n922^c,
+                               if &unifor('Av920#1'):'NJ' then '^Z'&uf('Av920#1'),'-',&uf('Av933#1') fi
+                               '^W'&unifor('Av903#1'),'^9'&unifor('+D') 
+                            else 
+                               if '***'='4611'then '^A'v461^a,| |n461^a,'^W'&unifor('Av903#1'),'^9'&unifor('+D') else 
+                                  if '***'='541'then '^A'v***,'^W'&unifor('Av903#1'),'^9'&unifor('+D') 
+                                  else '^A'v***^a,'^W'&unifor('Av903#1'),'^9'&unifor('+D') 
+ fi fi fi fi fi fi fi fi fi fi fi fi/) 

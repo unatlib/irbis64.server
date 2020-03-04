@@ -1,0 +1,14 @@
+if v920='J' then &uf('6JW_H') 
+            else if v920:'NJ' then &uf('6NJW_H') 
+                              else if v920:'SPEC' then &uf('6MN_H') 
+                                                  else if (v920:'ASP') or (v920:'AUNTD') then &uf('6ASP_H')
+                                                                     else if v920:'MUSP' then &uf('6MUSI_H') 
+                                                                                         else if v920:'BOUNI' then &uf('6VS600_H') 
+                                                                                                              else &uf('6KN_H') 
+                                                                                              fi 
+                                                                          fi 
+                                                       fi 
+                                   fi 
+                 fi 
+fi
+'___________________________________________________<br>'

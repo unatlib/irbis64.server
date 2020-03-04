@@ -1,0 +1,92 @@
+&uf('+7W1#'),(if p(v910)then if v910^a='0'then &uf('+7U1#'v910^b) fi fi/),&uf('+7W2#'(g1/)),&uf('+7G1'),&uf('+7S2#1'),
+if g2<>'' then '2Регистрируются дублетные комплекты: 'g2/ else '0'/ fi,
+IF p(v910) then 
+   IF v920='J'or v910^a:'R' then else 
+      IF v905^3='1' or &uf('IPRIVATE,3,')='1' then else 
+         IF s(v905^3,&uf('IPRIVATE,3,')):'22'or s(v905^3,&uf('IPRIVATE,3,')):'32' then else 
+            (if p(v910) then 
+                if p(v910^b)then 
+                   if &unifor('Av920#1')='NJ'or &unifor('Av920#1')='NJP'or v910^a='R'or &unifor('Av215^y#1')<>'' 
+                   then /'0' else 
+                      if val(&uf(|J,IN=|v910^b))<2 then/'0' 
+                      else/ &uf('+7W6#'v910^b),   if v910^b:'б/н' or v910^b:'У-'then else &uf('+7W7#'mfn),&uf(|7,!IN=|v910^b|!,if val(&uf('Ag7#1'))=val(mfn) then else '2Дублетный инв.номер: '&uf('Ag6#1'),' см.N ',,mfn '; ' fi|),fi, 
+             fi fi fi fi/)
+         FI,
+         IF s(v905^3,&uf('IPRIVATE,3,')):'21' or s(v905^3,&uf('IPRIVATE,3,')):'31' then else 
+            (if p(v910) then 
+                if p(v910^h)then 
+                   if l(|IN=|v910^h)<=0 or val(ref(l(|IN=|v910^h),mfn))=val(mfn)then/'0' 
+                   else/'2Дублетный Штрих-код: 'v910^h,ref(l(|IN=|v910^h),' (см.N ',mfn,')') 
+                   fi 
+                else/'0' 
+             fi fi)   
+         FI, 
+         IF s(v905^3,&uf('IPRIVATE,3,')):'3' or s(v905^3,&uf('IPRIVATE,3,'))='' then 
+            &unifor('+7W11#'),&unifor('+7W10#'),&unifor('+7W21#'),&unifor('+7W20#'), 
+            &unifor('+7W31#'),&unifor('+7W30#'),&unifor('+7W41#'),&unifor('+7W40#'), 
+            IF s(v905^3,&uf('IPRIVATE,3,')):'32' then else 
+               &unifor('+7W11#'(if 'U C 6':v910^a then else if v910^a:'R' then ' ' &uf('G2/'v910^b) else | |v910^b fi fi/)), 
+               &uf('+7W10#'),&uf('+7W10#'f(rsum((if p(g11) then g10,';1;' fi)),0,0)),
+               &uf('+7W21#'(g11/)),&uf('+7G21'),
+               &uf('+7W20#'),&uf('+7W20#'f(rsum((if p(g21) then g20,';1;' fi)),0,0)),
+               if val(g10)=val(g20) then else /'2 В документе есть дублетные инв. номера: ' fi, 
+               IF s(v905^3,&uf('IPRIVATE,3,'))='' then 
+               &uf('+7S11#21'),(g11/), 
+            FI FI,
+            IF s(v905^3,&uf('IPRIVATE,3,')):'31' then else 
+               &unifor('+7W31#'(if '4 6 ':v910^a then else | |v910^h fi/)), 
+               &uf('+7W30#'),&uf('+7W30#'f(rsum((if p(g31) then g30,';1;' fi)),0,0)),
+               &uf('+7W41#'(g31/)),&uf('+7G41'),
+               &uf('+7W40#'),&uf('+7W40#'f(rsum((if p(g41) then g40,';1;' fi)),0,0)),
+               if val(g40)=val(g30) then else /'2 В документе есть дублетные штрих-коды: ' fi, 
+               IF s(v905^3,&uf('IPRIVATE,3,'))='' then 
+                  &uf('+7S31#41'),(g31/), 
+      FI FI FI FI,
+      (IF p(v910)then 
+          IF v910:'^a'then/'0' else/'1 Ошибка: отсутствует статус экз-ра   'v910^b,|   |v910^c 
+          FI, 
+          IF '2 R C 7':v910^a then else 
+             IF v910:'^b'or v910:'^h'then/'0' else 
+                if &unifor('Av920#1')='NJ'or &unifor('Av920#1')='NJP' 
+                then /'2 Ошибка: отсутствует номер экз-ра и штрих-код ' 
+                else /'2 Ошибка: отсутствует инв.номер и штрих-код экз-ра 'fi,v910^c, 
+             FI, 
+          FI, 
+          IF 'C U':v910^a then 
+             IF p(v910^1)then/'0' 
+             else /'2 Ошибка: отсутствует число полученных экз-ров(Статус"'v910^a|")|, 
+                  | |v910^c,| |v910^d 
+          FI FI, 
+          IF v910^a:'0' then 
+             IF p(v910^1)then/'2 Ошибка: ВВЕДЕНО число полученных экз-ров - УДАЛИТЬ (Статус"'v910^a|")|, 
+                  | |v910^c,| |v910^d 
+             else /'0'     
+          FI FI, 
+          if p(v910^e) then 
+             if val(v910^e)>0 then 
+                if &unifor('G1#'v910^e):',' or &unifor('G1#'v910^e):'=' or 
+                   &unifor('G1#'v910^e):'-' or &unifor('G1#'v910^e):'\' then 
+                   /'2 Ошибка: Нарушена структура данных ЦЕНА "NNNN.NN"  'v910^e 
+          fi fi fi 
+       else/'0' 
+       FI), 
+    FI/ 
+ELSE/'2 Отсутствуют сведения об экземплярах' 
+FI, 
+IF v920='J' then 
+   if p(v936)then (if p(v910) then if p(v910^b)then else/|2 Отсутствует N экз-ра - |v910^d fi fi/) 
+fi FI, 
+if v920='J'then 
+   if p(v936) then 
+      if L("I="v903,"/"v934,"/"v935,'/'&unifor('G0-'v936)) <= 0 then/'0' 
+      else (if '0 8':v910^a then 
+               if ref(L('I='&unifor('Av903#1'),'/'&unifor('Av934#1'), 
+                   if &unifor('Av935#1')<>''then '/'&unifor('Av935#1')fi,'/'&unifor('G0-'&unifor('Av936#1'))), 
+                   (if '0 8 p':v910^a then | |v910^b| |fi)) : s(| |v910^b| |) 
+               then /|1 Дубл. экз.:|v910,'  mfn: ' 
+                    f(L('I='&unifor('Av903#1'),'/'&unifor('Av934#1'), 
+                    if &unifor('Av935#1')<>''then '/'&unifor('Av935#1')fi,'/'&unifor('G0-'&unifor('Av936#1'))),0,0) 
+            fi fi/) 
+      fi else/'0' 
+   fi else/'0' 
+fi/ 

@@ -1,0 +1,116 @@
+0
+CHA
+700^A
+*
+', '
+'^B'
+CHA
+700^A
+*
+','
+'^B'
+REP
+700
+*
+if p(v700^B)then v700,'^Y'&unifor('F1'v700^b), else if v700^a:' 'then'^A'&unifor('E1'v700^a),'^B'&unifor('F1'v700^a),if v700^a:'.'then else'^G'&unifor('G2 'v700^a)fi,'^Y'&unifor('F2'v700^a),"^C"v700^c,"^X"v700^x fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+700
+*
+if v700^B:' 'then"^A"v700^a,'^B'v700^b.1".",v700^y.1".","^C"v700^c,"^G"v700^g,"^X"v700^x else v700 fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+700^Y
+F
+if p(v700^Y)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+CHA
+970^A
+*
+', '
+'^B'
+CHA
+970^A
+*
+','
+'^B'
+REP
+970
+*
+if p(v970^B)then v970,'^Y'&unifor('F1'v970^b) else if v970^a:' 'then'^A'&unifor('E1'v970^a),'^B'&unifor('F1'v970^a),if v970^a:'.'then else'^G'&unifor('G2 'v970^a)fi,"^Y"&unifor('F2'v970^a),"^C"v970^c fi fi
+XXXXXXXXXXXXXXXXXXX
+REP
+970
+*
+if v970^B:' 'then"^A"v970^a,'^B'v970^b.1".",v970^y.1".","^C"v970^c,"^G"v970^g else v970 fi
+XXXXXXXXXXXXXXXXXXX
+DEL
+970^Y
+F
+if p(v970^Y)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+CHA
+701^A
+*
+', '
+'^B'
+CHA
+701^A
+*
+','
+'^B'
+REP
+701
+F
+(if p(v701^B)then v701,'^Y'&unifor('F1'v701^b) else if v701^a:' 'then'^A'&unifor('E1'v701^a),'^B'&unifor('F1'v701^a),'^Y'&unifor('F2'v701^a),if v701^a:'.'then else'^G'&unifor('G2 'v701^a)fi,|^C|v701^c fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+701
+F
+(if v701^B:' 'then|^A|v701^a,|^B|v701^b.1|.|,v701^y.1|.|,|^C|v701^c,|^G|v701^g else v701 fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+701^Y
+F
+if p(v701^Y)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+CHA
+702^A
+*
+', '
+'^B'
+CHA
+702^A
+*
+','
+'^B'
+REP
+702
+F
+(if p(v702^B)then v702,'^Y'&unifor('F1'v702^b) else if v702^a:' 'then'^A'&unifor('E1'v702^a),'^B'&unifor('F1'v702^a),'^Y'&unifor('F2'v702^a),if v702^a:'.'then else'^G'&unifor('G2 'v702^a)fi,|^C|v702^c,|^4|v702^4 fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+702
+F
+(if v702^B:' 'then|^A|v702^a,|^B|v702^b.1|.|,v702^y.1|.|,|^G|v702^g,|^C|v702^c,|^4|v702^4 else v702 fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+702^Y
+F
+if p(v702^Y)then'1'else'xxx'fi 
+XXXXXXXXXXXXXXXXXXX
+CHA
+10^D
+*
+'ð.'
+''
+CHA
+215^A
+*
+'ñ.'
+''
+DEL
+910
+F
+(if p(v910)then if v910.1<>'^'or v910^B=''and v910^h=''and (v910^a='0'or a(v910^a))then'1'else'x'fi fi/)
+XXXXXXXXXXXXXXXXXXX

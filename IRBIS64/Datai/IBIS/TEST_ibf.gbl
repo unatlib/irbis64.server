@@ -1,0 +1,8 @@
+0
+REP
+910^D
+F
+&uf('+7W10#'),(if p(v910) then  if p(v910^D) then if &uf('+97',v910^U)='%1' then if &uf('+97',v910^D)='%2'  then '%3',,,&uf('+7W10#Место хранения изменено. MFN=',f(val(mfn),0,0),' Инв.номер - ',v910^B )  else v910^D fi else v910^D fi else # fi fi/)
+
+PUTLOG
+g10

@@ -1,0 +1,124 @@
+1
+MHR.MNU
+Место хранения подшивки
+ADD
+991^A
+1
+'%1'
+XXXXXXXXXXXXXXXXXXX
+ADD
+991^B
+1
+(if p(v910) then if v910^d=&unifor('Av991^a#1') then v910^b fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+931^c
+1
+&unifor("V"v931^c)
+XXXXXXXXXXXXXXXXXXX
+ADD
+74
+XXXXXXXXXXXXXXXXXXX
+(/&unifor('1*R,?v931^c#1'))
+XXXXXXXXXXXXXXXXXXX
+REP
+931^c
+1
+&unifor("U"v931^c)
+XXXXXXXXXXXXXXXXXXX
+REP
+920
+1
+'NJK'
+XXXXXXXXXXXXXXXXXXX
+DEL
+910^E
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+CORREC
+if p(v74) then '*' fi
+v991,"^C"v903
+(if p(v74) then |I=|d74,&unifor('Av933#1'),|/|d74,&unifor('Av934#1'),if &unifor('Av935#1')<>''then'/'&unifor('Av935#1') fi,|/|v74 fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+920
+1
+'NJP'
+XXXXXXXXXXXXXXXXXXX
+ADD
+444
+XXXXXXXXXXXXXXXXXXX
+if p(v910) then &unifor('S0'), (if p(v910) then if a(v910^d) then &unifor('S1') else if v910^d:&unifor('Av1001^a#1') and a(v910^p) and '0 3 1': v910^a then &unifor('S1A') else &unifor('S1') fi fi fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^!
+F
+if p(v910) then &unifor('S0'), (if p(v910) then &unifor('S1A') fi/) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^P
+F
+(if p(v910) then if v910^!=&unifor(|Av444#1|d910) then &unifor(|Av1001^c#1|d910) else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+910^I
+F
+(if p(v910) then if v910^!=&unifor('Av444#1') then &unifor('Av1001^b#1') else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+REP
+910^a
+F
+(if p(v910) then if v910^!=&unifor(|Av444#1|d910) then 'p' else v910^a fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+444
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+910^!
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+463^W
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+445
+XXXXXXXXXXXXXXXXXXX
+(if p(v910) then if '2 6 7 ':v910^a then else '^A'v910^p,if a(v910^p) then &unifor('Av903#1') fi fi fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+463
+XXXXXXXXXXXXXXXXXXX
+(if p(v445) then if &unifor('Pv445^A')<>''then/'^W'&unifor('Pv445^A') fi fi)
+XXXXXXXXXXXXXXXXXXX
+DEL
+445
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+74
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+

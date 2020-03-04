@@ -1,0 +1,48 @@
+'
+\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx461
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5300
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx6400
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7600
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx8600
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9600
+\pard \qc\widctlpar\intbl {##\cell}
+\pard \ql\widctlpar\intbl {'
+&uf('6brief'),,,,,
+'\cell }\pard \qc\widctlpar\intbl {'
+/*--------------автор заказа/заявки
+(if p(v62) then v62^9|\par | fi/),,(if p(v694) then v694^9|\par | fi/),,
+'\cell }\pard \qc\widctlpar\intbl {'
+/*--------------дата заказа/заявки
+(if p(v62) then v62^C|\par | fi/),,(if p(v694) then v694^4.8|\par | fi/),,
+'\cell }\pard \qr\widctlpar\intbl {'
+/*-------------количество на док
+(if p(v62) then v62^1|\par | fi/),,(if p(v694) then v694^1|\par | fi/),,
+'\cell }\pard \qr\widctlpar\intbl {'
+/*-------------ВСЕГО количество на док
+f(rsum((if p(v62) then v62^1|, | fi)) + rsum((if p(v694) then v694^1|, | fi)),0,0)
+'\cell }\pard \widctlpar\intbl {\b \row }\pard \qc\widctlpar '

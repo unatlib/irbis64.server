@@ -1,0 +1,9 @@
+Form1
+(if p(v907)then if v907^A.4=&uf('Av1000^a#1') then v907^b,|???|n907^b fi fi/)
+FIO_SF.mnu
+(if p(v907)then if v907^A.4=&uf('Av1000^a#1') then v907^A*4.2, fi fi/)
+MONTH_SF.mnu
+4,7
+991.wss,1000
+'¬вод каталогизаторами данных в электронный каталог по мес€цам за ', v1000^A,' г.'
+1,1

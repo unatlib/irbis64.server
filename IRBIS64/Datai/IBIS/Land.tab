@@ -1,0 +1,58 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+'\b 'v999'\b0 '
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9179 
+\pard \widctlpar\intbl {\qc \fs16 ''\b '"Общее кол-во выдач: "v1'\b0 ''
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
+*****
+[Tab]
+{\rtf1\ansi \deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset204\fprq2 Arial Cyr;}}{\stylesheet{\widctlpar \f0\fs20\lang1049 \snext0 Normal;}{\s1\sb240\sa60\keepn\widctlpar \b\f0\fs28\lang1049\kerning28 \sbasedon0\snext0 heading 1;}{\s2\sb240\sa60\keepn\widctlpar \b\i\f0\lang1049 \sbasedon0\snext0 heading 2;}{\*\cs10 \additiveDefault Paragraph Font;}}\paperw11907\paperh16839\margl1701\margr850\margt1134\margb1134 
+\pard \qc\widctlpar {
+\fs16 \b \fs24 \qc Спрашиваемость литературы\par 
+\par }
+{\b\fs\fs16\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx1242 
+\pard \widctlpar\intbl {\qc \fs16 N
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx5494 
+\pard \widctlpar\intbl {\qc \fs16 \b Краткое описание\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx7478 
+\pard \widctlpar\intbl {\qc \fs16 \b Шифр\b0 
+\cell }
+\clbrdrt\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15
+\clbrdrb\brdrs\brdrw15
+\clbrdrr\brdrs\brdrw15
+\cellx9179 
+\pard \widctlpar\intbl {\qc \fs16 \b Кол-во выдач\b0 
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

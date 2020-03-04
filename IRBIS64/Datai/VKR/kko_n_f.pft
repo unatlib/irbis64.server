@@ -1,0 +1,18 @@
+/*&uf('+7W1001#^F2^AÀÃ^PV')
+&uf('+7W103#'),&uf('+7W103#'&uf('6kko_103')),
+if val(g103)>0 then 
+   &uf('+7W692#'(if p(v692) then if v692^b=&uf('Av693^b#1') and g692^C:'O' then v692 fi fi/)),
+   if (v900^t:'L' or p(v230)) and v910='' 
+   or 
+      (&uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'O' or  &uf('KsemV.mnu\'g1001^f)<>'' and  
+        (g1001^o='' and v693^d<>'' or 
+         g1001^o<>''and s(if p(v693) then if v693^a=&uf('Ag1001^o#1') or v693^x:'!com' then v693^d fi fi)<> '')) 
+   or 
+      (&uf('KsemO.mnu\'g1001^f)<>'' and g1001^p:'V' and  
+        (g1001^o='' and g692^d<>'' or 
+         g1001^o<>'' and s(if p(g692) then if g692^b=&uf('Av693^b#1') and (g692^a=&uf('Ag1001^o#1') or g692^x:'!com') 
+                           then g692^d fi fi) <>''))
+   then 
+      if v699^u:'0' then '0' else '1' fi 
+   else '0' fi 
+else '0' fi

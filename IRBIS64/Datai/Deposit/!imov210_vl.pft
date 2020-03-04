@@ -1,0 +1,7 @@
+                  if &uf('+960*0.2#'g7):' [' then &uf('G0]'g7*2) else 
+                     if &uf('+960.1#'g7):'[' then &uf('G0]'g7*1) else 
+                        if &uf('+960.1#'g7):' ' then 
+                           if &uf('+961.1#'g7*1)=' ' then &uf('+960.'f(val(&uf('+95'g7*1))-1,0,0),'#'g7*1) else g7*1 fi 
+                        else  
+                           if &uf('+961.1#'g7)=' ' then &uf('+960.'f(val(&uf('+95'g7))-1,0,0),'#'g7) else g7     
+               fi fi fi fi

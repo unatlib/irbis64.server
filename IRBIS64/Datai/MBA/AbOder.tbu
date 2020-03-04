@@ -1,0 +1,95 @@
+[FormatCode]
+WIN
+*****
+[Sum]
+'1'
+#
+if val(g5)>0 
+then 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng1500 
+\cellx14848 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+'\b Итого: всего заказов ',,g5,,,'; на сумму ',,f(rsum((g6|,|)),0,2),,'\b0 ',,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng2000 
+\cellx14848 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+'\b Итого: всего абонентов, имеющих заказ: ',,,f(rsum((g14|,|)),0,0),,,,,'; всего заказов ',,g15,,,'; на сумму ',,f(rsum((g16|,|)),0,2),,'\b0 ',,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ',,
+fi,,,
+*****
+[Tab]
+\paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
+{\b\fs\fs24\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx788 
+\pard \widctlpar\intbl {\qc \fs24 NN
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx1922 
+\pard \widctlpar\intbl {\qc \fs24 Номер заказа
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx3339 
+\pard \widctlpar\intbl {\qc \fs24 Дата оформления
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx5607 
+\pard \widctlpar\intbl {\qc \fs24 Этап 
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7591 
+\pard \widctlpar\intbl {\qc \fs24 Стоимость
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9462 
+\pard \widctlpar\intbl {\qc \fs24 Выдача
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10596 
+\pard \widctlpar\intbl {\qc \fs24 Имя БД ЭК
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12580 
+\pard \widctlpar\intbl {\qc \fs24 Шифр
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14848 
+\pard \widctlpar\intbl {\qc \fs24 Фонд.
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

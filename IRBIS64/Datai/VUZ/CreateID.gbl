@@ -1,0 +1,37 @@
+0
+// построение идентификатора дисциплины DISC, если он отсутствует
+IF
+if v920: 'DISC' then '1' fi
+IF
+if v3^A<>'' and v3^0='' then '1' fi
+DEL
+111
+*
+
+
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5))>0 then '1' fi
+ADD
+111
+
+'0'
+
+REPEAT
+IF
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' fi
+REP
+111
+1
+f(val(v111)+1,0,0)
+
+FI
+UNTIL
+if val(&uf('JVUZ,IDD=',v3^A.5,f(val(v111),0,0)))>0 then '1' else '0' fi
+FI
+REP
+3
+1
+v3,'^0',v3^A.5,v111
+
+FI
+FI

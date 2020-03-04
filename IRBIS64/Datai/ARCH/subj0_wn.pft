@@ -1,0 +1,98 @@
+/* v1000 - имя БД
+/*v1004 - список элементов (терминов)
+/*v1011 - префикс терминов
+/*v1006 - порция терминов
+
+'<script language="JavaScript">',
+'	function DropDownParams(it)',
+'	{',
+'		el1 = document.getElementById(it);',
+'		if(el1.style.display=="none")',
+'		{',
+'			el1.style.display="block";',
+'		}',
+'		else',
+'		{',
+'			el1.style.display="none";',
+'		}',
+'	}',
+' </script>',
+
+
+'<title>Словарь ',&uf('Kprefix_wn.mnu|',v1011),' (БД ',v1000,' начиная с ',&uf('AV1004^A#1'),')</title>',
+"<b>База данных: "v1000" - Словарь ",&uf('Kprefix_wn.mnu|',v1011),'<br></b>',
+/*'<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',v1004^A,'">',
+
+
+&uf('+7W1#'),&uf('+7W11#'),
+
+/*(&uf('+7U1#',v1004)),
+
+(if val(v1004^b)>0 then &uf('+7U1#',&uf('7,!',&uf('AV1011#1'),v1004^A,'!,*')) fi),
+(if g1<>'' then &uf('+7U11#',&uf('+97','^A',g1^A,'^B',g1^B,'^C',g1^C,'^D',g1^D,'^E',g1^E,'^F',g1^F,'^Zяяя')) fi),
+
+
+/*(&uf('+7U11#',&uf('+97',g1))),
+&uf('+7G11'),
+
+&uf('+7T11'),
+
+
+&uf('+7W1#'),/* A
+&uf('+7W2#'),/* B
+&uf('+7W3#'),/* C
+&uf('+7W4#'),/* D
+&uf('+7W5#'),/* E
+&uf('+7W6#'),/* F
+(if g11<>'' then 
+if (g11^A<>'') and (g11^A<>&uf('Ag1#1')) then '</div>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'">',
+                                             if g11^b<>'' 
+                                                then |<A  style="{cursor: hand;color=blue;text-decoration=underline;}" onclick="javascript:DropDownParams('LEVEL|d1004,&uf('+90'),
+                                                     |');">|g11^A|</A>|,
+                                               else g11^a, 
+                                             fi,
+                                             
+                                             &uf('+7W1#',g11^A),&uf('+7W2#'),&uf('+7W3#'),&uf('+7W4#'),&uf('+7W5#'),&uf('+7W6#'),'<br>',
+                                             
+                                             '<div id="LEVEL',&uf('+90'),'" style="display:none">',
+                                             fi, 
+if (g11^B<>'') and (g11^B<>&uf('Ag2#1')) then '<dd>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'^B',g11^B,'">',
+                                              g11^B,&uf('+7W2#',g11^B),&uf('+7W3#'),&uf('+7W4#'),&uf('+7W5#'),&uf('+7W6#'),'<br>'fi,
+if (g11^C<>'') and (g11^C<>&uf('Ag3#1')) then '<dd><dd>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'^B',g11^B,'^C',g11^C,'">',
+                                              g11^C,&uf('+7W3#',g11^C),&uf('+7W4#'),&uf('+7W5#'),&uf('+7W6#'),'<br>'fi,
+if (g11^D<>'') and (g11^D<>&uf('Ag4#1')) then '<dd><dd><dd>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'^B',g11^B,'^C',g11^C,'^D',g11^D,'">',
+                                              g11^D,&uf('+7W4#',g11^D),&uf('+7W5#'),&uf('+7W6#'),'<br>'fi,
+if (g11^E<>'') and (g11^E<>&uf('Ag5#1')) then '<dd><dd><dd><dd>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'^B',g11^B,'^C',g11^C,'^D',g11^D,'^E',g11^E,'">',
+                                              g11^E,&uf('+7W5#',g11^E),&uf('+7W6#'),'<br>'fi,
+if (g11^F<>'') and (g11^F<>&uf('Ag6#1')) then '<dd><dd><dd><dd><dd>','<input type=','"','checkbox','"',' name="CHECKTRM" value=','"',g11^A,'^B',g11^B,'^C',g11^C,'^D',g11^D,'^E',g11^E,'^F',g11^F,'">',
+                                              g11^F,&uf('+7W6#',g11^F),'<br>'fi,
+
+                                              
+fi),
+'</div>',
+
+
+/*|<dd>|g11+|<br>|,
+
+
+
+'<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input name="T21TRM" value="',&uf('AV1004^A#',&uf('+N1004'))'">',
+'<input type="submit" name="" value="Продолжить">',
+'<input type="hidden" name="C21COM" value="4">',
+'<input type="hidden" name="I21DBN" value="',v1000,'">',
+'<input type="hidden" name="PFTNAME" value="subj0_wn">',
+'<input type="hidden" name="T21PRF" value="',v1011,'">',
+'<input type="hidden" name="T21CNR" value="',v1006,'">',
+'<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+'<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'</form>'
+     '<form action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+     '<input type="submit" name="" value="Отмеченные...">',
+     '<input type="hidden" name="C21COM" value="5">',
+     '<input type="hidden" name="I21DBN" value="',v1000,'">',
+     '<input type="hidden" name="T21PRF" value="',v1011,'">',
+     '<input type="hidden" name="PFTNAME" value="select_subj0_wn">',
+     '<input type="hidden" name="FREEPAR0" value="',v1100,'">',
+     '<input type="hidden" name="FREEPAR1" value="',v1101,'">',
+'</form>'

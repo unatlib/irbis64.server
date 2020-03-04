@@ -1,0 +1,24 @@
+'<title>Отмеченные авторитетные записи</title>',
+'<b>',if p(v1004) then 'Отмеченные авторитетные запси: 'else 'Нет отмеченных авторитетных записей.'fi,'</b>'
+'<table>',
+(if p(v1004) then 
+'<tr>',
+   '<td>',
+   '<input type="checkbox" name="CHECKINDEX" value="',v1004^a,'">',
+   '</td>'
+   '<td>',
+   '<A HREF="IRBIS:2,,,athr0_wn?TOPPFTNAME=athr_top_wn&S21P01=0&S21P02=1&S21P03=',
+   if &uf('+D') : 'ATHRC' then 'M=',
+                          else if &uf('+D') : 'ATHRA' then 'A=',
+                                                      else if &uf('+D') : 'ATHRS' then 'S=',
+   fi fi fi,
+   '&S21STN=1&S21CNR=100&S21STR=',&uf('+3E',v1004^a),
+   '">',
+   v1004^a,
+   '</A>',
+   '</td>',
+'</tr>',
+ fi),
+'</table>',
+if p(v1004) then athr_bottom_wn fi
+

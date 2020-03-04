@@ -1,0 +1,213 @@
+'{',,,,,,,,,
+,,'{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; \red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; \red128\green128\blue128;\red192\green192\blue192;}',,,,,,,
+if v1^Y<>'' 
+then 
+/*------------------------------------------------------------------------------------------запись
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx600 
+\pard \widctlpar\intbl {\qc \fs20 ',,&uf('S1A'),,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx7800 
+\pard \widctlpar\intbl {\ql \fs24 ',,
+/*----------библиография
+ref(val(v1^Y),&uf('6brief')),,,
+/*----заготовки в поле g32, число экз-в в G12
+&uf('+7W991#',
+        '^O',,if v1^A<>'' and v1^A<>' ' then v1^A else v1^O fi,,
+        '^V',,if v1^B<>'' and v1^B<>' ' then v1^B else v1^V fi,,
+        '^A',,if v1^C<>'' and v1^C<>' ' then v1^C else v1^1 fi,,
+        '^B',,if v1^D<>'' and v1^D<>' ' then v1^D else v1^2 fi,,
+        '^N',,if v1^E<>'' and v1^E<>' ' then v1^E else v1^N fi,,
+        '^C',,if v1^F<>'' and v1^F<>' ' then v1^F else v1^3 fi,,
+        '^S',,if v1^G<>'' and v1^G<>' ' then v1^G else v1^S fi,,
+        '^G',,if v1^H<>'' and v1^H<>' ' then v1^H*1 else v1^4 fi,,
+        '^F',,v1^5,,'^-',,v1^-,,
+      ),,,
+&uf('+7W32#',,ref(val(v1^Y),&uf('6KoListSpecGrRdr') ) ),,,
+/*отладка    '>>>>MFN: ',,f(val(v1^Y),0,0),,,' 991: ',g991,,,'--->',,,(if p(g32) then g32,'\par ' fi/),,,,'--->',,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8300 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*--------номер повторения специальности
+&uf('+7W35#'),,,,,
+(if p(g32) then if p(g32^A) then g32^A else ' ' fi '\par ',,,,,&uf('+7W35#',,f(val(&uf('Ag35#1'))+1,0,0) ),,,,,,,, fi/),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11200 
+\pard \widctlpar\intbl {\ql \fs20 ',
+/*----------направление/специальность
+if val(v1^-)=1 then (if p(g32) then if p(g32^N) then g32^N,,g32^O else ' ' fi '\par ' fi/) else 
+                              (if p(g32) then if p(g32^C) then g32^C,,g32^O else ' ' fi '\par ' fi/),,fi,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx11800 
+\pard \widctlpar\intbl {\qc \fs20 ',
+/*------------номер группы
+(if p(g32) then if p(g32^E) then g32^E else ' ' fi '\par ' fi/),,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx12600 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,
+/*---------------студентов
+&uf('+7W33#'),,,
+(if p(g32) then if p(g32^D) then &uf('+7U33#',g32^D),,g32^D else ' ' fi '\par ' fi/),,
+&uf('+7W34#',,,f(rsum((g33,',')),0,0)  ),,,,if val(g34)>0 then '\b Всего: ',g34,'\b0 ' fi,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx13400 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,
+/*----в g35 число строк
+    &uf('+7W35#',f((val(g35) / 2),0,0)   ),,,,,,&uf('+7W36#',,g35),,,
+&uf('+U',g35,,,'#\par '),,
+'\par ',,g12,,,,,,,,,,,,
+'\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx14500 
+\pard \widctlpar\intbl {\qc \fs20 ',,,,
+/*-------------Кол-во экз/студ - g12/g34
+&uf('+U',g36,,,'#\par '),,
+'\par ',,if val(g34)>0 then f(val(g12)/val(g34),0,2) else '-' fi,,,,,,,,,,,
+'\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+else 
+/*----------------------------------------------------------------------------------заголовки-------------- 
+  &uf('S0'),,,,
+  if v1^J<>' ' and v1^J<>''
+  then 
+/*--------------дисциплина    
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng300 
+\cellx600 \pard \widctlpar\intbl {\ql \fs24 \b ',,,,,,&uf('+7W21#',,f(val(g21)+1,0,0) ),,,g21,,,
+'\cell } 
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng300 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs20 \b ',,,
+    if &uf('KDisc.mnu!',&uf('G2@',v1^J))<>'' then &uf('KDisc.mnu!',&uf('G2@',v1^J)) else &uf('G2@',v1^J) fi,,
+    '\par ' 
+  else 
+    if v1^I<>'' and v1^I<>' ' 
+    then &uf('+7W21#'),, 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng600 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+      if v1^I: 'M' then ' Учебно-Методическая' else ' Учебная' fi,,,
+    else 
+      if v1^H<>'' and v1^H<>' ' 
+      then &uf('+7W21#'),, 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng600 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*        ,'\cf27 ',,,
+        if v1^H*1: 'осн' then 'Основная ' else if v1^H*1: 'доп' then 'Дополнительня ' else ' ' fi fi,,'\cf ',,'\par ' 
+      else 
+        if v1^G<>'' and v1^G<>' ' 
+        then &uf('+7W21#'),, 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng900 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*          ,'\cf27 ',,,
+          'Цикл: ',
+          if &uf('Kcicld.mnu!',v1^G)<>'' then &uf('Kcicld.mnu!',v1^G) else v1^G fi,,
+          if v1^R<>'' then ' (степень новизны - ',if val(v1^R)=0 then if &uf('KCycleNew.mnu!',v1^R)<>'' then &uf('KCycleNew.mnu!',v1^R) else v1^R fi else v1^R fi,,')' fi,,,,,
+          '\cf ',,'\par ' 
+          else 
+            if v1^F<>'' and v1^F<>' ' 
+            then &uf('+7W21#'),, 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng900 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*              ,'\cf27 ',,,
+              'Специальность: ',
+              if &uf('KSpec.mnu!',v1^F)<>'' then &uf('KSpec.mnu!',v1^F)  ' (',v1^F,')'  else v1^F fi,,'\cf ',,'\par ' 
+            else 
+              if v1^E<>'' and v1^E<>' ' 
+              then &uf('+7W21#'),,
+/*                ,'\cf27 ',,,
+                'Направление: ',
+                if &uf('KNapr.mnu!',v1^E)<>'' then &uf('KNapr.mnu!',v1^E)  ' (',v1^E,')'  else v1^E fi,,'\cf ',,'\par ' 
+              else 
+                if v1^D<>'' and v1^D<>' ' 
+                then &uf('+7W21#'),, 
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng1200 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*                  ,'\cf27 ',,,
+                  'Кафедра: ',
+                  if &uf('KKafch.mnu!',v1^D)<>'' then &uf('Kkafch.mnu!',v1^D),,' (',v1^D ')'  else v1^D fi,,'\cf ',,'\par ' 
+                else 
+                  if v1^C<>'' and v1^C<>' ' 
+                  then &uf('+7W21#'),,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng1200 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*                    ,'\cf27 ',,
+                    ' Факультет: ',
+                    if &uf('Kfak.mnu!',v1^C)<>'' then &uf('Kfak.mnu!',v1^C) else v1^C fi,,'\cf ',,'\par ' 
+                  else 
+                    if v1^B<>'' and v1^B<>' ' 
+                    then &uf('+7W21#'),,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng1500 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*                      ,'\cf27 ',,,,
+                      'Вид обучения: ',
+                      if &uf('Kvo.mnu|',v1^B)<>'' then &uf('Kvo.mnu|',v1^B) else v1^B fi,,'\cf ',,'\par ' 
+                      else 
+                        if v1^A<>'' and v1^A<>' ' 
+                        then &uf('+7W21#'),,
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrl\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30\clcbpat0 \clshdng1500 
+\cellx14500 \pard \widctlpar\intbl {\ql \fs24 \b ',,,
+/*                          ,'\cf27 ',
+                          'Форма обучения: ',
+                          if &uf('Kfo.mnu!',v1^A)<>'' then &uf('Kfo.mnu!',v1^A) else v1^A fi,,'\cf ',,'\par ' 
+fi fi fi fi fi fi fi fi fi fi,,,,,,,,,
+  '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
+fi,
+'}'

@@ -1,0 +1,75 @@
+/*FREEPAR0 v1100 - формат показа в основной форме
+/*FREEPAR3 v1103 - порция в основной форме
+/*FREEPAR10 v1110 - login пользователя
+/*FREEPAR7 v1107 - поисковый запрос
+/* v1004 - mfn отмеченных
+
+'<script language="JavaScript">',
+
+'function TransferParam()',
+'{',
+' if (EXEC.USERDATA0.value == "") return false;',
+'EXEC.USERDATA.value = "#',v1000,'"+"#"+','EXEC.USERDATA0.value+"#',v1110,'#',&uf('+3E',v1107),'#',v1004^A|,|,'";',
+'return true;',
+'}',
+'</script>',
+
+
+
+'<title>Формирование выходных форм</title>'
+
+'<BODY  bgColor=#ffffcc>',
+
+/*"<br>БД="v1000,  /*ОТЛАДКА
+/*"<br>Запрос="v1107,  /*ОТЛАДКА
+/*"<br>Отмеченные="v1004^A|,|,  /*ОТЛАДКА
+
+'<A HREF="IRBIS:?C21COM=9&ACTION=2">НАЗАД...</A>',
+
+
+'<form name="EXEC" action="IRBIS:" enctype="Multipart/form-data" method="GET">',
+'<input type="hidden" name="C21COM" value="11">',  /* пользовательская функция
+'<input type="hidden" name="USERDATA" value="">',
+'<input type="hidden" name="USERDLLNAME" value="myunifor">',
+'<input type="hidden" name="USERFUNCTIONNAME" value="SK_TEST">',
+
+
+'<table border="0" >',
+'        <tbody>',
+'          <tr>',
+'         <td valign="Top" rowspan="1" colspan="4">         ',
+'       </tr>',
+'    <tr>',
+'         <td colspan="4" align="Center"><b>Формирование выходных форм</b><br><br>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td align="Right"><font size="-1">Выходная форма</font></td>',
+'         <td colspan="3">',
+'            <select class="" name="USERDATA0" width="45" style="height: 22px; width: 313px; ">',
+'            <option selected=""></option>',
+(if &uf('+5TSK_tabform.mnu')<>'' then '<option value="',&uf('+5TSK_tabform.mnu'),'" >',&uf('+5TSK_tabform.mnu'),' - ',&uf('+5FSK_tabform.mnu'),'</option>' fi),
+'            </select>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td colspan="4"><br>',
+'         </td>',
+'       </tr>',
+'       <tr>',
+'         <td colspan="4" align="Center"><font size="-1">',
+         '<input type="submit" ',
+         ' onclick="return TransferParam()"',
+         ' class="sub1" name="nnnn" value="Выполнить">',
+         '</font><br>',
+'            <br>',
+'            </td>',
+'       </tr>',
+'       ',
+'        </tbody>   ',
+'      </table>',
+'  <br>',
+'  ',
+'</form>',
+
+'<A HREF="IRBIS:?C21COM=1&PFTNAME=SK_search&FREEPAR3=',v1103,'&I21DBN=SK&FREEPAR0=',v1100,'&FREEPAR10=',&uf('+3E',v1110),'">Вернуться к основной поисковой форме</A>',

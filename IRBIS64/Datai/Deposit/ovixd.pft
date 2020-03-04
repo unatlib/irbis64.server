@@ -1,0 +1,54 @@
+&uf('+7W1#'if v101=''or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then'kir'else ''fi)
+&uf('+7W2#'s(&uf("Khdmi.mnu|"v900^c),&uf("Khdmi.mnu|"v900^2),&uf("Khdmi.mnu|"v900^3),&uf("Khdmi.mnu|"v900^4),&uf("Khdmi.mnu|"v900^5),&uf("Khdmi.mnu|"v900^6))),
+&uf('+7W3#'s(&uf("Khdiz.mnu|"v900^c),&uf("Khdiz.mnu|"v900^2),&uf("Khdiz.mnu|"v900^3),&uf("Khdiz.mnu|"v900^4),&uf("Khdiz.mnu|"v900^5),&uf("Khdiz.mnu|"v900^6))),
+if v920='J'then (v210^v+| ; |),fi,
+
+(if p(v210)then 
+    if s(v210^a,v210^4,)=''then if s(&uf('Ag2#1'),&uf('Ag3#1'))=''then 
+       if s(v210^i,v210^c,v461^d,v461^4,v461^g)=''then if &uf('+90')>'1' then ' ; 'else '. - 'fi, 
+          if &uf('Ag1#1')<>''then'[Б. м. : б. и.]'else'[S. l. : s. n.]'
+          fi 
+       else 
+          if s(v461^d,v461^4,v463v110v981v982^z,v461^g)=''then if &uf('+90')>'1' then ' ; 'else '. - 'fi, 
+             if &uf('Ag1#1')<>''then'[Б. м.]'else'[S. l.]' 
+       fi fi fi, 
+       if s(v210^i,v210^c)<>''then | : |v210^i,if a(v210^i)then | : |v210^c fi fi fi,
+    else 
+       if &uf('+90'v210)='1' then if s(&uf('Ag2#1'))<>''then else |. - |v210^4, 
+          if v210^4=''then|. - |v210^a fi, if v210^2.1=' 'then v210^2 else | |v210^2 fi, 
+          if v210^2=''then| ; |v210^x,| ; |v210^y,| ; |v210^+ fi fi,if s(&uf('Ag2#1'),&uf('Ag3#1'))<>''then else| : |v210^i,
+          if a(v210^i)then| : |v210^c fi,| [|v210^6|]|, if v210^3.1=' 'then v210^3 else | |v210^3 fi,,fi, 
+       else 
+          if &unifor('Av210^3#1')=''then 
+             if p(v210^?) then 
+             else| ; |+v210^4, 
+                if v210^4=''then| ; |+v210^a fi, if v210^2.1=' 'then v210^2 else | |v210^2 fi,, 
+                if v210^2=''then| ; |v210^x,| ; |v210^y,| ; |v210^+ fi, 
+             fi,| : |v210^i,if a(v210^i)then | : |v210^c fi,| [|v210^6|]|, 
+       fi fi,
+       if s(v210^a,v210^4)<>''and s(v210^i,v210^c,v461^g)='' then 
+          if s(&uf('Ag3#1'),&uf('Ag2#1'))<>'' or v900^T='l1'then else 
+             if &uf('Ag1#1')<>'' then ' : [б. и.]'else' : [s. n.]' 
+       fi fi fi,
+       fi fi) 
+, 
+if s(v210^d)<>'' then 
+   if g2='' then 
+      if s(v210^a,v210^i,v210^c,v210^4)='' and s(v461^d,v461^g)<>''then'. -  'else', 'fi, 
+   else '. - 'fi
+   v210^5| |,v210^d ,  
+fi, 
+if s(v461,v463,v110,v981v982^z)<>''or v900^T:'l1'then else 
+   if s(v210^d)<>'' then else  
+      if g2=''then 
+         if g1<>''then|, печ.|v210^h, |, Б. г.|n210^h else|, |v210^h| printing|,|, S. a.|n210^hfi else |, |v210^h, 
+fi,fi,fi, if s(v210^1,v210^g,v210^t)<>''then ' (' v210^1,
+          if v210^1<>''then | : |d210^t,
+             if a(v210^t)then | : |d210^g fi,
+          fi,v210^t,
+          if a(v210^t)then v210^g,fi 
+          if p(v210^d)then|, |d210^h ,v210^h fi')'
+       else 
+          if s(v461,v463,v110,v981,v982^z,v210^d,v210^v)=''then else | (|v210^h|)|
+ fi fi,
+if v920='J'then  if v210^d<>''then ' - ' else ",     - "d210^e fi,v210^e,if a(v210^e)then"    "d210^d fi,fi,

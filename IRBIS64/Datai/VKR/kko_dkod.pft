@@ -1,0 +1,6 @@
+if g30<>'' then &uf('+7W33#'&uf('Kfak.mnu\'&uf('+97'g30))),g33,if g33=''then g30 fi 
+else 
+   if g31<>'' then &uf('+7W33#'&uf('Kspec.mnu\'&uf('+97'g31))),g33,if g33=''then g31 fi 
+   else 
+      if g32<>'' then &uf('+7W33#'&uf('Kdisc.mnu\'&uf('+97'g32))),g33,if g33=''then g32 fi 
+fi fi fi

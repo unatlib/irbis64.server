@@ -1,0 +1,54 @@
+mhl,
+IF v920:'spec'then 
+   if L('!'v210^d*2.2,
+        if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,
+        if v461^u:'1'then' 'v461^x fi,if a(v200^v) then" "v200^a fi),
+        &unifor("G1#"v200^v),
+        if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+        if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a)
+      <=0 or val(ref(l('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                 &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+                 if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                 v215^a),mfn))=val(mfn) 
+   then/'0' 
+   else 
+      if ref(L('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                 &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+                 if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                 v215^a),v10^a)<>v10^a 
+      or ref(L('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                 &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+                 if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                 v215^a),v461^i)<>v461^i 
+      or ref(L('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                 &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+                 if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                 v215^a),v19)<>v19 
+      or ref(L('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+                 &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+                 if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+                 if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+                 if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,
+                 v215^a),v215^1)<>v215^1 
+      then/'0'
+      else '1Дублетное описание:       ',v210^d*2.2,if a(v210^d)then v461^h*2 fi,
+             &unifor('B'v461^c,if v461^u:'1'then' 'v461^x fi,
+             if a(v200^v) then" "v200^a fi),&unifor("G1#"v200^v),
+             if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+             if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a,
+             if v215^1.2:'='then v215^1*2 else v215^1 fi,
+             ref(L('!'v210^d*2.2,if a(v210^d)then v461^h*2 fi,&unifor('B'v461^c,
+             if v461^u:'1'then' 'v461^x fi,if a(v200^v) then" "v200^a fi),
+             &unifor("G1#"v200^v),
+             if val(v923^h)>0 then &unifor('G1#'v923^h) else v923^h fi,
+             if val(v923^k)>0 then &unifor('G1#'v923^k) else v923^k fi,v215^a),
+             ' (см. N ',f(val(mfn),0,0),')')
+fi fi fi,mpl

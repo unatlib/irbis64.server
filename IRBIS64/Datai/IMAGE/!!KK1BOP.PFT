@@ -1,0 +1,48 @@
+if p(v481) then'\par  Приплет.:',&unifor('S0'),
+   (if p(v481)then 
+       if &unifor('Av481#2')<>''then 
+          if p(v481)then' '&unifor('S1A')'.' 
+       fi fi, 
+       if p(v481^z) then &unifor('Av461^x#1')' '&unifor('Av461^c#1'),|. |v481^v, 
+          | : |v481^c,| : |v481^e, 
+       else 
+          if p(v481^9) then 
+             if v481^9='1' then v481^x 
+             else &unifor('E'v481^9,v481^x), 
+                if p(v481^?)then |, |v481^? else 
+                   if &unifor('F'v481^9,v481^x)<>'' then ', '&unifor('F'v481^9,v481^x) fi fi,'.' 
+             fi 
+          else 
+             if v481^x:',' then v481^x|.| else 
+                if v481^x:' ' then &unifor('G0 'v481^x),|, |v481^?|.| 
+                   if a(v481^?) then 
+                      if v481^x:'.' then ', ' 
+                         if v481^x:'. ' 
+                         then &unifor('G2 'v481^x) else &unifor('G0.'&unifor('G2 'v481^x)),'. ' &unifor('G2.'v481^x) 
+                         fi 
+                      else ', '&unifor('G2 'v481^x)'.' 
+                   fi fi 
+                else v481^x,|, |v481^?,|.|d481^x, 
+          fi fi fi,|. |d481^x,v481^c,| : |v481^e,|. |v481^v 
+       fi, 
+       if s(v481^r,v481^s)<>''then ', ' fi,v481^r  
+       if p(v481^s) then if p(v481^r) then' : 'fi,v481^s fi, 
+       if s(v481^k,v481^l)<>''then', 'fi,v481^k, 
+       if p(v481^l) then if p(v481^k) then' : 'fi,v481^l fi, 
+       if &unifor('Av905^1#1')='' then | / |v481^f fi, 
+       |. -|v481^n, 
+       if s(v481^d,v481^g)<>''then '. - 'fi,v481^d,| : |v481^g,|, |v481^h, 
+       if a(v481^h) then 
+          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then', [Б.г]'else', [s.a]'fi 
+       fi,|. - |v481^4, 
+       if p(v481^4)then &unifor('Korg.mnu|4')'.'fi, 
+       | : |v481^0*2, 
+       |. - (|v481^q,| ; |v481^m,|)|d481^q,|. - |v481^p,|. - ISBN |v481^i, 
+    fi)
+fi,
+if p(v421) then '. - Приложени' 
+   if &uf('Av421#2')<>'' then 'я' else 'е' fi,':',&uf('S0'),
+   (if p(v421) then if &uf('Av421#2')<>''then | |d421,&uf('S1A'),'. ' fi,
+       v421^a,|, ISSN |v421^x fi) 
+fi ,
+". - Является приложением к "v422^a,", ISSN "v422^x'\par '

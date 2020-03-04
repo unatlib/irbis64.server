@@ -1,0 +1,120 @@
+1
+NextSemVuz.wss
+Задать исходное полугодие
+//12 PUTLOG
+// перевод на следующий семестр записей контингентов
+// 10.1 проверка на соответствие записи VUZ заданному полугодию
+DEL
+2000
+*
+
+
+ADD
+2000
+
+v991^B
+
+IF
+if v2000: '.' then '0' else '1' fi
+REP
+2000
+1
+v2000,'.mnu'
+
+FI
+// проверка на наличие студентов в подполе Z
+IF
+if v920: 'VUZ' and v68^Z<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//проверка на соответствие записи VUZ текущему семестру
+IF
+if &uf('+97',v991^A)='V' and &uf('KsemV.mnu!',,v68^f)<>'' OR  &uf('+97',v991^A)='O' and &uf('KsemO.mnu!',,v68^f)<>'' then '1' fi
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+// в 991 следующий семестр
+DEL
+991
+*
+
+
+ADD
+991
+XXXXXXXXXXXXXXXXXXX
+if v68^F<>'' then f(val(v68^F)+1,0,0) fi,&uf('+7W5#')
+XXXXXXXXXXXXXXXXXXX
+// G5 признак удачного переноса
+//поиск контингента следующего семестра
+CORREC
+'*'
+'^A',v68^Z,"^E"v68^E,"^B"v2000
+mpu,"!"d68,v68^a,if p(v68^c) then v68^c, else v68^n fi,,v68^v,,v68^o,'-S',v991
+
+DEL
+68^Z
+1
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+68
+1
+v68,'^Z',v1001^A
+XXXXXXXXXXXXXXXXXXX
+// изменение номера группы
+IF
+if v1001^B<>'' and &unifor('K',v1001^B,'|',v1001^E)<>'' then '1' fi
+ADD
+68^E
+1
+if a(v68^E) then &unifor('K',v1001^B,'|',v1001^E) fi
+
+REP
+68^E
+1
+&unifor('K',v1001^B,'|',v1001^E)
+
+FI
+ADD
+1001
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W5#1')
+XXXXXXXXXXXXXXXXXXX
+PUTLOG
+'Добавлено кол-во студентов в запись ',v68^a,'-',if p(v68^c) then v68^c, else v68^n fi,'-',v68^v,'-',v68^o,'-',v68^f
+DEL
+1001
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+END
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+68^Z
+F
+if G5<>'' then '1' else '0' fi
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+991
+*
+
+
+DEL
+2000
+*
+
+

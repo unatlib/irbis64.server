@@ -1,0 +1,84 @@
+if s(v964v675v621v686)<>''then ,
+   if s(v905^i,&unifor('IPRIVATE,KKN,'))<>''then
+      if p(v964) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'G' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then
+            "<b>√–Õ“» </b>"| + |+v964"<br>",
+      fi fi,
+      if p(v675) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'U' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then 
+            "<b>”ƒ  </b>"| + |+v675^*"<br>"   
+      fi fi, 
+      if p(v621) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'B' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+             "<b>¡¡  </b>"| + |+v621^*"<br>"  
+      fi fi,
+      if p(v686) then 
+         if s(v905^o,&unifor('IPRIVATE,KKO,')):'D' or 
+            s(v905^o,&unifor('IPRIVATE,KKO,'))=''then  
+            | + |+v686"<br>" 
+      fi fi 
+   else 
+   '<table>','<tr>',
+      if p(v964) and 
+         (s(v905^o,&unifor('IPRIVATE,KKO,')):'G' or 
+          s(v905^o,&unifor('IPRIVATE,KKO,'))='')   
+      then 
+      '<td width="80%"><b>√–Õ“»</b>',' &nbsp''</td>'
+      else 
+      '<td width="80%">','&nbsp''</td>'
+      fi,
+      if p(v675) and 
+         (s(v905^o,&unifor('IPRIVATE,KKO,')):'U' or  
+          s(v905^o,&unifor('IPRIVATE,KKO,'))='') 
+      then 
+      '<td><b>”ƒ </b>',' &nbsp''</td></tr>',
+         (if s(v964v675)<>''then '<tr>'
+             '<td>',v964,' &nbsp','</td>','<td>',v675^*,' &nbsp','</td>' '</tr>'fi)
+      fi,
+      if p(v621) and 
+         (s(v905^o,&unifor('IPRIVATE,KKO,')):'B' or 
+          s(v905^o,&unifor('IPRIVATE,KKO,'))='') 
+      then 
+         if p(v675) then  
+            '<tr>' '<td>',,' &nbsp','</td>''<td><b>','¡¡ ','</b>''&nbsp','</td>' '</tr>'
+            (if p(v621)then '<tr>''<td>',,' &nbsp','</td>''<td>',v621^*,' &nbsp','</td>' '</tr>' fi)
+         else 
+           '</td><td><b>¡¡ </b>',' &nbsp''</td></tr>' 
+            (if s(v964v621)<>''then '<tr>'
+               '<td>',v964,' &nbsp','</td>'
+               '<td>',v621^*,' &nbsp','</td>' '</tr>' fi)
+      fi fi,
+      if p(v686) and 
+         (s(v905^o,&unifor('IPRIVATE,KKO,')):'D' or 
+          s(v905^o,&unifor('IPRIVATE,KKO,'))='') 
+      then                 
+         if s(v675,v621)<>'' then  
+            (if p(v686)then '<tr>''<td width="80%">',,' &nbsp','</td>''<td>',v686,' &nbsp','</td>' '</tr>' fi)
+         else 
+         ' &nbsp''</td><td><b>',' &nbsp''</td></tr>' 
+            (if s(v964v686)<>''then '<tr>'
+               '<td>',v964,' &nbsp','</td>'
+               '<td>',v686,' &nbsp','</td>' '</tr>' fi)
+      fi fi 
+   '</table>'
+fi fi,
+if s(v905^x,&unifor('IPRIVATE,KKE,')):'2'then 
+   if v905^x='2' or &unifor('IPRIVATE,KKE,')='2'then &unifor('Av910^b#1'),
+      if &unifor('Av910^1#1')<>'' then ' ('&unifor('Av910^1#1'),')'fi,
+      if &unifor('Av910^d#1')<>'' then', '&unifor('Av910^d#1') fi     
+   else &uf('+7W905#'),
+      if v905^x:'2/' then &uf('+7U905#'&uf('V'&uf('G2/'v905^x))) else 
+         if &unifor('IPRIVATE,KKE,'):'2/' then &uf('+7U905#'&uf('V'&uf('G2/'&unifor('IPRIVATE,KKE,'))))
+      fi fi,   
+      &uf('+7W907#'),
+      (if &uf('Ag905#1'):',' then &uf('+7U907#'&uf('G0,'&uf('Ag905#1'))),&uf('+7W905#'&uf('G2,'&uf('Ag905#1'))) 
+       else &uf('+7U907#'&uf('Ag905#1')) break fi/), 
+      (if g907<>'' then '<br>'&unifor('Av910^b#'g907),
+          if &unifor('Av910^1#'g907)<>'' then ' ('&unifor('Av910^1#'g907)')' fi 
+       ', '&unifor('Av910^d#'g907) fi)
+fi fi,
+
+   

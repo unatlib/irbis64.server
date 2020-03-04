@@ -1,0 +1,80 @@
+[Numeration]
+##
+*****
+[FormatCode]
+WIN
+*****
+[Sum]
+&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_1')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,/ fi)
+&uf('+7W1#',v991^a),&uf('+7W2#',v991^b),(if p(v140) then &uf('+7W3#',&uf('7IRI,!RIP=',&uf('Av30#1'),'/',v140^B,'!,@iri_stat1_2')),,if RSUM(&uf('Ag3#1'))=0 then '0' else f(RSUM(&uf('Ag3#1')),0,0),fi,/ fi)
+#
+'\trowd \trqc\trgaph108\trleft-108
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8046 
+\pard \ql\widctlpar\intbl {\qr \fs20 ''\b Итого: '
+'
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9180 
+\pard \ql\widctlpar\intbl {\qr \fs20 ''\b ',v1
+'
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10314 
+\pard \ql\widctlpar\intbl {\qr \fs20 ''\b ',v2
+'
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qr\widctlpar '
+*****
+[Tab]
+\paperw11907\paperh16839\margl850\margr850\margt1134\margb1134 
+{\b\fs\fs20\qc 
+[Header]
+\b0 }
+\trowd \trqc\trgaph108\trleft-108\trhdr\trkeep 
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx675 
+\pard \widctlpar\intbl {\qc \fs20 N
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx2943 
+\pard \widctlpar\intbl {\qc \fs20 Пользователь
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx8046 
+\pard \widctlpar\intbl {\qc \fs20 Профиль
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx9180 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во рассылок
+\cell }
+\clbrdrt\brdrs\brdrw30
+\clbrdrl\brdrs\brdrw30
+\clbrdrb\brdrs\brdrw30
+\clbrdrr\brdrs\brdrw30
+\cellx10314 
+\pard \widctlpar\intbl {\qc \fs20 Кол-во документов
+\cell }
+\pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
+\par }

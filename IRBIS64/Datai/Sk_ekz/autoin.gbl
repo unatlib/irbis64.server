@@ -1,0 +1,14 @@
+0
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+'^A',&unifor('3'),'^B',f(val(&uf('+N910')),0,0)
+XXXXXXXXXXXXXXXXXXX
+IF
+if v910='' then '1' fi
+DELR
+
+
+
+
+FI

@@ -1,0 +1,30 @@
+mhl, 
+if v961^z<>'' then O961F 
+else 
+         if p(v461^9) then 
+            if v461^9:'1' then v461^x 
+            else 
+               if &unifor('F'v461^9,v461^x)<>'' then 
+                  if &unifor('F'v461^9,v461^x):'. ' then &unifor('F'v461^9,v461^x) else 
+                     if &unifor('F'v461^9,v461^x):'.' 
+                     then &unifor('G0.'&unifor('F'v461^9,v461^x)),'.' 
+                        if &unifor('G2.'&unifor('F'v461^9,v461^x)):'.' then ' 'fi,&unifor('G2.'&unifor('F'v461^9,v461^x)) 
+                     else &unifor('F'v461^9,v461^x) fi 
+                  fi 
+               else v461^? 
+               fi,' '&unifor('G0,'&unifor('E'v461^9,v461^x)) 
+            fi 
+         else 
+            if v461^x:', ' then &unifor('G2 'v461^x)' '&unifor('G0,'v461^x)  
+            else 
+               if v461^x:' 'then 
+                  if &unifor('G2 'v461^x):'.'then 
+                     if &unifor('G2 'v461^x):'. ' then &unifor('G2 'v461^x) 
+                     else &unifor('G0.'&unifor('G2 'v461^x)),'.' 
+                        if &unifor('G2.'&unifor('G2 'v461^f)):'.' then ' ' fi,&unifor('G2.'&unifor('G2 'v461^x)) 
+                     fi 
+                  else &unifor('G2 'v461^x) 
+                  fi,' '&unifor('G0,'&unifor('G0 'v461^x)) 
+               else v461^?| |,v461^x    
+         fi fi fi 
+fi 
