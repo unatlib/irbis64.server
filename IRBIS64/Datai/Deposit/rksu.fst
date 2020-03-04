@@ -292,7 +292,7 @@
 /* стоимость иностранных изданий
 149^L 22 if (v920:'NJ' or v920:'Spec' and p(v933))and ref(l("I="v933),v102)<>&unifor('Korg.mnu|1')  OR v920<>'NJ'and v102<>&unifor('Korg.mnu|1') then (if p(v910) then if &uf('+97',v910^u)='v991' then f(val(v910^e,if a(v910^e) then &unifor('Av10^d#1')fi,' 0')*val(v910^1,|1|n910^1,' 0'),0,2) fi fi/) fi/
 /*наименований зарубежных изданий без периодики НА БАЛАНС
-149^M 21 if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else if v102<>''and v102<>&unifor('Korg.mnu|1') then if s((if p(v910)then if &uf('+97',v910^u)='991'and a(v910^4)then '1'fi fi)):'1'then '1'fi fi fi/
+149^M 21 if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else if v102<>''and v102<>&unifor('Korg.mnu|1') then if s((if p(v910)then if &uf('+97',v910^u)='v991'and a(v910^4)then '1'fi fi)):'1'then '1'fi fi fi/
 /*экземпляров зарубежных изданий без периодики НА БАЛАНС
 149^N 21 if v215^y<>''or (v920:'NJ' or v920:'Spec' and p(v933))then else if v102<>''and v102<>&unifor('Korg.mnu|1') then (if p(v910) then if &uf('+97',v910^u)='v991' then if a(v910^4) then v910^1,|1|n910^1 fi fi fi/)fi fi/
 /*зарубежные издания без периодики: сумма НА БАЛАНС 

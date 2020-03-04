@@ -11,7 +11,7 @@
 88 0 if v920='POLZV' then (|MKSU=|v88/) else mhl,if p(v88) and v88^b='' then "KS3="v88^a /"DI="v88^a.4/"KSU="v88^a else if p(v88) and v920: 'KSF' then "KSFP="v88^a,else if p(v888) and v920: 'KSF' then "KSFS="v888^a,else if p(v88) and v920: 'KSI' then "KSI="v88^a,/"DT="v88^b/"DY="v88^B.4 else "KS"v88^a.4 /"DP="v88^b,,,mpl,/"KSU="v88^a/(|KSUA=|v88^y,|%|d88/)/(if p(v88) then if p(v88^y) then 'AS=',&unifor('Av88^a*2.2#1'),|-|v88^y|-|,fi fi,|%|d88/)/(if p(v88) then if p(v88^y)then |?|v88^y|+|,v88^f|+|,v88^g fi fi,|%|d88/)/(if p(v88) then if p(v88^y)then |?|v88^y|+|,v88^f|+|,v88^g/'=?'&uf('Av88^a.4#1'),|-|v88^y|+|,v88^f|+|,v88^g fi fi,|%|d88/) fi fi,fi,fi,fi
 80 0 if v920='POLZV' then (|MNA=|v80/) fi
 800 0 if v920='POLZV' then (|MNAP=|v800/) else "NAP="v800^a fi
-881 0 if v920='RSU' then "RSU="v881^A/ "DRB="v882^E/ "DRE="v882^F
+881 0 if v920='RSU' then "RSU="v881^A/ "DRB="v882^E/ "DRE="v882^F fi
 888 0 if v920='POLZV' then (|MKS2=|v888/) else if v920: 'KS2' then "KS"v888^b.4/"KS2="v888^a," "v888^b*6.2,"."v888^b*4.2,"."v888^b.4/"PKS2="v888^a /"DW="v888^b fi,fi
 889 0 if v920='POLZV' then (|MKS3=|v889/) else "KS3="v889^a,"="v889^b, fi
 910 0 if v920='POLZV' then (|MIN=|v910/)else (|IN=|v910^h/),if v920:'J'then else(|IN=|v910^b/) fi fi
