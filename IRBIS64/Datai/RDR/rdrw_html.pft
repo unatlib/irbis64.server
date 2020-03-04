@@ -7,7 +7,9 @@
 &uf('+7W1#'(if p(v51) then v51^c,'!'v51 fi/)),&uf('+7T1')/&uf('+7W51#'(if p(g1) then &uf('G2!'g1) fi/)),
 &uf('+7W2#'(if p(v52) then v52^c,'!'v52 fi/)),&uf('+7T2')/&uf('+7W52#'(if p(g2) then &uf('G2!'g2) fi/)),
 /*&unifor('MD52^c'),&unifor('MD51^c'), 
-if g52^c:g51^c then else if p(v51) then '<br>Запись в б-ку: ' fi,
+&uf('+7W101#'(if p(g1) then &uf('G0!'g1) fi/)),&uf('+7G101'),
+&uf('+7W102#'(if p(g2) then &uf('G0!'g2) fi/)),&uf('+7G102'),
+if g102=g101 then else if p(v51) then '<br>Запись в б-ку: ' fi,
    (if g51.1:'^' then else|., |+g51*6.2|.|,g51*4.2|.|,g51.4|г.| fi,
     if s(g51^a,g51^b)<>''then' (' g51^a|; |,g51^b fi,|<b>  - |g51^c|</b>|,
     if s(g51^a,g51^b)<>''then')'fi) 

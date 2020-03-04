@@ -1,0 +1,54 @@
+v503^a,v461^x,v461^b,v700^a,v700^d,", "v700^g,if a(v700^g) then " "v700^b fi,' ',,v970^a,v970^b,v710^a,v971^b,v461^c,v200^v,,v200^a,
+if v920:'NJ'then ref(l(|I=|v933),v200^a,|/ |v200^f),v934,"/"v935,"/"v936 fi,
+v463^c,v463^j,v463^v,v463^h,v463^k /
+,,,,,,,,,,,,,,
+/* в g1 повторени€ пол€ 40 за заданный год + мес€ц
+/* €нварь
+&uf('+7W1#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'01$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+/*(g1/)
+&uf('+7W21#',f(rsum((if p(g1) then if &uf('+97',g1^A)=&uf('+97',&uf('Av903#1')) then if g1^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'01') then '1,' fi fi fi)),0,0) ),,,,
+/*'1=',g21/
+/*февраль
+&uf('+7W2#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'02$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W22#',f(rsum((if p(g2) then if &uf('+97',g2^A)=&uf('+97',&uf('Av903#1')) then if g2^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'02') then '1,' fi fi fi)),0,0) ),,,,
+/*'2=',g22/
+/* март
+&uf('+7W3#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'03$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W23#',f(rsum((if p(g3) then if &uf('+97',g3^A)=&uf('+97',&uf('Av903#1')) then if g3^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'03') then '1,' fi fi fi)),0,0) ),,,,
+/*'3=',g23/
+/* апрель
+&uf('+7W4#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'04$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W24#',f(rsum((if p(g4) then if &uf('+97',g4^A)=&uf('+97',&uf('Av903#1')) then if g4^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'04') then '1,' fi fi fi)),0,0) ),,,,
+/*'4=',g24/
+/* май
+&uf('+7W5#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'05$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W25#',f(rsum((if p(g5) then if &uf('+97',g5^A)=&uf('+97',&uf('Av903#1')) then if g5^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'05') then '1,' fi fi fi)),0,0) ),,,,
+/*'5=',g25/
+/* июнь
+&uf('+7W6#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'06$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W26#',f(rsum((if p(g6) then if &uf('+97',g6^A)=&uf('+97',&uf('Av903#1')) then if g6^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'06') then '1,' fi fi fi)),0,0) ),,,,
+/*'6=',g26/
+/* июль
+&uf('+7W7#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'07$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W27#',f(rsum((if p(g7) then if &uf('+97',g7^A)=&uf('+97',&uf('Av903#1')) then if g7^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'07') then '1,' fi fi fi)),0,0) ),,,,
+/*'7=',g27/
+/* август
+&uf('+7W8#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'08$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W28#',f(rsum((if p(g8) then if &uf('+97',g8^A)=&uf('+97',&uf('Av903#1')) then if g8^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'08') then '1,' fi fi fi)),0,0) ),,,,
+/*'8=',g28/
+/* сент€брь
+&uf('+7W9#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'09$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W29#',f(rsum((if p(g9) then if &uf('+97',g9^A)=&uf('+97',&uf('Av903#1')) then if g9^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'09') then '1,' fi fi fi)),0,0) ),,,,
+/*'9=',g29/
+/* окт€брь
+&uf('+7W10#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'10$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W30#',f(rsum((if p(g10) then if &uf('+97',g10^A)=&uf('+97',&uf('Av903#1')) then if g10^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'10') then '1,' fi fi fi)),0,0) ),,,,
+/*'10=',g30/
+/* но€брь
+&uf('+7W11#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'11$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W31#',f(rsum((if p(g11) then if &uf('+97',g11^A)=&uf('+97',&uf('Av903#1')) then if g11^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'11') then '1,' fi fi fi)),0,0) ),,,,
+/*'11=',g31/
+/* декабрь
+&uf('+7W12#',,&uf('+3SRDR,1000,?DV=',if v991^A<>'' then v991^A,, else &uf('30') fi,,,,'12$?,(|^A|v40^A,,|^D|v40^D/)') ),,,
+&uf('+7W32#',f(rsum((if p(g12) then if &uf('+97',g12^A)=&uf('+97',&uf('Av903#1')) then if g12^D: s(if &uf('Av991^A#1')<>'' then &uf('Av991^A#1') else &uf('30') fi,,'12') then '1,' fi fi fi)),0,0) ),,,,
+/*'12=',g32/

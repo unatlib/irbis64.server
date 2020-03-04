@@ -19,10 +19,10 @@ NEWMFN
 &uf('IPRIVATE,DBDEL,CMPL')
 ALL
 // удаляем все повторения кроме ^A=7
-DEL
-910
-F
-(if v910^A: '7' then '0' else '1' fi/)
+//DEL
+//910
+//F
+//(if v910^A: '7' then '0' else '1' fi/)
 
 DEL
 940

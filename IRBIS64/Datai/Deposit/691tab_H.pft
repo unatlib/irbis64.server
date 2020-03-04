@@ -36,7 +36,7 @@ if p(v691) then'<br>','<font size="2">'
 '</td><td> <font size="2">'v691^f,|-|n691^f,,,
 '</td><td> <font size="2">'v691^g,|-|n691^g,,,
 '</td><td> <font size="2">'v691^5,|-|n691^5,,,
-'</td><td> <font size="2">',,&uf('JRDR,?',v691^a,v691^n,v691^c,v691^v,v691^o,'-S',v691^f),,
+'</td><td> <font size="2">',,v691^1,,
 '</td><td> <font size="2">'v691^L,|-|n691^L,,,
 '</td></tr>',
     fi),

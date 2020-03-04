@@ -1,6 +1,6 @@
    if p(v488)then'<br><b>См. также : </b>', if &uf('Av488#2')<>'' then '<br>' fi, 
       (if p(v488) then|<br>|+d488, 
-          if p(v488^w) then |<A HREF="IRBIS:2,,|d488^w,v488^9,if a(v488^9) then 'IBIS' fi,|,,I=|v488^w|">|,v488^a+|,|,v488^p'</A>'
+          if p(v488^w) then |<A HREF="IRBIS:2,,|d488^w,v488^9,,|,,I=|v488^w|">|,v488^a+|,|,v488^p'</A>'
        else v488^a+|,|,v488^p fi, 
        fi) 
    fi 

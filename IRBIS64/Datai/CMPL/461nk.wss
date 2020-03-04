@@ -54,7 +54,7 @@ R,
 0
 0
 2
-@IPRIVATE/EKP/IBIS,O=,(if '***'='210' then|^G|v210^c,|^D|v210^a,| ; |v210^x,| ; |v210^y else |^G|v***^g,|^D|v***^d fi/)
+@PRIVATE/EKP/IBIS,O=,(if '***'='210' then|^G|v210^c,|^D|v210^a,| ; |v210^x,| ; |v210^y else |^G|v***^g,|^D|v***^d fi/)
 
 На каждое издательство отдельное повторение поля
 
@@ -224,7 +224,7 @@ X
 0
 0
 2
-@IPRIVATE/EKP/ibis,A=,@!amovo
+@PRIVATE/EKP/ibis,A=,@!amovo
 
 Формируется автоматически из 961 (при наличии^Z)
 
@@ -244,7 +244,7 @@ B
 0
 0
 2
-@IPRIVATE/EKP/IBIS,M=,@!mmovo
+@PRIVATE/EKP/IBIS,M=,@!mmovo
 
 Формируется автоматически из 962 (при наличии^Z)
 

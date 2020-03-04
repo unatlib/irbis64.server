@@ -8,13 +8,14 @@ g22
 g23
 g24
 g25
- g26
+g26
 g27
 g28
 g29
 g30
 g31
 g32
+'1'
 #
 '\trowd \trqc\trgaph108\trleft-108
 \clbrdrt\brdrs\brdrw30
@@ -22,7 +23,7 @@ g32
 \clbrdrb\brdrs\brdrw30
 \clbrdrr\brdrs\brdrw30
 \cellx2659 
-\pard \ql\widctlpar\intbl {\qc \fs24 ''Всего книг: ',,g50
+\pard \ql\widctlpar\intbl {\qc \fs24 ''Всего книг: ',,v14,,
 '
 \cell }
 \clbrdrt\brdrs\brdrw30

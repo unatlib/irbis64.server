@@ -290,7 +290,7 @@ IF
 if v1001^X='2' and v1001^w='1' then '1' fi
 // задана корректировка и экземпляр не U
 IF
-if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1' else '0' fi fi))>0 then '1' fi
+if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1,' else '0,' fi fi))>0 then '1' fi
 PUTFLD
 '^A',v1001^A,'^B',v1001^D,'^C',v1001^C,'^D',v1001^B,if v1001^H<>'' then ' / ',v1001^H fi,'^E',v1001^G,'^F',f(val(MFN),0,0),'^G','Неверный статус экземпляра(',v1001^D,'/ М.хр.-',v1001^K,,,,')-откорректировано','^X',v1001^D,'^Y',v1001^Y
 REP
@@ -313,7 +313,7 @@ IF
 if v1001^X<>'2' and v1001^w='1' then '1' fi
 // задана корректировка и экземпляр не U
 IF
-if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1' else '0' fi fi))>0 then '1' fi
+if rsum((if p(v910) then if v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^B#1')<>'' and &uf('+97',v910^B)=&unifor('Av1001^B#1') and &unifor('Av1001^K#1')='' or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')<>'' and &uf('+97',v910^D)=&unifor('Av1001^K#1') or v910^A='0' and &unifor('Av1001^H#1')<>'' and &uf('+97',v910^H)=&unifor('Av1001^H#1') and &unifor('Av1001^K#1')='' then '1,' else '0,' fi fi))>0 then '1' fi
 PUTFLD
 '^A',v1001^A,'^B',v1001^D,'^C',v1001^C,'^D',v1001^B,if v1001^H<>'' then ' / ',v1001^H fi,'^E',v1001^G,'^F',f(val(MFN),0,0),'^G','Неверный статус экземпляра(',v1001^D,'/ М.хр.-',v1001^K,,,,')','^X',v1001^D,'^Y',v1001^Y
 FI

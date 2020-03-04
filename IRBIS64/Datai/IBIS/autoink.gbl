@@ -34,13 +34,13 @@ DEL
 REP
 691
 F
-(if p(v691) then v691,,if a(v691^1) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) <>'' then '^1',&uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) fi,,else if &uf('DVUZ,!?',,,v691^a"-",,v691^n"-",v691^c"-" ,v691^v"-",v691^o"-",v691^f"-",,'!,v68^Z')<>'' then '^1',&uf('DVUZ,!?',,,v691^a"-",,v691^n"-",v691^c"-" ,v691^v"-",v691^o"-",v691^f"-",,'!,v68^Z') fi fi,,fi fi/)
+(if p(v691) then v691,,if a(v691^1) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) <>'' then '^1',&uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) fi,,else if &uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^V|-|,v691^o|-|,v691^f|-|,,'!,v68^Z')<>'' then '^1',&uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^v|-|,v691^o|-|,v691^f|-|,,'!,v68^Z') fi fi,,fi fi/)
 XXXXXXXXXXXXXXXXXXX
 //------------------Количесчтво студентов по контпнгенту для поля 694^5, если оно пустое
 REP
 694
 F
-(if p(v694) then v694,,if a(v694^5) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) <>'' then '^5',&uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) fi,,else if &uf('DVUZ,!?',,,v694^a"-",,v694^n"-",v694^c"-" ,v694^v"-",v694^o"-",v694^f"-",,'!,v68^Z')<>'' then '^5',&uf('DVUZ,!?',,,v694^a"-",,v694^n"-",v694^c"-" ,v694^v"-",v694^o"-",v694^f"-",,'!,v68^Z') fi fi,,fi fi/)
+(if p(v694) then v694,,if a(v694^5) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) <>'' then '^5',&uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) fi,,else if &uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,,'!,v68^Z')<>'' then '^5',&uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,'!,v68^Z') fi fi,,fi fi/)
 XXXXXXXXXXXXXXXXXXX
 //----------------Идентификатор дисциплины, если его нет из VUZ
 REP

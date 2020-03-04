@@ -1,4 +1,4 @@
-if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else '\par \fi0'
+if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else '\par \fi0 '
    if 'ASP AUNTD':v920 and a(v910) then 
       (if p(v463) then '\par ', if &unifor('Av463#2')<>'' then v463^w| : | fi, 
           if l(|I=|v463^w)>0 
@@ -70,8 +70,7 @@ if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else '\par \fi0'
                 if '2 6 7':v910^a then else|; |+d910,v910^d, 
                    if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then 
                       if p(v910^c)then' ('v910^c*6.2'.'v910^c*4.2'.'v910^c.4'г.' fi fi, 
-                   if 'C U':v910^a and p(v910^c) then | (колл. |v910^q|)|,| (|v910^1|экз.)| else 
-                      if (not('C U':v910^a)) then | Инв.|v910^b,| (колл. |v910^q|)| fi fi, 
+                   if p(v910^c) then | Инв.|v910^b,| (колл. |v910^q|)|,| (|v910^1|экз.)| fi, 
                    if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'3'then  
                    else' - ',v910^e, 
                       if val(v910^e)>0 then 
@@ -82,7 +81,7 @@ if s(v905^x)<>''or &unifor('IPRIVATE,KKE,')<>''then else '\par \fi0'
                          if &unifor('Av10^d#1')='' then'Б.ц.'fi 
                       fi, 
             fi,if s(&unifor('Av905^c#1'),&unifor('IPRIVATE,KKI,')):'1'then |)|d910^c fi,  fi fi) 
-         else &unifor('O') 
+         else &unifor('O')  
          fi, 
       ("\par \b Копия:\b0  "| ; |+d993,&unifor('G2='v993^a),|, Шифр |v993^b,| (|v993^d|)|),
-fi fi fi, 
+fi fi fi,

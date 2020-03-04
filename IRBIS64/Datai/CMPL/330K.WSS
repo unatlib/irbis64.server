@@ -9,12 +9,12 @@ F
 Фамилия и инициалы (через пробел)
 
 
-Э
+/
     (ввод через БД ЭК)
 0
 0
 2
-@IPRIVATE/EKP/IBIS,A=,@!amovcg1
+@PRIVATE/EKP/IBIS,A=,@!amovcg1
 
 
 
@@ -69,12 +69,12 @@ dn.mnu
 Фамилия и инициалы (через пробел)
 
 
-Ю
+\
     (ввод через БД ЭК)
 0
 0
 2
-@IPRIVATE/EKP/IBIS,A=,@!amovcg2
+@PRIVATE/EKP/IBIS,A=,@!amovcg2
 
 
 
@@ -129,12 +129,12 @@ dn.mnu
 Фамилия и инициалы (через пробел)
 
 
-Я
+[
     (ввод через БД ЭК)
 0
 0
 2
-@IPRIVATE/EKP/IBIS,A=,@!amovcg3
+@PRIVATE/EKP/IBIS,A=,@!amovcg3
 
 
 
@@ -264,7 +264,7 @@ R. -
 0
 0
 2
-@IPRIVATE/EKP/IBIS,K=,
+@PRIVATE/EKP/IBIS,K=,
 
 
 
@@ -274,7 +274,7 @@ R,
 0
 0
 2
-@IPRIVATE/EKP/IBIS,K=,
+@PRIVATE/EKP/IBIS,K=,
 
 
 
@@ -284,7 +284,7 @@ R,
 0
 0
 2
-@IPRIVATE/EKP/IBIS,K=,
+@PRIVATE/EKP/IBIS,K=,
 
 
 

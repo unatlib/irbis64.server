@@ -19,7 +19,7 @@ REPEAT
 ADD
 9992
 
-&uf('Av1992#1'),&uf('S0'),&uf('+7W8#0'),
+&uf('Av1992#1'),&uf('S0'),&uf('+7W7#0'),&uf('+7W8#0'),
 
 IF
 if rsum((if p(v910)then if 'U C':v910^a then'1;'else'0;'fi fi/))>0 then '1'fi,

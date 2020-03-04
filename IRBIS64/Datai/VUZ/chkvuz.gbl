@@ -9,6 +9,7 @@ ChkVuz.wss
 //991^D - Удалять DISC, если нет 83
 //991^E - Удалять DISC, если дубль по v3-v4-v5-v6
 //991^F - выдавать сообщения об отсутствии записей VUZ
+//991^G - удалять конечные пробелы в поле 83 и 68
 //15 приписывать из удаленных VUZ поля 69 в первую запись
 //-------------------------------------------------------------------------------------------- проверка записи DISC
 IF
@@ -282,14 +283,21 @@ IF
 if val(v991^C)<>2 then '1' fi
 //-------------991^C---------------проверка на дублетные записи VUZ
 IF
-if val(&unifor('JVUZ,?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-"))>1 then '1' fi
+if val(&unifor('JVUZ,?',v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-"))>1 then '1' fi,,,,&uf('+7W11#')
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 //------------------------------------------------ больше одной записи VUZ
 IF
+if val(&uf('DVUZ,!',, '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))<>val(mfn) then '1' fi
+// не первая из дублетных - даю сообщение без корректировки
+PUTLOG
+'Запись VUZ: есть дублетные, см. MFN:  ',,,&uf('+7W10#',&uf('7VUZ,!',, '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn/') ),,,(g10+|, |)
+FI
+
+IF
 if val(&uf('DVUZ,!',, '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))=val(mfn) then '1' fi
-// на первой записи  беру в G11 перечень MFN
+//первая из дублетных  на первой записи  беру в G11 перечень MFN
 ADD
 111
 
@@ -299,7 +307,8 @@ PUTLOG
 'Дублетные записи VUZ, MFN: ',,(if p(g11) then f(val(g11),0,0) ',' fi)
 FI
 IF
-if val(v991^C)=1 then '1' fi
+if val(v991^C)=1 and p(g11) then '1' fi
+//------------------------------------------задана корректировка
 IF
 if val(&uf('DVUZ,!', '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))=val(mfn) then '1' fi
 //------------------------ эта запись ПЕРВАЯ в группе дублетных
@@ -401,7 +410,7 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
-//--- конец задана корректировка
+//----------------------------------------- конец задана корректировка
 FI
 //---- конец больше одной записи
 FI
@@ -659,7 +668,61 @@ DEL
 *
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
-//------------конец проверки VUZ
+//------------проверка и удаление конечных пробелов в поле 68
+IF
+if p(v68) and val(v991^G)=1 then '1' fi,,,&uf('+7W15#')
+//---факультет-
+REPEAT
+REP
+68^A
+1
+if p(v68) then if &uf('+961.1#',v68^A)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v68^A))-1,0,0),'#',v68^A ) else v68^A fi fi
+
+UNTIL
+if &uf('+961.1#',v68^A)=' ' then '1' fi
+//---направление
+REPEAT
+REP
+68^N
+1
+if p(v68) then if &uf('+961.1#',v68^N)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v68^N))-1,0,0),'#',v68^N ) else v68^N fi fi
+
+UNTIL
+if &uf('+961.1#',v68^N)=' ' then '1' fi
+//---специальность
+REPEAT
+REP
+68^C
+1
+if p(v68) then if &uf('+961.1#',v68^C)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v68^C))-1,0,0),'#',v68^C ) else v68^C fi fi
+
+UNTIL
+if &uf('+961.1#',v68^C)=' ' then '1' fi
+//---вид об
+REPEAT
+REP
+68^V
+1
+if p(v68) then if &uf('+961.1#',v68^V)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v68^V))-1,0,0),'#',v68^V ) else v68^V fi fi
+
+UNTIL
+if &uf('+961.1#',v68^V)=' ' then '1' fi
+//---форма обуч
+REPEAT
+REP
+68^O
+1
+if p(v68) then if &uf('+961.1#',v68^O)=' ' then &uf('+7W15#1'),,&uf('+960.',,f(val(&uf('+95',v68^O))-1,0,0),'#',v68^O ) else v68^O fi fi
+
+UNTIL
+if &uf('+961.1#',v68^O)=' ' then '1' fi
+IF
+if val(g15)=1 then '1' fi
+PUTLOG
+'Удалены пробелы в поле 68. MFN=',f(val(mfn),0,0)
+FI
+FI
+//------------------------------------------конец проверки VUZ
 FI
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
@@ -701,7 +764,7 @@ FI
 
 
 IF
-if val(v991^G)=1 then '1' fi,,,&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('+7W15#'),
+if v920: 'DISC' and val(v991^G)=1 then '1' fi,,,&uf('+7W11#'),&uf('+7W12#'),&uf('+7W13#'),&uf('+7W14#'),&uf('+7W15#'),&uf('+7W16#'),
 //-------------------------------------------------------проверка и удаление пробелов в конце
 REPEAT
 //---цикл-1-
@@ -748,10 +811,28 @@ F
 
 UNTIL
 if rsum((if p(v83) then if &uf('+961.1#',v83^A)=' ' then '1,' fi fi))>0 then '1' fi
+REPEAT
+//---ВО-
+REP
+83^V
+F
+(if p(v83) then if &uf('+961.1#',v83^V)=' ' then &uf('+7W16#1'),,,&uf('+960.',,f(val(&uf('+95',v83^V))-1,0,0),'#',v83^V ) else v83^V fi fi/)
+
+UNTIL
+if rsum((if p(v83) then if &uf('+961.1#',v83^V)=' ' then '1,' fi fi))>0 then '1' fi
+REPEAT
+//---ФО-
+REP
+83^O
+F
+(if p(v83) then if &uf('+961.1#',v83^O)=' ' then &uf('+7W16#1'),,,&uf('+960.',,f(val(&uf('+95',v83^O))-1,0,0),'#',v83^O ) else v83^O fi fi/)
+
+UNTIL
+if rsum((if p(v83) then if &uf('+961.1#',v83^O)=' ' then '1,' fi fi))>0 then '1' fi
 IF
-if val(g11)>0 or val(g12)>0 or val(g13)>0 or val(g14)>0 or val(g15)>0 then '1' fi
+if val(g11)>0 or val(g12)>0 or val(g13)>0 or val(g14)>0 or val(g15)>0 or val(g16)>0 then '1' fi
 PUTLOG
-'Удалены пробелы в: ',,if val(g11)=1 then ' цикле' fi,,if val(g12)=1 then ' кафедре' fi,,if val(g13)=1 then ' направлении' fi,,if val(g14)=1 then ' специальности' fi,,if val(g15)=1 then ' факультете' fi ,,,,,'. MFN=',f(val(mfn),0,0)
+'Удалены пробелы в: ',,if val(g11)=1 then ' цикле' fi,,if val(g12)=1 then ' кафедре' fi,,if val(g13)=1 then ' направлении' fi,,if val(g14)=1 then ' специальности' fi,,if val(g15)=1 then ' факультете' fi ,,if val(g16)=1 then ' ВО/ФО' fi,,,'. MFN=',f(val(mfn),0,0)
 FI
 FI
 

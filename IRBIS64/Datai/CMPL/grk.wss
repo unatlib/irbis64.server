@@ -4,7 +4,7 @@ A
 0
 0
 2
-@IPRIVATE/EKP/IBIS,GEO=,@!smov
+@PRIVATE/EKP/IBIS,GEO=,@!smov
 
 
 
@@ -14,7 +14,7 @@ B
 0
 0
 2
-@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+@PRIVATE/EKP/IBIS,PS=,@!pzmov
 
 
 
@@ -24,7 +24,7 @@ C
 0
 0
 2
-@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+@PRIVATE/EKP/IBIS,PS=,@!pzmov
 
 
 
@@ -34,7 +34,7 @@ D
 0
 0
 2
-@IPRIVATE/EKP/IBIS,PS=,@!pzmov
+@PRIVATE/EKP/IBIS,PS=,@!pzmov
 
 
 
@@ -44,7 +44,7 @@ G
 0
 0
 2
-@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+@PRIVATE/EKP/IBIS,GS=,@!pzmov
 
 
 
@@ -54,7 +54,7 @@ E
 0
 0
 2
-@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+@PRIVATE/EKP/IBIS,GS=,@!pzmov
 
 
 
@@ -64,7 +64,7 @@ O
 0
 0
 2
-@IPRIVATE/EKP/IBIS,GS=,@!pzmov
+@PRIVATE/EKP/IBIS,GS=,@!pzmov
 
 
 
@@ -74,7 +74,7 @@ H
 0
 0
 2
-@IPRIVATE/EKP/IBIS,HS=,@!pzmov
+@PRIVATE/EKP/IBIS,HS=,@!pzmov
 
 
 
