@@ -6,7 +6,7 @@ if &uf('IMAIN,FULLTEXTABLE,1')='1' then
                  &uf('+3E',v903),'">',if p(v955^T) then v955^T else 'Полный текст' fi,'</A>', fi, 
          else     
          if p(v955^A) then '<br><A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=group955&FREEPAR1=1&KEY=@',mfn,'">',if p(v955^T) then v955^T else 'Постраничный просмотр полного текста' fi,'</A>',
-         '<br>Кол-во обращений читателей к полному тексту: ',&uf('+7W1#',&uf('JLICH,COL=',&uf('+D'),"/"v955^a)),if g1='' then '0' else g1 fi,
+         '<br>Кол-во обращений читателей к полному тексту: ',&uf('+7W1#',&uf('JLICH,COL=',&uf('+D'),"/"v955^a)),if g1='' then '0' else g1"  ",'<A HREF="IRBIS:?C21COM=1&I21DBN=',&uf('+D'),'&PFTNAME=ehistory&KEY=@',mfn,'">История обращений</A>' fi,
          &uf('+7W1#',f(RSUM(&uf('7LICH,!TXT=',&uf('+D'),"/"v955^a,'!,if p(v7) then "1 "d7 fi')),0,0)), /* g1 - ВСЕГО ОЦЕНОК
          &uf('+7W2#',f(RSUM(&uf('7LICH,!TXT=',&uf('+D'),"/"v955^a,'!,if p(v7) then v7" " fi')),0,0))   /* g2 - СУММА ОЦЕНОК
          '<br>Читательский рейтинг издания: ',if g1<>'' then f(val(g2)/val(g1),0,2),' (всего оценок: ',g1,')' else '0.00 (нет оценок)'fi,

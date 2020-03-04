@@ -41,11 +41,7 @@ if p(v461) then ,'<b> '
    else 
       if p(v905^1) then else 
          if s(v461^x,v461^7,v961^x,v961^a)<>'' or s(v461^b,v962)<>'' and (not(v962^u):'3') or v961^b<>''and v961^a=''then' / ',o461f,fi, 
-   fi fi,|. - |v461^p,". - "d230^a, 
-   (if p(v230^a) then 
-       if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| è |+v230^a 
-       else ""| and |+v230^a 
-   fi fi), 
+   fi fi,|. - |v461^p,
    ,ovixdm,if a(v215^d) then |. - |v461^r fi, 
    if v225^0:'1' then 
       (if p(v225)then 

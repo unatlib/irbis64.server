@@ -249,7 +249,7 @@ IF
 if a(v112) or rsum((if p(v112) then if v112^B=&uf('+97',&unifor('Av5#1')) and v112^D=&uf('+97',&unifor('Av3^0#1'))  then '1,' else '0,' fi fi))=0 then '1' fi
 // добавл€ю дисциплину
 CORREC
-'RDR'
+&uf('IMAIN,NameRDR,RDR')
 mpu,"^D"v3^0,"^B"v5,
 'RI=',&uf('Av111#1')
 XXXXXXXXXXXXXXXXXXX

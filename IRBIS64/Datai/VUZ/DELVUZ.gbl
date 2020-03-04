@@ -31,7 +31,7 @@ REPEAT
 // в v111^D - идентификатор дисциплины
 CORREC
 'VUZ'
-mpu,'^W',&unifor('Av111^W#1'),&unifor('Av1068#1')
+mpu,'^W',&unifor('Av111^D#1'),&unifor('Av1068#1')
 'IDD=',&unifor('Av111^D#1')
 
 // запись DISC
@@ -79,7 +79,7 @@ CHA
 CHA
 83^F
 F
-(if p(v83) then if ( (&unifor('Av1001^w#1')<>''and &uf('+97',v83^w)=&unifor('Av1001^w#1') and &unifor('Av1001^u#1')='') or (&unifor('Av1001^u#1')<>''and v83^u=&unifor('Av1001^u#1') and &unifor('Av1001^w#1')<>''and &uf('+97',v83^w)=&unifor('Av1001^w#1'))) and (&unifor('Av1001^A#1')<>''and &uf('+97',v83^A)=&unifor('Av1001^A#1') or &unifor('Av1001^A#1')='') and (&unifor('Av1001^n#1')<>''and &uf('+97',v83^n)=&unifor('Av1001^n#1') or &unifor('Av1001^n#1')='') and (&unifor('Av1001^c#1')<>''and &uf('+97',v83^c)=&unifor('Av1001^c#1') or &unifor('Av1001^c#1')='') and (&unifor('Av1001^v#1')<>''and &uf('+97',v83^v)=&unifor('Av1001^v#1') or &unifor('Av1001^v#1')='') and (&unifor('Av1001^o#1')<>''and &uf('+97',v83^o)=&unifor('Av1001^o#1') or &unifor('Av1001^o#1')='') and (&unifor('Av1001^f#1')<>''and v83^f:&unifor('Av1001^f#1')) then &unifor('Av1001^f#1') else # fi else # fi/)
+(if p(v83)  then  if  ( &uf('Av1001^A#1')='' or &uf('+97',v83^A)=&uf('Av1001^A#1')  ) and ( &uf('Av1001^N#1')='' or &uf('+97',v83^N)=&uf('Av1001^N#1') ) and  ( &uf('Av1001^C#1')='' or &uf('+97',v83^C)=&uf('Av1001^C#1') ) and  ( &uf('Av1001^O#1')='' or &uf('+97',v83^O)=&uf('Av1001^O#1') ) and ( &uf('Av1001^V#1')='' or &uf('+97',v83^V)=&uf('Av1001^V#1') ) and ( &uf('Av1001^F#1')='' or &uf('+97',v83^F): &uf('Av1001^F#1') )  then &unifor('Av1001^f#1') else # fi else # fi/)
 ''
 CHA
 83^F

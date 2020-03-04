@@ -19,7 +19,7 @@ else mhl,
           if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
              if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
              else |. |v509^b,| (|v509^f|)| fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
-      fi  fi),|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi, 
+      fi  fi),|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,if v509^2:'1' then '.'fi, 
    fi,'\b0 ', 
    '\par \pard \fi300 ', 
    if p(v461^c)then 
@@ -34,10 +34,8 @@ else mhl,
       (if p(v461) then | : |d461^e, 
           if s(v982^0,v982^9)<>'' or v905^2:'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 then v461^e 
              else &unifor('Q'v461^e.1),v461^e*1 
-       fi fi),| : |v982^1,| / |v461^f,|. - |v461^p,". - "d230^a, 
-      (if p(v230^a) then 
-          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then""| è |+v230^a else ""| and |+v230^a 
-      fi fi), 
+       fi fi),| : |v982^1,| / |v461^f,|. - |v461^p,
+     
       ,ovixdm,if a(v215^d) then |. - |v461^r fi,
       if v225^0:'1' then 
          (if p(v225)then 

@@ -21,7 +21,7 @@ then
   then 
     '\trowd \trqc\trgaph108\trleft-108 \clbrdrl\brdrs\brdrw30 \clbrdrb\brdrs\brdrw30 \clbrdrr\brdrs\brdrw30\clcbpat0 \clshdng600 
 \cellx13500 \pard \widctlpar\intbl  {\ql \fs20 \b0 ',,,
-    '\ql Всего экземпляров: ',,f(rsum((G992|,|)),0,0),,
+'\ql Всего экземпляров: ',,f(rsum((G992|,|)),0,0),,
 /*---отладка '\par g1003: ',,(g1003/),,'\par ',,
 if val(&uf('IMAIN,ACCESSRDR,1'))=1 
 then 
@@ -175,12 +175,13 @@ fi,,,,,,,
 \clbrdrt\brdrs\brdrw30\clbrdrl\brdrs\brdrw30\clbrdrb\brdrs\brdrw30\clbrdrr\brdrs\brdrw30\cellx13500 \pard \widctlpar\intbl {\ql \fs20 ',,,,
   &uf('S1A'),,,
   if s(&uf('D',v1^_,,',@',,,,v1^Y,,,,,',v699')): '^U0' then else &uf('+7U994#1') fi,,,,
-  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,'{',,
+'\cell }\pard \widctlpar\intbl ',,,,,
+'{\ql \fs20 ',,,,
 /*----в G40 текущий семестр - для подсчета студентов
 &uf('+7W40#',
    if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) > val(&unifor('IPRIVATE,DATFINOS,')) or 
       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))<9 then 'V' else 
-   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) < val(&unifor('IPRIVATE,DATFINOS,'))  or 
+   if &unifor('IPRIVATE,DATFINOS,')<>'' and val(&unifor('3')) <= val(&unifor('IPRIVATE,DATFINOS,'))  or 
       &unifor('IPRIVATE,DATFINOS,')='' and val(&unifor('34'))>8 then 'O' fi fi),,,,
 /* 1001 - параметры отбора
 &uf('+7W1001#',&uf('+97','^L',v1^L,,'^M',v1^M,,'^N',v1^N,,'^O',v1^O,,'^P',v1^P,,'^R',v1^R,,'^S',v1^S,,'^U',v1^U,,'^V',v1^V,,'^T',v1^T)),,,,
@@ -235,16 +236,14 @@ fi,,,,,,,
         fi/)
       ),,,,,,,,,,,,,,,,,,,,,,,,
 &uf('+7G1004'),
-/*-------- в g1003 MFN студентов
+/*-------- в g1003 MFN студентов или количества по записям заголовок- для итогов
 if p(g1004) 
 then 
    if val(&uf('IMAIN,ACCESSRDR,1'))=1 
    then 
       &uf('+7U1003#', (if p(g1004)  then &uf('7RDR,|?',g1004,'|,mfn/') fi/),,,,),,,
-      &uf('+7W1006#', (if p(g1004)  then &uf('7RDR,|?',g1004,'|,mfn/') fi/),,,,),,,
    else 
       &uf('+7U1003#', (if p(g1004)  then &uf('7VUZ,|?',g1004,'|,v68^Z/') fi/),,,,),,,
-      &uf('+7W1006#',(if p(g1004)  then &uf('7VUZ,|?',g1004,'|,v68^Z/') fi/) ,,,,),,,
    fi,,,
    &uf('+7G1003'),
 fi,,,,
@@ -267,8 +266,11 @@ then
    fi,,
    '-----Студентов: ',,(if p(g1003) then g1003,', ',fi),'\par ',,
 fi,,,,,,,
-  '}',,,,,,
-  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,&uf('+7W991#',&uf('+97',v1)),,,,,
+'\cell }\pard \widctlpar\intbl ',,,,,,,
+
+
+'{\ql \fs20 ',,,
+&uf('+7W991#',&uf('+97',v1)),,,,
 /* --------Вычисление данных-----------------------------------------
 if val(&uf('IMAIN,GetKkoBook,0'))=0 
 then 
@@ -279,6 +281,7 @@ then
    &uf('+7U992#',g333),,,
 /* 444 - студенты - с учетом семестра
 /* 443 - студенты - без учета семестра
+/* в g1005 - параметры отбора
    &uf('D',,v1^_,,',@',,,,v1^Y,',@NumbRdr'),,
 /* g50 - кол-во для осеннего ->g444
 /* g51 - кол-во для весеннего->g444
@@ -304,7 +307,7 @@ else
       ),,,
 if p(g21) and g21: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
 /*----------------- экземпляры в g333
-  &uf('+1W333#',  
+  &uf('+7W333#',  
               if a(G991^T) 
               then 
 /* НЕ выделенная
@@ -336,9 +339,9 @@ if p(g21) and g21: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
                                    &uf('+7U992#',if g20^K<>'' then g20^K else g20^D fi),,,
                                  fi fi/) 
               fi,,
-         ),,,
+          ),,,
 /*-------- Количество студентов из поля 693 в G444
-  &uf('+1W444#',
+  &uf('+7W444#',
   ref(val(V1^Y),,,,,,,
               if a(G991^T) 
               then 
@@ -391,51 +394,26 @@ if p(g21) and g21: '^U1' then &uf('+7W998#1') else &uf('+7W998#') fi,,,,,,,,,,,,
                  fi/) 
               fi,,
      ),,,,,,,,,,,,,,,
-/*------------------- Экземпляры для докомплектования в G999
-&uf('+1W999#',
-  if val(G996)<val(v1^Q) then f((val(v1^Q)-val(G996))*val(G997),0,0) fi,,,,,),     
-/* Корректировка коэффициента книгообеспеченности и экземпляров(если необходимо) в G777
-  if &uf('IPRIVATE,FictionKKO,')<>'' 
-  then
-     if val(&uf('+1R444'))>0 and val(&uf('+1R777'))<0.45 
-     then 
-/* Увеличиваем счётчик экземпляров (записываем фиктивный коэффициент во временную переменную 222)
-         &uf('+1W222#',f(val(&uf('+1R444'))*(0.45+val('0.0'&uf('R2'))),0,0)),
-         if val(&uf('+1R222'))>val(&uf('+1R333')) 
-         then 
-           &uf('+7U992#',f(val(&uf('+1R222'))-val(&uf('+1R333')),0,0))    
-         fi,
-        &uf('+1W333#',&uf('+1R222')),
-/*Увеличиваем счётчик книгообеспеченности(записываем фиктивный коэффициент во временную переменную 666)
-        &uf('+1W666#',f( val(&uf('+1R222'))/val(&uf('+1R444')) ,0,2)),
-        if val(&uf('+1R666'))>val(&uf('+1R777')) 
-        then 
-           &uf('+7U993#',f(val(&uf('+1R666'))-val(&uf('+1R777')),0,2)),
-        fi,
-        &uf('+1W777#',&uf('+1R666')),
-
-        /* Корректируем количество экземпляров для докомплетования
-        &uf('+1W888#',   f(val(&uf('+1R444'))*0.5,0,0) ) ,,,,
-        &uf('+1W999#', 
-                 if val(&uf('+1R888'))>val(&uf('+1R333')) then f(val(&uf('+1R888'))-val(&uf('+1R333')),0,0) else  '' fi   ),,,,
-     fi,    
-  fi,
 /*--------Конец Вычисления данных-----------------------------------
 fi,,
+/*------------------- Экземпляры для докомплектования в G999
+   &uf('+7W999#',
+         if val(G777)<val(v1^Q) then f((val(v1^Q)-val(G777))*val(G444),0,0) fi,,,,,),     
 /*-------------Вывод данных
 /* Количество экземпляров
-  &uf('+1R333'),    
-  '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,,
+  g333,,
+  '\cell }\pard \widctlpar\intbl ',,,,,
+'{\ql \fs20 ',,,,,
 /* Количество студентов
-  &uf('+1R444'),if g443<>'' and val(g443)>0 and val(g444)<>val(g443) then ' (',g443,')' fi,,,
+  g444,if g443<>'' and val(g443)>0 and val(g444)<>val(g443) then ' (',g443,')' fi,,,
 /*отладка  '\par g40=',g40,,,' g1005=',g1005,,,' g50=',g50,,,' g51=',g51,,,
 /*  '\par V1=',v1,,,,,,,,,,,,
   '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,,
 /* Коэффициент книгообеспеченности
-  &uf('+1R777'),
+  g777,
   '\cell }\pard \widctlpar\intbl {\ql \fs20 ',,,,
   /* Количество экземпляров для докомплектования
-  &uf('+1R999'),
+  g999,,,
   '\cell }\pard \widctlpar\intbl {\row }\pard \qc\widctlpar ' 
 fi fi fi,
 '}',

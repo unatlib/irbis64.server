@@ -1,10 +1,4 @@
-if a(v461) then 
-   (l1 l2':v900^T then else if p(v230^a) then 
-       if v230^x:'2' then else 
-          if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then". - "| и |+v230^a 
-          else ". - "| and |+v230^a fi,
-   fi fi fi)
-fi,&unifor('S0'),
+,&unifor('S0'),
 (if p(v982) 
  then  |. - № |v982^z,| ; Заявл. |v982^r*6|.|,v982^r*4.2|.|,v982^r.4,
        | ; Опубл. |v982^p*6|.|,v982^p*4.2|.|,v982^p.4,|, |v982^m,

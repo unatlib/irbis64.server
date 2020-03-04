@@ -124,7 +124,7 @@ IF
 if v992='' then '1' fi
 // случай удаления контингента
 CORREC
-'RDR'
+&uf('IMAIN,NameRDR,RDR')
 mpu,"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,
 if &unifor('Av2002^E#1')<>'' then 'VGR=',&unifor('Av2002^E#1') else ,,,,'?',,&unifor('Av2002^a#1'),&unifor('Av2002^n#1'),,&unifor('Av2002^c#1'),,&unifor('Av2002^v#1'),&unifor('Av2002^o#1') '-S',&unifor('Av2002^f#1') fi
 XXXXXXXXXXXXXXXXXXX
@@ -187,7 +187,7 @@ IF
 if p(v992) then '1' fi
 // случай замены контингента
 CORREC
-'RDR'
+&uf('IMAIN,NameRDR,RDR')
 mpu,v2002/"^A"v992^A,"^N"v992^N,"^C"v992^C,"^O"v992^O,"^V"v992^V,"^F"v992^F,"^E"v992^E
 if &unifor('Av2002^E#1')<>'' then 'VGR=',&unifor('Av2002^E#1') else ,,,,'?',,&unifor('Av2002^a#1'),&unifor('Av2002^n#1'),,&unifor('Av2002^c#1'),,&unifor('Av2002^v#1'),&unifor('Av2002^o#1') '-S',&unifor('Av2002^f#1') fi
 XXXXXXXXXXXXXXXXXXX

@@ -36,7 +36,7 @@ mhl,'\b '(if p(v740)then if v740^u='ÄÀ'then v740^a|. |,v740^b|. |,|(|v740^c|). |
           if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
           else |. |v509^b,| (|v509^f|)| 
           fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
-    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi fi), 
+    fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,if v509^2:'1' then '.'fi fi), 
    if p(v982^u) then v982^0' ',if v982^9<>''then v982^9 '\par 'fi fi,'\b0 ',
    if s(v700v710,v981,v503,v961^z)='' and &unifor('Av509^2#1')<>'1' then'\tab \b '&unifor('E3'v200^a),'\b0 ', 
       if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 

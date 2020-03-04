@@ -20,8 +20,6 @@ fi,
 |. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n,| : |v923^v),
 |/ |v200^f,|/ |v200^x,|/ |v200^y,| ; |v200^g," = "v540,
 (if v123^x:'0'then ". - 1 : "|, 1: |+v123^d,| ; 1 : |v123^e,v123^f,| ; |v123^p fi),
-". - "d230^a,(if p(v230^a) then if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then 
-""| è |+v230^a else ""| and |+v230^a fi fi),
 &unifor('6ovixd'),
 if s(v215,&unifor('G2='v230^b),&unifor('G2='v230^c))<>''then'. - 'fi,v215^a," "d215^1,&unifor('G2='v215^1),
 if a(v215^1)then" c."d215^a fi,if p(v215^a)then" : "d215^c fi,v215^c,if s(v215^a,v215^c)<>''then"; "d215^d fi,v215^d,

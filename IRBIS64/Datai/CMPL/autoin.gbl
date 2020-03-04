@@ -205,7 +205,17 @@ REP
 F
 if v920:'sz' then  (if p(v62) then v62,,,if v62^6<>'' and v62^C='' then '^C',&uf('3') fi fi/)  else (if p(v62) then v62,,,,if p(v62^d) and p(v62^b) and a(v62^c) then '^C',,&unifor('3') fi fi/)  fi
 XXXXXXXXXXXXXXXXXXX
-//--------------Очагова - вписываю/корректирую в записи заказа кол-во по БО
+//--------------Очагова
+//----------------------------------------КСУ выбытия - задана только передача
+IF
+if v920: 'KS2' and v888='' and v800^A<>'' then '1' fi
+ADD
+888
+
+'^A-^B',,&uf('3')
+
+FI
+//--------------вписываю/корректирую в записи заказа кол-во по БО
 IF
 if v920: 'sz' then '1' fi,,,&uf('+7W1#'),&uf('+7W2#'),&uf('+7W3#'),&uf('+7W4#'),
 //-----в G2 сумма заказанных экземпляров по записям БД для сум.заказа из 62^6 записи SZ----в G4 сумма наименований
@@ -1791,20 +1801,4 @@ DEL
 1800
 *
 XXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXX
-//19 формирование вида содержания и средства доступа
-ADD
-203
-XXXXXXXXXXXXXXXXXXX
-if a(v203) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955) then '^AТекст','^Cнепосредственный' fi fi
-XXXXXXXXXXXXXXXXXXX
-ADD
-181
-XXXXXXXXXXXXXXXXXXX
-if a(v181) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955)then '^Ai' fi fi
-XXXXXXXXXXXXXXXXXXX
-ADD
-182
-XXXXXXXXXXXXXXXXXXX
-if a(v182) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='') and a(v955)then '^An' fi fi
 XXXXXXXXXXXXXXXXXXX

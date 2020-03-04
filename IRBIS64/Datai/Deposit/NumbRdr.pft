@@ -26,6 +26,7 @@
          fi fi fi fi fi fi fi fi 
     fi/) 
    ),,,
+   &uf('+7G52'),,   
    if &uf('IMAIN,AccessRdr,1')='1'  
    then  
 /*---------------------------по БД RDR
@@ -57,6 +58,7 @@
          fi fi fi fi fi fi fi fi 
      fi/) 
    ),,,
+   &uf('+7G52'),,
    if &uf('IMAIN,AccessRdr,1')='1'  
    then  
 /*---------------------------по БД RDR
@@ -64,6 +66,5 @@
       &uf('+7W51#',,&uf('+3SRDR,0,|',,g51,,'|,mfn') ) 
    else   
 /*---------------------------по БД VUZ
-
       &uf('+7W51#',,,f(rsum((if p(g52) then &uf('DVUZ,!?',,g52,,,,'!,v68^Z","') fi)),0,0) ),,
    fi,,

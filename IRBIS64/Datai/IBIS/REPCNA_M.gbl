@@ -257,8 +257,7 @@ if v991^A='' and v991^B<>'' then '1' fi
 REP
 691
 F
-(if p(v691) 
-then v691,,,,,if v691^O='' then  if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A)  then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^O',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
+(if p(v691) then v691,,,,,if v691^O='' then  if &uf('Av992#1')='' or &uf('Av992#1')<>'' and v691: &uf('Av992#1') or &uf('Av992#1')<>'' and &uf('Av992#1'): '^F' and v691^F: &uf('Av992^F#1') then if &uf('Av991^!#1')='' or &uf('Av991^!#1')=&uf('+97',v691^A)  then if &uf('Av991^/#1')='' or &uf('Av991^/#1')=&uf('+97',v691^C) then if &uf('Av991^|#1')='' or &uf('Av991^|#1')=&uf('+97',v691^N) then if &uf('Av991^=#1')='' or &uf('Av991^=#1')=&uf('+97',v691^V)  then  if &uf('Av991^B#1')<>'' then '^O',,&uf('Av991^B#1') fi fi,fi,fi,fi,fi fi,fi/)
 
 IF
 if &uf('+97',v111)<>&uf('+97',v691^O) then '1' fi

@@ -204,7 +204,7 @@ IF
 if v992<>'' then '1' fi
 //-------------------случай замены контингента, в 992 новые поля - задан признак кор-ки студентов
 CORREC
-'RDR'
+&uf('IMAIN,NameRDR,RDR')
 &uf('Av1002#1')/v992
 '?',,&unifor('Av1002^a#1'),&unifor('Av1002^n#1'),&unifor('Av1002^c#1'),,&unifor('Av1002^v#1'),&unifor('Av1002^o#1'),'-S',&unifor('Av1002^f#1') 
 XXXXXXXXXXXXXXXXXXX
@@ -244,7 +244,7 @@ IF
 if v992='' then '1' fi
 //--------------------------------- случай удаления контингента
 CORREC
-'RDR'
+&uf('IMAIN,NameRDR,RDR')
 mpu,"^B"v5,"^D"d3,v3^0,if a(v3^0) then v3^a,if p(v3^a) then"="v3^b else v3^b fi fi,&unifor('Av1002#1')
 '?',,&unifor('Av1002^a#1'),&unifor('Av1002^n#1'),&unifor('Av1002^c#1'),,&unifor('Av1002^v#1'),&unifor('Av1002^o#1'),'-S',&unifor('Av1002^f#1') 
 XXXXXXXXXXXXXXXXXXX

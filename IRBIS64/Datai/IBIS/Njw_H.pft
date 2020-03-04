@@ -27,10 +27,7 @@ ref(l(|I=|v933),&unifor('6ozboz_H'),
    fi fi,
 (". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n)
 ,"/ "v200^f), 
-if s(v230,v215)=''then 
-   ref(l(|I=|v933),". - "d230^a, 
-  (if p(v230^a) then if &unifor('Kjzk.mnu|'ref(l("I="v933),v101.3))<>''then""| и |+v230^a else ""| and |+v230^a fi fi)) 
-fi, 
+
 ref(l(|I=|v933),(". - "| ; |+v210^a,| ; |v210^x,| ; |v210^y,| : |v210^c,), 
    if s(v210^a,v210^c)<>''then", "v210^d else". - "v210^d fi,if v210^d<>''then ' - ' else ",     - "d210^e,". - "n210^e fi,v210^e,if a(v210^e)then"    "d210^d fi,),  
 if s(v230,v215)=''then 
@@ -98,27 +95,26 @@ if p(v936) then
 if p(v481)then'<br><b> Приплетены номера: </b> ',(if p(v481) then|<br>|d481,if p(v481^a) then v481^a else ref(l('I='&uf('Av933#1')),v200^a) fi,|. - |v481^q| г.|,if p(v481^h) then  
    if val(v481^h.1)=0 and (not(v481^h.1='0'))then' ' else 
       ref(l('I=',&uf('Av933#1')),if &unifor('Av210^9#1')<>''then' '&unifor('Av210^9#1') else', №: 'fi) fi,v481^h+|;  |fi fi),fi,
-if s(v230v215)<>''then ". - "d230^a, 
-   (if p(v230^a) then if &unifor('Kjzk.mnu|'ref(l("I="v933),v101.3))<>''then""| и |+v230^a else ""| and |+v230^a fi fi), 
+if s(v230v215)<>''then 
    (if s(v215,&unifor('G2='v230^b),&unifor('G2='v230^c))<>''then'. - 'fi,v215^a," "d215^1,&unifor('G2='v215^1)), 
    (if s(&unifor('G2='v230^b),&unifor('G2='v230^c))<>''and p(v215)then'<b> : 'fi,&unifor('G2='v230^b), 
    if &unifor('G2='v230^c)<>''then 
       if &unifor('G2='v230^b)<>''then', 'fi,&unifor('G2='v230^c)'</b> ' 
    fi), 
    (| + |v215^e,| |d215^2,&unifor('G2='v215^2)), 
-   if s(v337v230^d)<>''then". - <b> Систем. требования:</b>  "d230^d, 
+   if s(v337v230^d)<>''then". - <b> Систем. требования:</b>  "d230^d fi, 
       (if p(v230) then 
           if v230^x:'1'then|; Прил.: |d230^d else|. |+d230^d fi,v230^d,| (|v230^e|)|fi), 
       if  v951^i<>'' then '. - <b> URL:</b> '
     &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a) 
    else 
       ref(l("I="v933), 
-      if s(v337v230^d)<>''then". - <b> Систем. требования:</b>  "d230^d, 
+      if s(v337v230^d)<>''then". - <b> Систем. требования:</b>  "d230^d fi, 
          (if p(v230) then if v230^x:'1'then|; Прил.: |d230^d else|. |+d230^d fi,v230^d,| (|v230^e|)|fi), 
-         if  v951^i<>'' then '. - <b> URL:</b> '
+         if s(v337v230)<>'' then if v951^i<>'' then '. - <b> URL:</b> '
     &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a) 
       fi), 
-fi fi, 
+fi, 
 ". - "v931^b," (Есть прилож.: "d931^e,(| ; |+d931^e,if v931^e*1.1='='then v931^e*2 else v931^e fi,| - Шифр |v931^d),")"d931^e, 
 ". - "v904^b,if p(v904^c) then' (',&unifor('G2='v904^c),')'fi,". - "v320, 
 if rsum((v910^e|;|))>0then '. - ', 

@@ -16,7 +16,7 @@ then
          if &unifor('G2='v230^b)<>''then', ' 
          fi,&unifor('G2='v230^c) 
    fi fi),| : |d215^c, 
-   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and v215^d:'см'then | ; |v215^d else | ; |v215^d| см.| fi, 
+   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and (v215^d:'см'or v215^d:'sm')then | ; |v215^d else | ; |v215^d| см.| fi, 
 else 
    (| ; |+v215^a,| |d215^1,&unifor('G2='v215^1), 
    if a(v215^1)then 
@@ -31,5 +31,5 @@ else
          if &unifor('G2='v230^b)<>''then', ' 
          fi,&unifor('G2='v230^c) 
    fi fi,if v920.1='A'then else| : |d215^c fi, 
-   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and v215^d:'см'then | ; |v215^d else | ; |v215^d| см.| fi,) 
+   if v215^c*1.1='-'then v215^c*2,|, |v215^0*2,|, |v215^7*2,|, |v215^8*2 else v215^c fi,if v215^D<>'' and (v215^d:'см'or v215^d:'sm')then | ; |v215^d else | ; |v215^d| см.| fi,) 
 fi, 
