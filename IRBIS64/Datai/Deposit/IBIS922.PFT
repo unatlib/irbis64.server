@@ -1,5 +1,5 @@
 &uf('+7W700#'v700,if a(v700) then (if p(v961) then if v961^Z<>'' then v961 fi fi) fi),
-&uf('+7W701#'if p(v700) then (v701/) else (if p(v961) then if v961^Z<>'' then else v961 fi fi) fi),
+&uf('+7W701#'),if p(v700) then (if p(v701)then &uf(|+7U701#|v701)fi/) else (if p(v961) then if v961^Z<>'' or v961^4<>''then else &uf(|+7U701#|v961) fi fi/) fi,
 mhl,
 if &unifor('Av922^u#1')=''then 
    if &unifor('Av922^f#1')<>''then 
@@ -34,8 +34,10 @@ if &unifor('Av922^u#1')=''then
             (&unifor('Av922^2#1')='' or &unifor('Av922^s#1')<>''and &unifor('Av922^s#1')<>'070')) 
       then 
          if &unifor('Av922^c#1')<>''then' ; '&unifor('Av922^c#1') fi, 
-            " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-            " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'),
+            " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi,
+            " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+            " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+            " : "d922^e,&unifor('Av922^e#1'),
          if &unifor('Av922#2')<>''then else  
             if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
@@ -62,8 +64,10 @@ if &unifor('Av922^u#1')=''then
             then ' / ',osoa, 
          fi fi,
          if &unifor('Av922^c#1')<>''then'. '&unifor('Av922^c#1') fi, 
-             " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-             " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'), 
+            " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi,
+            " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+            " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+            " : "d922^e,&unifor('Av922^e#1'), 
          if &unifor('Av922#2')<>''then else  
             if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
@@ -79,7 +83,8 @@ if &unifor('Av922^u#1')=''then
             if v905^1<>'' then else ' / ',o922g1, fi fi 
          if &unifor('Av922#2')<>''then else 
             if &unifor('Av200^f#1')<>'' then 
-               if s(&unifor('Av922^f#1'),&unifor('Av922^g#1'))<>'' then' ; ' else ' / 'fi,&unifor('Av200^f#1') 
+               if s(&unifor('Av922^f#1'),&unifor('Av922^g#1'))<>'' then' ; ' else ' / 'fi,&unifor('Av200^f#1'), 
+               if &unifor('Av200^f#1') <>'' then if &unifor('Av200^g#1')<>'' then ' ; ' fi,&unifor('Av200^g#1') fi,
             fi 
             if &unifor('Av200^f#1')='' then 
                if &uf('Av905^1#1')='' then 
@@ -97,10 +102,12 @@ if &unifor('Av922^u#1')=''then
       fi fi
    else 
       if &unifor('Av922^c#1')=''then 
-            " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-            " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'), 
+            " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi,
+            " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+            " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+            " : "d922^e,&unifor('Av922^e#1'), 
          if &unifor('Av922#2')<>''then else  
-               if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
+            if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
          if s(&unifor('Av922^h#1'),&unifor('Av922^i#1'))<>''then', 'fi, 
          &unifor('Av922^h#1'), 
@@ -119,10 +126,12 @@ if &unifor('Av922^u#1')=''then
          fi fi,
       fi,
       if &unifor('Av922^c#1')<>''then '. ',&unifor('Av922^c#1')  
-            " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-            " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'), 
+         " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi, 
+         " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+         " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+         " : "d922^e,&unifor('Av922^e#1'), 
          if &unifor('Av922#2')<>''then else  
-               if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
+            if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
          if s(&unifor('Av922^h#1'),&unifor('Av922^i#1'))<>''then', 'fi, 
          &unifor('Av922^h#1'), 
@@ -169,8 +178,10 @@ else
     or a(g700) 
    then 
       if &unifor('Av922^c#1')<>''then' ; ',&unifor('Av922^c#1') fi, 
-          " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-          " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'), 
+         " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi,
+         " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+         " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+         " : "d922^e,&unifor('Av922^e#1'), 
          if &unifor('Av922#2')<>''then else  
                if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
@@ -183,14 +194,18 @@ else
          if &unifor('Av922^k#1')<>''then if &unifor('Av922^l#1')<>''then'. 'fi fi, 
          &unifor('Av922^l#1'), 
          if &unifor('Av922^g#1')<>''then' / '&unifor('Av922^g#1') fi,/*      ' ; ',
-      if &unifor('Av922^c#1')='' and s(&unifor('Av922^h#1'),&unifor('Av922^i#1'))<>'' then else ' ; ' fi,
-   else 
-      if &unifor('Av905^1#1')<>'' then else 
-         if s(g700v970g701)<>''then ' / ',osoa, fi fi, 
-      if &unifor('Av922^c#1')<>''then'. ',&unifor('Av922^c#1'), 
-          " = "d922^d,&unifor('Av922^d#1')," = "d922^p,&unifor('Av922^p#1'), 
-          " = "d922^r,&unifor('Av922^r#1')," : "d922^e,&unifor('Av922^e#1'), 
-         if &unifor('Av922#2')<>''then else  
+         if &unifor('Av922^c#'&unifor('Av922^u*3#1'))='' and 
+            s(&unifor('Av922^h#'&unifor('Av922^u*3#1')),&unifor('Av922^i#'&unifor('Av922^u*3#1')))<>'' 
+         then else ' ; ' fi,
+      else 
+         if &unifor('Av905^1#1')<>'' then else 
+            if s(g700v970g701)<>''then ' / ',osoa, fi fi, 
+         if &unifor('Av922^c#1')<>''then'. ',&unifor('Av922^c#1'), 
+            " = "d922^d,if &uf('Av922^d.1#1'):'(' then &uf('Av922^d.1#1'),&uf('G0('&uf('G2('&uf('Av922^d#1'))) else &uf('G0('&unifor('Av922^d#1')) fi,
+            " = "d922^p,if &uf('Av922^p.1#1'):'(' then &uf('Av922^p.1#1'),&uf('G0('&uf('G2('&uf('Av922^p#1'))) else &uf('G0('&unifor('Av922^p#1')) fi, 
+            " = "d922^r,if &uf('Av922^r.1#1'):'(' then &uf('Av922^r.1#1'),&uf('G0('&uf('G2('&uf('Av922^r#1'))) else &uf('G0('&unifor('Av922^r#1')) fi,
+            " : "d922^e,&unifor('Av922^e#1'), 
+            if &unifor('Av922#2')<>''then else  
             if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
          fi 
          if s(&unifor('Av922^h#1'),&unifor('Av922^i#1'))<>''then', 'fi, 
@@ -212,7 +227,11 @@ fi,
 if p(v922)then &unifor('S0'),
    (if p(v922)then 
        if val(&unifor('S1A'))=1 then else  
-          v922^c,| = |v922^d,| = |v922^p,| = |v922^r,| : |v922^e, 
+          v922^c,
+          | = |d922^d,if v922^d.1:'(' then v922^d.1,&uf('G0('&uf('G2('v922^d)) else &uf(|G0(|v922^d) fi,
+          | = |d922^p,if v922^p.1:'(' then v922^p.1,&uf('G0('&uf('G2('v922^p)) else &uf(|G0(|v922^p) fi,
+          | = |d922^r,if v922^r.1:'(' then v922^r.1,&uf('G0('&uf('G2('v922^r)) else &uf(|G0(|v922^r) fi,
+          | : |v922^e, 
           if v922^c=&unifor('Av922^c#',&unifor('+N922')) then 
              if &unifor('Av200^e#1')<>'' then' : '&unifor('Av200^e#1') fi 
           fi,|, |v922^h,|. |v922^i,|, |v922^k,|. |v922^l,

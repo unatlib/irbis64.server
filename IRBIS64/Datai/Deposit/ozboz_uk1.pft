@@ -1,0 +1,54 @@
+mhl,'\b 'v700^a," "v700^d,", "v700^g,
+   if a(v700^g)then", "d700^b 
+      if v700^b:'. ' then v700^b else 
+         if v700^b:'.'then &unifor('G0.'v700^b),'. '&unifor('G2.'v700^b) 
+         else v700^b 
+   fi fi fi,
+   if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
+      if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')',if v126^x='0'then", "v700^7,fi'. ', 
+   else if v126^x='0'then", "v700^7". " else "."d700^g fi,
+   fi,if v710^s<>''then if &uf('Kstr.mnu|'v710^s)<>''then &uf('Kstr.mnu|'v710^s)else v710^s fi fi,". "d710^s,v710^a, 
+   if s(v710^n,v710^c)<>''then' ('v710^n" ; ",v710^c,')'fi,". "v710^b, 
+   if s(v710^d,v710^f,v710^e)<>''then' ('v710^d" ; ",v710^f, 
+      if p(v710^f)then" ; "v710^e else v710^e fi," / "v710^h," / "v710^i')' 
+   fi,". "d710,v971^b, 
+   if s(v971^d,v971^f,v971^e)<>''then' ('v971^d" ; ",v971^f, 
+      if p(v971^f)then" ; "v971^e else v971^e fi," / "v971^h," / "v971^i')' 
+   fi,". "d971^b,
+   if v920:'ASP' and s(v700,v701)='' and v961^z<>'' then 
+      (if p(v961) then 
+          if p(v961^z) then v961^a," "v961^d,", "v961^g,
+             if a(v961^g)then", "d961^b 
+                if v961^b:'. ' then v961^b else 
+                   if v961^b:'.'then &unifor('G0.'v961^b),'. '&unifor('G2.'v961^b) 
+                   else v961^b 
+             fi fi fi,
+             if s(v961^1,v961^c,v961^f)<>''then' (',v961^1, 
+                if s(v961^1)<>''then" ; "d961^c fi,v961^c, 
+                if s(v961^1,v961^c)<>''then" ; "d961^f fi,v961^f,'). ' 
+             else"."d961^g," "d961^a 
+       fi fi fi),'\b0 ',
+   fi,    
+   (if v509^2:'1' then 
+       if p(v509) then mhu,v509^g.1,mhl,v509^g*1,| |d509^g,| - |+v509^a, 
+          if p(v509^b) and p(v509^x) then| (|v509^f|)|,|. |v509^b,| (|v509^x|)| 
+          else |. |v509^b,| (|v509^f|)| 
+          fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
+       fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'
+   fi fi),'\b0 ', 
+   if s(v700v710,v981,v503,v961^z)='' and &unifor('Av509^2#1')<>'1' then'\b '&unifor('E3'v200^a),'\b0 ', 
+      if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
+   else 
+/*    if v517^t:'500'then (if p(v517)then if v517^t:'500'then | [|v517^a|] |,break fi fi) else "\par \tab "d200^a       fi,v200^a 
+      if v517^t:'500'then (if p(v517)then if v517^t:'500'then | [|v517^a|] |,break fi fi) fi,
+   " "v200^a    
+   fi," ["v200^b"]", 
+   if a(v200^b) then 
+      if a(v900^t)and a(v110^t) then 
+         if s(v230v337v135)<>''then ' [Электронный ресурс] ' else 
+            if v920:'NJ'then ,ref(L("I="v933),if &uf("Koomr.mnu|"v110^t)<>''then'['&uf("Koomr.mnu|"v110^t)']'fi),else if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [Текст]'  fi fi fi, 
+      else 
+         if (v900^t='a'or v110^t='a') and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
+            if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then' [',&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t)']',fi,          
+   fi fi fi,

@@ -15,7 +15,7 @@ if v920:'SPEC' then
        fi,mpl, 
        if v925=&unifor('Av925#'&unifor('+N925')) then 
        else 
-          if p(v925^f) and p(v925^0) or s(v925^f,v925^4)='' and s(&unifor('Av461^x#1'),&unifor('Av961^z#1'))<>'' 
+          if p(v925^0) or s(v925^f,v925^4)='' and s(&unifor('Av461^x#1'),&unifor('Av961^z#1'))<>'' 
           then ' ; ' else '.'fi, 
     fi fi) 
 else 

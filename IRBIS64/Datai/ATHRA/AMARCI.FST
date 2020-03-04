@@ -19,5 +19,9 @@
 150 0 (v150*2/)
 152 0 (v152*2/)
 100 0 v100*2
+10 0 (v10*2/)
+921 0 v920
+922 0 v922
+923 0 v923
 920 0 if p(v310) then 'REF' else if p(v320) then 'EXP' else if a(v320) and a(v310) then 'ATHRA' fi fi fi
 

@@ -1,0 +1,5 @@
+imprus_ibf.wss
+ImportDB 0,RMARCI,%1,%2,%3,0,1
+GLOBAL RMARCI1,%4,,1,1,0
+SEARCH "V= MARC"
+GLOBAL RMARCI2

@@ -1,8 +1,11 @@
 999 0 mhl,"VIS="v999
-60 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),mhl,&uf('+7W1#'),&uf('+7W2#'),(if p(g40) then if (g40^a<>'') then &uf('+7U1#',g40^d,| |g40^1,| 000000|N40^1,|/|g40^v) fi,if (g40^f.1<>'*') and (g40^a<>'') then &uf('+7U1#',g40^f,| |g40^2,| 000000|N40^2,|/|g40^v) fi,if (g40^L<>'') and (g40^a<>'') then &uf('+7U1#',g40^L,| |g40^3,| 000000|N40^3,|/|g40^v) fi,if (g40^a='') then &uf('+7U2#',g40^d,|/|g40^v) fi fi),&uf('++B1#30'),&uf('+7U1#',(g2/)),&uf('+7T1'),(|VS=|g1/),,,(if g1<>'' then 'SV=',&uf('G2/',g1),'/',&uf('G0/',g1),/,fi),,,,&uf('+7W3#',&uf('30')),&uf('+7W4#'),(if g1<>'' then if &uf('Ag3#1')=g1.4 then &uf('+7W4#1'),break fi fi),/if g4='' then 'PRG=Õ≈“' else 'PRG=ƒ¿' fi,
-40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),(if g40^a<>'' then |DV=|g40^d.8|/|,g40^V,,,/|VD=|g40^V|/|,g40^d.8,,,/|AR=|g40^g,|/|g40^a fi,if g40<>'' then '%' fi/)
-40 0 &uf('7LICH,!RI=',v30,'!,"AR="v5,"/"v6/')
-40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),(if (g40^f<>'******') and (g40^a<>'') then |DW=|g40^f.8|/|,g40^V,,,/|WD=|g40^V|/|,g40^f.8 fi,if g40<>'' then '%' fi/)
+/*60 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),mhl,&uf('+7W1#'),&uf('+7W2#'),(if p(g40) then if (g40^a<>'') then &uf('+7U1#',g40^d,| |g40^1,| 000000|N40^1,|/|g40^v) fi,if (g40^f.1<>'*') and (g40^a<>'') then &uf('+7U1#',g40^f,| |g40^2,| 000000|N40^2,|/|g40^v) fi,if (g40^L<>'') and (g40^a<>'') then &uf('+7U1#',g40^L,| |g40^3,| 000000|N40^3,|/|g40^v) fi,if (g40^a='') then &uf('+7U2#',g40^d,|/|g40^v) fi fi),&uf('++B1#30'),&uf('+7U1#',(g2/)),&uf('+7T1'),(|VS=|g1/),,,(if g1<>'' then 'SV=',&uf('G2/',g1),'/',&uf('G0/',g1),/,fi),,,,&uf('+7W3#',&uf('30')),&uf('+7W4#'),(if g1<>'' then if &uf('Ag3#1')=g1.4 then &uf('+7W4#1'),break fi fi),/if g4='' then 'PRG=Õ≈“' else 'PRG=ƒ¿' fi,
+60 0 mhl,&uf('+7W1#'),&uf('+7W2#'),(if p(v40) then if (v40^a<>'') then &uf('+7U1#',v40^d,| |v40^1,| 000000|N40^1,|/|v40^v) fi,if (v40^f.1<>'*') and (v40^a<>'') then &uf('+7U1#',v40^f,| |v40^2,| 000000|N40^2,|/|v40^v) fi,if (v40^L<>'') and (v40^a<>'') then &uf('+7U1#',v40^L,| |v40^3,| 000000|N40^3,|/|v40^v) fi,if (v40^a='') then &uf('+7U2#',v40^d,|/|v40^v) fi fi),&uf('++B1#30'),&uf('+7U1#',(g2/)),&uf('+7T1'),(|VS=|g1/),,,(if g1<>'' then 'SV=',&uf('G2/',g1),'/',&uf('G0/',g1),/,fi),,,,&uf('+7W3#',&uf('30')),&uf('+7W4#'),(if g1<>'' then if &uf('Ag3#1')=g1.4 then &uf('+7W4#1'),break fi fi),/if g4='' then 'PRG=Õ≈“' else 'PRG=ƒ¿' fi,
+/*40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),(if g40^a<>'' then |DV=|g40^d.8|/|,g40^V,,,/|VD=|g40^V|/|,g40^d.8,,,/|AR=|g40^g,|/|g40^a fi,if g40<>'' then '%' fi/)
+40 0 (if v40^a<>'' then |DV=|v40^d.8|/|,v40^V,,,/|VD=|v40^V|/|,v40^d.8,,,/|AR=|v40^g,|/|v40^a fi,if v40<>'' then '%' fi/)
+/*40 0 &uf('7LICH,!RI=',v30,'!,"AR="v5,"/"v6/')
+/*40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),(if (g40^f<>'******') and (g40^a<>'') then |DW=|g40^f.8|/|,g40^V,,,/|WD=|g40^V|/|,g40^f.8 fi,if g40<>'' then '%' fi/)
+40 0 (if (v40^f<>'******') and (v40^a<>'') then |DW=|v40^f.8|/|,v40^V,,,/|WD=|v40^V|/|,v40^f.8 fi,if v40<>'' then '%' fi/)
 999 0  if mfn=1 then 'Z=ÔÔÔ' fi
 10 8 '/K=/',v10
 11 8 '/K=/',v11
@@ -25,7 +28,8 @@
 40 0 MHL,(if v40^F='******' then |C=|v40^A fi,|%|D40,/)/(|SH=|v40^A/)
 40 0 MHL,(if v40^F='******' then |N=|d40^c,&unifor(|9|v40^C) fi,|%|D40,/)
 40 0 MHL,(if v40^F='******' then |H=|v40^H,if a(v40^h)then|H=|v40^b fi fi,|%|D40,/)
-40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),MHL,(if g40^F<>'******' and p(g40^U) then |HU=|g40^H/|HU=|g40^b fi,if g40<>'' then '%' fi,/)
+/*40 0 &uf('+7W40#',(v40/)),&uf('+7U40#',&uf('7RDR_ARH,!RI=',v30,'!,(v40/)')),MHL,(if g40^F<>'******' and p(g40^U) then |HU=|g40^H/|HU=|g40^b fi,if g40<>'' then '%' fi,/)
+40 0 MHL,(if v40^F<>'******' and p(v40^U) then |HU=|v40^H/|HU=|v40^b fi,if v40<>'' then '%' fi,/)
 1 0 '!'v21,v10,v11.6,v12.6
 920 0 "V="v920,if a(v920) then "V=ST"d67,"V=RDR"n67 fi
 50 0 MHL,(|KAT=|v50/)

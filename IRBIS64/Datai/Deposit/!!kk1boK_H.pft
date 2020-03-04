@@ -76,8 +76,8 @@
       if p(v200^v) then" : "v200^a else v200^a fi, 
    fi, 
    if a(v461) then ,ozboz_H, fi, mpl,
-   if p(v925) then &uf('6ibis925_H') fi,Otitkn_H,oizd,
-   if a(v461) then ,ospec,fi,
+   if p(v925) and v920:'SPEC'then &uf('6ibis925_H') fi,Otitkn_H,oizd,
+    ,ospec,
    if v920.1:'A' and v463^c<>'' then mpl,&uf('6oistaspK_H') else 
    '. - ',ovixd,'. - ',ofizxar_H,
    if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''then,oser, fi,

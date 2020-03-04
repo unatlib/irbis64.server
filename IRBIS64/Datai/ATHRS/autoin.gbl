@@ -152,7 +152,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 510
 F
-(v550/)
+(|^)550|d550,|^A|v550^A,|^B|v550^B,|^C|v550^C,|^D|v550^D,|^G|v550^G,|^E|v550^E,|^O|v550^O,|^H|v550^H,|^9|v550^9,|^5|v550^5,|^!|v550^!,|^?|v550^?,|^7|v550^7,|^8|v550^8,|^[|v550^[,|^]|v550^],|^\|v550^\,|^/|v550^//)
 XXXXXXXXXXXXXXXXXXX
 ADD
 510
@@ -313,4 +313,9 @@ ADD
 907
 XXXXXXXXXXXXXXXXXXX
 if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else '^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,') fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+801
+XXXXXXXXXXXXXXXXXXX
+if a(v801)then '^A',&unifor('Korg.mnu|1'),'^B',&unifor('Korg.mnu|2'),'^10','^C',&unifor('3') fi
 XXXXXXXXXXXXXXXXXXX

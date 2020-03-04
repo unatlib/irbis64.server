@@ -1,9 +1,9 @@
-(if p(v910) then 
+(if p(v910) then if p(v910^c)then
     if &uf('IPRIVATE,KKF,')<>''and v910^u=&uf('IPRIVATE,KKF,') or 
        &uf('Av905^n#1')<>'' and v910^u= &uf('Av905^n#1') or 
        s(&uf('IPRIVATE,KKF,'),&uf('Av905^n#1'))='' 
     then 
-       if p(v910^b) then |T - |v910^b,| (|v910^1|ύκη.)|,| - |v910^d,'  -  'v910^e,
+       'T - 'v910^b,if a(v910^b)then v910^h fi,| (|v910^1|ύκη.)|,| - |v910^d,'  -  'v910^e,
           if val(v910^e)>0 then 
              if &unifor('Av10^c#1')<>''then &unifor('Av10^c#1') else &unifor('Korg.mnu|3'),| /ύκη.|d910^1 fi 
           fi,

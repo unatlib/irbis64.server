@@ -34,7 +34,9 @@ else
           (if p(v910) then 
               if &uf('Kmhrvn.mnu\'v910^d)='' and v910^c<>'' then 
                  if v910^a:'0' or v910^a:'U' and val(v910^1) > val(v910^2)  
-              then v910^d fi fi fi/) 
+              then v910^d fi fi fi/),
+          (if p(v910) then 
+              if v910^a:'p' then &uf(|D,!I=|v910^p|!,(if v910^a:'0' then v910^d fi/)|) fi fi/)
        fi),&uf('+7G3'), 
    &uf('+7W4#'),&uf('+7U4#'(&uf(|+Omhrkv.mnu\|g3)/)),&uf('+7G4'),
        if g10<>'' then &uf('+7M4#10') else if g2<>'' then &uf('+7S4#2') fi fi,

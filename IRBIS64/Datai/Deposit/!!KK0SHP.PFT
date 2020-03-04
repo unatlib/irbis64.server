@@ -1,5 +1,5 @@
 if p(v900^z) then if v905^v<>'' or &unifor('IPRIVATE,VZV=,')<>'' then else 
-'\fi5000 \fs28 \b 'mhu,v900^Z,'\b0 'mpl'\par \fi0 \fs20 'fi fi,
+'\par \fi3000 \fs28 \b 'mhu,v900^Z,'\b0 'mpl'\par \fi0 \fs20 'fi fi,
 
 if v920:'nj'then '\b ',v903'\b0 ',
    ref(l("I="v933),'\par \fi300 ',v200^a,

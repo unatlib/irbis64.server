@@ -78,7 +78,7 @@ else
              '^V'v481^v,'^U'v481^u,'^E'v481^e,'^F'v481^f,'^N'v481^n,
              '^D'v481^d,if a(v481^d) then &unifor('Av461^d#1') fi,
              '^G'v481^g,if a(v481^g) then &unifor('Av461^g#1') fi,
-             '^H'v481^h,'^4'v481^4,'^O'v481^0,'^Q'v481^q,'^M'v481^m,'^P'v481^p,
+             '^H'v481^h,'^4'v481^4,|^O|v481^0,'^Q'v481^q,'^M'v481^m,'^P'v481^p,
              '^T'&unifor('Av903#1'),'^#'&unifor('IPRIVATE,EKP,'),if &unifor('IPRIVATE,EKP,')='' then &unifor('+D') fi,
           fi/)
       else 
@@ -90,7 +90,7 @@ else
                 '^V'v488^v,'^U'v488^u,'^E'v488^e,'^F'v488^f,'^N'v488^n,
                 '^D'v488^d,if a(v488^d) then &unifor('Av461^d#1') fi,
                 '^G'v488^g,if a(v488^g) then &unifor('Av461^g#1') fi,
-                '^H'v488^h,'^4'v488^4,'^O'v488^0,'^Q'v488^q,'^M'v488^m,'^P'v488^p,
+                '^H'v488^h,'^4'v488^4,|^O|v488^0,'^Q'v488^q,'^M'v488^m,'^P'v488^p,
                 '^T'&unifor('Av903#1'),'^#'&unifor('IPRIVATE,EKP,'),if &unifor('IPRIVATE,EKP,')='' then &unifor('+D') fi,
              fi/)
          else 

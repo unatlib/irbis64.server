@@ -1,3 +1,5 @@
+if p(v900^z) then if v905^v<>'' or &unifor('IPRIVATE,VZV=,')<>'' then else 
+ mhu,x60,v900^Z,/,mpl,fi fi,
 if p(v903) then '\\$A0,11$B\\'
    if v903:v906.15 then"E"v906"F",if p(v106)then x10,&unifor('K106sh.mnu|'v106^a)," "v106^b fi, 
       if v906:v908 then else/"\\$A0,11$B\\E"v908"F"fi 
@@ -141,5 +143,5 @@ if a(v461)then if s(v700,v710)<>'' or v509^2:'1' then /fi,mhl,
             if v920:'NJ'then ,ref(L("I="v933),if &uf("Koomr.mnu|"v110^t)<>''then'['&uf("Koomr.mnu|"v110^t)']'fi),else if s(&unifor('IPrivate,KKS,'),v905^t)<>'' then else ' [Текст]'  fi fi fi, 
       else 
          if (v900^t='a'or v110^t='a') and s(&unifor('IPrivate,KKS,'),v905^t)<>'' then else if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then' [',&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t)']',fi,          
-   fi fi fi fi, 
-if p(v925) then &uf('6ibis925K') fi,otitkn,oizd,ospec,ovixd, 
+   fi fi fi fi, if p(v925) and v920:'SPEC'then &uf('6ibis925K') fi,
+,otitkn,oizd,ospec,ovixd, 

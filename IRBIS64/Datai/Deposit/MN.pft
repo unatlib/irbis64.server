@@ -1,6 +1,6 @@
 '{',mhl, 
 if v907^C:'ОБРНЗ' then if &unifor('IPRIVATE,ETR,')='obrzv' then else 
-'\qc\b Издание в обработке. Не выдается\par \b0 \ql' fi fi, 
+'\qc\b Издание в обработке.par \b0 \ql' fi fi, 
 &uf('6osvex'), 
 &uf('6orchifr'), 
 &uf('6otit461'), 
@@ -21,5 +21,5 @@ if p(v925) then &uf('6ibis925') fi,
 &uf('6oex910'), 
 ofinal,
 bibl390, 
-'\par ',&unifor('!'), 
+'\par \b ','Кол-во выдач \b0 ',f(val(v999),0,0),&unifor('!')if val(v999) =0 then'0'fi, 
 '}' 

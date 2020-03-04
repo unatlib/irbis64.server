@@ -1,0 +1,59 @@
+'</>',
+mhl, "<br> <b> Список библиографии:</b> "d390^8,
+&uf('S0'),(if p(v390)then 
+    if p(v390^8) then  
+     '<br> <b> ',&uf('S1A')'. ',
+       if p(v390^t) then 
+          if val(&uf('J'v390^#',I='v390^T))>0 then 
+             '<A HREF="IRBIS:2,,',v390^#',,I='v390^T'">См.',if v390^#=&uf('+D') then else | (в БД |v390^#|) |fi '</A>',
+             if s(v390^z,v390^c)='' then &uf('D'v390^#',?I='v390^T,'?,@brief') fi
+          fi 
+       
+       fi,'</b>  ' 
+       if p(v390^9) then 
+          if v390^9='1' then v390^x 
+          else &unifor('E'v390^9,v390^x), 
+             if p(v390^?)then |, |v390^? else 
+                if &unifor('F'v390^9,v390^x)<>'' then ', '&unifor('F'v390^9,v390^x) fi fi,'.' 
+          fi 
+       else 
+          if v390^x:',' then v390^x|.| else 
+             if v390^x:' ' then &unifor('G0 'v390^x),|, |v390^?|.| 
+                if a(v390^?) then 
+                   if v390^x:'.' then ', ' 
+                      if v390^x:'. ' 
+                      then &unifor('G2 'v390^x) else &unifor('G0.'&unifor('G2 'v390^x)),'. ' &unifor('G2.'v390^x) 
+                      fi 
+                   else ', '&unifor('G2 'v390^x)'.' 
+                fi fi 
+             else v390^x,|, |v390^?,|.|d390^x, 
+       fi fi fi,| |d390^x,v390^z,|. |v390^v,
+       if p(v390^v) then | : |v390^c else v390^c fi,| : |v390^e, 
+       if s(&unifor('Av390^r#1'),&unifor('Av390^s#1'))<>''then', 'fi,v390^r, 
+       if p(v390^s) then if p(v390^r) then' : 'fi,v390^s fi, 
+       if s(v390^k,v390^l)<>''then', 'fi,v390^k, 
+       if p(v390^l) then if p(v390^k) then' : 'fi,v390^l fi, 
+       if p(v390^f) or p(v390^x) and &unifor('Av905^1#1')='' then' / ',o390f, fi, 
+       |. -|v390^n,|. - |v390^d, 
+       if p(v390^j) then | // |v390^j else 
+          if s(v390^d,v390^g)=''then 
+             if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>'' or &unifor('Av101#1')='' then
+             '. - [Б. м. : б. и.]'else'. - [S. l. : s. n.]'fi 
+          else 
+             if a(v390^d) then 
+                if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>'' or &unifor('Av101#1')=''then'. - [Б. м.]'else'. - [S. l.]'fi 
+             fi,| : |v390^g, 
+          fi,|, |v390^h, 
+       fi,|. - |v390^4, 
+       if p(v390^4)then if v390^4:'с' or v390^4:'c' or v390^4:'p' or v390^4:'s' then else &unifor('Korg.mnu|4')'.'fi fi, 
+       if a(v390^4) and p(v390^$) then |. - |v390^$ fi,
+       | : |v390^0*2,|. - (|v390^q,| ; |v390^m,|)|d390^q,|. - |v390^p,|. - ISBN |v390^i, 
+       if s(v905^f,&unifor('IPRIVATE,FPK,'))='1'then else". Кл.слова: "d390^5, 
+          if s(v905^f,&unifor('IPRIVATE,FPK,'))='2'then mpu,v390^5,|, |v390^6,|, |v390^7,mhl else 
+             if s(v905^f,&unifor('IPRIVATE,FPK,'))='3'then &unifor('Q'v390^5, 
+                |, |v390^6,|, |v390^7) else v390^5,|, |v390^6,|, |v390^7 
+       fi fi fi, 
+       |. Другие авторы: |v390^w    
+fi fi), 
+mpl,
+''

@@ -9,7 +9,7 @@ if v907^C:'Œ¡–Õ«' then if &unifor('IPRIVATE,ETR,')='obrzv' then else
 '. - ',ofizxar_H,
 '. - ',oser, 
 '. - ',oprim_H, 
-'. - ',oISBNcn_H, 
+'. - ',oISBNcn_H, '<br>'
 oprimd_H,
 /*'</td></tr></table>' ,
 ogrudk_H, 

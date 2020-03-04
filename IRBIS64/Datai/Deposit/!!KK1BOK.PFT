@@ -76,12 +76,11 @@ else mhl,
       if p(v200^v) then" : "v200^a else v200^a fi, 
    fi, 
    if a(v461) then ,ozboz, fi, 
-   if p(v925) then &uf('6ibis925') fi,Otitkn,oizd,
-   if a(v461) then ,ospec,fi,
+   if p(v925) and v920:'SPEC'then &uf('6ibis925') fi,Otitkn,oizd,
+    ,ospec,
    if v920.1:'A' then if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''thenoserfi,&uf('6oistaspK') else '. - ',ovixd,'. - ',ofizxar,
    if s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))=''then,oser, fi,'. - ',oprimK,'. - ',oISBNcnK, 
       if s(v905^l)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"\par  "|. |+v300,mpl fi 
    fi, 
    "\par \b   Перевод заглавия: \b0  "v541, 
 fi, 
-

@@ -6,8 +6,8 @@ if v920: 'NJ' or s(v936,v934)<>''or s(g6,g7)<>''
 then 
   if &unifor('IMAIN,KUMJEX,')='1'then (if p(v910) 
    then 
-     if s('0 3 4 5 p 8'): v910^A  
-     then 
+     if s('2 6 7'): v910^A  
+     then else
        '^A',,&uf('Av933#1'),
        '^Q',,&uf('Av934#1'),if &uf('Av934#1')=''then &uf('Av210^D#1') fi,
        '^F',,&uf('Av935#1'),if &uf('Av935#1')=''then &uf('Ag7#1') fi,
@@ -16,8 +16,8 @@ then
      fi, 
    fi/),else (if p(v910) 
    then 
-     if s('0 3 4 5 p 8'): v910^A  
-     then 
+     if s('2 6 7'): v910^A  
+     then else
        '^A',,&uf('Av933#1'),
        '^Q',,&uf('Av934#1'),if &uf('Av934#1')=''then &uf('Av210^D#1') fi,
        '^F',,&uf('Av935#1'),if &uf('Av935#1')=''then &uf('Ag7#1') fi,

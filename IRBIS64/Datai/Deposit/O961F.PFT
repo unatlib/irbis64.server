@@ -7,7 +7,7 @@ if rsum((if p(v961) then if p(v961^a) and a(v961^4) then'1;'else'0;'fi fi)) >0 t
              if val(&unifor('S1A'))=1 then 
                 if p(v961^9) then v961^a,| |v961^d,| |v961^b,if a(v961^b) then v961^g fi 
                 else  
-                   if v961^b:'. ' then v961^b else 
+                   if v961^b:'. 'or v961^b:'-' then v961^b else 
                       if v961^b:'.'then &unifor('G0.'v961^b),'.' 
                          if &unifor('G2.'v961^b):'.'then' 'fi,&unifor('G2.'v961^b) 
                       else v961^b 
@@ -22,7 +22,7 @@ if rsum((if p(v961) then if p(v961^a) and a(v961^4) then'1;'else'0;'fi fi)) >0 t
              if p(v961^9) then v961^a,| |v961^d,| |v961^b, 
                 if a(v961^b) then | |v961^g fi,| (|v961^7|)| 
              else 
-                if v961^b:'. ' then v961^b else 
+                if v961^b:'. 'or v961^b:'-' then v961^b else 
                    if v961^b:'.'then &unifor('G0.'v961^b),'.' 
                       if &unifor('G2.'v961^b):'.'then' 'fi,&unifor('G2.'v961^b) 
                    else v961^b 
@@ -58,7 +58,7 @@ if s(v961^4)<>'' then
                 if v961^6*4.1='*'then v961^6*5 else &unifor('Q'v961^6*4) fi,| |d961^4,        
                 if p(v961^9)then v961^a,| |v961^d,| |v961^b,if a(v961^b) then v961^g fi,| (|v961^7|)| 
                 else 
-                   if v961^b:'. ' then v961^b else 
+                   if v961^b:'. 'or v961^b:'-' then v961^b else 
                       if v961^b:'.'then &unifor('G0.'v961^b),'.' 
                          if &unifor('G2.'v961^b):'.'then' 'fi,&unifor('G2.'v961^b) 
                       else v961^b 
@@ -77,7 +77,7 @@ if s(v961^4)<>'' then
                 if v961^6*4.1='*'then v961^6*5 else &unifor('Q'v961^6*4) fi,| |d961^4, 
                 if p(v961^9)then v961^a,| |v961^d,| |v961^b,if a(v961^b) then v961^g fi,| (|v961^7|)| 
                 else 
-                   if v961^b:'. ' then v961^b else 
+                   if v961^b:'. 'or v961^b:'-' then v961^b else 
                       if v961^b:'.'then &unifor('G0.'v961^b),'.' 
                          if &unifor('G2.'v961^b):'.'then' 'fi,&unifor('G2.'v961^b) 
                       else v961^b 
@@ -98,7 +98,7 @@ if s(v961^4)<>'' then
                    if v961^6*4.1='*'then v961^6*5 else &unifor('Q'v961^6*4) fi,| |d961^4,        
                    if p(v961^9)then v961^a,| |v961^d,| |v961^b,if a(v961^b) then v961^g fi,| (|v961^7|)| 
                    else 
-                      if v961^b:'. ' then v961^b else 
+                      if v961^b:'. 'or v961^b:'-' then v961^b else 
                          if v961^b:'.'then &unifor('G0.'v961^b),'.' 
                             if &unifor('G2.'v961^b):'.'then' 'fi,&unifor('G2.'v961^b) 
                          else v961^b 

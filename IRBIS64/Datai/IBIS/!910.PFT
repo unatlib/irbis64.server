@@ -1,3 +1,5 @@
+&uf('+7W1#'),(if p(v910)then if v910^a='0'then &uf('+7U1#'v910^b) fi fi/),&uf('+7W2#'(g1/)),&uf('+7G1'),&uf('+7S2#1'),
+if g2<>'' then '2Регистрируются дублетные комплекты: 'g2/ else '0'/ fi,
 IF p(v910) then 
    IF v920='J'or v910^a:'R' then else 
       IF v905^3='1' or &uf('IPRIVATE,3,')='1' then else 
@@ -6,8 +8,8 @@ IF p(v910) then
                 if p(v910^b)then 
                    if &unifor('Av920#1')='NJ'or &unifor('Av920#1')='NJP'or v910^a='R'or &unifor('Av215^y#1')<>'' 
                    then /'0' else 
-                      if l(|IN=|v910^b)<=0 or val(ref(l(|IN=|v910^b),mfn))=val(mfn)then/'0' 
-                      else/'2Дублетный инв.номер: 'v910^b,ref(l(|IN=|v910^b),' (см.N ',mfn,')') 
+                      if val(&uf(|J,IN=|v910^b))<2 then/'0' 
+                      else/ &uf('+7W6#'v910^b),   if v910^b:'б/н' or v910^b:'У-'then else &uf('+7W7#'mfn),&uf(|7,!IN=|v910^b|!,if val(&uf('Ag7#1'))=val(mfn) then else '2Дублетный инв.номер: '&uf('Ag6#1'),' см.N ',,mfn '; ' fi|),fi, 
              fi fi fi fi/)
          FI,
          IF s(v905^3,&uf('IPRIVATE,3,')):'21' or s(v905^3,&uf('IPRIVATE,3,')):'31' then else 

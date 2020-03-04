@@ -3,9 +3,12 @@ if v920:'ATHRA' then '<br><b>нямнбмни (смхтхжхпнбюммши) гюцнкнбнй - хлъ хмд
 ши) гюцнкнбнй</b>:  ','<br>',mhl,v210^a," "v210^d," "v210^g,if a(v210^g) then " "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi else if v920:'EXP' then '<br><b>онъямхрекэмши гюцнкнбн
 й</b>:  ','<br>',mhl,v210^a," "v210^d," "v210^g,if a(v210^g) then " "v210^b fi,if s(v210^1,v210^c,v210^f)<>''then' (',v210^1,if s(v210^1)<>''then"; "d210^c fi,v210^c,if s(v210^1,v210^c)<>''then"; "d210^f fi,v210^f,'). '  fi fi fi fi,'</td>',
 '<td>',
-if p(v950) then '<br><IMG SRC="IRBIS:10,,',v950,'">',
-           else if p(v953) then '<IMG SRC=IRBIS:12,,',mfn,',1','>' fi,
-fi,
+(if p(v953) then 
+       if '0 2':v953^p then else 
+/*       '<br><A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',v953^T ,'</A><br>' 
+       '<br>'v953^t|<br>|,'<A HREF="IRBIS:3,12,,',mfn,',',&uf('+90'),'">',
+       '<IMG  style="width:105 px" SRC="IRBIS:12,,',mfn,',',&uf('+90'),'"></A>'
+    fi fi) ,
 '</td>',
 '</table>',
 
