@@ -27,3 +27,11 @@ irbis_server.srv*
 IRBISA_MULTI*.ini
 ftcachebuilder*.ini
 *.log
+# Ignore licensed files
+irbis_server.exe
+IRBISA.INI
+IRBISA_FullText.INI
+IrbisExtractFT.ini
+# Ignore executable
+*.exe
+*.dll
