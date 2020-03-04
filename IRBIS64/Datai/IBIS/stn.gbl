@@ -77,12 +77,12 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 101
 XXXXXXXXXXXXXXXXXXX
-(v101/)
+(v101/),if a(v101) then if v920:'NJ' or v920:'Spec' and p(v933) then ref(l("I="v933),(v101/)) fi fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 102
 XXXXXXXXXXXXXXXXXXX
-v102
+v102,if a(v102) then if v920:'NJ' or v920:'Spec' and p(v933) then ref(l("I="v933),(v102/)) fi fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 919
@@ -97,7 +97,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 900
 XXXXXXXXXXXXXXXXXXX
-if v900^b:'05' then'^B09'fi,if v900^b:'03'or v900^b:'04'or v900^b:'07' then'^B10'fi,"^T"v900^t
+if v920:'NJ'or v920:'SPEC' and p(v933) then ref(l("I="v933),"^T"v110^t,if v110^b:'c'then'^B12'else'^B08'fi) else if v900^b:'05' then'^B09'fi,if v900^b:'03'or v900^b:'04'or v900^b:'07' then'^B10'fi fi,"^T"v900^t
 XXXXXXXXXXXXXXXXXXX
 ADD
 920
@@ -107,7 +107,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 463
 XXXXXXXXXXXXXXXXXXX
-if v920:'NJ'then if p(v33^4) and &unifor('Av922#2')='' then "^S"v33^4,"^0"v33^0 else if v33:'^4'then'^S',v33^4 fi,if v33:'^0'then'^0',v33^0 fi fi,"^W"v903,"^J"v934,if p(v935) then ref(l("I="v933),'^V',v210^8,"Том"n210^8),'???'" "v935 fi,if p(v936) then ref(l("I="v933),'^H',v210^9,"N"n210^9)," "v936,|(|v931^c|)|fi,ref(l("I="v933),"^C"v200^a,if p(v510) then '^X'&uf('Av510^d#1'),if &uf('Av510^d#2')<>''then '^Y'&uf('Av510^d#2') fi,if &uf('Av510^d#3')<>''then '^Z'&uf('Av510^d#3') fi fi,"^7"v200^l,,if a(v200^l)then(". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n),fi,("^G"| : |+v210^c,"^D"| ; |+v210^a,| ; |v210^x,| ; |v210^y)) else "^S"v33^4,"^0"v33^0,"^W"v903,if p(v461)then"^C"v461^c,if p(v46^L)  then '^X'&uf('Av46^l#1'),if &uf('Av46^l#2')<>''then '^Y'&uf('Av46^l#2') fi,if &uf('Av46^l#3')<>''then '^Z'&uf('Av46^l#3') fi fi,"^V"v200^v,"^A"v200^a else'^C',v200^a,if v920:'NJ' then ref(L("I="v933),v200^a) fi fi,if p(v510) then "^R"d461,"^X"n461,&uf('Av510^d#1'),if &uf('Av510^d#2')<>''then ' = '&uf('Av510^d#2') fi,if &uf('Av510^d#3')<>''then ' = '&uf('Av510^d#3') fi fi,&unifor('S0'),if p(v922) and v932=''then &unifor('D,@',mfn,',@tabsu922') fi,"^J"v210^d,&unifor('S0'),&uf('+7W210#'),(if p(v210) then if &uf('S1A')='1' then |^G|v210^c,|^D|v210^a,| ; |v210^x,| ; |v210^y fi fi),(if p(v210) then if v210=&uf('Av210#1') then else &uf('+7U210#'| ; |v210^a,| ; |v210^x,| ; |v210^y,| : |v210^c) fi fi),&unifor('S0'),if s(v210^a,v210^c)=''then (if p(v461) then if &unifor('S1A')='1'then|^D|v461^d,|^G|v461^g,if &uf('Av210^d#1')=''then |^J|v461^h fi fi fi),(if p(v461) then if v461=&uf('Av461#1') then else &uf('+7U210#'| ; |v461^d,| : |v461^g) fi fi) fi,'^4'g210,&uf('S0'),(if p(v923) then if val(&unifor('S1A'))=1 then else ' Другой раздел: 'v923^h,|. |v923^i,|, |v923^k,|. |v923^l fi fi),&unifor('S0'),(if p(v923) then if val(&unifor('S1A'))=1 then|^H|v923^h,|^I|v923^i,|^K|v923^k,|^L|v923^l fi fi) fi
+if v920:'NJ'then if p(v33^4) and &unifor('Av922#2')='' then "^S"v33^4,"^0"v33^0 else if v33:'^4'then'^S',v33^4 fi,if v33:'^0'then'^0',v33^0 fi fi,"^W"v903,"^J"v934,if p(v935) then ref(l("I="v933),'^V',v210^8,"Том"n210^8)," "v935 fi,if p(v936) then ref(l("I="v933),'^H',v210^9,"N"n210^9)," "v936,|(|v931^c|)|fi,ref(l("I="v933),"^C"v200^a,if p(v510) then '^X'&uf('Av510^d#1'),if &uf('Av510^d#2')<>''then '^Y'&uf('Av510^d#2') fi,if &uf('Av510^d#3')<>''then '^Z'&uf('Av510^d#3') fi fi,"^7"v200^l,,if a(v200^l)then(". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n),fi,("^G"| : |+v210^c,"^D"| ; |+v210^a,| ; |v210^x,| ; |v210^y)) else "^S"v33^4,"^0"v33^0,"^W"v903,if p(v461)then"^C"v461^c,if p(v46^L)  then '^X'&uf('Av46^l#1'),if &uf('Av46^l#2')<>''then '^Y'&uf('Av46^l#2') fi,if &uf('Av46^l#3')<>''then '^Z'&uf('Av46^l#3') fi fi,"^V"v200^v,"^A"v200^a else'^C',v200^a,if v920:'NJ' then ref(L("I="v933),v200^a) fi fi,if p(v510) then "^R"d461,"^X"n461,&uf('Av510^d#1'),if &uf('Av510^d#2')<>''then ' = '&uf('Av510^d#2') fi,if &uf('Av510^d#3')<>''then ' = '&uf('Av510^d#3') fi fi,&unifor('S0'),if p(v922) and v932=''then &unifor('D,@',mfn,',@tabsu922') fi,"^J"v210^d,&unifor('S0'),&uf('+7W210#'),(if p(v210) then if &uf('S1A')='1' then |^G|v210^c,|^D|v210^a,| ; |v210^x,| ; |v210^y fi fi),(if p(v210) then if v210=&uf('Av210#1') then else &uf('+7U210#'| ; |v210^a,| ; |v210^x,| ; |v210^y,| : |v210^c) fi fi),&unifor('S0'),if s(v210^a,v210^c)=''then (if p(v461) then if &unifor('S1A')='1'then|^D|v461^d,|^G|v461^g,if &uf('Av210^d#1')=''then |^J|v461^h fi fi fi),(if p(v461) then if v461=&uf('Av461#1') then else &uf('+7U210#'| ; |v461^d,| : |v461^g) fi fi) fi,'^4'g210,&uf('S0'),(if p(v923) then if val(&unifor('S1A'))=1 then else ' Другой раздел: 'v923^h,|. |v923^i,|, |v923^k,|. |v923^l fi fi),&unifor('S0'),(if p(v923) then if val(&unifor('S1A'))=1 then|^H|v923^h,|^I|v923^i,|^K|v923^k,|^L|v923^l fi fi) fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 963
@@ -117,7 +117,7 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 961
 XXXXXXXXXXXXXXXXXXX
-(v961/),if a(v961) then if p(v700) then '^Z1'v700 fi fi/(v701/)/(v702/)
+(v961/),if a(v961) then if p(v700) then '^Z1'v700 fi fi/(v701/)
 XXXXXXXXXXXXXXXXXXX
 ADD
 962
@@ -209,6 +209,31 @@ ADD
 XXXXXXXXXXXXXXXXXXX
 if v33^[<>'' then if v33^[:'1' then |^I|v33^] else if v33^[:'0' then |^A|v33^] fi fi fi 
 XXXXXXXXXXXXXXXXXXX
+ADD
+181
+
+(v181/)
+
+ADD
+182
+
+(v182/)
+
+ADD
+203
+
+(v203/)
+
+ADD
+953
+
+if &uf('0'):'[[' or v953^p:'1' then (v953/) else &uf('+7W36#'),(if p(v36) then if val(v36^a)=val(&uf('Av932#1')) then &uf('+7U36#'v36^i) fi fi/),(if p(g36) then &uf('Av953#'g36) fi/) fi
+
+ADD
+36
+
+&uf('S0'),(if p(v36) then if val(v36^a)=val(&uf('Av932#1')) then |^B|v36^b,|^C|v36^c,|^P|v36^p,|^D|v36^d,|^1|v36^1,|^E|v36^e,|^F|v36^f,|^G|v36^g,|^M|v36^m,|^N|v36^n,|^O|v36^o,|^Q|v36^q,|^R|v36^r,|^T|v36^t,|^Z|v36^z,|^2|v36^2,'^I'&uf('S1A') fi fi/)
+
 END
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX

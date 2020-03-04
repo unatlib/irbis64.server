@@ -1,0 +1,7 @@
+if v920:'Event' then 
+   (if p(v488) then 
+      if p(v488^1) then /'0' else /'2 Ошибка не введен "Вид связи"- ' v488^a fi FI),
+   if rsum((if p(v488) then if v488^1:'2' then '1' fi fi))>1 then /'2 Связь с записью План уже введена' fI 
+fI
+ 
+ 

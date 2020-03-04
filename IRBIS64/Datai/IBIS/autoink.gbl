@@ -1,4 +1,35 @@
 0
+//--------приписывание к последнему повторению подполя ^X - измененные поля при включении Full907
+DEL
+111
+*
+
+
+ADD
+111
+
+if val(&uf('IMAIN,Full907,'))=1 then '^X',&uf('+?') fi
+
+//--------добавление  нового 907
+ADD
+907
+XXXXXXXXXXXXXXXXXXX
+if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),'^C',&unifor('IPRIVATE,ETR,KO'),,,fi
+XXXXXXXXXXXXXXXXXXX
+IF
+if v111<>'' then '1' fi
+REP
+907
+F
+(if p(v907) then v907,,,if val(&uf('+90'))=val(&uf('+N907')) then  if v907^X<>'' then ';',&uf('Av111^X#1') else &uf('Av111#1') fi  fi fi/)
+XXXXXXXXXXXXXXXXXXX
+DEL
+111
+*
+
+
+FI
+//----------------------------конец 907
 DEL
 691^0
 F
@@ -31,16 +62,17 @@ DEL
 *
 
 
+//---исправила с учетом языка
 REP
 691
 F
-(if p(v691) then v691,,if a(v691^1) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) <>'' then '^1',&uf('JRDR,?',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) fi,,else if &uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^V|-|,v691^o|-|,v691^f|-|,,'!,v68^Z')<>'' then '^1',&uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^v|-|,v691^o|-|,v691^f|-|,,'!,v68^Z') fi fi,,fi fi/)
+(if p(v691) then v691,,if a(v691^1) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if v691^I:':' and &unifor('G2:'v691^I)<>''  then '^1',&uf('+3SRDR,0,!',,,,&unifor('Kjzko.mnu!'&unifor('G2:'v691^I)),,v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,,,,'!,') else  if &uf('JRDR,LN=',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) <>'' then '^1',&uf('JRDR,LN=',v691^A,, v691^N,,v691^C,,v691^V,,v691^O,,'-S',v691^F,,) fi,,fi,,,else if &uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^V|-|,v691^o|-|,v691^f|-|,,'!,v68^Z')<>'' then '^1',&uf('DVUZ,!?',,,v691^a|-|,,v691^n|-|,v691^c|-| ,v691^v|-|,v691^o|-|,v691^f|-|,,'!,v68^Z') fi fi,,fi fi/)
 XXXXXXXXXXXXXXXXXXX
 //------------------Количесчтво студентов по контпнгенту для поля 694^5, если оно пустое
 REP
 694
 F
-(if p(v694) then v694,,if a(v694^5) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) <>'' then '^5',&uf('JRDR,?',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) fi,,else if &uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,,'!,v68^Z')<>'' then '^5',&uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,'!,v68^Z') fi fi,,fi fi/)
+(if p(v694) then v694,,if a(v694^5) then if val(&uf('IMAIN,ACCESSRDR,1'))=1 then if &uf('JRDR,LN=',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) <>'' then '^5',&uf('JRDR,LN=',v694^A,, v694^N,,v694^C,,v694^V,,v694^O,,'-S',v694^F,,) fi,,else if &uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,,'!,v68^Z')<>'' then '^5',&uf('DVUZ,!?',,,v694^a|-|,,v694^n|-|,v694^c|-| ,v694^v|-|,v694^o|-|,v694^f|-|,'!,v68^Z') fi fi,,fi fi/)
 XXXXXXXXXXXXXXXXXXX
 //----------------Идентификатор дисциплины, если его нет из VUZ
 REP
@@ -169,11 +201,6 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
-ADD
-907
-XXXXXXXXXXXXXXXXXXX
-if rsum((if p(v907) then if v907^a = &unifor(|3|d907) and v907^b = &unifor('IPRIVATE,FIO,') then '1;'else'0;'fi fi))> 0 then else'^A',&unifor('3'),'^B',&unifor('IPRIVATE,FIO,'),'^C',&unifor('IPRIVATE,ETR,') fi
-XXXXXXXXXXXXXXXXXXX
 //----убираю последние пробелы в поле 691
 REP
 691^A
@@ -250,3 +277,12 @@ CHA
 *
 '?'
 ''
+//----корректирую признак РП
+IF
+if val(&uf('IMAIN,AutoWPD,0'))=1 and v691: '^51' then '1' fi
+REP
+691^5
+F
+(if p(v691) then if p(v691^5) then 'РП-',v691^I else # fi fi/)
+XXXXXXXXXXXXXXXXXXX
+FI

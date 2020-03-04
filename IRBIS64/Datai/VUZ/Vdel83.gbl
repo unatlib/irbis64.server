@@ -161,6 +161,12 @@ DEL
 F
 (if p(v69) then if &unifor('Av1001^A#1')=&uf('+97',&unifor('Av68^A#1')) and &unifor('Av1001^C#1')=&uf('+97',&unifor('Av68^C#1')) and &unifor('Av1001^N#1')=&uf('+97',&unifor('Av68^N#1')) and &unifor('Av1001^O#1')=&uf('+97',&unifor('Av68^O#1')) and &unifor('Av1001^V#1')=&uf('+97',&unifor('Av68^V#1')) and val(&unifor('Av1001^F#1'))=val(&unifor('Av68^F#1')) and  &uf('+97',v69^B)=&unifor('Av1001^B#1') and &uf('+97',v69^D)=&unifor('Av1001^D#1') then '1' else '0' fi fi/)
 XXXXXXXXXXXXXXXXXXX
+//--защита от пустых полей ^D^B- удаление
+DEL
+69
+F
+(if p(v69) then if v69^D='' and v69^B='' then '1' else '0' fi fi/)
+XXXXXXXXXXXXXXXXXXX
 // проверка реального удаления 
 IF
 if &uf('+97',v111)<>&uf('+97',v69) then '1' else '0' fi

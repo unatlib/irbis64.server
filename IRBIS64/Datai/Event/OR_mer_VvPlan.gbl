@@ -1,4 +1,14 @@
 0
+DEL
+888
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+DEL
+889
+*
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
 IF
 if v991='' then '1' else '0'fi
 XXXXXXXXXXXXXXXXXXX
@@ -6,18 +16,38 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 CORREC
 '*'
-'^0'v972^0,"^A"v30^a,"^B"v30^b,"^C"v972^a,"^D"v210^e,"^T"v900^a,"^N"v304^a,"("v304^b")"
-'I='(if p(v488) then if v488^1:'2' then v488^w fi fi/)
-XXXXXXXXXXXX
+&uf('+7W488#'),&uf('+7W488#'(if p(v488) then if v488^1:'2' then v488^w fi fi/)),if v972^0:'.' then if &uf('D,?I='g488'?,|+|v330^0"+"'):s('+'&uf('G0.'v972^0)'+') then else '^0'&uf('G0.'v972^0), "^A"v33^A,"^B"v33^b,"^C"v33^0,if s(v210,v211)<>'' then '^D'fi,v210,if p(v210) then |; |v211^K else v211^k+|; |  fi,"^T"v900^a,"^X"v900^h,"^N"d304,v304^a,if p(v304^a) then "("v304^b")" else v304^b fi,'=',fi fi,if v972^0<>'' then if &uf('D,?I='g488'?,|+|v330^0"+"'):s('+'v972^0'+') then else '^0'v972^0,"^A"v30^a,"^B"v30^b,"^C"v972^a,if s(v210,v211)<>'' then '^D'fi,v210,if p(v210) then|; |v211^K else v211^k+|; | fi,"^T"v900^a,"^X"v900^h,"^N"d304,v304^a,if p(v304^a) then "("v304^b")" else v304^b fi,fi fi/
+'I='g488
+XXXXXXXXXXXXXXXXXXX
 ADD
 330
 XXXXXXXXXXXXXXXXXXX
-v1001
+if v1001:'=' then &uf('G0='v1001) fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+330
+XXXXXXXXXXXXXXXXXXX
+if v1001:'=' then &uf('G2='v1001) else v1001 fi
 XXXXXXXXXXXXXXXXXXX
 DEL
 1001
 *
 XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+330
+F
+(if p(v330) then if v330^0:'.' then f(val(&uf('G0.'v330^0)),3,0),f(val(&uf('G1.'v330^0)),2,0) else f(val(v330^0),3,0)' ' fi,||n330^0,v330 fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99999
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W330#'(v330/)),&uf('+7T330')
+XXXXXXXXXXXXXXXXXXX
+REP
+330
+F
+(&uf(|G1^|g330)/)
 XXXXXXXXXXXXXXXXXXX
 END
 XXXXXXXXXXXXXXXXXXX
@@ -37,27 +67,47 @@ XXXXXXXXXXXXXXXXXXX
 ADD
 488
 XXXXXXXXXXXXXXXXXXX
-&uf('+7W488#'(if p(v488) then if v488^w=&uf('Av991^a#1') and v488^1:'2' then else '0' fi fi)),if g488<>'' then '^12',"^W"v991^a,&uf('D,?I='v991^a,'?,"^A"v200^a') fi
+&uf('+7W888#'),&uf('+7W889#'),&uf('+7W488#'if v488<>'' then (if p(v488) then if v488^w=&uf('Av991^a#1') and v488^1:'2' then'3' else '0' fi fi) else '1' fi),if g488:'3' then else'^12',"^W"v991^a,&uf('D,?I='v991^a,'?,"^A"v200^a'),&uf('+7W888#Поле связи введено в запись МП'), fi
 XXXXXXXXXXXXXXXXXXX
 ADD
 972^0
 1
-if v972^0='' then v991^b fi
+if v972^0='' then if &uf('D,?I='v991^a'?,|+|v330^0"+"'):s('+'v991^b'+') then else v991^b,&uf('+7W488#Поле 972^0 введено в запись МП') fi fi/
 XXXXXXXXXXXXXXXXXXX
 CORREC
 '*'
-'^0'v991^b,"^A"v30^a,"^B"v30^b,"^C"v972^a,"^D"v210^e,"^T"v900^a,"^N"v304^a,"("v304^b")"
+if p(v991^c) then if &uf('D,?I='v991^a'?,|+|v330^0"+"'):s('+'v991^c'+') then &uf('+7U889#№ п/п 'v991^c' уже есть в записи План, отклонено') else "^0"v991^c,"^A"v33^a,"^B"v33^b,"^C"v33^0,'^D',v210,if p(v210) then |; |v211^K else v211^k+|; |  fi,"^T"v900^a,"^N"d304,v304^a,if p(v304^a) then "("v304^b")" else v304^b fi,'=',&uf('+7U889# № п/п 'v991^c' введен в запись Плана') fi,if &uf('D,?I='v991^a'?,|+|v330^0"+"'):s('+'v991^b'+') then &uf('+7U888# № п/п 'v991^b' уже есть в записи План, отклонено. Поле 972^0 НЕ введено в запись МП') else "^0"v991^b,"^A"v30^a,"^B"v30^b,"^C"v972^a,'^D',v210,if p(v210) then |; |v211^K else v211^k+|; |  fi,"^T"v900^a,"^N"d304,v304^a,if p(v304^a) then "("v304^b")" else v304^b fi,&uf('+7U888# № п/п 'v991^b' введен в запись План и в поле 972^0 МП') fi fi 
 "I="v991^a
-XXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
 ADD
 330
 XXXXXXXXXXXXXXXXXXX
-v1001
+if v1001:'=' then &uf('G0='v1001) fi 
+XXXXXXXXXXXXXXXXXXX
+ADD
+330
+XXXXXXXXXXXXXXXXXXX
+if v1001:'=' then if &uf('G2='v1001)<>'' then &uf('G2='v1001) fi else v1001 fi
 XXXXXXXXXXXXXXXXXXX
 DEL
 1001
 *
 XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+REP
+330
+F
+(if p(v330) then if v330^0:'.' then f(val(&uf('G0.'v330^0)),3,0),f(val(&uf('G1.'v330^0)),2,0) else f(val(v330^0),3,0)' ' fi,||n330^0,v330 fi/)
+XXXXXXXXXXXXXXXXXXX
+ADD
+99999
+XXXXXXXXXXXXXXXXXXX
+&uf('+7W330#'(v330/)),&uf('+7T330')
+XXXXXXXXXXXXXXXXXXX
+REP
+330
+F
+(&uf(|G1^|g330)/)
 XXXXXXXXXXXXXXXXXXX
 END
 XXXXXXXXXXXXXXXXXXX
@@ -68,6 +118,16 @@ DEL
 991
 *
 XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+ADD
+888
+XXXXXXXXXXXXXXXXXXX
+|; |+g888,if s(g888,g889)='' then 'Связь установлена: В запись МП введены шифр и № П/п. Сведения о М/П введены в запись Плана. 'fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+889
+XXXXXXXXXXXXXXXXXXX
+|; |+g889
 XXXXXXXXXXXXXXXXXXX
 FI
 XXXXXXXXXXXXXXXXXXX

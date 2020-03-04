@@ -1,12 +1,8 @@
-&uf('+7W10#',,,&uf('7RDR,!SH=',,v903,,'!,(v40/)') ),,
-if val(v991^C)=1 then &uf('+7U10#',,,&uf('7RDR_ARH,!SH=',,v903,,'!,(v40/)') ) fi,,
+&uf('+7W903#',v903),,,&uf('+7W991#',v991),,,,
+&uf('+7W10#',,,&uf('7RDR,!SH=',,v903,,'!,@TSPROSTsort40') ),,
+if val(v991^C)=1 then &uf('+7U10#',,,&uf('7RDR_ARH,!SH=',,v903,,'!,@TSPROSTsort40') ) fi,,
 &uf('+7W11#',,,
-f(rsum((if p(g10) then 
-        if &uf('+97',&uf('Av903#1'))=&uf('+97',g10^A) then 
-        if ( &uf('Av991^A#1')='' or val(g10^D)>=val(&uf('Av991^A#1')) ) and 
-           ( &uf('Av991^B#1')='' or val(g10^D)<=val(&uf('Av991^B#1')) ) and
-           ( &uf('Av991^V#1')='' or &uf('+97',&uf('Av991^V#1'))=&uf('+97',g10^V) ) 
-        then '1,' fi fi fi )),0,0) 
+       f(rsum((if p(g10) then '1,' fi )),0,0) 
     ),,
 if g11<>'' then '^A',,,&uf('+960.20#',,&uf('6Brief')),,,,,,'^B',v903,,,'^C',g11,,,'^Y',f(val(mfn),0,0), fi
 

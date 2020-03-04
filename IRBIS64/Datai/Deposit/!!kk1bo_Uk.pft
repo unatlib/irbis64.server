@@ -54,7 +54,7 @@ else mhl,
       (". - ("| (|+v46^a,| : |v46^e,| / |v46^f,|, ISSN |v46^j,| ; |v46^v,if s(v46^a,v46^v)<>''then|)|d46 fi, 
       |. - |v46^t*4,| : |v46^r,|. - |v46^p, 
       if p(v46^c) then'. - ',|До |v46^g,'  Издание см. под заглавием: 'v46^c,| / |v46^d,|. - ISSN |v46^x,'. 'fi), 
-      if s(v454^u)<>'' then,origs454, fi ,|. - \b Пер.загл.:\b0  |v461^a,  if  v951^i<>'' and(p(v230) or p(v337)) then '. - \b URL: \b0 '
+      if s(v454^u)<>'' then,origs454, fi ,|. - \b Пер.загл.:\b0  |v461^a,  if  v951^i<>'' and v900^T:'l' then '. - \b URL: \b0 '
     &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(if v900^T:'l1'then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi),
       ,|. - |v461^t| экз.|, 
       if v10^a:v461^i or s(v10^a)=''then else 

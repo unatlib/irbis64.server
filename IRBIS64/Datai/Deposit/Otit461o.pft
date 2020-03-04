@@ -64,7 +64,7 @@ if p(v461) then ,'\b '
    if s(v454^u)<>'' then ,origs454, fi ,|. - \b Пер.загл. : \b0 |v461^a, 
     
       (if p(v230) then if v230^x<>'0'then"\b Систем. требования:\b0  "|. |+v230^d,| (|v230^e|)| fi fi), 
-        if  v951^i<>'' and(p(v230) or p(v337)) then '. - \b URL: \b0 '
+        if  v951^i<>'' and v900^T:'l' then '. - \b URL: \b0 '
     &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(if v900^T:'l1'then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi), 
    |. - |v461^t| экз.|, 
    if v10^a:v461^i then else|. - \b ISBN \b0 |v461^i,| (|v461^v|)| fi, 

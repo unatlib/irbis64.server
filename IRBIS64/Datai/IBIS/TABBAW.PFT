@@ -13,7 +13,7 @@ if p(v461)then
         | = |v46^l,| : |v461^e,| / |v461^f,
    |. - |v461^p,,if a(v215^d) then |. - |v461^r fi,ovixdm, ,
    (|. - (|v46^a,| ; |v46^v,
-   if s(v46^a,v46^v)<>''then|)|d46 fi,   |. - |v46^p),
+   if s(v46^a,v46^v)<>''then|)|d46 fi,   |. - |v46^p),(if v900^T:'l1'then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi)
    
    if v10^a:v461^i or s(v10^a)=''then else". - ISBN "v461^i fi,". - ISSN "v461^j,if  v951^i<>''and (p(v230) or p(v337) or v900^T:'l')then '. - \b URL: \b0 '
     &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,
@@ -66,7 +66,7 @@ if a(v922)then (if v123^x:'0'then ". - 1 : "|, 1 : |+v123^d,| ; 1 : |v123^e,v123
 if p(v328^c)then". - Защищена "v328^c*6'.'v328^c*4.2'.'v328^c.4 fi,
 if p(v328^d)then " ; "d328^c,". -"n328^c,"Утв. "v328^d*6'.'v328^d*4.2'.'v328^d.4 fi, " ; "v328^e,
 ,ovixd,  if v951^i<>''and v461^c='' and v463=''and (p(v230) or p(v337) or v900^T:'l')then '. - \b URL: \b0 '
-    &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,
+    &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4')' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi, 
 (". - "| ; |+v215^a,| |d215^1,&unifor('G2='v215^1),
 if a(v215^1)then 
    if v215^a:'с'or v215^a:'c'or v215^a:'p'or v215^a:'S'then else 
@@ -82,7 +82,7 @@ fi fi),
     if v225^n:'0'then else|. - (|v225^a,| = |v225^d,| : |v225^e,| / |v225^f,|, ISSN |v225^x,| ; |v225^v,|. |v225^h,
        if p(v225^h) then|, |v225^i else |. |v225^i fi,| = |v225^1,| ; |v225^w,|. |v225^k,
        if p(v225^k) then|, |v225^l else |. |v225^l fi,| = |v225^2,| ; |v225^y,|)|d225 
- fi fi),
+ fi fi),if v461=''then (if v900^T:'l1'then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi) fi
 (if v517^n:'0'then else|. - |v517^t*4,| : |v517^a fi),
 if v920:'NJ' then else if p(v463) then ,OISTASPK, fi fi,
 if a(v463)then |. - |v912,|. - |v320,|. - |v314 fi,

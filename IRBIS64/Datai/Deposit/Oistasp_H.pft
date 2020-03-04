@@ -161,9 +161,9 @@ if p(v463)then
    (|. - № ГР |v982^4,|. - Инв.№ |v982^5), ,'.' ,if  v951^i<>'' and v900^T:'L' then '. - <b> URL:</b> '
     &uf('+7W1#'(v951^i,if v951^3<>''  then if (not(v900^T:'l2'))then  | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4'). ', else |. - дата публикации: |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4'.' fi fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(if 'l2 l1':v900^t then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi),   
 
-   if p(v963^a) or p(v225)and s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))<>''and v225^n='' then else 
+   ,orefres_H, if p(v963^a) or p(v225)and s(&unifor('IPrivate,PSA,'),&uf('Av905^6#1'))<>''and v225^n='' then else 
       if p(v463^w) then'<br>(Шифр',if &unifor('Av463^w#2')<>''then 'ы'fi,' в БД ' 
          (if p(v463) then | ; |+v463^w,&unifor('D,!I='v463^w,'!,if p(v463) then| // |v463^w fi') fi),")"d463^w 
-   fi fi,orefres_H, 
+   fi fi,
    if v905^m<>'' then |<br>|v300 fi,
 fi, 
