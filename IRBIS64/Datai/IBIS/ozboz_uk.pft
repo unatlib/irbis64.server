@@ -40,11 +40,4 @@ mhl,'\b 'v700^a," "v700^d,", "v700^g,
    if s(v700v710,v981,v503,v961^z)='' and &unifor('Av509^2#1')<>'1' then'\b '&unifor('E3'v200^a),'\b0 ', 
       if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
    else if v517^t:'500'then (if p(v517)then if v517^t:'500'then | [|v517^a|] |,break fi fi)else "\par \tab "d200^a fi,v200^a 
-   fi," ["v200^b"]", 
-   if a(v200^b) then 
-      if a(v900^t)and a(v110^t) then 
-         if s(v230v337v135)<>''then ' [Электронный ресурс] ' else 
-            if v920:'NJ'then ,ref(L("I="v933),if &uf("Koomr.mnu|"v110^t)<>''then'['&uf("Koomr.mnu|"v110^t)']'fi),else if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [Текст]'  fi fi fi, 
-      else 
-         if (v900^t='a'or v110^t='a') and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then' [',&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t)']',fi,          
-   fi fi fi, 
+   fi

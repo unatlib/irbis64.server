@@ -20,7 +20,7 @@
 &uf('+7U5#',
 if g4<>'' then &uf('G2='&uf('Ag3#1')),
       if &uf('Ag4#2')<>'' and &uf('Ag4#4')='' then ': ' else ' 'fi, 
-   if &uf('Ag4#4')<>'' then &uf('Ag4#1'), 
+   if &uf('Ag4#3')<>'' then &uf('Ag4#1'), 
       if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then ' [и др.]' else ' [et al.]' fi 
    else g4 
 fi fi), 

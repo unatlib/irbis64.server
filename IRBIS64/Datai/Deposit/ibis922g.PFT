@@ -41,10 +41,7 @@ if p(v922) then
                       fi,' '&unifor('G0,'&unifor('G0 'v922^f)) 
                    else v922^?| |,v922^f    
              fi fi fi 
-             if p(v922^w)and (s(v922^q,v922^s,v922^t)=''or s(v922^q.3,v922^s.3,v922^t.3)='070070070')then 
-                if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi 
-             else 
-                if p(v922^2) then 
+                             if p(v922^2) then 
                    if p(v922^f) then if p(v922^s) then ' ; ' else ', ' fi fi,v922^s*4| |
                    if p(v922^<) then 
                       if v922^<:'1' then v922^2 
@@ -72,7 +69,9 @@ if p(v922) then
                             fi,' '&unifor('G0,'&unifor('G0 'v922^2)) 
                          else v922^,| |,v922^2    
                 fi fi fi fi 
-                if p(v922^3) then if s(v922^f,v922^2)<>'' then if p(v922^t) then if a(v922^s)or v922^s<>v922^t then ' ; ' else ', ' fi fi fi,v922^t*4| |
+                 if p(v922^3) then 
+   if s(v922^f,v922^2)<>'' then
+      if p(v922^t) then if a(v922^s)or v922^s<>v922^t then ' ; ' fi  else ', ' fi fi,,v922^t*4| |
                    if p(v922^>) then 
                       if v922^>:'1' then v922^3 
                       else  
@@ -98,7 +97,8 @@ if p(v922) then
                             else &unifor('G2 'v922^3) 
                             fi,' '&unifor('G0,'&unifor('G0 'v922^3)) 
                          else v922^;| |,v922^3    
-             fi fi fi fi fi,| ; |v922^g 
+             fi fi fi fi,if p(v922^w)and (s(v922^q,v922^s,v922^t)=''or s(v922^q.3,v922^s.3,v922^t.3)='070070070')then 
+                if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi fi,| ; |v922^g 
           fi 
        else v922^g fi 
     fi, 

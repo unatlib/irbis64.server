@@ -5,8 +5,8 @@ if a(v461) then ". - <b> Систем. требования:</b>  "d230^d,&unifor('S0'),
              if &unifor('S1A')='1' then|Прил. :|d230^d else | ; Прил.:|d230^d fi 
        fi fi,v230^d,| (|v230^e|)|
     fi),
-    if (v900^t:'l'or v110^t:'l'or p(v951^k)or v215^1:'r=')and v951^i<>'' then '. - <b> Режим доступа:</b> '
-    &uf('+7W1#'(v951^i/)),(|, |+g1,),fi,(|. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a), 
+    if  v951^i<>'' and (p(v230) or p(v337) or v900^T:'l')then '. - <b> URL:</b> '
+    &uf('+7W1#'(v951^i,if v951^3<>'' then | (дата обращения |d951^3,v951^3*6.2,'.',v951^3*4.2'.',v951^3.4') ' fi,if v951^4<>'' then '. - Режим доступа: ',v951^4 fi)),(|, |+g1), fi,(if v900^T:'l1'then else |. - |v337^e,|. - |v337^f,|. - |v337^g,|. - |v337^h,|. - |v337^a fi), 
     
 fi,
 (if p(v517) then 
@@ -18,7 +18,7 @@ fi,
              if v517^t.4='540 'then | [|v517^a|] | else v517^t*4,| : |v517^a 
  fi fi fi fi fi),|. - |v314,|. - |v912,|. - |v320,|. - |v327,
 if p(v330) and p(v905^k) then 
-   if v905^k='0' then else '. - ',if v905^k='1'then 'Из содерж.: 'else &unifor('Av905^k#1')' ' fi 
+   if v905^k='0' then else '. - ',if v905^k='1'then 'Из содерж.: 'else &unifor('Av905^k#1') fi 
       (if p(v330) then &uf('+S1'v330^c),| : |v330^e,
           if p(v330^g) or s(v330^f,v330^8)<>'' and &unifor('Av905^1#1')=''then' / 'fi,v330^g,if a(v330^g) then ,o330g,fi
           if p(v330^g) then 

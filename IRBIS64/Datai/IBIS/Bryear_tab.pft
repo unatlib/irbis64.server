@@ -9,18 +9,9 @@ else |, |+d210^d,
    fi,|, |+d463^j, 
    if v463^j.1:'[' then v463^j*1.4 else v463^j fi,|. |d463^j, 
 fi, 
-mhl,if v920:'NJ' then else v503^a". ",v461^x,if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,| [|v461^2|]|,  
+mhl,if v920:'NJ' then else v503^a". ",v461^x,if s(v461^x)<>''then if v461^x:'.' then' ' else'. 'fi fi,v461^c,  
 if p(v461) then 
-   if a(v461^2) then &unifor('+1W1'''), 
-      if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
-      if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
-      if a(v900^t) then 
-         if s(v230v337v135)<>''then 
-            if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
-         else 
-            if s(&unifor('IPRIVATE,FPS,'),v905^s)<>'' then else 
-               if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
-   fi fi fi fi,| : |v461^e, 
+   | : |v461^e, 
    if p(v461^x) then else| / |v461^f fi, 
    (if s(v46^a,v46^v)<>'' then". - ("| (|+v46^a,| ; |v46^v')'fi),". "d461,v200^v, 
    if p(v200^v) then" : "v200^a else v200^a fi, 
@@ -29,18 +20,7 @@ fi,
 if a(v461) then v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,"."d700^g," "d700^a, 
    if p(v982) then 
       if v200^a:&unifor('Av982^9#1') then else &unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 
-   fi fi,v200^a," ["v200^b"]", 
-   if p(v110) then else 
-      if p(v200) and a(v200^b) then &unifor('+1W1'''), 
-         if p(v101)then &unifor('+1W1#'&unifor('Kjzk.mnu|'&unifor('Av101#1'))) else &unifor('+1W1#0') fi," ["d900^t, 
-         if &unifor('+1R1')<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,"]"d900^t, 
-         if a(v900^t) then 
-            if s(v230v337v135)<>''then 
-               if &unifor('+1R1')<>''then' [Электронный ресурс] ' else' [Electronic resource]'fi 
-            else 
-               if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
-                  if &unifor('+1R1')<>''then ' [Текст]' else ' [Text]' fi 
-fi fi fi fi fi fi,| : |v200^e, 
+   fi fi,v200^a, fi,| : |v200^e, 
 if v920='J'then(". "| ; |+v923^h,
    if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,
    if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,
@@ -58,12 +38,11 @@ if a(v210^d) then|, |v461^h fi,". - "| ; |+v215^a," "d215^1,if v215^1.2:'='then 
 if p(v215^a) and a(v215^1) then &unifor('Korg.mnu|4')'.' fi, 
 FI, 
 if v920:'NJ'then ref(l(|I=|v933),v200^a, 
-   if &unifor('Kjzk.mnu|'v101.3)<>''then" [Электр.ресурс]"d230 else" [Electr.resource]"d230 fi'. - '&unifor('K110b.mnu|'v110^b), 
-". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n)
+   ". "| ; |+v923^h,if v923^h:':' then else if p(v923^h)then |, |d923^i else |. |d923^i fi,fi,v923^i,|. |v923^k,if v923^k:':' then else if p(v923^k)then |, |d923^l else |. |d923^l fi fi,v923^l,|. |v923^m,if v923^m:':' then else if p(v923^m)then |, |d923^n else |. |d923^n fi fi,v923^n)
 ,", "v934"г.", 
    if p(v935) then ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т. 'fi),v935 fi, 
    if p(v936) then ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' № 'fi,),v936 fi,| (|v931^c|)|,(if p(v930)then if v930^a<>''then ', ',&uf('G0/'&unifor(|G2/|v930^a)),' г.' if v930^t<>''then  ref(l("I="v933),if p(v210^8) then' 'v210^8' 'else' т. 'fi) &unifor('G0/'&unifor('G2/'&unifor(|G2/|v930^a)))fi,ref(l("I="v933),if p(v210^9) then' 'v210^9' 'else' № 'fi,),if v930^t<>''then &unifor('G2/'&unifor('G2/'&unifor(|G2/|v930^a)))else &unifor('G2/'&unifor(|G2/|v930^a))fi fi fi)   
-,"  (Введено оглавление)"d922 fi, 
+,"  (Введено оглавление)"d922,if v203=''then ref(l(|I=|v933),if &uf('Av203#2')=''then ". - "v203^A,". "v203^B,". "v203^D,". "v203^E,". "v203^F,". "v203^G,". "v203^I,". "v203^K,". "v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O," ; "v203^P," ; "v203^U," ; "v203^Y," ; "v203^T," ; "v203^R," ; "v203^W," ; "v203^Q," ; "v203^X," ; "v203^V," ; "v203^Z,')' fi," : "v203^C," : "v203^1," : "v203^2," : "v203^3," : "v203^4," : "v203^5," : "v203^6," : "v203^7," : "v203^8'.'  else if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,|. |v203^B,|. |v203^D,|. |v203^E,|. |v203^F,". "v203^G,|. |v203^I,|. |v203^K,|. |v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O,| ; |v203^P,| ; |v203^U,| ; |v203^Y,| ; |v203^T,| ; |v203^R,| ; |v203^W,| ; |v203^Q,| ; |v203^X,| ; |v203^V,| ; |v203^Z,')' fi,| : |v203^C,| : |v203^1,| : |v203^2,| : |v203^3,| : |v203^4,| : |v203^5,| : |v203^6,| : |v203^7,| : |v203^8)'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi) fi fi, 
 if v920:'NJ'then else" (Введено оглавление)"d330, 
 ".- "v963^1,if a(v963^1)then" // "d463 fi, 
 (| ; |+v463^7,if a(v463^7) then| ; |+v463^c fi,| : |v963^e,| / |v963^f,|. - |v463^d,| : |v463^g, 
@@ -76,4 +55,4 @@ if p(v463^c)then
    if p(v463^k)then| : |v463^l else|. |v463^l fi,|. - |v963^p,|.- Ст.|v463^N,|.- |v463^1, 
    if a(v463^1) and p(v463^s)then'. - ',mpu,&unifor('Korg.mnu|4'),'. ',mpl,fi, v463^s) 
 fi, 
-FI,&unifor('!'),'\par \par }'
+FI,if &uf('Av203#2')=''then ". - "v203^A,". "v203^B,". "v203^D,". "v203^E,". "v203^F,". "v203^G,". "v203^I,". "v203^K,". "v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O," ; "v203^P," ; "v203^U," ; "v203^Y," ; "v203^T," ; "v203^R," ; "v203^W," ; "v203^Q," ; "v203^X," ; "v203^V," ; "v203^Z,')' fi," : "v203^C," : "v203^1," : "v203^2," : "v203^3," : "v203^4," : "v203^5," : "v203^6," : "v203^7," : "v203^8'.'  else if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,|. |v203^B,|. |v203^D,|. |v203^E,|. |v203^F,". "v203^G,|. |v203^I,|. |v203^K,|. |v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O,| ; |v203^P,| ; |v203^U,| ; |v203^Y,| ; |v203^T,| ; |v203^R,| ; |v203^W,| ; |v203^Q,| ; |v203^X,| ; |v203^V,| ; |v203^Z,')' fi,| : |v203^C,| : |v203^1,| : |v203^2,| : |v203^3,| : |v203^4,| : |v203^5,| : |v203^6,| : |v203^7,| : |v203^8)'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi,&unifor('!'),'\par \par }'

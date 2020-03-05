@@ -1,27 +1,19 @@
 if v920:'J'then v591,if a(v591) then v200^a,v923^h,v923^i,v923^k,v923^l fi 
 else 
-   if p(v101) then &unifor('+7W2#'&unifor('Kjzk.mnu|'&unifor('Av101#1')))else &unifor('+7W2#0')  fi, 
-   &uf('+7W3#'
-   if a(v900^t) then 
-      if s(v230v337v135)<>''then 
-         if g2<>'' then' [Электронный ресурс] ' else' [Electronic resource]'
-      fi fi 
-   else 
-      if v900^t='a' then else ' [', 
-         if g2<>''then &unifor("Koomr.mnu|"v900^t) else &unifor("Koomi.mnu|"v900^t) fi,']',          
-   fi fi), 
-   if p(v461) then (if p(v461) then v461^x| |,v461^c,| [|v461^2|]|,
-      if s(&uf('Av461^2#1'),&uf('Av200^b#1'))='' then g3 fi, 
+   
+       
+   if p(v461) then (if p(v461) then v461^x| |,v461^c,
+       
       | : |v461^e,| / |v461^f,
       |. - |v461^d,| : |v461^g,
       if s(v461^d,v461^g)<>''then|, |v461^h else|. - |v461^h fi fi),| ; |v200^v,| : |v200^a 
    else v700^a," "v700^b," "d700,v200^a," ["v200^b"]",
-      if p(v200) and a(v200^b) then g3 fi," "v200^v 
+      ," "v200^v 
    fi,
 (|. |v922^c,|/|v922^f),|=|v510^d,|: |v200^e,|, |v923^h,|: |v923^i,|, |v923^k,|: |v923^l,
 |/|v200^f,|; |v200^g,". -"v205^a, 
 if p(v205^a)then"/"v205^c else". -"v205^c fi,fi,
-(|. -|v210^a,|: |v210^c,", "v210^d),(|. -(|d225,v225^a,|; |v225^v,|)|d225),
+(|. -|v210^a,|: |v210^c,", "v210^d),(|. -(|d225,v225^a,|; |v225^v,|)|d225),if &uf('Av203#2')=''then ". - "v203^A,". "v203^B,". "v203^D,". "v203^E,". "v203^F,". "v203^G,". "v203^I,". "v203^K,". "v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O," ; "v203^P," ; "v203^U," ; "v203^Y," ; "v203^T," ; "v203^R," ; "v203^W," ; "v203^Q," ; "v203^X," ; "v203^V," ; "v203^Z,')' fi," : "v203^C," : "v203^1," : "v203^2," : "v203^3," : "v203^4," : "v203^5," : "v203^6," : "v203^7," : "v203^8'.'  else if &uf('Av203#2')<>'' and &uf('Av203#4')='' then '. - ',(| + |+v203^A,|. |v203^B,|. |v203^D,|. |v203^E,|. |v203^F,". "v203^G,|. |v203^I,|. |v203^K,|. |v203^L,if s(v203^O,v203^P,v203^U,v203^Y,v203^T,v203^R,v203^W,v203^Q,v203^X,v203^V,v203^Z)<>'' then ' ('v203^O,| ; |v203^P,| ; |v203^U,| ; |v203^Y,| ; |v203^T,| ; |v203^R,| ; |v203^W,| ; |v203^Q,| ; |v203^X,| ; |v203^V,| ; |v203^Z,')' fi,| : |v203^C,| : |v203^1,| : |v203^2,| : |v203^3,| : |v203^4,| : |v203^5,| : |v203^6,| : |v203^7,| : |v203^8)'.'  else if &uf('Av203#4')<>'' then '. - Разные виды содержания : разные средства доступа.' fi fi fi
 if v920:'POLZ'then mhl,'ПОЛЬЗОВАТЕЛЬ ИРБИС 'fi,
 if p(v97)then'Каталог подписки: 'v97^b," (Код "v97^a")", fi,
 if v920:'AZP'then " Адресат подписки: "v6^d,"  "v6^e if s(v6^d,v6^e)='' then " Адресат подписки: "v87^R," ("v87^A")" fi  fi,

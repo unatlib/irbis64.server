@@ -1792,3 +1792,19 @@ DEL
 *
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
+//19 формирование вида содержания и средства доступа
+ADD
+203
+XXXXXXXXXXXXXXXXXXX
+if a(v203) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955) then '^AТекст','^Cнепосредственный' fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+181
+XXXXXXXXXXXXXXXXXXX
+if a(v181) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955)then '^Ai' fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+182
+XXXXXXXXXXXXXXXXXXX
+if a(v182) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='') and a(v955)then '^An' fi fi
+XXXXXXXXXXXXXXXXXXX

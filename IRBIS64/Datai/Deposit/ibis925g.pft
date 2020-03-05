@@ -39,10 +39,7 @@ else
                      fi,' '&unifor('G0,'&unifor('G0 'v925^f)) 
                   else v925^?| |,v925^f    
             fi fi fi 
-            if p(v925^w) then 
-               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi 
-            else 
-               if p(v925^2) then ', ' 
+                          if p(v925^2) then ', ' 
                   if p(v925^<) then 
                      if v925^<:'1' then v925^2 
                      else 
@@ -95,7 +92,10 @@ else
                            else &unifor('G2 'v925^3) 
                            fi,' '&unifor('G0,'&unifor('G0 'v925^3)) 
                         else v925^;| |,v925^3 
-            fi fi fi fi fi,| ; |v925^g 
+            fi fi fi fi fi,if v925^W<>'' then if v925^W:'  ' then else  if v925^W:', ' then ', '&uf('G1 'v925^W),' '&uf('G0,'v925^W)else  if &uf('G2 'v925^W):' ' then ', '&uf('G1 'v925^W),' '&uf('G0 'v925^W) else  ', '&uf('G0.'&uf('G1 'v925^W)),'. ',&uf('G2.'&uf('G1 'v925^W)),' '&uf('G0 'v925^W) fi fi fi fi,
+
+            if p(v925^w) and v925^W:'  'then 
+               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi | ; |v925^g 
       fi fi 
    else v925^g 
 fi fi 

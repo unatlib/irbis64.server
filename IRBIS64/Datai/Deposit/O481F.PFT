@@ -37,10 +37,7 @@ if &unifor('Av905^1#1')<>'' then v481^f else
                   fi,' '&unifor('G0,'&unifor('G0 'v481^x)) 
                else v481^?| |,v481^x    
          fi fi fi 
-         if p(v481^w) then 
-            if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.] ' else' [et al.] 'fi 
-         else 
-            if p(v481^2) then ', ' 
+                     if p(v481^2) then ', ' 
                if p(v481^<) then 
                   if v481^<:'1' then v481^2 
                   else 
@@ -93,7 +90,11 @@ if &unifor('Av905^1#1')<>'' then v481^f else
                         else &unifor('G2 'v481^3) 
                         fi,' '&unifor('G0,'&unifor('G0 'v481^3)) 
                      else v481^;| |,v481^3    
-         fi fi fi fi fi,| ; |v481^f  
+         fi fi fi fi, if v481^W<>'' then if v481^W:'  ' then else  if v481^W:', ' then ', '&uf('G1 'v481^W),' '&uf('G0,'v481^W)else  if &uf('G2 'v481^W):' ' then ', '&uf('G1 'v481^W),' '&uf('G0 'v481^W) else  ', '&uf('G0.'&uf('G1 'v481^W)),'. ',&uf('G2.'&uf('G1 'v481^W)),' '&uf('G0 'v481^W) fi fi fi fi,
+
+            if p(v481^w) and v481^W:'  'then 
+               if &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi fi
+| ; |v481^f  
       fi 
    else v481^f   
 fi fi 

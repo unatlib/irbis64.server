@@ -43,12 +43,4 @@ mhl,'\b 'v700^a," "v700^d,", "v700^g,
 /*    if v517^t:'500'then (if p(v517)then if v517^t:'500'then | [|v517^a|] |,break fi fi) else "\par \tab "d200^a       fi,v200^a 
       if v517^t:'500'then (if p(v517)then if v517^t:'500'then | [|v517^a|] |,break fi fi) fi,
    " "v200^a    
-   fi," ["v200^b"]", 
-   if a(v200^b) then 
-      if a(v900^t)and a(v110^t) then 
-         if s(v230v337v135)<>''then ' [Электронный ресурс] ' else 
-            if v920:'NJ'then ,ref(L("I="v933),if &uf("Koomr.mnu|"v110^t)<>''then'['&uf("Koomr.mnu|"v110^t)']'fi),else if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [Текст]'  fi fi fi, 
-      else 
-         if (v900^t='a'or v110^t='a') and s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
-            if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then' [',&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t)']',fi,          
-   fi fi fi,
+   fi,

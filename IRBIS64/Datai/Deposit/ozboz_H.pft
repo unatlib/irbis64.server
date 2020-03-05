@@ -1,4 +1,4 @@
-mhl,'<b> ',(if p(v740)then if v740^u='ДА'then v740^a|. |,v740^b|. |,|(|v740^c|). |,v740^t,if s(v740^i,v740^f)=''then '. ' else |. |v740^i,| (|v740^f|)|,'. 'fi,v740^n|.| fi,fi)
+mhl,'<b> ',(if p(v740)then if v740^u='ДА'then v740^a|. |,v740^b|. |,|(|v740^c|). |,v740^t,if s(v740^i,v740^f)=''then '. ' else |. |v740^i,| (|v740^f|)|,'. 'fi,v470^n|.| fi,fi)
 v700^a," "v700^d,", "v700^g, 
    if a(v700^g)then", "d700^b 
       if v700^b:'. ' then v700^b else 
@@ -7,7 +7,7 @@ v700^a," "v700^d,", "v700^g,
    fi fi fi'</b>', 
    if s(v700^1,v700^c,v700^f)<>''then' (',v700^1, 
       if s(v700^1)<>''then" ; "d700^c fi,v700^c, 
-      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,if v700^f|!|:'-!'then' 'fi,')',", "v700^7,'. ', 
+      if s(v700^1,v700^c)<>''then" ; "d700^f fi,v700^f,')',", "v700^7,'. ', 
    else ", "v700^7". " if a(v700^7)then "."d700^g, fi,
    fi,if s(v700^1,v700^c,v700^b,v700^g,v503)=''then"<b>.</b>"d700^a else " "d700^a fi
    '<b>'if v710^s<>''then if &uf('Kstr.mnu|'v710^s)<>''then &uf('Kstr.mnu|'v710^s)else v710^s fi fi,". "d710^s,v710^a, 
@@ -24,21 +24,11 @@ v700^a," "v700^d,", "v700^g,
           else |. |v509^b,| (|v509^f|)| 
           fi,|, |v509^h,|, |v509^I,|, |v509^J,| (|v509^c|)|," ("| - |+v509^e|)|  
     fi,|. |d509^l,mhu,v509^l.1,mhl,v509^l*1,|. |v509^n,if v509^2:'1' then '.'fi fi),
-    if a(v982^u) then v982^0' 'v982^9'<br>'fi,'</b> ', 
+    if p(v982^u) then v982^0' 'v982^9'<br>'fi,'</b> ', 
    if s(v700v710,v981,v503)='' and &unifor('Av509^2#1')<>'1' then'<dd> <b> '&unifor('E3'v200^a),'</b>', 
       if &unifor('F3'v200^a)<>'' then' '&unifor('F3'v200^a) fi 
    else 
       if p(v710) and v517^t.3:'500' then 
          (if p(v517) then if v517^t.3:'500' then if v517^9:'1' then else |<b>|v517^a|.</b>|,break fi fi fi),
       fi,"<dd>"v200^a 
-   fi," ["v200^b"]", 
-   if a(v200^b) then 
-      if a(v900^t)and a(v110^t) then 
-         if s(v230v337v135v951^k)<>''or s(v900^c,' ',v900^2,' ',v900^3,' ',v900^4,' ',v900^5,' ',v900^6,' '):'j02'then ' [Электронный ресурс] ' else 
-            if v920:'NJ'then ,ref(L("I="v933),if &uf("Koomr.mnu|"v110^t)<>''then'['&uf("Koomr.mnu|"v110^t)']'fi),else if s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else ' [Текст]'  fi fi fi, 
-      else 
-         if s(v230v337v135v951^k)<>''or s(v900^c,' ',v900^2,' ',v900^3,' ',v900^4,' ',v900^5,' ',v900^6,' '):'j02'then ' [' 
-          if (v900^t='a'or v110^t='a')and  s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
-           if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then  if (v900^t='l'or v110^t='l')then else &uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t),' : ' fi,fi,fi,'Электронный ресурс] ' else if (v900^t='a'or v110^t='a')and  s(&unifor('IPrivate,FPS,'),v905^s)<>'' then else 
-           if s(&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t))<>''then  ' ['&uf("Koomr.mnu|"v900^t),&uf("Koomr.mnu|"v110^t)'] ',fi,fi,fi    
-   fi, fi, 
+   fi,

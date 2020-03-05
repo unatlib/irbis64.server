@@ -42,17 +42,8 @@
                   else 
                      if v200^e.1='<' then mhl,&unifor('Q'v200^e*1.1),v200^e*2 mpl, 
                      else mhl,&unifor('Q'v200^e.1),v200^e*1 mpl, 
-         fi fi fi fi,&uf('+7W1#'if p(v982^u) then (" : "|, |+v982^0,| |v982^9) 
-                  " : взамен "d982^a,|, |+v982^a,&unifor('S0'), 
-                  (if p(v982^d) then 
-                      if val(&unifor('S1A'))=1 then ' : частично взамен 'else |, |+d982^d 
-                   fi fi,v982^d), 
-                   if s(v982^b,v982^c)<>''then | : введ. с |v982^b,| по |v982^c fi 
-                   " : заменен на "d982^e,| и |+v982^e,&unifor('S0'), 
-                  (if p(v982^f) then 
-                      if val(&unifor('S1A'))=1 then ' : частично заменен на 'else | и |+d982^f 
-                   fi fi,v982^f,| с |v982^g) fi),if v200^e:g1*3 then else  g1 fi, fi,  
-         if a(v461) then| : |v982^1 fi,| : |v982^2,| : |v982^3, 
+         fi fi fi fi, fi,  
+          
       fi, 
       if p(v925) then if v920:'SPEC' then else &uf('6ibis925_H') fi fi, 
       (if p(v923) then

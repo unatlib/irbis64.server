@@ -2287,6 +2287,21 @@ XXXXXXXXXXXXXXXXXXX
 v337
 XXXXXXXXXXXXXXXXXXX
 ADD
+203
+XXXXXXXXXXXXXXXXXXX
+if a(v337) and a(v230) and v951^3='' then '^AТекст','^Cнепосредственный' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+181
+XXXXXXXXXXXXXXXXXXX
+if a(v337) and a(v230) and v951^3='' then '^Ai' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+182
+XXXXXXXXXXXXXXXXXXX
+if a(v337) and a(v230) and v951^3=''then '^An' fi
+XXXXXXXXXXXXXXXXXXX
+ADD
 937
 XXXXXXXXXXXXXXXXXXX
 (v937/),(if p(v51) and p(v910) and v51^B=v910^B then if v51:'^1' then |^N|v51^B,|^A|v51^1,if a(v937) and  v910^A<>'2' then if 'C U':v910^A and a(v910^C)then else '^B'&unifor(|3|d51^1),'^C',&unifor('IPRIVATE,FIO,') fi fi fi,if v51:'^2' then /|^N|v51^B,|^A|v51^2 fi,if v51:'^3' then /|^N|v51^B,|^A|v51^3 fi,if v51:'^4' then /|^N|v51^B,|^A|v51^4 fi,if v51:'^5' then /|^N|v51^B,|^A|v51^5 fi fi/),if p(v53^1) then (if p(v910) then /|^N|v910^B,'^A'&unifor(|Av53^1#1|d910),if v910^A='8'then '^B',&unifor(|3|d910),if &unifor(|Av907^B#1|d53^1)<>'' then '^C',&unifor(|Av907^B#1|d53^1) fi fi,if &unifor(|Av53#1|d910):'^2' then /|^N|v910^B,'^A'&unifor(|Av53^2#1|d910)fi,if &unifor(|Av53#1|d910):'^3' then /|^N|v910^B,'^A'&unifor(|Av53^3#1|d910)fi,if &unifor(|Av53#1|d910):'^4' then /|^N|v910^B,'^A'&unifor(|Av53^4#1|d910)fi,if &unifor(|Av53#1|d910):'^5' then /|^N|v910^B,'^A'&unifor(|Av53^5#1|d910) fi fi/) fi
@@ -2734,3 +2749,18 @@ CHA
 1
 if ((val(mfn)<1) and (v955<>'')) or (ref(mfn,v955^a,v955^n)<>s(v955^a,v955^n)) then "^N"v955^n fi
 ''
+ADD
+203
+XXXXXXXXXXXXXXXXXXX
+if a(v203) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955) then '^AТекст','^Cнепосредственный' fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+181
+XXXXXXXXXXXXXXXXXXX
+if a(v181) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='')and a(v955)then '^Ai' fi fi
+XXXXXXXXXXXXXXXXXXX
+ADD
+182
+XXXXXXXXXXXXXXXXXXX
+if a(v182) then if (p(v200^a) or p(v461^c)) and (v900^T:'a' or v900^T='') and (v110^T:'a' or v110^T='') and a(v955)then '^An' fi fi
+XXXXXXXXXXXXXXXXXXX

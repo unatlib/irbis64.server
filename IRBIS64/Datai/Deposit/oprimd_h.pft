@@ -1,4 +1,4 @@
-if v920.1:'A' then else if s(v905^m)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"<br>  "|. |+v300,mpl fi fi, 
+if v920.1:'A' then else if s(v905^m)=''and &unifor('IPRIVATE,FPP,')=''then mhl,"<br>  "|. |+v300,mpl fi, fi
 "<br> <b>   Перевод заглавия: </b>  "v541, 
 ,oant_H, 
 if p(v391)then" <br> <b> Есть автограф: </b> "d391,

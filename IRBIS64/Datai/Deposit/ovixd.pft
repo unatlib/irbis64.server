@@ -27,7 +27,7 @@ if v920='J'then (v210^v+| ; |),fi,
              fi,| : |v210^i,if a(v210^i)then | : |v210^c fi,| [|v210^6|]|, 
        fi fi,
        if s(v210^a,v210^4)<>''and s(v210^i,v210^c,v461^g)='' then 
-          if s(&uf('Ag3#1'),&uf('Ag2#1'))<>'' then else 
+          if s(&uf('Ag3#1'),&uf('Ag2#1'))<>'' or v900^T='l1'then else 
              if &uf('Ag1#1')<>'' then ' : [б. и.]'else' : [s. n.]' 
        fi fi fi,
        fi fi) 
@@ -38,7 +38,7 @@ if s(v210^d)<>'' then
    else '. - 'fi
    v210^5| |,v210^d ,  
 fi, 
-if s(v461,v463,v110,v981v982^z)<>''then else 
+if s(v461,v463,v110,v981v982^z)<>''or v900^T:'l1'then else 
    if s(v210^d)<>'' then else  
       if g2=''then 
          if g1<>''then|, печ.|v210^h, |, Б. г.|n210^h else|, |v210^h| printing|,|, S. a.|n210^hfi else |, |v210^h, 

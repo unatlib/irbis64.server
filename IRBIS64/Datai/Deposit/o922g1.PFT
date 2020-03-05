@@ -1,4 +1,5 @@
-if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then  
+if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>''
+   then  
    if (&unifor('Av922^g#1'):&unifor('G0 '&unifor('Av922^f#1')) or &unifor('Av922^g#1'):&unifor('G0,'&unifor('Av922^f#1')) or 
           &unifor('Av922^x#1')<>'' and &unifor('Av922^g#1'):&unifor('E'&unifor('Av922^x#1'),&unifor('Av922^f#1'))) 
    AND &unifor('Av922^f#1'):'.' and (&unifor('Av922^g#1'):&unifor('G0.'&unifor('G2 '&unifor('Av922^f#1'))) or 
@@ -11,7 +12,7 @@ if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then
         &unifor('Av922^g#1'):&unifor('Av922^?.1#1')) or &unifor('Av922^?#1')='')) 
    OR &unifor('Av922^g#1')<>'' and &unifor('Av903#1')<>'' 
    then &unifor('Av922^g#1') 
-   else &uf('Av922^q*4#1'),if &uf('Av922^q*4#1')<>''then ' 'fi,
+   else &uf('Av922^q*4#1'), if &uf('Av922^q*4#1')<>''then ' 'fi,
       if &unifor('Av922^x#1')<>'' then 
          if &unifor('Av922^x#1'):'1' then &unifor('Av922^f#1') 
          else 
@@ -42,11 +43,8 @@ if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then
                else &unifor('G2 '&unifor('Av922^f#1')) 
                fi,' '&unifor('G0,'&unifor('G0 '&unifor('Av922^f#1'))) 
             else if &unifor('Av922^?#1')<>'' then &unifor('Av922^?#1'),' 'fi,&unifor('Av922^f#1')    
-      fi fi fi 
-      if &unifor('Av922^w#1')<>'' and (s(v922^q,v922^s,v922^t)=''or s(v922^q.3,v922^s.3,v922^t.3)='070070070') then 
-         if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi 
-      else 
-         if &unifor('Av922^2#1')<>'' then 
+      fi fi fi, 
+                  if &unifor('Av922^2#1')<>'' then 
             if &uf('Av922^f#1')<>'' then if &uf('Av922^s#1')<>'' then ' ; ' else ', ' fi fi,
             if &unifor('Av922^s*4#1')<>'' then &unifor('Av922^s*4#1'),' 'fi,
             if &unifor('Av922^<#1')<>'' then 
@@ -78,10 +76,10 @@ if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then
                      else &unifor('G2 '&unifor('Av922^2#1')) 
                      fi,' '&unifor('G0,'&unifor('G0 '&unifor('Av922^2#1'))) 
                   else if &unifor('Av922^,#1')<>'' then &unifor('Av922^,#1')' 'fi,&unifor('Av922^2#1') 
-         fi fi fi
-         if &unifor('Av922^t#1')<>'' then if &uf('Av922^t#1')<> &uf('Av922^s#1') then ' ; ' else', 'fi 
-            if &unifor('Av922^t*4#1')<>'' then &unifor('Av922^t*4#1'),' 'fi,else ', 'fi  fi, 
-            if &unifor('Av922^>#1')<>'' then 
+         fi fi fi 
+          if &uf('Av922^t#1')<>'' then if &uf('Av922^t#1')<> &uf('Av922^s#1') then ' ; ' else', 'fi 
+             if &uf('Av922^t*4#1')<>'' then &uf('Av922^t*4#1'),' ' fi, else ', 'fi
+             if &unifor('Av922^>#1')<>'' then 
                if &unifor('Av922^>#1'):'1' then &unifor('Av922^3#1') 
                else  
                   if &unifor('F'&unifor('Av922^>#1'),&unifor('Av922^3#1'))<>'' then 
@@ -109,8 +107,10 @@ if s(&unifor('Av922^f#1'),&unifor('Av922^2#1'))<>'' then
                         fi 
                      else &unifor('G2 '&unifor('Av922^3#1')) 
                      fi,' '&unifor('G0,'&unifor('G0 '&unifor('Av922^3#1'))) 
-                  else if &unifor('Av922^;#1')<>'' then &unifor('Av922^;#1')' 'fi,&unifor('Av922^3#1')    
-      fi fi fi fi, 
+                  else if &unifor('Av922^;#1')<>'' then &unifor('Av922^;#1')' 'fi,&unifor('Av922^3#1'),
+      fi fi fi fi,if &uf('Av922^W#1') <>'' then if &uf('Av922^W#1'):'  ' then else  if &uf('Av922^W#1'):', ' then ', '&uf('G1 '&uf('Av922^W#1')),' '&uf('G0,'&uf('Av922^W#1'))else  if &uf('G2 '&uf('Av922^W#1')):' ' then ', '&uf('G1 '&uf('Av922^W#1')),' '&uf('G0 '&uf('Av922^W#1')) else      ', '&uf('G0.'&uf('G1 '&uf('Av922^W#1')))'. ',&uf('G2.'&uf('G1 '&uf('Av922^W#1'))),' '&uf('G0 '&uf('Av922^W#1')) fi fi fi fi,
+,if &unifor('Av922^w#1')<>''and &uf('Av922^W#1'):'  ' and (s(v922^q,v922^s,v922^t)=''or s(v922^q.3,v922^s.3,v922^t.3)='070070070') then 
+         if a(v101) or &unifor('Kjzk.mnu|'&unifor('Av101#1'))<>''then' [и др.]' else' [et al.]'fi fi    
       if &unifor('Av922^g#1')<>'' then ' ; '&unifor('Av922^g#1') 
    fi fi 
 else &unifor('Av922^g#1') 
