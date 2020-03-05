@@ -1,9 +1,9 @@
 if v920:'J'then v591,if a(v591) then v200^a,v923^h,v923^i,v923^k,v923^l fi 
 else 
-   
-       
+
+
    if p(v461) then (if p(v461) then v461^x| |,v461^c,
-       
+
       | : |v461^e,| / |v461^f,
       |. - |v461^d,| : |v461^g,
       if s(v461^d,v461^g)<>''then|, |v461^h else|. - |v461^h fi fi),| ; |v200^v,| : |v200^a 

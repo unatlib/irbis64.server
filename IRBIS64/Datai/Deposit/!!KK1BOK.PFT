@@ -29,8 +29,8 @@ else mhl,
       fi, 
       (|. |v46^h,if p(v46^i) then|, |v46^i else |. |v46^i fi, 
        |. |v46^k,if p(v46^k) then|, |v46^m else |. |v46^m fi), 
-               
-         | = |v46^l,
+
+      | = |v46^l,
       (if p(v461) then | : |d461^e, 
           if s(v982^0,v982^9)<>'' or v905^2:'3' or &unifor('Q'v461^e*1.1)<>v461^e*1.1 then v461^e 
              else &unifor('Q'v461^e.1),v461^e*1 
