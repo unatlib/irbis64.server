@@ -46,7 +46,7 @@ XXXXXXXXXXXXXXXXXXX
 REP
 910^X
 F
-(if p(v910)then if p(v910^x) then if 'U C':v910^a and (v910^b=''and &uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and( v910^h=''and &uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1')) and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1')))and (v910^v=''or v910^v=&uf('Av991^A#1')) then f(val(v910^x,' 0')+1,0,0),&uf('+7W7#1'),&uf('+7W8#1'),,BREAK, else v910^x fi else # fi fi/)
+(if p(v910)then if p(v910^x) then if 'U C':v910^a and (v910^b=''and &uf('Av1003^b#1')=''or &uf('+97',v910^b)=&uf('Av1003^b#1'))and( v910^h=''and &uf('Av1003^h#1')=''or &uf('+97',v910^h)=&uf('Av1003^h#1')) and (&uf('+97'v910^d)=&uf('+97'&uf('Av1003^d#1'))or &uf('Av1003^d#1')='' or &uf('+97'v910^d)=&uf('G0,'&uf('Av1003^d#1')) or &uf('+97'v910^d)=&uf('G2,'&uf('Av1003^d#1')))and (v910^v=''or v910^v=&uf('Av991^A#1')) then f(val(v910^x,' 0')+1,0,0),&uf('+7W7#1'),&uf('+7W8#1'),,BREAK, else V910^X fi else # fi fi/)
 XXXXXXXXXXXXXXXXXXX
 ADD
 910^X
@@ -128,9 +128,9 @@ XXXXXXXXXXXXXXXXXXX
 &uf('+7W940#'),&uf('+7W940#'(v940|; |)),(if p(v910)then if v910^v=&uf('Av991^A#1')then if &uf('Ag940#1'):v910 then else v910 fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
 REP
-910^1
+910
 F
-(if p(v910) then if p(v910^1) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'U C':v910^A then,,,,,,,&uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D ),,,,,,,,,,,,,,, f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),,,else v910^1 fi,,else # fi,fi/)
+(if p(v910) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'U C':v910^A then |^A|v910^a,|^D|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^B|v910^b,|^H|v910^h,|^Q|v910^Q,|^R|v910^R,|^=|v910^=,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^C|v910^c,|^F|v910^f,|^2|v910^2,|^T|v910^T,|^0|v910^0,|^S|v910^S,|^5|v910^5,,,&uf('+7U10#',,v910^H,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D )  else v910  fi fi/)
 XXXXXXXXXXXXXXXXXXX
 DEL
 910
@@ -140,7 +140,7 @@ XXXXXXXXXXXXXXXXXXX
 DEL
 910
 F
-(if p(v910) then if 'U C':v910^a then if v910^1='' then '1' else '0' fi else '0' fi fi/)
+(if p(v910) then if 'U C':v910^a then if v910^1='' or v910^1:'-'then '1' else '0' fi else '0' fi fi/)
 XXXXXXXXXXXXXXXXXXX
 REP
 910^1

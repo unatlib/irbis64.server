@@ -1,2 +1,7 @@
 /* Признак, что в экземплярах есть год - g1, место хранения - g2, статус
-if v934=g1 then (if p(v910) then if s('6 2'): v910^A then else if &uf('+97',v910^D)=&uf('+97',&uf('Ag2#1')) then '1,',,break fi fi fi/) fi
+if (v920: 'NJ') and (v934=g1) OR 
+   (v920: 'SPEC') 
+then 
+   (if p(v910) then if s('6 2'): v910^A then else if &uf('+97',v910^D)=&uf('+97',&uf('Ag2#1')) then '1,',,break fi fi fi/) 
+fi 
+

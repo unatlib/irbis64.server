@@ -15,90 +15,62 @@ if p(v180)then if val(v180^j)>0 then f(val(v180^j),0,0)else'0'fi fi,
 if p(v180)then if val(v180^k)>0 then f(val(v180^k),0,2)else'0'fi fi,
 #
 '\trowd \trqc\trgaph108\trleft-108
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
-\cellx6061 
-\pard \ql\widctlpar\intbl {\qc \fs16 ''\qr ИТОГО: \tab 'v1
-'
-\cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
+\cellx5351 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\qr ИТОГО: \par  \qc ',,,
+'(Итоговые данные по названиям учитывают только издания, выбывшие полностью)',,
+'\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
+\cellx6059 
+\pard \ql\widctlpar\intbl {\qc \fs16 ''\qr  ',,,
+v1,,,
+'\cell }
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx6769 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v2
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx7903 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v3
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx8611 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v4
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx9319 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v5
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx10027 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v6
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx10735 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v7
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx11869 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v8
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx12577 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v9
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx13285 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v10
 '
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx14419 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr 'v11
 '
@@ -106,289 +78,183 @@ if p(v180)then if val(v180^k)>0 then f(val(v180^k),0,2)else'0'fi fi,
 \pard \widctlpar\intbl {\row }\pard \qc\widctlpar '
 *****
 [Tab]
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255; 
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0; 
+\red128\green128\blue128;\red192\green192\blue192;}
 \paperw16839\paperh11907\margl1701\margr850\margt1134\margb1134 \lndscpsxn 
 {\b\fs\fs16\qc 
 [Header]
 \b0 }
 \trowd \trqc\trgaph108\trleft-108
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx1242 
 \pard \widctlpar\intbl {\qc \fs16 № КСУ
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx2659 
 \pard \widctlpar\intbl {\qc \fs16 Дата выбытия
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx3367 
 \pard \widctlpar\intbl {\qc \fs16 № соп док.
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx4359 
 \pard \widctlpar\intbl {\qc \fs16 Причина выбытия
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx5351 
 \pard \widctlpar\intbl {\qc \fs16 Место хранения
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clcbpat0 \clshdng700 
 \clbrdrr\brdrs\brdrw15
 \cellx7902 
 \pard \widctlpar\intbl {\qc \fs16 Выбыло из подразделения
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clcbpat0 \clshdng700 
 \clbrdrr\brdrs\brdrw15
 \cellx9319 
 \pard \widctlpar\intbl {\qc \fs16 Требуют докомплект.
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clcbpat0 \clshdng700 
 \clbrdrr\brdrs\brdrw15
 \cellx11870 
 \pard \widctlpar\intbl {\qc \fs16 Передано в другие подразделения
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clcbpat0 \clshdng700 
 \clbrdrr\brdrs\brdrw15
 \cellx14421 
 \pard \widctlpar\intbl {\qc \fs16 Всего исключено из фонда
 \cell }
 \pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
 \trowd \trqc\trgaph108\trleft-108
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx1242 
 \pard \widctlpar\intbl {\qc \fs16 
 \cell }
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx2659 
 \pard \widctlpar\intbl {\qc \fs16 
 \cell }
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx3367 
 \pard \widctlpar\intbl {\qc \fs16 
 \cell }
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx4359 
 \pard \widctlpar\intbl {\qc \fs16 
 \cell }
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx5351 
 \pard \widctlpar\intbl {\qc \fs16 
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx6059 
-\pard \widctlpar\intbl {\qc \fs16 Назв
+\pard \widctlpar\intbl {\qc \fs16 Назв. \fs14 (книги) \fs16 
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx6767 
 \pard \widctlpar\intbl {\qc \fs16 Экз
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx7901 
 \pard \widctlpar\intbl {\qc \fs16 На сумму
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx8609 
-\pard \widctlpar\intbl {\qc \fs16 Назв
+\pard \widctlpar\intbl {\qc \fs16 Назв. \fs14 (книги) \fs16 
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx9317 
 \pard \widctlpar\intbl {\qc \fs16 Экз
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx10025 
-\pard \widctlpar\intbl {\qc \fs16 Назв
+\pard \widctlpar\intbl {\qc \fs16 Назв. \fs14 (книги) \fs16 
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx10733 
 \pard \widctlpar\intbl {\qc \fs16 Экз
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx11867 
 \pard \widctlpar\intbl {\qc \fs16 На сумму
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx12575 
-\pard \widctlpar\intbl {\qc \fs16 Назв
+\pard \widctlpar\intbl {\qc \fs16 Назв. \fs14 (книги) \fs16 
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx13283 
 \pard \widctlpar\intbl {\qc \fs16 Экз
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx14417 
 \pard \widctlpar\intbl {\qc \fs16 На сумму
 \cell }
 \pard \widctlpar\intbl {\row }\pard \qc\widctlpar 
 \trowd \trqc\trgaph108\trleft-108
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx1242 
 \pard \widctlpar\intbl {\qc \fs16 1
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx2659 
 \pard \widctlpar\intbl {\qc \fs16 2
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx3367 
 \pard \widctlpar\intbl {\qc \fs16 3
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx4359 
 \pard \widctlpar\intbl {\qc \fs16 4
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx5351 
 \pard \widctlpar\intbl {\qc \fs16 5
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx6059 
 \pard \widctlpar\intbl {\qc \fs16 6
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx6767 
 \pard \widctlpar\intbl {\qc \fs16 7
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx7901 
 \pard \widctlpar\intbl {\qc \fs16 8
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx8609 
 \pard \widctlpar\intbl {\qc \fs16 9
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx9317 
 \pard \widctlpar\intbl {\qc \fs16 10
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx10025 
 \pard \widctlpar\intbl {\qc \fs16 11
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx10733 
 \pard \widctlpar\intbl {\qc \fs16 12
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx11867 
 \pard \widctlpar\intbl {\qc \fs16 13
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx12575 
 \pard \widctlpar\intbl {\qc \fs16 14
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx13283 
 \pard \widctlpar\intbl {\qc \fs16 15
 \cell }
-\clbrdrt\brdrs\brdrw15
-\clbrdrl\brdrs\brdrw15
-\clbrdrb\brdrs\brdrw15
-\clbrdrr\brdrs\brdrw15
+\clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng700 
 \cellx14417 
 \pard \widctlpar\intbl {\qc \fs16 16
 \cell }

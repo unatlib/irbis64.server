@@ -1,31 +1,4 @@
-v503^a". ",v461^x,
-if s(v461^x)<>''
-then 
-  if v461^x:'.' then' ' else'. 'fi 
-fi,v461^c,
-if p(v461)
-then 
-  ". "d461,v200^v, 
-  if p(v200^v) then" : "v200^a else v200^a fi, 
-  if s(v200^v,v200^a)='' then (|. |+v925^v,if p(v925^v) then | : |v925^a else v925^a fi)fi 
-fi, 
-if a(v461) 
-then 
-  if p(v700) 
-  then 
-    v700^a," "v700^d,", "v700^g,if a(v700^g)then" "v700^b fi,"."d700^g," "d700^a, 
-  fi,,,,,,,,,
-  if p(v982) 
-  then 
-    if v200^a:&unifor('Av982^9#1') 
-    then 
-    else 
-      &unifor('Av982^0#1')," "d982^0,&unifor('Av982^9#1')," "d982^9 
-    fi 
-  fi,
-  v200^a," ."v200^E,
-  if a(v700) then if p(v701^A) then ' ',v701^A+|, | else " "d702,v702^A+|, | fi fi,,
-fi,
+ BRIEF 
 ovixd
 if p(v699) and v699^U='0' then ' (\b Аналог ) \b0 ' fi,,,
 &unifor('!'),&unifor('+F'),&uf('['),

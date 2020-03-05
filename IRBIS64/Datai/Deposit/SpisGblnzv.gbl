@@ -6,6 +6,7 @@
 // задано новое место хранения 992^I-шифр,v992^A-статус,v992^B - инвентарные номера 
 // v992^D - место хранения, v992^M - новое место хранения,v992^X - кол-во списанных экземпляров,v992^Z-кол-во переданных экземпляров 
 // 992^C-дата экземпляра, 992^E- цена экземпляра
+//19 v992^Y - MFN отмеченной записи
 PUTLOG
 'На корректировку запись ',f(val(mfn),0,0)
 // Списание книг по названиям
@@ -30,7 +31,7 @@ XXXXXXXXXXXXXXXXXXX
 &unifor('Av1002#1')
 XXXXXXXXXXXXXXXXXXX
 IF
-if v903=v1003^I then'1'else'0'fi
+if v903=v1003^I or val(mfn)=val(v1003^Y) then'1'else'0'fi
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
@@ -42,7 +43,7 @@ XXXXXXXXXXXXXXXXXXX
 REP
 910^A
 F
-(if p(v910) then if 'C U':v910^A then v910^A else if &uf('+97',v910^v)=&unifor('Av991^a#1') then '6' &uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D )  else v910^a fi fi fi/)
+(if p(v910) then if 'C U':v910^A then v910^A else if &uf('+97',v910^v)=&unifor('Av991^a#1') then '6' &uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D ),,,,,,else v910^a fi fi fi/)
 XXXXXXXXXXXXXXXXXXX
 ADD
 940
@@ -52,7 +53,7 @@ XXXXXXXXXXXXXXXXXXX
 REP
 910
 F
-(if p(v910) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'C U':v910^A then |^A|v910^a,|^D|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^B|v910^b,|^H|v910^h,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^T|v910^T,|^C|v910^c,|^=|v910^=,|^!|v910^!,|^F|v910^f,|^2|v910^2 &uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан',,| из |v910^D ) else v910 fi fi/)
+(if p(v910) then if &uf('+97',v910^v)=&uf('Av991^A#1') and 'C U':v910^A then |^A|v910^a,|^D|v910^d,'^1',f(val(v910^1,' 0')-val(v910^x,' 0'),0,0),|^B|v910^b,|^H|v910^h,|^K|v910^k,|^E|v910^e,|^U|v910^u,|^Y|v910^y,|^T|v910^T,|^C|v910^c,|^=|v910^=,|^!|v910^!,|^F|v910^f,|^2|v910^2 &uf('+7U10#',,v910^H,,,if v910^H<>'' and v910^B<>'' then '-' fi,,,,v910^B ' списан ',,| из |v910^D ),,,, else v910 fi fi/)
 XXXXXXXXXXXXXXXXXXX
 DEL
 910

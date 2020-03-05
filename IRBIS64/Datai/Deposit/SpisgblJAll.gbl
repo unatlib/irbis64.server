@@ -10,7 +10,7 @@
 ADD
 1992
 
-(if p(v992) then if &uf('+97',v992^a)=&uf('+97',&uf('Av903#1')) or (val(v992^Y)=val(mfn)) or a(v992^a) then |^I|v992^A,,|^D|v992^D,|^M|v992^M,,|^B|v992^B fi fi/)
+(if p(v992) then if &uf('+97',v992^a)=&uf('+97',&uf('Av903#1')) or (val(v992^Y)=val(mfn)) or a(v992^a) then |^I|v992^A,,|^D|v992^D,|^M|v992^M,,|^B|v992^B,,|^Y|v992^Y fi fi/)
 
 
 //------------------------- Списание номеров

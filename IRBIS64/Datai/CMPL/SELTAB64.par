@@ -394,18 +394,17 @@ TKS2W - Лист КСУ выбытия (краткая форма)
 1
 kd22.ws
 if p(v888) then '"KS2=',v888,'"' else '"KS2=$"' fi
-if p(v991^a) then '1' else if p(v991) then if &unifor('Av888^B.6#1')>=v991.6 and &unifor('Av888^B.6#1')<=v991*6.6 then '1' else '0' fi else '1' fi fi fi
-if p(v888) then "^A"v888 else v5v6 fi
+if p(v991^a) then '1' else if p(v991) then if ( val(v991^5)=0 or &uf('Av888^B.6#1')>=v991^5 ) and ( val(v991^6)=0 or &uf('Av888^B.6#1')<=v991^6 ) OR  ( val(v991^5)=0 or &uf('Av888^B#1')>=v991^5 ) and ( val(v991^6)=0 or &uf('Av888^B#1')<=v991^6 ) then '1' else '0' fi else '1' fi fi fi
+if p(v888) then "^A"v888 else "^5"v5,,,"^6"v6 fi
 *****
 
 TKS2PW - Лист КСУ выбытия (полная форма)
 1
 kd22.ws
 if p(v888) then '"KS2=',v888,'"' else '"KS2=$"' fi
-if p(v991^a) then '1' else if p(v991) then if &unifor('Av888^B.6#1')>=v991.6 and &unifor('Av888^B.6#1')<=v991*6.6 then '1' else '0' fi else '1' fi fi fi
-if p(v888) then "^A"v888 else v5v6 fi
+if p(v991^a) then '1' else if p(v991) then if ( val(v991^5)=0 or &uf('Av888^B.6#1')>=v991^5 ) and ( val(v991^6)=0 or &uf('Av888^B.6#1')<=v991^6 ) OR  ( val(v991^5)=0 or &uf('Av888^B#1')>=v991^5 ) and ( val(v991^6)=0 or &uf('Av888^B#1')<=v991^6 ) then '1' else '0' fi else '1' fi fi fi
+if p(v888) then "^A"v888 else "^5"v5,,,"^6"v6 fi
 *****
-
 TABDFW - Движение фонда
 1
 ks22.ws

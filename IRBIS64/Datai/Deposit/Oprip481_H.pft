@@ -4,8 +4,8 @@ if p(v481)then'<br> <b> Приплетено: </b> ',&unifor('S0'),
        if &unifor('Av481#2')<>''then 
           if p(v481)then'<b> '&unifor('S1A')'.</b> ' 
        fi fi, 
-       if p(v481^z) then &unifor('Av461^x#1')'. '&unifor('Av461^c#1'),|. |v481^v, 
-          | : |v481^c,| : |v481^e, 
+       if a(v481^z)and &uf('Av461#1')<>''then &unifor('Av461^x#1'),&unifor('Av461^b#1')'. '&unifor('Av461^c#1'),|. |v481^v,  
+                 | : |v481^c,| : |v481^e, 
        else 
           if p(v481^9) then 
              if v481^9='1' then v481^x 

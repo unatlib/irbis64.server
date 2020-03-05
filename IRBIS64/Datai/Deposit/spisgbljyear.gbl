@@ -3,7 +3,8 @@
 // Списание журналов по году
 // На входе отмеченные записи журналов
 // v991^A - номер КСУ списания v991^B - номер акта передачи
-// v992^D - место хранения, v992^M - новое место хранения, 992^A - шифр журнала, v992^b-номер комплекта,v992^4-год 
+// v992^D - место хранения, v992^M - новое место хранения, 992^A - шифр журнала, v992^b-номер комплекта,v992^4-год
+//19 v992^Y - MFN записи общей 
 // v1909 - новые поля для 1909
 IF
 if v992: '^0J' then '1' fi
@@ -23,7 +24,7 @@ F
 ADD
 909
 
-(if p(v992) then if &uf('+97',v992^A)=&uf('+97',&uf('Av903#1')) or a(v992^a) then if v992='^0J' then else v992 fi fi fi/)
+(if p(v992) then if &uf('+97',v992^A)=&uf('+97',&uf('Av903#1')) or val(mfn)=val(v992^Y) or a(v992^a) then if v992='^0J' then else v992 fi fi fi/)
 
 DEL
 909^A
@@ -50,6 +51,7 @@ FI
 IF
 if v992: '^0N' then if v920='NJK'or v910^a:'7' then '0'else '1'fi fi
 //------------------------ это запись номера, не входящего в подшивку и НЕ подшивка
+
 DEL
 1992
 *
@@ -71,6 +73,11 @@ ADD
 
 &uf('Av1992#1'),
 
+ADD
+771
+
+v9992
+
 IF
 if p(v9992^a)and &uf('+97',v933)=v9992^a or a(v9992^a) then'1'else'0'fi
 REP
@@ -84,6 +91,11 @@ REP
 910
 F
 (if p(v910) then  v910, if &uf('Av9992^d#1')='' or &uf('+97',v910^d)=&uf('+97',&uf('Av9992^d#1')) then if &uf('Av9992^k#1')='' or &uf('+97',v910^b)=&uf('+97',&uf('Av9992^k#1'))  then if s(&uf('IMAIN,STATUSNOSPIS,'),'p'):v910^a or p(v910^v) then  &uf('+7U10#',v910^h| |,&uf('Av933#1'),'-',v910^D,'-',v910^B': неверный статус - ',v910^A), else if 'C U':v910^a and a(v910^c) then  else  '^V',,,if &uf('Ag8#1')<>'' then  &uf('Ag8#1') else &uf('Av991^a#1') fi,,,,|^X|v910^1,if &uf('Av9992^m#1')<>''then if ' 4':v910^a then else |^Z|v910^1,'^M'&uf('Av9992^m#1'),'^W'&uf('Av9992^b#1')fi fi, fi fi fi fi fi/)
+
+ADD
+772
+
+&uf('Av9992#1')
 
 REP
 910^A
@@ -129,6 +141,11 @@ DEL
 910
 F
 (if p(v910)then if 'C U':v910^a then if &uf('+97',v910^v)=&uf('+97',&uf('Av9992^A#1')) and v910^1<=v910^x and a(v910^w)then'1'else'0'fi else'0' fi fi/)
+
+ADD
+773
+
+&uf('Av9992^A#1')
 
 REP
 910^A
