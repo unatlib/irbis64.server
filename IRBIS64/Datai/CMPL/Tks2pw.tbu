@@ -20,15 +20,15 @@ f(val(v47^7,' 0'),0,0),if a(v47)then f(val(v48^7,' 0'),0,0),if a(v48)then f(val(
 f(val(v47^8,' 0'),0,0),if a(v47)then f(val(v48^8,' 0'),0,0),if a(v48)then f(val(v49^8,' 0'),0,0)fi fi
 f(val(v47^9,' 0'),0,0),if a(v47)then f(val(v48^9,' 0'),0,0),if a(v48)then f(val(v49^9,' 0'),0,0)fi fi
 f(val(v47^x,' 0'),0,0),if a(v47)then f(val(v48^x,' 0'),0,0),if a(v48)then f(val(v49^x,' 0'),0,0)fi fi
-if p(v45^1)then f(val(v45^1,' 0'),0,0)fi
-if p(v45^2)then f(val(v45^2,' 0'),0,0)fi
-if p(v45^3)then f(val(v45^3,' 0'),0,0)fi
+v149^s,if a(v149^s) then v45^1 fi,
+v149^u,if a(v149^u) then  v45^2 fi,
+v149^v,if a(v149^v) then v45^3 fi,
 #
 '\trowd \trqc\trgaph108\trleft-108
 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx3792 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr ИТОГО: \par  \qc ',,,
-'(Итоговые данные по названиям учитывают только издания, выбывшие полностью)',,
+'(Итоговые данные по \b названиям \b0 учитывают только издания, выбывшие \b полностью \b0 )',,
 '\cell }
 \clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx4359 

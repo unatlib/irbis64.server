@@ -190,13 +190,13 @@
 \pard \widctlpar\intbl {\qr \fs16 'f(val(v47^x,' 0'),0,0),if a(v47)then f(val(v48^x,' 0'),0,0),if a(v48)then f(val(v49^x,' 0'),0,0)fi fi
 '
 \cell }
-\pard \widctlpar\intbl {\qr \fs16 'if p(v45^1)then f(val(v45^1,' 0'),0,0)fi
+\pard \widctlpar\intbl {\qr \fs16 ',,,v149^s,if a(v149^s) then v45^1 fi,,,
 '
 \cell }
-\pard \widctlpar\intbl {\qr \fs16 'if p(v45^2)then f(val(v45^2,' 0'),0,0)fi
+\pard \widctlpar\intbl {\qr \fs16 ',,v149^u,if a(v149^u) then  v45^2 fi,,
 '
 \cell }
-\pard \widctlpar\intbl {\qr \fs16 'if p(v45^3)then f(val(v45^3,' 0'),0,0)fi
+\pard \widctlpar\intbl {\qr \fs16 ',,v149^v,if a(v149^v) then v45^3 fi,,
 '
 \cell }
 \pard \widctlpar\intbl {\row }\pard \qc\widctlpar '

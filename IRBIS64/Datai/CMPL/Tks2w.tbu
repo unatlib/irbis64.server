@@ -18,7 +18,7 @@ if p(v180)then if val(v180^k)>0 then f(val(v180^k),0,2)else'0'fi fi,
 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx5351 
 \pard \ql\widctlpar\intbl {\qc \fs16 ''\qr ИТОГО: \par  \qc ',,,
-'(Итоговые данные по названиям учитывают только издания, выбывшие полностью)',,
+'(Итоговые данные по \b названиям \b0 учитывают только издания, выбывшие \b полностью \b0 )',,
 '\cell }
 \clbrdrt\brdrs\brdrw15\clbrdrl\brdrs\brdrw15\clbrdrb\brdrs\brdrw15\clbrdrr\brdrs\brdrw15\clcbpat0 \clshdng1500 
 \cellx6059 
