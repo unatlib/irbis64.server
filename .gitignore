@@ -1,0 +1,29 @@
+# Ignore thumbnails created by Windows
+Thumbs.db
+# Ignore DB files
+*.MST
+*.N01*
+*.IFP*
+*.L01*
+*.XRF
+*.cell*
+!*.cells
+*.inv
+# Ignore documents
+*.doc*
+*.chm
+*.pdf
+*.xls*
+*.hlp
+*.ppt
+*.rtf
+*.jpg
+# Ignore work files
+**/workdir/*
+*.txt
+!**/readme.txt
+!**/Irbismsg.txt
+irbis_server.srv*
+IRBISA_MULTI*.ini
+ftcachebuilder*.ini
+*.log
