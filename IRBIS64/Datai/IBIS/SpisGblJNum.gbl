@@ -53,12 +53,12 @@ ADD
 REP
 910
 F
-(if p(v910) then  v910,if p(v910^v) then else if '1 2 3 6 8 9':v910^a then  &uf('+7U10#',v910^h| |,&uf('Av933#1'),'-',v910^D,'-',v910^B': неверный статус - ',v910^A), else if &uf('Av9992^d#1')='' or &uf('+97'v910^d)=&uf('+97'&uf('Av9992^d#1')) then if &uf('Av9992^b#1')='' or &uf('Av9992^b#1')<>'' and  v910^b=&uf('Av9992^b#1') then '^V',,if &uf('Ag8#1')<>'' then  &uf('Ag8#1') else &uf('Av991^a#1') fi,,&uf('+7U10#','MFN=',f(val(mfn),0,0),' списан экземпляр ',,&uf('Av934#1'),,'/',&uf('Av935#1'),,,'/',,&uf('Av936#1'),,,'-',v910^D,'-',v910^B),,,,,,,,,,,,,,,|^X|v910^1,if &uf('Av9992^m#1')<>''then |^Z|v910^1,'^M'&uf('Av9992^m#1'),'^W'&uf('Av991^b#1') fi, fi fi fi fi fi/)
+(if p(v910) then  v910,if p(v910^v) then else if &uf('Av9992^d#1')='' or &uf('+97'v910^d)=&uf('+97'&uf('Av9992^d#1'))  then if &uf('Av9992^b#1')='' or &uf('Av9992^b#1')<>'' and  v910^b=&uf('Av9992^b#1') then  if s(&uf('IMAIN,StatusNoSpis,1,2,3,6,8,9,R,p')): v910^A then  &uf('+7U10#',v910^h| |,&uf('Av933#1'),'-',v910^D,'-',v910^B': неверный статус - ',v910^A), else  '^V',,if &uf('Ag8#1')<>'' then  &uf('Ag8#1') else &uf('Av991^a#1') fi,,&uf('+7U10#','MFN=',f(val(mfn),0,0),' списан экземпляр ',,&uf('Av934#1'),,'/',&uf('Av935#1'),,,'/',,&uf('Av936#1'),,,'-',v910^D,'-',v910^B),,,,,,,,,,,,,,,|^X|v910^1,if &uf('Av9992^m#1')<>''then |^Z|v910^1,'^M'&uf('Av9992^m#1'),'^W'&uf('Av991^b#1') fi, fi fi fi fi fi/)
 
 REP
 910^A
 F
-(if p(v910)then if v910^v<>''and &uf('+97',v910^v)=&uf('+97',&uf('Av991^A#1')) then if '0 4 5 p':v910^a then '6' else v910^a,fi else v910^a  fi fi/)
+(if p(v910)then if v910^v<>''and &uf('+97',v910^v)=&uf('+97',&uf('Av991^A#1')) then if &uf('IMAIN,StatusSpisInd,0 4 5 p'): v910^a then '6' else v910^a,fi else v910^a  fi fi/)
 
 ADD
 940
@@ -73,12 +73,32 @@ F
 REP
 910^A
 F
-(if p(v910) then if &uf('+97',v910^v)=&uf('+97',&uf('Av991^A#1')) and p(v910^w) and &uf('+97',v910^w)=&uf('+97',&uf('Av991^B#1')) then if v910^a:'6' then '0',&uf('+7U10#','MFN=',f(val(mfn),0,0),' экземпляр ',&uf('Av933#1'),'-',v910^D,'-',v910^B,| передан в |v910^m),  else v910^a fi, else  v910^a  fi fi/)
+(if p(v910) then if &uf('+97',v910^v)=&uf('+97',&uf('Av991^A#1')) and p(v910^w) and &uf('+97',v910^w)=&uf('+97',&uf('Av991^B#1')) then if v910^a:'6' then '0_',&uf('+7U10#','MFN=',f(val(mfn),0,0),' экземпляр ',&uf('Av933#1'),'-',v910^D,'-',v910^B,| передан в |v910^m),  else v910^a fi, else  v910^a  fi fi/)
 
 REP
 910^D
 F
 (if p(v910) then if &uf('+97',v910^v)=&uf('+97',&uf('Av991^A#1')) and p(v910^w)and &uf('+97',v910^w)=&uf('+97',&uf('Av991^B#1')) then v910^m else if v910^d<>''then v910^d else # fi fi fi/)
+
+DEL
+910^M
+F
+(if p(v910) then if v910^a='0_' then '1' else '0' fi fi/)
+
+DEL
+910^W
+F
+(if p(v910) then if v910^a='0_' then '1' else '0' fi fi/)
+
+DEL
+910^V
+F
+(if p(v910) then if v910^a='0_' then '1' else '0' fi fi/)
+
+REP
+910^A
+F
+(if p(v910) then if v910^a='0_' then '0' else v910^a fi fi/)
 
 //Если экземпляр входит в подшивку
 IF
@@ -484,11 +504,12 @@ FI
 
 DEL
 9555
+*
 
 
 DEL
 9992
-
+*
 
 
 DEL

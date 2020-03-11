@@ -310,6 +310,9 @@ IF
 if val(v991^C)=1 and p(g11) then '1' fi
 //------------------------------------------задана корректировка
 IF
+if p(g11) then '1' fi
+//---------------------------------------были дублетные
+IF
 if val(&uf('DVUZ,!', '?',,v68^a"-",,v68^n"-",v68^c"-" ,v68^v"-",v68^o"-",v68^f"-",,'!,mfn'))=val(mfn) then '1' fi
 //------------------------ эта запись ѕ≈–¬јя в группе дублетных
 ADD
@@ -374,6 +377,12 @@ XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
 //--- конец - перва€ запись на кор-ке
+FI
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+//--- конец были дублетные, есть g11
 FI
 XXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXX
