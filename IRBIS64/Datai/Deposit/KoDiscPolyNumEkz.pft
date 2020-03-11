@@ -36,7 +36,7 @@ then
    if rsum((
      if p(v691) 
      then 
-       if &uf('Ag995^I#1')='' or &uf('Ag995^I#1')=&uf('+97',v691^I) 
+       if &uf('Ag995^I#1')='' or &uf('+97',&uf('Ag995^I#1'))=&uf('+97',v691^I) 
        then 
           if &uf('Ag992^S#1')='' or v691^S='' or s('!',&uf('Ag992^S#1'),'!'): s(|!|v691^S|!|)  
           then 
